@@ -1,0 +1,70 @@
+{
+	"resourceType": "Observation",
+	"id": "SDOHCC-Observation-HungerVitalSign-Example-2",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-09-01T16:58:38.108+00:00",
+		"source": "#smboRcmLKNfsYgDO"
+	},
+	"status": "final",
+	"category": [
+		{
+			"coding": [
+				{
+					"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+					"code": "social-history",
+					"display": "Social History"
+				}
+			]
+		},
+		{
+			"coding": [
+				{
+					"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+					"code": "survey",
+					"display": "Survey"
+				}
+			]
+		}
+	],
+	"code": {
+		"coding": [
+			{
+				"system": "http://loinc.org",
+				"code": "88123-5",
+				"display": "Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]"
+			}
+		],
+		"text": "The food that (I/we) bought just didn&#39t last, and (I/we) didn&#39t have money to get more."
+	},
+	"subject": {
+		"reference": "Patient/pat-53234",
+		"display": "COLIN ABBAS"
+	},
+	"effectivePeriod": {
+		"start": "2019-08-18T12:31:35.123Z",
+		"end": "2020-08-18T14:31:36.456Z"
+	},
+	"issued": "2020-08-18T15:31:38.111Z",
+	"performer": [
+		{
+			"reference": "Patient/pat-53234",
+			"display": "COLIN ABBAS"
+		}
+	],
+	"valueCodeableConcept": {
+		"coding": [
+			{
+				"system": "http://loinc.org",
+				"code": "LA6729-3",
+				"display": "Sometimes true"
+			}
+		],
+		"text": "Sometimes true"
+	},
+	"derivedFrom": [
+		{
+			"reference": "QuestionnaireResponse/QR-5770275"
+		}
+	]
+}

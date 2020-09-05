@@ -1,0 +1,239 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "SDOHCC-Observation-ScreeningResponseBase-1",
+	"meta": {
+		"versionId": "40",
+		"lastUpdated": "2020-09-05T16:27:36.615+00:00",
+		"source": "#5NW74BMhyn9iGuCU"
+	},
+	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1",
+	"version": "0.0.1",
+	"name": "SDOHCC_Observation_ScreeningResponseBase_1",
+	"title": "SDOHCC Observation ScreeningResponseBase 1",
+	"status": "draft",
+	"date": "2020-08-24",
+	"description": "This profile constrains Observations that represent individual Question and Answer (QA) pairs from SDOH screening instruments that are represented in LOINC.",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"system": "urn:iso:std:iso:3166",
+					"code": "US"
+				}
+			]
+		}
+	],
+	"fhirVersion": "4.0.1",
+	"mapping": [
+		{
+			"identity": "workflow",
+			"uri": "http://hl7.org/fhir/workflow",
+			"name": "Workflow Pattern"
+		},
+		{
+			"identity": "sct-concept",
+			"uri": "http://snomed.info/conceptdomain",
+			"name": "SNOMED CT Concept Domain Binding"
+		},
+		{
+			"identity": "v2",
+			"uri": "http://hl7.org/v2",
+			"name": "HL7 v2 Mapping"
+		},
+		{
+			"identity": "rim",
+			"uri": "http://hl7.org/v3",
+			"name": "RIM Mapping"
+		},
+		{
+			"identity": "w5",
+			"uri": "http://hl7.org/fhir/fivews",
+			"name": "FiveWs Pattern Mapping"
+		},
+		{
+			"identity": "sct-attr",
+			"uri": "http://snomed.org/attributebinding",
+			"name": "SNOMED CT Attribute Binding"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Observation",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Observation",
+				"path": "Observation",
+				"constraint": [
+					{
+						"key": "SDOHCC-1",
+						"severity": "error",
+						"human": "either Observation.valueCodableConcept or Observation.dataAbsentReason MUST be provided",
+						"expression": "valueCodeableConcept.exists() or dataAbsentReason.exists()",
+						"source": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"
+					}
+				]
+			},
+			{
+				"id": "Observation.status",
+				"path": "Observation.status",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.category",
+				"path": "Observation.category",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "pattern",
+							"path": "$this"
+						}
+					],
+					"rules": "open"
+				},
+				"min": 2,
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.category:SocialHistory",
+				"path": "Observation.category",
+				"sliceName": "SocialHistory",
+				"min": 1,
+				"max": "1",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+							"code": "social-history"
+						}
+					]
+				},
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.category:Survey",
+				"path": "Observation.category",
+				"sliceName": "Survey",
+				"min": 1,
+				"max": "1",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+							"code": "survey"
+						}
+					]
+				},
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.code",
+				"path": "Observation.code",
+				"mustSupport": true,
+				"binding": {
+					"strength": "required"
+				}
+			},
+			{
+				"id": "Observation.subject",
+				"path": "Observation.subject",
+				"min": 1,
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/Patient"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.effective[x]",
+				"path": "Observation.effective[x]",
+				"type": [
+					{
+						"code": "dateTime"
+					},
+					{
+						"code": "Period"
+					}
+				]
+			},
+			{
+				"id": "Observation.performer",
+				"path": "Observation.performer",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/Practitioner",
+							"http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+							"http://hl7.org/fhir/StructureDefinition/Patient",
+							"http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.value[x]",
+				"path": "Observation.value[x]",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
+				}
+			},
+			{
+				"id": "Observation.dataAbsentReason",
+				"path": "Observation.dataAbsentReason",
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.interpretation",
+				"path": "Observation.interpretation",
+				"max": "0"
+			},
+			{
+				"id": "Observation.bodySite",
+				"path": "Observation.bodySite",
+				"max": "0"
+			},
+			{
+				"id": "Observation.specimen",
+				"path": "Observation.specimen",
+				"max": "0"
+			},
+			{
+				"id": "Observation.referenceRange",
+				"path": "Observation.referenceRange",
+				"max": "0"
+			},
+			{
+				"id": "Observation.derivedFrom",
+				"path": "Observation.derivedFrom",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/DocumentReference",
+							"http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+							"http://hl7.org/fhir/StructureDefinition/Observation",
+							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1",
+							"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"
+						]
+					}
+				],
+				"mustSupport": true
+			}
+		]
+	}
+}

@@ -1,0 +1,61 @@
+{
+	"resourceType": "QuestionnaireResponse",
+	"id": "QR-5770275",
+	"meta": {
+		"versionId": "5",
+		"lastUpdated": "2020-08-28T17:19:26.927+00:00",
+		"source": "#kn4io5aDwGtJipne"
+	},
+	"questionnaire": "http://hl7.org/fhir/us/sdoh-cc/Questionnaire/SDOHCC-Questionnaire-HungerVitalSign-1",
+	"status": "completed",
+	"subject": {
+		"reference": "Patient/pat-53234",
+		"display": "COLIN ABBAS"
+	},
+	"authored": "2020-08-27T06:13:21.036Z",
+	"source": {
+		"reference": "Patient/pat-53234",
+		"display": "COLIN ABBAS"
+	},
+	"item": [
+		{
+			"linkId": "/88122-7",
+			"text": "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]",
+			"answer": [
+				{
+					"valueCoding": {
+						"system": "http://loinc.org",
+						"code": "LA28397-0",
+						"display": "Often true"
+					}
+				}
+			]
+		},
+		{
+			"linkId": "/88123-5",
+			"text": "Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]",
+			"answer": [
+				{
+					"valueCoding": {
+						"system": "http://loinc.org",
+						"code": "LA6729-3",
+						"display": "Sometimes true"
+					}
+				}
+			]
+		},
+		{
+			"linkId": "/88124-3",
+			"text": "Food insecurity risk [HVS]",
+			"answer": [
+				{
+					"valueCoding": {
+						"system": "http://loinc.org",
+						"code": "LA19952-3",
+						"display": "At risk"
+					}
+				}
+			]
+		}
+	]
+}
