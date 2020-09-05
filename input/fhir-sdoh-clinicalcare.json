@@ -1,9 +1,9 @@
 {
 	"id": "fhir-sdoh-clinicalcare",
 	"meta": {
-		"versionId": "34",
-		"lastUpdated": "2020-09-05T17:09:22.046+00:00",
-		"source": "#iwSLN8nQXFJJevoY"
+		"versionId": "36",
+		"lastUpdated": "2020-09-05T18:10:21.481+00:00",
+		"source": "#n63UcezLFEi7BpN3"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -37,7 +37,7 @@
 			]
 		}
 	],
-	"packageId": "hl7.fhir.us.sdohclinicalcare",
+	"packageId": "hl7.fhir.us.fhir-sdoh-clinicalcare",
 	"dependsOn": [
 		{
 			"uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
