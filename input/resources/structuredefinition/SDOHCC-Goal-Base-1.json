@@ -1,0 +1,96 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "SDOHCC-Goal-Base-1",
+	"meta": {
+		"versionId": "11",
+		"lastUpdated": "2020-09-05T16:20:30.435+00:00",
+		"source": "#JTPDZHejj3ASkCdt"
+	},
+	"url": "http://example.org/fhir/StructureDefinition/SDOHCC-Goal-Base-1",
+	"version": "0.0.1",
+	"name": "SDOHCC_Goal_Base_1",
+	"title": "SDOHCC Goal Base 1",
+	"status": "draft",
+	"date": "2020-08-31",
+	"description": "This profile constrains Goals that address Social Determinants of Health.",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"system": "urn:iso:std:iso:3166",
+					"code": "US"
+				}
+			]
+		}
+	],
+	"fhirVersion": "4.0.1",
+	"mapping": [
+		{
+			"identity": "argonaut-dq-dstu2",
+			"uri": "http://unknown.org/Argonaut-DQ-DSTU2",
+			"name": "Argonaut-DQ-DSTU2"
+		},
+		{
+			"identity": "v2",
+			"uri": "http://hl7.org/v2",
+			"name": "HL7 v2 Mapping"
+		},
+		{
+			"identity": "rim",
+			"uri": "http://hl7.org/v3",
+			"name": "RIM Mapping"
+		},
+		{
+			"identity": "w5",
+			"uri": "http://hl7.org/fhir/fivews",
+			"name": "FiveWs Pattern Mapping"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Goal",
+	"baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Goal.achievementStatus",
+				"path": "Goal.achievementStatus",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Goal.addresses",
+				"path": "Goal.addresses",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/Condition",
+							"http://hl7.org/fhir/StructureDefinition/Observation",
+							"http://hl7.org/fhir/StructureDefinition/NutritionOrder",
+							"http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+							"http://hl7.org/fhir/StructureDefinition/RiskAssessment",
+							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1",
+							"http://example.org/fhir/StructureDefinition/SDOHCC-ServiceRequest-Base-1",
+							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"
+						]
+					}
+				]
+			},
+			{
+				"id": "Goal.outcomeReference",
+				"path": "Goal.outcomeReference",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/Observation",
+							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"
+						]
+					}
+				]
+			}
+		]
+	}
+}

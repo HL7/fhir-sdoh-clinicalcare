@@ -1,0 +1,73 @@
+{
+	"resourceType": "Observation",
+	"id": "SDOHCC-Observation-HungerVitalSign-Example-1",
+	"meta": {
+		"versionId": "6",
+		"lastUpdated": "2020-09-05T17:07:07.610+00:00",
+		"source": "#VPXPNqD8B2fDfek7",
+		"profile": [
+			"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"
+		]
+	},
+	"status": "final",
+	"category": [
+		{
+			"coding": [
+				{
+					"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+					"code": "social-history",
+					"display": "Social History"
+				}
+			]
+		},
+		{
+			"coding": [
+				{
+					"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+					"code": "survey",
+					"display": "Survey"
+				}
+			]
+		}
+	],
+	"code": {
+		"coding": [
+			{
+				"system": "http://loinc.org",
+				"code": "88122-7",
+				"display": "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]"
+			}
+		],
+		"text": "(I/We) worried whether (my/our) food would run out before (I/we) got money to buy more."
+	},
+	"subject": {
+		"reference": "Patient/pat-53234",
+		"display": "COLIN ABBAS"
+	},
+	"effectivePeriod": {
+		"start": "2019-08-18T12:31:35.123Z",
+		"end": "2020-08-18T14:31:36.456Z"
+	},
+	"issued": "2020-08-18T15:31:38.111Z",
+	"performer": [
+		{
+			"reference": "Patient/pat-53234",
+			"display": "COLIN ABBAS"
+		}
+	],
+	"valueCodeableConcept": {
+		"coding": [
+			{
+				"system": "http://loinc.org",
+				"code": "LA28397-0",
+				"display": "Often true"
+			}
+		],
+		"text": "Often true"
+	},
+	"derivedFrom": [
+		{
+			"reference": "QuestionnaireResponse/QR-5770275"
+		}
+	]
+}

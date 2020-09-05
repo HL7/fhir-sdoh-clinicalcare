@@ -1,0 +1,66 @@
+{
+	"resourceType": "Condition",
+	"id": "SDOHCC-Condition-HungerVitalSign-Example-1",
+	"meta": {
+		"versionId": "4",
+		"lastUpdated": "2020-09-05T17:14:57.206+00:00",
+		"source": "#oMm0157T8sQDt3la",
+		"profile": [
+			"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1"
+		]
+	},
+	"clinicalStatus": {
+		"coding": [
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+				"code": "active",
+				"display": "Active"
+			}
+		]
+	},
+	"verificationStatus": {
+		"coding": [
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+				"code": "confirmed",
+				"display": "Confirmed"
+			}
+		]
+	},
+	"category": [
+		{
+			"coding": [
+				{
+					"system": "http://hl7.org/fhir/us/core/CodeSystem/condition-category",
+					"code": "health-concern"
+				}
+			]
+		}
+	],
+	"code": {
+		"coding": [
+			{
+				"system": "http://snomed.info/sct",
+				"code": "733423003",
+				"display": "Food insecurity"
+			}
+		],
+		"text": "Food insecurity"
+	},
+	"subject": {
+		"reference": "Patient/pat-53234",
+		"display": "COLIN ABBAS"
+	},
+	"onsetPeriod": {
+		"start": "2019-08-18T12:31:35.123Z"
+	},
+	"evidence": [
+		{
+			"detail": [
+				{
+					"reference": "Observation/SDOHCC-Observation-HungerVitalSign-Example-3"
+				}
+			]
+		}
+	]
+}
