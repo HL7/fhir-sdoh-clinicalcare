@@ -1,0 +1,24 @@
+{
+	"list": [
+		{
+			"version": "current",
+			"desc": "Continuous Integration Build (latest in version control)",
+			"path": "http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare",
+			"status": "ci-build",
+			"fhirversion": "4.0.1"
+		},
+		{
+			"version": "0.0.1",
+			"date": "2020-09-05",
+			"desc": "Continuous build version",
+			"path": "http://hl7.org/fhir/us/fhir-sdoh-clinicalcare",
+			"status": "ci-build",
+			"fhirversion": "4.0.1"
+		}
+		
+	],
+	"package-id": "hl7.fhir.us.fhir-sdoh-clinicalcare",
+	"title": "SDOH Clinical Care",
+	"canonical": "http://hl7.org/fhir/us/fhir-sdoh-clinicalcare",
+	"introduction": "The SDOH Clincial Care IG is a framework for all clincialy related SODH domains and covers assessment, health concerns, goals, careplan, interventions, outcomes, and data aggregation for multiple uses",
+}
