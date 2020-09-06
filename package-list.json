@@ -4,7 +4,7 @@
 			"version": "current",
 			"path": "http://build.fhir.org/ig/hl7/fhir-sdoh-clinicalcare/",
 			"desc": "Continuous Integration Build",
-			"fhirversion": "4.01",
+			"fhirversion": "4.0.1",
 			"status": "ci-build",
 			"current": true
 		},
@@ -12,7 +12,7 @@
 			"version": "0.0.1",
 			"path": "http://build.fhir.org/ig/hl7/fhir-sdoh-clinicalcare/",
 			"desc": "Continuous Integration Build",
-			"fhirversion": "4.01",
+			"fhirversion": "4.0.1",
 			"status": "ci-build",
 			"current": true
 		}
