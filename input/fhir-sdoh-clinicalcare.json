@@ -1,9 +1,9 @@
 {
 	"id": "fhir-sdoh-clinicalcare",
 	"meta": {
-		"versionId": "36",
-		"lastUpdated": "2020-09-05T18:10:21.481+00:00",
-		"source": "#n63UcezLFEi7BpN3"
+		"versionId": "42",
+		"lastUpdated": "2020-09-06T12:35:10.987+00:00",
+		"source": "#gpkNNhCkuqUfJ93U"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -67,73 +67,80 @@
 		],
 		"resource": [
 			{
+				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1",
 					"display": "SDOHCC Observation ScreeningResponseBase 1"
 				},
 				"name": "SDOHCC Observation ScreeningResponseBase 1",
-				"groupingId": "new-group1",
-				"description": "This profile constrains Observations that represent individual Question and Answer (QA) pairs from SDOH screening instruments that are represented in LOINC."
+				"description": "This profile constrains Observations that represent individual Question and Answer (QA) pairs from SDOH screening instruments that are represented in LOINC.",
+				"groupingId": "new-group1"
 			},
 			{
+				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "StructureDefinition/SDOHCC-Condition-Base-1",
 					"display": "SDOHCC Condition Base 1"
 				},
 				"name": "SDOHCC Condition Base 1",
-				"groupingId": "new-group1",
-				"description": "This profile constrains Conditions that represent Social Determinants of Health."
+				"description": "This profile constrains Conditions that represent Social Determinants of Health.",
+				"groupingId": "new-group1"
 			},
 			{
+				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "StructureDefinition/SDOHCC-Goal-Base-1",
 					"display": "SDOHCC Goal Base 1"
 				},
 				"name": "SDOHCC Goal Base 1",
-				"groupingId": "new-group1",
-				"description": "This profile constrains Goals that address Social Determinants of Health."
+				"description": "This profile constrains Goals that address Social Determinants of Health.",
+				"groupingId": "new-group1"
 			},
 			{
+				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "StructureDefinition/SDOHCC-ServiceRequest-Base-1",
 					"display": "SDOHCC ServiceRequest Base 1"
 				},
 				"name": "SDOHCC ServiceRequest Base 1",
-				"groupingId": "new-group1",
-				"description": "This profile constrains ServiceRequests that address Social Determinants of Health."
+				"description": "This profile constrains ServiceRequest that address Social Determinants of Health.",
+				"groupingId": "new-group1"
 			},
 			{
+				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "StructureDefinition/SDOHCC-Procedure-Base-1",
 					"display": "SDOHCC Procedure Base 1"
 				},
 				"name": "SDOHCC Procedure Base 1",
-				"groupingId": "new-group1",
-				"description": "This profile constrains Procedures that address Social Determinants of Health."
+				"description": "This profile constrains Procedures that address Social Determinants of Health.",
+				"groupingId": "new-group1"
 			},
 			{
 				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
-					"reference": "Patient/pat-53234"
+					"reference": "Patient/pat-53234",
+					"display": "Patient Colin Abbas"
 				},
-				"name": "Patient 53234",
-				"description": "Patient 53234",
+				"name": "Patient Colin Abbas",
+				"description": "Patient example for Colin Abbas who is used as the subject in the Observation and Condition examples.",
 				"groupingId": "new-group2"
 			},
 			{
 				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
-					"reference": "QuestionnaireResponse/QR-5770275"
+					"reference": "QuestionnaireResponse/QR-5770275",
+					"display": "SDOHCC QuestionnaireResponse HungerVitalSign Example 1"
 				},
-				"name": "SDOHCC QuestionnaireResponse",
-				"description": "QuestionnaireResponse",
+				"name": "SDOHCC QuestionnaireResponse HungerVitalSign Example 1",
+				"description": "An example of an SDC QuestionnaireResponse instance that represents the individual Question and Answer pairs (QA pairs) from an SDOH screening questionnaire represented in LOINC. This example represents the LOINC 88121-9 Hunger Vital Sign [HVS] questionnaire. The example is generated using the LHC-Forms SDC Questionnaire App.",
 				"groupingId": "new-group2"
 			},
 			{
@@ -144,7 +151,7 @@
 					"display": "SDOHCC Questionnaire HungerVitalSign 1"
 				},
 				"name": "SDOHCC Questionnaire HungerVitalSign 1",
-				"description": "SDOHCC Questionnaire HungerVitalSign 1",
+				"description": "A Questionnaire instance that represents the individual Question and Answer pairs (QA pairs) from a specific SDOH screening questionnaire. This instance represents the LOINC 88121-9 Hunger Vital Sign [HVS] questionnaire.",
 				"groupingId": "new-group2"
 			},
 			{
@@ -155,57 +162,66 @@
 					"display": "SDOHCC StructureMap HungerVitalSignMapper 1"
 				},
 				"name": "SDOHCC StructureMap HungerVitalSignMapper 1",
-				"description": "SDOHCC StructureMap HungerVitalSignMapper 1",
+				"description": "A StructureMap instance that represents the logic that transforms individual Question and Answer pairs (QA pairs) from the LOINC 88121-9 Hunger Vital Sign [HVS] questionnaire to their corresponding Observations (SDOHCC_Observation_HungerVitalSign_Example_1, SDOHCC_Observation_HungerVitalSign_Example_2, and SDOHCC_Observation_HungerVitalSign_Example_3) and Condition (SDOHCC_Condition_HungerVitalSign_Example_1).",
+				"groupingId": "new-group2"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/SDOHCC-Observation-HungerVitalSign-Example-1",
+					"display": "SDOHCC Observation HungerVitalSign Example 1"
+				},
+				"name": "SDOHCC Observation HungerVitalSign Example 1",
+				"description": "An example of an Observation instance that represents the individual Question and Answer pair (QA pair) from an SDOH screening questionnaire represented in LOINC. This example represents LOINC code 88122-7 from the Hunger Vital Sign [HVS] questionnaire.",
+				"exampleCanonical": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1",
+				"groupingId": "new-group2"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/SDOHCC-Observation-HungerVitalSign-Example-2",
+					"display": "SDOHCC Observation HungerVitalSign Example 2"
+				},
+				"name": "SDOHCC Observation HungerVitalSign Example 2",
+				"description": "An example of an Observation instance that represents the individual Question and Answer pair (QA pair) from an SDOH screening questionnaire represented in LOINC. This example represents LOINC code 88123-5 from the Hunger Vital Sign [HVS] questionnaire.",
+				"exampleCanonical": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1",
+				"groupingId": "new-group2"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Observation/SDOHCC-Observation-HungerVitalSign-Example-3",
+					"display": "SDOHCC Observation HungerVitalSign Example 3"
+				},
+				"name": "SDOHCC Observation HungerVitalSign Example 3",
+				"description": "An example of an Observation instance that represents the individual Question and Answer pair (QA pair) from an SDOH screening questionnaire represented in LOINC. This example represents LOINC code 88124-3 from the Hunger Vital Sign [HVS] questionnaire.",
+				"exampleCanonical": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1",
 				"groupingId": "new-group2"
 			},
 			{
 				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
-					"reference": "Observation/SDOHCC-Observation-HungerVitalSign-Example-1"
+					"reference": "Observation/SDOHCC-Observation-HungerVitalSignGroup-1",
+					"display": "SDOHCC Observation HungerVitalSignGroup 1"
 				},
-				"name": "SDOHCC Hunger Vital Sign Observation 1",
-				"description": "SDOHCC Hunger Vital Sign Observation 1",
+				"name": "SDOHCC Observation HungerVitalSignGroup 1",
+				"description": "An Observation instance that represents the Observation group which has as its members the Observations that represent the individual Question and Answer pairs (QA pairs) from an SDOH screening questionnaire represented in LOINC. This instance is the group of 3 Observations that represent the 3 questions from LOINC code 88121-9 which is the Hunger Vital Sign [HVS] questionnaire.",
 				"groupingId": "new-group2"
 			},
 			{
 				"extension": [],
-				"exampleBoolean": true,
+				"exampleBoolean": false,
 				"reference": {
-					"reference": "Observation/SDOHCC-Observation-HungerVitalSign-Example-2"
+					"reference": "Condition/SDOHCC-Condition-HungerVitalSign-Example-1",
+					"display": "SDOHCC Condition HungerVitalSign Example 1"
 				},
-				"name": "SDOHCC Hunger Vital Sign Observation 2",
-				"description": "SDOHCC Hunger Vital Sign Observation 2",
-				"groupingId": "new-group2"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "Observation/SDOHCC-Observation-HungerVitalSign-Example-3"
-				},
-				"name": "SDOHCC Hunger Vital Sign Observation 3",
-				"description": "SDOHCC Hunger Vital Sign Observation 3",
-				"groupingId": "new-group2"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "Observation/SDOHCC-Observation-HungerVitalSignGroup-1"
-				},
-				"name": "SDOHCC Hunger Vital Sign Observation Group",
-				"description": "SDOHCC Hunger Vital Sign Observation Group",
-				"groupingId": "new-group2"
-			},
-			{
-				"extension": [],
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "Condition/SDOHCC-Condition-HungerVitalSign-Example-1"
-				},
-				"name": "SDOHCC Hunger Vital Sign Condition",
-				"description": "SDOHCC Hunger Vital Sign Condition",
+				"name": "SDOHCC Condition HungerVitalSign Example 1",
+				"description": "An example of a Condition instance that represents a health concern based on an Observation instance or instances which represent the individual Question and Answer pairs (QA pairs) from an SDOH screening questionnaire represented in LOINC. This example represents a health concern that references, as evidence, Observations derived from the LOINC 88121-9 Hunger Vital Sign [HVS] questionnaire.",
+				"exampleCanonical": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1",
 				"groupingId": "new-group2"
 			}
 		],

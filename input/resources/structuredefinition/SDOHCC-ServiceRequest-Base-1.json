@@ -2,10 +2,11 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-ServiceRequest-Base-1",
 	"meta": {
-		"versionId": "8",
-		"lastUpdated": "2020-09-05T16:28:06.685+00:00",
-		"source": "#LsimyZtCz51dN4Bz"
+		"versionId": "9",
+		"lastUpdated": "2020-09-05T21:22:29.445+00:00",
+		"source": "#OEySCW03Jj1jND3h"
 	},
+	"extension": [],
 	"url": "http://example.org/fhir/StructureDefinition/SDOHCC-ServiceRequest-Base-1",
 	"version": "0.0.1",
 	"name": "SDOHCC_ServiceRequest_Base_1",

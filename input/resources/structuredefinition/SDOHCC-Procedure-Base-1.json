@@ -2,10 +2,11 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Procedure-Base-1",
 	"meta": {
-		"versionId": "11",
-		"lastUpdated": "2020-09-05T16:27:51.556+00:00",
-		"source": "#ARgJPhu5TDX5fPPR"
+		"versionId": "12",
+		"lastUpdated": "2020-09-05T21:20:38.263+00:00",
+		"source": "#gX7chxkW1vkCINEk"
 	},
+	"extension": [],
 	"url": "http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-Base-1",
 	"version": "0.0.1",
 	"name": "SDOHCC_Procedure_Base_1",

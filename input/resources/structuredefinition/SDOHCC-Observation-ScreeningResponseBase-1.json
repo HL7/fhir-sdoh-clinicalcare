@@ -2,10 +2,11 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Observation-ScreeningResponseBase-1",
 	"meta": {
-		"versionId": "40",
-		"lastUpdated": "2020-09-05T16:27:36.615+00:00",
-		"source": "#5NW74BMhyn9iGuCU"
+		"versionId": "44",
+		"lastUpdated": "2020-09-05T21:43:44.396+00:00",
+		"source": "#eGyel2iyxr58s6hS"
 	},
+	"extension": [],
 	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1",
 	"version": "0.0.1",
 	"name": "SDOHCC_Observation_ScreeningResponseBase_1",
