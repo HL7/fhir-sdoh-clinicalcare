@@ -5,20 +5,22 @@
 			"path": "http://build.fhir.org/ig/hl7/fhir-sdoh-clinicalcare/",
 			"desc": "Continuous Integration Build",
 			"fhirversion": "4.0.1",
-			"status": "ci-build",
-			"current": true
+			"status": "ci-build"
+			
 		},
 		{
 			"version": "0.0.1",
+			"date": "2020-09-06",
 			"path": "http://build.fhir.org/ig/hl7/fhir-sdoh-clinicalcare/",
 			"desc": "Continuous Integration Build",
 			"fhirversion": "4.0.1",
-			"status": "ci-build",
-			"current": true
+			"sequence": "STU",
+			"status": "ci-build"
+			
 		}
 	],
 	"package-id": "hl7.fhir.us.fhir-sdoh-clinicalcare",
 	"title": "SDOH Clinical Care for Multiple Domains",
-	"canonical": "http://hl7.org/fhir/us/fhir-sdoh-clinicalcare",
+	"canonical": "http://hl7.org/fhir/us/ImplementationGuide/fhir-sdoh-clinicalcare",
 	"introduction": "The SOCH Clinical Care Multiple Domain IG provides the specifications for multiple SDOH domains to assess, document, set goals, manage interventions, measure outcomes, and aggregate information for exchange."
 }
