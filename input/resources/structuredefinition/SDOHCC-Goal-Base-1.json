@@ -2,10 +2,11 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Goal-Base-1",
 	"meta": {
-		"versionId": "11",
-		"lastUpdated": "2020-09-05T16:20:30.435+00:00",
-		"source": "#JTPDZHejj3ASkCdt"
+		"versionId": "14",
+		"lastUpdated": "2020-09-05T21:48:09.427+00:00",
+		"source": "#YAimg7tTnXv1mNht"
 	},
+	"extension": [],
 	"url": "http://example.org/fhir/StructureDefinition/SDOHCC-Goal-Base-1",
 	"version": "0.0.1",
 	"name": "SDOHCC_Goal_Base_1",
