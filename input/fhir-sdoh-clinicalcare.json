@@ -1,9 +1,9 @@
 {
 	"id": "fhir-sdoh-clinicalcare",
 	"meta": {
-		"versionId": "42",
-		"lastUpdated": "2020-09-06T12:35:10.987+00:00",
-		"source": "#gpkNNhCkuqUfJ93U"
+		"versionId": "60",
+		"lastUpdated": "2020-09-08T12:42:51.450+00:00",
+		"source": "#i4iX9YtR1yTktFpt"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -156,17 +156,6 @@
 			},
 			{
 				"extension": [],
-				"exampleBoolean": true,
-				"reference": {
-					"reference": "StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1",
-					"display": "SDOHCC StructureMap HungerVitalSignMapper 1"
-				},
-				"name": "SDOHCC StructureMap HungerVitalSignMapper 1",
-				"description": "A StructureMap instance that represents the logic that transforms individual Question and Answer pairs (QA pairs) from the LOINC 88121-9 Hunger Vital Sign [HVS] questionnaire to their corresponding Observations (SDOHCC_Observation_HungerVitalSign_Example_1, SDOHCC_Observation_HungerVitalSign_Example_2, and SDOHCC_Observation_HungerVitalSign_Example_3) and Condition (SDOHCC_Condition_HungerVitalSign_Example_1).",
-				"groupingId": "new-group2"
-			},
-			{
-				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "Observation/SDOHCC-Observation-HungerVitalSign-Example-1",
@@ -233,9 +222,35 @@
 			"page": [
 				{
 					"extension": [],
-					"nameUrl": "test_narrative_page.html",
-					"title": "Test Narrative Page",
+					"nameUrl": "gravity_background.html",
+					"title": "Gravity Background",
 					"generation": "markdown"
+				},
+				{
+					"extension": [],
+					"nameUrl": "sdoh_clinical_care_scope.html",
+					"title": "SDOH Clinical Care Scope",
+					"generation": "markdown"
+				},
+				{
+					"extension": [],
+					"nameUrl": "personas_and_patient_stories.html",
+					"title": "Personas and Patient Stories",
+					"generation": "markdown",
+					"page": [
+						{
+							"extension": [],
+							"nameUrl": "patient_story_1_personas.html",
+							"title": "Patient Story 1 Personas",
+							"generation": "markdown"
+						},
+						{
+							"extension": [],
+							"nameUrl": "patient_story_1.html",
+							"title": "Patient Story 1",
+							"generation": "markdown"
+						}
+					]
 				},
 				{
 					"extension": [],
