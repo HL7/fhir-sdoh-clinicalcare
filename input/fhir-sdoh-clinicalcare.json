@@ -1,9 +1,9 @@
 {
 	"id": "fhir-sdoh-clinicalcare",
 	"meta": {
-		"versionId": "60",
-		"lastUpdated": "2020-09-08T12:42:51.450+00:00",
-		"source": "#i4iX9YtR1yTktFpt"
+		"versionId": "73",
+		"lastUpdated": "2020-09-08T22:21:42.032+00:00",
+		"source": "#3XBwDWNLneaL57z4"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -11,7 +11,7 @@
 		"4.0.1"
 	],
 	"url": "http://hl7.org/fhir/us/ImplementaitonGuide/fhir-sdoh-clinicalcare",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"name": "Sdohclinicalcare",
 	"title": "SDOH Clinical Care",
 	"publisher": "HL7 International - Patient Care WG",
@@ -140,7 +140,7 @@
 					"display": "SDOHCC QuestionnaireResponse HungerVitalSign Example 1"
 				},
 				"name": "SDOHCC QuestionnaireResponse HungerVitalSign Example 1",
-				"description": "An example of an SDC QuestionnaireResponse instance that represents the individual Question and Answer pairs (QA pairs) from an SDOH screening questionnaire represented in LOINC. This example represents the LOINC 88121-9 Hunger Vital Sign [HVS] questionnaire. The example is generated using the LHC-Forms SDC Questionnaire App.",
+				"description": "An example of an SDC QuestionnaireResponse that represents the individual Question and Answer pairs (QA pairs) from an SDOH screening questionnaire represented in LOINC. This example represents the LOINC 88121-9 Hunger Vital Sign [HVS] questionnaire. The example is generated using the LHC-Forms SDC Questionnaire App.",
 				"groupingId": "new-group2"
 			},
 			{
@@ -162,7 +162,7 @@
 					"display": "SDOHCC Observation HungerVitalSign Example 1"
 				},
 				"name": "SDOHCC Observation HungerVitalSign Example 1",
-				"description": "An example of an Observation instance that represents the individual Question and Answer pair (QA pair) from an SDOH screening questionnaire represented in LOINC. This example represents LOINC code 88122-7 from the Hunger Vital Sign [HVS] questionnaire.",
+				"description": "An example of an Observation that represents the individual Question and Answer pair (QA pair) from an SDOH screening questionnaire represented in LOINC. This example represents LOINC code 88122-7 from the Hunger Vital Sign [HVS] questionnaire.",
 				"exampleCanonical": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1",
 				"groupingId": "new-group2"
 			},
@@ -174,7 +174,7 @@
 					"display": "SDOHCC Observation HungerVitalSign Example 2"
 				},
 				"name": "SDOHCC Observation HungerVitalSign Example 2",
-				"description": "An example of an Observation instance that represents the individual Question and Answer pair (QA pair) from an SDOH screening questionnaire represented in LOINC. This example represents LOINC code 88123-5 from the Hunger Vital Sign [HVS] questionnaire.",
+				"description": "An example of an Observation that represents the individual Question and Answer pair (QA pair) from an SDOH screening questionnaire represented in LOINC. This example represents LOINC code 88123-5 from the Hunger Vital Sign [HVS] questionnaire.",
 				"exampleCanonical": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1",
 				"groupingId": "new-group2"
 			},
@@ -186,7 +186,7 @@
 					"display": "SDOHCC Observation HungerVitalSign Example 3"
 				},
 				"name": "SDOHCC Observation HungerVitalSign Example 3",
-				"description": "An example of an Observation instance that represents the individual Question and Answer pair (QA pair) from an SDOH screening questionnaire represented in LOINC. This example represents LOINC code 88124-3 from the Hunger Vital Sign [HVS] questionnaire.",
+				"description": "An example of an Observation that represents the individual Question and Answer pair (QA pair) from an SDOH screening questionnaire represented in LOINC. This example represents LOINC code 88124-3 from the Hunger Vital Sign [HVS] questionnaire.",
 				"exampleCanonical": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1",
 				"groupingId": "new-group2"
 			},
@@ -198,7 +198,7 @@
 					"display": "SDOHCC Observation HungerVitalSignGroup 1"
 				},
 				"name": "SDOHCC Observation HungerVitalSignGroup 1",
-				"description": "An Observation instance that represents the Observation group which has as its members the Observations that represent the individual Question and Answer pairs (QA pairs) from an SDOH screening questionnaire represented in LOINC. This instance is the group of 3 Observations that represent the 3 questions from LOINC code 88121-9 which is the Hunger Vital Sign [HVS] questionnaire.",
+				"description": "An example of an Observation that represents the Observation group which has as its members the Observations that represent the individual Question and Answer pairs (QA pairs) from an SDOH screening questionnaire represented in LOINC. This example is the group of 3 Observations that represent the 3 questions from LOINC code 88121-9 which is the Hunger Vital Sign [HVS] questionnaire.",
 				"groupingId": "new-group2"
 			},
 			{
@@ -209,8 +209,19 @@
 					"display": "SDOHCC Condition HungerVitalSign Example 1"
 				},
 				"name": "SDOHCC Condition HungerVitalSign Example 1",
-				"description": "An example of a Condition instance that represents a health concern based on an Observation instance or instances which represent the individual Question and Answer pairs (QA pairs) from an SDOH screening questionnaire represented in LOINC. This example represents a health concern that references, as evidence, Observations derived from the LOINC 88121-9 Hunger Vital Sign [HVS] questionnaire.",
+				"description": "An example of a Condition that represents a health concern based on an Observation instance or instances which represent the individual Question and Answer pairs (QA pairs) from an SDOH screening questionnaire represented in LOINC. This example represents a health concern that references, as evidence, Observations derived from the LOINC 88121-9 Hunger Vital Sign [HVS] questionnaire.",
 				"exampleCanonical": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1",
+				"groupingId": "new-group2"
+			},
+			{
+				"extension": [],
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1",
+					"display": "SDOHCC StructureMap HungerVitalSignMapper 1"
+				},
+				"name": "SDOHCC StructureMap HungerVitalSignMapper 1",
+				"description": "A StructureMap instance that represents the resource that transforms individual Question and Answer pairs (QA pairs) from the LOINC 88121-9 Hunger Vital Sign [HVS] questionnaire to their corresponding Observations (SDOHCC_Observation_HungerVitalSign_Example_1, SDOHCC_Observation_HungerVitalSign_Example_2, and SDOHCC_Observation_HungerVitalSign_Example_3) and Condition (SDOHCC_Condition_HungerVitalSign_Example_1).",
 				"groupingId": "new-group2"
 			}
 		],
