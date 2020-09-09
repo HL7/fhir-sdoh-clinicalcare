@@ -29,7 +29,7 @@ The figure below was derived from the HL7 Patient Care WG Domain Analysis model 
 
 The relationships between the various types of information are supported by the designs developed for the resources. The diagram below shows the data model for the assessment observation, condition (diagnosis), and goal (patient centered goal). The semantics designed for the profiled resources support the envisioned cycles of assessment, diagnosis, and goal setting. The mind map illustration represents profiles developed in this IG for the FHIR Observation, Condition, and Goal Resources. It shows instances of profiled Resources that would be used over time as part of an iterative care process. 
 
-<table><tr><td><img src="FHIR_Resource_Reference_MiMind.png" /></td></tr></table>
+<table><tr><td><img src="FHIR_Resource_Reference_MiMind_2.png" /></td></tr></table>
 
 
 

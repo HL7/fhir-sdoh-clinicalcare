@@ -37,15 +37,15 @@ A FHIR IG address the needs of multiple audiences. It provides technical artifac
 
 ### Notes to Reviewers and Balloters
 
-Feedback on V0.0.1 of the IG should be sent to gravityproject@emiadvisors.net. 
+Feedback on V0.0.2 of the IG should be sent to gravityproject@emiadvisors.net. 
 
 
 ### History of Document Changes
 
 | Number         | Description                                                                                                                                                   |
 |---------------|----------------------------------------------------------------------------------------------------|
-| 2         |         |
-| 1             | Redesigned scope of this IG                                         |
+| 0.0.2         |Updated profiles, examples, and initial narrative sections         |
+| 0.0.1             | Redesigned scope of this IG                                         |
 
 
 
@@ -77,8 +77,9 @@ There may also be some required copyright acknowledgements for certain Code Syst
 | Rob Hausam |        |
 | Cheng Liu | MaxMD|
 | Natasha Kreisle | MaxMD|
-{:class="table table-bordered"}
-{:.table-striped}
+
+
+[HL7 International - Patient Care](http://www.hl7.org/Special/committees/patientcare)
 
 
 
