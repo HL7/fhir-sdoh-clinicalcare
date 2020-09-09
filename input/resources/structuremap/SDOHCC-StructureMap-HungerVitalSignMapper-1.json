@@ -2,9 +2,9 @@
 	"resourceType": "StructureMap",
 	"id": "SDOHCC-StructureMap-HungerVitalSignMapper-1",
 	"meta": {
-		"versionId": "10",
-		"lastUpdated": "2020-08-31T15:24:40.700+00:00",
-		"source": "#ggVER3up4rbzpI8n"
+		"versionId": "11",
+		"lastUpdated": "2020-09-08T17:20:15.727+00:00",
+		"source": "#623EiiN6WpHX6kdn"
 	},
 	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1",
 	"name": "SDOHCC_StructureMap_HungerVitalSignMapper_1",
@@ -291,7 +291,9 @@
 					"name": "rule-7",
 					"source": [
 						{
-							"context": "src"
+							"context": "src",
+							"element": "item",
+							"condition": "linkId = '/88124-3' and answer.valueCoding.code ='LA19952-3'"
 						}
 					],
 					"target": [
@@ -1628,7 +1630,7 @@
 									"valueString": "733423003"
 								},
 								{
-									"valueString": "Testing Food insecurity (finding)"
+									"valueString": "Food insecurity (finding)"
 								}
 							]
 						},
