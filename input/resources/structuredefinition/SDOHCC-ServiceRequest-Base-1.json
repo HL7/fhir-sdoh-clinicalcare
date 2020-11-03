@@ -2,28 +2,15 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-ServiceRequest-Base-1",
 	"meta": {
-		"versionId": "9",
-		"lastUpdated": "2020-09-05T21:22:29.445+00:00",
-		"source": "#OEySCW03Jj1jND3h"
+		"versionId": "11",
+		"lastUpdated": "2020-11-02T18:42:28.870+00:00",
+		"source": "#wYWTvhNK3NoBUZhB"
 	},
-	"extension": [],
-	"url": "http://example.org/fhir/StructureDefinition/SDOHCC-ServiceRequest-Base-1",
-	"version": "0.0.1",
+	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-ServiceRequest-Base-1",
 	"name": "SDOHCC_ServiceRequest_Base_1",
 	"title": "SDOHCC ServiceRequest Base 1",
 	"status": "draft",
-	"date": "2020-08-31",
 	"description": "This profile constrains ServiceRequests that address Social Determinants of Health.",
-	"jurisdiction": [
-		{
-			"coding": [
-				{
-					"system": "urn:iso:std:iso:3166",
-					"code": "US"
-				}
-			]
-		}
-	],
 	"fhirVersion": "4.0.1",
 	"mapping": [
 		{
@@ -67,21 +54,7 @@
 						"code": "Reference",
 						"targetProfile": [
 							"http://hl7.org/fhir/StructureDefinition/CarePlan",
-							"http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-							"http://example.org/fhir/StructureDefinition/SDOHCC-ServiceRequest-Base-1"
-						]
-					}
-				]
-			},
-			{
-				"id": "ServiceRequest.replaces",
-				"path": "ServiceRequest.replaces",
-				"type": [
-					{
-						"code": "Reference",
-						"targetProfile": [
-							"http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-							"http://example.org/fhir/StructureDefinition/SDOHCC-ServiceRequest-Base-1"
+							"http://hl7.org/fhir/StructureDefinition/ServiceRequest"
 						]
 					}
 				]
@@ -95,6 +68,17 @@
 				"id": "ServiceRequest.intent",
 				"path": "ServiceRequest.intent",
 				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.category",
+				"path": "ServiceRequest.category",
+				"short": "e.g., food-insecurity-domain | transportation-insecurity-domain",
+				"definition": "A code that classifies the service for searching, sorting and display purposes (e.g., \"food-insecurity-domain\").",
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-valueset-sdohdomain-1"
+				}
 			},
 			{
 				"id": "ServiceRequest.priority",
@@ -135,19 +119,30 @@
 			{
 				"id": "ServiceRequest.reasonReference",
 				"path": "ServiceRequest.reasonReference",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "resolve()"
+						}
+					],
+					"rules": "open"
+				}
+			},
+			{
+				"id": "ServiceRequest.reasonReference:SupportedReasonReference",
+				"path": "ServiceRequest.reasonReference",
+				"sliceName": "SupportedReasonReference",
 				"type": [
 					{
 						"code": "Reference",
 						"targetProfile": [
-							"http://hl7.org/fhir/StructureDefinition/Condition",
-							"http://hl7.org/fhir/StructureDefinition/Observation",
-							"http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
-							"http://hl7.org/fhir/StructureDefinition/DocumentReference",
 							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1",
 							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "ServiceRequest.specimen",

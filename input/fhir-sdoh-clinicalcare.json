@@ -1,9 +1,9 @@
 {
 	"id": "fhir-sdoh-clinicalcare",
 	"meta": {
-		"versionId": "82",
-		"lastUpdated": "2020-09-09T14:48:48.605+00:00",
-		"source": "#hXV2u1TQ52NQ9UIY"
+		"versionId": "97",
+		"lastUpdated": "2020-11-03T12:46:14.870+00:00",
+		"source": "#Ioha3GuDDKRhcoaV"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -11,22 +11,22 @@
 		"4.0.1"
 	],
 	"url": "http://hl7.org/fhir/us/ImplementaitonGuide/fhir-sdoh-clinicalcare",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"name": "Sdohclinicalcare",
 	"title": "SDOH Clinical Care",
 	"publisher": "HL7 International - Patient Care WG",
 	"contact": [
 		{
-			"name": "HL7 International - Patient Care",
+			"name": "HL7 International - Patient Care WG",
 			"telecom": [
 				{
 					"system": "url",
-					"value": "http://www.hl7.org/Special/committees/patientare"
+					"value": "http://www.hl7.org/Special/committees/patientcare"
 				}
 			]
 		}
 	],
-	"description": "|IG Characteristic  |     Value |\n|------------------------------------------------------|--------------------------------------------|\n|**FHIR Version:** |    FHIR R4 |\n|**IG Realm:** |    US |\n|**IG Type:** |    STU |\n|**Exchange Methods:** |    RESTful Query, Messages, Transactions, Documents, Tasks |\n|**IG Dependencies:** |    The SDOH-CC IG utilizes and adopts guidance developed in several other FHIR&reg; Implementation Guides. |\n\n\n\n\n\n|IG Dependencies         |  IG Code         | Version                      |\n|----------------------------------|-------------------------|---------------|\n| HL7 FHIR US Core               |  [US Core](http://hl7.org/fhir/us/core/STU3.1)                | Version 3.1.0     |\n| Structured Data Capture                         |   [SDC](http://hl7.org/fhir/uv/sdc/2019May)        | Version 2.7.0                     |\n\n\n\n\n\n###  Purpose\n\nThis HL7&reg; IG defines FHIR R4 profiles, extensions and value sets needed to exchange SDOH content defined by the Gravity Project. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. It addresses the need to gather SDOH information in the context of clinical encounters and describes how to share SDOH information and other relevant information with outside organizations for the purpose of coordinating services and support to address SDOH related needs. It also demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. It supports the following use cases:\n1.\tDocument SDOH data in conjunction with the patient encounter,\n2.\tDocument and track SDOH related interventions to completion,\n3.\tGather and aggregate SDOH data for uses beyond the point of care (e.g. public health, population health, quality measurement, risk adjustment, quality improvement, and research.)\n\n\n### How to Use This Guide\n\nA FHIR IG address the needs of multiple audiences. It provides technical artifacts that assist programmers when implementing standards-based FHIR application program interfaces (APIs) for specific purposes. It provides instructive material that explains how FHIR is used to accomplish specific uses cases. It also provides general information that helps business analysts and technology decision-makers understand the use cases and benefits associated with acheiving specific data exchange capabilities. A FHIR IG is as much a business planning tool as it is an educational resource and a technical specification.\n\n\n\n### Notes to Reviewers and Balloters\n\nFeedback on V0.0.2 of the IG should be sent to gravityproject@emiadvisors.net. \n\n\n### History of Document Changes\n\n| Number         | Description                                                                                                                                                   |\n|---------------|----------------------------------------------------------------------------------------------------|\n| 0.0.2         |Updated profiles, examples, and initial narrative sections         |\n| 0.0.1             | Redesigned scope of this IG                                         |\n\n\n\n### Acknowledgements\n*This section is still under development*\n\nWe would like to thank the Agency for Healthcare Research and Quality (AHRQ), SIREN UCSF, UV Larner and Yale Nursing for their support for developing this IG and all [Gravity Project sponsors](https://confluence.hl7.org/display/GRAV/Gravity+Project+Sponsors) for their contributions to make rapid progress on the standardization of social determinants of health data.\n\nReserve this area to included acknowledgements for the people and organizations involved in developing and maintaining this Implementation Guide.\n\nThere may also be some required copyright acknowledgements for certain Code Systems or other acknowledgements required by HL7 and FHIR.\n\n\n|**Name**         | **Organization**                                        |\n|--------------------------|--------------------------------------------|\n| Robert Dieterle         | EnableCare                                         |\n| Corey Smith        | AMA                                   |\n| Monique van Berkum       | AMA                                 |\n| Lisa Nelson           | MaxMD                                         |\n| Matt Elrod        | MaxMD                                   |\n| Matt Menning        |  AMA                                  |\n| Mohit Saigal        | AMA                                   |\n| Becky Gradl          | Academy of Nutrition and Dietetics                                 |\n| Sarah DeSilvey        |  Larner College of Medicine at the University of Vermont, SIREN                                  |\n| Donna Pertel         |  Academy of Nutrition and Dietetics                                  |\n| Evelyn Gallego        |  EMI Advisors, LLC                                  |\n| Linda Hyde        |   EMI Advisors, LLC                                 |\n| Lynette Elliott| EMI Advisors, LLC |\n| Rob Hausam |        |\n| Cheng Liu | MaxMD|\n| Natasha Kreisle | MaxMD|\n\n\n[HL7 International - Patient Care](http://www.hl7.org/Special/committees/patientcare)",
+	"description": "|IG Characteristic  |     Value |\n|------------------------------------------------------|--------------------------------------------|\n|**FHIR Version:** |    FHIR R4 |\n|**IG Realm:** |    US |\n|**IG Type:** |    STU |\n|**Exchange Methods:** |    RESTful Query, Messages, Transactions, Documents, Tasks |\n|**IG Dependencies:** |    The SDOH-CC IG utilizes and adopts guidance developed in several other FHIR&reg; Implementation Guides. |\n\n\n\n\n\n|IG Dependencies         |  IG Code         | Version                      |\n|----------------------------------|-------------------------|---------------|\n| HL7 FHIR US Core               |  [US Core](http://hl7.org/fhir/us/core/STU3.1)                | Version 3.1.0     |\n| Structured Data Capture                         |   [SDC](http://hl7.org/fhir/uv/sdc/2019May)        | Version 2.7.0                     |\n\n\n\n\n\n###  Purpose\n\nThis HL7&reg; IG defines FHIR R4 profiles, extensions and value sets needed to exchange SDOH content defined by the Gravity Project. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. It addresses the need to gather SDOH information in the context of clinical encounters and describes how to share SDOH information and other relevant information with outside organizations for the purpose of coordinating services and support to address SDOH related needs. It also demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. It supports the following use cases:\n1.\tDocument SDOH data in conjunction with the patient encounter,\n2.\tDocument and track SDOH related interventions to completion,\n3.\tGather and aggregate SDOH data for uses beyond the point of care (e.g. public health, population health, quality measurement, risk adjustment, quality improvement, and research.)\n\n\n### How to Use This Guide\n\nA FHIR IG address the needs of multiple audiences. It provides technical artifacts that assist programmers when implementing standards-based FHIR application program interfaces (APIs) for specific purposes. It provides instructive material that explains how FHIR is used to accomplish specific uses cases. It also provides general information that helps business analysts and technology decision-makers understand the use cases and benefits associated with acheiving specific data exchange capabilities. A FHIR IG is as much a business planning tool as it is an educational resource and a technical specification.\n\n\n\n### Notes to Reviewers and Balloters\n\nFeedback on V0.0.2 of the IG should be sent to gravityproject@emiadvisors.net. \n\n\n### History of Document Changes\n\n| Number         | Description                                                                                                                                                   |\n|---------------|----------------------------------------------------------------------------------------------------|\n| 0.0.3         |Major update of all resource profiles, assoicated descriptions, examples, and value sets         |\n| 0.0.2         |Updated profiles, examples, and initial narrative sections         |\n| 0.0.1             | Redesigned scope of this IG                                         |\n\n\n\n### Acknowledgements\n*This section is still under development*\n\nWe would like to thank the Agency for Healthcare Research and Quality (AHRQ), SIREN UCSF, UV Larner and Yale Nursing for their support for developing this IG and all [Gravity Project sponsors](https://confluence.hl7.org/display/GRAV/Gravity+Project+Sponsors) for their contributions to make rapid progress on the standardization of social determinants of health data.\n\nReserve this area to included acknowledgements for the people and organizations involved in developing and maintaining this Implementation Guide.\n\nThere may also be some required copyright acknowledgements for certain Code Systems or other acknowledgements required by HL7 and FHIR.\n\n\n### Authors\n\n|**Name**         | **Organization**                                        |\n|--------------------------|--------------------------------------------|\n| Robert Dieterle         | EnableCare                                         |\n| Corey Smith        | AMA                                   |\n| Monique van Berkum       | AMA                                 |\n| Lisa Nelson           | MaxMD                                         |\n| Matt Elrod        | MaxMD                                   |\n| Matt Menning        |  AMA                                  |\n| Mohit Saigal        | AMA                                   |\n| Becky Gradl          | Academy of Nutrition and Dietetics                                 |\n| Sarah DeSilvey        |  Larner College of Medicine at the University of Vermont, SIREN                                  |\n| Donna Pertel         |  Academy of Nutrition and Dietetics                                  |\n| Evelyn Gallego        |  EMI Advisors, LLC                                  |\n| Linda Hyde        |   EMI Advisors, LLC                                 |\n| Lynette Elliott| EMI Advisors, LLC |\n| Rob Hausam |        |\n| Cheng Liu | MaxMD|\n| Natasha Kreisle | MaxMD|\n\n\n[HL7 International - Patient Care](http://www.hl7.org/Special/committees/patientcare)",
 	"jurisdiction": [
 		{
 			"coding": [
@@ -223,6 +223,34 @@
 				"name": "SDOHCC StructureMap HungerVitalSignMapper 1",
 				"description": "A StructureMap instance that represents the resource that transforms individual Question and Answer pairs (QA pairs) from the LOINC 88121-9 Hunger Vital Sign [HVS] questionnaire to their corresponding Observations (SDOHCC_Observation_HungerVitalSign_Example_1, SDOHCC_Observation_HungerVitalSign_Example_2, and SDOHCC_Observation_HungerVitalSign_Example_3) and Condition (SDOHCC_Condition_HungerVitalSign_Example_1).",
 				"groupingId": "new-group2"
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/SDOHCC-Task-Base-1",
+					"display": "SDOHCC Task Base 1"
+				},
+				"name": "SDOHCC Task Base 1",
+				"description": "This profile constrains Tasks that address Social Determinants of Health.",
+				"groupingId": "new-group1"
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "CodeSystem/sdohcc-temporary-codes",
+					"display": "SDOHCC CodeSystem Temporary Codes"
+				},
+				"name": "SDOHCC CodeSystem Temporary Codes",
+				"description": "A local code system defined within the context of the SDOH-ClinicalCare IG."
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "ValueSet/sdohcc-valueset-sdohdomain-1",
+					"display": "SDOHCC ValueSet SDOHDomain 1"
+				},
+				"name": "SDOHCC ValueSet SDOHDomain 1 ",
+				"description": "This value set is defined extensionally to include concepts that represent Social Determinant of Health domains."
 			}
 		],
 		"page": {

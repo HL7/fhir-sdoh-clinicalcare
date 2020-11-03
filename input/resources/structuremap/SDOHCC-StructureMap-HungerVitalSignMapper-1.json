@@ -2,9 +2,9 @@
 	"resourceType": "StructureMap",
 	"id": "SDOHCC-StructureMap-HungerVitalSignMapper-1",
 	"meta": {
-		"versionId": "11",
-		"lastUpdated": "2020-09-08T17:20:15.727+00:00",
-		"source": "#623EiiN6WpHX6kdn"
+		"versionId": "12",
+		"lastUpdated": "2020-11-02T22:22:40.143+00:00",
+		"source": "#i0tmMF9lW2TQPTLv"
 	},
 	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1",
 	"name": "SDOHCC_StructureMap_HungerVitalSignMapper_1",
@@ -442,62 +442,142 @@
 						{
 							"context": "observation",
 							"contextType": "variable",
-							"element": "issued",
-							"transform": "copy",
+							"element": "category",
+							"variable": "newCC",
+							"transform": "create",
 							"parameter": [
 								{
-									"valueString": "2020-08-18T15:31:38.111Z"
+									"valueString": "CodeableConcept"
+								}
+							]
+						}
+					],
+					"rule": [
+						{
+							"name": "rule-12",
+							"source": [
+								{
+									"context": "src"
+								}
+							],
+							"target": [
+								{
+									"context": "newCC",
+									"contextType": "variable",
+									"element": "coding",
+									"variable": "newCoding",
+									"transform": "create",
+									"parameter": [
+										{
+											"valueString": "Coding"
+										}
+									]
+								}
+							],
+							"rule": [
+								{
+									"name": "rule-13",
+									"source": [
+										{
+											"context": "src"
+										}
+									],
+									"target": [
+										{
+											"context": "newCoding",
+											"contextType": "variable",
+											"element": "system",
+											"transform": "copy",
+											"parameter": [
+												{
+													"valueString": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "rule-14",
+									"source": [
+										{
+											"context": "src"
+										}
+									],
+									"target": [
+										{
+											"context": "newCoding",
+											"contextType": "variable",
+											"element": "code",
+											"transform": "copy",
+											"parameter": [
+												{
+													"valueString": "food-insecurity-domain"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "rule-15",
+									"source": [
+										{
+											"context": "src"
+										}
+									],
+									"target": [
+										{
+											"context": "newCoding",
+											"contextType": "variable",
+											"element": "display",
+											"transform": "copy",
+											"parameter": [
+												{
+													"valueString": "Food Insecurity Domain"
+												}
+											]
+										}
+									]
 								}
 							]
 						}
 					]
 				},
 				{
-					"name": "rule-12",
+					"name": "rule-16",
 					"source": [
 						{
-							"context": "src"
+							"context": "src",
+							"element": "authored",
+							"variable": "authored"
 						}
 					],
 					"target": [
 						{
 							"context": "observation",
 							"contextType": "variable",
+							"element": "issued",
+							"transform": "copy",
+							"parameter": [
+								{
+									"valueId": "authored"
+								}
+							]
+						},
+						{
+							"context": "observation",
+							"contextType": "variable",
 							"element": "effective",
-							"variable": "period",
-							"transform": "create",
-							"parameter": [
-								{
-									"valueString": "Period"
-								}
-							]
-						},
-						{
-							"context": "period",
-							"contextType": "variable",
-							"element": "start",
 							"transform": "copy",
 							"parameter": [
 								{
-									"valueString": "2019-08-18T12:31:35.123Z"
-								}
-							]
-						},
-						{
-							"context": "period",
-							"contextType": "variable",
-							"element": "end",
-							"transform": "copy",
-							"parameter": [
-								{
-									"valueString": "2020-08-18T14:31:36.456Z"
+									"valueId": "authored"
 								}
 							]
 						}
 					]
 				},
 				{
-					"name": "rule-13",
+					"name": "rule-17",
 					"source": [
 						{
 							"context": "answerItem",
@@ -521,7 +601,7 @@
 					],
 					"rule": [
 						{
-							"name": "rule-14",
+							"name": "rule-18",
 							"source": [
 								{
 									"context": "answer",
@@ -545,7 +625,7 @@
 							],
 							"rule": [
 								{
-									"name": "rule-15",
+									"name": "rule-19",
 									"source": [
 										{
 											"context": "coding",
@@ -572,7 +652,7 @@
 					]
 				},
 				{
-					"name": "rule-16",
+					"name": "rule-20",
 					"source": [
 						{
 							"context": "src",
@@ -596,7 +676,7 @@
 					],
 					"rule": [
 						{
-							"name": "rule-17",
+							"name": "rule-21",
 							"source": [
 								{
 									"context": "qSubject",
@@ -619,7 +699,7 @@
 							]
 						},
 						{
-							"name": "rule-18",
+							"name": "rule-22",
 							"source": [
 								{
 									"context": "qSubject",
@@ -644,7 +724,7 @@
 					]
 				},
 				{
-					"name": "rule-19",
+					"name": "rule-23",
 					"source": [
 						{
 							"context": "src",
@@ -707,7 +787,7 @@
 			],
 			"rule": [
 				{
-					"name": "rule-20",
+					"name": "rule-24",
 					"source": [
 						{
 							"context": "src"
@@ -737,7 +817,7 @@
 					]
 				},
 				{
-					"name": "rule-21",
+					"name": "rule-25",
 					"source": [
 						{
 							"context": "item",
@@ -777,7 +857,7 @@
 					]
 				},
 				{
-					"name": "rule-22",
+					"name": "rule-26",
 					"source": [
 						{
 							"context": "src",
@@ -801,7 +881,7 @@
 					],
 					"rule": [
 						{
-							"name": "rule-23",
+							"name": "rule-27",
 							"source": [
 								{
 									"context": "qSource",
@@ -824,7 +904,7 @@
 							]
 						},
 						{
-							"name": "rule-24",
+							"name": "rule-28",
 							"source": [
 								{
 									"context": "qSource",
@@ -877,7 +957,7 @@
 			],
 			"rule": [
 				{
-					"name": "rule-25",
+					"name": "rule-29",
 					"source": [
 						{
 							"context": "src"
@@ -907,7 +987,7 @@
 					]
 				},
 				{
-					"name": "rule-26",
+					"name": "rule-30",
 					"source": [
 						{
 							"context": "item",
@@ -947,7 +1027,7 @@
 					]
 				},
 				{
-					"name": "rule-27",
+					"name": "rule-31",
 					"source": [
 						{
 							"context": "src",
@@ -971,7 +1051,7 @@
 					],
 					"rule": [
 						{
-							"name": "rule-28",
+							"name": "rule-32",
 							"source": [
 								{
 									"context": "qSource",
@@ -994,7 +1074,7 @@
 							]
 						},
 						{
-							"name": "rule-29",
+							"name": "rule-33",
 							"source": [
 								{
 									"context": "qSource",
@@ -1052,7 +1132,7 @@
 			],
 			"rule": [
 				{
-					"name": "rule-30",
+					"name": "rule-34",
 					"source": [
 						{
 							"context": "src"
@@ -1082,7 +1162,7 @@
 					]
 				},
 				{
-					"name": "rule-31",
+					"name": "rule-35",
 					"source": [
 						{
 							"context": "item",
@@ -1122,7 +1202,7 @@
 					]
 				},
 				{
-					"name": "rule-32",
+					"name": "rule-36",
 					"source": [
 						{
 							"context": "bundle",
@@ -1173,7 +1253,7 @@
 			],
 			"rule": [
 				{
-					"name": "rule-33",
+					"name": "rule-37",
 					"source": [
 						{
 							"context": "entries",
@@ -1197,7 +1277,7 @@
 					]
 				},
 				{
-					"name": "rule-34",
+					"name": "rule-38",
 					"source": [
 						{
 							"context": "entries",
@@ -1249,7 +1329,7 @@
 			],
 			"rule": [
 				{
-					"name": "rule-35",
+					"name": "rule-39",
 					"source": [
 						{
 							"context": "src"
@@ -1279,7 +1359,7 @@
 					]
 				},
 				{
-					"name": "rule-36",
+					"name": "rule-40",
 					"source": [
 						{
 							"context": "src"
@@ -1300,7 +1380,7 @@
 					]
 				},
 				{
-					"name": "rule-37",
+					"name": "rule-41",
 					"source": [
 						{
 							"context": "src"
@@ -1327,7 +1407,7 @@
 					]
 				},
 				{
-					"name": "rule-38",
+					"name": "rule-42",
 					"source": [
 						{
 							"context": "bundle",
@@ -1351,7 +1431,7 @@
 					],
 					"rule": [
 						{
-							"name": "rule-39",
+							"name": "rule-43",
 							"source": [
 								{
 									"context": "entries",
@@ -1375,7 +1455,7 @@
 							]
 						},
 						{
-							"name": "rule-40",
+							"name": "rule-44",
 							"source": [
 								{
 									"context": "entries",
@@ -1399,7 +1479,7 @@
 							]
 						},
 						{
-							"name": "rule-41",
+							"name": "rule-45",
 							"source": [
 								{
 									"context": "entries",
@@ -1443,7 +1523,7 @@
 			],
 			"rule": [
 				{
-					"name": "rule-42",
+					"name": "rule-46",
 					"source": [
 						{
 							"context": "observation",
@@ -1497,7 +1577,7 @@
 			],
 			"rule": [
 				{
-					"name": "rule-43",
+					"name": "rule-47",
 					"source": [
 						{
 							"context": "src"
@@ -1527,7 +1607,7 @@
 					]
 				},
 				{
-					"name": "rule-44",
+					"name": "rule-48",
 					"source": [
 						{
 							"context": "src"
@@ -1554,7 +1634,7 @@
 					]
 				},
 				{
-					"name": "rule-45",
+					"name": "rule-49",
 					"source": [
 						{
 							"context": "src"
@@ -1581,7 +1661,7 @@
 					]
 				},
 				{
-					"name": "rule-46",
+					"name": "rule-50",
 					"source": [
 						{
 							"context": "src"
@@ -1592,7 +1672,6 @@
 							"context": "condition",
 							"contextType": "variable",
 							"element": "category",
-							"variable": "category",
 							"transform": "cc",
 							"parameter": [
 								{
@@ -1609,7 +1688,118 @@
 					]
 				},
 				{
-					"name": "rule-47",
+					"name": "rule-51",
+					"source": [
+						{
+							"context": "src"
+						}
+					],
+					"target": [
+						{
+							"context": "condition",
+							"contextType": "variable",
+							"element": "category",
+							"variable": "newCC",
+							"transform": "create",
+							"parameter": [
+								{
+									"valueString": "CodeableConcept"
+								}
+							]
+						}
+					],
+					"rule": [
+						{
+							"name": "rule-52",
+							"source": [
+								{
+									"context": "src"
+								}
+							],
+							"target": [
+								{
+									"context": "newCC",
+									"contextType": "variable",
+									"element": "coding",
+									"variable": "newCoding",
+									"transform": "create",
+									"parameter": [
+										{
+											"valueString": "Coding"
+										}
+									]
+								}
+							],
+							"rule": [
+								{
+									"name": "rule-53",
+									"source": [
+										{
+											"context": "src"
+										}
+									],
+									"target": [
+										{
+											"context": "newCoding",
+											"contextType": "variable",
+											"element": "system",
+											"transform": "copy",
+											"parameter": [
+												{
+													"valueString": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "rule-54",
+									"source": [
+										{
+											"context": "src"
+										}
+									],
+									"target": [
+										{
+											"context": "newCoding",
+											"contextType": "variable",
+											"element": "code",
+											"transform": "copy",
+											"parameter": [
+												{
+													"valueString": "food-insecurity-domain"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "rule-55",
+									"source": [
+										{
+											"context": "src"
+										}
+									],
+									"target": [
+										{
+											"context": "newCoding",
+											"contextType": "variable",
+											"element": "display",
+											"transform": "copy",
+											"parameter": [
+												{
+													"valueString": "Food Insecurity Domain"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "rule-56",
 					"source": [
 						{
 							"context": "src"
@@ -1648,7 +1838,7 @@
 					]
 				},
 				{
-					"name": "rule-48",
+					"name": "rule-57",
 					"source": [
 						{
 							"context": "src"
@@ -1675,7 +1865,7 @@
 					]
 				},
 				{
-					"name": "rule-49",
+					"name": "rule-58",
 					"source": [
 						{
 							"context": "src"
@@ -1708,7 +1898,7 @@
 					]
 				},
 				{
-					"name": "rule-50",
+					"name": "rule-59",
 					"source": [
 						{
 							"context": "bundle",
@@ -1738,7 +1928,7 @@
 					],
 					"rule": [
 						{
-							"name": "rule-51",
+							"name": "rule-60",
 							"source": [
 								{
 									"context": "entries",
@@ -1764,7 +1954,7 @@
 					]
 				},
 				{
-					"name": "rule-52",
+					"name": "rule-61",
 					"source": [
 						{
 							"context": "src",
@@ -1788,7 +1978,7 @@
 					],
 					"rule": [
 						{
-							"name": "rule-53",
+							"name": "rule-62",
 							"source": [
 								{
 									"context": "qSubject",
@@ -1811,7 +2001,7 @@
 							]
 						},
 						{
-							"name": "rule-54",
+							"name": "rule-63",
 							"source": [
 								{
 									"context": "qSubject",
@@ -1854,7 +2044,7 @@
 			],
 			"rule": [
 				{
-					"name": "rule-55",
+					"name": "rule-64",
 					"source": [
 						{
 							"context": "condition",

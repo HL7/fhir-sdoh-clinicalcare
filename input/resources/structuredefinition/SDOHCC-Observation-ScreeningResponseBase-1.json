@@ -2,28 +2,15 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Observation-ScreeningResponseBase-1",
 	"meta": {
-		"versionId": "44",
-		"lastUpdated": "2020-09-05T21:43:44.396+00:00",
-		"source": "#eGyel2iyxr58s6hS"
+		"versionId": "47",
+		"lastUpdated": "2020-11-02T18:42:28.885+00:00",
+		"source": "#Xz1OagnhwfRITGjP"
 	},
-	"extension": [],
 	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1",
-	"version": "0.0.1",
 	"name": "SDOHCC_Observation_ScreeningResponseBase_1",
 	"title": "SDOHCC Observation ScreeningResponseBase 1",
 	"status": "draft",
-	"date": "2020-08-24",
 	"description": "This profile constrains Observations that represent individual Question and Answer (QA) pairs from SDOH screening instruments that are represented in LOINC.",
-	"jurisdiction": [
-		{
-			"coding": [
-				{
-					"system": "urn:iso:std:iso:3166",
-					"code": "US"
-				}
-			]
-		}
-	],
 	"fhirVersion": "4.0.1",
 	"mapping": [
 		{
@@ -130,6 +117,17 @@
 				"mustSupport": true
 			},
 			{
+				"id": "Observation.category:SDOHDomain",
+				"path": "Observation.category",
+				"sliceName": "SDOHDomain",
+				"short": "e.g., food-insecurity-domain | transportation-insecurity-domain",
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-valueset-sdohdomain-1"
+				}
+			},
+			{
 				"id": "Observation.code",
 				"path": "Observation.code",
 				"mustSupport": true,
@@ -154,6 +152,16 @@
 			{
 				"id": "Observation.effective[x]",
 				"path": "Observation.effective[x]",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "type",
+							"path": "$this"
+						}
+					],
+					"rules": "open"
+				},
+				"min": 1,
 				"type": [
 					{
 						"code": "dateTime"
@@ -161,7 +169,30 @@
 					{
 						"code": "Period"
 					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.effective[x]:effectivePeriod",
+				"path": "Observation.effective[x]",
+				"sliceName": "effectivePeriod",
+				"type": [
+					{
+						"code": "Period"
+					}
 				]
+			},
+			{
+				"id": "Observation.effective[x]:effectivePeriod.start",
+				"path": "Observation.effective[x].start",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.effective[x]:effectivePeriod.end",
+				"path": "Observation.effective[x].end",
+				"min": 1,
+				"mustSupport": true
 			},
 			{
 				"id": "Observation.performer",
@@ -221,13 +252,35 @@
 			{
 				"id": "Observation.derivedFrom",
 				"path": "Observation.derivedFrom",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "resolve()"
+						}
+					],
+					"rules": "open"
+				},
 				"type": [
 					{
 						"code": "Reference",
 						"targetProfile": [
 							"http://hl7.org/fhir/StructureDefinition/DocumentReference",
 							"http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
-							"http://hl7.org/fhir/StructureDefinition/Observation",
+							"http://hl7.org/fhir/StructureDefinition/Observation"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Observation.derivedFrom:SupportedDerivedFrom",
+				"path": "Observation.derivedFrom",
+				"sliceName": "SupportedDerivedFrom",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
 							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1",
 							"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"
 						]

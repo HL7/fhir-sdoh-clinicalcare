@@ -44,6 +44,7 @@ Feedback on V0.0.2 of the IG should be sent to gravityproject@emiadvisors.net.
 
 | Number         | Description                                                                                                                                                   |
 |---------------|----------------------------------------------------------------------------------------------------|
+| 0.0.3         |Major update of all resource profiles, assoicated descriptions, examples, and value sets         |
 | 0.0.2         |Updated profiles, examples, and initial narrative sections         |
 | 0.0.1             | Redesigned scope of this IG                                         |
 
@@ -58,6 +59,8 @@ Reserve this area to included acknowledgements for the people and organizations 
 
 There may also be some required copyright acknowledgements for certain Code Systems or other acknowledgements required by HL7 and FHIR.
 
+
+### Authors
 
 |**Name**         | **Organization**                                        |
 |--------------------------|--------------------------------------------|
@@ -94,8 +97,8 @@ There may also be some required copyright acknowledgements for certain Code Syst
 </thead>
 <tbody>
 <tr>
-<td>HL7 International - Patient Care</td>
-<td><a href="http://www.hl7.org/Special/committees/patientare" target="_new">http://www.hl7.org/Special/committees/patientare</a></td>
+<td>HL7 International - Patient Care WG</td>
+<td><a href="http://www.hl7.org/Special/committees/patientcare" target="_new">http://www.hl7.org/Special/committees/patientcare</a></td>
 </tr>
 </tbody>
 </table>

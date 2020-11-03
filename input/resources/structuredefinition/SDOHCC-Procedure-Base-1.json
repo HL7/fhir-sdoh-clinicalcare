@@ -2,28 +2,15 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Procedure-Base-1",
 	"meta": {
-		"versionId": "12",
-		"lastUpdated": "2020-09-05T21:20:38.263+00:00",
-		"source": "#gX7chxkW1vkCINEk"
+		"versionId": "14",
+		"lastUpdated": "2020-11-02T18:42:28.874+00:00",
+		"source": "#PO3ZkNu8VZEQUMbd"
 	},
-	"extension": [],
-	"url": "http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-Base-1",
-	"version": "0.0.1",
+	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Procedure-Base-1",
 	"name": "SDOHCC_Procedure_Base_1",
 	"title": "SDOHCC Procedure Base 1",
 	"status": "draft",
-	"date": "2020-08-31",
 	"description": "This profile constrains Procedures that address Social Determinants of Health.",
-	"jurisdiction": [
-		{
-			"coding": [
-				{
-					"system": "urn:iso:std:iso:3166",
-					"code": "US"
-				}
-			]
-		}
-	],
 	"fhirVersion": "4.0.1",
 	"mapping": [
 		{
@@ -62,17 +49,93 @@
 			{
 				"id": "Procedure.basedOn",
 				"path": "Procedure.basedOn",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "resolve()"
+						}
+					],
+					"rules": "open"
+				},
+				"mustSupport": true
+			},
+			{
+				"id": "Procedure.basedOn:SupportedBasedOn",
+				"path": "Procedure.basedOn",
+				"sliceName": "SupportedBasedOn",
 				"type": [
 					{
 						"code": "Reference",
 						"targetProfile": [
-							"http://hl7.org/fhir/StructureDefinition/CarePlan",
-							"http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-							"http://example.org/fhir/StructureDefinition/SDOHCC-ServiceRequest-Base-1"
+							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-ServiceRequest-Base-1"
 						]
 					}
 				],
 				"mustSupport": true
+			},
+			{
+				"id": "Procedure.code",
+				"path": "Procedure.code",
+				"short": "Procedure codes from SNOMED CT",
+				"binding": {
+					"strength": "required",
+					"description": "SNOMED CT codes describing the type of Procedure",
+					"valueSet": "http://hl7.org/fhir/ValueSet/procedure-code"
+				}
+			},
+			{
+				"id": "Procedure.code.coding",
+				"path": "Procedure.code.coding",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "type",
+							"path": "$this"
+						}
+					],
+					"rules": "open"
+				},
+				"mustSupport": true
+			},
+			{
+				"id": "Procedure.code.coding:CPTCoding",
+				"path": "Procedure.code.coding",
+				"sliceName": "CPTCoding",
+				"short": "Procedure codes from SNOMED CT",
+				"max": "1",
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"description": "CPT codes describing the type of Procedure",
+					"valueSet": "http://hl7.org/fhir/ValueSet/cpt-all"
+				}
+			},
+			{
+				"id": "Procedure.code.coding:LOINCCoding",
+				"path": "Procedure.code.coding",
+				"sliceName": "LOINCCoding",
+				"short": "Procedure codes from LOINC",
+				"max": "1",
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"description": "LOINC codes describing the type of Procedure",
+					"valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
+				}
+			},
+			{
+				"id": "Procedure.code.coding:HCPCSLevelIICoding",
+				"path": "Procedure.code.coding",
+				"sliceName": "HCPCSLevelIICoding",
+				"short": "Procedure codes from HCPCS",
+				"max": "1",
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"description": "HCPCS codes describing the type of Procedure",
+					"valueSet": "http://oidref.com/2.16.840.1.113883.6.285"
+				}
 			},
 			{
 				"id": "Procedure.recorder",
@@ -90,38 +153,32 @@
 				]
 			},
 			{
-				"id": "Procedure.performer.actor",
-				"path": "Procedure.performer.actor",
-				"type": [
-					{
-						"code": "Reference",
-						"targetProfile": [
-							"http://hl7.org/fhir/StructureDefinition/Practitioner",
-							"http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-							"http://hl7.org/fhir/StructureDefinition/Organization",
-							"http://hl7.org/fhir/StructureDefinition/Patient",
-							"http://hl7.org/fhir/StructureDefinition/RelatedPerson"
-						]
-					}
-				]
-			},
-			{
 				"id": "Procedure.reasonReference",
 				"path": "Procedure.reasonReference",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "resolve()"
+						}
+					],
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Procedure.reasonReference:SupportedReasonReference",
+				"path": "Procedure.reasonReference",
+				"sliceName": "SupportedReasonReference",
 				"type": [
 					{
 						"code": "Reference",
 						"targetProfile": [
-							"http://hl7.org/fhir/StructureDefinition/Condition",
-							"http://hl7.org/fhir/StructureDefinition/Observation",
-							"http://hl7.org/fhir/StructureDefinition/Procedure",
-							"http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
-							"http://hl7.org/fhir/StructureDefinition/DocumentReference",
 							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1",
 							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"
 						]
 					}
-				]
+				],
+				"mustSupport": true
 			},
 			{
 				"id": "Procedure.bodySite",
