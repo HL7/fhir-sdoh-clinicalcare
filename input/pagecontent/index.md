@@ -59,6 +59,8 @@ Reserve this area to included acknowledgements for the people and organizations 
 There may also be some required copyright acknowledgements for certain Code Systems or other acknowledgements required by HL7 and FHIR.
 
 
+### Authors
+
 |**Name**         | **Organization**                                        |
 |--------------------------|--------------------------------------------|
 | Robert Dieterle         | EnableCare                                         |
@@ -94,8 +96,8 @@ There may also be some required copyright acknowledgements for certain Code Syst
 </thead>
 <tbody>
 <tr>
-<td>HL7 International - Patient Care</td>
-<td><a href="http://www.hl7.org/Special/committees/patientare" target="_new">http://www.hl7.org/Special/committees/patientare</a></td>
+<td>HL7 International - Patient Care WG</td>
+<td><a href="http://www.hl7.org/Special/committees/patientcare" target="_new">http://www.hl7.org/Special/committees/patientcare</a></td>
 </tr>
 </tbody>
 </table>

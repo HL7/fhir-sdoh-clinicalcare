@@ -1,0 +1,182 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "SDOHCC-Task-Base-1",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-11-02T18:42:28.827+00:00",
+		"source": "#Dv6nzsBlmTZurDXu"
+	},
+	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Task-Base-1",
+	"name": "SDOHCC_Task_Base_1",
+	"title": "SDOHCC Task Base 1",
+	"status": "draft",
+	"description": "This profile constrains Tasks that address Social Determinants of Health.",
+	"fhirVersion": "4.0.1",
+	"mapping": [
+		{
+			"identity": "workflow",
+			"uri": "http://hl7.org/fhir/workflow",
+			"name": "Workflow Pattern"
+		},
+		{
+			"identity": "rim",
+			"uri": "http://hl7.org/v3",
+			"name": "RIM Mapping"
+		},
+		{
+			"identity": "w5",
+			"uri": "http://hl7.org/fhir/fivews",
+			"name": "FiveWs Pattern Mapping"
+		},
+		{
+			"identity": "v2",
+			"uri": "http://hl7.org/v2",
+			"name": "HL7 v2 Mapping"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Task",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Task",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Task.basedOn",
+				"path": "Task.basedOn",
+				"mustSupport": true
+			},
+			{
+				"id": "Task.status",
+				"path": "Task.status",
+				"mustSupport": true
+			},
+			{
+				"id": "Task.intent",
+				"path": "Task.intent",
+				"fixedCode": "order"
+			},
+			{
+				"id": "Task.priority",
+				"path": "Task.priority",
+				"mustSupport": true
+			},
+			{
+				"id": "Task.code",
+				"path": "Task.code",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/CodeSystem/task-code",
+							"code": "fulfill"
+						}
+					]
+				}
+			},
+			{
+				"id": "Task.focus",
+				"path": "Task.focus",
+				"min": 1,
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-ServiceRequest-Base-1"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Task.for",
+				"path": "Task.for",
+				"min": 1,
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/Patient",
+							"http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+							"http://hl7.org/fhir/StructureDefinition/Group"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Task.output",
+				"path": "Task.output",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "pattern",
+							"path": "type"
+						},
+						{
+							"type": "type",
+							"path": "value[x]"
+						}
+					],
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Task.output:PerformedActivityReference",
+				"path": "Task.output",
+				"sliceName": "PerformedActivityReference",
+				"mustSupport": true
+			},
+			{
+				"id": "Task.output:PerformedActivityReference.type",
+				"path": "Task.output.type",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+							"code": "resulting-activity"
+						}
+					]
+				}
+			},
+			{
+				"id": "Task.output:PerformedActivityReference.value[x]",
+				"path": "Task.output.value[x]",
+				"type": [
+					{
+						"code": "Reference"
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Task.output:PerformedActivityCode",
+				"path": "Task.output",
+				"sliceName": "PerformedActivityCode",
+				"mustSupport": true
+			},
+			{
+				"id": "Task.output:PerformedActivityCode.type",
+				"path": "Task.output.type",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+							"code": "resulting-activity"
+						}
+					]
+				}
+			},
+			{
+				"id": "Task.output:PerformedActivityCode.value[x]",
+				"path": "Task.output.value[x]",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				],
+				"mustSupport": true
+			}
+		]
+	}
+}
