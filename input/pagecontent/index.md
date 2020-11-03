@@ -44,6 +44,7 @@ Feedback on V0.0.2 of the IG should be sent to gravityproject@emiadvisors.net.
 
 | Number         | Description                                                                                                                                                   |
 |---------------|----------------------------------------------------------------------------------------------------|
+| 0.0.3         |Major update of all resource profiles, assoicated descriptions, examples, and value sets         |
 | 0.0.2         |Updated profiles, examples, and initial narrative sections         |
 | 0.0.1             | Redesigned scope of this IG                                         |
 
