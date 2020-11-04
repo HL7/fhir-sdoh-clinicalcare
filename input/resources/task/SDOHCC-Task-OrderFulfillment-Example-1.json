@@ -1,0 +1,40 @@
+{
+	"resourceType": "Task",
+	"id": "SDOHCC-Task-OrderFulfillment-Example-1",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2020-11-03T21:12:30.087+00:00",
+		"source": "#dZfy6tJYb680DaIx"
+	},
+	"status": "accepted",
+	"intent": "order",
+	"code": {
+		"coding": [
+			{
+				"system": "http://hl7.org/fhir/CodeSystem/task-code",
+				"code": "fulfill",
+				"display": "Fulfill"
+			}
+		]
+	},
+	"focus": {
+		"reference": "ServiceRequest/SDOHCC-ServiceRequest-HungerVitalSign-Example-1"
+	},
+	"for": {
+		"reference": "Patient/pat-53234",
+		"display": "COLIN ABBAS"
+	},
+	"output": [
+		{
+			"type": {
+				"coding": [
+					{
+						"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+						"code": "resulting-activity",
+						"display": "Resulting Activity"
+					}
+				]
+			}
+		}
+	]
+}

@@ -60,8 +60,6 @@ Reserve this area to included acknowledgements for the people and organizations 
 There may also be some required copyright acknowledgements for certain Code Systems or other acknowledgements required by HL7 and FHIR.
 
 
-### Authors
-
 |**Name**         | **Organization**                                        |
 |--------------------------|--------------------------------------------|
 | Robert Dieterle         | EnableCare                                         |

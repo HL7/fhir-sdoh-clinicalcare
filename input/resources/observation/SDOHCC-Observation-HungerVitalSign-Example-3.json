@@ -2,9 +2,9 @@
 	"resourceType": "Observation",
 	"id": "SDOHCC-Observation-HungerVitalSign-Example-3",
 	"meta": {
-		"versionId": "2",
-		"lastUpdated": "2020-09-01T17:00:42.400+00:00",
-		"source": "#7n1WBh1CsjX2fZFE"
+		"versionId": "3",
+		"lastUpdated": "2020-11-04T05:04:11.480+00:00",
+		"source": "#phWlxNMjycG1LEg5"
 	},
 	"status": "final",
 	"category": [
@@ -25,6 +25,15 @@
 					"display": "Survey"
 				}
 			]
+		},
+		{
+			"coding": [
+				{
+					"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+					"code": "food-insecurity-domain",
+					"display": "Food Insecurity Domain"
+				}
+			]
 		}
 	],
 	"code": {
@@ -41,11 +50,8 @@
 		"reference": "Patient/pat-53234",
 		"display": "COLIN ABBAS"
 	},
-	"effectivePeriod": {
-		"start": "2019-08-18T12:31:35.123Z",
-		"end": "2020-08-18T14:31:36.456Z"
-	},
-	"issued": "2020-08-18T15:31:38.111Z",
+	"effectiveDateTime": "2020-09-10T21:56:54.671Z",
+	"issued": "2020-09-10T21:56:54.671Z",
 	"valueCodeableConcept": {
 		"coding": [
 			{
@@ -57,9 +63,6 @@
 		"text": "At risk"
 	},
 	"derivedFrom": [
-		{
-			"reference": "QuestionnaireResponse/QR-5770275"
-		},
 		{
 			"reference": "Observation/SDOHCC-Observation-HungerVitalSign-Example-1"
 		},
