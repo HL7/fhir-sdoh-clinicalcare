@@ -2,12 +2,9 @@
 	"resourceType": "Condition",
 	"id": "SDOHCC-Condition-HungerVitalSign-Example-1",
 	"meta": {
-		"versionId": "4",
-		"lastUpdated": "2020-09-05T17:14:57.206+00:00",
-		"source": "#oMm0157T8sQDt3la",
-		"profile": [
-			"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1"
-		]
+		"versionId": "5",
+		"lastUpdated": "2020-11-04T05:06:37.945+00:00",
+		"source": "#BnKWhhp5LKakml7e"
 	},
 	"clinicalStatus": {
 		"coding": [
@@ -32,7 +29,17 @@
 			"coding": [
 				{
 					"system": "http://hl7.org/fhir/us/core/CodeSystem/condition-category",
-					"code": "health-concern"
+					"code": "health-concern",
+					"display": "Health Concern"
+				}
+			]
+		},
+		{
+			"coding": [
+				{
+					"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+					"code": "food-insecurity-domain",
+					"display": "Food Insecurity Domain"
 				}
 			]
 		}

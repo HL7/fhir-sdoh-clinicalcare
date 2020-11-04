@@ -1,0 +1,40 @@
+{
+	"resourceType": "ServiceRequest",
+	"id": "SDOHCC-ServiceRequest-HungerVitalSign-Example-1",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-11-03T17:45:28.392+00:00",
+		"source": "#zQgoyxQQ8bunrkQd"
+	},
+	"status": "active",
+	"intent": "order",
+	"category": [
+		{
+			"coding": [
+				{
+					"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+					"code": "food-insecurity-domain",
+					"display": "Food Insecurity Domain"
+				}
+			]
+		}
+	],
+	"code": {
+		"coding": [
+			{
+				"system": "http://snomed.info/sct",
+				"code": "710925007",
+				"display": "Provision of food (procedure)"
+			}
+		]
+	},
+	"subject": {
+		"reference": "Patient/pat-53234",
+		"display": "COLIN ABBAS"
+	},
+	"reasonReference": [
+		{
+			"reference": "Condition/SDOHCC-Condition-HungerVitalSign-Example-1"
+		}
+	]
+}

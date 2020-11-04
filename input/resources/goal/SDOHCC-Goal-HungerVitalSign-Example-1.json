@@ -1,0 +1,63 @@
+{
+	"resourceType": "Goal",
+	"id": "SDOHCC-Goal-HungerVitalSign-Example-1",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-11-03T17:03:30.087+00:00",
+		"source": "#ZUZSUk4ZWYrXluEc"
+	},
+	"lifecycleStatus": "completed",
+	"achievementStatus": {
+		"coding": [
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/goal-achievement",
+				"code": "achieved",
+				"display": "Achieved"
+			}
+		]
+	},
+	"category": [
+		{
+			"coding": [
+				{
+					"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+					"code": "food-insecurity-domain",
+					"display": "Food Insecurity Domain"
+				}
+			]
+		}
+	],
+	"description": {
+		"coding": [
+			{
+				"system": "http://loinc.org",
+				"code": "LA30983-3",
+				"display": "High food security"
+			}
+		]
+	},
+	"subject": {
+		"reference": "Patient/pat-53234",
+		"display": "COLIN ABBAS"
+	},
+	"target": [
+		{
+			"measure": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "LA30983-3",
+						"display": "High food security"
+					}
+				]
+			},
+			"dueDate": "2019-11-01"
+		}
+	],
+	"statusDate": "2019-10-30",
+	"addresses": [
+		{
+			"reference": "Condition/SDOHCC-Condition-HungerVitalSign-Example-1"
+		}
+	]
+}
