@@ -1,9 +1,9 @@
 {
 	"id": "fhir-sdoh-clinicalcare",
 	"meta": {
-		"versionId": "109",
-		"lastUpdated": "2020-11-04T18:33:04.999+00:00",
-		"source": "#suwEdJakmZ22zKbt"
+		"versionId": "111",
+		"lastUpdated": "2020-11-04T18:42:41.478+00:00",
+		"source": "#YvxwAcQDGZDToX8B"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -283,6 +283,17 @@
 				"name": "SDOHCC Procedure HungerVitalSign Example 1",
 				"description": "An example of a Procedure that is based on a ServiceRequest and references as its reason a Condition of Food Insecurity.",
 				"exampleCanonical": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Procedure-Base-1",
+				"groupingId": "new-group2"
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "Task/SDOHCC-Task-OrderFulfillment-Example-1",
+					"display": "SDOHCC Task OrderFulfillment Example 1"
+				},
+				"name": "SDOHCC Task OrderFulfillment Example 1",
+				"description": "An example of a Task that has as its Task.focus a ServiceRequest to provide food. ",
+				"exampleCanonical": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Task-Base-1",
 				"groupingId": "new-group2"
 			}
 		],
