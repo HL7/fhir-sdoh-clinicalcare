@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ServiceRequest-Base-1"/>
+    <meta>
+        <versionId value="11"/>
+        <lastUpdated value="2020-11-02T18:42:28.870+00:00"/>
+        <source value="#wYWTvhNK3NoBUZhB"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-ServiceRequest-Base-1"/>
+    <name value="SDOHCC_ServiceRequest_Base_1"/>
+    <title value="SDOHCC ServiceRequest Base 1"/>
+    <status value="draft"/>
+    <description value="This profile constrains ServiceRequests that address Social Determinants of Health."/>
+    <fhirVersion value="4.0.1"/>
+    <mapping>
+        <identity value="workflow"/>
+        <uri value="http://hl7.org/fhir/workflow"/>
+        <name value="Workflow Pattern"/>
+    </mapping>
+    <mapping>
+        <identity value="v2"/>
+        <uri value="http://hl7.org/v2"/>
+        <name value="HL7 v2 Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="rim"/>
+        <uri value="http://hl7.org/v3"/>
+        <name value="RIM Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="w5"/>
+        <uri value="http://hl7.org/fhir/fivews"/>
+        <name value="FiveWs Pattern Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="quick"/>
+        <uri value="http://siframework.org/cqf"/>
+        <name value="Quality Improvement and Clinical Knowledge (QUICK)"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="ServiceRequest"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="ServiceRequest.basedOn">
+            <path value="ServiceRequest.basedOn"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+            </type>
+        </element>
+        <element id="ServiceRequest.status">
+            <path value="ServiceRequest.status"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="ServiceRequest.intent">
+            <path value="ServiceRequest.intent"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="ServiceRequest.category">
+            <path value="ServiceRequest.category"/>
+            <short value="e.g., food-insecurity-domain | transportation-insecurity-domain"/>
+            <definition value="A code that classifies the service for searching, sorting and display purposes (e.g., &quot;food-insecurity-domain&quot;)."/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-valueset-sdohdomain-1"/>
+            </binding>
+        </element>
+        <element id="ServiceRequest.priority">
+            <path value="ServiceRequest.priority"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="ServiceRequest.code">
+            <path value="ServiceRequest.code"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="ServiceRequest.subject">
+            <path value="ServiceRequest.subject"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="ServiceRequest.occurrence[x]">
+            <path value="ServiceRequest.occurrence[x]"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="ServiceRequest.performer">
+            <path value="ServiceRequest.performer"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="ServiceRequest.reasonReference">
+            <path value="ServiceRequest.reasonReference"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="ServiceRequest.reasonReference:SupportedReasonReference">
+            <path value="ServiceRequest.reasonReference"/>
+            <sliceName value="SupportedReasonReference"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="ServiceRequest.specimen">
+            <path value="ServiceRequest.specimen"/>
+            <max value="0"/>
+        </element>
+        <element id="ServiceRequest.bodySite">
+            <path value="ServiceRequest.bodySite"/>
+            <max value="0"/>
+        </element>
+    </differential>
+</StructureDefinition>

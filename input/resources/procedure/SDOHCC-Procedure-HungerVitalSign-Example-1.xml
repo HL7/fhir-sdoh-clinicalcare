@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Procedure
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-Procedure-HungerVitalSign-Example-1"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2020-11-03T17:36:02.292+00:00"/>
+        <source value="#gQxaY0snFBCe21GC"/>
+    </meta>
+    <basedOn>
+        <reference value="ServiceRequest/SDOHCC-ServiceRequest-HungerVitalSign-Example-1"/>
+    </basedOn>
+    <status value="completed"/>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="410606002"/>
+            <display value="Social service procedure (procedure)"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="710925007"/>
+            <display value="Provision of food (procedure)"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <performedDateTime value="2019-08-31"/>
+    <reasonReference>
+        <reference value="Condition/SDOHCC-Condition-HungerVitalSign-Example-1"/>
+    </reasonReference>
+</Procedure>

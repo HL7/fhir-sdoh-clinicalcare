@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Goal
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-Goal-HungerVitalSign-Example-1"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2020-11-03T17:03:30.087+00:00"/>
+        <source value="#ZUZSUk4ZWYrXluEc"/>
+    </meta>
+    <lifecycleStatus value="completed"/>
+    <achievementStatus>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/goal-achievement"/>
+            <code value="achieved"/>
+            <display value="Achieved"/>
+        </coding>
+    </achievementStatus>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+            <code value="food-insecurity-domain"/>
+            <display value="Food Insecurity Domain"/>
+        </coding>
+    </category>
+    <description>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA30983-3"/>
+            <display value="High food security"/>
+        </coding>
+    </description>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <target>
+        <measure>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="LA30983-3"/>
+                <display value="High food security"/>
+            </coding>
+        </measure>
+        <dueDate value="2019-11-01"/>
+    </target>
+    <statusDate value="2019-10-30"/>
+    <addresses>
+        <reference value="Condition/SDOHCC-Condition-HungerVitalSign-Example-1"/>
+    </addresses>
+</Goal>

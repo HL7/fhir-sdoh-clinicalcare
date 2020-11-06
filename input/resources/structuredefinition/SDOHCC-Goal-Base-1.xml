@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-Goal-Base-1"/>
+    <meta>
+        <versionId value="19"/>
+        <lastUpdated value="2020-11-02T18:42:28.841+00:00"/>
+        <source value="#Ol7HeJs0Ci50HP4k"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Goal-Base-1"/>
+    <name value="SDOHCC_Goal_Base_1"/>
+    <title value="SDOHCC Goal Base 1"/>
+    <status value="draft"/>
+    <description value="This profile constrains Goals that address Social Determinants of Health."/>
+    <fhirVersion value="4.0.1"/>
+    <mapping>
+        <identity value="argonaut-dq-dstu2"/>
+        <uri value="http://unknown.org/Argonaut-DQ-DSTU2"/>
+        <name value="Argonaut-DQ-DSTU2"/>
+    </mapping>
+    <mapping>
+        <identity value="v2"/>
+        <uri value="http://hl7.org/v2"/>
+        <name value="HL7 v2 Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="rim"/>
+        <uri value="http://hl7.org/v3"/>
+        <name value="RIM Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="w5"/>
+        <uri value="http://hl7.org/fhir/fivews"/>
+        <name value="FiveWs Pattern Mapping"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Goal"/>
+    <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Goal.achievementStatus">
+            <path value="Goal.achievementStatus"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Goal.category">
+            <path value="Goal.category"/>
+            <short value="e.g., food-insecurity-domain | transportation-insecurity-domain"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-valueset-sdohdomain-1"/>
+            </binding>
+        </element>
+        <element id="Goal.description">
+            <path value="Goal.description"/>
+            <binding>
+                <strength value="required"/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+            </binding>
+        </element>
+        <element id="Goal.target.measure">
+            <path value="Goal.target.measure"/>
+            <binding>
+                <strength value="required"/>
+            </binding>
+        </element>
+        <element id="Goal.addresses">
+            <path value="Goal.addresses"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RiskAssessment"/>
+            </type>
+        </element>
+        <element id="Goal.addresses:SupportedAddresses">
+            <path value="Goal.addresses"/>
+            <sliceName value="SupportedAddresses"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Goal.outcomeReference">
+            <path value="Goal.outcomeReference"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Goal.outcomeReference:SupportedOutcomeReference">
+            <path value="Goal.outcomeReference"/>
+            <sliceName value="SupportedOutcomeReference"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>
