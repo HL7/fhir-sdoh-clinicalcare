@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-Procedure-Base-1"/>
+    <meta>
+        <versionId value="14"/>
+        <lastUpdated value="2020-11-02T18:42:28.874+00:00"/>
+        <source value="#PO3ZkNu8VZEQUMbd"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Procedure-Base-1"/>
+    <name value="SDOHCC_Procedure_Base_1"/>
+    <title value="SDOHCC Procedure Base 1"/>
+    <status value="draft"/>
+    <description value="This profile constrains Procedures that address Social Determinants of Health."/>
+    <fhirVersion value="4.0.1"/>
+    <mapping>
+        <identity value="argonaut-dq-dstu2"/>
+        <uri value="http://unknown.org/Argonaut-DQ-DSTU2"/>
+        <name value="Argonaut-DQ-DSTU2"/>
+    </mapping>
+    <mapping>
+        <identity value="workflow"/>
+        <uri value="http://hl7.org/fhir/workflow"/>
+        <name value="Workflow Pattern"/>
+    </mapping>
+    <mapping>
+        <identity value="rim"/>
+        <uri value="http://hl7.org/v3"/>
+        <name value="RIM Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="w5"/>
+        <uri value="http://hl7.org/fhir/fivews"/>
+        <name value="FiveWs Pattern Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="v2"/>
+        <uri value="http://hl7.org/v2"/>
+        <name value="HL7 v2 Mapping"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Procedure"/>
+    <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Procedure.basedOn">
+            <path value="Procedure.basedOn"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Procedure.basedOn:SupportedBasedOn">
+            <path value="Procedure.basedOn"/>
+            <sliceName value="SupportedBasedOn"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-ServiceRequest-Base-1"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Procedure.code">
+            <path value="Procedure.code"/>
+            <short value="Procedure codes from SNOMED CT"/>
+            <binding>
+                <strength value="required"/>
+                <description value="SNOMED CT codes describing the type of Procedure"/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/procedure-code"/>
+            </binding>
+        </element>
+        <element id="Procedure.code.coding">
+            <path value="Procedure.code.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="type"/>
+                    <path value="$this"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Procedure.code.coding:CPTCoding">
+            <path value="Procedure.code.coding"/>
+            <sliceName value="CPTCoding"/>
+            <short value="Procedure codes from SNOMED CT"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <description value="CPT codes describing the type of Procedure"/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/cpt-all"/>
+            </binding>
+        </element>
+        <element id="Procedure.code.coding:LOINCCoding">
+            <path value="Procedure.code.coding"/>
+            <sliceName value="LOINCCoding"/>
+            <short value="Procedure codes from LOINC"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <description value="LOINC codes describing the type of Procedure"/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+            </binding>
+        </element>
+        <element id="Procedure.code.coding:HCPCSLevelIICoding">
+            <path value="Procedure.code.coding"/>
+            <sliceName value="HCPCSLevelIICoding"/>
+            <short value="Procedure codes from HCPCS"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <description value="HCPCS codes describing the type of Procedure"/>
+                <valueSet value="http://oidref.com/2.16.840.1.113883.6.285"/>
+            </binding>
+        </element>
+        <element id="Procedure.recorder">
+            <path value="Procedure.recorder"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+            </type>
+        </element>
+        <element id="Procedure.reasonReference">
+            <path value="Procedure.reasonReference"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Procedure.reasonReference:SupportedReasonReference">
+            <path value="Procedure.reasonReference"/>
+            <sliceName value="SupportedReasonReference"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Procedure.bodySite">
+            <path value="Procedure.bodySite"/>
+            <max value="0"/>
+        </element>
+        <element id="Procedure.focalDevice">
+            <path value="Procedure.focalDevice"/>
+            <max value="0"/>
+        </element>
+        <element id="Procedure.usedReference">
+            <path value="Procedure.usedReference"/>
+            <max value="0"/>
+        </element>
+        <element id="Procedure.usedCode">
+            <path value="Procedure.usedCode"/>
+            <max value="0"/>
+        </element>
+    </differential>
+</StructureDefinition>
