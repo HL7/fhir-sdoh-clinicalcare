@@ -1,0 +1,45 @@
+== Suppressed Messages ==
+# This is a known issue with the FHIR validator and is being addressed by HL7
+INFORMATION: ImplementationGuide/hl7.fhir.us.fhir-sdoh-clinicalcare: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
+# This is a temporary code system so this information can be ignored.
+INFORMATION: CodeSystem/sdohcc-temporary-codes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+# The following examples have been reviewed and confirmed to validate against the intended profiles.
+INFORMATION: Condition/SDOHCC-Condition-HungerVitalSign-Example-1: Condition: Validate resource against profile http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1
+INFORMATION: Goal/SDOHCC-Goal-HungerVitalSign-Example-1: Goal: Validate resource against profile http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Goal-Base-1
+INFORMATION: Observation/SDOHCC-Observation-HungerVitalSign-Example-1: Observation: Validate resource against profile http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1
+INFORMATION: Observation/SDOHCC-Observation-HungerVitalSign-Example-2: Observation: Validate resource against profile http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1
+INFORMATION: Observation/SDOHCC-Observation-HungerVitalSign-Example-3: Observation: Validate resource against profile http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1
+INFORMATION: Observation/SDOHCC-Observation-HungerVitalSignGroup-1: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Patient/pat-53234: Patient: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Patient/pat-53234: Patient: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient - listed in meta
+INFORMATION: Procedure/SDOHCC-Procedure-HungerVitalSign-Example-1: Procedure: Validate resource against profile http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Procedure-Base-1
+INFORMATION: QuestionnaireResponse/QR-5770275: QuestionnaireResponse: Validate resource against profile http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse
+INFORMATION: ServiceRequest/SDOHCC-ServiceRequest-HungerVitalSign-Example-1: ServiceRequest: Validate resource against profile http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-ServiceRequest-Base-1
+INFORMATION: Task/SDOHCC-Task-OrderFulfillment-Example-1: Task: Validate resource against profile http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Task-Base-1
+# The following instances have been reviewed and confirmed to validate against the intended resources.
+INFORMATION: StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1: StructureMap: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureMap
+INFORMATION: Questionnaire/SDOHCC-Questionnaire-HungerVitalSign-1: Questionnaire: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Questionnaire
+INFORMATION: ValueSet/SDOHCC-ValueSet-SDOHDomain-1: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+# The following profiles have been reviewed and confirmed to validate against the intended resources/StructureDefintions.
+INFORMATION: StructureDefinition/SDOHCC-Condition-Base-1: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/SDOHCC-Goal-Base-1: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/SDOHCC-Procedure-Base-1: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/SDOHCC-ServiceRequest-Base-1: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/SDOHCC-Task-Base-1: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+# The following issues have been reviewed and these items are not intended to validate against one of the slices.
+INFORMATION: Condition/SDOHCC-Condition-HungerVitalSign-Example-1: Condition.category[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1
+INFORMATION: Condition/SDOHCC-Condition-HungerVitalSign-Example-1: Condition.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1
+# We have discussed with US Core that we did not use their profile and explained why. - Bob still needs to do this.
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+# Tooling issue -StructureMap has the group.typeMode element but (for some reason), it gets removed when imported to Trifolia. Monique Logged in Trifolia TOFSUP-350
+ERROR: StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1: StructureMap.group[0]: StructureMap.group.typeMode: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/StructureMap)
+ERROR: StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1: StructureMap.group[1]: StructureMap.group.typeMode: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/StructureMap)
+ERROR: StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1: StructureMap.group[2]: StructureMap.group.typeMode: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/StructureMap)
+ERROR: StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1: StructureMap.group[3]: StructureMap.group.typeMode: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/StructureMap)
+ERROR: StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1: StructureMap.group[4]: StructureMap.group.typeMode: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/StructureMap)
+ERROR: StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1: StructureMap.group[5]: StructureMap.group.typeMode: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/StructureMap)
+ERROR: StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1: StructureMap.group[6]: StructureMap.group.typeMode: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/StructureMap)
+ERROR: StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1: StructureMap.group[7]: StructureMap.group.typeMode: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/StructureMap)
+ERROR: StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1: StructureMap.group[8]: StructureMap.group.typeMode: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/StructureMap)
+ERROR: StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1: StructureMap.group[9]: StructureMap.group.typeMode: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/StructureMap)
