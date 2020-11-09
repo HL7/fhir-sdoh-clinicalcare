@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet
     xmlns="http://hl7.org/fhir">
-    <id value="sdohcc-valueset-sdohdomain-1"/>
+    <id value="SDOHCC-ValueSet-SDOHDomain-1"/>
     <meta>
         <versionId value="3"/>
-        <lastUpdated value="2020-11-02T15:48:05.049+00:00"/>
-        <source value="#hkxeuCIA7taLI9cQ"/>
+        <lastUpdated value="2020-11-06T16:14:14.582+00:00"/>
+        <source value="#tLo0JcqxO0kvdRzn"/>
     </meta>
-    <url value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-valueset-sdohdomain-1"/>
+    <url value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
     <name value="SDOHCC_ValueSet_SDOHDomain_1"/>
     <title value="SDOHCC ValueSet SDOHDomain 1"/>
     <status value="draft"/>
