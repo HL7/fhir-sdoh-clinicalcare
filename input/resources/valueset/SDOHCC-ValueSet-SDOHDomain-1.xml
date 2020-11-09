@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ValueSet-SDOHDomain-1"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2020-11-06T16:14:14.582+00:00"/>
+        <source value="#tLo0JcqxO0kvdRzn"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
+    <name value="SDOHCC_ValueSet_SDOHDomain_1"/>
+    <title value="SDOHCC ValueSet SDOHDomain 1"/>
+    <status value="draft"/>
+    <description value="This value set is defined extensionally to include concepts that represent Social Determinant of Health domains."/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+            <concept>
+                <code value="food-insecurity-domain"/>
+                <display value="Food Insecurity Domain"/>
+            </concept>
+            <concept>
+                <code value="housing-instability-and-homelessness-domain"/>
+                <display value="Housing Instability and Homelessness Domain"/>
+            </concept>
+            <concept>
+                <code value="inadequate-housing-domain"/>
+                <display value="Inadequate Housing Domain"/>
+            </concept>
+            <concept>
+                <code value="transportation-insecurity-domain"/>
+                <display value="Transportation Insecurity Domain"/>
+            </concept>
+            <concept>
+                <code value="financial-strain-domain"/>
+                <display value="Financial Strain Domain"/>
+            </concept>
+            <concept>
+                <code value="social-isolation-domain"/>
+                <display value="Social Isolation Domain"/>
+            </concept>
+            <concept>
+                <code value="stress-domain"/>
+                <display value="Stress-Domain"/>
+            </concept>
+            <concept>
+                <code value="interpersonal-violence-domain"/>
+                <display value="Interpersonal Violence Domain"/>
+            </concept>
+            <concept>
+                <code value="education-domain"/>
+                <display value="Education-Domain"/>
+            </concept>
+            <concept>
+                <code value="employment-domain"/>
+                <display value="Employment Domain"/>
+            </concept>
+            <concept>
+                <code value="sdoh-risk-related-to-veteran-status"/>
+                <display value="SDOH Risk Related to Veteran Status"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

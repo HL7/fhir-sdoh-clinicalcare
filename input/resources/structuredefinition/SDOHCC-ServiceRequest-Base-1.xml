@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ServiceRequest-Base-1"/>
     <meta>
-        <versionId value="11"/>
-        <lastUpdated value="2020-11-02T18:42:28.870+00:00"/>
-        <source value="#wYWTvhNK3NoBUZhB"/>
+        <versionId value="12"/>
+        <lastUpdated value="2020-11-06T15:51:22.287+00:00"/>
+        <source value="#IRvFzkPynTfCVQCS"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-ServiceRequest-Base-1"/>
     <name value="SDOHCC_ServiceRequest_Base_1"/>
@@ -67,7 +67,7 @@
             <mustSupport value="true"/>
             <binding>
                 <strength value="required"/>
-                <valueSet value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-valueset-sdohdomain-1"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
             </binding>
         </element>
         <element id="ServiceRequest.priority">

@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Goal-Base-1"/>
     <meta>
-        <versionId value="19"/>
-        <lastUpdated value="2020-11-02T18:42:28.841+00:00"/>
-        <source value="#Ol7HeJs0Ci50HP4k"/>
+        <versionId value="20"/>
+        <lastUpdated value="2020-11-06T15:51:22.264+00:00"/>
+        <source value="#IxLqImSwfmL5567G"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Goal-Base-1"/>
     <name value="SDOHCC_Goal_Base_1"/>
@@ -50,7 +50,7 @@
             <mustSupport value="true"/>
             <binding>
                 <strength value="required"/>
-                <valueSet value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-valueset-sdohdomain-1"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
             </binding>
         </element>
         <element id="Goal.description">

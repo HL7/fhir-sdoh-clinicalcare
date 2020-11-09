@@ -14,7 +14,7 @@
 
 |IG Dependencies         |  IG Code         | Version                      |
 |----------------------------------|-------------------------|---------------|
-| HL7 FHIR US Core               |  [US Core](http://hl7.org/fhir/us/core/STU3.1)                | Version 3.1.0     |
+| HL7 FHIR US Core               |  [US Core](http://hl7.org/fhir/us/core/STU3.1)                | Version 3.1.1     |
 | Structured Data Capture                         |   [SDC](http://hl7.org/fhir/uv/sdc/2019May)        | Version 2.7.0                     |
 
 
@@ -44,6 +44,7 @@ Feedback on V0.0.2 of the IG should be sent to gravityproject@emiadvisors.net.
 
 | Number         | Description                                                                                                                                                   |
 |---------------|----------------------------------------------------------------------------------------------------|
+| 0.0.4         |Added Consent and Group and updated other profiles and supporting examples         |
 | 0.0.31       |Minor/Major updates for all profiles and supporting examples         |
 | 0.0.3         |Major update of all resource profiles, assoicated descriptions, examples, and value sets         |
 | 0.0.2         |Updated profiles, examples, and initial narrative sections         |
