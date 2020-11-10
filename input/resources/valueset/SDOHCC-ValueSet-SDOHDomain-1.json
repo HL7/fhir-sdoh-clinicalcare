@@ -1,0 +1,67 @@
+{
+	"resourceType": "ValueSet",
+	"id": "SDOHCC-ValueSet-SDOHDomain-1",
+	"meta": {
+		"versionId": "3",
+		"lastUpdated": "2020-11-06T16:14:14.582+00:00",
+		"source": "#tLo0JcqxO0kvdRzn"
+	},
+	"url": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1",
+	"name": "SDOHCC_ValueSet_SDOHDomain_1",
+	"title": "SDOHCC ValueSet SDOHDomain 1",
+	"status": "draft",
+	"description": "This value set is defined extensionally to include concepts that represent Social Determinant of Health domains.",
+	"compose": {
+		"include": [
+			{
+				"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+				"concept": [
+					{
+						"code": "food-insecurity-domain",
+						"display": "Food Insecurity Domain"
+					},
+					{
+						"code": "housing-instability-and-homelessness-domain",
+						"display": "Housing Instability and Homelessness Domain"
+					},
+					{
+						"code": "inadequate-housing-domain",
+						"display": "Inadequate Housing Domain"
+					},
+					{
+						"code": "transportation-insecurity-domain",
+						"display": "Transportation Insecurity Domain"
+					},
+					{
+						"code": "financial-strain-domain",
+						"display": "Financial Strain Domain"
+					},
+					{
+						"code": "social-isolation-domain",
+						"display": "Social Isolation Domain"
+					},
+					{
+						"code": "stress-domain",
+						"display": "Stress-Domain"
+					},
+					{
+						"code": "interpersonal-violence-domain",
+						"display": "Interpersonal Violence Domain"
+					},
+					{
+						"code": "education-domain",
+						"display": "Education-Domain"
+					},
+					{
+						"code": "employment-domain",
+						"display": "Employment Domain"
+					},
+					{
+						"code": "sdoh-risk-related-to-veteran-status",
+						"display": "SDOH Risk Related to Veteran Status"
+					}
+				]
+			}
+		]
+	}
+}

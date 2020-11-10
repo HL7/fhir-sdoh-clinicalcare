@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-ServiceRequest-Base-1",
 	"meta": {
-		"versionId": "11",
-		"lastUpdated": "2020-11-02T18:42:28.870+00:00",
-		"source": "#wYWTvhNK3NoBUZhB"
+		"versionId": "13",
+		"lastUpdated": "2020-11-10T15:50:02.709+00:00",
+		"source": "#sTFYoCEZ6CwncXZG"
 	},
 	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-ServiceRequest-Base-1",
 	"name": "SDOHCC_ServiceRequest_Base_1",
@@ -76,8 +76,8 @@
 				"definition": "A code that classifies the service for searching, sorting and display purposes (e.g., \"food-insecurity-domain\").",
 				"mustSupport": true,
 				"binding": {
-					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-valueset-sdohdomain-1"
+					"strength": "extensible",
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"
 				}
 			},
 			{

@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Observation-ScreeningResponseBase-1",
 	"meta": {
-		"versionId": "47",
-		"lastUpdated": "2020-11-02T18:42:28.885+00:00",
-		"source": "#Xz1OagnhwfRITGjP"
+		"versionId": "49",
+		"lastUpdated": "2020-11-10T15:50:02.727+00:00",
+		"source": "#84zaIXplxYNyRWsg"
 	},
 	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1",
 	"name": "SDOHCC_Observation_ScreeningResponseBase_1",
@@ -123,8 +123,8 @@
 				"short": "e.g., food-insecurity-domain | transportation-insecurity-domain",
 				"mustSupport": true,
 				"binding": {
-					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-valueset-sdohdomain-1"
+					"strength": "extensible",
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"
 				}
 			},
 			{

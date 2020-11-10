@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Goal-Base-1",
 	"meta": {
-		"versionId": "19",
-		"lastUpdated": "2020-11-02T18:42:28.841+00:00",
-		"source": "#Ol7HeJs0Ci50HP4k"
+		"versionId": "21",
+		"lastUpdated": "2020-11-10T15:50:02.751+00:00",
+		"source": "#EhoRfg15d42MtQgW"
 	},
 	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Goal-Base-1",
 	"name": "SDOHCC_Goal_Base_1",
@@ -53,15 +53,15 @@
 				"short": "e.g., food-insecurity-domain | transportation-insecurity-domain",
 				"mustSupport": true,
 				"binding": {
-					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-valueset-sdohdomain-1"
+					"strength": "extensible",
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"
 				}
 			},
 			{
 				"id": "Goal.description",
 				"path": "Goal.description",
 				"binding": {
-					"strength": "required",
+					"strength": "extensible",
 					"valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
 				}
 			},
@@ -69,7 +69,7 @@
 				"id": "Goal.target.measure",
 				"path": "Goal.target.measure",
 				"binding": {
-					"strength": "required"
+					"strength": "extensible"
 				}
 			},
 			{
@@ -109,6 +109,14 @@
 					}
 				],
 				"mustSupport": true
+			},
+			{
+				"id": "Goal.outcomeCode",
+				"path": "Goal.outcomeCode",
+				"binding": {
+					"strength": "example",
+					"valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
+				}
 			},
 			{
 				"id": "Goal.outcomeReference",

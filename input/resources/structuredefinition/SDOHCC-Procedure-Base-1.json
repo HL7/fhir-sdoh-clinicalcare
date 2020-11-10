@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Procedure-Base-1",
 	"meta": {
-		"versionId": "14",
-		"lastUpdated": "2020-11-02T18:42:28.874+00:00",
-		"source": "#PO3ZkNu8VZEQUMbd"
+		"versionId": "15",
+		"lastUpdated": "2020-11-10T15:50:02.686+00:00",
+		"source": "#Dlgay0AP2da0My3V"
 	},
 	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Procedure-Base-1",
 	"name": "SDOHCC_Procedure_Base_1",
@@ -75,11 +75,19 @@
 				"mustSupport": true
 			},
 			{
+				"id": "Procedure.category",
+				"path": "Procedure.category",
+				"binding": {
+					"strength": "example",
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"
+				}
+			},
+			{
 				"id": "Procedure.code",
 				"path": "Procedure.code",
 				"short": "Procedure codes from SNOMED CT",
 				"binding": {
-					"strength": "required",
+					"strength": "extensible",
 					"description": "SNOMED CT codes describing the type of Procedure",
 					"valueSet": "http://hl7.org/fhir/ValueSet/procedure-code"
 				}

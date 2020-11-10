@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Task-Base-1",
 	"meta": {
-		"versionId": "2",
-		"lastUpdated": "2020-11-02T18:42:28.827+00:00",
-		"source": "#Dv6nzsBlmTZurDXu"
+		"versionId": "3",
+		"lastUpdated": "2020-11-05T15:51:29.721+00:00",
+		"source": "#Yd99G8Nkrgtk2fm7"
 	},
 	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Task-Base-1",
 	"name": "SDOHCC_Task_Base_1",
@@ -115,7 +115,7 @@
 						},
 						{
 							"type": "type",
-							"path": "value[x]"
+							"path": "value"
 						}
 					],
 					"rules": "open"

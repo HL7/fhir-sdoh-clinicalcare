@@ -2,9 +2,9 @@
 	"resourceType": "Task",
 	"id": "SDOHCC-Task-OrderFulfillment-Example-1",
 	"meta": {
-		"versionId": "1",
-		"lastUpdated": "2020-11-03T21:12:30.087+00:00",
-		"source": "#dZfy6tJYb680DaIx"
+		"versionId": "3",
+		"lastUpdated": "2020-11-05T22:41:13.982+00:00",
+		"source": "#2U2NDHEIgf2fw8kP"
 	},
 	"status": "accepted",
 	"intent": "order",
@@ -13,7 +13,7 @@
 			{
 				"system": "http://hl7.org/fhir/CodeSystem/task-code",
 				"code": "fulfill",
-				"display": "Fulfill"
+				"display": "Fulfill the focal request"
 			}
 		]
 	},
@@ -32,6 +32,15 @@
 						"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
 						"code": "resulting-activity",
 						"display": "Resulting Activity"
+					}
+				]
+			},
+			"valueCodeableConcept": {
+				"coding": [
+					{
+						"system": "http://snomed.info/sct",
+						"code": "713109004",
+						"display": "Referral to community meals service (procedure)"
 					}
 				]
 			}
