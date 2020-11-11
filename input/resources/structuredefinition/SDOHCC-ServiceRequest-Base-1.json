@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-ServiceRequest-Base-1",
 	"meta": {
-		"versionId": "13",
-		"lastUpdated": "2020-11-10T15:50:02.709+00:00",
-		"source": "#sTFYoCEZ6CwncXZG"
+		"versionId": "14",
+		"lastUpdated": "2020-11-10T21:43:44.980+00:00",
+		"source": "#9Z3791L7uiW2ZdMf"
 	},
 	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-ServiceRequest-Base-1",
 	"name": "SDOHCC_ServiceRequest_Base_1",
@@ -72,11 +72,24 @@
 			{
 				"id": "ServiceRequest.category",
 				"path": "ServiceRequest.category",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "$this"
+						}
+					],
+					"rules": "open"
+				}
+			},
+			{
+				"id": "ServiceRequest.category:SDOHDomain",
+				"path": "ServiceRequest.category",
+				"sliceName": "SDOHDomain",
 				"short": "e.g., food-insecurity-domain | transportation-insecurity-domain",
-				"definition": "A code that classifies the service for searching, sorting and display purposes (e.g., \"food-insecurity-domain\").",
 				"mustSupport": true,
 				"binding": {
-					"strength": "extensible",
+					"strength": "required",
 					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"
 				}
 			},

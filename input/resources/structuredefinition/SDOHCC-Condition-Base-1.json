@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Condition-Base-1",
 	"meta": {
-		"versionId": "29",
-		"lastUpdated": "2020-11-10T15:50:02.761+00:00",
-		"source": "#U9fFGPiKj7rE4XDu"
+		"versionId": "30",
+		"lastUpdated": "2020-11-10T20:38:14.799+00:00",
+		"source": "#5pZuVsmRgS3dkHRg"
 	},
 	"text": {
 		"status": "extensions",
@@ -88,7 +88,7 @@
 				"slicing": {
 					"discriminator": [
 						{
-							"type": "pattern",
+							"type": "value",
 							"path": "$this"
 						}
 					],
@@ -110,7 +110,7 @@
 				"sliceName": "SDOHDomain",
 				"short": "e.g., food-insecurity-domain | transportation-insecurity-domain",
 				"binding": {
-					"strength": "extensible",
+					"strength": "required",
 					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"
 				}
 			},
