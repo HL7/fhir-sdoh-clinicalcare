@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Procedure-Base-1",
 	"meta": {
-		"versionId": "15",
-		"lastUpdated": "2020-11-10T15:50:02.686+00:00",
-		"source": "#Dlgay0AP2da0My3V"
+		"versionId": "16",
+		"lastUpdated": "2020-11-11T14:35:48.395+00:00",
+		"source": "#ONs4LJKOiTnBNH8d"
 	},
 	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Procedure-Base-1",
 	"name": "SDOHCC_Procedure_Base_1",
@@ -87,7 +87,7 @@
 				"path": "Procedure.code",
 				"short": "Procedure codes from SNOMED CT",
 				"binding": {
-					"strength": "extensible",
+					"strength": "required",
 					"description": "SNOMED CT codes describing the type of Procedure",
 					"valueSet": "http://hl7.org/fhir/ValueSet/procedure-code"
 				}
@@ -98,8 +98,8 @@
 				"slicing": {
 					"discriminator": [
 						{
-							"type": "type",
-							"path": "$this"
+							"type": "value",
+							"path": "system"
 						}
 					],
 					"rules": "open"
@@ -120,6 +120,13 @@
 				}
 			},
 			{
+				"id": "Procedure.code.coding:CPTCoding.system",
+				"path": "Procedure.code.coding.system",
+				"min": 1,
+				"fixedUri": "http://www.ama-assn.org/go/cpt",
+				"mustSupport": true
+			},
+			{
 				"id": "Procedure.code.coding:LOINCCoding",
 				"path": "Procedure.code.coding",
 				"sliceName": "LOINCCoding",
@@ -133,6 +140,13 @@
 				}
 			},
 			{
+				"id": "Procedure.code.coding:LOINCCoding.system",
+				"path": "Procedure.code.coding.system",
+				"min": 1,
+				"fixedUri": "http://loinc.org",
+				"mustSupport": true
+			},
+			{
 				"id": "Procedure.code.coding:HCPCSLevelIICoding",
 				"path": "Procedure.code.coding",
 				"sliceName": "HCPCSLevelIICoding",
@@ -144,6 +158,13 @@
 					"description": "HCPCS codes describing the type of Procedure",
 					"valueSet": "http://oidref.com/2.16.840.1.113883.6.285"
 				}
+			},
+			{
+				"id": "Procedure.code.coding:HCPCSLevelIICoding.system",
+				"path": "Procedure.code.coding.system",
+				"min": 1,
+				"fixedUri": "urn:oid:2.16.840.1.113883.6.285",
+				"mustSupport": true
 			},
 			{
 				"id": "Procedure.recorder",
