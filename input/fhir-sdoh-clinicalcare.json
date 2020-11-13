@@ -1,9 +1,9 @@
 {
 	"id": "fhir-sdoh-clinicalcare",
 	"meta": {
-		"versionId": "135",
-		"lastUpdated": "2020-11-13T15:28:22.291+00:00",
-		"source": "#59qJQmJ1tJyvgZkr"
+		"versionId": "138",
+		"lastUpdated": "2020-11-13T15:49:45.977+00:00",
+		"source": "#vYtdPrfyR9WKlflf"
 	},
 	"resourceType": "ImplementationGuide",
 	"contained": [
