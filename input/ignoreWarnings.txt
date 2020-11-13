@@ -1,4 +1,5 @@
 == Suppressed Messages ==
+= Suppressed Messages ==
 # This is a known issue with the FHIR validator and is being addressed by HL7
 INFORMATION: ImplementationGuide/hl7.fhir.us.fhir-sdoh-clinicalcare: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
 # This is a temporary code system so this information can be ignored.
