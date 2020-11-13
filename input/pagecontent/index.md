@@ -14,7 +14,7 @@
 
 |IG Dependencies         |  IG Code         | Version                      |
 |----------------------------------|-------------------------|---------------|
-| HL7 FHIR US Core               |  [US Core](http://hl7.org/fhir/us/core/STU3.1)                | Version 3.1.1     |
+| HL7 FHIR US Core               |  [US Core](http://hl7.org/fhir/us/core/STU3.1.1)                | Version 3.1.1     |
 | Structured Data Capture                         |   [SDC](http://hl7.org/fhir/uv/sdc/2019May)        | Version 2.7.0                     |
 
 
