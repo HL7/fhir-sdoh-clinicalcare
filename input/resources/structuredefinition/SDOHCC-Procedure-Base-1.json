@@ -2,9 +2,9 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Procedure-Base-1",
 	"meta": {
-		"versionId": "16",
-		"lastUpdated": "2020-11-11T14:35:48.395+00:00",
-		"source": "#ONs4LJKOiTnBNH8d"
+		"versionId": "17",
+		"lastUpdated": "2020-11-11T19:36:05.121+00:00",
+		"source": "#paNsQSJgnA8JUBND"
 	},
 	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Procedure-Base-1",
 	"name": "SDOHCC_Procedure_Base_1",
@@ -156,7 +156,7 @@
 				"binding": {
 					"strength": "required",
 					"description": "HCPCS codes describing the type of Procedure",
-					"valueSet": "http://oidref.com/2.16.840.1.113883.6.285"
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-HCPCSII-1"
 				}
 			},
 			{

@@ -2,9 +2,9 @@
 	"resourceType": "Procedure",
 	"id": "SDOHCC-Procedure-HungerVitalSign-Example-1",
 	"meta": {
-		"versionId": "1",
-		"lastUpdated": "2020-11-03T17:36:02.292+00:00",
-		"source": "#gQxaY0snFBCe21GC"
+		"versionId": "2",
+		"lastUpdated": "2020-11-11T15:48:05.889+00:00",
+		"source": "#El545Cmyf4MjPXzx"
 	},
 	"basedOn": [
 		{
@@ -15,9 +15,9 @@
 	"category": {
 		"coding": [
 			{
-				"system": "http://snomed.info/sct",
-				"code": "410606002",
-				"display": "Social service procedure (procedure)"
+				"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+				"code": "food-insecurity-domain",
+				"display": "Food Insecurity Domain"
 			}
 		]
 	},
