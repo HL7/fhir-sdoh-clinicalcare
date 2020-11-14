@@ -2,48 +2,48 @@
 
 The SDOHCC\_Procedure\_Base\_1 profile allows the representation of Procedures that address SDOH Conditions.
 
-Many of the resources/profiles used for SDOH reference one another. The current flow is that QuestionnaireResponses result in Observations that are used as evidence for Conditions that are addressed by CarePlans and Goals which lead to ServiceRequests and Procedures.
+Many of the resources/profiles used for SDOH reference one another. The current flow is that QuestionnaireResponses result in Observations that are used as evidence for Conditions that are addressed by Goals that lead to ServiceRequests and Procedures.
 
 The sections that follow provide additional guidance for some elements in the SDOHCC\_Procedure\_Base\_1 profile.
 
-**Procedure.basedOn**
+#### Procedure.basedOn
 
-To align an SDOH Procedure with the SDOH ServiceRequest(s) it is based on, Procedure.basedOn references SDOHCC\_ServiceRequest\_Base\_1 and also allows ServiceRequest, and CarePlan.
+To align an SDOH Procedure with the SDOH ServiceRequest(s) it is based on, Procedure.basedOn is sliced to allow the preferred option of referencing the SDOHCC\_ServiceRequest\_Base\_1 Profile.
 
-**Procedure.category**
+Procedure.basedOn should reference the SDOHCC\_ServiceRequest\_Base\_1 Profile if it exists.
 
-Procedure.category is currently bound to the FHIR &quot;Procedure Category Codes (SNOMED CT)&quot; value set with binding strength: Example. This value set contains the SNOMED CT codes listed below. However, as Gravity content development continues, Gravity may propose new, intervention/service categories to better categorize SDOH interventions/services.
+Additionally, Procedure.basedOn may reference CarePlan and ServiceRequest.
 
-| Code | Display |
-| --- | --- |
-| 24642003 | Psychiatry procedure or service |
-| 409063005 | Counselling |
-| 409073007 | Education |
-| 387713003 | Surgical procedure |
-| 103693007 | Diagnostic procedure |
-| 46947000 | Chiropractic manipulation |
-| 410606002 | Social service procedure |
+#### Procedure.category
 
-**Procedure.code**
+Procedure.category is currently bound to the &quot;SDOHCC ValueSet SDOHDomain 1&quot; value set with binding strength: Example. This allows the categorization of a Procedure into one or more of the SDOH domains (e.g., food-insecurity-domain, inadequate-housing-domain, etc.).
 
-Procedure.code is currently bound to the &quot;US Core Procedure Codes&quot; value set with binding strength: Extensible. As the Gravity Project continues to refine content for the SDOH domains (e.g., food, housing, transportation, etc.), the value set for Procedure.code will be restricted to procedure codes that address conditions in the SDOH domain.
+#### Procedure.code
 
-Additionally, in the future, Procedure.code may be sliced to allow the optional use of codes to document procedures for the purpose of billing (e.g., CPT codes).
+Procedure.code is currently bound to the FHIR &quot;Procedure Codes (SNOMED CT)&quot; value set with binding strength: Required. As the Gravity Project continues to refine content for the SDOH domains (e.g., food, housing, transportation, etc.), the required value set for Procedure.code will be refined to codes that pertain to SDOH domains.
 
-The final Procedure.code value set will likely overlap/align with the ServiceRequest.code value set in the SDOHCC\_ServiceRequest\_Base\_1 profile. Consistent use of similar codes for a Procedure and the ServiceRequest it is based on should facilitate analytics and interoperability.
+Additionally, Procedure.code.coding is sliced to allow the optional addition of CPT and LOINC codes. Each optional coding slice is currently bound to the entire value set for each code system (the CPT code system includes HCPCS Level I and HCPCS Level II codes). As the Gravity Project continues to refine content for the SDOH domains, the value set for each coding slice may be refined to codes that pertain to SDOH domains.
 
-**Procedure.subject**
+#### Procedure.subject
 
 Since this profile is based on the US Core Procedure Profile, Procedure.subject is restricted to referencing US Core Patient Profile.
 
-**Procedure.reasonCode**
+#### Procedure.reasonCode
 
-Procedure.reasonCode can be used to provide a coded reason for why a procedure was performed. It is currently bound to the FHIR &quot;Procedure Reason Codes&quot; value set with binding strength: Example. As the Gravity Project continues to refine content for the SDOH domains, the value set for Procedure.reasonCode may be refined to codes that pertain to SDOH domains.
+Procedure.reasonCode can be used to provide a coded reason for why a procedure was performed.
 
-Of note, information represented by Procedure.reasonCode overlaps significantly with information represented by Procedure.reasonReference. Multiple approaches to representing the same information may negatively impact interoperability. Therefore, where there is overlap in information provided by Procedure.reasonReference and Procedure.reasonCode, it is recommended that Procedure.reasonReference be used to justify why the procedure was performed.
+Procedure.reasonCode is currently bound to the FHIR &quot;Procedure Reason Codes&quot; value set with binding strength: Example. As the Gravity Project continues to refine content for the SDOH domains, the value set for Procedure.reasonCode may be refined to codes that pertain to SDOH domains.
 
-**Procedure.reasonRe­­ference**
+Of note, information represented by Procedure.reasonCode overlaps significantly with information represented by Procedure.reasonReference. Multiple approaches to representing the same information may negatively impact interoperability. Therefore, where there is overlap in information provided by Procedure.reasonReference and Procedure.reasonCode, it is recommended that Procedure.reasonReference should be used to justify why the procedure was performed.
 
-Procedure.reasonReference can be used to justify why the procedure was performed. To align an SDOH Procedure with the SDOH Conditions and Observations that justify it, Procedure.reasonReference references SDOHCC\_Condition\_Base\_1 and SDOHCC\_Observation\_ScreeningResponseBase\_1, and may also reference Condition, Observation, Procedure, DocumentReference and/or DiagnosticReport.
+#### Procedure.reasonReference
 
-Where there is significant overlap in information provided by Procedure.reasonReference and Procedure.reasonCode, it is recommended that Procedure.reasonReference be used to justify why the procedure was performed.
+Procedure.reasonReference can be used to justify why the procedure was performed.
+
+To align an SDOH Procedure with the SDOH Conditions and Observations that justify it, Procedure.reasonReference is sliced to allow the preferred option of referencing the SDOHCC\_Condition\_Base\_1 Profile and/or the SDOHCC\_Observation\_ScreeningResponseBase\_1 Profile.
+
+Procedure.reasonReference should reference the SDOHCC\_Condition\_Base\_1 Profile and/or the SDOHCC\_Observation\_ScreeningResponseBase\_1 Profile if they exist.
+
+Additionally, Procedure.reasonReference may reference Condition, Observation, Procedure, DocumentReference and/or DiagnosticReport.
+
+Where there is significant overlap in information provided by Procedure.reasonReference and Procedure.reasonCode, it is recommended that Procedure.reasonReference should be used to justify why the procedure was performed.
