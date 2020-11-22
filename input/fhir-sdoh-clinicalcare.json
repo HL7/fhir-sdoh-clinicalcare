@@ -1,39 +1,16 @@
 {
 	"id": "fhir-sdoh-clinicalcare",
 	"meta": {
-		"versionId": "146",
-		"lastUpdated": "2020-11-13T22:57:57.126+00:00",
-		"source": "#V4SEPKlu4pWopIzr"
+		"versionId": "167",
+		"lastUpdated": "2020-11-22T15:37:51.773+00:00",
+		"source": "#9GlinNa4xwkyjPyA"
 	},
 	"resourceType": "ImplementationGuide",
-	"contained": [
-		{
-			"id": "pXcca4zZ",
-			"resourceType": "DocumentReference",
-			"type": {
-				"coding": [
-					{
-						"code": "ignore-warnings"
-					}
-				]
-			},
-			"content": [
-				{
-					"attachment": {
-						"contentType": "text/plain",
-						"data": "PT0gU3VwcHJlc3NlZCBNZXNzYWdlcyA9PQojIFRoaXMgaXMgYSBrbm93biBpc3N1ZSB3aXRoIHRoZSBGSElSIHZhbGlkYXRvciBhbmQgaXMgYmVpbmcgYWRkcmVzc2VkIGJ5IEhMNwpJTkZPUk1BVElPTjogSW1wbGVtZW50YXRpb25HdWlkZS9obDcuZmhpci51cy5maGlyLXNkb2gtY2xpbmljYWxjYXJlOiBJbXBsZW1lbnRhdGlvbkd1aWRlOiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL0ltcGxlbWVudGF0aW9uR3VpZGUKIyBUaGlzIGlzIGEgdGVtcG9yYXJ5IGNvZGUgc3lzdGVtIHNvIHRoaXMgaW5mb3JtYXRpb24gY2FuIGJlIGlnbm9yZWQuCklORk9STUFUSU9OOiBDb2RlU3lzdGVtL3Nkb2hjYy10ZW1wb3JhcnktY29kZXM6IENvZGVTeXN0ZW06IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vQ29kZVN5c3RlbQojIFRoZSBmb2xsb3dpbmcgZXhhbXBsZXMgaGF2ZSBiZWVuIHJldmlld2VkIGFuZCBjb25maXJtZWQgdG8gdmFsaWRhdGUgYWdhaW5zdCB0aGUgaW50ZW5kZWQgcHJvZmlsZXMuCklORk9STUFUSU9OOiBDb25kaXRpb24vU0RPSENDLUNvbmRpdGlvbi1IdW5nZXJWaXRhbFNpZ24tRXhhbXBsZS0xOiBDb25kaXRpb246IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL3VzL3Nkb2gtY2MvU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtQ29uZGl0aW9uLUJhc2UtMQpJTkZPUk1BVElPTjogR29hbC9TRE9IQ0MtR29hbC1IdW5nZXJWaXRhbFNpZ24tRXhhbXBsZS0xOiBHb2FsOiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci91cy9zZG9oLWNjL1N0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLUdvYWwtQmFzZS0xCklORk9STUFUSU9OOiBPYnNlcnZhdGlvbi9TRE9IQ0MtT2JzZXJ2YXRpb24tSHVuZ2VyVml0YWxTaWduLUV4YW1wbGUtMTogT2JzZXJ2YXRpb246IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL3VzL3Nkb2gtY2MvU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtT2JzZXJ2YXRpb24tU2NyZWVuaW5nUmVzcG9uc2VCYXNlLTEKSU5GT1JNQVRJT046IE9ic2VydmF0aW9uL1NET0hDQy1PYnNlcnZhdGlvbi1IdW5nZXJWaXRhbFNpZ24tRXhhbXBsZS0yOiBPYnNlcnZhdGlvbjogVmFsaWRhdGUgcmVzb3VyY2UgYWdhaW5zdCBwcm9maWxlIGh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvc2RvaC1jYy9TdHJ1Y3R1cmVEZWZpbml0aW9uL1NET0hDQy1PYnNlcnZhdGlvbi1TY3JlZW5pbmdSZXNwb25zZUJhc2UtMQpJTkZPUk1BVElPTjogT2JzZXJ2YXRpb24vU0RPSENDLU9ic2VydmF0aW9uLUh1bmdlclZpdGFsU2lnbi1FeGFtcGxlLTM6IE9ic2VydmF0aW9uOiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci91cy9zZG9oLWNjL1N0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLU9ic2VydmF0aW9uLVNjcmVlbmluZ1Jlc3BvbnNlQmFzZS0xCklORk9STUFUSU9OOiBPYnNlcnZhdGlvbi9TRE9IQ0MtT2JzZXJ2YXRpb24tSHVuZ2VyVml0YWxTaWduR3JvdXAtMTogT2JzZXJ2YXRpb246IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vT2JzZXJ2YXRpb24KSU5GT1JNQVRJT046IFBhdGllbnQvcGF0LTUzMjM0OiBQYXRpZW50OiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL1BhdGllbnQKSU5GT1JNQVRJT046IFBhdGllbnQvcGF0LTUzMjM0OiBQYXRpZW50OiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci91cy9jb3JlL1N0cnVjdHVyZURlZmluaXRpb24vdXMtY29yZS1wYXRpZW50IC0gbGlzdGVkIGluIG1ldGEKSU5GT1JNQVRJT046IFByb2NlZHVyZS9TRE9IQ0MtUHJvY2VkdXJlLUh1bmdlclZpdGFsU2lnbi1FeGFtcGxlLTE6IFByb2NlZHVyZTogVmFsaWRhdGUgcmVzb3VyY2UgYWdhaW5zdCBwcm9maWxlIGh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvc2RvaC1jYy9TdHJ1Y3R1cmVEZWZpbml0aW9uL1NET0hDQy1Qcm9jZWR1cmUtQmFzZS0xCklORk9STUFUSU9OOiBRdWVzdGlvbm5haXJlUmVzcG9uc2UvUVItNTc3MDI3NTogUXVlc3Rpb25uYWlyZVJlc3BvbnNlOiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL1F1ZXN0aW9ubmFpcmVSZXNwb25zZQpJTkZPUk1BVElPTjogU2VydmljZVJlcXVlc3QvU0RPSENDLVNlcnZpY2VSZXF1ZXN0LUh1bmdlclZpdGFsU2lnbi1FeGFtcGxlLTE6IFNlcnZpY2VSZXF1ZXN0OiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci91cy9zZG9oLWNjL1N0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLVNlcnZpY2VSZXF1ZXN0LUJhc2UtMQpJTkZPUk1BVElPTjogVGFzay9TRE9IQ0MtVGFzay1PcmRlckZ1bGZpbGxtZW50LUV4YW1wbGUtMTogVGFzazogVmFsaWRhdGUgcmVzb3VyY2UgYWdhaW5zdCBwcm9maWxlIGh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvc2RvaC1jYy9TdHJ1Y3R1cmVEZWZpbml0aW9uL1NET0hDQy1UYXNrLUJhc2UtMQojIFRoZSBmb2xsb3dpbmcgaW5zdGFuY2VzIGhhdmUgYmVlbiByZXZpZXdlZCBhbmQgY29uZmlybWVkIHRvIHZhbGlkYXRlIGFnYWluc3QgdGhlIGludGVuZGVkIHJlc291cmNlcy4KSU5GT1JNQVRJT046IFN0cnVjdHVyZU1hcC9TRE9IQ0MtU3RydWN0dXJlTWFwLUh1bmdlclZpdGFsU2lnbk1hcHBlci0xOiBTdHJ1Y3R1cmVNYXA6IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vU3RydWN0dXJlTWFwCklORk9STUFUSU9OOiBRdWVzdGlvbm5haXJlL1NET0hDQy1RdWVzdGlvbm5haXJlLUh1bmdlclZpdGFsU2lnbi0xOiBRdWVzdGlvbm5haXJlOiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL1F1ZXN0aW9ubmFpcmUKSU5GT1JNQVRJT046IFZhbHVlU2V0L1NET0hDQy1WYWx1ZVNldC1TRE9IRG9tYWluLTE6IFZhbHVlU2V0OiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL1ZhbHVlU2V0CiMgVGhlIGZvbGxvd2luZyBwcm9maWxlcyBoYXZlIGJlZW4gcmV2aWV3ZWQgYW5kIGNvbmZpcm1lZCB0byB2YWxpZGF0ZSBhZ2FpbnN0IHRoZSBpbnRlbmRlZCByZXNvdXJjZXMvU3RydWN0dXJlRGVmaW50aW9ucy4KSU5GT1JNQVRJT046IFN0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLUNvbmRpdGlvbi1CYXNlLTE6IFN0cnVjdHVyZURlZmluaXRpb246IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vU3RydWN0dXJlRGVmaW5pdGlvbgpJTkZPUk1BVElPTjogU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtR29hbC1CYXNlLTE6IFN0cnVjdHVyZURlZmluaXRpb246IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vU3RydWN0dXJlRGVmaW5pdGlvbgpJTkZPUk1BVElPTjogU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtT2JzZXJ2YXRpb24tU2NyZWVuaW5nUmVzcG9uc2VCYXNlLTE6IFN0cnVjdHVyZURlZmluaXRpb246IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vU3RydWN0dXJlRGVmaW5pdGlvbgpJTkZPUk1BVElPTjogU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtUHJvY2VkdXJlLUJhc2UtMTogU3RydWN0dXJlRGVmaW5pdGlvbjogVmFsaWRhdGUgcmVzb3VyY2UgYWdhaW5zdCBwcm9maWxlIGh0dHA6Ly9obDcub3JnL2ZoaXIvU3RydWN0dXJlRGVmaW5pdGlvbi9TdHJ1Y3R1cmVEZWZpbml0aW9uCklORk9STUFUSU9OOiBTdHJ1Y3R1cmVEZWZpbml0aW9uL1NET0hDQy1TZXJ2aWNlUmVxdWVzdC1CYXNlLTE6IFN0cnVjdHVyZURlZmluaXRpb246IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vU3RydWN0dXJlRGVmaW5pdGlvbgpJTkZPUk1BVElPTjogU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtVGFzay1CYXNlLTE6IFN0cnVjdHVyZURlZmluaXRpb246IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vU3RydWN0dXJlRGVmaW5pdGlvbgojIFRoZSBmb2xsb3dpbmcgaXNzdWVzIGhhdmUgYmVlbiByZXZpZXdlZCBhbmQgdGhlc2UgaXRlbXMgYXJlIG5vdCBpbnRlbmRlZCB0byB2YWxpZGF0ZSBhZ2FpbnN0IG9uZSBvZiB0aGUgc2xpY2VzLgpJTkZPUk1BVElPTjogQ29uZGl0aW9uL1NET0hDQy1Db25kaXRpb24tSHVuZ2VyVml0YWxTaWduLUV4YW1wbGUtMTogQ29uZGl0aW9uLmNhdGVnb3J5WzBdOiBUaGlzIGVsZW1lbnQgZG9lcyBub3QgbWF0Y2ggYW55IGtub3duIHNsaWNlIGRlZmluZWQgaW4gdGhlIHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci91cy9zZG9oLWNjL1N0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLUNvbmRpdGlvbi1CYXNlLTEKSU5GT1JNQVRJT046IENvbmRpdGlvbi9TRE9IQ0MtQ29uZGl0aW9uLUh1bmdlclZpdGFsU2lnbi1FeGFtcGxlLTE6IENvbmRpdGlvbi5jb2RlLmNvZGluZ1swXTogVGhpcyBlbGVtZW50IGRvZXMgbm90IG1hdGNoIGFueSBrbm93biBzbGljZSBkZWZpbmVkIGluIHRoZSBwcm9maWxlIGh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvc2RvaC1jYy9TdHJ1Y3R1cmVEZWZpbml0aW9uL1NET0hDQy1Db25kaXRpb24tQmFzZS0xCklORk9STUFUSU9OOiBQcm9jZWR1cmUvU0RPSENDLVByb2NlZHVyZS1IdW5nZXJWaXRhbFNpZ24tRXhhbXBsZS0xOiBQcm9jZWR1cmUuY29kZS5jb2RpbmdbMF06IFRoaXMgZWxlbWVudCBkb2VzIG5vdCBtYXRjaCBhbnkga25vd24gc2xpY2UgZGVmaW5lZCBpbiB0aGUgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL3VzL3Nkb2gtY2MvU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtUHJvY2VkdXJlLUJhc2UtMQpJTkZPUk1BVElPTjogT2JzZXJ2YXRpb24vU0RPSENDLU9ic2VydmF0aW9uLUh1bmdlclZpdGFsU2lnbi1FeGFtcGxlLTE6IE9ic2VydmF0aW9uLmVmZmVjdGl2ZS5vZlR5cGUoZGF0ZVRpbWUpOiBUaGlzIGVsZW1lbnQgZG9lcyBub3QgbWF0Y2ggYW55IGtub3duIHNsaWNlIGRlZmluZWQgaW4gdGhlIHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci91cy9zZG9oLWNjL1N0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLU9ic2VydmF0aW9uLVNjcmVlbmluZ1Jlc3BvbnNlQmFzZS0xCklORk9STUFUSU9OOiBPYnNlcnZhdGlvbi9TRE9IQ0MtT2JzZXJ2YXRpb24tSHVuZ2VyVml0YWxTaWduLUV4YW1wbGUtMjogT2JzZXJ2YXRpb24uZWZmZWN0aXZlLm9mVHlwZShkYXRlVGltZSk6IFRoaXMgZWxlbWVudCBkb2VzIG5vdCBtYXRjaCBhbnkga25vd24gc2xpY2UgZGVmaW5lZCBpbiB0aGUgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL3VzL3Nkb2gtY2MvU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtT2JzZXJ2YXRpb24tU2NyZWVuaW5nUmVzcG9uc2VCYXNlLTEKSU5GT1JNQVRJT046IE9ic2VydmF0aW9uL1NET0hDQy1PYnNlcnZhdGlvbi1IdW5nZXJWaXRhbFNpZ24tRXhhbXBsZS0zOiBPYnNlcnZhdGlvbi5lZmZlY3RpdmUub2ZUeXBlKGRhdGVUaW1lKTogVGhpcyBlbGVtZW50IGRvZXMgbm90IG1hdGNoIGFueSBrbm93biBzbGljZSBkZWZpbmVkIGluIHRoZSBwcm9maWxlIGh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvc2RvaC1jYy9TdHJ1Y3R1cmVEZWZpbml0aW9uL1NET0hDQy1PYnNlcnZhdGlvbi1TY3JlZW5pbmdSZXNwb25zZUJhc2UtMQoKIyBXZSBoYXZlIGRpc2N1c3NlZCB3aXRoIFVTIENvcmUgdGhhdCB3ZSBkaWQgbm90IHVzZSB0aGVpciBwcm9maWxlIGFuZCBleHBsYWluZWQgd2h5LgpXQVJOSU5HOiBTdHJ1Y3R1cmVEZWZpbml0aW9uLndoZXJlKHVybCA9ICdodHRwOi8vaGw3Lm9yZy9maGlyL3VzL3Nkb2gtY2MvU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtT2JzZXJ2YXRpb24tU2NyZWVuaW5nUmVzcG9uc2VCYXNlLTEnKS5iYXNlRGVmaW5pdGlvbjogVVMgRkhJUiBVc2FnZSBydWxlcyByZXF1aXJlIHRoYXQgYWxsIHByb2ZpbGVzIG9uIE9ic2VydmF0aW9uIGRlcml2ZSBmcm9tIG9uZSBvZiB0aGUgYmFzZSBVUyBwcm9maWxlcwoK",
-						"title": "ignoreWarnings.txt"
-					}
-				}
-			]
-		}
-	],
-	"extension": [],
 	"status": "draft",
 	"fhirVersion": [
 		"4.0.1"
 	],
-	"url": "http://hl7.org/fhir/us/ImplementaitonGuide/fhir-sdoh-clinicalcare",
+	"url": "http://hl7.org/fhir/us/ImplementationGuide/fhir-sdoh-clinicalcare",
 	"version": "0.0.4",
 	"name": "Sdohclinicalcare",
 	"title": "SDOH Clinical Care",
@@ -49,7 +26,7 @@
 			]
 		}
 	],
-	"description": "|IG Characteristic  |     Value |\n|------------------------------------------------------|--------------------------------------------|\n|**FHIR Version:** |    FHIR R4 |\n|**IG Realm:** |    US |\n|**IG Type:** |    STU |\n|**Exchange Methods:** |    RESTful Query, Messages, Transactions, Documents, Tasks |\n|**IG Dependencies:** |    The SDOH-CC IG utilizes and adopts guidance developed in several other FHIR&reg; Implementation Guides. |\n\n\n\n\n\n|IG Dependencies         |  IG Code         | Version                      |\n|----------------------------------|-------------------------|---------------|\n| HL7 FHIR US Core               |  [US Core](http://hl7.org/fhir/us/core/STU3.1.1)                | Version 3.1.1     |\n| Structured Data Capture                         |   [SDC](http://hl7.org/fhir/uv/sdc/2019May)        | Version 2.7.0                     |\n\n\n\n\n\n###  Purpose\n\nThis HL7&reg; IG defines FHIR R4 profiles, extensions and value sets needed to exchange SDOH content defined by the Gravity Project. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. It addresses the need to gather SDOH information in the context of clinical encounters and describes how to share SDOH information and other relevant information with outside organizations for the purpose of coordinating services and support to address SDOH related needs. It also demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. It supports the following use cases:\n1.\tDocument SDOH data in conjunction with the patient encounter,\n2.\tDocument and track SDOH related interventions to completion,\n3.\tGather and aggregate SDOH data for uses beyond the point of care (e.g. public health, population health, quality measurement, risk adjustment, quality improvement, and research.)\n\n\n### How to Use This Guide\n\nA FHIR IG address the needs of multiple audiences. It provides technical artifacts that assist programmers when implementing standards-based FHIR application program interfaces (APIs) for specific purposes. It provides instructive material that explains how FHIR is used to accomplish specific uses cases. It also provides general information that helps business analysts and technology decision-makers understand the use cases and benefits associated with acheiving specific data exchange capabilities. A FHIR IG is as much a business planning tool as it is an educational resource and a technical specification.\n\n\n\n### Notes to Reviewers and Balloters\n\nFeedback on V0.0.2 of the IG should be sent to gravityproject@emiadvisors.net. \n\n\n### History of Document Changes\n\n| Number         | Description                                                                                                                                                   |\n|---------------|----------------------------------------------------------------------------------------------------|\n| 0.0.4         |Added Consent and Group and updated other profiles and supporting examples         |\n| 0.0.31       |Minor/Major updates for all profiles and supporting examples         |\n| 0.0.3         |Major update of all resource profiles, assoicated descriptions, examples, and value sets         |\n| 0.0.2         |Updated profiles, examples, and initial narrative sections         |\n| 0.0.1         | Redesigned scope of this IG                                         |\n\n\n\n### Acknowledgements\n*This section is still under development*\n\nWe would like to thank the Agency for Healthcare Research and Quality (AHRQ), SIREN UCSF, UV Larner and Yale Nursing for their support for developing this IG and all [Gravity Project sponsors](https://confluence.hl7.org/display/GRAV/Gravity+Project+Sponsors) for their contributions to make rapid progress on the standardization of social determinants of health data.\n\nReserve this area to included acknowledgements for the people and organizations involved in developing and maintaining this Implementation Guide.\n\nThere may also be some required copyright acknowledgements for certain Code Systems or other acknowledgements required by HL7 and FHIR.\n\n\n|**Name**         | **Organization**                                        |\n|--------------------------|--------------------------------------------|\n| Robert Dieterle         | EnableCare                                         |\n| Corey Smith        | AMA                                   |\n| Monique van Berkum       | AMA                                 |\n| Lisa Nelson           | MaxMD                                         |\n| Matt Elrod        | MaxMD                                   |\n| Matt Menning        |  AMA                                  |\n| Mohit Saigal        | AMA                                   |\n| Becky Gradl          | Academy of Nutrition and Dietetics                                 |\n| Sarah DeSilvey        |  Larner College of Medicine at the University of Vermont, SIREN                                  |\n| Donna Pertel         |  Academy of Nutrition and Dietetics                                  |\n| Evelyn Gallego        |  EMI Advisors, LLC                                  |\n| Linda Hyde        |   EMI Advisors, LLC                                 |\n| Lynette Elliott| EMI Advisors, LLC |\n| Rob Hausam |        |\n| Cheng Liu | MaxMD|\n| Natasha Kreisle | MaxMD|\n\n\n[HL7 International - Patient Care](http://www.hl7.org/Special/committees/patientcare)",
+	"description": "|IG Characteristic  |     Value |\n|------------------------------------------------------|--------------------------------------------|\n|**FHIR Version:** |    FHIR R4 |\n|**IG Realm:** |    US |\n|**IG Type:** |    STU |\n|**Exchange Methods:** |    RESTful Query, Messages, Transactions, Documents, Tasks |\n|**IG Dependencies:** |    The SDOH-CC IG utilizes and adopts guidance developed in several other FHIR&reg; Implementation Guides. |\n\n\n\n\n\n|IG Dependencies         |  IG Code         | Version                      |\n|----------------------------------|-------------------------|---------------|\n| HL7 FHIR US Core               |  [US Core](http://hl7.org/fhir/us/core/STU3.1.1)                | Version 3.1.1     |\n| Structured Data Capture                         |   [SDC](http://hl7.org/fhir/uv/sdc/2019May)        | Version 2.7.0                     |\n\n\n\n\n\n###  Purpose\n\nThis HL7&reg; IG defines FHIR R4 profiles, extensions and value sets needed to exchange SDOH content defined by the Gravity Project. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. It addresses the need to gather SDOH information in the context of clinical encounters and describes how to share SDOH information and other relevant information with outside organizations for the purpose of coordinating services and support to address SDOH related needs. It also demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. It supports the following use cases:\n1.\tDocument SDOH data in conjunction with the patient encounter,\n2.\tDocument and track SDOH related interventions to completion,\n3.\tGather and aggregate SDOH data for uses beyond the point of care (e.g. public health, population health, quality measurement, risk adjustment, quality improvement, and research.)\n\n\n### How to Use This Guide\n\nA FHIR IG address the needs of multiple audiences. It provides technical artifacts that assist programmers when implementing standards-based FHIR application program interfaces (APIs) for specific purposes. It provides instructive material that explains how FHIR is used to accomplish specific uses cases. It also provides general information that helps business analysts and technology decision-makers understand the use cases and benefits associated with achieving specific data exchange capabilities. A FHIR IG is as much a business planning tool as it is an educational resource and a technical specification.\n\n\n\n### Notes to Reviewers and Balloters\n\nFeedback on V0.0.2 of the IG should be sent to gravityproject@emiadvisors.net. \n\n\n### History of Document Changes\n\n| Number         | Description                                                                                                                                                   |\n|---------------|----------------------------------------------------------------------------------------------------|\n| 0.0.4         |Added Consent and Group and updated other profiles and supporting examples         |\n| 0.0.31       |Minor/Major updates for all profiles and supporting examples         |\n| 0.0.3         |Major update of all resource profiles, associated descriptions, examples, and value sets         |\n| 0.0.2         |Updated profiles, examples, and initial narrative sections         |\n| 0.0.1         | Redesigned scope of this IG                                         |\n\n\n\n### Acknowledgements\n*This section is still under development*\n\nWe would like to thank the Agency for Healthcare Research and Quality (AHRQ), SIREN UCSF, UV Larner and Yale Nursing for their support for developing this IG and all [Gravity Project sponsors](https://confluence.hl7.org/display/GRAV/Gravity+Project+Sponsors) for their contributions to make rapid progress on the standardization of social determinants of health data.\n\nReserve this area to included acknowledgements for the people and organizations involved in developing and maintaining this Implementation Guide.\n\nThere may also be some required copyright acknowledgements for certain Code Systems or other acknowledgements required by HL7 and FHIR.\n\n\n|**Name**         | **Organization**                                        |\n|--------------------------|--------------------------------------------|\n| Robert Dieterle         | EnableCare                                         |\n| Corey Smith        | AMA                                   |\n| Monique van Berkum       | AMA                                 |\n| Lisa Nelson           | MaxMD                                         |\n| Matt Elrod        | MaxMD                                   |\n| Matt Menning        | AMA                                  |\n| Mohit Saigal        | AMA                                   |\n| Becky Gradl          | Academy of Nutrition and Dietetics                                 |\n| Sarah DeSilvey        | Larner College of Medicine at the University of Vermont, SIREN                                  |\n| Donna Pertel         | Academy of Nutrition and Dietetics                                  |\n| Evelyn Gallego        |  EMI Advisors, LLC                                  |\n| Linda Hyde        | EMI Advisors, LLC                                 |\n| Lynette Elliott| EMI Advisors, LLC |\n| Rob Hausam |        |\n| Cheng Liu | MaxMD|\n| Natasha Kreisle | MaxMD|\n\n\n[HL7 International - Patient Care](http://www.hl7.org/Special/committees/patientcare)",
 	"jurisdiction": [
 		{
 			"coding": [
@@ -94,7 +71,6 @@
 		],
 		"resource": [
 			{
-				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1",
@@ -105,7 +81,6 @@
 				"groupingId": "new-group1"
 			},
 			{
-				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "StructureDefinition/SDOHCC-Condition-Base-1",
@@ -116,7 +91,6 @@
 				"groupingId": "new-group1"
 			},
 			{
-				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "StructureDefinition/SDOHCC-Goal-Base-1",
@@ -127,7 +101,6 @@
 				"groupingId": "new-group1"
 			},
 			{
-				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "StructureDefinition/SDOHCC-ServiceRequest-Base-1",
@@ -138,7 +111,6 @@
 				"groupingId": "new-group1"
 			},
 			{
-				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "StructureDefinition/SDOHCC-Procedure-Base-1",
@@ -149,7 +121,6 @@
 				"groupingId": "new-group1"
 			},
 			{
-				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
 					"reference": "Patient/pat-53234",
@@ -160,7 +131,6 @@
 				"groupingId": "new-group2"
 			},
 			{
-				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
 					"reference": "QuestionnaireResponse/QR-5770275",
@@ -171,7 +141,6 @@
 				"groupingId": "new-group2"
 			},
 			{
-				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
 					"reference": "Questionnaire/SDOHCC-Questionnaire-HungerVitalSign-1",
@@ -182,7 +151,6 @@
 				"groupingId": "new-group2"
 			},
 			{
-				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "Observation/SDOHCC-Observation-HungerVitalSign-Example-1",
@@ -194,7 +162,6 @@
 				"groupingId": "new-group2"
 			},
 			{
-				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "Observation/SDOHCC-Observation-HungerVitalSign-Example-2",
@@ -206,7 +173,6 @@
 				"groupingId": "new-group2"
 			},
 			{
-				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "Observation/SDOHCC-Observation-HungerVitalSign-Example-3",
@@ -218,7 +184,6 @@
 				"groupingId": "new-group2"
 			},
 			{
-				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
 					"reference": "Observation/SDOHCC-Observation-HungerVitalSignGroup-1",
@@ -229,7 +194,6 @@
 				"groupingId": "new-group2"
 			},
 			{
-				"extension": [],
 				"exampleBoolean": false,
 				"reference": {
 					"reference": "Condition/SDOHCC-Condition-HungerVitalSign-Example-1",
@@ -241,7 +205,6 @@
 				"groupingId": "new-group2"
 			},
 			{
-				"extension": [],
 				"exampleBoolean": true,
 				"reference": {
 					"reference": "StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1",
@@ -332,7 +295,7 @@
 					"display": "SDOHCC Consent"
 				},
 				"name": "SDOHCC Consent",
-				"description": "This is a profile on the Consent resource to allow declaration of consent provided by the patient to share the SDOH informaiton, including ServiceRequest with external entities.",
+				"description": "This is a profile on the Consent resource to allow declaration of consent provided by the patient to share the SDOH information, including ServiceRequest, with external entities.",
 				"groupingId": "new-group1"
 			},
 			{
@@ -342,42 +305,46 @@
 					"display": "SDOCHCC Group"
 				},
 				"name": "SDOCHCC Group",
-				"description": "This is a profile on the Group resource to allow collections of individuals with SDOH data to be easily exchange with allowed organizations.",
+				"description": "This is a profile on the Group resource to allow collections of individuals with SDOH data to be easily exchanged with allowed organizations.",
 				"groupingId": "new-group1"
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "ValueSet/SDOHCC-ValueSet-HCPCSII-1",
+					"display": "SDOHCC ValueSet HCPCSII 1"
+				},
+				"name": "SDOHCC ValueSet HCPCSII 1",
+				"description": "This value set is defined intensionally to include all Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes.",
+				"groupingId": "new-group4"
 			}
 		],
 		"page": {
-			"extension": [],
 			"nameUrl": "index.html",
 			"title": "Home Page",
 			"generation": "markdown",
 			"page": [
 				{
-					"extension": [],
 					"nameUrl": "gravity_background.html",
 					"title": "Gravity Background",
 					"generation": "markdown"
 				},
 				{
-					"extension": [],
 					"nameUrl": "sdoh_clinical_care_scope.html",
 					"title": "SDOH Clinical Care Scope",
 					"generation": "markdown"
 				},
 				{
-					"extension": [],
 					"nameUrl": "personas_and_patient_stories.html",
 					"title": "Personas and Patient Stories",
 					"generation": "markdown",
 					"page": [
 						{
-							"extension": [],
 							"nameUrl": "patient_story_1_personas.html",
 							"title": "Patient Story 1 Personas",
 							"generation": "markdown"
 						},
 						{
-							"extension": [],
 							"nameUrl": "patient_story_1.html",
 							"title": "Patient Story 1",
 							"generation": "markdown"
@@ -385,7 +352,6 @@
 					]
 				},
 				{
-					"extension": [],
 					"nameUrl": "mapping_instructions.html",
 					"title": "Mapping Instructions",
 					"generation": "markdown"

@@ -22,7 +22,7 @@ Procedure.category is currently bound to the &quot;SDOHCC ValueSet SDOHDomain 1&
 
 Procedure.code is currently bound to the FHIR &quot;Procedure Codes (SNOMED CT)&quot; value set with binding strength: Required. As the Gravity Project continues to refine content for the SDOH domains (e.g., food, housing, transportation, etc.), the required value set for Procedure.code will be refined to codes that pertain to SDOH domains.
 
-Additionally, Procedure.code.coding is sliced to allow the optional addition of CPT and LOINC codes. Each optional coding slice is currently bound to the entire value set for each code system (the CPT code system includes HCPCS Level I and HCPCS Level II codes). As the Gravity Project continues to refine content for the SDOH domains, the value set for each coding slice may be refined to codes that pertain to SDOH domains.
+Additionally, Procedure.code.coding is sliced to allow the optional addition of CPT, LOINC, and HCPCS Level II codes. Each optional coding slice is currently bound to the entire value set for each code system. As the Gravity Project continues to refine content for the SDOH domains, the value set for each coding slice may be refined to codes that pertain to SDOH domains.
 
 #### Procedure.subject
 
