@@ -6,7 +6,6 @@
 		"lastUpdated": "2020-11-13T22:20:26.463+00:00",
 		"source": "#msfGoqm7A5tgLlG8"
 	},
-	"extension": [],
 	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-ServiceRequest-Base-1",
 	"name": "SDOHCC_ServiceRequest_Base_1",
 	"title": "SDOHCC ServiceRequest Base 1",

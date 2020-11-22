@@ -31,7 +31,7 @@ This HL7&reg; IG defines FHIR R4 profiles, extensions and value sets needed to e
 
 ### How to Use This Guide
 
-A FHIR IG address the needs of multiple audiences. It provides technical artifacts that assist programmers when implementing standards-based FHIR application program interfaces (APIs) for specific purposes. It provides instructive material that explains how FHIR is used to accomplish specific uses cases. It also provides general information that helps business analysts and technology decision-makers understand the use cases and benefits associated with acheiving specific data exchange capabilities. A FHIR IG is as much a business planning tool as it is an educational resource and a technical specification.
+A FHIR IG address the needs of multiple audiences. It provides technical artifacts that assist programmers when implementing standards-based FHIR application program interfaces (APIs) for specific purposes. It provides instructive material that explains how FHIR is used to accomplish specific uses cases. It also provides general information that helps business analysts and technology decision-makers understand the use cases and benefits associated with achieving specific data exchange capabilities. A FHIR IG is as much a business planning tool as it is an educational resource and a technical specification.
 
 
 
@@ -46,7 +46,7 @@ Feedback on V0.0.2 of the IG should be sent to gravityproject@emiadvisors.net.
 |---------------|----------------------------------------------------------------------------------------------------|
 | 0.0.4         |Added Consent and Group and updated other profiles and supporting examples         |
 | 0.0.31       |Minor/Major updates for all profiles and supporting examples         |
-| 0.0.3         |Major update of all resource profiles, assoicated descriptions, examples, and value sets         |
+| 0.0.3         |Major update of all resource profiles, associated descriptions, examples, and value sets         |
 | 0.0.2         |Updated profiles, examples, and initial narrative sections         |
 | 0.0.1         | Redesigned scope of this IG                                         |
 
@@ -69,13 +69,13 @@ There may also be some required copyright acknowledgements for certain Code Syst
 | Monique van Berkum       | AMA                                 |
 | Lisa Nelson           | MaxMD                                         |
 | Matt Elrod        | MaxMD                                   |
-| Matt Menning        |  AMA                                  |
+| Matt Menning        | AMA                                  |
 | Mohit Saigal        | AMA                                   |
 | Becky Gradl          | Academy of Nutrition and Dietetics                                 |
-| Sarah DeSilvey        |  Larner College of Medicine at the University of Vermont, SIREN                                  |
-| Donna Pertel         |  Academy of Nutrition and Dietetics                                  |
+| Sarah DeSilvey        | Larner College of Medicine at the University of Vermont, SIREN                                  |
+| Donna Pertel         | Academy of Nutrition and Dietetics                                  |
 | Evelyn Gallego        |  EMI Advisors, LLC                                  |
-| Linda Hyde        |   EMI Advisors, LLC                                 |
+| Linda Hyde        | EMI Advisors, LLC                                 |
 | Lynette Elliott| EMI Advisors, LLC |
 | Rob Hausam |        |
 | Cheng Liu | MaxMD|

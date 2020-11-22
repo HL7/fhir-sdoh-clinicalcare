@@ -20,6 +20,7 @@ INFORMATION: Task/SDOHCC-Task-OrderFulfillment-Example-1: Task: Validate resourc
 INFORMATION: StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1: StructureMap: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureMap
 INFORMATION: Questionnaire/SDOHCC-Questionnaire-HungerVitalSign-1: Questionnaire: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Questionnaire
 INFORMATION: ValueSet/SDOHCC-ValueSet-SDOHDomain-1: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/SDOHCC-ValueSet-HCPCSII-1: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 # The following profiles have been reviewed and confirmed to validate against the intended resources/StructureDefintions.
 INFORMATION: StructureDefinition/SDOHCC-Condition-Base-1: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/SDOHCC-Goal-Base-1: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
@@ -34,7 +35,8 @@ INFORMATION: Procedure/SDOHCC-Procedure-HungerVitalSign-Example-1: Procedure.cod
 INFORMATION: Observation/SDOHCC-Observation-HungerVitalSign-Example-1: Observation.effective.ofType(dateTime): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1
 INFORMATION: Observation/SDOHCC-Observation-HungerVitalSign-Example-2: Observation.effective.ofType(dateTime): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1
 INFORMATION: Observation/SDOHCC-Observation-HungerVitalSign-Example-3: Observation.effective.ofType(dateTime): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1
-
 # We have discussed with US Core that we did not use their profile and explained why.
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+# This warning is expected because HCPCS Level II codes are not on the FHIR terminology server.
+WARNING: ValueSet.where(id = 'SDOHCC-ValueSet-HCPCSII-1'): Error from server: Unable to provide support for code system urn:oid:2.16.840.1.113883.6.285
 
