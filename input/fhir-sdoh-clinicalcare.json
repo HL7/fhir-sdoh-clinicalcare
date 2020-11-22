@@ -1,9 +1,9 @@
 {
 	"id": "fhir-sdoh-clinicalcare",
 	"meta": {
-		"versionId": "167",
-		"lastUpdated": "2020-11-22T15:37:51.773+00:00",
-		"source": "#9GlinNa4xwkyjPyA"
+		"versionId": "169",
+		"lastUpdated": "2020-11-22T16:38:37.440+00:00",
+		"source": "#rN6OaSexPZ5BcdUV"
 	},
 	"resourceType": "ImplementationGuide",
 	"status": "draft",
@@ -11,7 +11,7 @@
 		"4.0.1"
 	],
 	"url": "http://hl7.org/fhir/us/ImplementationGuide/fhir-sdoh-clinicalcare",
-	"version": "0.0.4",
+	"version": "0.0.41",
 	"name": "Sdohclinicalcare",
 	"title": "SDOH Clinical Care",
 	"publisher": "HL7 International - Patient Care WG",
