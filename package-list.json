@@ -11,5 +11,5 @@
 	],
 	"package-id": "hl7.fhir.us.fhir-sdoh-clinicalcare",
 	"title": "SDOH Clinical Care for Multiple Domains",
-	"canonical": "http://hl7.org/fhir/us/fhir-sdoh-clinicalcare"
+	"canonical": "http://hl7.org/fhir/us"
 }
