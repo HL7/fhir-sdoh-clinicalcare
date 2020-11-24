@@ -2,14 +2,14 @@
 	"list": [
 		{
 			"version": "current",
-			"path": "http://hl7.org/fhir/us/fhir-sdoh-clinicalcare/",
+			"path": "http://hl7.org/fhir/us/sdoh-clinicalcare/",
 			"desc": "Continuous  Integration Build",
 			"fhirversion": "4.01",
 			"status": "ci-build",
 			"current": true
 		}
 	],
-	"package-id": "hl7.fhir.us.fhir-sdoh-clinicalcare",
+	"package-id": "hl7.fhir.us.sdoh-clinicalcare",
 	"title": "SDOH Clinical Care for Multiple Domains",
-	"canonical": "http://hl7.org/fhir/us"
+	"canonical": "http://hl7.org/fhir/us/ImplementationGuide/sdoh-clinicalcare"
 }
