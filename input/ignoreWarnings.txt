@@ -1,6 +1,6 @@
 == Suppressed Messages ==
 # This is a known issue with the FHIR validator and is being addressed by HL7
-INFORMATION: ImplementationGuide/hl7.fhir.us.fhir-sdoh-clinicalcare: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
+INFORMATION: ImplementationGuide/hl7.fhir.us.sdoh-clinicalcare: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
 # This is a temporary code system so this information can be ignored.
 INFORMATION: CodeSystem/sdohcc-temporary-codes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 # The following examples have been reviewed and confirmed to validate against the intended profiles.
@@ -39,4 +39,3 @@ INFORMATION: Observation/SDOHCC-Observation-HungerVitalSign-Example-3: Observati
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 # This warning is expected because HCPCS Level II codes are not on the FHIR terminology server.
 WARNING: ValueSet.where(id = 'SDOHCC-ValueSet-HCPCSII-1'): Error from server: Unable to provide support for code system urn:oid:2.16.840.1.113883.6.285
-
