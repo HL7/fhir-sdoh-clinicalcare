@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare" defaultVersion="current" defaultWorkgroup="pc" gitUrl="https://github.com/HL7/fhir-sdoh-clinicalcare" xsi:noNamespaceSchemaLocation="../schemas/specification.xsd" url="http://hl7.org/fhir/us/ImplementationGuide/sdoh-clinicalcare"><version code="current" url="http://hl7.org/fhir/us/sdoh-clinicalcare"/>
+<version code="0.0.4" deprecated="true"/>
+<version code="0.1" deprecated="true"/>
+<artifactPageExtension value="-definitions"/>
+<artifactPageExtension value="-examples"/>
+<artifactPageExtension value="-mappings"/>
+<artifact id="Patient/pat-53234" key="Patient-pat-53234" name="Patient Colin Abbas"/>
+<artifact id="StructureDefinition/SDOHCC-Group" key="StructureDefinition-SDOHCC-Group" name="SDOCHCC Group"/>
+<artifact id="CodeSystem/sdohcc-temporary-codes" key="CodeSystem-sdohcc-temporary-codes" name="SDOHCC CodeSystem Temporary Codes"/>
+<artifact id="StructureDefinition/SDOHCC-Condition-Base-1" key="StructureDefinition-SDOHCC-Condition-Base-1" name="SDOHCC Condition Base 1"/>
+<artifact id="Condition/SDOHCC-Condition-HungerVitalSign-Example-1" key="Condition-SDOHCC-Condition-HungerVitalSign-Example-1" name="SDOHCC Condition HungerVitalSign Example 1"/>
+<artifact id="StructureDefinition/SDOHCC-Consent" key="StructureDefinition-SDOHCC-Consent" name="SDOHCC Consent"/>
+<artifact id="StructureDefinition/SDOHCC-Goal-Base-1" key="StructureDefinition-SDOHCC-Goal-Base-1" name="SDOHCC Goal Base 1"/>
+<artifact id="Goal/SDOHCC-Goal-HungerVitalSign-Example-1" key="Goal-SDOHCC-Goal-HungerVitalSign-Example-1" name="SDOHCC Goal HungerVitalSign Example 1"/>
+<artifact id="Observation/SDOHCC-Observation-HungerVitalSign-Example-1" key="Observation-SDOHCC-Observation-HungerVitalSign-Example-1" name="SDOHCC Observation HungerVitalSign Example 1"/>
+<artifact id="Observation/SDOHCC-Observation-HungerVitalSign-Example-2" key="Observation-SDOHCC-Observation-HungerVitalSign-Example-2" name="SDOHCC Observation HungerVitalSign Example 2"/>
+<artifact id="Observation/SDOHCC-Observation-HungerVitalSign-Example-3" key="Observation-SDOHCC-Observation-HungerVitalSign-Example-3" name="SDOHCC Observation HungerVitalSign Example 3"/>
+<artifact id="Observation/SDOHCC-Observation-HungerVitalSignGroup-1" key="Observation-SDOHCC-Observation-HungerVitalSignGroup-1" name="SDOHCC Observation HungerVitalSignGroup 1"/>
+<artifact id="StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1" key="StructureDefinition-SDOHCC-Observation-ScreeningResponseBase-1" name="SDOHCC Observation ScreeningResponseBase 1"/>
+<artifact id="StructureDefinition/SDOHCC-Procedure-Base-1" key="StructureDefinition-SDOHCC-Procedure-Base-1" name="SDOHCC Procedure Base 1"/>
+<artifact id="Procedure/SDOHCC-Procedure-HungerVitalSign-Example-1" key="Procedure-SDOHCC-Procedure-HungerVitalSign-Example-1" name="SDOHCC Procedure HungerVitalSign Example 1"/>
+<artifact id="Questionnaire/SDOHCC-Questionnaire-HungerVitalSign-1" key="Questionnaire-SDOHCC-Questionnaire-HungerVitalSign-1" name="SDOHCC Questionnaire HungerVitalSign 1"/>
+<artifact id="QuestionnaireResponse/QR-5770275" key="QuestionnaireResponse-QR-5770275" name="SDOHCC QuestionnaireResponse HungerVitalSign Example 1"/>
+<artifact id="StructureDefinition/SDOHCC-ServiceRequest-Base-1" key="StructureDefinition-SDOHCC-ServiceRequest-Base-1" name="SDOHCC ServiceRequest Base 1"/>
+<artifact id="ServiceRequest/SDOHCC-ServiceRequest-HungerVitalSign-Example-1" key="ServiceRequest-SDOHCC-ServiceRequest-HungerVitalSign-Example-1" name="SDOHCC ServiceRequest HungerVitalSign Example 1"/>
+<artifact id="StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1" key="StructureMap-SDOHCC-StructureMap-HungerVitalSignMapper-1" name="SDOHCC StructureMap HungerVitalSignMapper 1"/>
+<artifact id="StructureDefinition/SDOHCC-Task-Base-1" key="StructureDefinition-SDOHCC-Task-Base-1" name="SDOHCC Task Base 1"/>
+<artifact id="Task/SDOHCC-Task-OrderFulfillment-Example-1" key="Task-SDOHCC-Task-OrderFulfillment-Example-1" name="SDOHCC Task OrderFulfillment Example 1"/>
+<artifact id="ValueSet/SDOHCC-ValueSet-HCPCSII-1" key="ValueSet-SDOHCC-ValueSet-HCPCSII-1" name="SDOHCC ValueSet HCPCSII 1"/>
+<artifact id="ValueSet/SDOHCC-ValueSet-SDOHDomain-1" key="ValueSet-SDOHCC-ValueSet-SDOHDomain-1" name="SDOHCC ValueSet SDOHDomain 1"/>
+<page key="NA" name="(NA)"/>
+<page key="many" name="(many)"/>
+<page deprecated="true" key="profiles" name="(profiles)"/>
+<page key="artifacts" name="Artifacts Summary"/>
+<page key="gravity_background" name="Gravity Background"/>
+<page key="homePage" name="Home Page"/>
+<page key="mapping_instructions" name="Mapping Instructions"/>
+<page key="patient_story_1" name="Patient Story 1"/>
+<page key="patient_story_1_personas" name="Patient Story 1 Personas"/>
+<page key="personas_and_patient_stories" name="Personas and Patient Stories"/>
+<page key="sdoh_clinical_care_scope" name="SDOH Clinical Care Scope"/>
+<page key="toc" name="Table of Contents"/>
+</specification>
