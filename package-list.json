@@ -7,6 +7,14 @@
 			"fhirversion": "4.01",
 			"status": "ci-build",
 			"current": true
+		},
+		{
+			"version": "0.1.0",
+			"path": "http://hl7.org/fhir/us/sdoh-clinicalcare/2021-Jan",
+			"desc": "First STU ballot",
+			"fhirversion": "4.01",
+			"status": "ballot",
+			"sequence": "STU 1"
 		}
 	],
 	"package-id": "hl7.fhir.us.sdoh-clinicalcare",
