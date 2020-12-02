@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Observation-HungerVitalSign-Example-1"/>
     <meta>
-        <versionId value="7"/>
-        <lastUpdated value="2020-11-04T05:01:43.446+00:00"/>
-        <source value="#WydXiDSBO4xjc9ez"/>
+        <versionId value="8"/>
+        <lastUpdated value="2020-12-02T16:45:34.187+00:00"/>
+        <source value="#gjzXD6yclfkvRvjM"/>
     </meta>
     <status value="final"/>
     <category>
@@ -24,7 +24,7 @@
     </category>
     <category>
         <coding>
-            <system value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
             <code value="food-insecurity-domain"/>
             <display value="Food Insecurity Domain"/>
         </coding>

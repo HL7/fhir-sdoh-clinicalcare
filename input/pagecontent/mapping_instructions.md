@@ -6,13 +6,13 @@ Below is an example of a map that is used to extract a Bundle of Observations an
 /// name = "SDOHCC_StructureMap_HungerVitalSignMapper_1"
 /// status = draft
 
-map "http://hl7.org/fhir/us/sdoh-cc/StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1" = "SDOHCC StructureMap HungerVitalSignMapper 1"
+map "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1" = "SDOHCC StructureMap HungerVitalSignMapper 1"
 
 uses "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse" alias questionnaireResponse as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
 uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
-uses "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1" alias sdohccCondition as target
-uses "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1" alias sdohccObservation as target
+uses "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1" alias sdohccCondition as target
+uses "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1" alias sdohccObservation as target
 
 group sdohMapping(source src : questionnaireResponse, target bundle : Bundle) {
   //temporarily set id to human-readable id as example
@@ -51,7 +51,7 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
   //Add sdoh category
   src -> observation.category = create('CodeableConcept') as newCC then {
       src -> newCC.coding = create('Coding') as newCoding then {
-        src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes';
+        src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
         src -> newCoding.code = 'food-insecurity-domain';
         src -> newCoding.display = 'Food Insecurity Domain';
     };
@@ -137,7 +137,7 @@ group TransformGroupObservation(source src: questionnaireResponse, source bundle
 
 group SetObservationFullUrl(source observation: Observation, target entry)
 {
-  observation.id as id -> entry.fullUrl = append('http://hl7.org/fhir/us/sdoh-cc/Observation/', id);
+  observation.id as id -> entry.fullUrl = append('http://hl7.org/fhir/us/sdoh-clinicalcare/Observation/', id);
 }
 
 group TransformCondition(source src: questionnaireResponse, source bundle, target condition: sdohccCondition, target entry)
@@ -154,7 +154,7 @@ group TransformCondition(source src: questionnaireResponse, source bundle, targe
   //Add sdoh category
   src -> condition.category = create('CodeableConcept') as newCC then {
       src -> newCC.coding = create('Coding') as newCoding then {
-        src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes';
+        src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
         src -> newCoding.code = 'food-insecurity-domain';
         src -> newCoding.display = 'Food Insecurity Domain';
     };
@@ -179,7 +179,7 @@ group TransformCondition(source src: questionnaireResponse, source bundle, targe
 
 group SetConditionFullUrl(source condition: sdohccCondition, target entry)
 {
-  condition.id as id -> entry.fullUrl = append('http://hl7.org/fhir/us/sdoh-cc/Condition/', id);
+  condition.id as id -> entry.fullUrl = append('http://hl7.org/fhir/us/sdoh-clinicalcare/Condition/', id);
 }
 
 ```

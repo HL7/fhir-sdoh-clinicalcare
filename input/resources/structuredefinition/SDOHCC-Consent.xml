@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Consent"/>
     <meta>
-        <versionId value="9"/>
-        <lastUpdated value="2020-12-01T17:53:38.804+00:00"/>
-        <source value="#OoE0rpJ7XZRup6e7"/>
+        <versionId value="10"/>
+        <lastUpdated value="2020-12-02T14:58:28.987+00:00"/>
+        <source value="#rqlfDkpDO28qww1B"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -13,7 +13,7 @@
             xmlns="http://www.w3.org/1999/xhtml">This is the resource text for the Consent resource
         </div>
     </text>
-    <url value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Consent"/>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent"/>
     <name value="SDOHCC_Consent"/>
     <title value="SDOHCC Consent"/>
     <status value="draft"/>

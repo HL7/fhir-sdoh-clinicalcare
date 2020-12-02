@@ -3,11 +3,11 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ValueSet-HCPCSII-1"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2020-11-11T19:36:05.121+00:00"/>
-        <source value="#G96BLmjuSHRH11pA"/>
+        <versionId value="2"/>
+        <lastUpdated value="2020-12-02T16:37:07.187+00:00"/>
+        <source value="#dRg9cBCLWRmnhW0a"/>
     </meta>
-    <url value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-HCPCSII-1"/>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet-HCPCSII-1"/>
     <name value="SDOHCC_ValueSet_HCPCSII_1"/>
     <title value="SDOHCC ValueSet HCPCSII 1"/>
     <status value="draft"/>

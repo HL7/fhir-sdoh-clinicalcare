@@ -1,12 +1,14 @@
 ### Overview
 
+0.1.01
+
 |IG Characteristic  |     Value |
 |------------------------------------------------------|--------------------------------------------|
 |**FHIR Version:** |    FHIR R4 |
 |**IG Realm:** |    US |
 |**IG Type:** |    STU |
 |**Exchange Methods:** |    RESTful Query, Messages, Transactions, Documents, Tasks |
-|**IG Dependencies:** |    The SDOH-CC IG utilizes and adopts guidance developed in several other FHIR&reg; Implementation Guides. |
+|**IG Dependencies:** |    The SDOH-clinicalcare IG utilizes and adopts guidance developed in several other FHIR&reg; Implementation Guides. |
 
 
 
@@ -37,52 +39,7 @@ A FHIR IG address the needs of multiple audiences. It provides technical artifac
 
 ### Notes to Reviewers and Balloters
 
-Feedback on V0.0.2 of the IG should be sent to gravityproject@emiadvisors.net. 
-
-
-### History of Document Changes
-
-| Number         | Description                                                                                                                                                   |
-|---------------|----------------------------------------------------------------------------------------------------|
-| 0.0.4         |Added Consent and Group and updated other profiles and supporting examples         |
-| 0.0.31       |Minor/Major updates for all profiles and supporting examples         |
-| 0.0.3         |Major update of all resource profiles, associated descriptions, examples, and value sets         |
-| 0.0.2         |Updated profiles, examples, and initial narrative sections         |
-| 0.0.1         | Redesigned scope of this IG                                         |
-
-
-
-### Acknowledgements
-*This section is still under development*
-
-We would like to thank the Agency for Healthcare Research and Quality (AHRQ), SIREN UCSF, UV Larner and Yale Nursing for their support for developing this IG and all [Gravity Project sponsors](https://confluence.hl7.org/display/GRAV/Gravity+Project+Sponsors) for their contributions to make rapid progress on the standardization of social determinants of health data.
-
-Reserve this area to included acknowledgements for the people and organizations involved in developing and maintaining this Implementation Guide.
-
-There may also be some required copyright acknowledgements for certain Code Systems or other acknowledgements required by HL7 and FHIR.
-
-
-|**Name**         | **Organization**                                        |
-|--------------------------|--------------------------------------------|
-| Robert Dieterle         | EnableCare                                         |
-| Corey Smith        | AMA                                   |
-| Monique van Berkum       | AMA                                 |
-| Lisa Nelson           | MaxMD                                         |
-| Matt Elrod        | MaxMD                                   |
-| Matt Menning        | AMA                                  |
-| Mohit Saigal        | AMA                                   |
-| Becky Gradl          | Academy of Nutrition and Dietetics                                 |
-| Sarah DeSilvey        | Larner College of Medicine at the University of Vermont, SIREN                                  |
-| Donna Pertel         | Academy of Nutrition and Dietetics                                  |
-| Evelyn Gallego        |  EMI Advisors, LLC                                  |
-| Linda Hyde        | EMI Advisors, LLC                                 |
-| Lynette Elliott| EMI Advisors, LLC |
-| Rob Hausam |        |
-| Cheng Liu | MaxMD|
-| Natasha Kreisle | MaxMD|
-
-
-[HL7 International - Patient Care](http://www.hl7.org/Special/committees/patientcare)
+Feedback on of the IG should be sent to gravityproject@emiadvisors.net. 
 
 
 

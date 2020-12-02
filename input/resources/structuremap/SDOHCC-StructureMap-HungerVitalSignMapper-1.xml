@@ -3,11 +3,11 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-StructureMap-HungerVitalSignMapper-1"/>
     <meta>
-        <versionId value="12"/>
-        <lastUpdated value="2020-11-02T22:22:40.143+00:00"/>
-        <source value="#i0tmMF9lW2TQPTLv"/>
+        <versionId value="13"/>
+        <lastUpdated value="2020-12-02T16:52:52.668+00:00"/>
+        <source value="#3UIKrxXIxJ5K0NrF"/>
     </meta>
-    <url value="http://hl7.org/fhir/us/sdoh-cc/StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1"/>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1"/>
     <name value="SDOHCC_StructureMap_HungerVitalSignMapper_1"/>
     <title value="SDOHCC StructureMap HungerVitalSignMapper 1"/>
     <status value="draft"/>
@@ -25,12 +25,12 @@
         <mode value="target"/>
     </structure>
     <structure>
-        <url value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1"/>
+        <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1"/>
         <mode value="target"/>
         <alias value="sdohccCondition"/>
     </structure>
     <structure>
-        <url value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+        <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
         <mode value="target"/>
         <alias value="sdohccObservation"/>
     </structure>
@@ -377,7 +377,7 @@
                         <element value="system"/>
                         <transform value="copy"/>
                         <parameter>
-                            <valueString value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+                            <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
                         </parameter>
                     </target>
                 </rule>
@@ -1160,7 +1160,7 @@
                 <element value="fullUrl"/>
                 <transform value="append"/>
                 <parameter>
-                    <valueString value="http://hl7.org/fhir/us/sdoh-cc/Observation/"/>
+                    <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/Observation/"/>
                 </parameter>
                 <parameter>
                     <valueId value="id"/>
@@ -1315,7 +1315,7 @@
                         <element value="system"/>
                         <transform value="copy"/>
                         <parameter>
-                            <valueString value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+                            <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
                         </parameter>
                     </target>
                 </rule>
@@ -1549,7 +1549,7 @@
                 <element value="fullUrl"/>
                 <transform value="append"/>
                 <parameter>
-                    <valueString value="http://hl7.org/fhir/us/sdoh-cc/Condition/"/>
+                    <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/Condition/"/>
                 </parameter>
                 <parameter>
                     <valueId value="id"/>

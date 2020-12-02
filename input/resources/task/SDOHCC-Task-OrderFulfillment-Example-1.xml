@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Task-OrderFulfillment-Example-1"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2020-11-05T22:41:13.982+00:00"/>
-        <source value="#2U2NDHEIgf2fw8kP"/>
+        <versionId value="4"/>
+        <lastUpdated value="2020-12-02T16:54:33.845+00:00"/>
+        <source value="#qnd2WpnmLN1EOu5y"/>
     </meta>
     <status value="accepted"/>
     <intent value="order"/>
@@ -26,7 +26,7 @@
     <output>
         <type>
             <coding>
-                <system value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+                <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
                 <code value="resulting-activity"/>
                 <display value="Resulting Activity"/>
             </coding>

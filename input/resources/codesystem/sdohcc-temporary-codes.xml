@@ -3,11 +3,11 @@
     xmlns="http://hl7.org/fhir">
     <id value="sdohcc-temporary-codes"/>
     <meta>
-        <versionId value="67"/>
-        <lastUpdated value="2020-11-02T14:57:47.141+00:00"/>
-        <source value="#YlHJ0AxB25rhRupw"/>
+        <versionId value="68"/>
+        <lastUpdated value="2020-12-02T16:40:22.680+00:00"/>
+        <source value="#g5TSsOQyW1PwW48w"/>
     </meta>
-    <url value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
     <name value="SDOHCC_CodeSystem_TemporaryCodes"/>
     <title value="SDOHCC CodeSystem Temporary Codes"/>
     <status value="active"/>
