@@ -3,12 +3,12 @@
     xmlns="http://hl7.org/fhir">
     <id value="sdoh-clinicalcare"/>
     <meta>
-        <versionId value="7"/>
-        <lastUpdated value="2020-11-24T16:34:07.514+00:00"/>
-        <source value="#WRjPjyj2L1pCYe5J"/>
+        <versionId value="32"/>
+        <lastUpdated value="2020-12-02T03:45:41.900+00:00"/>
+        <source value="#iU0ll6O63LPJ4sFo"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/sdoh-clinicalcare"/>
-    <version value="0.0.43"/>
+    <version value="0.1.0"/>
     <name value="Sdohclinicalcare"/>
     <title value="SDOH Clinical Care"/>
     <status value="draft"/>
@@ -283,9 +283,9 @@
         <resource>
             <reference>
                 <reference value="StructureDefinition/SDOHCC-Group"/>
-                <display value="SDOCHCC Group"/>
+                <display value="SDOHCC Group"/>
             </reference>
-            <name value="SDOCHCC Group"/>
+            <name value="SDOHCC Group"/>
             <description value="This is a profile on the Group resource to allow collections of individuals with SDOH data to be easily exchanged with allowed organizations."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group1"/>
@@ -299,6 +299,26 @@
             <description value="This value set is defined intensionally to include all Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group4"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Consent/consent-to-share-example"/></reference>
+            <name value="SDOHCC Consent Example"/>
+            <description value="An example of a Consent resource providing consent for a patient to share their information"/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Consent"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Group/R101"/>
+                <display value="John's Pantry"/>
+            </reference>
+            <name value="John's Pantry Example"/>
+            <description value="An example of a Group resource for a collection of individuals that are shared with another entity"/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Group"/>
+            <groupingId value="new-group2"/>
         </resource>
         <page>
             <nameUrl value="index.html"/>

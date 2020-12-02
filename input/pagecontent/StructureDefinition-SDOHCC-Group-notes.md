@@ -1,0 +1,1 @@
+Notes text for Group resource

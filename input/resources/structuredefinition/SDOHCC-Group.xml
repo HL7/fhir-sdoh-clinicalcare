@@ -3,22 +3,29 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Group"/>
     <meta>
-        <versionId value="6"/>
-        <lastUpdated value="2020-11-10T15:54:14.941+00:00"/>
-        <source value="#nmz9Rea81ZqdJD3o"/>
+        <versionId value="11"/>
+        <lastUpdated value="2020-12-01T17:52:35.210+00:00"/>
+        <source value="#B6sqygQzCmY5hfdM"/>
     </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">Resource text for Group resource
+        </div>
+    </text>
     <url value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Group"/>
-    <name value="SDOCHCC_Group"/>
-    <title value="SDOCHCC Group"/>
+    <name value="SDOHCC_Group"/>
+    <title value="SDOHCC Group"/>
     <status value="draft"/>
     <publisher value="HL7 International - Patient Care WG"/>
-    <description value="This is a profile on the Group resource to allow collections of individuals with SDOH data to be easily exchange with allowed organizations."/>
+    <description value="This is a profile on the Group resource to allow collections of individuals with SDOH data to be easily exchanged with allowed organizations."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="US"/>
         </coding>
     </jurisdiction>
+    <purpose value="Purpose text for Group resource"/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>
@@ -305,6 +312,7 @@
             <type>
                 <code value="Identifier"/>
             </type>
+            <mustSupport value="true"/>
             <isModifier value="false"/>
             <isSummary value="true"/>
             <mapping>
@@ -489,7 +497,7 @@
             <short value="Entity that is the custodian of the Group's definition"/>
             <definition value="Entity responsible for defining and maintaining Group characteristics and/or registered members."/>
             <comment value="This does not strictly align with ownership of a herd or flock, but may suffice to represent that relationship in simple cases. More complex cases will require an extension."/>
-            <min value="1"/>
+            <min value="0"/>
             <max value="1"/>
             <base>
                 <path value="Group.managingEntity"/>
@@ -893,13 +901,18 @@
         <element id="Group">
             <path value="Group"/>
         </element>
+        <element id="Group.identifier">
+            <path value="Group.identifier"/>
+            <min value="0"/>
+            <mustSupport value="true"/>
+        </element>
         <element id="Group.code">
             <path value="Group.code"/>
             <mustSupport value="true"/>
         </element>
         <element id="Group.managingEntity">
             <path value="Group.managingEntity"/>
-            <min value="1"/>
+            <min value="0"/>
             <max value="1"/>
             <mustSupport value="true"/>
         </element>

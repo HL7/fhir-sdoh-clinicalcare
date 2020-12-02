@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Consent
+    xmlns="http://hl7.org/fhir">
+    <id value="consent-to-share-example"/>
+    <meta>
+        <versionId value="4"/>
+        <lastUpdated value="2020-11-30T16:21:30.240+00:00"/>
+        <source value="#BToix2CLtfklNeuI"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Consent"/>
+    </meta>
+    <status value="active"/>
+    <scope>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/consentscope"/>
+            <code value="patient-privacy"/>
+        </coding>
+    </scope>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+            <code value="IDSCL"/>
+        </coding>
+    </category>
+    <patient>
+        <reference value="Patient/pat-53234"/>
+        <display value="Colin Abbas"/>
+    </patient>
+    <dateTime value="2020-11-18"/>
+    <policyRule>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/consentpolicycodes"/>
+            <code value="hipaa-auth"/>
+        </coding>
+    </policyRule>
+    <provision>
+        <actor>
+            <role>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-RoleClass"/>
+                    <code value="PAT"/>
+                </coding>
+            </role>
+            <reference>
+                <reference value="Patient/pat-53234"/>
+                <display value="Colin Abbas"/>
+            </reference>
+        </actor>
+        <action>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/consentaction"/>
+                <code value="disclose"/>
+            </coding>
+        </action>
+    </provision>
+</Consent>

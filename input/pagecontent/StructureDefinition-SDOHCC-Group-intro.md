@@ -1,0 +1,1 @@
+Intro text for Group resource
