@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Group
+    xmlns="http://hl7.org/fhir">
+    <id value="R101"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2020-11-30T16:47:17.570+00:00"/>
+        <source value="#G42VMNVmoElsm8LM"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Group"/>
+    </meta>
+    <type value="person"/>
+    <actual value="true"/>
+    <code>
+        <text value="Referred to John's Pantry"/>
+    </code>
+    <name value="John's Pantry"/>
+    <quantity value="25"/>
+    <characteristic>
+        <code>
+            <text value="ServiceRequest organization"/>
+        </code>
+        <valueCodeableConcept>
+            <text value="Request service"/>
+        </valueCodeableConcept>
+        <exclude value="false"/>
+    </characteristic>
+    <characteristic>
+        <code>
+            <text value="owner"/>
+        </code>
+        <valueCodeableConcept>
+            <text value="ABC Medical Group"/>
+        </valueCodeableConcept>
+        <exclude value="false"/>
+    </characteristic>
+</Group>

@@ -3,22 +3,29 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Consent"/>
     <meta>
-        <versionId value="5"/>
-        <lastUpdated value="2020-11-10T15:15:38.589+00:00"/>
-        <source value="#7t6RGlpV3b7jMvBT"/>
+        <versionId value="9"/>
+        <lastUpdated value="2020-12-01T17:53:38.804+00:00"/>
+        <source value="#OoE0rpJ7XZRup6e7"/>
     </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">This is the resource text for the Consent resource
+        </div>
+    </text>
     <url value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Consent"/>
     <name value="SDOHCC_Consent"/>
     <title value="SDOHCC Consent"/>
     <status value="draft"/>
     <publisher value="HL7 International - Patient Care WG"/>
-    <description value="This is a profile on the Consent resource to allow declaration of consent provided by the patient to share the SDOH informaiton, including ServiceRequest with external entities."/>
+    <description value="This is a profile on the Consent resource to allow declaration of consent provided by the patient to share the SDOH information, including ServiceRequest with external entities."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="US"/>
         </coding>
     </jurisdiction>
+    <purpose value="This is the Purpose for Consent"/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>
@@ -352,6 +359,7 @@
                     <value value="Local eCMS identifier"/>
                 </valueIdentifier>
             </example>
+            <mustSupport value="true"/>
             <isModifier value="false"/>
             <isSummary value="true"/>
             <mapping>
@@ -453,6 +461,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
+            <mustSupport value="true"/>
             <isModifier value="false"/>
             <isSummary value="true"/>
             <binding>
@@ -1572,12 +1581,25 @@
         <element id="Consent">
             <path value="Consent"/>
         </element>
+        <element id="Consent.identifier">
+            <path value="Consent.identifier"/>
+            <min value="0"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+            </binding>
+        </element>
         <element id="Consent.status">
             <path value="Consent.status"/>
             <mustSupport value="true"/>
         </element>
         <element id="Consent.scope">
             <path value="Consent.scope"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Consent.category">
+            <path value="Consent.category"/>
             <mustSupport value="true"/>
         </element>
         <element id="Consent.patient">

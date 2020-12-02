@@ -59,12 +59,12 @@ Ms. Shah reviews Rebecca's progress toward the goals set during the last encount
 *Assumptions outline what needs to be in place to meet or realize the requirements of the Patient Story.  The following are assumptions identified for Patient Story 1.* 
 	
 * Patient lives in a state that incentivizes providers to identify and address social risk factors for low-income or Medicaid eligible patients.
-* Patient has health insurance that includes coverage for care coordination services to address the patients social needs.
+* Patient has health insurance that includes coverage for care coordination services to address the patient's social needs.
 * Patient is engaged and willing to share information about medical and non-medical needs and concerns (e.g., patient fills new medication order and takes medication as planned, patient calls and schedules home visit with the housing coordinator, patient is able to articulate social needs clearly). 
 * Patient has a high school level or greater literacy and comprehension level.
-* Patients preferred language is English.
+* Patient's preferred language is English.
 * Patient has access to health care and can schedule annual wellness visit during after work hours while her children are in daycare.
-* Patients information will be shared and accessed in compliance with a policy and regulatory framework (e.g., privacy and security) and Patient Consent Directives.
+* Patient's information will be shared and accessed in compliance with a policy and regulatory framework (e.g., privacy and security) and Patient Consent Directives.
 * Patient has mobile phone with text messaging and email capabilities.
 * Patient has access to patient portal and can use portal to review and update electronic information.
 * Patient supplies a valid ID to the practice and the practice uses it to create a trust account.  The account uniquely identifies the patient to communicate and share information in a secure manner. 
@@ -78,10 +78,10 @@ Ms. Shah reviews Rebecca's progress toward the goals set during the last encount
 * PCP covers the cost of transportation for the patient.  For example, the practice may be eligible to use transportation vouchers provided by the state and/or a private insurer.
 * Patient leads and/or directly engages in the creation of goals to address the health concerns and social needs identified through the care planning process.
 * PCP initiates and documents the clinical and social need care planning activities in the EHR.  The Care Coordinator reviews, manages, and monitors the action plan to address the social needs.
-* Patient has the ability to verbally grant consent to selected Care Team Members to view the patients care plan.
+* Patient has the ability to verbally grant consent to selected Care Team Members to view the patient's care plan.
 * Patient and Care Team Members have the ability to define notifications and designate notification recipients.
 * The Care Coordinator is the facilitator/steward who is responsible for reviewing and reconciling proposed modifications to the care plan.
-* Patient's follow-up appointment is scheduled during the patients lunch break.
+* Patient's follow-up appointment is scheduled during the patient's lunch break.
 * Necessary access and entry authorization protocols, for any of the systems or users described, are in place.
 * Screening information can be accessed and retrieved in a structured and coded format.
 * Patient encounter data will be used to generate a claim to the payer.
