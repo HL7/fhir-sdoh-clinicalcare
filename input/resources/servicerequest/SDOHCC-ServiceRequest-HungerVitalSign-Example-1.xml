@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ServiceRequest-HungerVitalSign-Example-1"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2020-11-03T17:45:28.392+00:00"/>
-        <source value="#zQgoyxQQ8bunrkQd"/>
+        <versionId value="3"/>
+        <lastUpdated value="2020-12-02T16:50:17.911+00:00"/>
+        <source value="#Q8n0mWDyrFw93mT9"/>
     </meta>
     <status value="active"/>
     <intent value="order"/>
     <category>
         <coding>
-            <system value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
             <code value="food-insecurity-domain"/>
             <display value="Food Insecurity Domain"/>
         </coding>

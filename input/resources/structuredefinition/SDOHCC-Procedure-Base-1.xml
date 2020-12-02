@@ -3,11 +3,11 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Procedure-Base-1"/>
     <meta>
-        <versionId value="27"/>
-        <lastUpdated value="2020-11-18T22:06:18.577+00:00"/>
-        <source value="#gKuCKCfdXoJfkGt0"/>
+        <versionId value="32"/>
+        <lastUpdated value="2020-12-02T17:41:55.652+00:00"/>
+        <source value="#adfMZifBtulWReX8"/>
     </meta>
-    <url value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Procedure-Base-1"/>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure-Base-1"/>
     <name value="SDOHCC_Procedure_Base_1"/>
     <title value="SDOHCC Procedure Base 1"/>
     <status value="draft"/>
@@ -549,7 +549,7 @@
             </base>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-ServiceRequest-Base-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest-Base-1"/>
             </type>
             <constraint>
                 <key value="ele-1"/>
@@ -728,7 +728,7 @@
             <isSummary value="true"/>
             <binding>
                 <strength value="example"/>
-                <valueSet value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
             </binding>
             <mapping>
                 <identity value="w5"/>
@@ -1406,7 +1406,7 @@
             <binding>
                 <strength value="required"/>
                 <description value="HCPCS Level II codes describing the type of Procedure"/>
-                <valueSet value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-HCPCSII-1"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet-HCPCSII-1"/>
             </binding>
             <mapping>
                 <identity value="v2"/>
@@ -2296,8 +2296,8 @@
             </base>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
             </type>
             <constraint>
                 <key value="ele-1"/>
@@ -2873,7 +2873,7 @@
             <sliceName value="SupportedBasedOn"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-ServiceRequest-Base-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest-Base-1"/>
             </type>
             <mustSupport value="true"/>
         </element>
@@ -2885,7 +2885,7 @@
             <path value="Procedure.category"/>
             <binding>
                 <strength value="example"/>
-                <valueSet value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
             </binding>
         </element>
         <element id="Procedure.code">
@@ -2953,7 +2953,7 @@
             <binding>
                 <strength value="required"/>
                 <description value="HCPCS Level II codes describing the type of Procedure"/>
-                <valueSet value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-HCPCSII-1"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet-HCPCSII-1"/>
             </binding>
         </element>
         <element id="Procedure.code.coding:HCPCSIICoding.system">
@@ -2986,8 +2986,8 @@
             <sliceName value="SupportedReasonReference"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
             </type>
             <mustSupport value="true"/>
         </element>

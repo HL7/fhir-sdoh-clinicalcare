@@ -3,10 +3,10 @@
     xmlns="http://hl7.org/fhir">
     <id value="consent-to-share-example"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2020-11-30T16:21:30.240+00:00"/>
-        <source value="#BToix2CLtfklNeuI"/>
-        <profile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Consent"/>
+        <versionId value="5"/>
+        <lastUpdated value="2020-12-02T14:59:07.592+00:00"/>
+        <source value="#9hW0soujG06Ayuo8"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent"/>
     </meta>
     <status value="active"/>
     <scope>

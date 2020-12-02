@@ -3,11 +3,11 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Observation-ScreeningResponseBase-1"/>
     <meta>
-        <versionId value="56"/>
-        <lastUpdated value="2020-11-13T22:54:45.746+00:00"/>
-        <source value="#isJ4ButYax0s7chN"/>
+        <versionId value="60"/>
+        <lastUpdated value="2020-12-02T17:54:50.149+00:00"/>
+        <source value="#s7nrDEqgBnOtBQ7y"/>
     </meta>
-    <url value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
     <name value="SDOHCC_Observation_ScreeningResponseBase_1"/>
     <title value="SDOHCC Observation ScreeningResponseBase 1"/>
     <status value="draft"/>
@@ -56,7 +56,7 @@
                 <severity value="error"/>
                 <human value="either Observation.valueCodableConcept or Observation.dataAbsentReason MUST be provided"/>
                 <expression value="valueCodeableConcept.exists() or dataAbsentReason.exists()"/>
-                <source value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
             </constraint>
         </element>
         <element id="Observation.status">
@@ -107,7 +107,7 @@
             <mustSupport value="true"/>
             <binding>
                 <strength value="required"/>
-                <valueSet value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
             </binding>
         </element>
         <element id="Observation.code">
@@ -225,7 +225,7 @@
             <sliceName value="SupportedDerivedFrom"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
                 <targetProfile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"/>
             </type>
             <mustSupport value="true"/>

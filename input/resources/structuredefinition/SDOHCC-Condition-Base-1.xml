@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Condition-Base-1"/>
     <meta>
-        <versionId value="38"/>
-        <lastUpdated value="2020-11-13T22:13:04.631+00:00"/>
-        <source value="#dO2EYY9Jpqds4ZMu"/>
+        <versionId value="41"/>
+        <lastUpdated value="2020-12-02T17:17:25.609+00:00"/>
+        <source value="#JlQllmGzujzlEyKi"/>
     </meta>
     <text>
         <status value="extensions"/>
@@ -457,7 +457,7 @@
             </table>
         </div>
     </text>
-    <url value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1"/>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1"/>
     <name value="SDOHCC_Condition_Base_1"/>
     <title value="SDOHCC Condition Base 1"/>
     <status value="draft"/>
@@ -1148,7 +1148,7 @@
             <isSummary value="false"/>
             <binding>
                 <strength value="required"/>
-                <valueSet value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
             </binding>
             <mapping>
                 <identity value="w5"/>
@@ -2306,8 +2306,8 @@
             </base>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1"/>
             </type>
             <condition value="con-2"/>
             <constraint>
@@ -2391,7 +2391,7 @@
             <short value="e.g., food-insecurity-domain | transportation-insecurity-domain"/>
             <binding>
                 <strength value="required"/>
-                <valueSet value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
             </binding>
         </element>
         <element id="Condition.severity">
@@ -2489,8 +2489,8 @@
             <definition value="Links to other relevant information."/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1"/>
             </type>
             <mustSupport value="true"/>
         </element>

@@ -3,10 +3,10 @@
     xmlns="http://hl7.org/fhir">
     <id value="R101"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2020-11-30T16:47:17.570+00:00"/>
-        <source value="#G42VMNVmoElsm8LM"/>
-        <profile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Group"/>
+        <versionId value="3"/>
+        <lastUpdated value="2020-12-02T15:26:02.113+00:00"/>
+        <source value="#dNfkbaAMYOAELG3T"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Group"/>
     </meta>
     <type value="person"/>
     <actual value="true"/>

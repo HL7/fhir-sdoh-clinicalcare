@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Questionnaire-HungerVitalSign-1"/>
     <meta>
-        <versionId value="13"/>
-        <lastUpdated value="2020-08-28T16:51:07.654+00:00"/>
-        <source value="#eCG1qi4OAvCTSRX0"/>
+        <versionId value="14"/>
+        <lastUpdated value="2020-12-02T16:48:56.335+00:00"/>
+        <source value="#vSXMyVKOnmiiPM8K"/>
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/variable">
         <valueExpression>
@@ -43,9 +43,9 @@
         </valueExpression>
     </extension>
     <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
-        <valueCanonical value="http://hl7.org/fhir/us/sdoh-cc/StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1"/>
+        <valueCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1"/>
     </extension>
-    <url value="http://hl7.org/fhir/us/sdoh-cc/Questionnaire/SDOHCC-Questionnaire-HungerVitalSign-1"/>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-Questionnaire-HungerVitalSign-1"/>
     <name value="SDOHCC_Questionnaire_HungerVitalSign_1"/>
     <title value="SDOHCC Questionnaire HungerVitalSign 1"/>
     <status value="draft"/>

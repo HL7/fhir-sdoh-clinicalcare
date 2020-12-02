@@ -3,11 +3,11 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Goal-Base-1"/>
     <meta>
-        <versionId value="27"/>
-        <lastUpdated value="2020-11-13T23:09:55.804+00:00"/>
-        <source value="#zoXcAGPcA0GgmUpp"/>
+        <versionId value="31"/>
+        <lastUpdated value="2020-12-02T17:19:18.225+00:00"/>
+        <source value="#vsPl9HobjacmiYnp"/>
     </meta>
-    <url value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Goal-Base-1"/>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal-Base-1"/>
     <name value="SDOHCC_Goal_Base_1"/>
     <title value="SDOHCC Goal Base 1"/>
     <status value="draft"/>
@@ -567,7 +567,7 @@
             <isSummary value="true"/>
             <binding>
                 <strength value="required"/>
-                <valueSet value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
             </binding>
             <mapping>
                 <identity value="w5"/>
@@ -1199,8 +1199,8 @@
             </base>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
             </type>
             <constraint>
                 <key value="ele-1"/>
@@ -1339,7 +1339,7 @@
             </base>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
             </type>
             <constraint>
                 <key value="ele-1"/>
@@ -1377,7 +1377,7 @@
             <mustSupport value="true"/>
             <binding>
                 <strength value="required"/>
-                <valueSet value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
             </binding>
         </element>
         <element id="Goal.description">
@@ -1414,8 +1414,8 @@
             <sliceName value="SupportedAddresses"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-Base-1"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
             </type>
             <mustSupport value="true"/>
         </element>
@@ -1441,7 +1441,7 @@
             <sliceName value="SupportedOutcomeReference"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
             </type>
             <mustSupport value="true"/>
         </element>

@@ -3,11 +3,11 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Task-Base-1"/>
     <meta>
-        <versionId value="11"/>
-        <lastUpdated value="2020-11-13T22:26:03.218+00:00"/>
-        <source value="#qykOXGvCkweEkfgH"/>
+        <versionId value="14"/>
+        <lastUpdated value="2020-12-02T17:57:52.296+00:00"/>
+        <source value="#djzFeZKywN4oNcsz"/>
     </meta>
-    <url value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Task-Base-1"/>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task-Base-1"/>
     <name value="SDOHCC_Task_Base_1"/>
     <title value="SDOHCC Task Base 1"/>
     <status value="draft"/>
@@ -725,7 +725,7 @@
             </base>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-ServiceRequest-Base-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest-Base-1"/>
             </type>
             <mustSupport value="true"/>
             <isModifier value="false"/>
@@ -2107,7 +2107,7 @@
             </type>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+                    <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
                     <code value="resulting-activity"/>
                 </coding>
             </patternCodeableConcept>
@@ -2271,7 +2271,7 @@
             </type>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+                    <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
                     <code value="resulting-activity"/>
                 </coding>
             </patternCodeableConcept>
@@ -2345,7 +2345,7 @@
             <min value="1"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-ServiceRequest-Base-1"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest-Base-1"/>
             </type>
             <mustSupport value="true"/>
         </element>
@@ -2383,7 +2383,7 @@
             <path value="Task.output.type"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+                    <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
                     <code value="resulting-activity"/>
                 </coding>
             </patternCodeableConcept>
@@ -2404,7 +2404,7 @@
             <path value="Task.output.type"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+                    <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
                     <code value="resulting-activity"/>
                 </coding>
             </patternCodeableConcept>

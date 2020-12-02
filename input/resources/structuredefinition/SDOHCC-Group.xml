@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Group"/>
     <meta>
-        <versionId value="11"/>
-        <lastUpdated value="2020-12-01T17:52:35.210+00:00"/>
-        <source value="#B6sqygQzCmY5hfdM"/>
+        <versionId value="12"/>
+        <lastUpdated value="2020-12-02T15:25:36.383+00:00"/>
+        <source value="#umWamBDEjGa0GN8P"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -13,7 +13,7 @@
             xmlns="http://www.w3.org/1999/xhtml">Resource text for Group resource
         </div>
     </text>
-    <url value="http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Group"/>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Group"/>
     <name value="SDOHCC_Group"/>
     <title value="SDOHCC Group"/>
     <status value="draft"/>
