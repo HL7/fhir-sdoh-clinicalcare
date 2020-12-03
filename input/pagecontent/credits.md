@@ -8,10 +8,10 @@ We would like to thank the Agency for Healthcare Research and Quality (AHRQ), SI
 
 |**Name**         | **Organization**                                        |
 |--------------------------|--------------------------------------------|
-| Robert Dieterle         | EnableCare                                         |
+| Robert Dieterle         | EnableCare LLC                                      |
 | Corey Smith        | AMA                                   |
 | Monique van Berkum       | AMA                                 |
-| James Shalaby       |                                 |
+| James Shalaby       | Elimu                                |
 | Lloyd McKenzie     | Gevity                                 |
 | Lisa Nelson           | MaxMD                                         |
 | Matt Elrod        | MaxMD                                   |
@@ -23,9 +23,11 @@ We would like to thank the Agency for Healthcare Research and Quality (AHRQ), SI
 | Evelyn Gallego        |  EMI Advisors, LLC                                  |
 | Linda Hyde        | EMI Advisors, LLC                                 |
 | Lynette Elliott| EMI Advisors, LLC |
-| Rob Hausam |        |
+| Rob Hausam |Hausam Consulting LLC        |
 | Cheng Liu | MaxMD|
 | Natasha Kreisle | MaxMD|
 
 
-[HL7 International - Patient Care](http://www.hl7.org/Special/committees/patientcare)
+Our thanks to these and to the many others not explicitly listed who contributed their time, enthusiasm and expertise to this work.
+
+This implementation guide was created under the supervision and review of the [HL7 Patient Care workgroup](http://www.hl7.org/Special/committees/patientcare/index.cfm)

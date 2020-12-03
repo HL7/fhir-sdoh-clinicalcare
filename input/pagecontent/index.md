@@ -1,6 +1,6 @@
 ### Overview
 
-0.1.01
+0.1.02
 
 |IG Characteristic  |     Value |
 |------------------------------------------------------|--------------------------------------------|
@@ -11,17 +11,10 @@
 |**IG Dependencies:** |    The SDOH-clinicalcare IG utilizes and adopts guidance developed in several other FHIR&reg; Implementation Guides. |
 
 
-
-
-
 |IG Dependencies         |  IG Code         | Version                      |
 |----------------------------------|-------------------------|---------------|
 | HL7 FHIR US Core               |  [US Core](http://hl7.org/fhir/us/core/STU3.1.1)                | Version 3.1.1     |
 | Structured Data Capture                         |   [SDC](http://hl7.org/fhir/uv/sdc/2019May)        | Version 2.7.0                     |
-
-
-
-
 
 ###  Purpose
 
@@ -30,16 +23,13 @@ This HL7&reg; IG defines FHIR R4 profiles, extensions and value sets needed to e
 2.	Document and track SDOH related interventions to completion,
 3.	Gather and aggregate SDOH data for uses beyond the point of care (e.g. public health, population health, quality measurement, risk adjustment, quality improvement, and research.)
 
-
 ### How to Use This Guide
 
 A FHIR IG address the needs of multiple audiences. It provides technical artifacts that assist programmers when implementing standards-based FHIR application program interfaces (APIs) for specific purposes. It provides instructive material that explains how FHIR is used to accomplish specific uses cases. It also provides general information that helps business analysts and technology decision-makers understand the use cases and benefits associated with achieving specific data exchange capabilities. A FHIR IG is as much a business planning tool as it is an educational resource and a technical specification.
 
-
-
 ### Notes to Reviewers and Balloters
 
-Feedback on of the IG should be sent to gravityproject@emiadvisors.net. 
+Feed back on this IG should be sent to gravityproject@emdiadvisors.net or entered as a Jira ticket using the link at the bottom of each page.
 
 
 
@@ -54,8 +44,8 @@ Feedback on of the IG should be sent to gravityproject@emiadvisors.net.
 </thead>
 <tbody>
 <tr>
-<td>HL7 International - Patient Care WG</td>
-<td><a href="http://www.hl7.org/Special/committees/patientcare" target="_new">http://www.hl7.org/Special/committees/patientcare</a></td>
+<td>HL7 International - Patient Care</td>
+<td><a href="http://www.hl7.org/Special/committees/patientare" target="_new">http://www.hl7.org/Special/committees/patientare</a></td>
 </tr>
 </tbody>
 </table>

@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="sdoh-clinicalcare"/>
     <meta>
-        <versionId value="53"/>
-        <lastUpdated value="2020-12-02T19:24:24.597+00:00"/>
-        <source value="#cwyKOIFX0ljfBeKO"/>
+        <versionId value="76"/>
+        <lastUpdated value="2020-12-03T16:22:41.925+00:00"/>
+        <source value="#mX2skW9hDHvkrfNX"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/sdoh-clinicalcare"/>
     <version value="0.1.0"/>
@@ -14,13 +14,13 @@
     <status value="draft"/>
     <publisher value="HL7 International - Patient Care WG"/>
     <contact>
-        <name value="HL7 International - Patient Care WG"/>
+        <name value="HL7 International - Patient Care"/>
         <telecom>
             <system value="url"/>
-            <value value="http://www.hl7.org/Special/committees/patientcare"/>
+            <value value="http://www.hl7.org/Special/committees/patientare"/>
         </telecom>
     </contact>
-    <description value="0.1.01&#xA;&#xA;|IG Characteristic  |     Value |&#xA;|------------------------------------------------------|--------------------------------------------|&#xA;|**FHIR Version:** |    FHIR R4 |&#xA;|**IG Realm:** |    US |&#xA;|**IG Type:** |    STU |&#xA;|**Exchange Methods:** |    RESTful Query, Messages, Transactions, Documents, Tasks |&#xA;|**IG Dependencies:** |    The SDOH-clinicalcare IG utilizes and adopts guidance developed in several other FHIR&amp;reg; Implementation Guides. |&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;|IG Dependencies         |  IG Code         | Version                      |&#xA;|----------------------------------|-------------------------|---------------|&#xA;| HL7 FHIR US Core               |  [US Core](http://hl7.org/fhir/us/core/STU3.1.1)                | Version 3.1.1     |&#xA;| Structured Data Capture                         |   [SDC](http://hl7.org/fhir/uv/sdc/2019May)        | Version 2.7.0                     |&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;###  Purpose&#xA;&#xA;This HL7&amp;reg; IG defines FHIR R4 profiles, extensions and value sets needed to exchange SDOH content defined by the Gravity Project. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. It addresses the need to gather SDOH information in the context of clinical encounters and describes how to share SDOH information and other relevant information with outside organizations for the purpose of coordinating services and support to address SDOH related needs. It also demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. It supports the following use cases:&#xA;1.	Document SDOH data in conjunction with the patient encounter,&#xA;2.	Document and track SDOH related interventions to completion,&#xA;3.	Gather and aggregate SDOH data for uses beyond the point of care (e.g. public health, population health, quality measurement, risk adjustment, quality improvement, and research.)&#xA;&#xA;&#xA;### How to Use This Guide&#xA;&#xA;A FHIR IG address the needs of multiple audiences. It provides technical artifacts that assist programmers when implementing standards-based FHIR application program interfaces (APIs) for specific purposes. It provides instructive material that explains how FHIR is used to accomplish specific uses cases. It also provides general information that helps business analysts and technology decision-makers understand the use cases and benefits associated with achieving specific data exchange capabilities. A FHIR IG is as much a business planning tool as it is an educational resource and a technical specification.&#xA;&#xA;&#xA;&#xA;### Notes to Reviewers and Balloters&#xA;&#xA;Feedback on of the IG should be sent to gravityproject@emiadvisors.net. "/>
+    <description value="0.1.02&#xA;&#xA;|IG Characteristic  |     Value |&#xA;|------------------------------------------------------|--------------------------------------------|&#xA;|**FHIR Version:** |    FHIR R4 |&#xA;|**IG Realm:** |    US |&#xA;|**IG Type:** |    STU |&#xA;|**Exchange Methods:** |    RESTful Query, Messages, Transactions, Documents, Tasks |&#xA;|**IG Dependencies:** |    The SDOH-clinicalcare IG utilizes and adopts guidance developed in several other FHIR&amp;reg; Implementation Guides. |&#xA;&#xA;&#xA;|IG Dependencies         |  IG Code         | Version                      |&#xA;|----------------------------------|-------------------------|---------------|&#xA;| HL7 FHIR US Core               |  [US Core](http://hl7.org/fhir/us/core/STU3.1.1)                | Version 3.1.1     |&#xA;| Structured Data Capture                         |   [SDC](http://hl7.org/fhir/uv/sdc/2019May)        | Version 2.7.0                     |&#xA;&#xA;###  Purpose&#xA;&#xA;This HL7&amp;reg; IG defines FHIR R4 profiles, extensions and value sets needed to exchange SDOH content defined by the Gravity Project. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. It addresses the need to gather SDOH information in the context of clinical encounters and describes how to share SDOH information and other relevant information with outside organizations for the purpose of coordinating services and support to address SDOH related needs. It also demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. It supports the following use cases:&#xA;1.	Document SDOH data in conjunction with the patient encounter,&#xA;2.	Document and track SDOH related interventions to completion,&#xA;3.	Gather and aggregate SDOH data for uses beyond the point of care (e.g. public health, population health, quality measurement, risk adjustment, quality improvement, and research.)&#xA;&#xA;### How to Use This Guide&#xA;&#xA;A FHIR IG address the needs of multiple audiences. It provides technical artifacts that assist programmers when implementing standards-based FHIR application program interfaces (APIs) for specific purposes. It provides instructive material that explains how FHIR is used to accomplish specific uses cases. It also provides general information that helps business analysts and technology decision-makers understand the use cases and benefits associated with achieving specific data exchange capabilities. A FHIR IG is as much a business planning tool as it is an educational resource and a technical specification.&#xA;&#xA;### Notes to Reviewers and Balloters&#xA;&#xA;Feed back on this IG should be sent to gravityproject@emdiadvisors.net or entered as a Jira ticket using the link at the bottom of each page."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -172,7 +172,7 @@
             </reference>
             <name value="SDOHCC Observation HungerVitalSignGroup 1"/>
             <description value="An example of an Observation that represents the Observation group which has as its members the Observations that represent the individual Question and Answer pairs (QA pairs) from an SDOH screening questionnaire represented in LOINC. This example is the group of 3 Observations that represent the 3 questions from LOINC code 88121-9 which is the Hunger Vital Sign [HVS] questionnaire."/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="new-group2"/>
         </resource>
         <resource>
