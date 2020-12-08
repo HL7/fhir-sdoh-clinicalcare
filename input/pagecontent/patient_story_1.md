@@ -92,4 +92,4 @@ Ms. Shah reviews Rebecca's progress toward the goals set during the last encount
 * Each of the entry modalities either tie back to a common, singular database, or if they are separate databases, the data elements are consistent across each and the integration is preferably automated and near real-time.
 * Acknowledgment and error-handling messages will be handled by standard IT protocols and will not be addressed within the scope of this Use Case Package.
 
-[Next Page - Mapping Instructions](mapping_instructions.html)
+[Next Page - Survey Instrument Support](survey_instrument_support.html)
