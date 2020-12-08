@@ -1,4 +1,4 @@
-[Previous Page - Patient Story 1](patient_story_1.html)
+[Previous Page - MustSupport and Missing Data](mustsupport_and_missing_data.html)
 
 Below is an example of a map that is used to extract a Bundle of Observations and Conditions from a Hunger Vital Sign [HVS] QuestionnaireResponse.
 
