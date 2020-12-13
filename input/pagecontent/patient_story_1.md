@@ -61,11 +61,9 @@ Ms. Shah reviews Rebecca's progress toward the goals set during the last encount
 * Patient lives in a state that incentivizes providers to identify and address social risk factors for low-income or Medicaid eligible patients.
 * Patient has health insurance that includes coverage for care coordination services to address the patient's social needs.
 * Patient is engaged and willing to share information about medical and non-medical needs and concerns (e.g., patient fills new medication order and takes medication as planned, patient calls and schedules home visit with the housing coordinator, patient is able to articulate social needs clearly). 
-* Patient has a high school level or greater literacy and comprehension level.
-* Patient's preferred language is English.
 * Patient has access to health care and can schedule annual wellness visit during after work hours while her children are in daycare.
 * Patient's information will be shared and accessed in compliance with a policy and regulatory framework (e.g., privacy and security) and Patient Consent Directives.
-* Patient has mobile phone with text messaging and email capabilities.
+* Patient has mobile phone with text messaging.
 * Patient has access to patient portal and can use portal to review and update electronic information.
 * Patient supplies a valid ID to the practice and the practice uses it to create a trust account.  The account uniquely identifies the patient to communicate and share information in a secure manner. 
 * Patient interprets screening questions as intended and answers questions honestly. 
@@ -73,12 +71,10 @@ Ms. Shah reviews Rebecca's progress toward the goals set during the last encount
 * Evidence-based patient engagement strategies are used to communicate with the patient and to gather information from the patient. 
 * Screening questionnaires are LOINC coded and the resulting health concerns are derived from the patient’s responses and coded in SNOMED CT and ICD-10.
 * Patient is eligible for and is approved to receive community-based services.  Service capacity exists to address the patient's social needs.
-* Transportation services are offered to the Primary Care Physicians (PCP) patient once a need is identified by the Clinical Staff as part of the screening process.
 * PCP offers late afternoon appointments once a week to accommodate different work schedules.
-* PCP covers the cost of transportation for the patient.  For example, the practice may be eligible to use transportation vouchers provided by the state and/or a private insurer.
-* Patient leads and/or directly engages in the creation of goals to address the health concerns and social needs identified through the care planning process.
-* PCP initiates and documents the clinical and social need care planning activities in the EHR.  The Care Coordinator reviews, manages, and monitors the action plan to address the social needs.
-* Patient has the ability to verbally grant consent to selected Care Team Members to view the patient's care plan.
+* Patient directly engages in the creation of goals to address the health concerns and social needs identified through the care planning process.
+* PCP documents the clinical and social need care planning activities in the EHR.  The Care Coordinator reviews, manages, and monitors the action plan to address the social needs.
+* Patient has the ability to verbally grant consent to provide their information to community organizations to assist in addressing social needs.
 * Patient and Care Team Members have the ability to define notifications and designate notification recipients.
 * The Care Coordinator is the facilitator/steward who is responsible for reviewing and reconciling proposed modifications to the care plan.
 * Patient's follow-up appointment is scheduled during the patient's lunch break.
@@ -86,10 +82,9 @@ Ms. Shah reviews Rebecca's progress toward the goals set during the last encount
 * Screening information can be accessed and retrieved in a structured and coded format.
 * Patient encounter data will be used to generate a claim to the payer.
 * EHR is capable of storing captured data and associating it with the specific patient and encounter as part of the permanent medical record.
-* EHR is capable of providing care documentation either in the HL7 Clinical Document Architecture (CDA) or HL7 Fast Health Interoperability Resources (FHIR) format.
+* EHR is capable of providing care documentation as HL7 FHIR resources.
 * EHR has access to all Patient social risk related screening, diagnosis, goal setting, and intervention data.
 * EHR is capable of incorporating SDOH data for both encounter and claims-based data exchange with a payer.
-* Each of the entry modalities either tie back to a common, singular database, or if they are separate databases, the data elements are consistent across each and the integration is preferably automated and near real-time.
 * Acknowledgment and error-handling messages will be handled by standard IT protocols and will not be addressed within the scope of this Use Case Package.
 
 [Next Page - Survey Instrument Support](survey_instrument_support.html)

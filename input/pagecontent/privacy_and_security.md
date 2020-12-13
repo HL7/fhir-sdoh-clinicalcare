@@ -1,4 +1,4 @@
-[Previous Page - Exchange Workflow](exchange_workflow.html)
+[Previous Page - FHIR Artifacts Overview](fhir_artifacts_overview.html)
 
 # Security and Privacy
 

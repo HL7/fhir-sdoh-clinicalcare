@@ -1,6 +1,6 @@
 [Previous Page - Support for Multiple Domains](support_for_multiple_domains.html)
 
-# Exchange Workflow
+###  Exchange Workflow
 
 The following diagram depicts the primary exchange workflows that are anticipated by the current version this IG.
 
@@ -15,4 +15,4 @@ The following diagram depicts the primary exchange workflows that are anticipate
 <table><tr><td><img src="Exchange Workflow.png" /></td></tr></table>
 
 
-[Next Page - Privacy and Security](privacy_and_security.html)
+[Next Page - Technical Background](technical_background.html)

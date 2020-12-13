@@ -1,6 +1,6 @@
-[Previous Page - Survey Instrument Support](survey_instrument_support.html)
+[Previous Page - Mapping Instructions](mapping_instructions.html)
 
-# Terminology and Value Sets
+###  Terminology and Value Sets
 
 This implementation guide is intended to support multiple SDOH domains and utilize domain specific value sets as they are created and approved by the Gravity Project.  To enable this, we are taking the following approach.
 
@@ -15,5 +15,7 @@ This implementation guide is intended to support multiple SDOH domains and utili
 
 
 Gravity plans to work with the HL7 Vocabulary WG to determine how best to represent the domain specific value sets in each of the relevant resources and to establish appropriate methods to validate the consistent use of the correct domain specific codes.
+
+Until a final solutions for representing SDOH domain value sets is available, the The Gravity Project will publish consesus established value sets for each of the above code systems in a supplemental guide available from the Gravity Project Confluence pages.
 
 [Next Page - Exchange Workflow](exchange_workflow.html)
