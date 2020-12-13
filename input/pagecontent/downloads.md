@@ -1,4 +1,4 @@
-[Previous Page - Mapping Instructions](mapping_instructions.html)
+[Previous Page - MustSupport and Missing Data](mustsupport_and_missing_data.html)
 
 This page provides links to downloadable artifacts associated with the FHIR SDOH ClinicalCare IGLinks
 This implementation guide is web-based and is intended to be browsed online. However, for the convenience of implementers, both this implementation guide, various sub-packages of it and some of the source specifications are available for download. The following links allow you to download various parts of this implementation guide and other referenced implementation guides for local use.
