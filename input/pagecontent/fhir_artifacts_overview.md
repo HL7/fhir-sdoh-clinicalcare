@@ -8,7 +8,7 @@ The FHIR artifacts used by the SDOH Clinicalcare IG are organized, in this secti
 
 **SDOH Clinicalcare IG specific Artifacts that do not have [US Core R4](http://build.fhir.org/ig/HL7/US-Core-R4/) profiles**
 
-* [Observation](http:// http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Observation-ScreeningResponseBase-1.html)
+* [Observation](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Observation-ScreeningResponseBase-1.html)
 * [ServiceRequest](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-ServiceRequest-Base-1.html)
 * [Task](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Task-Base-1.html)
 * [Consent](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Consent.html)
