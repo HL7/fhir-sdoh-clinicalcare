@@ -8,17 +8,17 @@ The FHIR artifacts used by the SDOH Clinicalcare IG are organized, in this secti
 
 **SDOH Clinicalcare IG specific Artifacts that do not have [US Core R4](http://build.fhir.org/ig/HL7/US-Core-R4/) profiles**
 
-* [Observation](http://build.fhir.org/ig/HL7/sdoh-clinicalcare/StructureDefinition-SDOHCC-Observation-ScreeningResponseBase-1.html)
-* [ServiceRequest](http://build.fhir.org/ig/HL7/sdoh-clinicalcare/StructureDefinition-SDOHCC-ServiceRequest-Base-1.html)
-* [Task](http://build.fhir.org/ig/HL7/sdoh-clinicalcare/StructureDefinition-SDOHCC-Task-Base-1.html)
-* [Consent](http://build.fhir.org/ig/HL7/sdoh-clinicalcare/StructureDefinition-SDOHCC-Consent.html)
-* [Group](http://build.fhir.org/ig/HL7/sdoh-clinicalcare/StructureDefinition-SDOHCC-Group.html)
+* [Observation](http:// http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Observation-ScreeningResponseBase-1.html)
+* [ServiceRequest](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-ServiceRequest-Base-1.html)
+* [Task](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Task-Base-1.html)
+* [Consent](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Consent.html)
+* [Group](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Group.html)
 
 **SDOH Clinicalcare IG specific Artifacts based on [US Core R4](http://build.fhir.org/ig/HL7/US-Core-R4) profiles**
 
-* [Condition](https://build.fhir.org/ig/HL7/sdoh-clinicalcare/StructureDefinition-SDOHCC-Condition-Base-1.html)
-* [Goal](http://build.fhir.org/ig/HL7/sdoh-clinicalcare/StructureDefinition-SDOHCC-Goal-Base-1.html)
-* [Procedure](http://build.fhir.org/ig/HL7/sdoh-clinicalcare/StructureDefinition-SDOHCC-Procedure-Base-1.html)
+* [Condition](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Condition-Base-1.html)
+* [Goal](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Goal-Base-1.html)
+* [Procedure](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Procedure-Base-1.html)
 
 **[US Core R4](http://build.fhir.org/ig/HL7/US-Core-R4) profiles referenced by the above resources**
 
@@ -35,6 +35,7 @@ Additional information about the use of these artifacts can be found in the rele
 * 	**[Profiles](http://www.hl7.org/fhir/profiling.html)** that constrain FHIR resources to reflect PAO requirements.
 * 	**[Code Systems](http://www.hl7.org/fhir/terminologies-systems.html)** that define PAO-specific terminologies to be used in one or more of the profiles.
 * 	**[Value Sets](http://www.hl7.org/fhir/terminologies-valuesets.html)** that define the specific subsets of both PAO-defined and other code systems that can be (or are recommended to be) used within one or more profile elements.
+
 
 
 [Next Page - Privacy and Security](privacy_and_security.html)

@@ -11,12 +11,12 @@ This implementation guide was developed under the auspices of the Gravity FHIR a
 
 The implementation guide is organized into the following sections:
 
-* Background: Includes Gravity Background, SDOH Clinical Care Scope, Personas and Patient Stories that describe the SDOH environment surrounding the intended use of this implementation guide
-* Context: Describes the Survey Instrument Support, QuestionnaireResponse Mapping Instructions, Support for Multiple Domains, and Exchange Workflow diagram that describes a high-level overview of expected process flow
-* Specifications: Provides a Technical Background, description of Privacy and Security issues, and explains MustSupport and Missing Data concepts 
-* Downloads: Provides for the download of various IG related artifacts
-* Credits: Identifies the individuals and organizations involved in developing this implementation guide
-* Artifacts Index:  Introduces and provides links to the FHIR R4 profiles, examples and other FHIR artifacts used in this implementation guide
+* Background: Includes [Gravity Background](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/gravity_background.html), [SDOH Clinical Care Scope](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/sdoh_clinical_care_scope.html), [Personas and Patient Stories](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/personas_and_patient_stories.html) that describe the SDOH environment surrounding the intended use of this implementation guide
+* Context: Describes the [Survey Instrument Support](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/survey_instrument_support.html),[ QuestionnaireResponse Mapping Instructions](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/mapping_instructions.html), [Support for Multiple Domains](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/support_for_multiple_domains.html), and [Exchange Workflow diagram](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/exchange_workflow.html) that describes a high-level overview of expected process flow
+* Specifications: Provides a [Technical Background](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/technical_background.html), description of [Privacy and Security](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/privacy_and_security.html) issues, and explains [MustSupport and Missing Data](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/mustsupport_and_missing_data.html) concepts 
+* [Downloads](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/downloads.html): Provides for the download of various IG related artifacts
+* [Credits](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/credits.html): Identifies the individuals and organizations involved in developing this implementation guide
+* [Artifacts Index](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/artifacts.html):  Introduces and provides links to the FHIR R4 profiles, examples and other FHIR artifacts used in this implementation guide
 
 
 
