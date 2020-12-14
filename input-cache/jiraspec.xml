@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare" defaultVersion="current" defaultWorkgroup="pc" gitUrl="https://github.com/HL7/fhir-sdoh-clinicalcare" xsi:noNamespaceSchemaLocation="../schemas/specification.xsd" url="http://hl7.org/fhir/us/ImplementationGuide/sdoh-clinicalcare"><version code="current" url="http://hl7.org/fhir/us/sdoh-clinicalcare"/>
-<version code="0.0.4" deprecated="true"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/sdoh-clinicalcare/2021Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare" defaultVersion="0.1.0" defaultWorkgroup="" gitUrl="https://github.com/HL7/fhir-sdoh-clinicalcare" url="http://hl7.org/fhir/us/sdoh-clinicalcare">
+<version code="current" url="http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare"/>
+<version code="0.1.0" url="http://hl7.org/fhir/us/sdoh-clinicalcare/2021Jan"/>
 <version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="Group/R101" key="Group-R101" name="John's Pantry Example"/>
 <artifact id="Patient/pat-53234" key="Patient-pat-53234" name="Patient Colin Abbas"/>
-<artifact id="StructureDefinition/SDOHCC-Group" key="StructureDefinition-SDOHCC-Group" name="SDOCHCC Group"/>
 <artifact id="CodeSystem/sdohcc-temporary-codes" key="CodeSystem-sdohcc-temporary-codes" name="SDOHCC CodeSystem Temporary Codes"/>
 <artifact id="StructureDefinition/SDOHCC-Condition-Base-1" key="StructureDefinition-SDOHCC-Condition-Base-1" name="SDOHCC Condition Base 1"/>
 <artifact id="Condition/SDOHCC-Condition-HungerVitalSign-Example-1" key="Condition-SDOHCC-Condition-HungerVitalSign-Example-1" name="SDOHCC Condition HungerVitalSign Example 1"/>
 <artifact id="StructureDefinition/SDOHCC-Consent" key="StructureDefinition-SDOHCC-Consent" name="SDOHCC Consent"/>
+<artifact id="Consent/consent-to-share-example" key="Consent-consent-to-share-example" name="SDOHCC Consent Example"/>
 <artifact id="StructureDefinition/SDOHCC-Goal-Base-1" key="StructureDefinition-SDOHCC-Goal-Base-1" name="SDOHCC Goal Base 1"/>
 <artifact id="Goal/SDOHCC-Goal-HungerVitalSign-Example-1" key="Goal-SDOHCC-Goal-HungerVitalSign-Example-1" name="SDOHCC Goal HungerVitalSign Example 1"/>
+<artifact id="StructureDefinition/SDOHCC-Group" key="StructureDefinition-SDOHCC-Group" name="SDOHCC Group"/>
 <artifact id="Observation/SDOHCC-Observation-HungerVitalSign-Example-1" key="Observation-SDOHCC-Observation-HungerVitalSign-Example-1" name="SDOHCC Observation HungerVitalSign Example 1"/>
 <artifact id="Observation/SDOHCC-Observation-HungerVitalSign-Example-2" key="Observation-SDOHCC-Observation-HungerVitalSign-Example-2" name="SDOHCC Observation HungerVitalSign Example 2"/>
 <artifact id="Observation/SDOHCC-Observation-HungerVitalSign-Example-3" key="Observation-SDOHCC-Observation-HungerVitalSign-Example-3" name="SDOHCC Observation HungerVitalSign Example 3"/>
@@ -33,12 +36,21 @@
 <page key="many" name="(many)"/>
 <page deprecated="true" key="profiles" name="(profiles)"/>
 <page key="artifacts" name="Artifacts Summary"/>
+<page key="credits" name="Credits"/>
+<page key="downloads" name="Downloads"/>
+<page key="exchange_workflow" name="Exchange Workflow"/>
+<page key="fhir_artifacts_overview" name="FHIR Artifacts Overview"/>
 <page key="gravity_background" name="Gravity Background"/>
 <page key="homePage" name="Home Page"/>
 <page key="mapping_instructions" name="Mapping Instructions"/>
+<page key="mustsupport_and_missing_data" name="MustSupport and Missing Data"/>
 <page key="patient_story_1" name="Patient Story 1"/>
 <page key="patient_story_1_personas" name="Patient Story 1 Personas"/>
 <page key="personas_and_patient_stories" name="Personas and Patient Stories"/>
+<page key="privacy_and_security" name="Privacy and Security"/>
 <page key="sdoh_clinical_care_scope" name="SDOH Clinical Care Scope"/>
+<page key="support_for_multiple_domains" name="Support for Multiple Domains"/>
+<page key="survey_instrument_support" name="Survey Instrument Support"/>
 <page key="toc" name="Table of Contents"/>
+<page key="technical_background" name="Technical Background"/>
 </specification>

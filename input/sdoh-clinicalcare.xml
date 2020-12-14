@@ -410,7 +410,11 @@
         </parameter>
         <parameter>
             <code value="releaselabel"/>
-            <value value="CI Build"/>
+            <value value="STU 1"/>
+        </parameter>
+        <parameter>
+          <code value="path-expansion-params"/>
+          <value value="terminology-settings.json"/>
         </parameter>
     </definition>
 </ImplementationGuide>
