@@ -3,9 +3,10 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Procedure-HungerVitalSign-Example-1"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2020-12-02T16:47:39.096+00:00"/>
-        <source value="#iDzpb9D9Lc5D00R1"/>
+        <versionId value="4"/>
+        <lastUpdated value="2021-04-12T21:17:31.538+00:00"/>
+        <source value="#shquwICEykYUMnsI"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure-Base-1"/>
     </meta>
     <basedOn>
         <reference value="ServiceRequest/SDOHCC-ServiceRequest-HungerVitalSign-Example-1"/>
@@ -14,22 +15,22 @@
     <category>
         <coding>
             <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
-            <code value="food-insecurity-domain"/>
-            <display value="Food Insecurity Domain"/>
+            <code value="food-insecurity"/>
+            <display value="Food Insecurity"/>
         </coding>
     </category>
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="710925007"/>
-            <display value="Provision of food (procedure)"/>
+            <code value="467771000124109"/>
+            <display value="Assistance with application for food pantry program"/>
         </coding>
     </code>
     <subject>
         <reference value="Patient/pat-53234"/>
         <display value="COLIN ABBAS"/>
     </subject>
-    <performedDateTime value="2019-08-31"/>
+    <performedDateTime value="2021-05-31"/>
     <reasonReference>
         <reference value="Condition/SDOHCC-Condition-HungerVitalSign-Example-1"/>
     </reasonReference>
