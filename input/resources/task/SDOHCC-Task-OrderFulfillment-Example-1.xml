@@ -3,9 +3,10 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Task-OrderFulfillment-Example-1"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2020-12-02T16:54:33.845+00:00"/>
-        <source value="#qnd2WpnmLN1EOu5y"/>
+        <versionId value="5"/>
+        <lastUpdated value="2021-04-12T21:17:31.539+00:00"/>
+        <source value="#rueUxbEOD6rpPd8z"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task-Base-1"/>
     </meta>
     <status value="accepted"/>
     <intent value="order"/>
@@ -34,8 +35,8 @@
         <valueCodeableConcept>
             <coding>
                 <system value="http://snomed.info/sct"/>
-                <code value="713109004"/>
-                <display value="Referral to community meals service (procedure)"/>
+                <code value="464031000124101"/>
+                <display value="Referral to food pantry program"/>
             </coding>
         </valueCodeableConcept>
     </output>

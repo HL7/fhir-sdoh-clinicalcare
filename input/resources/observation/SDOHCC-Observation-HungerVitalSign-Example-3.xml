@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Observation-HungerVitalSign-Example-3"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2020-12-02T16:46:14.513+00:00"/>
-        <source value="#osy3VlG7BmtmvwsF"/>
+        <versionId value="5"/>
+        <lastUpdated value="2021-04-28T22:31:00.561+00:00"/>
+        <source value="#1SjWNuXAgUpqnDMx"/>
     </meta>
     <status value="final"/>
     <category>
@@ -35,7 +35,6 @@
             <code value="88124-3"/>
             <display value="Food insecurity risk [HVS]"/>
         </coding>
-        <text value="Food insecurity risk"/>
     </code>
     <subject>
         <reference value="Patient/pat-53234"/>
