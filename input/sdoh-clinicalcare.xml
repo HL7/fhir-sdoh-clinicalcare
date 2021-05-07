@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="sdoh-clinicalcare"/>
     <meta>
-        <versionId value="191"/>
-        <lastUpdated value="2021-05-03T10:15:41.389+00:00"/>
-        <source value="#KcaCpJ07Nj3ZdsAt"/>
+        <versionId value="219"/>
+        <lastUpdated value="2021-05-07T13:51:21.953+00:00"/>
+        <source value="#O8o7s1TIV4AUK23e"/>
     </meta>
     <contained>
         <DocumentReference>
@@ -38,7 +38,7 @@
             <value value="http://www.hl7.org/Special/committees/patientare"/>
         </telecom>
     </contact>
-    <description value="Social Determinants of Health (SDOH) are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange SDOH content defined by the Gravity Project using the Fast Healthcare Ineroperability Resources (FHIR) standard. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. This IG addresses the need to gather SDOH information in the context of clinical encounters and describes how to share SDOH information and other relevant information with outside organizations for the purpose of coordinating services and support to address SDOH related needs. In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. The guide supports the following use cases:&#xA;* 	Document SDOH data in conjunction with the patient encounters&#xA;* 	Document and track SDOH related interventions to completion&#xA;* 	Gather and aggregate SDOH data for uses beyond the point of care (e.g. public health, population health, quality measurement, risk adjustment, quality improvement, and research)&#xA;&#xA;This implementation guide was developed under the auspices of the Gravity FHIR accelerator project, which specifically focuses on using HL7 FHIR to define standards for the exchange of SDOH-related information.  Both the project and this implementation guide are focused on the U.S. environment.  This implementation guide leverages content from the US Core implementation guide and binds to US-specific terminology.  However, the basic constructs and interaction patterns may well be applicable outside the U.S.&#xA;&#xA;### Content and organization&#xA;&#xA;The implementation guide is organized into the following sections:&#xA;&#xA;* Background: Includes [Gravity Background](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/gravity_background.html), [SDOH Clinical Care Scope](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/sdoh_clinical_care_scope.html), [Personas and Patient Stories](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/personas_and_patient_stories.html) that describe the SDOH environment surrounding the intended use of this implementation guide&#xA;* Context: Describes the [Survey Instrument Support](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/survey_instrument_support.html),[ QuestionnaireResponse Mapping Instructions](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/mapping_instructions.html), [Support for Multiple Domains](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/support_for_multiple_domains.html), and [Exchange Workflow diagram](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/exchange_workflow.html) that describes a high-level overview of expected process flow&#xA;* Specifications: Provides a [Technical Background](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/technical_background.html), overview of the [FHIR Artifacts](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/fhir_artifacts_overview.html) defined and used in this IG, description of [Privacy and Security](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/privacy_and_security.html) issues, and explains [MustSupport and Missing Data](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/mustsupport_and_missing_data.html) concepts &#xA;* [Downloads](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/downloads.html): Provides for the download of various IG related artifacts&#xA;* [Credits](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/credits.html): Identifies the individuals and organizations involved in developing this implementation guide&#xA;* [Artifacts Index](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/artifacts.html):  Introduces and provides links to the FHIR R4 profiles, examples and other FHIR artifacts used in this implementation guide&#xA;&#xA;&#xA;"/>
+    <description value="Social Determinants of Health (SDOH) are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange SDOH content defined by the Gravity Project using the Fast Healthcare Ineroperability Resources (FHIR) standard. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. This IG addresses the need to gather SDOH information in the context of clinical encounters and describes how to share SDOH information and other relevant information with outside organizations for the purpose of coordinating services and support to address SDOH related needs. In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. The guide supports the following use cases:&#xA;* 	Document SDOH data in conjunction with the patient encounters&#xA;* 	Document and track SDOH related interventions to completion&#xA;* 	Gather and aggregate SDOH data for uses beyond the point of care (e.g. public health, population health, quality measurement, risk adjustment, quality improvement, and research)&#xA;&#xA;This implementation guide was developed under the auspices of the Gravity FHIR accelerator project, which specifically focuses on using HL7 FHIR to define standards for the exchange of SDOH-related information.  Both the project and this implementation guide are focused on the U.S. environment.  This implementation guide leverages content from the US Core implementation guide and binds to US-specific terminology.  However, the basic constructs and interaction patterns may well be applicable outside the U.S.&#xA;&#xA;### Content and organization&#xA;&#xA;The implementation guide is organized into the following sections:&#xA;&#xA;* Background: Includes [Gravity Background](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/gravity_background.html), [SDOH Clinical Care Scope](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/sdoh_clinical_care_scope.html), [Personas and Patient Stories](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/personas_and_patient_stories.html) that describe the SDOH environment surrounding the intended use of this implementation guide&#xA;* Context: Describes the [Survey Instrument Support](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/survey_instrument_support.html),[ QuestionnaireResponse Mapping Instructions](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/mapping_instructions.html), [Support for Multiple Domains](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/support_for_multiple_domains.html), and [Exchange Workflow diagram](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/exchange_workflow.html) that describes a high-level overview of expected process flow&#xA;* Specifications: Provides a [Technical Background](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/technical_background.html), overview of the [FHIR Artifacts](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/fhir_artifacts_overview.html) defined and used in this IG, description of [Privacy and Security](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/privacy_and_security.html) issues, and explains [MustSupport and Missing Data](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/mustsupport_and_missing_data.html) concepts &#xA;* [Downloads](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/downloads.html): Provides for the download of various IG related artifacts&#xA;* [Credits](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/credits.html): Identifies the individuals and organizations involved in developing this implementation guide&#xA;* [Artifacts Index](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/artifacts.html):  Introduces and provides links to the FHIR R4 profiles, examples and other FHIR artifacts used in this implementation guide&#xA;&#xA;### Update Tracking&#xA;&#xA;Version 0.1.1 b (second update pushed to continuous build on 5/7/2021)&#xA;&#xA;"/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -136,7 +136,7 @@
                 <display value="SDOHCC QuestionnaireResponse HungerVitalSign Example 1"/>
             </reference>
             <name value="SDOHCC QuestionnaireResponse Hunger Vital Sign Example "/>
-            <description value="An example of an SDC QuestionnaireResponse that represents the question and answer pairs from an SDOH screening questionnaire represented in LOINC. This example represents the LOINC 88121-9 Hunger Vital Sign [HVS] questionnaire. The example is generated using the LHC-Forms SDC Questionnaire App."/>
+            <description value="An example of an SDC QuestionnaireResponse that represents the question and answer pairs from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9). The example is generated using the LHC-Forms SDC Questionnaire App."/>
             <exampleBoolean value="true"/>
             <groupingId value="new-group2"/>
         </resource>
@@ -146,8 +146,9 @@
                 <display value="SDOHCC Questionnaire HungerVitalSign 1"/>
             </reference>
             <name value="SDOHCC Questionnaire Hunger Vital Sign"/>
-            <description value="A Questionnaire instance that represents the question and answer pairs from a specific SDOH screening questionnaire. This instance represents the LOINC 88121-9 Hunger Vital Sign [HVS] questionnaire."/>
-            <exampleBoolean value="true"/>
+            <description value="A Questionnaire instance that represents the question and answer pairs from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9)."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"/>
             <groupingId value="new-group2"/>
         </resource>
         <resource>
@@ -156,7 +157,7 @@
                 <display value="SDOHCC Observation HungerVitalSign Example 1"/>
             </reference>
             <name value="SDOHCC Observation Hunger Vital Sign Q1 Example "/>
-            <description value="An example of an Observation that represents a specific question and answer pair from an SDOH screening questionnaire represented in LOINC. This example represents LOINC code 88122-7 from the Hunger Vital Sign [HVS] questionnaire."/>
+            <description value="An example of an Observation that represents the first question and answer pair (LOINC code 88122-7) from the  Hunger Vital Sign [HVS] screening questionnaire represented in LOINC. "/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
             <groupingId value="new-group2"/>
@@ -167,7 +168,7 @@
                 <display value="SDOHCC Observation HungerVitalSign Example 2"/>
             </reference>
             <name value="SDOHCC Observation Hunger Vital Sign Q2 Example"/>
-            <description value="An example of an Observation that represents a specific question and answer pair from an SDOH screening questionnaire represented in LOINC. This example represents LOINC code 88123-5 from the Hunger Vital Sign [HVS] questionnaire."/>
+            <description value="An example of an Observation that represents the second question and answer pair (LOINC code 88123-5) from the  Hunger Vital Sign [HVS] screening questionnaire represented in LOINC. "/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
             <groupingId value="new-group2"/>
@@ -178,7 +179,7 @@
                 <display value="SDOHCC Observation HungerVitalSign Example 3"/>
             </reference>
             <name value="SDOHCC Observation Hunger Vital Sign Q3 Example"/>
-            <description value="An example of an Observation that represents a specific question and answer pair from an SDOH screening questionnaire represented in LOINC. This example represents LOINC code 88124-3 from the Hunger Vital Sign [HVS] questionnaire."/>
+            <description value="An example of an Observation that represents the third question and answer pair (LOINC code 88124-3) from the  Hunger Vital Sign [HVS] screening questionnaire represented in LOINC. "/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
             <groupingId value="new-group2"/>
@@ -189,7 +190,7 @@
                 <display value="SDOHCC Observation HungerVitalSignGroup 1"/>
             </reference>
             <name value="SDOHCC Observation Hunger Vital Sign Grouping"/>
-            <description value="An example of an Observation that represents the Observation grouping which has as its members the Observations that represent specific question and answer pairs from an SDOH screening questionnaire represented in LOINC. This example is the grouping of 3 Observations that represent the 3 questions from LOINC code 88121-9 which is the Hunger Vital Sign [HVS] questionnaire."/>
+            <description value="An example of an Observation grouping that has as its members the Observations that represent the 3 question and answer pairs from LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9)."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
             <groupingId value="new-group2"/>
@@ -200,7 +201,7 @@
                 <display value="SDOHCC Condition HungerVitalSign Example 1"/>
             </reference>
             <name value="SDOHCC Condition Hunger Vital Sign Example"/>
-            <description value="An example of a Condition that represents a health concern based on an Observation instance or instances that represent specific question and answer pairs from an SDOH screening questionnaire represented in LOINC. This example represents a health concern that references, as evidence, Observations derived from the LOINC 88121-9 Hunger Vital Sign [HVS] questionnaire."/>
+            <description value="An example of a Condition (a health concern) that references, as evidence, Observations derived from the LOINC Hunger Vital Sign [HVS] questionnaire (88121-9)."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1"/>
             <groupingId value="new-group2"/>
@@ -211,7 +212,7 @@
                 <display value="SDOHCC StructureMap HungerVitalSignMapper 1"/>
             </reference>
             <name value="SDOHCC StructureMap Hunger Vital Sign Mapper "/>
-            <description value="A StructureMap instance that represents the resource that transforms specific question and answer pairs from the LOINC 88121-9 Hunger Vital Sign [HVS] questionnaire to their corresponding Observations (SDOHCC Observation Hunger Vital Sign Q1 Example, SDOHCC Observation Hunger Vital Sign Q2 Example, and SDOHCC Observation Hunger Vital Sign Q3 Example) and Condition (SDOHCC Condition Hunger Vital Sign Example)."/>
+            <description value="A StructureMap instance that represents the resource that transforms specific question and answer pairs from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9) to their corresponding Observations (SDOHCC Observation Hunger Vital Sign Q1 Example, SDOHCC Observation Hunger Vital Sign Q2 Example, and SDOHCC Observation Hunger Vital Sign Q3 Example) and Condition (SDOHCC Condition Hunger Vital Sign Example)."/>
             <exampleBoolean value="true"/>
             <groupingId value="new-group2"/>
         </resource>
@@ -233,7 +234,6 @@
             <name value="SDOHCC CodeSystem Temporary Codes"/>
             <description value="A local code system defined within the context of the SDOH-ClinicalCare IG."/>
             <exampleBoolean value="false"/>
-            <groupingId value="new-group4"/>
         </resource>
         <resource>
             <reference>
@@ -287,7 +287,6 @@
             <name value="SDOHCC ValueSet SDOH Category "/>
             <description value="This value set is defined extensionally to include concepts that represent Social Determinant of Health domains."/>
             <exampleBoolean value="false"/>
-            <groupingId value="new-group4"/>
         </resource>
         <resource>
             <reference>
@@ -297,7 +296,6 @@
             <name value="SDOHCC ValueSet HCPCSII"/>
             <description value="This value set is defined intensionally to include all Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes."/>
             <exampleBoolean value="false"/>
-            <groupingId value="new-group4"/>
         </resource>
         <resource>
             <reference>
@@ -327,7 +325,6 @@
             <name value="SDOHCC ValueSet Observation Status "/>
             <description value="This value set is defined intensionally to include the specified codes from the HL7 ObservationStatus value set."/>
             <exampleBoolean value="false"/>
-            <groupingId value="new-group4"/>
         </resource>
         <resource>
             <reference>
@@ -347,7 +344,6 @@
             <name value="SDOHCC ValueSet ICD10CM"/>
             <description value="This value set contains all of ICD-10-CM."/>
             <exampleBoolean value="false"/>
-            <groupingId value="new-group4"/>
         </resource>
         <resource>
             <reference>
@@ -404,6 +400,81 @@
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-Assessment-Base-1"/>
             <groupingId value="new-group2"/>
         </resource>
+        <resource>
+            <reference>
+                <reference value="Condition/SDOHCC-Condition-HousingStatusPRAPARE-Example"/>
+                <display value="SDOHCC Condition Housing Status PRAPARE Example"/>
+            </reference>
+            <name value="SDOHCC Condition Housing Status PRAPARE Example"/>
+            <description value="An example of a Condition that represents a health concern based on an Observation instance that represents a question and answer pair related to housing status from the PRAPARE questionnaire represented in LOINC. "/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Condition/SDOHCC-Condition-EmploymentStatusPRAPARE-Example"/>
+                <display value="SDOHCC Condition Employment Status PRAPARE Example"/>
+            </reference>
+            <name value="SDOHCC Condition Employment Status PRAPARE Example"/>
+            <description value="An example of a Condition that represents a health concern based on an Observation instance that represents a question and answer pair related to employment status from the PRAPARE questionnaire represented in LOINC. "/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Questionnaire/SDOHCC-Questionnaire-PRAPARE"/>
+                <display value="SDOHCC Questionnaire PRAPARE"/>
+            </reference>
+            <name value="SDOHCC Questionnaire PRAPARE"/>
+            <description value="A Questionnaire instance that represents the question and answer pairs from the PRAPARE questionnaire represented in LOINC."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureMap/SDOHCC-StructureMap-PRAPAREMapper"/>
+                <display value="SDOHCC StructureMap PRAPARE Mapper"/>
+            </reference>
+            <name value="SDOHCC StructureMap PRAPARE Mapper"/>
+            <description value="A StructureMap instance that represents the resource that transforms specific question and answer pairs from the PRAPARE questionnaire represented in LOINC to their corresponding Observations and Conditions (health concerns)."/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="QuestionnaireResponse/QR-5770421"/>
+                <display value="SDOHCC Questionnaire Response PRAPARE Example"/>
+            </reference>
+            <name value="SDOHCC Questionnaire Response PRAPARE Example"/>
+            <description value="An example of an SDC QuestionnaireResponse that represents the question and answer pairs from the PRAPARE questionnaire represented in LOINC. The example is generated using the LHC-Forms SDC Questionnaire App. The example does not include responses to all questions in the PRAPARE questionnaire. "/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-Observation-EmploymentStatusPRAPARE-Example"/>
+                <display value="SDOHCC Observation Employment Status PRAPARE Example"/>
+            </reference>
+            <name value="SDOHCC Observation Employment Status PRAPARE Example"/>
+            <description value="An example of a screening response Observation that represents a question and answer pair related to employment status from the PRAPARE questionnaire represented in LOINC. "/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-Observation-HousingStatusPRAPARE-Example"/>
+                <display value="SDOHCC Observation Housing Status PRAPARE Example"/>
+            </reference>
+            <name value="SDOHCC Observation Housing Status PRAPARE Example"/>
+            <description value="An example of a screening response Observation that represents a question and answer pair related to housing status from the PRAPARE questionnaire represented in LOINC. "/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
         <page>
             <nameUrl value="index.html"/>
             <title value="Home Page"/>
@@ -442,6 +513,16 @@
                 <nameUrl value="mapping_instructions.html"/>
                 <title value="Mapping Instructions"/>
                 <generation value="markdown"/>
+                <page>
+                    <nameUrl value="mapping_instructions_hvs_questionnaire.html"/>
+                    <title value="Mapping Instructions HVS Questionnaire"/>
+                    <generation value="markdown"/>
+                </page>
+                <page>
+                    <nameUrl value="mapping_instructions_prapare_questionnaire.html"/>
+                    <title value="Mapping Instructions PRAPARE Questionnaire"/>
+                    <generation value="markdown"/>
+                </page>
             </page>
             <page>
                 <nameUrl value="support_for_multiple_domains.html"/>

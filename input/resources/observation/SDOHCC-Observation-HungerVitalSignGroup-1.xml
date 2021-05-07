@@ -3,11 +3,32 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Observation-HungerVitalSignGroup-1"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2020-09-01T17:03:00.524+00:00"/>
-        <source value="#QZbQAshOmOyVyBPH"/>
+        <versionId value="2"/>
+        <lastUpdated value="2021-05-06T22:27:01.357+00:00"/>
+        <source value="#ZhyKMzhjvsn5soGM"/>
     </meta>
     <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="survey"/>
+            <display value="Survey"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
+            <code value="food-insecurity"/>
+            <display value="Food Insecurity"/>
+        </coding>
+    </category>
     <code>
         <coding>
             <system value="http://loinc.org"/>
@@ -15,6 +36,11 @@
             <display value="Hunger Vital Sign [HVS]"/>
         </coding>
     </code>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <effectiveDateTime value="2020-09-10T21:56:54.671Z"/>
     <hasMember>
         <reference value="Observation/SDOHCC-Observation-HungerVitalSign-Example-1"/>
     </hasMember>

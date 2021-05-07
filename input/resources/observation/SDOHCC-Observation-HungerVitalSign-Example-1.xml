@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Observation-HungerVitalSign-Example-1"/>
     <meta>
-        <versionId value="8"/>
-        <lastUpdated value="2020-12-02T16:45:34.187+00:00"/>
-        <source value="#gjzXD6yclfkvRvjM"/>
+        <versionId value="9"/>
+        <lastUpdated value="2021-05-06T22:27:01.345+00:00"/>
+        <source value="#WEk6y1fO5TFKML3v"/>
     </meta>
     <status value="final"/>
     <category>
@@ -25,8 +25,8 @@
     <category>
         <coding>
             <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
-            <code value="food-insecurity-domain"/>
-            <display value="Food Insecurity Domain"/>
+            <code value="food-insecurity"/>
+            <display value="Food Insecurity"/>
         </coding>
     </category>
     <code>
@@ -35,7 +35,6 @@
             <code value="88122-7"/>
             <display value="Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]"/>
         </coding>
-        <text value="(I/We) worried whether (my/our) food would run out before (I/we) got money to buy more."/>
     </code>
     <subject>
         <reference value="Patient/pat-53234"/>
@@ -43,12 +42,18 @@
     </subject>
     <effectiveDateTime value="2020-09-10T21:56:54.671Z"/>
     <issued value="2020-09-10T21:56:54.671Z"/>
+    <performer>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </performer>
     <valueCodeableConcept>
         <coding>
             <system value="http://loinc.org"/>
             <code value="LA28397-0"/>
             <display value="Often true"/>
         </coding>
-        <text value="Often true"/>
     </valueCodeableConcept>
+    <derivedFrom>
+        <reference value="QuestionnaireResponse/QR-5770275"/>
+    </derivedFrom>
 </Observation>

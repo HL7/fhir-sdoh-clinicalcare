@@ -3,24 +3,29 @@
     xmlns="http://hl7.org/fhir">
     <id value="QR-5770275"/>
     <meta>
-        <versionId value="6"/>
-        <lastUpdated value="2020-12-03T00:33:01.579+00:00"/>
-        <source value="#JBKFNY8uR7myRQiq"/>
+        <versionId value="7"/>
+        <lastUpdated value="2021-05-06T22:27:01.346+00:00"/>
+        <source value="#QOlz1ZRlPzI51to0"/>
+        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"/>
     </meta>
-    <questionnaire value="http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-Questionnaire-HungerVitalSign-1"/>
+    <questionnaire value="http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-Questionnaire-HungerVitalSign-1">
+        <extension url="http://hl7.org/fhir/StructureDefinition/display">
+            <valueString value="SDOHCC Questionnaire HungerVitalSign 1"/>
+        </extension>
+    </questionnaire>
     <status value="completed"/>
     <subject>
         <reference value="Patient/pat-53234"/>
         <display value="COLIN ABBAS"/>
     </subject>
-    <authored value="2020-08-27T06:13:21.036Z"/>
+    <authored value="2020-09-10T21:56:54.671Z"/>
     <source>
         <reference value="Patient/pat-53234"/>
         <display value="COLIN ABBAS"/>
     </source>
     <item>
         <linkId value="/88122-7"/>
-        <text value="Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]"/>
+        <text value="(I/We) worried whether (my/our) food would run out before (I/we) got money to buy more."/>
         <answer>
             <valueCoding>
                 <system value="http://loinc.org"/>
@@ -31,18 +36,18 @@
     </item>
     <item>
         <linkId value="/88123-5"/>
-        <text value="Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]"/>
+        <text value="The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more."/>
         <answer>
             <valueCoding>
                 <system value="http://loinc.org"/>
-                <code value="LA6729-3"/>
-                <display value="Sometimes true"/>
+                <code value="LA28397-0"/>
+                <display value="Often true"/>
             </valueCoding>
         </answer>
     </item>
     <item>
         <linkId value="/88124-3"/>
-        <text value="Food insecurity risk [HVS]"/>
+        <text value="Food insecurity risk"/>
         <answer>
             <valueCoding>
                 <system value="http://loinc.org"/>

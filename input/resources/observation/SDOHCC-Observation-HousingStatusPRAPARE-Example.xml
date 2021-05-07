@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Observation
     xmlns="http://hl7.org/fhir">
-    <id value="SDOHCC-Observation-HungerVitalSign-Example-3"/>
+    <id value="SDOHCC-Observation-HousingStatusPRAPARE-Example"/>
     <meta>
-        <versionId value="6"/>
-        <lastUpdated value="2021-05-06T22:27:01.346+00:00"/>
-        <source value="#SBlNhxBCr4B0kSTC"/>
+        <versionId value="1"/>
+        <lastUpdated value="2021-05-03T19:33:24.905+00:00"/>
+        <source value="#naOKpCrlsSG2cj5r"/>
     </meta>
     <status value="final"/>
     <category>
@@ -25,34 +25,35 @@
     <category>
         <coding>
             <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
-            <code value="food-insecurity"/>
-            <display value="Food Insecurity"/>
+            <code value="housing-instability-homelessness"/>
+            <display value="Housing Instability Homelessness"/>
         </coding>
     </category>
     <code>
         <coding>
             <system value="http://loinc.org"/>
-            <code value="88124-3"/>
-            <display value="Food insecurity risk [HVS]"/>
+            <code value="71802-3"/>
+            <display value="Housing status"/>
         </coding>
     </code>
     <subject>
         <reference value="Patient/pat-53234"/>
         <display value="COLIN ABBAS"/>
     </subject>
-    <effectiveDateTime value="2020-09-10T21:56:54.671Z"/>
-    <issued value="2020-09-10T21:56:54.671Z"/>
+    <effectiveDateTime value="2021-04-26T13:56:33.747Z"/>
+    <issued value="2021-04-26T13:56:33.747Z"/>
+    <performer>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </performer>
     <valueCodeableConcept>
         <coding>
             <system value="http://loinc.org"/>
-            <code value="LA19952-3"/>
-            <display value="At risk"/>
+            <code value="LA30190-5"/>
+            <display value="I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)"/>
         </coding>
     </valueCodeableConcept>
     <derivedFrom>
-        <reference value="Observation/SDOHCC-Observation-HungerVitalSign-Example-1"/>
-    </derivedFrom>
-    <derivedFrom>
-        <reference value="Observation/SDOHCC-Observation-HungerVitalSign-Example-2"/>
+        <reference value="QuestionnaireResponse/QR-5770421"/>
     </derivedFrom>
 </Observation>

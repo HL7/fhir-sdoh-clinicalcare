@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Observation-ScreeningResponseBase-1"/>
     <meta>
-        <versionId value="66"/>
-        <lastUpdated value="2021-04-14T19:55:47.975+00:00"/>
-        <source value="#3wjOkbywu0slP3of"/>
+        <versionId value="67"/>
+        <lastUpdated value="2021-05-04T15:13:06.524+00:00"/>
+        <source value="#P4Dnxd2ZGitMZod9"/>
     </meta>
     <text>
         <status value="extensions"/>
@@ -837,14 +837,6 @@
         </element>
         <element id="Observation.effective[x]">
             <path value="Observation.effective[x]"/>
-            <slicing>
-                <discriminator>
-                    <type value="type"/>
-                    <path value="$this"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <requirements value="Indicates the time or time-period over which the SDOH observation is held to be true (e.g., for an observation that asked whether &quot;X&quot; was experienced in the past 12 months, the effective period for &quot;X&quot; should be that 12 month period.) This does not confirm or negate the existence of the observation at any time other than the specified dateTime or Period."/>
             <min value="1"/>
             <type>
                 <code value="dateTime"/>
@@ -852,23 +844,6 @@
             <type>
                 <code value="Period"/>
             </type>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Observation.effective[x]:effectivePeriod">
-            <path value="Observation.effective[x]"/>
-            <sliceName value="effectivePeriod"/>
-            <type>
-                <code value="Period"/>
-            </type>
-        </element>
-        <element id="Observation.effective[x]:effectivePeriod.start">
-            <path value="Observation.effective[x].start"/>
-            <min value="1"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Observation.effective[x]:effectivePeriod.end">
-            <path value="Observation.effective[x].end"/>
-            <min value="1"/>
             <mustSupport value="true"/>
         </element>
         <element id="Observation.performer">

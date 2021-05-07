@@ -3,9 +3,10 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Questionnaire-HungerVitalSign-1"/>
     <meta>
-        <versionId value="14"/>
-        <lastUpdated value="2020-12-02T16:48:56.335+00:00"/>
-        <source value="#vSXMyVKOnmiiPM8K"/>
+        <versionId value="16"/>
+        <lastUpdated value="2021-05-06T13:09:25.450+00:00"/>
+        <source value="#PqPqKxO2uKnz1dYx"/>
+        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract|2.7"/>
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/variable">
         <valueExpression>
@@ -50,6 +51,7 @@
     <title value="SDOHCC Questionnaire HungerVitalSign 1"/>
     <status value="draft"/>
     <subjectType value="Patient"/>
+    <date value="2020-09-01T04:01:34+00:00"/>
     <item>
         <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
             <valueCodeableConcept>
@@ -65,9 +67,9 @@
         <code>
             <system value="http://loinc.org"/>
             <code value="88122-7"/>
-            <display value="Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]"/>
+            <display value="(I/We) worried whether (my/our) food would run out before (I/we) got money to buy more."/>
         </code>
-        <text value="Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]"/>
+        <text value="(I/We) worried whether (my/our) food would run out before (I/we) got money to buy more."/>
         <type value="choice"/>
         <required value="false"/>
         <answerOption>
@@ -114,9 +116,9 @@
         <code>
             <system value="http://loinc.org"/>
             <code value="88123-5"/>
-            <display value="Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]"/>
+            <display value="The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more."/>
         </code>
-        <text value="Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]"/>
+        <text value="The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more."/>
         <type value="choice"/>
         <required value="false"/>
         <answerOption>
@@ -187,13 +189,20 @@
                 <expression value="iif(%answeredEitherQ, iif(%riskStatus, %atRiskCoding, %noRiskCoding), {})"/>
             </valueExpression>
         </extension>
+        <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression">
+            <valueExpression>
+                <description value="risk determination"/>
+                <language value="text/fhirpath"/>
+                <expression value="iif(%answeredEitherQ, iif(%riskStatus, %atRiskCoding, %noRiskCoding), {})"/>
+            </valueExpression>
+        </extension>
         <linkId value="/88124-3"/>
         <code>
             <system value="http://loinc.org"/>
             <code value="88124-3"/>
-            <display value="Food insecurity risk [HVS]"/>
+            <display value="Food insecurity risk"/>
         </code>
-        <text value="Food insecurity risk [HVS]"/>
+        <text value="Food insecurity risk"/>
         <type value="choice"/>
         <required value="false"/>
         <answerOption>
