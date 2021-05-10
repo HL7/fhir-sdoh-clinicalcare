@@ -20,7 +20,8 @@ The implementation guide is organized into the following sections:
 
 ### Update Tracking
 
-Version 0.1.1 b (second update pushed to continuous build on 5/7/2021)
+* Version 0.1.1 b (second update pushed to continuous build on 5/7/2021)
+* Verison 0.1.1 c (update to support PRAPARE pushed to continuous build on 5/10/2021)
 
 
 
