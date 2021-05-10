@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Observation-ScreeningResponseBase-1"/>
     <meta>
-        <versionId value="67"/>
-        <lastUpdated value="2021-05-04T15:13:06.524+00:00"/>
-        <source value="#P4Dnxd2ZGitMZod9"/>
+        <versionId value="68"/>
+        <lastUpdated value="2021-05-07T15:33:46.561+00:00"/>
+        <source value="#q3hT2MWNWGttuPW9"/>
     </meta>
     <text>
         <status value="extensions"/>
@@ -820,7 +820,7 @@
         <element id="Observation.code">
             <path value="Observation.code"/>
             <comment value="*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.&#xD;&#xA;&#xD;&#xA;As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories."/>
-            <requirements value="LOINC codes are required because Gravity intends to use only LOINC encoded Questionnaires to generate QuestionnaireResponses which, in turn, will generate Screening Response Observations."/>
+            <requirements value="Knowing what kind of observation is being made is essential to understanding the observation.&#xD;&#xA;&#xD;&#xA;LOINC codes are required because Gravity intends to use only LOINC encoded Questionnaires to generate QuestionnaireResponses which, in turn, will generate Screening Response Observations."/>
             <mustSupport value="true"/>
             <binding>
                 <strength value="required"/>
@@ -862,21 +862,12 @@
         </element>
         <element id="Observation.value[x]">
             <path value="Observation.value[x]"/>
-            <comment value="An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.&#xD;&#xA;&#xD;&#xA;As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to LOINC codes that pertain to SDOH categories."/>
-            <requirements value="LOINC codes are required for CodeableConcept because Gravity intends to use only LOINC encoded Questionnaires to generate QuestionnaireResponses which, in turn, will generate Screening Response Observations."/>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
             <meaningWhenMissing value="If the LOINC Normative Answer List for a LOINC code offers an adequate code for why an Observation.value may not be known, it should be used as the value for Observation.value. &#xD;&#xA;If the LOINC Normative Answer List for a LOINC code does not offer an adequate code for why an Observation.value may not be known, a code from Observation.dataAbsentReason should be used in lieu of Observation.value."/>
             <mustSupport value="true"/>
-            <binding>
-                <strength value="required"/>
-                <valueSet value="http://hl7.org/fhir/ValueSet/observation-codes"/>
-            </binding>
         </element>
         <element id="Observation.dataAbsentReason">
             <path value="Observation.dataAbsentReason"/>
-            <comment value="Null or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  For example, values for a SDOH question could include options like  &quot;I chose not to answer (e.g., &quot;asked-declined&quot;), &quot;unknown&quot;, etc.&quot;.  The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  &#xD;&#xA;&#xD;&#xA;If the LOINC Normative Answer List for a LOINC code offers an adequate code for why an Observation.value may not be known, it should be used as the value for Observation.value. &#xD;&#xA;If the LOINC Normative Answer List for a LOINC code does not offer an adequate code for why an Observation.value may not be known, a code from Observation.dataAbsentReason should be used in lieu of Observation.value."/>
+            <comment value="&quot;Null&quot; or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  If the value set for Observation.value includes concepts such as 'unknown' or 'not available', they should be used. Where these concepts are not part of the value set for Observation.value, the Observation.dataAbsentReason can be used if necessary and appropriate."/>
             <mustSupport value="true"/>
         </element>
         <element id="Observation.interpretation">
@@ -921,13 +912,40 @@
             <sliceName value="SupportedDerivedFrom"/>
             <short value="Related questionnaire responses or observations that the observation is made from"/>
             <definition value="Questionnaire responses or observations from which this observation value is derived."/>
-            <requirements value="When an screening response observation is based on a survey question that is answered directly by the patient, Observation.derivedFrom should reference instances that comply with the SDC QuestionnaireResponse. When an observation is based on a survey question answer that is derived from one or more other survey question answers (as opposed to answered directly), Observation.derivedFrom should reference instances that comply with SDOHCC Screening Response Observation profile (e.g., observations generated from the questions that were answered directly). However, references to other instance types are also possible."/>
+            <requirements value="When an screening response observation is based on a survey question that is answered directly by the patient, Observation.derivedFrom should reference instances that comply with the SDC QuestionnaireResponse. When an observation is based on a survey question answer that is derived from one or more other survey question answers (as opposed to answered directly), Observation.derivedFrom should reference instances that comply with SDOHCC Screening Response Observation (e.g., observations generated from questions that were answered directly). However, references to other instance types are also possible."/>
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
                 <targetProfile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"/>
             </type>
             <mustSupport value="true"/>
+        </element>
+        <element id="Observation.component.code">
+            <path value="Observation.component.code"/>
+            <comment value="*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.&#xD;&#xA;&#xD;&#xA;As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories."/>
+            <requirements value="Knowing what kind of observation is being made is essential to understanding the observation.&#xD;&#xA;&#xD;&#xA;LOINC codes are required because Gravity intends to use only LOINC encoded Questionnaires to generate QuestionnaireResponses which, in turn, will generate Screening Response Observations."/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+            </binding>
+        </element>
+        <element id="Observation.component.value[x]">
+            <path value="Observation.component.value[x]"/>
+            <meaningWhenMissing value="If the LOINC Normative Answer List for a LOINC code offers an adequate code for why an Observation.value may not be known, it should be used as the value for Observation.value. &#xD;&#xA;If the LOINC Normative Answer List for a LOINC code does not offer an adequate code for why an Observation.value may not be known, a code from Observation.dataAbsentReason should be used in lieu of Observation.value."/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Observation.component.dataAbsentReason">
+            <path value="Observation.component.dataAbsentReason"/>
+            <comment value="&quot;Null&quot; or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  If the value set for Observation.value includes concepts such as 'unknown' or 'not available', they should be used. Where these concepts are not part of the value set for Observation.value, the Observation.dataAbsentReason can be used if necessary and appropriate."/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Observation.component.interpretation">
+            <path value="Observation.component.interpretation"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.component.referenceRange">
+            <path value="Observation.component.referenceRange"/>
+            <max value="0"/>
         </element>
     </differential>
 </StructureDefinition>
