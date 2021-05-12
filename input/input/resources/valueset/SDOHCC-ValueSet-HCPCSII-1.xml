@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ValueSet-HCPCSII-1"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2021-04-09T18:02:07.217+00:00"/>
+        <source value="#mVsvbGXSubXDafzw"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet-HCPCSII-1"/>
+    <version value="0.1.0"/>
+    <name value="SDOHCC_ValueSet_HCPCSII_1"/>
+    <title value="SDOHCC ValueSet HCPCSII 1"/>
+    <status value="draft"/>
+    <date value="2020-12-14T04:01:34+00:00"/>
+    <publisher value="HL7 International - Patient Care WG"/>
+    <contact>
+        <name value="HL7 International - Patient Care"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/patientcare"/>
+        </telecom>
+    </contact>
+    <description value="This value set is defined intensionally to include all Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <copyright value="This value set includes content from: HCPCS Level II Alphanumeric Codes codes are maintained by the US Centers for Medicare and Medicaid Services (CMS) available for public use."/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.6.285"/>
+        </include>
+    </compose>
+</ValueSet>

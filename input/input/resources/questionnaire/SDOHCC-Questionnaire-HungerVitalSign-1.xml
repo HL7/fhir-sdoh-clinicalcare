@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-Questionnaire-HungerVitalSign-1"/>
+    <meta>
+        <versionId value="16"/>
+        <lastUpdated value="2021-05-06T13:09:25.450+00:00"/>
+        <source value="#PqPqKxO2uKnz1dYx"/>
+        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract|2.7"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/variable">
+        <valueExpression>
+            <name value="worriedAnsCode"/>
+            <language value="text/fhirpath"/>
+            <expression value="%resource.item.where(linkId='/88122-7').answer.value.code"/>
+        </valueExpression>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/variable">
+        <valueExpression>
+            <name value="ranOutAnsCode"/>
+            <language value="text/fhirpath"/>
+            <expression value="%resource.item.where(linkId='/88123-5').answer.value.code"/>
+        </valueExpression>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/variable">
+        <valueExpression>
+            <name value="riskCodes"/>
+            <language value="text/fhirpath"/>
+            <expression value="'LA28397-0'.combine('LA6729-3')"/>
+        </valueExpression>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/variable">
+        <valueExpression>
+            <name value="riskStatus"/>
+            <language value="text/fhirpath"/>
+            <expression value="%riskCodes contains %worriedAnsCode or %riskCodes contains %ranOutAnsCode"/>
+        </valueExpression>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/variable">
+        <valueExpression>
+            <name value="answeredEitherQ"/>
+            <language value="text/fhirpath"/>
+            <expression value="%worriedAnsCode.exists() or %ranOutAnsCode.exists()"/>
+        </valueExpression>
+    </extension>
+    <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
+        <valueCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1"/>
+    </extension>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-Questionnaire-HungerVitalSign-1"/>
+    <name value="SDOHCC_Questionnaire_HungerVitalSign_1"/>
+    <title value="SDOHCC Questionnaire HungerVitalSign 1"/>
+    <status value="draft"/>
+    <subjectType value="Patient"/>
+    <date value="2020-09-01T04:01:34+00:00"/>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                    <code value="drop-down"/>
+                    <display value="Drop down"/>
+                </coding>
+                <text value="Drop down"/>
+            </valueCodeableConcept>
+        </extension>
+        <linkId value="/88122-7"/>
+        <code>
+            <system value="http://loinc.org"/>
+            <code value="88122-7"/>
+            <display value="(I/We) worried whether (my/our) food would run out before (I/we) got money to buy more."/>
+        </code>
+        <text value="(I/We) worried whether (my/our) food would run out before (I/we) got money to buy more."/>
+        <type value="choice"/>
+        <required value="false"/>
+        <answerOption>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA28397-0"/>
+                <display value="Often true"/>
+            </valueCoding>
+        </answerOption>
+        <answerOption>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA6729-3"/>
+                <display value="Sometimes true"/>
+            </valueCoding>
+        </answerOption>
+        <answerOption>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA28398-8"/>
+                <display value="Never true"/>
+            </valueCoding>
+        </answerOption>
+        <answerOption>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA15775-2"/>
+                <display value="Don't know/refused"/>
+            </valueCoding>
+        </answerOption>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                    <code value="drop-down"/>
+                    <display value="Drop down"/>
+                </coding>
+                <text value="Drop down"/>
+            </valueCodeableConcept>
+        </extension>
+        <linkId value="/88123-5"/>
+        <code>
+            <system value="http://loinc.org"/>
+            <code value="88123-5"/>
+            <display value="The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more."/>
+        </code>
+        <text value="The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more."/>
+        <type value="choice"/>
+        <required value="false"/>
+        <answerOption>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA28397-0"/>
+                <display value="Often true"/>
+            </valueCoding>
+        </answerOption>
+        <answerOption>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA6729-3"/>
+                <display value="Sometimes true"/>
+            </valueCoding>
+        </answerOption>
+        <answerOption>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA28398-8"/>
+                <display value="Never true"/>
+            </valueCoding>
+        </answerOption>
+        <answerOption>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA15775-2"/>
+                <display value="Don't know/refused"/>
+            </valueCoding>
+        </answerOption>
+    </item>
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                    <code value="drop-down"/>
+                    <display value="Drop down"/>
+                </coding>
+                <text value="Drop down"/>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/variable">
+            <valueExpression>
+                <name value="thisItem"/>
+                <language value="text/fhirpath"/>
+                <expression value="%questionnaire.item.where(linkId = '/88124-3')"/>
+            </valueExpression>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/variable">
+            <valueExpression>
+                <name value="atRiskCoding"/>
+                <language value="text/fhirpath"/>
+                <expression value="%thisItem.answerOption.valueCoding.where(code='LA19952-3')"/>
+            </valueExpression>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/variable">
+            <valueExpression>
+                <name value="noRiskCoding"/>
+                <language value="text/fhirpath"/>
+                <expression value="%thisItem.answerOption.valueCoding.where(code='LA19983-8')"/>
+            </valueExpression>
+        </extension>
+        <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression">
+            <valueExpression>
+                <description value="risk determination"/>
+                <language value="text/fhirpath"/>
+                <expression value="iif(%answeredEitherQ, iif(%riskStatus, %atRiskCoding, %noRiskCoding), {})"/>
+            </valueExpression>
+        </extension>
+        <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression">
+            <valueExpression>
+                <description value="risk determination"/>
+                <language value="text/fhirpath"/>
+                <expression value="iif(%answeredEitherQ, iif(%riskStatus, %atRiskCoding, %noRiskCoding), {})"/>
+            </valueExpression>
+        </extension>
+        <linkId value="/88124-3"/>
+        <code>
+            <system value="http://loinc.org"/>
+            <code value="88124-3"/>
+            <display value="Food insecurity risk"/>
+        </code>
+        <text value="Food insecurity risk"/>
+        <type value="choice"/>
+        <required value="false"/>
+        <answerOption>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA19952-3"/>
+                <display value="At risk"/>
+            </valueCoding>
+        </answerOption>
+        <answerOption>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA19983-8"/>
+                <display value="No risk"/>
+            </valueCoding>
+        </answerOption>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                        <code value="help"/>
+                        <display value="Help-Button"/>
+                    </coding>
+                    <text value="Help-Button"/>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="/88124-3-help"/>
+            <text value="An answer of &quot;often true&quot; or &quot;sometimes true&quot; to either or both of the Hunger Vital Sign™ questions identifies a patient as at risk for food insecurity (FI)."/>
+            <type value="display"/>
+        </item>
+    </item>
+</Questionnaire>

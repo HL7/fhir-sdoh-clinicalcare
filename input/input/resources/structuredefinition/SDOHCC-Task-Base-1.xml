@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-Task-Base-1"/>
+    <meta>
+        <versionId value="19"/>
+        <lastUpdated value="2021-04-16T15:23:26.643+00:00"/>
+        <source value="#TJfPE7Z7DTXUZ93i"/>
+    </meta>
+    <text>
+        <status value="extensions"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;">
+                <tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top">
+                    <th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/formats.html#table" title="The logical name of the element">Name</a>
+                    </th>
+                    <th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/formats.html#table" title="Information about the use of the element">Flags</a>
+                    </th>
+                    <th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a>
+                    </th>
+                    <th style="width: 100px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/formats.html#table" title="Reference to the type of the element">Type</a>
+                    </th>
+                    <th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/formats.html#table" title="Additional information about the element">Description &amp; Constraints</a>
+                        <span style="float: right">
+                            <a href="http://hl7.org/fhir/R4/formats.html#table" title="Legend for this format">
+                                <img src="http://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/>
+                            </a>
+                        </span>
+                    </th>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white">
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/>
+                        <a href="StructureDefinition-SDOHCC-Task-Base-1-definitions.html#Task">Task</a>
+                        <a name="Task"/>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">0</span>
+                        <span style="opacity: 0.5">..</span>
+                        <span style="opacity: 0.5">*</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/task.html">Task</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">A task to be performed</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7">
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/>
+                        <a href="StructureDefinition-SDOHCC-Task-Base-1-definitions.html#Task.basedOn">basedOn</a>
+                        <a name="Task.basedOn"/>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">0</span>
+                        <span style="opacity: 0.5">..</span>
+                        <span style="opacity: 0.5">*</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/references.html">Reference</a>(
+                        <a style="opacity: 0.5" href="http://hl7.org/fhir/R4/resource.html">Resource</a>)
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">Request fulfilled by this task</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white">
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/>
+                        <a href="StructureDefinition-SDOHCC-Task-Base-1-definitions.html#Task.status">status</a>
+                        <a name="Task.status"/>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">1</span>
+                        <span style="opacity: 0.5">..</span>
+                        <span style="opacity: 0.5">1</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a style="opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">draft | requested | received | accepted | +</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7">
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/>
+                        <a href="StructureDefinition-SDOHCC-Task-Base-1-definitions.html#Task.intent">intent</a>
+                        <a name="Task.intent"/>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">1</span>
+                        <span style="opacity: 0.5">..</span>
+                        <span style="opacity: 0.5">1</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a style="opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">unknown | proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option</span>
+                        <br/>
+                        <span style="font-weight:bold">Fixed Value: </span>
+                        <span style="color: darkgreen">order</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white">
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/>
+                        <a href="StructureDefinition-SDOHCC-Task-Base-1-definitions.html#Task.priority">priority</a>
+                        <a name="Task.priority"/>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">0</span>
+                        <span style="opacity: 0.5">..</span>
+                        <span style="opacity: 0.5">1</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a style="opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">routine | urgent | asap | stat</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7">
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/>
+                        <a href="StructureDefinition-SDOHCC-Task-Base-1-definitions.html#Task.code">code</a>
+                        <a name="Task.code"/>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..
+                        <span style="opacity: 0.5">1</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a style="opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">Task Type</span>
+                        <br/>
+                        <span style="font-weight:bold">Required Pattern: </span>
+                        <span style="color: darkgreen">At least the following</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white">
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck101.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_fixed.gif" alt="." style="background-color: white; background-color: inherit" title="Fixed Value" class="hierarchy"/>
+                        <a href="http://hl7.org/fhir/R4/datatypes-definitions.html#CodeableConcept.coding">coding</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..*</td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code defined by a terminology system
+                        <br/>
+                        <span style="font-weight: bold">Fixed Value: </span>
+                        <span style="color: darkgreen">(complex)</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7">
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1010.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_fixed.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Fixed Value" class="hierarchy"/>
+                        <a href="http://hl7.org/fhir/R4/datatypes-definitions.html#Coding.system">system</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Identity of the terminology system
+                        <br/>
+                        <span style="font-weight: bold">Fixed Value: </span>
+                        <a style="color: darkgreen" href="http://hl7.org/fhir/R4/codesystem-task-code.html">http://hl7.org/fhir/CodeSystem/task-code</a>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white">
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1000.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_fixed.gif" alt="." style="background-color: white; background-color: inherit" title="Fixed Value" class="hierarchy"/>
+                        <a href="http://hl7.org/fhir/R4/datatypes-definitions.html#Coding.code">code</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Symbol in syntax defined by the system
+                        <br/>
+                        <span style="font-weight: bold">Fixed Value: </span>
+                        <span style="color: darkgreen">fulfill</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7">
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_reference.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Reference to another Resource" class="hierarchy"/>
+                        <a href="StructureDefinition-SDOHCC-Task-Base-1-definitions.html#Task.focus">focus</a>
+                        <a name="Task.focus"/>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..
+                        <span style="opacity: 0.5">1</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/references.html">Reference</a>(
+                        <a href="StructureDefinition-SDOHCC-ServiceRequest-Base-1.html">SDOHCC ServiceRequest Base 1</a>)
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">What task is acting on</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white">
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/>
+                        <a href="StructureDefinition-SDOHCC-Task-Base-1-definitions.html#Task.for">for</a>
+                        <a name="Task.for"/>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..
+                        <span style="opacity: 0.5">1</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/references.html">Reference</a>(
+                        <a href="http://hl7.org/fhir/R4/patient.html">Patient</a> | 
+                        <a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a> | 
+                        <a href="http://hl7.org/fhir/R4/group.html">Group</a>)
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">Beneficiary of the Task</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7">
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck03.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_slice.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Definition" class="hierarchy"/>
+                        <a style="font-style: italic" href="StructureDefinition-SDOHCC-Task-Base-1-definitions.html#Task.output">output</a>
+                        <a name="Task.output"/>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="font-style: italic"/>
+                        <span style="opacity: 0.5; font-style: italic">0</span>
+                        <span style="opacity: 0.5; font-style: italic">..</span>
+                        <span style="opacity: 0.5; font-style: italic">*</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a style="font-style: italic" href="http://hl7.org/fhir/R4/profiling.html#slicing">(Slice Definition)</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5; font-style: italic">Information produced as part of task</span>
+                        <br style="font-style: italic"/>
+                        <span style="font-weight:bold; font-style: italic">Slice: </span>
+                        <span style="font-style: italic">Unordered, Open by pattern:type, type:value</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white">
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck035.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/>
+                        <a href="StructureDefinition-SDOHCC-Task-Base-1-definitions.html#Task.output:PerformedActivityReference" title="Slice PerformedActivityReference">output:PerformedActivityReference</a>
+                        <a name="Task.output"/>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">0</span>
+                        <span style="opacity: 0.5">..</span>
+                        <span style="opacity: 0.5">*</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a style="opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#BackboneElement">BackboneElement</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">Information produced as part of task</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7">
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0351.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vline_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin_slice.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/>
+                        <a href="StructureDefinition-SDOHCC-Task-Base-1-definitions.html#Task.output:PerformedActivityReference.type">type</a>
+                        <a name="Task.output.type"/>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">1</span>
+                        <span style="opacity: 0.5">..</span>
+                        <span style="opacity: 0.5">1</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a style="opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">Label for output</span>
+                        <br/>
+                        <span style="font-weight:bold">Required Pattern: </span>
+                        <span style="color: darkgreen">At least the following</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white">
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck03501.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vline_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vline_slice.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_fixed.gif" alt="." style="background-color: white; background-color: inherit" title="Fixed Value" class="hierarchy"/>
+                        <a href="http://hl7.org/fhir/R4/datatypes-definitions.html#CodeableConcept.coding">coding</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..*</td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code defined by a terminology system
+                        <br/>
+                        <span style="font-weight: bold">Fixed Value: </span>
+                        <span style="color: darkgreen">(complex)</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7">
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck035010.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vline_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vline_slice.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_fixed.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Fixed Value" class="hierarchy"/>
+                        <a href="http://hl7.org/fhir/R4/datatypes-definitions.html#Coding.system">system</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Identity of the terminology system
+                        <br/>
+                        <span style="font-weight: bold">Fixed Value: </span>
+                        <a style="color: darkgreen" href="CodeSystem-sdohcc-temporary-codes.html">http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes</a>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white">
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck035000.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vline_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vline_slice.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_fixed.gif" alt="." style="background-color: white; background-color: inherit" title="Fixed Value" class="hierarchy"/>
+                        <a href="http://hl7.org/fhir/R4/datatypes-definitions.html#Coding.code">code</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Symbol in syntax defined by the system
+                        <br/>
+                        <span style="font-weight: bold">Fixed Value: </span>
+                        <span style="color: darkgreen">resulting-activity</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7">
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0340.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vline_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_reference.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Reference to another Resource" class="hierarchy"/>
+                        <a href="StructureDefinition-SDOHCC-Task-Base-1-definitions.html#Task.output:PerformedActivityReference.value[x]">value[x]</a>
+                        <a name="Task.output.value_x_"/>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">1</span>
+                        <span style="opacity: 0.5">..</span>
+                        <span style="opacity: 0.5">1</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/references.html">Reference</a>()
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">Result of output</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white">
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck025.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin_end_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/>
+                        <a href="StructureDefinition-SDOHCC-Task-Base-1-definitions.html#Task.output:PerformedActivityCode" title="Slice PerformedActivityCode">output:PerformedActivityCode</a>
+                        <a name="Task.output"/>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">0</span>
+                        <span style="opacity: 0.5">..</span>
+                        <span style="opacity: 0.5">*</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a style="opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#BackboneElement">BackboneElement</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">Information produced as part of task</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7">
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0251.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin_slice.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/>
+                        <a href="StructureDefinition-SDOHCC-Task-Base-1-definitions.html#Task.output:PerformedActivityCode.type">type</a>
+                        <a name="Task.output.type"/>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">1</span>
+                        <span style="opacity: 0.5">..</span>
+                        <span style="opacity: 0.5">1</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a style="opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">Label for output</span>
+                        <br/>
+                        <span style="font-weight:bold">Required Pattern: </span>
+                        <span style="color: darkgreen">At least the following</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white">
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck02501.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vline_slice.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_fixed.gif" alt="." style="background-color: white; background-color: inherit" title="Fixed Value" class="hierarchy"/>
+                        <a href="http://hl7.org/fhir/R4/datatypes-definitions.html#CodeableConcept.coding">coding</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..*</td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code defined by a terminology system
+                        <br/>
+                        <span style="font-weight: bold">Fixed Value: </span>
+                        <span style="color: darkgreen">(complex)</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7">
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck025010.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vline_slice.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_fixed.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Fixed Value" class="hierarchy"/>
+                        <a href="http://hl7.org/fhir/R4/datatypes-definitions.html#Coding.system">system</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Identity of the terminology system
+                        <br/>
+                        <span style="font-weight: bold">Fixed Value: </span>
+                        <a style="color: darkgreen" href="CodeSystem-sdohcc-temporary-codes.html">http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes</a>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white">
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck025000.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vline_slice.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_fixed.gif" alt="." style="background-color: white; background-color: inherit" title="Fixed Value" class="hierarchy"/>
+                        <a href="http://hl7.org/fhir/R4/datatypes-definitions.html#Coding.code">code</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Symbol in syntax defined by the system
+                        <br/>
+                        <span style="font-weight: bold">Fixed Value: </span>
+                        <span style="color: darkgreen">resulting-activity</span>
+                    </td>
+                </tr>
+                <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7">
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0240.png)" class="hierarchy">
+                        <img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/>
+                        <img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/>
+                        <a href="StructureDefinition-SDOHCC-Task-Base-1-definitions.html#Task.output:PerformedActivityCode.value[x]">value[x]</a>
+                        <a name="Task.output.value_x_"/>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">1</span>
+                        <span style="opacity: 0.5">..</span>
+                        <span style="opacity: 0.5">1</span>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a>
+                    </td>
+                    <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">
+                        <span style="opacity: 0.5">Result of output</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="hierarchy">
+                        <br/>
+                        <a href="http://hl7.org/fhir/R4/formats.html#table" title="Legend for this format">
+                            <img src="http://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task-Base-1"/>
+    <version value="0.1.0"/>
+    <name value="SDOHCC_Task_Base_1"/>
+    <title value="SDOHCC Task Base 1"/>
+    <status value="draft"/>
+    <date value="2020-12-14T04:01:34+00:00"/>
+    <publisher value="HL7 International - Patient Care WG"/>
+    <contact>
+        <name value="HL7 International - Patient Care"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/patientcare"/>
+        </telecom>
+    </contact>
+    <description value="This profile constrains the Task resource for use in requesting fulfillment of an SDOHCC ServiceRequest (i.e. referral for service) and subsequently tracking and managing the fulfillment of that referral."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <mapping>
+        <identity value="workflow"/>
+        <uri value="http://hl7.org/fhir/workflow"/>
+        <name value="Workflow Pattern"/>
+    </mapping>
+    <mapping>
+        <identity value="rim"/>
+        <uri value="http://hl7.org/v3"/>
+        <name value="RIM Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="w5"/>
+        <uri value="http://hl7.org/fhir/fivews"/>
+        <name value="FiveWs Pattern Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="v2"/>
+        <uri value="http://hl7.org/v2"/>
+        <name value="HL7 v2 Mapping"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Task"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Task"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Task">
+            <path value="Task"/>
+            <short value="A request to fulfill an SDOH service request"/>
+            <comment value="For Tasks used in requesting fulfillment of an SDOHCC ServiceRequest (i.e. referral for service) and subsequently tracking and managing the fulfillment of that referral."/>
+        </element>
+        <element id="Task.status">
+            <path value="Task.status"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.statusReason">
+            <path value="Task.statusReason"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.statusReason.text">
+            <path value="Task.statusReason.text"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.intent">
+            <path value="Task.intent"/>
+            <short value="order"/>
+            <definition value="Indicates the &quot;level&quot; of actionability associated with the Task."/>
+            <comment value="This element is immutable."/>
+            <fixedCode value="order"/>
+        </element>
+        <element id="Task.priority">
+            <path value="Task.priority"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.code">
+            <path value="Task.code"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+                    <code value="fulfill"/>
+                </coding>
+            </patternCodeableConcept>
+        </element>
+        <element id="Task.focus">
+            <path value="Task.focus"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest-Base-1"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.for">
+            <path value="Task.for"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.requester">
+            <path value="Task.requester"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.owner">
+            <path value="Task.owner"/>
+            <requirements value="This element is Must Support. However, it is not mandatory in order to allow a task to be created without an owner so that one of a potential group of performers can elect to &quot;own&quot; the task (e.g., an 'open' request for fulfillment is set and anyone capable of filling the order can claim it.)"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.output">
+            <path value="Task.output"/>
+            <slicing>
+                <discriminator>
+                    <type value="pattern"/>
+                    <path value="type"/>
+                </discriminator>
+                <discriminator>
+                    <type value="type"/>
+                    <path value="value"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Task.output:PerformedActivityReference">
+            <path value="Task.output"/>
+            <sliceName value="PerformedActivityReference"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.output:PerformedActivityReference.type">
+            <path value="Task.output.type"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
+                    <code value="resulting-activity"/>
+                </coding>
+            </patternCodeableConcept>
+        </element>
+        <element id="Task.output:PerformedActivityReference.value[x]">
+            <path value="Task.output.value[x]"/>
+            <type>
+                <code value="Reference"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.output:PerformedActivityCode">
+            <path value="Task.output"/>
+            <sliceName value="PerformedActivityCode"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.output:PerformedActivityCode.type">
+            <path value="Task.output.type"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
+                    <code value="resulting-activity"/>
+                </coding>
+            </patternCodeableConcept>
+        </element>
+        <element id="Task.output:PerformedActivityCode.value[x]">
+            <path value="Task.output.value[x]"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>
