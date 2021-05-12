@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuestionnaireResponse
+    xmlns="http://hl7.org/fhir">
+    <id value="QR-5770275"/>
+    <meta>
+        <versionId value="7"/>
+        <lastUpdated value="2021-05-06T22:27:01.346+00:00"/>
+        <source value="#QOlz1ZRlPzI51to0"/>
+        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"/>
+    </meta>
+    <questionnaire value="http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-Questionnaire-HungerVitalSign-1">
+        <extension url="http://hl7.org/fhir/StructureDefinition/display">
+            <valueString value="SDOHCC Questionnaire HungerVitalSign 1"/>
+        </extension>
+    </questionnaire>
+    <status value="completed"/>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <authored value="2020-09-10T21:56:54.671Z"/>
+    <source>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </source>
+    <item>
+        <linkId value="/88122-7"/>
+        <text value="(I/We) worried whether (my/our) food would run out before (I/we) got money to buy more."/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA28397-0"/>
+                <display value="Often true"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/88123-5"/>
+        <text value="The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more."/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA28397-0"/>
+                <display value="Often true"/>
+            </valueCoding>
+        </answer>
+    </item>
+    <item>
+        <linkId value="/88124-3"/>
+        <text value="Food insecurity risk"/>
+        <answer>
+            <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="LA19952-3"/>
+                <display value="At risk"/>
+            </valueCoding>
+        </answer>
+    </item>
+</QuestionnaireResponse>

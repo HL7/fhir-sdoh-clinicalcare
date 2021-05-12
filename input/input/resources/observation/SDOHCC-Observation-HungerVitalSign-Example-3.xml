@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-Observation-HungerVitalSign-Example-3"/>
+    <meta>
+        <versionId value="6"/>
+        <lastUpdated value="2021-05-06T22:27:01.346+00:00"/>
+        <source value="#SBlNhxBCr4B0kSTC"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="survey"/>
+            <display value="Survey"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
+            <code value="food-insecurity"/>
+            <display value="Food Insecurity"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="88124-3"/>
+            <display value="Food insecurity risk [HVS]"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <effectiveDateTime value="2020-09-10T21:56:54.671Z"/>
+    <issued value="2020-09-10T21:56:54.671Z"/>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA19952-3"/>
+            <display value="At risk"/>
+        </coding>
+    </valueCodeableConcept>
+    <derivedFrom>
+        <reference value="Observation/SDOHCC-Observation-HungerVitalSign-Example-1"/>
+    </derivedFrom>
+    <derivedFrom>
+        <reference value="Observation/SDOHCC-Observation-HungerVitalSign-Example-2"/>
+    </derivedFrom>
+</Observation>

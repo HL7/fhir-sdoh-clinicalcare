@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide
+    xmlns="http://hl7.org/fhir">
+    <id value="sdoh-clinicalcare"/>
+    <meta>
+        <versionId value="222"/>
+        <lastUpdated value="2021-05-12T20:55:07.570+00:00"/>
+        <source value="#QMZYcFLfV9sD1ics"/>
+    </meta>
+    <contained>
+        <DocumentReference>
+            <id value="rOGkuGlm"/>
+            <type>
+                <coding>
+                    <code value="ignore-warnings"/>
+                </coding>
+            </type>
+            <content>
+                <attachment>
+                    <contentType value="text/plain"/>
+                    <data value="PT0gU3VwcHJlc3NlZCBNZXNzYWdlcyA9PQojIFRoaXMgaXMgYSBrbm93biBpc3N1ZSB3aXRoIHRoZSBGSElSIHZhbGlkYXRvciBhbmQgaXMgYmVpbmcgYWRkcmVzc2VkIGJ5IEhMNwpJTkZPUk1BVElPTjogSW1wbGVtZW50YXRpb25HdWlkZS9obDcuZmhpci51cy5zZG9oLWNsaW5pY2FsY2FyZTogSW1wbGVtZW50YXRpb25HdWlkZTogVmFsaWRhdGUgcmVzb3VyY2UgYWdhaW5zdCBwcm9maWxlIGh0dHA6Ly9obDcub3JnL2ZoaXIvU3RydWN0dXJlRGVmaW5pdGlvbi9JbXBsZW1lbnRhdGlvbkd1aWRlCiMgVGhpcyBpcyBhIHRlbXBvcmFyeSBjb2RlIHN5c3RlbSBzbyB0aGlzIGluZm9ybWF0aW9uIGNhbiBiZSBpZ25vcmVkLgpJTkZPUk1BVElPTjogQ29kZVN5c3RlbS9zZG9oY2MtdGVtcG9yYXJ5LWNvZGVzOiBDb2RlU3lzdGVtOiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL0NvZGVTeXN0ZW0KIyBUaGUgZm9sbG93aW5nIGV4YW1wbGVzIGhhdmUgYmVlbiByZXZpZXdlZCBhbmQgY29uZmlybWVkIHRvIHZhbGlkYXRlIGFnYWluc3QgdGhlIGludGVuZGVkIHByb2ZpbGVzLgpJTkZPUk1BVElPTjogQ29uZGl0aW9uL1NET0hDQy1Db25kaXRpb24tSHVuZ2VyVml0YWxTaWduLUV4YW1wbGUtMTogQ29uZGl0aW9uOiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci91cy9zZG9oLWNsaW5pY2FsY2FyZS9TdHJ1Y3R1cmVEZWZpbml0aW9uL1NET0hDQy1Db25kaXRpb24tQmFzZS0xCklORk9STUFUSU9OOiBHb2FsL1NET0hDQy1Hb2FsLUh1bmdlclZpdGFsU2lnbi1FeGFtcGxlLTE6IEdvYWw6IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL3VzL3Nkb2gtY2xpbmljYWxjYXJlL1N0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLUdvYWwtQmFzZS0xCklORk9STUFUSU9OOiBPYnNlcnZhdGlvbi9TRE9IQ0MtT2JzZXJ2YXRpb24tSHVuZ2VyVml0YWxTaWduLUV4YW1wbGUtMTogT2JzZXJ2YXRpb246IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL3VzL3Nkb2gtY2xpbmljYWxjYXJlL1N0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLU9ic2VydmF0aW9uLVNjcmVlbmluZ1Jlc3BvbnNlQmFzZS0xCklORk9STUFUSU9OOiBPYnNlcnZhdGlvbi9TRE9IQ0MtT2JzZXJ2YXRpb24tSHVuZ2VyVml0YWxTaWduLUV4YW1wbGUtMjogT2JzZXJ2YXRpb246IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL3VzL3Nkb2gtY2xpbmljYWxjYXJlL1N0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLU9ic2VydmF0aW9uLVNjcmVlbmluZ1Jlc3BvbnNlQmFzZS0xCklORk9STUFUSU9OOiBPYnNlcnZhdGlvbi9TRE9IQ0MtT2JzZXJ2YXRpb24tSHVuZ2VyVml0YWxTaWduLUV4YW1wbGUtMzogT2JzZXJ2YXRpb246IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL3VzL3Nkb2gtY2xpbmljYWxjYXJlL1N0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLU9ic2VydmF0aW9uLVNjcmVlbmluZ1Jlc3BvbnNlQmFzZS0xCklORk9STUFUSU9OOiBPYnNlcnZhdGlvbi9TRE9IQ0MtT2JzZXJ2YXRpb24tSHVuZ2VyVml0YWxTaWduR3JvdXAtMTogT2JzZXJ2YXRpb246IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vT2JzZXJ2YXRpb24KSU5GT1JNQVRJT046IFBhdGllbnQvcGF0LTUzMjM0OiBQYXRpZW50OiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL1BhdGllbnQKSU5GT1JNQVRJT046IFBhdGllbnQvcGF0LTUzMjM0OiBQYXRpZW50OiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci91cy9jb3JlL1N0cnVjdHVyZURlZmluaXRpb24vdXMtY29yZS1wYXRpZW50IC0gbGlzdGVkIGluIG1ldGEKSU5GT1JNQVRJT046IFByb2NlZHVyZS9TRE9IQ0MtUHJvY2VkdXJlLUh1bmdlclZpdGFsU2lnbi1FeGFtcGxlLTE6IFByb2NlZHVyZTogVmFsaWRhdGUgcmVzb3VyY2UgYWdhaW5zdCBwcm9maWxlIGh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvc2RvaC1jbGluaWNhbGNhcmUvU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtUHJvY2VkdXJlLUJhc2UtMQpJTkZPUk1BVElPTjogUXVlc3Rpb25uYWlyZVJlc3BvbnNlL1FSLTU3NzAyNzU6IFF1ZXN0aW9ubmFpcmVSZXNwb25zZTogVmFsaWRhdGUgcmVzb3VyY2UgYWdhaW5zdCBwcm9maWxlIGh0dHA6Ly9obDcub3JnL2ZoaXIvU3RydWN0dXJlRGVmaW5pdGlvbi9RdWVzdGlvbm5haXJlUmVzcG9uc2UKSU5GT1JNQVRJT046IFNlcnZpY2VSZXF1ZXN0L1NET0hDQy1TZXJ2aWNlUmVxdWVzdC1IdW5nZXJWaXRhbFNpZ24tRXhhbXBsZS0xOiBTZXJ2aWNlUmVxdWVzdDogVmFsaWRhdGUgcmVzb3VyY2UgYWdhaW5zdCBwcm9maWxlIGh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvc2RvaC1jbGluaWNhbGNhcmUvU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtU2VydmljZVJlcXVlc3QtQmFzZS0xCklORk9STUFUSU9OOiBUYXNrL1NET0hDQy1UYXNrLU9yZGVyRnVsZmlsbG1lbnQtRXhhbXBsZS0xOiBUYXNrOiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci91cy9zZG9oLWNsaW5pY2FsY2FyZS9TdHJ1Y3R1cmVEZWZpbml0aW9uL1NET0hDQy1UYXNrLUJhc2UtMQpJTkZPUk1BVElPTjogQ29uc2VudC9jb25zZW50LXRvLXNoYXJlLWV4YW1wbGU6IENvbnNlbnQ6IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL3VzL3Nkb2gtY2xpbmljYWxjYXJlL1N0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLUNvbnNlbnQKSU5GT1JNQVRJT046IEdyb3VwL1IxMDE6IEdyb3VwOiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci91cy9zZG9oLWNsaW5pY2FsY2FyZS9TdHJ1Y3R1cmVEZWZpbml0aW9uL1NET0hDQy1Hcm91cAojIFRoZSBmb2xsb3dpbmcgaW5zdGFuY2VzIGhhdmUgYmVlbiByZXZpZXdlZCBhbmQgY29uZmlybWVkIHRvIHZhbGlkYXRlIGFnYWluc3QgdGhlIGludGVuZGVkIHJlc291cmNlcy4KSU5GT1JNQVRJT046IFN0cnVjdHVyZU1hcC9TRE9IQ0MtU3RydWN0dXJlTWFwLUh1bmdlclZpdGFsU2lnbk1hcHBlci0xOiBTdHJ1Y3R1cmVNYXA6IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vU3RydWN0dXJlTWFwCklORk9STUFUSU9OOiBRdWVzdGlvbm5haXJlL1NET0hDQy1RdWVzdGlvbm5haXJlLUh1bmdlclZpdGFsU2lnbi0xOiBRdWVzdGlvbm5haXJlOiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL1F1ZXN0aW9ubmFpcmUKSU5GT1JNQVRJT046IFZhbHVlU2V0L1NET0hDQy1WYWx1ZVNldC1TRE9IRG9tYWluLTE6IFZhbHVlU2V0OiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL1ZhbHVlU2V0CklORk9STUFUSU9OOiBWYWx1ZVNldC9TRE9IQ0MtVmFsdWVTZXQtSENQQ1NJSS0xOiBWYWx1ZVNldDogVmFsaWRhdGUgcmVzb3VyY2UgYWdhaW5zdCBwcm9maWxlIGh0dHA6Ly9obDcub3JnL2ZoaXIvU3RydWN0dXJlRGVmaW5pdGlvbi9WYWx1ZVNldAojIFRoZSBmb2xsb3dpbmcgcHJvZmlsZXMgaGF2ZSBiZWVuIHJldmlld2VkIGFuZCBjb25maXJtZWQgdG8gdmFsaWRhdGUgYWdhaW5zdCB0aGUgaW50ZW5kZWQgcmVzb3VyY2VzL1N0cnVjdHVyZURlZmludGlvbnMuCklORk9STUFUSU9OOiBTdHJ1Y3R1cmVEZWZpbml0aW9uL1NET0hDQy1Db25kaXRpb24tQmFzZS0xOiBTdHJ1Y3R1cmVEZWZpbml0aW9uOiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL1N0cnVjdHVyZURlZmluaXRpb24KSU5GT1JNQVRJT046IFN0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLUdvYWwtQmFzZS0xOiBTdHJ1Y3R1cmVEZWZpbml0aW9uOiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL1N0cnVjdHVyZURlZmluaXRpb24KSU5GT1JNQVRJT046IFN0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLU9ic2VydmF0aW9uLVNjcmVlbmluZ1Jlc3BvbnNlQmFzZS0xOiBTdHJ1Y3R1cmVEZWZpbml0aW9uOiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL1N0cnVjdHVyZURlZmluaXRpb24KSU5GT1JNQVRJT046IFN0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLVByb2NlZHVyZS1CYXNlLTE6IFN0cnVjdHVyZURlZmluaXRpb246IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vU3RydWN0dXJlRGVmaW5pdGlvbgpJTkZPUk1BVElPTjogU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtU2VydmljZVJlcXVlc3QtQmFzZS0xOiBTdHJ1Y3R1cmVEZWZpbml0aW9uOiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL1N0cnVjdHVyZURlZmluaXRpb24KSU5GT1JNQVRJT046IFN0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLVRhc2stQmFzZS0xOiBTdHJ1Y3R1cmVEZWZpbml0aW9uOiBWYWxpZGF0ZSByZXNvdXJjZSBhZ2FpbnN0IHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL1N0cnVjdHVyZURlZmluaXRpb24KSU5GT1JNQVRJT046IFN0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLUNvbnNlbnQ6IFN0cnVjdHVyZURlZmluaXRpb246IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vU3RydWN0dXJlRGVmaW5pdGlvbgpJTkZPUk1BVElPTjogU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtR3JvdXA6IFN0cnVjdHVyZURlZmluaXRpb246IFZhbGlkYXRlIHJlc291cmNlIGFnYWluc3QgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vU3RydWN0dXJlRGVmaW5pdGlvbiAKIyBUaGUgZm9sbG93aW5nIGlzc3VlcyBoYXZlIGJlZW4gcmV2aWV3ZWQgYW5kIHRoZXNlIGl0ZW1zIGFyZSBub3QgaW50ZW5kZWQgdG8gdmFsaWRhdGUgYWdhaW5zdCBvbmUgb2YgdGhlIHNsaWNlcy4KSU5GT1JNQVRJT046IENvbmRpdGlvbi9TRE9IQ0MtQ29uZGl0aW9uLUh1bmdlclZpdGFsU2lnbi1FeGFtcGxlLTE6IENvbmRpdGlvbi5jYXRlZ29yeVswXTogVGhpcyBlbGVtZW50IGRvZXMgbm90IG1hdGNoIGFueSBrbm93biBzbGljZSBkZWZpbmVkIGluIHRoZSBwcm9maWxlIGh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvc2RvaC1jbGluaWNhbGNhcmUvU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtQ29uZGl0aW9uLUJhc2UtMQpJTkZPUk1BVElPTjogQ29uZGl0aW9uL1NET0hDQy1Db25kaXRpb24tSHVuZ2VyVml0YWxTaWduLUV4YW1wbGUtMTogQ29uZGl0aW9uLmNvZGUuY29kaW5nWzBdOiBUaGlzIGVsZW1lbnQgZG9lcyBub3QgbWF0Y2ggYW55IGtub3duIHNsaWNlIGRlZmluZWQgaW4gdGhlIHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci91cy9zZG9oLWNsaW5pY2FsY2FyZS9TdHJ1Y3R1cmVEZWZpbml0aW9uL1NET0hDQy1Db25kaXRpb24tQmFzZS0xCklORk9STUFUSU9OOiBQcm9jZWR1cmUvU0RPSENDLVByb2NlZHVyZS1IdW5nZXJWaXRhbFNpZ24tRXhhbXBsZS0xOiBQcm9jZWR1cmUuY29kZS5jb2RpbmdbMF06IFRoaXMgZWxlbWVudCBkb2VzIG5vdCBtYXRjaCBhbnkga25vd24gc2xpY2UgZGVmaW5lZCBpbiB0aGUgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL3VzL3Nkb2gtY2xpbmljYWxjYXJlL1N0cnVjdHVyZURlZmluaXRpb24vU0RPSENDLVByb2NlZHVyZS1CYXNlLTEKSU5GT1JNQVRJT046IE9ic2VydmF0aW9uL1NET0hDQy1PYnNlcnZhdGlvbi1IdW5nZXJWaXRhbFNpZ24tRXhhbXBsZS0xOiBPYnNlcnZhdGlvbi5lZmZlY3RpdmUub2ZUeXBlKGRhdGVUaW1lKTogVGhpcyBlbGVtZW50IGRvZXMgbm90IG1hdGNoIGFueSBrbm93biBzbGljZSBkZWZpbmVkIGluIHRoZSBwcm9maWxlIGh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvc2RvaC1jbGluaWNhbGNhcmUvU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtT2JzZXJ2YXRpb24tU2NyZWVuaW5nUmVzcG9uc2VCYXNlLTEKSU5GT1JNQVRJT046IE9ic2VydmF0aW9uL1NET0hDQy1PYnNlcnZhdGlvbi1IdW5nZXJWaXRhbFNpZ24tRXhhbXBsZS0yOiBPYnNlcnZhdGlvbi5lZmZlY3RpdmUub2ZUeXBlKGRhdGVUaW1lKTogVGhpcyBlbGVtZW50IGRvZXMgbm90IG1hdGNoIGFueSBrbm93biBzbGljZSBkZWZpbmVkIGluIHRoZSBwcm9maWxlIGh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvc2RvaC1jbGluaWNhbGNhcmUvU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtT2JzZXJ2YXRpb24tU2NyZWVuaW5nUmVzcG9uc2VCYXNlLTEKSU5GT1JNQVRJT046IE9ic2VydmF0aW9uL1NET0hDQy1PYnNlcnZhdGlvbi1IdW5nZXJWaXRhbFNpZ24tRXhhbXBsZS0zOiBPYnNlcnZhdGlvbi5lZmZlY3RpdmUub2ZUeXBlKGRhdGVUaW1lKTogVGhpcyBlbGVtZW50IGRvZXMgbm90IG1hdGNoIGFueSBrbm93biBzbGljZSBkZWZpbmVkIGluIHRoZSBwcm9maWxlIGh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvc2RvaC1jbGluaWNhbGNhcmUvU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtT2JzZXJ2YXRpb24tU2NyZWVuaW5nUmVzcG9uc2VCYXNlLTEKIyBXZSBoYXZlIGRpc2N1c3NlZCB3aXRoIFVTIENvcmUgdGhhdCB3ZSBkaWQgbm90IHVzZSB0aGVpciBwcm9maWxlIGFuZCBleHBsYWluZWQgd2h5LiAgRmlsZWQgSmlyYSB0aWNrZXQgMjk3OTUuCldBUk5JTkc6IFN0cnVjdHVyZURlZmluaXRpb24ud2hlcmUodXJsID0gJ2h0dHA6Ly9obDcub3JnL2ZoaXIvdXMvc2RvaC1jbGluaWNhbGNhcmUvU3RydWN0dXJlRGVmaW5pdGlvbi9TRE9IQ0MtT2JzZXJ2YXRpb24tU2NyZWVuaW5nUmVzcG9uc2VCYXNlLTEnKS5iYXNlRGVmaW5pdGlvbjogVVMgRkhJUiBVc2FnZSBydWxlcyByZXF1aXJlIHRoYXQgYWxsIHByb2ZpbGVzIG9uIE9ic2VydmF0aW9uIGRlcml2ZSBmcm9tIG9uZSBvZiB0aGUgYmFzZSBVUyBwcm9maWxlcwojIFRoaXMgd2FybmluZyBpcyBleHBlY3RlZCBiZWNhdXNlIEhDUENTIExldmVsIElJIGNvZGVzIGFyZSBub3Qgb24gdGhlIEZISVIgdGVybWlub2xvZ3kgc2VydmVyLgpXQVJOSU5HOiBWYWx1ZVNldC53aGVyZShpZCA9ICdTRE9IQ0MtVmFsdWVTZXQtSENQQ1NJSS0xJyk6IEVycm9yIGZyb20gc2VydmVyOiBVbmFibGUgdG8gcHJvdmlkZSBzdXBwb3J0IGZvciBjb2RlIHN5c3RlbSB1cm46b2lkOjIuMTYuODQwLjEuMTEzODgzLjYuMjg1Cg=="/>
+                    <title value="ignoreWarnings.txt"/>
+                </attachment>
+            </content>
+        </DocumentReference>
+    </contained>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/sdoh-clinicalcare"/>
+    <version value="0.1.1"/>
+    <name value="Sdohclinicalcare"/>
+    <title value="SDOH Clinical Care"/>
+    <status value="draft"/>
+    <date value="2021-05-03"/>
+    <publisher value="HL7 International - Patient Care WG"/>
+    <contact>
+        <name value="HL7 International - Patient Care"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/patientare"/>
+        </telecom>
+    </contact>
+    <description value="Social Determinants of Health (SDOH) are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange SDOH content defined by the Gravity Project using the Fast Healthcare Ineroperability Resources (FHIR) standard. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. This IG addresses the need to gather SDOH information in the context of clinical encounters and describes how to share SDOH information and other relevant information with outside organizations for the purpose of coordinating services and support to address SDOH related needs. In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. The guide supports the following use cases:&#xA;* 	Document SDOH data in conjunction with the patient encounters&#xA;* 	Document and track SDOH related interventions to completion&#xA;* 	Gather and aggregate SDOH data for uses beyond the point of care (e.g. public health, population health, quality measurement, risk adjustment, quality improvement, and research)&#xA;&#xA;This implementation guide was developed under the auspices of the Gravity FHIR accelerator project, which specifically focuses on using HL7 FHIR to define standards for the exchange of SDOH-related information.  Both the project and this implementation guide are focused on the U.S. environment.  This implementation guide leverages content from the US Core implementation guide and binds to US-specific terminology.  However, the basic constructs and interaction patterns may well be applicable outside the U.S.&#xA;&#xA;### Content and organization&#xA;&#xA;The implementation guide is organized into the following sections:&#xA;&#xA;* Background: Includes [Gravity Background](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/gravity_background.html), [SDOH Clinical Care Scope](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/sdoh_clinical_care_scope.html), [Personas and Patient Stories](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/personas_and_patient_stories.html) that describe the SDOH environment surrounding the intended use of this implementation guide&#xA;* Context: Describes the [Survey Instrument Support](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/survey_instrument_support.html),[ QuestionnaireResponse Mapping Instructions](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/mapping_instructions.html), [Support for Multiple Domains](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/support_for_multiple_domains.html), and [Exchange Workflow diagram](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/exchange_workflow.html) that describes a high-level overview of expected process flow&#xA;* Specifications: Provides a [Technical Background](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/technical_background.html), overview of the [FHIR Artifacts](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/fhir_artifacts_overview.html) defined and used in this IG, description of [Privacy and Security](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/privacy_and_security.html) issues, and explains [MustSupport and Missing Data](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/mustsupport_and_missing_data.html) concepts &#xA;* [Downloads](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/downloads.html): Provides for the download of various IG related artifacts&#xA;* [Credits](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/credits.html): Identifies the individuals and organizations involved in developing this implementation guide&#xA;* [Artifacts Index](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/artifacts.html):  Introduces and provides links to the FHIR R4 profiles, examples and other FHIR artifacts used in this implementation guide&#xA;&#xA;### Update Tracking&#xA;&#xA;* Version 0.1.1 b (second update pushed to continuous build on 5/7/2021)&#xA;* Verison 0.1.1 c (update to support PRAPARE pushed to continuous build on 5/10/2021)&#xA;* Verison 0.1.1 d (update to fix deletions and support specific PRAPARE items pushed to continuous build on 5/12/2021)&#xA;"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <packageId value="hl7.fhir.us.sdoh-clinicalcare"/>
+    <fhirVersion value="4.0.1"/>
+    <dependsOn>
+        <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
+        <packageId value="hl7.fhir.us.core"/>
+        <version value="3.1.1"/>
+    </dependsOn>
+    <dependsOn>
+        <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc"/>
+        <packageId value="hl7.fhir.uv.sdc"/>
+        <version value="2.7.0"/>
+    </dependsOn>
+    <definition>
+        <grouping id="new-group1">
+            <name value="Profiles"/>
+        </grouping>
+        <grouping id="new-group2">
+            <name value="Examples"/>
+        </grouping>
+        <grouping id="new-group3">
+            <name value="Images"/>
+        </grouping>
+        <grouping id="new-group4">
+            <name value="Terminology"/>
+        </grouping>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+                <display value="SDOHCC Observation ScreeningResponseBase 1"/>
+            </reference>
+            <name value="SDOHCC Observation Screening Response Base"/>
+            <description value="This profile constrains the Observation resource for observations that represent question and answer pairs from SDOH screening instruments that are represented in LOINC."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-Condition-Base-1"/>
+                <display value="SDOHCC Condition Base 1"/>
+            </reference>
+            <name value="SDOHCC Condition Base "/>
+            <description value="This profile constrains the Condition resource for conditions that represent Social Determinants of Health."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-Goal-Base-1"/>
+                <display value="SDOHCC Goal Base 1"/>
+            </reference>
+            <name value="SDOHCC Goal Base "/>
+            <description value="This profile constrains the Goal resource for goals that address Social Determinants of Health."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-ServiceRequest-Base-1"/>
+                <display value="SDOHCC ServiceRequest Base 1"/>
+            </reference>
+            <name value="SDOHCC ServiceRequest Base "/>
+            <description value="This profile constrains the ServiceRequest resource for requests that address Social Determinants of Health."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-Procedure-Base-1"/>
+                <display value="SDOHCC Procedure Base 1"/>
+            </reference>
+            <name value="SDOHCC Procedure Base "/>
+            <description value="This profile constrains the Procedure resource for interventions that address Social Determinants of Health."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Patient/pat-53234"/>
+                <display value="Patient Colin Abbas"/>
+            </reference>
+            <name value="Patient Colin Abbas Example"/>
+            <description value="An example of a patient. This example is used as the referenced subject in other SDOHCC examples."/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="QuestionnaireResponse/QR-5770275"/>
+                <display value="SDOHCC QuestionnaireResponse HungerVitalSign Example 1"/>
+            </reference>
+            <name value="SDOHCC QuestionnaireResponse Hunger Vital Sign Example "/>
+            <description value="An example of an SDC QuestionnaireResponse that represents the question and answer pairs from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9). The example is generated using the LHC-Forms SDC Questionnaire App."/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Questionnaire/SDOHCC-Questionnaire-HungerVitalSign-1"/>
+                <display value="SDOHCC Questionnaire HungerVitalSign 1"/>
+            </reference>
+            <name value="SDOHCC Questionnaire Hunger Vital Sign"/>
+            <description value="A Questionnaire instance that represents the question and answer pairs from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9)."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-Observation-HungerVitalSign-Example-1"/>
+                <display value="SDOHCC Observation HungerVitalSign Example 1"/>
+            </reference>
+            <name value="SDOHCC Observation Hunger Vital Sign Q1 Example "/>
+            <description value="An example of an Observation that represents the first question and answer pair (LOINC code 88122-7) from the  Hunger Vital Sign [HVS] screening questionnaire represented in LOINC. "/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-Observation-HungerVitalSign-Example-2"/>
+                <display value="SDOHCC Observation HungerVitalSign Example 2"/>
+            </reference>
+            <name value="SDOHCC Observation Hunger Vital Sign Q2 Example"/>
+            <description value="An example of an Observation that represents the second question and answer pair (LOINC code 88123-5) from the  Hunger Vital Sign [HVS] screening questionnaire represented in LOINC. "/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-Observation-HungerVitalSign-Example-3"/>
+                <display value="SDOHCC Observation HungerVitalSign Example 3"/>
+            </reference>
+            <name value="SDOHCC Observation Hunger Vital Sign Q3 Example"/>
+            <description value="An example of an Observation that represents the third question and answer pair (LOINC code 88124-3) from the  Hunger Vital Sign [HVS] screening questionnaire represented in LOINC. "/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-Observation-HungerVitalSignGroup-1"/>
+                <display value="SDOHCC Observation HungerVitalSignGroup 1"/>
+            </reference>
+            <name value="SDOHCC Observation Hunger Vital Sign Grouping"/>
+            <description value="An example of an Observation grouping that has as its members the Observations that represent the 3 question and answer pairs from LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9)."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Condition/SDOHCC-Condition-HungerVitalSign-Example-1"/>
+                <display value="SDOHCC Condition HungerVitalSign Example 1"/>
+            </reference>
+            <name value="SDOHCC Condition Hunger Vital Sign Example"/>
+            <description value="An example of a Condition (a health concern) that references, as evidence, Observations derived from the LOINC Hunger Vital Sign [HVS] questionnaire (88121-9)."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1"/>
+                <display value="SDOHCC StructureMap HungerVitalSignMapper 1"/>
+            </reference>
+            <name value="SDOHCC StructureMap Hunger Vital Sign Mapper "/>
+            <description value="A StructureMap instance that represents the resource that transforms specific question and answer pairs from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9) to their corresponding Observations (SDOHCC Observation Hunger Vital Sign Q1 Example, SDOHCC Observation Hunger Vital Sign Q2 Example, and SDOHCC Observation Hunger Vital Sign Q3 Example) and Condition (SDOHCC Condition Hunger Vital Sign Example)."/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-Task-Base-1"/>
+                <display value="SDOHCC Task Base 1"/>
+            </reference>
+            <name value="SDOHCC Task Base   "/>
+            <description value="This profile constrains the Task resource for use in requesting fulfillment of an SDOHCC ServiceRequest (i.e. referral for service) and subsequently tracking and managing the fulfillment of that referral."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="CodeSystem/sdohcc-temporary-codes"/>
+                <display value="SDOHCC CodeSystem Temporary Codes"/>
+            </reference>
+            <name value="SDOHCC CodeSystem Temporary Codes"/>
+            <description value="A local code system defined within the context of the SDOH-ClinicalCare IG."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Goal/SDOHCC-Goal-HungerVitalSign-Example-1"/>
+                <display value="SDOHCC Goal HungerVitalSign Example 1"/>
+            </reference>
+            <name value="SDOHCC Goal Hunger Vital Sign Example"/>
+            <description value="An example of a Goal that addresses a Condition of Food Insecurity. "/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal-Base-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ServiceRequest/SDOHCC-ServiceRequest-HungerVitalSign-Example-1"/>
+                <display value="SDOHCC ServiceRequest HungerVitalSign Example 1"/>
+            </reference>
+            <name value="SDOHCC ServiceRequest Hunger Vital Sign Example"/>
+            <description value="An example of a ServiceRequest that references as its reason a Condition of Food Insecurity."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest-Base-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Procedure/SDOHCC-Procedure-HungerVitalSign-Example-1"/>
+                <display value="SDOHCC Procedure HungerVitalSign Example 1"/>
+            </reference>
+            <name value="SDOHCC Procedure Hunger Vital Sign Example"/>
+            <description value="An example of a Procedure that is based on a ServiceRequest and references as its reason a Condition of Food Insecurity."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure-Base-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Task/SDOHCC-Task-OrderFulfillment-Example-1"/>
+                <display value="SDOHCC Task OrderFulfillment Example 1"/>
+            </reference>
+            <name value="SDOHCC Task Order Fulfillment Completed Example"/>
+            <description value="An example of a completed Task that has a ServiceRequest as the Task.focus and also has a Task.output."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task-Base-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/SDOHCC-ValueSet-SDOHDomain-1"/>
+                <display value="SDOHCC ValueSet SDOHDomain 1"/>
+            </reference>
+            <name value="SDOHCC ValueSet SDOH Category "/>
+            <description value="This value set is defined extensionally to include concepts that represent Social Determinant of Health domains."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/SDOHCC-ValueSet-HCPCSII-1"/>
+                <display value="SDOHCC ValueSet HCPCSII 1"/>
+            </reference>
+            <name value="SDOHCC ValueSet HCPCSII"/>
+            <description value="This value set is defined intensionally to include all Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-Consent-Base-1"/>
+                <display value="SDOHCC Consent Base 1"/>
+            </reference>
+            <name value="SDOHCC Consent Base"/>
+            <description value="This profile constrains the Consent resource for use related to the release of Social Determinants of Health information to non-HIPAA covered organizations."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-Group-Base-1"/>
+                <display value="SDOHCC Group Base 1"/>
+            </reference>
+            <name value="SDOHCC Group Base "/>
+            <description value="This profile constrains the Group resource for use in identifying patients who have a specific payor and any Social Determinants of Health condition."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/SDOHCC-ValueSet-ObservationStatus-1"/>
+                <display value="SDOHCC ValueSet ObservationStatus 1"/>
+            </reference>
+            <name value="SDOHCC ValueSet Observation Status "/>
+            <description value="This value set is defined intensionally to include the specified codes from the HL7 ObservationStatus value set."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-Observation-Assessment-Base-1"/>
+                <display value="SDOHCC Observation Assessment Base 1"/>
+            </reference>
+            <name value="SDOHCC Observation Assessment Base "/>
+            <description value="This profile constrains the Observation resource for use related to Social Determinants of Health that involve assessment (e.g., by a provider or payor) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation)."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/SDOHCC-ValueSet-ICD10CM"/>
+                <display value="SDOHCC ValueSet ICD10CM"/>
+            </reference>
+            <name value="SDOHCC ValueSet ICD10CM"/>
+            <description value="This value set contains all of ICD-10-CM."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Consent/SDOHCC-Consent-Disclosure-Example-1"/>
+                <display value="SDOHCC Consent Disclosure Example 1"/>
+            </reference>
+            <name value="SDOHCC Consent Disclosure Example "/>
+            <description value="An example of a Consent for information disclosure related to SDOH information."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Organization/SDOHCC-Organization-Payor-Example-1"/>
+                <display value="SDOHCC Organization Payor Example 1"/>
+            </reference>
+            <name value="SDOHCC Organization Payor Example "/>
+            <description value="An example of a payor organization. This example is used as the referenced organization in other SDOHCC examples."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Task/SDOHCC-Task-OrderFulfillmentAccepted-Example"/>
+                <display value="SDOHCC Task OrderFulfillmentAccepted Example"/>
+            </reference>
+            <name value="SDOHCC Task Order Fulfillment Accepted Example"/>
+            <description value="An example of an accepted Task that has a ServiceRequest as the Task.focus."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task-Base-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Group/SDOHCC-Group-Example-1"/>
+                <display value="SDOHCC Group Example 1"/>
+            </reference>
+            <name value="SDOHCC Group Payor's SDOH Patients Example "/>
+            <description value="An example of Group of patients that have a specific payor and any SDOH condition. "/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Group-Base-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-Observation-AssessmentFoodInsecurity-Example-1"/>
+                <display value="SDOHCC Observation AssessmentFoodInsecurity Example-1"/>
+            </reference>
+            <name value="SDOHCC Observation Assessment Food Insecurity Example"/>
+            <description value="An example of an Observation that represents an assessment (e.g., by a provider or payor) related to the SDOH category of food insecurity which is not necessarily derived only from a screening survey.&#xA;"/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-Assessment-Base-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Condition/SDOHCC-Condition-HousingStatusPRAPARE-Example"/>
+                <display value="SDOHCC Condition Housing Status PRAPARE Example"/>
+            </reference>
+            <name value="SDOHCC Condition Housing Status PRAPARE Example"/>
+            <description value="An example of a Condition that represents a health concern based on an Observation instance that represents a question and answer pair related to housing status from the PRAPARE questionnaire represented in LOINC. "/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Condition/SDOHCC-Condition-EmploymentStatusPRAPARE-Example"/>
+                <display value="SDOHCC Condition Employment Status PRAPARE Example"/>
+            </reference>
+            <name value="SDOHCC Condition Employment Status PRAPARE Example"/>
+            <description value="An example of a Condition that represents a health concern based on an Observation instance that represents a question and answer pair related to employment status from the PRAPARE questionnaire represented in LOINC. "/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Questionnaire/SDOHCC-Questionnaire-PRAPARE"/>
+                <display value="SDOHCC Questionnaire PRAPARE"/>
+            </reference>
+            <name value="SDOHCC Questionnaire PRAPARE"/>
+            <description value="A Questionnaire instance that represents the question and answer pairs from the PRAPARE questionnaire represented in LOINC."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureMap/SDOHCC-StructureMap-PRAPAREMapper"/>
+                <display value="SDOHCC StructureMap PRAPARE Mapper"/>
+            </reference>
+            <name value="SDOHCC StructureMap PRAPARE Mapper"/>
+            <description value="A StructureMap instance that represents the resource that transforms specific question and answer pairs from the PRAPARE questionnaire represented in LOINC to their corresponding Observations and Conditions (health concerns)."/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="QuestionnaireResponse/QR-5770421"/>
+                <display value="SDOHCC Questionnaire Response PRAPARE Example"/>
+            </reference>
+            <name value="SDOHCC Questionnaire Response PRAPARE Example"/>
+            <description value="An example of an SDC QuestionnaireResponse that represents the question and answer pairs from the PRAPARE questionnaire represented in LOINC. The example is generated using the LHC-Forms SDC Questionnaire App. The example does not include responses to all questions in the PRAPARE questionnaire. "/>
+            <exampleBoolean value="true"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-Observation-EmploymentStatusPRAPARE-Example"/>
+                <display value="SDOHCC Observation Employment Status PRAPARE Example"/>
+            </reference>
+            <name value="SDOHCC Observation Employment Status PRAPARE Example"/>
+            <description value="An example of a screening response Observation that represents a question and answer pair related to employment status from the PRAPARE questionnaire represented in LOINC. "/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-Observation-HousingStatusPRAPARE-Example"/>
+                <display value="SDOHCC Observation Housing Status PRAPARE Example"/>
+            </reference>
+            <name value="SDOHCC Observation Housing Status PRAPARE Example"/>
+            <description value="An example of a screening response Observation that represents a question and answer pair related to housing status from the PRAPARE questionnaire represented in LOINC. "/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <page>
+            <nameUrl value="index.html"/>
+            <title value="Home Page"/>
+            <generation value="markdown"/>
+            <page>
+                <nameUrl value="gravity_background.html"/>
+                <title value="Gravity Background"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="sdoh_clinical_care_scope.html"/>
+                <title value="SDOH Clinical Care Scope"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="personas_and_patient_stories.html"/>
+                <title value="Personas and Patient Stories"/>
+                <generation value="markdown"/>
+                <page>
+                    <nameUrl value="patient_story_1_personas.html"/>
+                    <title value="Patient Story 1 Personas"/>
+                    <generation value="markdown"/>
+                </page>
+                <page>
+                    <nameUrl value="patient_story_1.html"/>
+                    <title value="Patient Story 1"/>
+                    <generation value="markdown"/>
+                </page>
+            </page>
+            <page>
+                <nameUrl value="survey_instrument_support.html"/>
+                <title value="Survey Instrument Support"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="mapping_instructions.html"/>
+                <title value="Mapping Instructions"/>
+                <generation value="markdown"/>
+                <page>
+                    <nameUrl value="mapping_instructions_hvs_questionnaire.html"/>
+                    <title value="Mapping Instructions HVS Questionnaire"/>
+                    <generation value="markdown"/>
+                </page>
+                <page>
+                    <nameUrl value="mapping_instructions_prapare_questionnaire.html"/>
+                    <title value="Mapping Instructions PRAPARE Questionnaire"/>
+                    <generation value="markdown"/>
+                </page>
+            </page>
+            <page>
+                <nameUrl value="support_for_multiple_domains.html"/>
+                <title value="Support for Multiple Domains"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="exchange_workflow.html"/>
+                <title value="Exchange Workflow"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="technical_background.html"/>
+                <title value="Technical Background"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="fhir_artifacts_overview.html"/>
+                <title value="FHIR Artifacts Overview"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="privacy_and_security.html"/>
+                <title value="Privacy and Security"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="mustsupport_and_missing_data.html"/>
+                <title value="MustSupport and Missing Data"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="downloads.html"/>
+                <title value="Downloads"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="credits.html"/>
+                <title value="Credits"/>
+                <generation value="markdown"/>
+            </page>
+        </page>
+        <parameter>
+            <code value="jira-code"/>
+            <value value="sdoh-cc"/>
+        </parameter>
+        <parameter>
+            <code value="copyrightyear"/>
+            <value value="2020+"/>
+        </parameter>
+        <parameter>
+            <code value="releaselabel"/>
+            <value value="CI Build"/>
+        </parameter>
+    </definition>
+</ImplementationGuide>
