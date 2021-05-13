@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="QR-5770421"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2021-05-06T22:58:40.022+00:00"/>
-        <source value="#6XgfAjuNyC1D2LT3"/>
+        <versionId value="4"/>
+        <lastUpdated value="2021-05-12T21:54:58.558+00:00"/>
+        <source value="#59swvRvTh1CJ6243"/>
         <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"/>
     </meta>
     <questionnaire value="http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-Questionnaire-PRAPARE">
@@ -19,10 +19,6 @@
         <display value="COLIN ABBAS"/>
     </subject>
     <authored value="2021-04-26T13:56:33.747Z"/>
-    <source>
-        <reference value="Patient/pat-53234"/>
-        <display value="COLIN ABBAS"/>
-    </source>
     <item>
         <linkId value="/93025-5"/>
         <text value="Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]"/>
@@ -35,8 +31,8 @@
                 <answer>
                     <valueCoding>
                         <system value="http://loinc.org"/>
-                        <code value="LA33-6"/>
-                        <display value="Yes"/>
+                        <code value="LA32-8"/>
+                        <display value="No"/>
                     </valueCoding>
                 </answer>
             </item>
@@ -46,8 +42,15 @@
                 <answer>
                     <valueCoding>
                         <system value="http://loinc.org"/>
-                        <code value="LA6156-9"/>
-                        <display value="Asian"/>
+                        <code value="LA4457-3"/>
+                        <display value="White"/>
+                    </valueCoding>
+                </answer>
+                <answer>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30187-1"/>
+                        <display value="Pacific Islander"/>
                     </valueCoding>
                 </answer>
             </item>
@@ -89,6 +92,13 @@
             <linkId value="/93042-0"/>
             <text value="Family and home"/>
             <item>
+                <linkId value="/93042-0/63512-8"/>
+                <text value="How many people are living or staying at this address?"/>
+                <answer>
+                    <valueInteger value="6"/>
+                </answer>
+            </item>
+            <item>
                 <linkId value="/93042-0/71802-3"/>
                 <text value="Housing status"/>
                 <answer>
@@ -99,10 +109,39 @@
                     </valueCoding>
                 </answer>
             </item>
+            <item>
+                <linkId value="/93042-0/93033-9"/>
+                <text value="Are you worried about losing your housing?"/>
+                <answer>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30122-8"/>
+                        <display value="I choose not to answer this question"/>
+                    </valueCoding>
+                </answer>
+            </item>
+            <item>
+                <linkId value="/93042-0/56799-0"/>
+                <text value="Address"/>
+                <answer>
+                    <valueString value="Broadway"/>
+                </answer>
+            </item>
         </item>
         <item>
             <linkId value="/93041-2"/>
             <text value="Money and resources"/>
+            <item>
+                <linkId value="/93041-2/82589-3"/>
+                <text value="Highest level of educ"/>
+                <answer>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30191-3"/>
+                        <display value="Less than high school degree"/>
+                    </valueCoding>
+                </answer>
+            </item>
             <item>
                 <linkId value="/93041-2/67875-5"/>
                 <text value="Employment status current"/>
@@ -111,6 +150,127 @@
                         <system value="http://loinc.org"/>
                         <code value="LA17956-6"/>
                         <display value="Unemployed"/>
+                    </valueCoding>
+                </answer>
+            </item>
+            <item>
+                <linkId value="/93041-2/76437-3"/>
+                <text value="Primary insurance"/>
+                <answer>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA17849-3"/>
+                        <display value="Medicaid"/>
+                    </valueCoding>
+                </answer>
+            </item>
+            <item>
+                <linkId value="/93041-2/63586-2"/>
+                <text value="What was your best estimate of the total income of all family members from all sources, before taxes, in last year?"/>
+                <answer>
+                    <valueDecimal value="25000"/>
+                </answer>
+            </item>
+            <item>
+                <linkId value="/93041-2/93031-3"/>
+                <text value="In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?"/>
+                <answer>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30126-9"/>
+                        <display value="Clothing"/>
+                    </valueCoding>
+                </answer>
+                <answer>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30127-7"/>
+                        <display value="Child care"/>
+                    </valueCoding>
+                </answer>
+            </item>
+            <item>
+                <linkId value="/93041-2/93030-5"/>
+                <text value="Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?"/>
+                <answer>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30134-3"/>
+                        <display value="Yes, it has kept me from non-medical meetings, appointments, work, or from getting things that I need"/>
+                    </valueCoding>
+                </answer>
+            </item>
+        </item>
+        <item>
+            <linkId value="/93040-4"/>
+            <text value="Social and emotional health"/>
+            <item>
+                <linkId value="/93040-4/93029-7"/>
+                <text value="How often do you see or talk to people that you care about and feel close to (For example: talking to friends on the phone, visiting friends or family, going to church or club meetings)?"/>
+                <answer>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30130-1"/>
+                        <display value="1 or 2 times a week"/>
+                    </valueCoding>
+                </answer>
+            </item>
+            <item>
+                <linkId value="/93040-4/93038-8"/>
+                <text value="Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?"/>
+                <answer>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA13909-9"/>
+                        <display value="Somewhat"/>
+                    </valueCoding>
+                </answer>
+            </item>
+        </item>
+        <item>
+            <linkId value="/93039-6"/>
+            <text value="Optional additional questions"/>
+            <item>
+                <linkId value="/93039-6/93028-9"/>
+                <text value="In the past year, have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility?"/>
+                <answer>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA32-8"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answer>
+            </item>
+            <item>
+                <linkId value="/93039-6/93027-1"/>
+                <text value="Are you a refugee?"/>
+                <answer>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA32-8"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answer>
+            </item>
+            <item>
+                <linkId value="/93039-6/93026-3"/>
+                <text value="Do you feel physically and emotionally safe where you currently live?"/>
+                <answer>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA32-8"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answer>
+            </item>
+            <item>
+                <linkId value="/93039-6/76501-6"/>
+                <text value="Within the last year, have you been afraid of your partner or ex-partner?"/>
+                <answer>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA32-8"/>
+                        <display value="No"/>
                     </valueCoding>
                 </answer>
             </item>

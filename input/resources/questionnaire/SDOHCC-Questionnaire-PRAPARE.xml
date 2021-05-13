@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Questionnaire-PRAPARE"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2021-05-05T18:02:53.761+00:00"/>
-        <source value="#FI0yRVbky744lQqQ"/>
+        <versionId value="4"/>
+        <lastUpdated value="2021-05-12T21:54:58.566+00:00"/>
+        <source value="#E2itBZOHHYoMpbbq"/>
         <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract|2.7"/>
     </meta>
     <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
@@ -311,6 +311,8 @@
             <item>
                 <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unit">
                     <valueCoding>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="{#}"/>
                         <display value="{#}"/>
                     </valueCoding>
                 </extension>
@@ -321,7 +323,7 @@
                     <display value="How many people are living or staying at this address?"/>
                 </code>
                 <text value="How many people are living or staying at this address?"/>
-                <type value="decimal"/>
+                <type value="integer"/>
                 <required value="false"/>
             </item>
             <item>
@@ -623,6 +625,8 @@
             <item>
                 <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unit">
                     <valueCoding>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="/a"/>
                         <display value="/a"/>
                     </valueCoding>
                 </extension>

@@ -23,6 +23,8 @@ The implementation guide is organized into the following sections:
 * Version 0.1.1 b (second update pushed to continuous build on 5/7/2021)
 * Verison 0.1.1 c (update to support PRAPARE pushed to continuous build on 5/10/2021)
 * Verison 0.1.1 d (update to fix deletions and support specific PRAPARE items pushed to continuous build on 5/12/2021)
+* Version 0.1.1 e (fixing deletions -- 5/12/2021)
+* Version 0.1.1 f (fixed deletions and updated support of and examples for PRAPARE -- pushed to continuous build on 5/13/2021
 
 
 
