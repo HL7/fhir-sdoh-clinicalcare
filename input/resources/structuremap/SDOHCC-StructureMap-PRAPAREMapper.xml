@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-StructureMap-PRAPAREMapper"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2021-05-05T18:39:42.605+00:00"/>
-        <source value="#khJXcp7nmeJGIZTH"/>
+        <versionId value="4"/>
+        <lastUpdated value="2021-05-12T21:54:58.586+00:00"/>
+        <source value="#1Ts1TGEX7uEwLIGz"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMap-PRAPAREMapper"/>
     <name value="SDOHCC_StructureMap_PRAPAREMapper"/>
@@ -496,42 +496,6 @@
             <name value="rule-20"/>
             <source>
                 <context value="answerItem"/>
-                <element value="answer"/>
-                <variable value="answer"/>
-            </source>
-            <target>
-                <context value="observation"/>
-                <contextType value="variable"/>
-                <element value="value"/>
-                <variable value="newCC"/>
-                <transform value="create"/>
-                <parameter>
-                    <valueString value="CodeableConcept"/>
-                </parameter>
-            </target>
-            <rule>
-                <name value="rule-21"/>
-                <source>
-                    <context value="answer"/>
-                    <element value="valueCoding"/>
-                    <variable value="coding"/>
-                </source>
-                <target>
-                    <context value="newCC"/>
-                    <contextType value="variable"/>
-                    <element value="coding"/>
-                    <variable value="newCoding"/>
-                    <transform value="copy"/>
-                    <parameter>
-                        <valueId value="coding"/>
-                    </parameter>
-                </target>
-            </rule>
-        </rule>
-        <rule>
-            <name value="rule-22"/>
-            <source>
-                <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/56051-6'"/>
             </source>
             <target>
@@ -547,9 +511,14 @@
                     <valueString value="56051-6"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValueCodeableConcept"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-23"/>
+            <name value="rule-21"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/56051-6'"/>
@@ -565,7 +534,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-24"/>
+                <name value="rule-22"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -580,7 +549,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-25"/>
+                    <name value="rule-23"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -595,7 +564,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-26"/>
+                    <name value="rule-24"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -610,7 +579,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-27"/>
+                    <name value="rule-25"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -627,7 +596,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-28"/>
+            <name value="rule-26"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/32624-9'"/>
@@ -645,9 +614,15 @@
                     <valueString value="32624-9"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValuesToComponents"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-29"/>
+            <name value="rule-27"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/32624-9'"/>
@@ -663,7 +638,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-30"/>
+                <name value="rule-28"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -678,7 +653,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-31"/>
+                    <name value="rule-29"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -693,7 +668,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-32"/>
+                    <name value="rule-30"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -708,7 +683,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-33"/>
+                    <name value="rule-31"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -725,7 +700,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-34"/>
+            <name value="rule-32"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/93035-4'"/>
@@ -743,9 +718,14 @@
                     <valueString value="93035-4"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValueCodeableConcept"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-35"/>
+            <name value="rule-33"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/93035-4'"/>
@@ -761,7 +741,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-36"/>
+                <name value="rule-34"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -776,7 +756,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-37"/>
+                    <name value="rule-35"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -791,7 +771,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-38"/>
+                    <name value="rule-36"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -806,7 +786,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-39"/>
+                    <name value="rule-37"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -823,7 +803,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-40"/>
+            <name value="rule-38"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/93034-7'"/>
@@ -841,9 +821,14 @@
                     <valueString value="93034-7"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValueCodeableConcept"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-41"/>
+            <name value="rule-39"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/93034-7'"/>
@@ -859,7 +844,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-42"/>
+                <name value="rule-40"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -874,7 +859,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-43"/>
+                    <name value="rule-41"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -889,7 +874,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-44"/>
+                    <name value="rule-42"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -904,7 +889,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-45"/>
+                    <name value="rule-43"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -921,7 +906,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-46"/>
+            <name value="rule-44"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/54899-0'"/>
@@ -939,9 +924,14 @@
                     <valueString value="54899-0"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValueCodeableConcept"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-47"/>
+            <name value="rule-45"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/54899-0'"/>
@@ -957,7 +947,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-48"/>
+                <name value="rule-46"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -972,7 +962,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-49"/>
+                    <name value="rule-47"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -987,7 +977,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-50"/>
+                    <name value="rule-48"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1002,7 +992,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-51"/>
+                    <name value="rule-49"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1019,7 +1009,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-52"/>
+            <name value="rule-50"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93042-0/63512-8'"/>
@@ -1037,9 +1027,89 @@
                     <valueString value="63512-8"/>
                 </parameter>
             </target>
+            <rule>
+                <name value="rule-51"/>
+                <source>
+                    <context value="answerItem"/>
+                    <element value="answer"/>
+                    <variable value="answer"/>
+                </source>
+                <target>
+                    <context value="observation"/>
+                    <contextType value="variable"/>
+                    <element value="value"/>
+                    <variable value="newQty"/>
+                    <transform value="create"/>
+                    <parameter>
+                        <valueString value="Quantity"/>
+                    </parameter>
+                </target>
+                <rule>
+                    <name value="rule-52"/>
+                    <source>
+                        <context value="answer"/>
+                        <element value="value"/>
+                        <variable value="vs"/>
+                    </source>
+                    <target>
+                        <context value="newQty"/>
+                        <contextType value="variable"/>
+                        <element value="value"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueId value="vs"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="rule-53"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newQty"/>
+                        <contextType value="variable"/>
+                        <element value="unit"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="{#}"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="rule-54"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newQty"/>
+                        <contextType value="variable"/>
+                        <element value="system"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="http://unitsofmeasure.org"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="rule-55"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newQty"/>
+                        <contextType value="variable"/>
+                        <element value="code"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="{#}"/>
+                        </parameter>
+                    </target>
+                </rule>
+            </rule>
         </rule>
         <rule>
-            <name value="rule-53"/>
+            <name value="rule-56"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93042-0/63512-8'"/>
@@ -1055,7 +1125,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-54"/>
+                <name value="rule-57"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1070,7 +1140,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-55"/>
+                    <name value="rule-58"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1085,7 +1155,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-56"/>
+                    <name value="rule-59"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1100,7 +1170,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-57"/>
+                    <name value="rule-60"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1117,7 +1187,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-58"/>
+            <name value="rule-61"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93042-0/71802-3'"/>
@@ -1135,9 +1205,14 @@
                     <valueString value="71802-3"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValueCodeableConcept"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-59"/>
+            <name value="rule-62"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93042-0/71802-3'"/>
@@ -1153,7 +1228,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-60"/>
+                <name value="rule-63"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1168,7 +1243,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-61"/>
+                    <name value="rule-64"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1183,7 +1258,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-62"/>
+                    <name value="rule-65"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1198,7 +1273,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-63"/>
+                    <name value="rule-66"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1215,7 +1290,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-64"/>
+            <name value="rule-67"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93042-0/93033-9'"/>
@@ -1233,9 +1308,14 @@
                     <valueString value="93033-9"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValueCodeableConcept"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-65"/>
+            <name value="rule-68"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93042-0/93033-9'"/>
@@ -1251,7 +1331,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-66"/>
+                <name value="rule-69"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1266,7 +1346,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-67"/>
+                    <name value="rule-70"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1281,7 +1361,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-68"/>
+                    <name value="rule-71"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1296,7 +1376,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-69"/>
+                    <name value="rule-72"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1313,7 +1393,110 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-70"/>
+            <name value="rule-73"/>
+            <source>
+                <context value="answerItem"/>
+                <condition value="linkId = '/93042-0/56799-0'"/>
+            </source>
+            <target>
+                <context value="observation"/>
+                <contextType value="variable"/>
+                <element value="code"/>
+                <variable value="code"/>
+                <transform value="cc"/>
+                <parameter>
+                    <valueString value="http://loinc.org"/>
+                </parameter>
+                <parameter>
+                    <valueString value="56799-0"/>
+                </parameter>
+            </target>
+            <dependent>
+                <name value="SetValue"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
+        </rule>
+        <rule>
+            <name value="rule-74"/>
+            <source>
+                <context value="answerItem"/>
+                <condition value="linkId = '/93042-0/93033-9'"/>
+            </source>
+            <target>
+                <context value="observation"/>
+                <contextType value="variable"/>
+                <element value="category"/>
+                <variable value="newCC"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="CodeableConcept"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="rule-75"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="newCC"/>
+                    <contextType value="variable"/>
+                    <element value="coding"/>
+                    <variable value="newCoding"/>
+                    <transform value="create"/>
+                    <parameter>
+                        <valueString value="Coding"/>
+                    </parameter>
+                </target>
+                <rule>
+                    <name value="rule-76"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="system"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="rule-77"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="code"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="sdoh-category-unspecified"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="rule-78"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="display"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="SDOH Category Unspecified"/>
+                        </parameter>
+                    </target>
+                </rule>
+            </rule>
+        </rule>
+        <rule>
+            <name value="rule-79"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/82589-3'"/>
@@ -1331,9 +1514,14 @@
                     <valueString value="82589-3"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValueCodeableConcept"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-71"/>
+            <name value="rule-80"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/82589-3'"/>
@@ -1349,7 +1537,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-72"/>
+                <name value="rule-81"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1364,7 +1552,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-73"/>
+                    <name value="rule-82"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1379,7 +1567,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-74"/>
+                    <name value="rule-83"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1394,7 +1582,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-75"/>
+                    <name value="rule-84"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1411,7 +1599,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-76"/>
+            <name value="rule-85"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/67875-5'"/>
@@ -1429,9 +1617,14 @@
                     <valueString value="67875-5"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValueCodeableConcept"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-77"/>
+            <name value="rule-86"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/67875-5'"/>
@@ -1447,7 +1640,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-78"/>
+                <name value="rule-87"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1462,7 +1655,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-79"/>
+                    <name value="rule-88"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1477,7 +1670,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-80"/>
+                    <name value="rule-89"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1492,7 +1685,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-81"/>
+                    <name value="rule-90"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1509,7 +1702,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-82"/>
+            <name value="rule-91"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/76437-3'"/>
@@ -1527,9 +1720,14 @@
                     <valueString value="76437-3"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValueCodeableConcept"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-83"/>
+            <name value="rule-92"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/76437-3'"/>
@@ -1545,7 +1743,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-84"/>
+                <name value="rule-93"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1560,7 +1758,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-85"/>
+                    <name value="rule-94"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1575,7 +1773,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-86"/>
+                    <name value="rule-95"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1590,7 +1788,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-87"/>
+                    <name value="rule-96"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1607,7 +1805,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-88"/>
+            <name value="rule-97"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/63586-2'"/>
@@ -1625,9 +1823,89 @@
                     <valueString value="63586-2"/>
                 </parameter>
             </target>
+            <rule>
+                <name value="rule-98"/>
+                <source>
+                    <context value="answerItem"/>
+                    <element value="answer"/>
+                    <variable value="answer"/>
+                </source>
+                <target>
+                    <context value="observation"/>
+                    <contextType value="variable"/>
+                    <element value="value"/>
+                    <variable value="newQty"/>
+                    <transform value="create"/>
+                    <parameter>
+                        <valueString value="Quantity"/>
+                    </parameter>
+                </target>
+                <rule>
+                    <name value="rule-99"/>
+                    <source>
+                        <context value="answer"/>
+                        <element value="value"/>
+                        <variable value="vs"/>
+                    </source>
+                    <target>
+                        <context value="newQty"/>
+                        <contextType value="variable"/>
+                        <element value="value"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueId value="vs"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="rule-100"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newQty"/>
+                        <contextType value="variable"/>
+                        <element value="unit"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="/a"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="rule-101"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newQty"/>
+                        <contextType value="variable"/>
+                        <element value="system"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="http://unitsofmeasure.org"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="rule-102"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newQty"/>
+                        <contextType value="variable"/>
+                        <element value="code"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="/a"/>
+                        </parameter>
+                    </target>
+                </rule>
+            </rule>
         </rule>
         <rule>
-            <name value="rule-89"/>
+            <name value="rule-103"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/63586-2'"/>
@@ -1643,7 +1921,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-90"/>
+                <name value="rule-104"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1658,7 +1936,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-91"/>
+                    <name value="rule-105"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1673,7 +1951,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-92"/>
+                    <name value="rule-106"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1688,7 +1966,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-93"/>
+                    <name value="rule-107"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1705,7 +1983,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-94"/>
+            <name value="rule-108"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/93031-3'"/>
@@ -1723,9 +2001,15 @@
                     <valueString value="93031-3"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValuesToComponents"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-95"/>
+            <name value="rule-109"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/93031-3' and answer.valueCoding.code ='LA30125-1'"/>
@@ -1741,7 +2025,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-96"/>
+                <name value="rule-110"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1756,7 +2040,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-97"/>
+                    <name value="rule-111"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1771,7 +2055,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-98"/>
+                    <name value="rule-112"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1786,7 +2070,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-99"/>
+                    <name value="rule-113"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1803,7 +2087,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-100"/>
+            <name value="rule-114"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/93030-5'"/>
@@ -1821,9 +2105,14 @@
                     <valueString value="93030-5"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValueCodeableConcept"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-101"/>
+            <name value="rule-115"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/93030-5'"/>
@@ -1839,7 +2128,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-102"/>
+                <name value="rule-116"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1854,7 +2143,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-103"/>
+                    <name value="rule-117"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1869,7 +2158,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-104"/>
+                    <name value="rule-118"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1884,7 +2173,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-105"/>
+                    <name value="rule-119"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1901,7 +2190,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-106"/>
+            <name value="rule-120"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93040-4/93029-7'"/>
@@ -1919,9 +2208,14 @@
                     <valueString value="93029-7"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValueCodeableConcept"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-107"/>
+            <name value="rule-121"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93040-4/93029-7'"/>
@@ -1937,7 +2231,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-108"/>
+                <name value="rule-122"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1952,7 +2246,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-109"/>
+                    <name value="rule-123"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1967,7 +2261,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-110"/>
+                    <name value="rule-124"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1982,7 +2276,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-111"/>
+                    <name value="rule-125"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1999,7 +2293,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-112"/>
+            <name value="rule-126"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93040-4/93038-8'"/>
@@ -2017,9 +2311,14 @@
                     <valueString value="93038-8"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValueCodeableConcept"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-113"/>
+            <name value="rule-127"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93040-4/93038-8'"/>
@@ -2035,7 +2334,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-114"/>
+                <name value="rule-128"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -2050,7 +2349,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-115"/>
+                    <name value="rule-129"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2065,7 +2364,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-116"/>
+                    <name value="rule-130"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2080,7 +2379,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-117"/>
+                    <name value="rule-131"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2097,7 +2396,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-118"/>
+            <name value="rule-132"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93039-6/93028-9'"/>
@@ -2115,9 +2414,14 @@
                     <valueString value="93028-9"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValueCodeableConcept"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-119"/>
+            <name value="rule-133"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93039-6/93028-9'"/>
@@ -2133,7 +2437,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-120"/>
+                <name value="rule-134"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -2148,7 +2452,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-121"/>
+                    <name value="rule-135"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2163,7 +2467,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-122"/>
+                    <name value="rule-136"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2178,7 +2482,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-123"/>
+                    <name value="rule-137"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2195,7 +2499,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-124"/>
+            <name value="rule-138"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93039-6/93027-1'"/>
@@ -2213,9 +2517,14 @@
                     <valueString value="93027-1"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValueCodeableConcept"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-125"/>
+            <name value="rule-139"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93039-6/93027-1'"/>
@@ -2231,7 +2540,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-126"/>
+                <name value="rule-140"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -2246,7 +2555,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-127"/>
+                    <name value="rule-141"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2261,7 +2570,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-128"/>
+                    <name value="rule-142"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2276,7 +2585,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-129"/>
+                    <name value="rule-143"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2293,7 +2602,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-130"/>
+            <name value="rule-144"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93040-4/93038-8'"/>
@@ -2311,9 +2620,14 @@
                     <valueString value="93038-8"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValueCodeableConcept"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-131"/>
+            <name value="rule-145"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93040-4/93038-8'"/>
@@ -2329,7 +2643,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-132"/>
+                <name value="rule-146"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -2344,7 +2658,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-133"/>
+                    <name value="rule-147"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2359,7 +2673,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-134"/>
+                    <name value="rule-148"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2374,7 +2688,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-135"/>
+                    <name value="rule-149"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2391,7 +2705,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-136"/>
+            <name value="rule-150"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93039-6/93026-3'"/>
@@ -2409,9 +2723,14 @@
                     <valueString value="93026-3"/>
                 </parameter>
             </target>
+            <dependent>
+                <name value="SetValueCodeableConcept"/>
+                <variable value="answerItem"/>
+                <variable value="observation"/>
+            </dependent>
         </rule>
         <rule>
-            <name value="rule-137"/>
+            <name value="rule-151"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93039-6/93026-3'"/>
@@ -2427,7 +2746,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-138"/>
+                <name value="rule-152"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -2442,7 +2761,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-139"/>
+                    <name value="rule-153"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2457,7 +2776,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-140"/>
+                    <name value="rule-154"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2472,7 +2791,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-141"/>
+                    <name value="rule-155"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2489,7 +2808,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-142"/>
+            <name value="rule-156"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93042-0/71802-3' and answer.valueCoding.code ='LA30190-5'"/>
@@ -2507,7 +2826,7 @@
                 <variable value="condition"/>
                 <transform value="create"/>
                 <parameter>
-                    <valueString value="Condition"/>
+                    <valueString value="sdohccCondition"/>
                 </parameter>
             </target>
             <dependent>
@@ -2524,7 +2843,7 @@
             </dependent>
         </rule>
         <rule>
-            <name value="rule-143"/>
+            <name value="rule-157"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/67875-5' and answer.valueCoding.code ='LA17956-6'"/>
@@ -2542,7 +2861,7 @@
                 <variable value="condition"/>
                 <transform value="create"/>
                 <parameter>
-                    <valueString value="Condition"/>
+                    <valueString value="sdohccCondition"/>
                 </parameter>
             </target>
             <dependent>
@@ -2560,6 +2879,179 @@
         </rule>
     </group>
     <group>
+        <name value="SetValue"/>
+        <typeMode value="none"/>
+        <input>
+            <name value="answerItem"/>
+            <type value="Any"/>
+            <mode value="source"/>
+        </input>
+        <input>
+            <name value="observation"/>
+            <type value="Any"/>
+            <mode value="target"/>
+        </input>
+        <rule>
+            <name value="rule-158"/>
+            <source>
+                <context value="answerItem"/>
+                <element value="answer"/>
+                <variable value="answer"/>
+            </source>
+            <target>
+                <context value="observation"/>
+                <contextType value="variable"/>
+                <element value="id"/>
+                <variable value="id"/>
+            </target>
+            <rule>
+                <name value="rule-159"/>
+                <source>
+                    <context value="answer"/>
+                    <element value="value"/>
+                    <variable value="vs"/>
+                </source>
+                <target>
+                    <context value="observation"/>
+                    <contextType value="variable"/>
+                    <element value="value"/>
+                    <transform value="copy"/>
+                    <parameter>
+                        <valueId value="vs"/>
+                    </parameter>
+                </target>
+            </rule>
+        </rule>
+    </group>
+    <group>
+        <name value="SetValueCodeableConcept"/>
+        <typeMode value="none"/>
+        <input>
+            <name value="src"/>
+            <type value="Any"/>
+            <mode value="source"/>
+        </input>
+        <input>
+            <name value="observation"/>
+            <type value="Any"/>
+            <mode value="target"/>
+        </input>
+        <rule>
+            <name value="rule-160"/>
+            <source>
+                <context value="src"/>
+                <element value="answer"/>
+                <variable value="answer"/>
+            </source>
+            <target>
+                <context value="observation"/>
+                <contextType value="variable"/>
+                <element value="value"/>
+                <variable value="newCC"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="CodeableConcept"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="rule-161"/>
+                <source>
+                    <context value="answer"/>
+                    <element value="valueCoding"/>
+                    <variable value="coding"/>
+                </source>
+                <target>
+                    <context value="newCC"/>
+                    <contextType value="variable"/>
+                    <element value="coding"/>
+                    <variable value="newCoding"/>
+                    <transform value="copy"/>
+                    <parameter>
+                        <valueId value="coding"/>
+                    </parameter>
+                </target>
+            </rule>
+        </rule>
+    </group>
+    <group>
+        <name value="SetValuesToComponents"/>
+        <typeMode value="none"/>
+        <input>
+            <name value="answerItem"/>
+            <type value="Any"/>
+            <mode value="source"/>
+        </input>
+        <input>
+            <name value="srcObservation"/>
+            <type value="Any"/>
+            <mode value="source"/>
+        </input>
+        <input>
+            <name value="observation"/>
+            <type value="Any"/>
+            <mode value="target"/>
+        </input>
+        <rule>
+            <name value="rule-162"/>
+            <source>
+                <context value="answerItem"/>
+                <element value="answer"/>
+                <variable value="answer"/>
+            </source>
+            <target>
+                <context value="observation"/>
+                <contextType value="variable"/>
+                <element value="component"/>
+                <variable value="newComponent"/>
+            </target>
+            <target>
+                <context value="newComponent"/>
+                <contextType value="variable"/>
+                <element value="value"/>
+                <variable value="newCC"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="CodeableConcept"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="rule-163"/>
+                <source>
+                    <context value="answer"/>
+                    <element value="valueCoding"/>
+                    <variable value="coding"/>
+                </source>
+                <target>
+                    <context value="newCC"/>
+                    <contextType value="variable"/>
+                    <element value="coding"/>
+                    <variable value="newCoding"/>
+                    <transform value="copy"/>
+                    <parameter>
+                        <valueId value="coding"/>
+                    </parameter>
+                </target>
+            </rule>
+            <rule>
+                <name value="rule-164"/>
+                <source>
+                    <context value="srcObservation"/>
+                    <element value="code"/>
+                    <variable value="code"/>
+                </source>
+                <target>
+                    <context value="newComponent"/>
+                    <contextType value="variable"/>
+                    <element value="code"/>
+                    <transform value="copy"/>
+                    <parameter>
+                        <valueId value="code"/>
+                    </parameter>
+                </target>
+            </rule>
+        </rule>
+    </group>
+    <group>
         <name value="SetObservationFullUrl"/>
         <typeMode value="none"/>
         <input>
@@ -2573,7 +3065,7 @@
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-144"/>
+            <name value="rule-165"/>
             <source>
                 <context value="observation"/>
                 <element value="id"/>
@@ -2617,7 +3109,7 @@
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-145"/>
+            <name value="rule-166"/>
             <source>
                 <context value="src"/>
             </source>
@@ -2634,7 +3126,7 @@
             </dependent>
         </rule>
         <rule>
-            <name value="rule-146"/>
+            <name value="rule-167"/>
             <source>
                 <context value="src"/>
             </source>
@@ -2651,7 +3143,7 @@
             </dependent>
         </rule>
         <rule>
-            <name value="rule-147"/>
+            <name value="rule-168"/>
             <source>
                 <context value="src"/>
             </source>
@@ -2672,7 +3164,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-148"/>
+            <name value="rule-169"/>
             <source>
                 <context value="src"/>
             </source>
@@ -2693,7 +3185,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-149"/>
+            <name value="rule-170"/>
             <source>
                 <context value="src"/>
             </source>
@@ -2715,7 +3207,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-150"/>
+            <name value="rule-171"/>
             <source>
                 <context value="src"/>
                 <element value="authored"/>
@@ -2742,7 +3234,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-151"/>
+            <name value="rule-172"/>
             <source>
                 <context value="src"/>
                 <element value="subject"/>
@@ -2759,7 +3251,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-152"/>
+                <name value="rule-173"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="reference"/>
@@ -2776,7 +3268,7 @@
                 </target>
             </rule>
             <rule>
-                <name value="rule-153"/>
+                <name value="rule-174"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="display"/>
@@ -2794,7 +3286,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-154"/>
+            <name value="rule-175"/>
             <source>
                 <context value="src"/>
                 <element value="subject"/>
@@ -2811,7 +3303,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-155"/>
+                <name value="rule-176"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="reference"/>
@@ -2828,7 +3320,7 @@
                 </target>
             </rule>
             <rule>
-                <name value="rule-156"/>
+                <name value="rule-177"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="display"/>
@@ -2860,7 +3352,7 @@
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-157"/>
+            <name value="rule-178"/>
             <source>
                 <context value="condition"/>
                 <element value="id"/>
@@ -2894,7 +3386,7 @@
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-158"/>
+            <name value="rule-179"/>
             <source>
                 <context value="bundle"/>
             </source>
@@ -2913,7 +3405,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-159"/>
+            <name value="rule-180"/>
             <source>
                 <context value="bundle"/>
                 <element value="entry"/>
@@ -2936,7 +3428,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-160"/>
+                <name value="rule-181"/>
                 <source>
                     <context value="entries"/>
                     <element value="resource"/>
@@ -2969,7 +3461,7 @@
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-161"/>
+            <name value="rule-182"/>
             <source>
                 <context value="bundle"/>
             </source>
@@ -2988,7 +3480,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-162"/>
+            <name value="rule-183"/>
             <source>
                 <context value="bundle"/>
                 <element value="entry"/>
@@ -3011,7 +3503,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-163"/>
+                <name value="rule-184"/>
                 <source>
                     <context value="entries"/>
                     <element value="resource"/>
@@ -3054,7 +3546,7 @@
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-164"/>
+            <name value="rule-185"/>
             <source>
                 <context value="src"/>
             </source>
@@ -3071,7 +3563,7 @@
             </dependent>
         </rule>
         <rule>
-            <name value="rule-165"/>
+            <name value="rule-186"/>
             <source>
                 <context value="src"/>
             </source>
@@ -3086,7 +3578,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-166"/>
+            <name value="rule-187"/>
             <source>
                 <context value="src"/>
             </source>
@@ -3107,7 +3599,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-167"/>
+            <name value="rule-188"/>
             <source>
                 <context value="src"/>
             </source>
@@ -3128,7 +3620,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-168"/>
+            <name value="rule-189"/>
             <source>
                 <context value="src"/>
                 <element value="authored"/>
@@ -3145,7 +3637,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-169"/>
+            <name value="rule-190"/>
             <source>
                 <context value="src"/>
                 <element value="subject"/>
@@ -3162,7 +3654,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-170"/>
+                <name value="rule-191"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="reference"/>
@@ -3179,7 +3671,7 @@
                 </target>
             </rule>
             <rule>
-                <name value="rule-171"/>
+                <name value="rule-192"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="display"/>
@@ -3197,7 +3689,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-172"/>
+            <name value="rule-193"/>
             <source>
                 <context value="src"/>
             </source>
@@ -3215,7 +3707,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-173"/>
+            <name value="rule-194"/>
             <source>
                 <context value="bundle"/>
                 <element value="entry"/>
@@ -3232,7 +3724,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-174"/>
+                <name value="rule-195"/>
                 <source>
                     <context value="entries"/>
                     <element value="resource"/>
