@@ -1,5 +1,3 @@
-[Previous Page - Personas and Patient Stories](personas_and_patient_stories.html)
-
 ###  Patient Persona
 
 | **Persona Name**                                                          | **Rebecca Smith** | 
@@ -79,5 +77,3 @@
 | **What Persona wants from health care system**   | Mr. Patel is not fully comfortable asking all the questions in the screening tool.  He would like to find other modes of administering the questionnaire before or after the visit. | 
 {:class="table table-bordered"}
 {:.table-striped}
-
-[Next Page - Patient Story 1](patient_story_1.html)

@@ -1,5 +1,3 @@
-[Previous Page - Exchange Workflow](exchange_workflow.html)
-
 ###  Underlying technologies
 This guide is based on the [HL7 FHIR](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=491) standard. Implementers of this specification therefore need to understand some basic information about these specifications.
 
@@ -17,5 +15,3 @@ This implementation guide uses terminology, notations and design principles that
 
 This implementation guide supports the [R4 version](http://hl7.org/fhir/) of the FHIR standard. R4 is recently published and the goal is to ensure the implementation guide is aligned with the current direction of the FHIR standard.
 Because this IG focuses on workflow issues between an Ordering Provider and the Rendering Provider, implementers should also familiarize themselves with the FHIR resources and operations listed on the [FHIR Artifacts Overview](http://build.fhir.org/ig/HL7/dme-orders/fhir_artifacts_overview.html) page.
-
-[Next Page - FHIR Artifacts Overview](fhir_artifacts_overview.html)

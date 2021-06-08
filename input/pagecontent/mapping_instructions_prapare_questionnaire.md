@@ -1,5 +1,3 @@
-[Previous Page - Mapping Instructions HVS Questionnaire](mapping_instructions_hvs_questionnaire.html)
-
 The following is an example of a map that is used to generate a StructureMap to extract a Bundle of Observations and Conditions from a PRAPARE QuestionnaireResponse. 
 
 ```
@@ -417,6 +415,3 @@ group TransformGroupObservation(source src: questionnaireResponse, source bundle
 }
 
 ```
-
-
-[Next Page - Support for Multiple Domains](support_for_multiple_domains.html)

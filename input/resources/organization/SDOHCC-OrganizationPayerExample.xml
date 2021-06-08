@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Organization
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-OrganizationPayerExample"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2021-06-03T15:53:44.616+00:00"/>
+        <source value="#NQw6EHcfLh3jIIvw"/>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+    </meta>
+    <active value="true"/>
+    <name value="CDE Payer"/>
+    <address>
+        <text value="132th St, Underland Park, KS 66223"/>
+        <line value="132th Street,"/>
+        <city value="Underland Park"/>
+        <state value="KS"/>
+        <postalCode value="66223"/>
+    </address>
+</Organization>

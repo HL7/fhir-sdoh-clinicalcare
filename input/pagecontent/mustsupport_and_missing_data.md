@@ -1,5 +1,3 @@
-[Previous Page - Privacy and Security](privacy_and_security.html)
-
 ###  Must Support and Missing Data
 
 Systems claiming to conform to a profile SHALL support the elements in a profile as defined below: This guide adopts the following definitions of MustSupport for all direct transactions between the Sending and Receiving Systems
@@ -24,6 +22,3 @@ Receiving Systems are defined as 1) Community Based Organizations (CBO) Systems,
 **Conformance to US Core Profile** 
 
 Where this IG does not additionally constrain a US Core profile, the actors shall follow the US Core definition of [Must Support and Missing Data](http://hl7.org/fhir/us/core/general-guidance.html).
-
-
-[Next Page - Downloads](downloads.html)

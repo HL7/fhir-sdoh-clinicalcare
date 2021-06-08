@@ -1,5 +1,3 @@
-[Previous Page - Technical Background](technical_background.html)
-
 ###  Artifact Lists
 
 Complying with this implementation guide means complying with a number of profiles, code systems, and value sets. This page provides an overview of where the relevant information can be found.
@@ -36,6 +34,3 @@ Additional information about the use of these artifacts can be found in the rele
 * 	**[Code Systems](http://www.hl7.org/fhir/terminologies-systems.html)** that define PAO-specific terminologies to be used in one or more of the profiles.
 * 	**[Value Sets](http://www.hl7.org/fhir/terminologies-valuesets.html)** that define the specific subsets of both PAO-defined and other code systems that can be (or are recommended to be) used within one or more profile elements.
 
-
-
-[Next Page - Privacy and Security](privacy_and_security.html)

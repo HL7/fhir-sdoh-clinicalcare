@@ -1,5 +1,3 @@
-[Previous Page - Mapping Instructions](mapping_instructions.html)
-
 The following is an example of a map that is used to generate a StructureMap to extract a Bundle of Observations and Conditions from a Hunger Vital Sign [HVS] QuestionnaireResponse. 
 
 ```
@@ -201,6 +199,3 @@ group SetConditionFullUrl(source condition: sdohccCondition, target entry)
 
 ```
 
-
-
-[Next Page - Mapping Instructions PRAPARE Questionnaire](mapping_instructions_prapare_questionnaire.html)

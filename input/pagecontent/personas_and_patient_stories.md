@@ -1,5 +1,3 @@
-[Previous Page - SDOH Clinical Care Scope](sdoh_clinical_care_scope.html)
-
 Personas are commonly used in user-centered design to describe a fictional character who would represent a user type that might use a site, brand, or product in a similar way.  Personas describe the fictional person in terms of their behaviors, skills, preferences, and needs.  From a data interoperability perspective, personas are used to visualize the data needs of a user type. 
 
 The Gravity Project personas include:  
@@ -31,5 +29,3 @@ Patient Story 1 describes personas engaging with a service, technology, or setti
 From a data interoperability perspective, a patient story is used to identify the transactions where health information is shared between technical systems used by the personas in the story. 
 
 <br>
-
-[Next Page - Patient Story 1 Personas](patient_story_1_personas.html)

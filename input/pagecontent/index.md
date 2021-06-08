@@ -25,6 +25,7 @@ The implementation guide is organized into the following sections:
 * Verison 0.1.1 d (update to fix deletions and support specific PRAPARE items pushed to continuous build on 5/12/2021)
 * Version 0.1.1 e (fixing deletions -- 5/12/2021)
 * Version 0.1.1 f (fixed deletions and updated support of and examples for PRAPARE -- pushed to continuous build on 5/13/2021
+* Version 0.1.1 g (renamed resource profiles, value sets, code systems, and examples -- deleted old versions -- includes updated profiles and examples (6/8/2021)
 
 
 
@@ -47,6 +48,3 @@ The implementation guide is organized into the following sections:
 </table>
 
 
-
-
-[Next Page - Gravity Background](gravity_background.html)
