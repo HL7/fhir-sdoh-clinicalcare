@@ -1,5 +1,3 @@
-[Previous Page - Home Page](index.html)
-
 The influence of social determinants on health outcomes is increasingly recognized in emerging payment reform programs, federal and state-based policies, and information technology initiatives.  Social determinants of health (SDOH) are defined by the World Health Organization as the conditions in which people are born, live, work, and age.  
 
 The growing awareness around SDOH has contributed to efforts to address actionable socioeconomic risk factors through the health care delivery system.  Recommendations from national groups, including the American Academy of Pediatrics, American Academy of Family Physicians, Agency for Healthcare Research and Quality, National Quality Forum (NQF), and Institute for Health Care Improvement underscore the various roles the health care system could play in helping to identify and reduce patients social risk factors. 
@@ -43,5 +41,3 @@ The systematic documentation and aggregation of SDOH data in EHRs and related sy
 3.	Gaps in and overlap between existing terminologies and codes available to represent SDOH-related activities undertaken in clinical delivery settings.
 
 Based on the growing collection of social risk data in health care systems, an immediate opportunity exists to support data collection, data aggregation, data sharing, quality measurement, benchmarking, and risk adjustment.   Many assessment tools are currently in use, but the concepts addressed vary, and some tools merit further validation and testing across a variety of settings and clinical workflows.  Health IT can play a critical, untapped role in enabling the seamless electronic exchange and use of this data.  However, standardization and harmonization of SDOH concepts, regardless of the social risk assessment tool used, requires a consensus-based approach to maximize buy-in, consistency of implementation, and usefulness of data collected.
-
-[Next Page - SDOH Clinical Care Scope](sdoh_clinical_care_scope.html)

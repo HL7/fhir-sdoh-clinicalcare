@@ -1,5 +1,3 @@
-[Previous Page - Gravity Background](gravity_background.html)
-
 ###  SDOH Clinical Care Scope
 
 The Gravity Project focus is on defining structure and coded content exchange to support multiple social domains. The initial focus is on three domains: food insecurity, housing instability and homelessness, and transportation access.
@@ -33,6 +31,3 @@ The relationships between the various types of information are supported by the 
 
 
 
-
-
-[Next Page - Personas and Patient Stories](personas_and_patient_stories.html)

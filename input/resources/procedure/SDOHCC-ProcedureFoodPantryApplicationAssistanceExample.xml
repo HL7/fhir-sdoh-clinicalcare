@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Procedure
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ProcedureFoodPantryApplicationAssistanceExample"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2021-06-03T00:59:29.914+00:00"/>
+        <source value="#kfhbsE6g1oNyclUf"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
+    </meta>
+    <basedOn>
+        <reference value="ServiceRequest/SDOHCC-ServiceRequestFoodPantryApplicationAssistanceExample"/>
+    </basedOn>
+    <status value="completed"/>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="food-insecurity"/>
+            <display value="Food Insecurity"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="467771000124109"/>
+            <display value="Assistance with application for food pantry program"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <performedDateTime value="2021-05-31"/>
+    <reasonReference>
+        <reference value="Condition/SDOHCC-ConditionFoodInsecurityExample"/>
+    </reasonReference>
+</Procedure>
