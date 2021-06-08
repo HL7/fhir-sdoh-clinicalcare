@@ -1,7 +1,7 @@
 == Suppressed Messages ==
 
-# This is a temporary code system so this information can be ignored.
-INFORMATION: CodeSystem/SDOHCC-CodeSystemTemporaryCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+# The following issue is inherited from the FHIR specification for Consent.
+INFORMATION: StructureDefinition/SDOHCC-Consent: StructureDefinition.snapshot.element[9].example[0].value.ofType(Identifier): Consent: if identifier.system is ''urn:ietf:rfc:3986'', then the identifier.value must be a full URI (e.g. start with a scheme)
 # The following examples have been reviewed and confirmed to validate against the intended profiles.
 INFORMATION: Condition/SDOHCC-ConditionFoodInsecurityExample: Condition: Validate resource against profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition
 INFORMATION: Condition/SDOHCC-ConditionHomelessExample: Condition: Validate resource against profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition 
@@ -47,6 +47,8 @@ INFORMATION: ValueSet/SDOHCC-ValueSetHCPCSII: ValueSet: Validate resource agains
 INFORMATION: ValueSet/SDOHCC-ValueSetICD10CM: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/SDOHCC-ValueSetObservationStatus: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/SDOHCC-ValueSetSDOHCategory: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: CodeSystem/SDOHCC-CodeSystemTemporaryCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: ImplementationGuide/hl7.fhir.us.sdoh-clinicalcare: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide  
 # This warning is expected because HCPCS Level II codes are not on the FHIR terminology server.
 WARNING: ValueSet.where(id = 'SDOHCC-ValueSetHCPCSII'): Error from server: Unable to provide support for code system urn:oid:2.16.840.1.113883.6.285
 

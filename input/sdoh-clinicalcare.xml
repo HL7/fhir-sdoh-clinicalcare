@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="sdoh-clinicalcare"/>
     <meta>
-        <versionId value="348"/>
-        <lastUpdated value="2021-06-08T11:14:37.218+00:00"/>
-        <source value="#NABi0DFpoNYbGiHA"/>
+        <versionId value="358"/>
+        <lastUpdated value="2021-06-08T15:09:10.190+00:00"/>
+        <source value="#hWCDEOGG9ao3ywY3"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/sdoh-clinicalcare"/>
     <version value="0.1.1"/>
@@ -56,11 +56,12 @@
         <resource>
             <reference>
                 <reference value="Patient/pat-53234"/>
-                <display value="Patient Colin Abbas"/>
+                <display value="Patient Colin Abbas Example"/>
             </reference>
             <name value="Patient Colin Abbas Example"/>
             <description value="An example of a patient. This example is used as the referenced subject in other SDOHCC examples."/>
-            <exampleBoolean value="true"/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
             <groupingId value="new-group2"/>
         </resource>
         <resource>
@@ -239,6 +240,7 @@
             <name value="SDOHCC StructureMap Hunger Vital Sign"/>
             <description value="A StructureMap instance that represents the resource that transforms specific questions and answers from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9) to their corresponding Observations (SDOHCC Observation Response Hunger Vital Sign Q1 Example, SDOHCC Observation Response Hunger Vital Sign Q2 Example, and SDOHCC Observation response Hunger Vital Sign Q3 Example) and derived Condition (SDOHCC Condition Food Insecurity Example)."/>
             <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/StructureMap"/>
             <groupingId value="new-group2"/>
         </resource>
         <resource>
@@ -249,6 +251,7 @@
             <name value="SDOHCC StructureMap PRAPARE"/>
             <description value="A StructureMap instance that represents the resource that transforms specific questions and answers from the PRAPARE questionnaire represented in LOINC (code 93025-5) to their corresponding Observations and derived Conditions (health concerns)."/>
             <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/StructureMap"/>
             <groupingId value="new-group2"/>
         </resource>
         <resource>
@@ -447,6 +450,17 @@
             <description value="An example of Group for patients that have any SDOH condition and are members of a specific payer organization."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Group"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Goal/SDOHCC-GoalFoodSecurityExample"/>
+                <display value="SDOHCC Goal Food Security Example"/>
+            </reference>
+            <name value="SDOHCC Goal Food Security Example"/>
+            <description value="An example of a food security Goal that addresses a food insecurity Condition."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal"/>
             <groupingId value="new-group2"/>
         </resource>
         <page>
