@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Procedure"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2021-06-04T14:30:59.930+00:00"/>
-        <source value="#d9Y8fLlrxTCW9nzl"/>
+        <versionId value="5"/>
+        <lastUpdated value="2021-06-10T22:33:15.049+00:00"/>
+        <source value="#JfUnPGfoqsgql4MS"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
     <version value="0.1.0"/>
@@ -59,8 +59,8 @@
             <comment value="Many of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."/>
             <constraint>
                 <key value="SDOH-Pro-1"/>
-                <severity value="error"/>
-                <human value="At least one category must be an SDOH category."/>
+                <severity value="warning"/>
+                <human value="An SDOH category SHOULD appear either in the .category element or in the category extension"/>
                 <expression value="extension('http://hl7.org/fhir/4.5/StructureDefinition/extension-Procedure.category').where(value.memberOf('http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory')).exists() or category.where($this.memberOf ('http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory')).exists()"/>
                 <xpath value="true()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>

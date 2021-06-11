@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationScreeningResponse"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2021-06-03T21:21:38.114+00:00"/>
-        <source value="#fKnzMHf85eMGO99U"/>
+        <versionId value="9"/>
+        <lastUpdated value="2021-06-10T22:33:15.050+00:00"/>
+        <source value="#g1YI9JKTjJewXeB4"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
     <version value="0.1.0"/>
@@ -77,7 +77,7 @@
             <path value="Observation.category"/>
             <slicing>
                 <discriminator>
-                    <type value="pattern"/>
+                    <type value="value"/>
                     <path value="$this"/>
                 </discriminator>
                 <rules value="open"/>
