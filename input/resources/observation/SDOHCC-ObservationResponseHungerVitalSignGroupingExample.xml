@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationResponseHungerVitalSignGroupingExample"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-06-03T01:17:13.144+00:00"/>
-        <source value="#Z3mt3o4FS6sGffYi"/>
+        <versionId value="2"/>
+        <lastUpdated value="2021-06-10T15:34:45.654+00:00"/>
+        <source value="#PyoPZHNCWaQ9oBSE"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
     </meta>
     <status value="final"/>
@@ -51,4 +51,7 @@
     <hasMember>
         <reference value="Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion3Example"/>
     </hasMember>
+    <derivedFrom>
+        <reference value="QuestionnaireResponse/SDOHCC-QuestionnaireResponseHungerVitalSignExample"/>
+    </derivedFrom>
 </Observation>
