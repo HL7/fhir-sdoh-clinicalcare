@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ValueSetLOINCSNOMEDCT"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2021-06-11T14:31:12.731+00:00"/>
+        <source value="#knjiz2Xh7VZL1Sm7"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT"/>
+    <version value="0.1.0"/>
+    <name value="SDOHCCValueSetLOINCSNOMEDCT"/>
+    <title value="SDOHCC ValueSet LOINC SNOMEDCT"/>
+    <status value="draft"/>
+    <description value="This value set contains all of LOINC and all of SNOMED CT."/>
+    <compose>
+        <include>
+            <system value="http://loinc.org"/>
+        </include>
+        <include>
+            <system value="http://snomed.info/sct"/>
+        </include>
+    </compose>
+</ValueSet>
