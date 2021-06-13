@@ -26,7 +26,8 @@ The implementation guide is organized into the following sections:
 * Version 0.1.1 e (fixing deletions -- 5/12/2021)
 * Version 0.1.1 f (fixed deletions and updated support of and examples for PRAPARE -- pushed to continuous build on 5/13/2021
 * Version 0.1.1 g (renamed resource profiles, value sets, code systems, and examples -- deleted old versions -- includes updated profiles and examples (6/8/2021)
-* Version 0.1.1.h (updated and moved on 6/11/2021)
+* Version 0.1.1 h (updated and moved on 6/11/2021)
+* Version 0.1.1 i (base for next set of updates 6/13/2021)
 
 
 

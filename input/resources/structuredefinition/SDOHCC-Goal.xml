@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Goal"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2021-06-10T22:33:14.974+00:00"/>
-        <source value="#JExo5hGWmhhkbt03"/>
+        <versionId value="5"/>
+        <lastUpdated value="2021-06-11T14:37:43.830+00:00"/>
+        <source value="#X7ypkyf5Yuh4IGdz"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal"/>
     <version value="0.1.0"/>
@@ -84,10 +84,21 @@
         <element id="Goal.description">
             <path value="Goal.description"/>
             <comment value="If no code is available, use CodeableConcept.text.&#xD;&#xA;&#xD;&#xA;As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set binding strength may change and may be refined to codes (including LOINC and SNOMED) that pertain to SDOH categories."/>
+            <binding>
+                <strength value="preferred"/>
+                <description value="Codes providing the details of a particular goal.  In many systems, only the text element will be used."/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT"/>
+            </binding>
         </element>
         <element id="Goal.subject">
             <path value="Goal.subject"/>
             <definition value="Identifies the patient for whom the goal is being established."/>
+        </element>
+        <element id="Goal.target.measure">
+            <path value="Goal.target.measure"/>
+            <binding>
+                <strength value="preferred"/>
+            </binding>
         </element>
         <element id="Goal.statusDate">
             <path value="Goal.statusDate"/>
@@ -125,9 +136,9 @@
             <path value="Goal.outcomeCode"/>
             <comment value="Note that this should not duplicate the goal status.&#xD;&#xA;&#xD;&#xA;Information represented by Goal.outcomeCode may overlap significantly with information represented by Goal.outcomeReference. Multiple approaches to representing the same information may negatively impact interoperability. Therefore, where there is significant overlap in information provided by Goal.outcomeCode and Goal.outcomeReference, it is recommended that Goal.outcomeReference should be used to provide details of goal outcomes.&#xD;&#xA;&#xD;&#xA;As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set may be refined to codes that pertain to SDOH categories."/>
             <binding>
-                <strength value="example"/>
+                <strength value="preferred"/>
                 <description value="The result of the goal; e.g., &quot;Food security&quot;, &quot;Has access to a car &quot;."/>
-                <valueSet value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT"/>
             </binding>
         </element>
         <element id="Goal.outcomeReference">
