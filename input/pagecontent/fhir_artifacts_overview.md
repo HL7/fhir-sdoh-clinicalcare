@@ -30,7 +30,7 @@ Additional information about the use of these artifacts can be found in the rele
 
 **The artifacts are of three types**:
 
-* 	**[Profiles](http://www.hl7.org/fhir/profiling.html)** that constrain FHIR resources to reflect PAO requirements.
-* 	**[Code Systems](http://www.hl7.org/fhir/terminologies-systems.html)** that define PAO-specific terminologies to be used in one or more of the profiles.
-* 	**[Value Sets](http://www.hl7.org/fhir/terminologies-valuesets.html)** that define the specific subsets of both PAO-defined and other code systems that can be (or are recommended to be) used within one or more profile elements.
+* 	**[Profiles](http://www.hl7.org/fhir/profiling.html)** that constrain FHIR resources to reflect SDOH requirements.
+* 	**[Code Systems](http://www.hl7.org/fhir/terminologies-systems.html)** that define SDOH-specific terminologies to be used in one or more of the profiles.
+* 	**[Value Sets](http://www.hl7.org/fhir/terminologies-valuesets.html)** that define the specific subsets of both SDOH-defined and other code systems that can be (or are recommended to be) used within one or more profile elements.
 
