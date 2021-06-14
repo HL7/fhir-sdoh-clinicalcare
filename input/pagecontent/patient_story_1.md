@@ -30,7 +30,7 @@ Ms. Shah documents the agreed upon health concerns, patient goals, and action pl
 
 Mr. Patel returns to the exam room and works with Rebecca to find another date/time to schedule a telephone consultation with Ms. Shah.  Mr. Patel schedules Rebecca's appointment with Ms. Shah for the following week and a follow-up appointment with Dr. Sanchez within three months of the appointment with Ms. Shah so both Dr. Sanchez and Rebecca can monitor the progress with goals established.  Rebecca confirms her preference to schedule the appointment after Rebecca's working hours.
 
-The following week, Rebecca has a phone consultation with Ms. Shah.  Ms. Shah has reviewed Rebecca's care plan and identified several resources available to support the care plan goals including federal assistance benefits (SNAP/WIC benefits), transportation service to and from appointments, vouchers to cover public transportation (e.g., Commuter Checks), school lunch programs, and a local food pantry. ,  
+The following week, Rebecca has a phone consultation with Ms. Shah.  Ms. Shah has reviewed Rebecca's care plan and identified several resources available to support the care plan goals including federal assistance benefits (SNAP/WIC benefits), transportation service to and from appointments, vouchers to cover public transportation (e.g., Commuter Checks), school lunch programs, and a local food pantry.  
 
 Ms. Shah walks Rebecca through the California SNAP eligibility and enrollment process.  Ms. Shah determines Rebecca is eligible for SNAP benefits and offers to assist Rebecca with the SNAP application online or, alternatively, visiting the local SNAP Office.  Rebecca confirms she would prefer to apply online and Ms. Shah adds a planned action step to Rebecca's  care plan.
 Rebecca completes and submits the online application the next day during her lunch break. 
@@ -65,7 +65,7 @@ Ms. Shah reviews Rebecca's progress toward the goals set during the last encount
 * Patient has access to patient portal and can use portal to review and update electronic information.
 * Patient supplies a valid ID to the practice and the practice uses it to create a trust account.  The account uniquely identifies the patient to communicate and share information in a secure manner. 
 * Patient interprets screening questions as intended and answers questions honestly. 
-* Questions presented in the screening questionnaire are used to document SDOH health concerns
+* Questions presented in the screening questionnaire are used to document SDOH health concerns.
 * Evidence-based patient engagement strategies are used to communicate with the patient and to gather information from the patient. 
 * Screening questionnaires are LOINC coded and the resulting health concerns are derived from the patient’s responses and coded in SNOMED CT and ICD-10.
 * Patient is eligible for and is approved to receive community-based services.  Service capacity exists to address the patient's social needs.

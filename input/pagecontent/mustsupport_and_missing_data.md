@@ -13,7 +13,7 @@ Note: populating the element with the value set absent reason or using the dataA
 
 **All Receiving Systems** 
 
-Receiving Systems are defined as 1) Community Based Organizations (CBO) Systems, 2) community social services platforms, 3) responsible payer Systems, 4) CBO applications and 5) consumer applications when receiving transaction from the Sending System.
+Receiving Systems are defined as 1) Community Based Organizations (CBO) Systems, 2) community social services platforms, 3) responsible payer systems, 4) CBO applications and 5) consumer applications when receiving transaction from the Sending System.
 * The Receiving System SHALL be capable of processing resource instances containing required and allowed data elements without generating an error or causing the application to fail. 
 * Receiving Systems SHOULD be capable of processing (display, store, etc) the data elements based on the utility of the specific element to the receiver.
 * When receiving a SDOH transaction from the Sender, the Receiving System SHALL interpret missing data elements within resource instances as data not present in the Senders systems.

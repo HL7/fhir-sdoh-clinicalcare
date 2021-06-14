@@ -1,6 +1,6 @@
 ### Overview
 
-Social Determinants of Health (SDOH) are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange SDOH content defined by the Gravity Project using the Fast Healthcare Ineroperability Resources (FHIR) standard. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. This IG addresses the need to gather SDOH information in the context of clinical encounters and describes how to share SDOH information and other relevant information with outside organizations for the purpose of coordinating services and support to address SDOH related needs. In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. The guide supports the following use cases:
+Social Determinants of Health (SDOH) are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange SDOH content defined by the Gravity Project using the Fast Healthcare Interoperability Resources (FHIR) standard. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. This IG addresses the need to gather SDOH information in the context of clinical encounters and describes how to share SDOH information and other relevant information with outside organizations for the purpose of coordinating services and support to address SDOH related needs. In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. The guide supports the following use cases:
 * 	Document SDOH data in conjunction with the patient encounters
 * 	Document and track SDOH related interventions to completion
 * 	Gather and aggregate SDOH data for uses beyond the point of care (e.g. public health, population health, quality measurement, risk adjustment, quality improvement, and research)
@@ -28,6 +28,7 @@ The implementation guide is organized into the following sections:
 * Version 0.1.1 g (renamed resource profiles, value sets, code systems, and examples -- deleted old versions -- includes updated profiles and examples (6/8/2021)
 * Version 0.1.1 h (updated and moved on 6/11/2021)
 * Version 0.1.1 i (base for next set of updates 6/13/2021)
+* Version 0.1.1.j (initial non-artifact ballot updates 6/13/2021)
 
 
 

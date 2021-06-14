@@ -1,6 +1,6 @@
 ###  Enabling Survey Instruments
 
-There is work in process with both Regenstrief and National Libararies of Medicine  (NLM) to utilize their capabilities to standardize the coding and output of SDOH risk surveys..
+There is work in process with both Regenstrief and National Libararies of Medicine  (NLM) to utilize their capabilities to standardize the coding and output of SDOH risk surveys.
 
 The following diagram depicts the suggested approch to incorporting risk surveys into the overall information flow for SDOH.
 
