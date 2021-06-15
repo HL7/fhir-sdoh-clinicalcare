@@ -7,10 +7,6 @@
         <source value="#NmFfHPsSycBL1pjm"/>
     </meta>
     <parameter>
-        <name value="profile-url"/>
-        <valueString value="dc8fd4bc-091a-424a-8a3b-6198ef146891"/>
-    </parameter>
-    <parameter>
         <name value="system-version"/>
         <valueString value="http://snomed.info/sct/900000000000207008/version/20210131"/>
     </parameter>
