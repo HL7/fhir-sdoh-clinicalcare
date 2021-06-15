@@ -8,6 +8,6 @@
     </meta>
     <parameter>
         <name value="system-version"/>
-        <valueString value="http://snomed.info/sct/900000000000207008/version/20210131"/>
+        <valueString value="http://snomed.info/sct/731000124108"/>
     </parameter>
 </Parameters>
