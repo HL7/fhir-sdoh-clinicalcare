@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-CodeSystemTemporaryCodes"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2021-06-07T20:21:14.414+00:00"/>
-        <source value="#wzQWg10Ta2Z82L5x"/>
+        <versionId value="3"/>
+        <lastUpdated value="2021-06-14T15:48:44.088+00:00"/>
+        <source value="#3UiNjtreoPIpWf7V"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
     <version value="0.1.0"/>
@@ -50,7 +50,7 @@
     <concept>
         <code value="homelessness"/>
         <display value="Homelessness"/>
-        <definition value="Category for Social Determinant of Health artifacts that pertain to Homelessness (which is defined as: 1) Sheltered Homelessness: because of economic difficulties, currently living in a shelter, motel, temporary or transitional living situation, scattered-site housing, or not having a consistent place to sleep at night; and 2) Unsheltered Homelessness: residing in a place not meant for human habitation, such as cars, parks, sidewalks, abandoned buildings, on the street.) This SDOH category covers records relevant to circumstances that range Homelessness to Housed."/>
+        <definition value="Category for Social Determinant of Health artifacts that pertain to Homelessness (which is defined as including: 1) Sheltered Homelessness: because of economic difficulties, currently living in a shelter, motel, temporary or transitional living situation, scattered-site housing, or not having a consistent place to sleep at night; and 2) Unsheltered Homelessness: residing in a place not meant for human habitation, such as cars, parks, sidewalks, abandoned buildings, on the street.) This SDOH category covers records relevant to circumstances that range Homelessness to Housed."/>
     </concept>
     <concept>
         <code value="inadequate-housing"/>

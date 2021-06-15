@@ -14,7 +14,6 @@ We would like to thank the [Agency for Healthcare Research and Quality (AHRQ)](h
 | Lisa Nelson           | [MaxMD ](https://www.maxmddirect.com/)                                        |
 | Matt Elrod        | [MaxMD](https://www.maxmddirect.com/)                                   |
 | Matt Menning        | [AMA  ](https://www.ama-assn.org/)                                |
-| Mohit Saigal        | [AMA  ](https://www.ama-assn.org/)                                 |
 | Becky Gradl          | [Academy of Nutrition and Dietetics ](https://www.eatright.org/)                                |
 | Sarah DeSilvey        | [Larner College of Medicine at the University of Vermont](http://www.med.uvm.edu/)                                |
 | Donna Pertel         | [Academy of Nutrition and Dietetics](https://www.eatright.org/)                                  |
