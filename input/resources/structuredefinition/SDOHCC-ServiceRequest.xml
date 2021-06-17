@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ServiceRequest"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2021-06-10T22:33:15.050+00:00"/>
-        <source value="#CG23ZGMJ4cnDMS7C"/>
+        <versionId value="6"/>
+        <lastUpdated value="2021-06-16T15:14:19.840+00:00"/>
+        <source value="#rj49RKGMs91LngEl"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
     <version value="0.1.0"/>
@@ -98,10 +98,12 @@
         </element>
         <element id="ServiceRequest.status">
             <path value="ServiceRequest.status"/>
+            <comment value="The status is generally fully in the control of the requester - they determine whether the order is draft or active and, after it has been activated, competed, cancelled or suspended. States relating to the activities of the performer are reflected on either the corresponding event (see [Event Pattern](event.html) for general discussion) or using the [Task](task.html) resource. &#xD;&#xA;While all values are currently allowed, there may be a contraint on the values in future releases based on implementation feedback."/>
             <mustSupport value="true"/>
         </element>
         <element id="ServiceRequest.intent">
             <path value="ServiceRequest.intent"/>
+            <comment value="This element is labeled as a modifier because the intent alters when and how the resource is actually applicable. While all values are currently allowed, there may be a contraint on the values in future releases based on implementation feedback."/>
             <mustSupport value="true"/>
         </element>
         <element id="ServiceRequest.category">
@@ -139,6 +141,11 @@
             <comment value="As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories."/>
             <min value="1"/>
             <mustSupport value="true"/>
+            <binding>
+                <strength value="preferred"/>
+                <description value="Codes for tests or services that can be carried out by a designated individual, organization or healthcare service."/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSNOMEDCTCPTLOINCHCPCSII"/>
+            </binding>
         </element>
         <element id="ServiceRequest.subject">
             <path value="ServiceRequest.subject"/>

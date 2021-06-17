@@ -51,6 +51,7 @@ INFORMATION: ValueSet/SDOHCC-ValueSetICD10CM: ValueSet: Validate resource agains
 INFORMATION: ValueSet/SDOHCC-ValueSetObservationStatus: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/SDOHCC-ValueSetSDOHCategory: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet 
+INFORMATION: ValueSet/SDOHCC-ValueSetSNOMEDCTCPTLOINCHCPCSII: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet 
 INFORMATION: CodeSystem/SDOHCC-CodeSystemTemporaryCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: ImplementationGuide/hl7.fhir.us.sdoh-clinicalcare: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide  
 # This warning is expected because HCPCS Level II codes are not on the FHIR terminology server.
