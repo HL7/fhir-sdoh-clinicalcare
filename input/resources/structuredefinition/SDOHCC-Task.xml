@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Task"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2021-06-01T19:30:42.447+00:00"/>
-        <source value="#dg8K2FW4oghMUs62"/>
+        <versionId value="3"/>
+        <lastUpdated value="2021-06-15T18:23:50.186+00:00"/>
+        <source value="#OzXu2f2cZT7hDiLR"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task"/>
     <version value="0.1.0"/>
@@ -58,6 +58,7 @@
         </element>
         <element id="Task.statusReason">
             <path value="Task.statusReason"/>
+            <comment value="This applies to the current status.  Look at the history of the task to see reasons for past statuses. If the Task.status is rejected, cancelled, on-hold, or failed, then Task.statusReason.text should be included."/>
             <mustSupport value="true"/>
         </element>
         <element id="Task.statusReason.text">
@@ -74,6 +75,7 @@
         </element>
         <element id="Task.priority">
             <path value="Task.priority"/>
+            <comment value="Task.priority should be used to distinguish urgent tasks (e.g., needs shelter immediately) from routine tasks."/>
             <mustSupport value="true"/>
         </element>
         <element id="Task.code">

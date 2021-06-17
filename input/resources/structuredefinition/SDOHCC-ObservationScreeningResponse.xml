@@ -3,16 +3,16 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationScreeningResponse"/>
     <meta>
-        <versionId value="10"/>
-        <lastUpdated value="2021-06-14T15:03:24.342+00:00"/>
-        <source value="#DxwvkuSANhG9WLra"/>
+        <versionId value="11"/>
+        <lastUpdated value="2021-06-15T18:23:50.187+00:00"/>
+        <source value="#rxLgiN0TPdOIpNfW"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
     <version value="0.1.0"/>
     <name value="SDOHCCObservationScreeningResponse"/>
     <title value="SDOHCC Observation Screening Response"/>
     <status value="draft"/>
-    <description value="This profile constrains the Observation resource for observations that represent question and answer pairs from SDOH screening instruments that are represented in LOINC."/>
+    <description value="This profile constrains the Observation resource for observations that represent question and answer pairs from SDOH screening instruments that are represented in LOINC. Cross product work group granted an exception to US Core on 12/03/2020 - Jira ticket 29795."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>

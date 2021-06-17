@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationAssessment"/>
     <meta>
-        <versionId value="5"/>
-        <lastUpdated value="2021-06-10T22:33:14.972+00:00"/>
-        <source value="#bQn12evN5TD04LmT"/>
+        <versionId value="7"/>
+        <lastUpdated value="2021-06-16T15:14:19.841+00:00"/>
+        <source value="#heRqtEgLedGS3TU8"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"/>
     <name value="SDOHCCObservationAssessment"/>
     <title value="SDOHCC Observation Assessment"/>
     <status value="draft"/>
-    <description value="This profile constrains the Observation resource for use related to Social Determinants of Health observations that involve assessment (e.g., by a provider or payer) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation)."/>
+    <description value="This profile constrains the Observation resource for use related to Social Determinants of Health observations that involve assessment (e.g., by a provider or payer) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation). Cross product work group granted an exception to US Core on 06/09/2021 - Jira ticket 32892."/>
     <fhirVersion value="4.0.1"/>
     <mapping>
         <identity value="workflow"/>
@@ -101,6 +101,10 @@
             <path value="Observation.code"/>
             <comment value="*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.&#xD;&#xA;&#xD;&#xA;As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set binding strength may change and may be refined to codes (including LOINC and SNOMED) that pertain to SDOH categories."/>
             <mustSupport value="true"/>
+            <binding>
+                <strength value="preferred"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT"/>
+            </binding>
         </element>
         <element id="Observation.subject">
             <path value="Observation.subject"/>
