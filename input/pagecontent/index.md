@@ -46,6 +46,7 @@ Implementers sould pay specific attention to the following sections:
 * Version 0.1.1 j (initial non-artifact ballot updates 6/13/2021)
 * Version 0.1.1 k (continued ballot updates 6/15/2021)
 * Version 0.1.1 l (updated of home page, Privacy and Security, and Credits 6/21/2021)
+* Version 0.1.1 m (updated of Technical background, Must Support, Gravity background 6/22/2021)
 
 
 
