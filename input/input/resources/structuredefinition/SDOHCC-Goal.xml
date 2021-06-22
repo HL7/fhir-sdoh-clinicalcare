@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-Goal"/>
+    <meta>
+        <versionId value="5"/>
+        <lastUpdated value="2021-06-11T14:37:43.830+00:00"/>
+        <source value="#X7ypkyf5Yuh4IGdz"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal"/>
+    <version value="0.1.0"/>
+    <name value="SDOHCCGoal"/>
+    <title value="SDOHCC Goal"/>
+    <status value="draft"/>
+    <date value="2020-12-14T04:01:34+00:00"/>
+    <description value="This profile constrains the Goal resource for goals that address Social Determinants of Health."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <mapping>
+        <identity value="argonaut-dq-dstu2"/>
+        <uri value="http://unknown.org/Argonaut-DQ-DSTU2"/>
+        <name value="Argonaut-DQ-DSTU2"/>
+    </mapping>
+    <mapping>
+        <identity value="v2"/>
+        <uri value="http://hl7.org/v2"/>
+        <name value="HL7 v2 Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="rim"/>
+        <uri value="http://hl7.org/v3"/>
+        <name value="RIM Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="w5"/>
+        <uri value="http://hl7.org/fhir/fivews"/>
+        <name value="FiveWs Pattern Mapping"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Goal"/>
+    <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Goal">
+            <path value="Goal"/>
+            <short value="Describes the intended SDOH-related objective(s) for a patient."/>
+            <definition value="For representation of SDOH goals."/>
+            <comment value="Many of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."/>
+        </element>
+        <element id="Goal.achievementStatus">
+            <path value="Goal.achievementStatus"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Goal.category">
+            <path value="Goal.category"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="$this"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Goal.category:SDOH">
+            <path value="Goal.category"/>
+            <sliceName value="SDOH"/>
+            <short value="e.g., food-insecurity | transportation-insecurity"/>
+            <definition value="A SDOH category assigned to the goal."/>
+            <requirements value="Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a goal. It is recommended that SDOH category codes be used to facilitate searching for SDOH-related goals."/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <description value="Codes for high-level SDOH categories."/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory"/>
+            </binding>
+        </element>
+        <element id="Goal.description">
+            <path value="Goal.description"/>
+            <comment value="If no code is available, use CodeableConcept.text.&#xD;&#xA;&#xD;&#xA;As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set binding strength may change and may be refined to codes (including LOINC and SNOMED) that pertain to SDOH categories."/>
+            <binding>
+                <strength value="preferred"/>
+                <description value="Codes providing the details of a particular goal.  In many systems, only the text element will be used."/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT"/>
+            </binding>
+        </element>
+        <element id="Goal.subject">
+            <path value="Goal.subject"/>
+            <definition value="Identifies the patient for whom the goal is being established."/>
+        </element>
+        <element id="Goal.target.measure">
+            <path value="Goal.target.measure"/>
+            <binding>
+                <strength value="preferred"/>
+            </binding>
+        </element>
+        <element id="Goal.statusDate">
+            <path value="Goal.statusDate"/>
+            <comment value="To see the date for past statuses, query history.&#xD;&#xA;&#xD;&#xA;The Goal Resource does not clearly specify whether Goal.statusDate applies to Goal.achievementStatus or to Goal.lifecycleStatus. For consistent use in the SDOH context, it is recommended that Goal.statusDate be synchronized with Goal.achievementStatus."/>
+        </element>
+        <element id="Goal.addresses">
+            <path value="Goal.addresses"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RiskAssessment"/>
+            </type>
+        </element>
+        <element id="Goal.addresses:SupportedAddresses">
+            <path value="Goal.addresses"/>
+            <sliceName value="SupportedAddresses"/>
+            <requirements value="When a goal addresses SDOH screening response observations generated from a survey/questionnaire, SDOH assessment observations, or SDOH conditions, Goal.addresses should reference instances that comply with the SDOHCC Screening Response Observation, SDOHCC Condition, or SDOHCC Assessment Observation profiles. However, references to other instance types are also possible."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Goal.outcomeCode">
+            <path value="Goal.outcomeCode"/>
+            <comment value="Note that this should not duplicate the goal status.&#xD;&#xA;&#xD;&#xA;Information represented by Goal.outcomeCode may overlap significantly with information represented by Goal.outcomeReference. Multiple approaches to representing the same information may negatively impact interoperability. Therefore, where there is significant overlap in information provided by Goal.outcomeCode and Goal.outcomeReference, it is recommended that Goal.outcomeReference should be used to provide details of goal outcomes.&#xD;&#xA;&#xD;&#xA;As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set may be refined to codes that pertain to SDOH categories."/>
+            <binding>
+                <strength value="preferred"/>
+                <description value="The result of the goal; e.g., &quot;Food security&quot;, &quot;Has access to a car &quot;."/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT"/>
+            </binding>
+        </element>
+        <element id="Goal.outcomeReference">
+            <path value="Goal.outcomeReference"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <comment value="The goal outcome is independent of the outcome of the related activities.  For example, if the Goal is to achieve a target body weight of 150 lb and a care plan activity is defined to diet, then the care plan’s activity outcome could be calories consumed whereas goal outcome is an observation for the actual body weight measured.&#xD;&#xA;&#xD;&#xA;Additionally, see comments for Goal.outcomeCode."/>
+        </element>
+        <element id="Goal.outcomeReference:SupportedOutcomeReference">
+            <path value="Goal.outcomeReference"/>
+            <sliceName value="SupportedOutcomeReference"/>
+            <requirements value="When a goal outcome can be represented by SDOH screening response observations or SDOH assessment observations, Goal.outcome should reference instances that comply with the SDOHCC Screening Response Observation or SDOHCC Assessment Observation profiles. However, references to other instance types are also possible."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

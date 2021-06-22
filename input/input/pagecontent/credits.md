@@ -1,31 +1,28 @@
-[Previous Page - Downloads](downloads.html)
-
 ### Acknowledgements
 
 The following individuals and organizations deserve credit for their signficant effort in the creation of the implemenation guide.
 
-We would like to thank the Agency for Healthcare Research and Quality (AHRQ), SIREN UCSF, UV Larner and Yale Nursing for their support for developing this IG and all [Gravity Project sponsors](https://confluence.hl7.org/display/GRAV/Gravity+Project+Sponsors) for their contributions to make rapid progress on the standardization of social determinants of health data.
+We would like to thank the [Agency for Healthcare Research and Quality (AHRQ)](https://www.ahrq.gov/), [SIREN UCSF](https://sirenetwork.ucsf.edu/), and [Larner College of Medicine at the University of Vermont](http://www.med.uvm.edu/) for their support for developing this IG and all [Gravity Project sponsors](https://confluence.hl7.org/display/GRAV/Gravity+Project+Sponsors) for their contributions to make rapid progress on the standardization of social determinants of health data.
 
 |**Name**         | **Organization**                                        |
 |--------------------------|--------------------------------------------|
-| Robert Dieterle         | EnableCare LLC                                      |
-| Corey Smith        | AMA                                   |
-| Monique van Berkum       | AMA                                 |
-| James Shalaby       | Elimu                                |
-| Lloyd McKenzie     | Gevity                                 |
-| Lisa Nelson           | MaxMD                                         |
-| Matt Elrod        | MaxMD                                   |
-| Matt Menning        | AMA                                  |
-| Mohit Saigal        | AMA                                   |
-| Becky Gradl          | Academy of Nutrition and Dietetics                                 |
-| Sarah DeSilvey        | Larner College of Medicine at the University of Vermont, SIREN                                  |
-| Donna Pertel         | Academy of Nutrition and Dietetics                                  |
-| Evelyn Gallego        |  EMI Advisors, LLC                                  |
-| Linda Hyde        | EMI Advisors, LLC                                 |
-| Lynette Elliott| EMI Advisors, LLC |
-| Rob Hausam |Hausam Consulting LLC        |
-| Cheng Liu | MaxMD|
-| Natasha Kreisle | MaxMD|
+| Robert Dieterle         | [EnableCare LLC](http://http://enablecare.us/)                                      |
+| Corey Smith        | [AMA](https://www.ama-assn.org/)                                   |
+| Monique van Berkum       | [AMA ](https://www.ama-assn.org/)                                |
+| James Shalaby       | [Elimu](https://www.elimu.io/)                                |
+| Lloyd McKenzie     | [Gevity](https://www.gevityinc.com/)                                 |
+| Lisa Nelson           | [MaxMD ](https://www.maxmddirect.com/)                                        |
+| Matt Elrod        | [MaxMD](https://www.maxmddirect.com/)                                   |
+| Matt Menning        | [AMA  ](https://www.ama-assn.org/)                                |
+| Becky Gradl          | [Academy of Nutrition and Dietetics ](https://www.eatright.org/)                                |
+| Sarah DeSilvey        | [Larner College of Medicine at the University of Vermont](http://www.med.uvm.edu/)                                |
+| Donna Pertel         | [Academy of Nutrition and Dietetics](https://www.eatright.org/)                                  |
+| Evelyn Gallego        |  [EMI Advisors, LLC ](https://www.emiadvisors.net/)                                 |
+| Linda Hyde        | [EMI Advisors, LLC ](https://www.emiadvisors.net/)                                |
+| Lynette Elliott| [EMI Advisors, LLC](https://www.emiadvisors.net/) |
+| Rob Hausam |[Hausam Consulting LLC](https://www.linkedin.com/in/robert-hausam-a273aa7/)        |
+| Cheng Liu | [MaxMD](https://www.maxmddirect.com/)|
+| Natasha Kreisle | [MaxMD](https://www.maxmddirect.com/)|
 
 
 Our thanks to these and to the many others not explicitly listed who contributed their time, enthusiasm and expertise to this work.

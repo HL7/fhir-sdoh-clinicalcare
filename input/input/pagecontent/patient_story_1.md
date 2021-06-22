@@ -1,5 +1,3 @@
-[Previous Page - Patient Story 1 Personas](patient_story_1_personas.html)
-
 *The following is a detailed story around the Patient Persona of Rebecca Smith.  It provides context around the interactions between and among Rebecca and her care team for the purpose of illustrating the Use Cases defined in this document.  Some of the scenarios herein may not fully align with every role or experience in a real-world situation.  Please refer to Patient Story 1 Personas for background information around the following four primary roles:  patient, physician, care coordinator, and clinical staff member.*
 
 Rebecca schedules an appointment for her annual well visit with her primary care physician, Dr. Carla Sanchez.  While making the appointment, the scheduler verifies Rebecca's insurance and finds that it covers an SDOH screening.  The scheduler confirms Rebecca's preferences for communication.  Rebecca consents to use of her email and text for office communications and provides her email address and cell phone number.  The scheduler mentions the practice offers a secure patient portal for sharing of clinical information such as test results and visit summaries.  She offers Rebecca the opportunity to learn more about the patient portal during the upcoming office visit.  Rebecca agrees and the scheduler adds fifteen minutes extra to the appointment for set-up. 
@@ -32,7 +30,7 @@ Ms. Shah documents the agreed upon health concerns, patient goals, and action pl
 
 Mr. Patel returns to the exam room and works with Rebecca to find another date/time to schedule a telephone consultation with Ms. Shah.  Mr. Patel schedules Rebecca's appointment with Ms. Shah for the following week and a follow-up appointment with Dr. Sanchez within three months of the appointment with Ms. Shah so both Dr. Sanchez and Rebecca can monitor the progress with goals established.  Rebecca confirms her preference to schedule the appointment after Rebecca's working hours.
 
-The following week, Rebecca has a phone consultation with Ms. Shah.  Ms. Shah has reviewed Rebecca's care plan and identified several resources available to support the care plan goals including federal assistance benefits (SNAP/WIC benefits), transportation service to and from appointments, vouchers to cover public transportation (e.g., Commuter Checks), school lunch programs, and a local food pantry. ,  
+The following week, Rebecca has a phone consultation with Ms. Shah.  Ms. Shah has reviewed Rebecca's care plan and identified several resources available to support the care plan goals including federal assistance benefits (SNAP/WIC benefits), transportation service to and from appointments, vouchers to cover public transportation (e.g., Commuter Checks), school lunch programs, and a local food pantry.  
 
 Ms. Shah walks Rebecca through the California SNAP eligibility and enrollment process.  Ms. Shah determines Rebecca is eligible for SNAP benefits and offers to assist Rebecca with the SNAP application online or, alternatively, visiting the local SNAP Office.  Rebecca confirms she would prefer to apply online and Ms. Shah adds a planned action step to Rebecca's  care plan.
 Rebecca completes and submits the online application the next day during her lunch break. 
@@ -67,7 +65,7 @@ Ms. Shah reviews Rebecca's progress toward the goals set during the last encount
 * Patient has access to patient portal and can use portal to review and update electronic information.
 * Patient supplies a valid ID to the practice and the practice uses it to create a trust account.  The account uniquely identifies the patient to communicate and share information in a secure manner. 
 * Patient interprets screening questions as intended and answers questions honestly. 
-* Questions presented in the screening questionnaire are used to document SDOH health concerns
+* Questions presented in the screening questionnaire are used to document SDOH health concerns.
 * Evidence-based patient engagement strategies are used to communicate with the patient and to gather information from the patient. 
 * Screening questionnaires are LOINC coded and the resulting health concerns are derived from the patient’s responses and coded in SNOMED CT and ICD-10.
 * Patient is eligible for and is approved to receive community-based services.  Service capacity exists to address the patient's social needs.
@@ -86,5 +84,3 @@ Ms. Shah reviews Rebecca's progress toward the goals set during the last encount
 * EHR has access to all Patient social risk related screening, diagnosis, goal setting, and intervention data.
 * EHR is capable of incorporating SDOH data for both encounter and claims-based data exchange with a payer.
 * Acknowledgment and error-handling messages will be handled by standard IT protocols and will not be addressed within the scope of this Use Case Package.
-
-[Next Page - Survey Instrument Support](survey_instrument_support.html)
