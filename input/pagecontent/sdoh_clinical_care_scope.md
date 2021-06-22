@@ -9,6 +9,8 @@ The Gravity Project focus is on defining structure and coded content exchange to
 ####  Out of Scope
 
 This project will not validate or provide incentives for implementation of the identified SDOH data elements.
+Providing guidance on the frequency of administering asseessment (this is left up to the resposible organizations based on their standards of practice).
+Standards for reporting quality measures to payers or quality organizattions -- this is left to the Data Exchange for Quality Meaures Implementaion Guide that was co-authored by NCQA.
 
 <br>
 ### Conceptual Framework

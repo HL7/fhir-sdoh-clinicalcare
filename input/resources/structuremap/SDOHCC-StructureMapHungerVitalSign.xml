@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-StructureMapHungerVitalSign"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-06-03T00:39:15.515+00:00"/>
-        <source value="#MmkdgbEsCVuDN2Fi"/>
+        <versionId value="4"/>
+        <lastUpdated value="2021-06-22T12:41:09.112+00:00"/>
+        <source value="#JNa1kjgDZsl8zO60"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapHungerVitalSign"/>
     <name value="SDOHCCStructureMapHungerVitalSign"/>
@@ -31,7 +31,7 @@
         <alias value="sdohccCondition"/>
     </structure>
     <structure>
-        <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+        <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"/>
         <mode value="target"/>
         <alias value="sdohccObservation"/>
     </structure>
@@ -59,7 +59,7 @@
                 <element value="id"/>
                 <transform value="copy"/>
                 <parameter>
-                    <valueString value="SDOHCCBundleHungerVitalSignExample"/>
+                    <valueString value="SDOHCC-BundleHungerVitalSignExample"/>
                 </parameter>
             </target>
         </rule>
@@ -303,6 +303,37 @@
             <target>
                 <context value="observation"/>
                 <contextType value="variable"/>
+                <element value="meta"/>
+                <variable value="newMeta"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="Meta"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="rule-10"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="newMeta"/>
+                    <contextType value="variable"/>
+                    <element value="profile"/>
+                    <transform value="copy"/>
+                    <parameter>
+                        <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+                    </parameter>
+                </target>
+            </rule>
+        </rule>
+        <rule>
+            <name value="rule-11"/>
+            <source>
+                <context value="src"/>
+            </source>
+            <target>
+                <context value="observation"/>
+                <contextType value="variable"/>
                 <element value="category"/>
                 <transform value="cc"/>
                 <parameter>
@@ -317,7 +348,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-10"/>
+            <name value="rule-12"/>
             <source>
                 <context value="src"/>
             </source>
@@ -338,7 +369,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-11"/>
+            <name value="rule-13"/>
             <source>
                 <context value="src"/>
             </source>
@@ -353,7 +384,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-12"/>
+                <name value="rule-14"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -368,7 +399,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-13"/>
+                    <name value="rule-15"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -383,7 +414,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-14"/>
+                    <name value="rule-16"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -398,7 +429,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-15"/>
+                    <name value="rule-17"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -415,7 +446,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-16"/>
+            <name value="rule-18"/>
             <source>
                 <context value="src"/>
                 <element value="authored"/>
@@ -441,7 +472,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-17"/>
+            <name value="rule-19"/>
             <source>
                 <context value="answerItem"/>
                 <element value="answer"/>
@@ -458,7 +489,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-18"/>
+                <name value="rule-20"/>
                 <source>
                     <context value="answer"/>
                     <element value="valueCoding"/>
@@ -477,7 +508,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-19"/>
+            <name value="rule-21"/>
             <source>
                 <context value="src"/>
                 <element value="subject"/>
@@ -494,7 +525,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-20"/>
+                <name value="rule-22"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="reference"/>
@@ -511,7 +542,7 @@
                 </target>
             </rule>
             <rule>
-                <name value="rule-21"/>
+                <name value="rule-23"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="display"/>
@@ -553,7 +584,7 @@
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-22"/>
+            <name value="rule-24"/>
             <source>
                 <context value="src"/>
             </source>
@@ -563,7 +594,7 @@
                 <element value="id"/>
                 <transform value="copy"/>
                 <parameter>
-                    <valueString value="SDOHCCObservationResponseHungerVitalSignQuestion1Example"/>
+                    <valueString value="SDOHCC-ObservationResponseHungerVitalSignQuestion1Example"/>
                 </parameter>
             </target>
             <dependent>
@@ -573,7 +604,7 @@
             </dependent>
         </rule>
         <rule>
-            <name value="rule-23"/>
+            <name value="rule-25"/>
             <source>
                 <context value="item"/>
                 <variable value="i"/>
@@ -593,7 +624,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-24"/>
+            <name value="rule-26"/>
             <source>
                 <context value="src"/>
                 <element value="subject"/>
@@ -610,7 +641,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-25"/>
+                <name value="rule-27"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="reference"/>
@@ -627,7 +658,7 @@
                 </target>
             </rule>
             <rule>
-                <name value="rule-26"/>
+                <name value="rule-28"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="display"/>
@@ -645,7 +676,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-27"/>
+            <name value="rule-29"/>
             <source>
                 <context value="src"/>
                 <element value="id"/>
@@ -662,7 +693,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-28"/>
+                <name value="rule-30"/>
                 <source>
                     <context value="id"/>
                 </source>
@@ -705,7 +736,7 @@
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-29"/>
+            <name value="rule-31"/>
             <source>
                 <context value="src"/>
             </source>
@@ -715,7 +746,7 @@
                 <element value="id"/>
                 <transform value="copy"/>
                 <parameter>
-                    <valueString value="SDOHCCObservationResponseHungerVitalSignQuestion2Example"/>
+                    <valueString value="SDOHCC-ObservationResponseHungerVitalSignQuestion2Example"/>
                 </parameter>
             </target>
             <dependent>
@@ -725,7 +756,7 @@
             </dependent>
         </rule>
         <rule>
-            <name value="rule-30"/>
+            <name value="rule-32"/>
             <source>
                 <context value="item"/>
                 <variable value="i"/>
@@ -745,7 +776,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-31"/>
+            <name value="rule-33"/>
             <source>
                 <context value="src"/>
                 <element value="subject"/>
@@ -762,7 +793,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-32"/>
+                <name value="rule-34"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="reference"/>
@@ -779,7 +810,7 @@
                 </target>
             </rule>
             <rule>
-                <name value="rule-33"/>
+                <name value="rule-35"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="display"/>
@@ -797,7 +828,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-34"/>
+            <name value="rule-36"/>
             <source>
                 <context value="src"/>
                 <element value="id"/>
@@ -814,7 +845,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-35"/>
+                <name value="rule-37"/>
                 <source>
                     <context value="id"/>
                 </source>
@@ -862,7 +893,7 @@
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-36"/>
+            <name value="rule-38"/>
             <source>
                 <context value="src"/>
             </source>
@@ -872,7 +903,7 @@
                 <element value="id"/>
                 <transform value="copy"/>
                 <parameter>
-                    <valueString value="SDOHCCObservationResponseHungerVitalSignQuestion3Example"/>
+                    <valueString value="SDOHCC-ObservationResponseHungerVitalSignQuestion3Example"/>
                 </parameter>
             </target>
             <dependent>
@@ -882,7 +913,7 @@
             </dependent>
         </rule>
         <rule>
-            <name value="rule-37"/>
+            <name value="rule-39"/>
             <source>
                 <context value="item"/>
                 <variable value="i"/>
@@ -902,7 +933,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-38"/>
+            <name value="rule-40"/>
             <source>
                 <context value="bundle"/>
                 <element value="entry"/>
@@ -939,7 +970,7 @@
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-39"/>
+            <name value="rule-41"/>
             <source>
                 <context value="entries"/>
                 <element value="resource"/>
@@ -957,7 +988,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-40"/>
+            <name value="rule-42"/>
             <source>
                 <context value="entries"/>
                 <element value="resource"/>
@@ -999,7 +1030,38 @@
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-41"/>
+            <name value="rule-43"/>
+            <source>
+                <context value="src"/>
+            </source>
+            <target>
+                <context value="groupObservation"/>
+                <contextType value="variable"/>
+                <element value="meta"/>
+                <variable value="newMeta"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="Meta"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="rule-44"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="newMeta"/>
+                    <contextType value="variable"/>
+                    <element value="profile"/>
+                    <transform value="copy"/>
+                    <parameter>
+                        <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+                    </parameter>
+                </target>
+            </rule>
+        </rule>
+        <rule>
+            <name value="rule-45"/>
             <source>
                 <context value="src"/>
             </source>
@@ -1009,7 +1071,7 @@
                 <element value="id"/>
                 <transform value="copy"/>
                 <parameter>
-                    <valueString value="SDOHCCObservationResponseHungerVitalSignGroupingExample"/>
+                    <valueString value="SDOHCC-ObservationResponseHungerVitalSignGroupingExample"/>
                 </parameter>
             </target>
             <dependent>
@@ -1019,7 +1081,7 @@
             </dependent>
         </rule>
         <rule>
-            <name value="rule-42"/>
+            <name value="rule-46"/>
             <source>
                 <context value="src"/>
             </source>
@@ -1034,7 +1096,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-43"/>
+            <name value="rule-47"/>
             <source>
                 <context value="src"/>
             </source>
@@ -1055,7 +1117,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-44"/>
+            <name value="rule-48"/>
             <source>
                 <context value="src"/>
             </source>
@@ -1076,7 +1138,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-45"/>
+            <name value="rule-49"/>
             <source>
                 <context value="src"/>
             </source>
@@ -1091,7 +1153,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-46"/>
+                <name value="rule-50"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1106,7 +1168,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-47"/>
+                    <name value="rule-51"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1121,7 +1183,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-48"/>
+                    <name value="rule-52"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1136,7 +1198,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-49"/>
+                    <name value="rule-53"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1153,7 +1215,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-50"/>
+            <name value="rule-54"/>
             <source>
                 <context value="src"/>
                 <element value="authored"/>
@@ -1170,7 +1232,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-51"/>
+            <name value="rule-55"/>
             <source>
                 <context value="src"/>
                 <element value="subject"/>
@@ -1187,7 +1249,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-52"/>
+                <name value="rule-56"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="reference"/>
@@ -1204,7 +1266,7 @@
                 </target>
             </rule>
             <rule>
-                <name value="rule-53"/>
+                <name value="rule-57"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="display"/>
@@ -1222,7 +1284,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-54"/>
+            <name value="rule-58"/>
             <source>
                 <context value="src"/>
             </source>
@@ -1243,7 +1305,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-55"/>
+            <name value="rule-59"/>
             <source>
                 <context value="bundle"/>
                 <element value="entry"/>
@@ -1260,7 +1322,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-56"/>
+                <name value="rule-60"/>
                 <source>
                     <context value="entries"/>
                     <element value="resource"/>
@@ -1278,7 +1340,7 @@
                 </target>
             </rule>
             <rule>
-                <name value="rule-57"/>
+                <name value="rule-61"/>
                 <source>
                     <context value="entries"/>
                     <element value="resource"/>
@@ -1296,7 +1358,7 @@
                 </target>
             </rule>
             <rule>
-                <name value="rule-58"/>
+                <name value="rule-62"/>
                 <source>
                     <context value="entries"/>
                     <element value="resource"/>
@@ -1310,6 +1372,42 @@
                     <transform value="reference"/>
                     <parameter>
                         <valueId value="obs3"/>
+                    </parameter>
+                </target>
+            </rule>
+        </rule>
+        <rule>
+            <name value="rule-63"/>
+            <source>
+                <context value="src"/>
+                <element value="id"/>
+                <variable value="id"/>
+            </source>
+            <target>
+                <context value="groupObservation"/>
+                <contextType value="variable"/>
+                <element value="derivedFrom"/>
+                <variable value="newReference"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="Reference"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="rule-64"/>
+                <source>
+                    <context value="id"/>
+                </source>
+                <target>
+                    <context value="newReference"/>
+                    <contextType value="variable"/>
+                    <element value="reference"/>
+                    <transform value="append"/>
+                    <parameter>
+                        <valueString value="QuestionnaireResponse/"/>
+                    </parameter>
+                    <parameter>
+                        <valueId value="id"/>
                     </parameter>
                 </target>
             </rule>
@@ -1329,7 +1427,7 @@
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-59"/>
+            <name value="rule-65"/>
             <source>
                 <context value="observation"/>
                 <element value="id"/>
@@ -1373,7 +1471,7 @@
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-60"/>
+            <name value="rule-66"/>
             <source>
                 <context value="src"/>
             </source>
@@ -1383,7 +1481,7 @@
                 <element value="id"/>
                 <transform value="copy"/>
                 <parameter>
-                    <valueString value="SDOHCCConditionFoodInsecurityExample"/>
+                    <valueString value="SDOHCC-ConditionFoodInsecurityExample"/>
                 </parameter>
             </target>
             <dependent>
@@ -1393,7 +1491,38 @@
             </dependent>
         </rule>
         <rule>
-            <name value="rule-61"/>
+            <name value="rule-67"/>
+            <source>
+                <context value="src"/>
+            </source>
+            <target>
+                <context value="condition"/>
+                <contextType value="variable"/>
+                <element value="meta"/>
+                <variable value="newMeta"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="Meta"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="rule-68"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="newMeta"/>
+                    <contextType value="variable"/>
+                    <element value="profile"/>
+                    <transform value="copy"/>
+                    <parameter>
+                        <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+                    </parameter>
+                </target>
+            </rule>
+        </rule>
+        <rule>
+            <name value="rule-69"/>
             <source>
                 <context value="src"/>
             </source>
@@ -1414,7 +1543,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-62"/>
+            <name value="rule-70"/>
             <source>
                 <context value="src"/>
             </source>
@@ -1435,28 +1564,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-63"/>
-            <source>
-                <context value="src"/>
-            </source>
-            <target>
-                <context value="condition"/>
-                <contextType value="variable"/>
-                <element value="category"/>
-                <transform value="cc"/>
-                <parameter>
-                    <valueString value="http://hl7.org/fhir/us/core/CodeSystem/condition-category"/>
-                </parameter>
-                <parameter>
-                    <valueString value="health-concern"/>
-                </parameter>
-                <parameter>
-                    <valueString value="Health Concern"/>
-                </parameter>
-            </target>
-        </rule>
-        <rule>
-            <name value="rule-64"/>
+            <name value="rule-71"/>
             <source>
                 <context value="src"/>
             </source>
@@ -1471,7 +1579,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-65"/>
+                <name value="rule-72"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1486,7 +1594,84 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-66"/>
+                    <name value="rule-73"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="system"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="http://hl7.org/fhir/us/core/CodeSystem/condition-category"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="rule-74"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="code"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="health-concern"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="rule-75"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="display"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="Health Concern"/>
+                        </parameter>
+                    </target>
+                </rule>
+            </rule>
+        </rule>
+        <rule>
+            <name value="rule-76"/>
+            <source>
+                <context value="src"/>
+            </source>
+            <target>
+                <context value="condition"/>
+                <contextType value="variable"/>
+                <element value="category"/>
+                <variable value="newCC"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="CodeableConcept"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="rule-77"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="newCC"/>
+                    <contextType value="variable"/>
+                    <element value="coding"/>
+                    <variable value="newCoding"/>
+                    <transform value="create"/>
+                    <parameter>
+                        <valueString value="Coding"/>
+                    </parameter>
+                </target>
+                <rule>
+                    <name value="rule-78"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1501,7 +1686,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-67"/>
+                    <name value="rule-79"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1516,7 +1701,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-68"/>
+                    <name value="rule-80"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1533,7 +1718,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-69"/>
+            <name value="rule-81"/>
             <source>
                 <context value="src"/>
             </source>
@@ -1541,18 +1726,137 @@
                 <context value="condition"/>
                 <contextType value="variable"/>
                 <element value="code"/>
-                <variable value="code"/>
-                <transform value="cc"/>
+                <variable value="newCodeCC"/>
+                <transform value="create"/>
                 <parameter>
-                    <valueString value="http://snomed.info/sct"/>
-                </parameter>
-                <parameter>
-                    <valueString value="733423003"/>
+                    <valueString value="CodeableConcept"/>
                 </parameter>
             </target>
+            <rule>
+                <name value="rule-82"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="newCodeCC"/>
+                    <contextType value="variable"/>
+                    <element value="coding"/>
+                    <variable value="newCoding"/>
+                    <transform value="create"/>
+                    <parameter>
+                        <valueString value="Coding"/>
+                    </parameter>
+                </target>
+                <rule>
+                    <name value="rule-83"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="system"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="http://snomed.info/sct"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="rule-84"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="code"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="733423003"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="rule-85"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="display"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="Food insecurity"/>
+                        </parameter>
+                    </target>
+                </rule>
+            </rule>
+            <rule>
+                <name value="rule-86"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="newCodeCC"/>
+                    <contextType value="variable"/>
+                    <element value="coding"/>
+                    <variable value="newCoding2"/>
+                    <transform value="create"/>
+                    <parameter>
+                        <valueString value="Coding"/>
+                    </parameter>
+                </target>
+                <rule>
+                    <name value="rule-87"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding2"/>
+                        <contextType value="variable"/>
+                        <element value="system"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="http://hl7.org/fhir/sid/icd-10-cm"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="rule-88"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding2"/>
+                        <contextType value="variable"/>
+                        <element value="code"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="Z59.4"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="rule-89"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding2"/>
+                        <contextType value="variable"/>
+                        <element value="display"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="Lack of adequate food and safe drinking water"/>
+                        </parameter>
+                    </target>
+                </rule>
+            </rule>
         </rule>
         <rule>
-            <name value="rule-70"/>
+            <name value="rule-90"/>
             <source>
                 <context value="src"/>
                 <element value="authored"/>
@@ -1579,7 +1883,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-71"/>
+            <name value="rule-91"/>
             <source>
                 <context value="bundle"/>
                 <element value="entry"/>
@@ -1602,7 +1906,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-72"/>
+                <name value="rule-92"/>
                 <source>
                     <context value="entries"/>
                     <element value="resource"/>
@@ -1621,7 +1925,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-73"/>
+            <name value="rule-93"/>
             <source>
                 <context value="src"/>
                 <element value="subject"/>
@@ -1638,7 +1942,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-74"/>
+                <name value="rule-94"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="reference"/>
@@ -1655,7 +1959,7 @@
                 </target>
             </rule>
             <rule>
-                <name value="rule-75"/>
+                <name value="rule-95"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="display"/>
@@ -1687,7 +1991,7 @@
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-76"/>
+            <name value="rule-96"/>
             <source>
                 <context value="condition"/>
                 <element value="id"/>
