@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Goal
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-GoalFoodSecurityExample"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2021-06-03T01:31:59.696+00:00"/>
+        <source value="#InLIR7QajAcI3CDo"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal"/>
+    </meta>
+    <lifecycleStatus value="active"/>
+    <achievementStatus>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/goal-achievement"/>
+            <code value="improving"/>
+            <display value="Improving"/>
+        </coding>
+    </achievementStatus>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="food-insecurity"/>
+            <display value="Food Insecurity"/>
+        </coding>
+    </category>
+    <description>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1078229009"/>
+            <display value="Food security"/>
+        </coding>
+    </description>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <target>
+        <measure>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="88124-3"/>
+                <display value="Food insecurity risk [HVS]"/>
+            </coding>
+        </measure>
+        <detailCodeableConcept>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="LA19983-8"/>
+                <display value="No risk"/>
+            </coding>
+        </detailCodeableConcept>
+        <dueDate value="2021-08-01"/>
+    </target>
+    <statusDate value="2021-05-01"/>
+    <addresses>
+        <reference value="Condition/SDOHCC-ConditionFoodInsecurityExample"/>
+    </addresses>
+</Goal>

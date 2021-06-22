@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ObservationAssessmentInadequateFoodIntakeExample"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2021-06-03T01:17:13.168+00:00"/>
+        <source value="#tMMdSHjiyzXlG2nJ"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="food-insecurity"/>
+            <display value="Food Insecurity"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="699653008"/>
+            <display value="Inadequate oral food intake for physiological needs"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <effectiveDateTime value="2021-05-10T21:56:54.671Z"/>
+    <valueBoolean value="true"/>
+</Observation>

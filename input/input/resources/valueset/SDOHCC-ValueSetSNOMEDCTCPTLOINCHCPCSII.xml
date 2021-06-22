@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ValueSetSNOMEDCTCPTLOINCHCPCSII"/>
+    <meta>
+        <versionId value="5"/>
+        <lastUpdated value="2021-06-16T22:17:51.584+00:00"/>
+        <source value="#vnVld5XmPuq0bFmX"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSNOMEDCTCPTLOINCHCPCSII"/>
+    <version value="0.1.0"/>
+    <name value="SDOHCCValueSetSNOMEDCTCPTLOINCHCPCSII"/>
+    <title value="SDOHCC ValueSet SNOMEDCT CPT LOINC HCPCSII"/>
+    <status value="draft"/>
+    <description value="This value set contains all SNOMED CT Procedure codes, and all of CPT, LOINC and HCPCSII."/>
+    <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement. Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This value set includes content from: HCPCS Level II Alphanumeric Codes codes are maintained by the US Centers for Medicare and Medicaid Services (CMS) available for public use."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <filter>
+                <property value="concept"/>
+                <op value="is-a"/>
+                <value value="71388002"/>
+            </filter>
+        </include>
+        <include>
+            <system value="http://loinc.org"/>
+        </include>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.6.285"/>
+        </include>
+        <include>
+            <system value="http://www.ama-assn.org/go/cpt"/>
+        </include>
+    </compose>
+</ValueSet>

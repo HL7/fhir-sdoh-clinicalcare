@@ -1,23 +1,21 @@
-[Previous Page - Mapping Instructions](mapping_instructions.html)
-
 The following is an example of a map that is used to generate a StructureMap to extract a Bundle of Observations and Conditions from a Hunger Vital Sign [HVS] QuestionnaireResponse. 
 
 ```
-/// name = "SDOHCC_StructureMap_HungerVitalSignMapper_1"
+/// name = "SDOHCC-Hunger-Vital-Sign-Map"
 /// status = draft
 
-map "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1" = "SDOHCC StructureMap HungerVitalSignMapper 1"
+map "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapHungerVitalSign" = "SDOHCC StructureMap Hunger Vital Sign"
 
 uses "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse" alias questionnaireResponse as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
 uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
-uses "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1" alias sdohccCondition as target
-uses "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1" alias sdohccObservation as target
+uses "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition" alias sdohccCondition as target
+uses "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment" alias sdohccObservation as target
 
 group sdohMapping(source src : questionnaireResponse, target bundle : Bundle) {
   //temporarily set id to human-readable id as example
   //src -> bundle.id = uuid();
-  src -> bundle.id = 'SDOHCC-Bundle-HungerVitalSign-Example-1';
+  src -> bundle.id = 'SDOHCC-BundleHungerVitalSignExample';
   src -> bundle.type = 'transaction';
   
   //for each answer item in the questionnareResponse, create an Observation and add it to the groupObservation
@@ -46,13 +44,18 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
   //src -> observation.id = uuid() then
   //  SetObservationFullUrl(observation, entry);
   src -> observation.status = 'final';
+
+  src -> observation.meta = create('Meta') as newMeta then {
+    src -> newMeta.profile = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse';
+  };
+
   src -> observation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'social-history', 'Social History');
   src -> observation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'survey', 'Survey');
   
   //Add sdoh category
   src -> observation.category = create('CodeableConcept') as newCC then {
       src -> newCC.coding = create('Coding') as newCoding then {
-        src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
+        src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
         src -> newCoding.code = 'food-insecurity';
         src -> newCoding.display = 'Food Insecurity';
     };
@@ -72,7 +75,7 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
 
 group TransformObservation1(source src: questionnaireResponse, source item, target observation: sdohccObservation, target entry)
 {
-  src -> observation.id = 'SDOHCC-Observation-HungerVitalSign-Example-1' then
+  src -> observation.id = 'SDOHCC-ObservationResponseHungerVitalSignQuestion1Example' then
     SetObservationFullUrl(observation, entry);
 
   item as i -> observation.code = cc('http://loinc.org', '88122-7') as code;
@@ -89,7 +92,7 @@ group TransformObservation1(source src: questionnaireResponse, source item, targ
 
 group TransformObservation2(source src: questionnaireResponse, source item, target observation: sdohccObservation, target entry)
 {
-  src -> observation.id = 'SDOHCC-Observation-HungerVitalSign-Example-2' then
+  src -> observation.id = 'SDOHCC-ObservationResponseHungerVitalSignQuestion2Example' then
    	SetObservationFullUrl(observation, entry);
 
   item as i -> observation.code = cc('http://loinc.org', '88123-5') as code;
@@ -106,7 +109,7 @@ group TransformObservation2(source src: questionnaireResponse, source item, targ
 
 group TransformObservation3(source src: questionnaireResponse, source item, source bundle, target observation: sdohccObservation, target entry)
 {
-  src -> observation.id = 'SDOHCC-Observation-HungerVitalSign-Example-3' then
+  src -> observation.id = 'SDOHCC-ObservationResponseHungerVitalSignQuestion3Example' then
    	SetObservationFullUrl(observation, entry);
 
   item as i -> observation.code = cc('http://loinc.org', '88124-3') as code;
@@ -125,7 +128,11 @@ group TransformGroupObservation(source src: questionnaireResponse, source bundle
   //temporarily set id to human-readable id as example
   //src -> groupObservation.id = uuid() then
 
-  src -> groupObservation.id = 'SDOHCC-Observation-HungerVitalSignGroup-1' then
+  src -> groupObservation.meta = create('Meta') as newMeta then {
+    src -> newMeta.profile = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse';
+  };
+
+  src -> groupObservation.id = 'SDOHCC-ObservationResponseHungerVitalSignGroupingExample' then
     SetObservationFullUrl(groupObservation, entry);  
   src -> groupObservation.status = 'final';
   src -> groupObservation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'social-history', 'Social History');
@@ -133,7 +140,7 @@ group TransformGroupObservation(source src: questionnaireResponse, source bundle
   //Add sdoh category
   src -> groupObservation.category = create('CodeableConcept') as newCC then {
       src -> newCC.coding = create('Coding') as newCoding then {
-        src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
+        src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
         src -> newCoding.code = 'food-insecurity';
         src -> newCoding.display = 'Food Insecurity';
     };
@@ -152,6 +159,10 @@ group TransformGroupObservation(source src: questionnaireResponse, source bundle
 	entries.resource as obs2 where "code.coding.code = '88123-5'" -> df.reference = reference(obs2); 
 	entries.resource as obs3 where "code.coding.code = '88124-3'" -> df.reference = reference(obs3); 
   };
+
+  src.id as id -> groupObservation.derivedFrom = create('Reference') as newReference then {
+    id -> newReference.reference = append('QuestionnaireResponse/', id);
+  };
 }
 
 group SetObservationFullUrl(source observation: Observation, target entry)
@@ -163,24 +174,44 @@ group TransformCondition(source src: questionnaireResponse, source bundle, targe
 {
   //temporarily set id to human-readable id as example
   //src -> condition.id = uuid() then
-  src -> condition.id = 'SDOHCC-Condition-HungerVitalSign-Example-1' then
+  src -> condition.id = 'SDOHCC-ConditionFoodInsecurityExample' then
     SetConditionFullUrl(condition, entry);
        
+  src -> condition.meta = create('Meta') as newMeta then {
+    src -> newMeta.profile = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition';
+  };
+
   src -> condition.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical', 'active', 'Active');
   src -> condition.verificationStatus = cc('http://terminology.hl7.org/CodeSystem/condition-ver-status', 'unconfirmed', 'Unconfirmed');
-  src -> condition.category = cc('http://hl7.org/fhir/us/core/CodeSystem/condition-category', 'health-concern', 'Health Concern');
-
+  src -> condition.category = create('CodeableConcept') as newCC then {
+      src -> newCC.coding = create('Coding') as newCoding then {
+        src -> newCoding.system = 'http://hl7.org/fhir/us/core/CodeSystem/condition-category';
+        src -> newCoding.code = 'health-concern';
+        src -> newCoding.display = 'Health Concern';
+    };
+  };
   //Add sdoh category
   src -> condition.category = create('CodeableConcept') as newCC then {
       src -> newCC.coding = create('Coding') as newCoding then {
-        src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
+        src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
         src -> newCoding.code = 'food-insecurity';
         src -> newCoding.display = 'Food Insecurity';
     };
   };
 
-  src -> condition.code = cc('http://snomed.info/sct', '733423003') as code;
-    
+  src -> condition.code = create('CodeableConcept') as newCodeCC then {
+      src -> newCodeCC.coding = create('Coding') as newCoding then {
+        src -> newCoding.system = 'http://snomed.info/sct';
+        src -> newCoding.code = '733423003';
+        src -> newCoding.display = 'Food insecurity';
+    };
+    src -> newCodeCC.coding = create('Coding') as newCoding2 then {
+        src -> newCoding2.system = 'http://hl7.org/fhir/sid/icd-10-cm';
+        src -> newCoding2.code = 'Z59.4';
+        src -> newCoding2.display = 'Lack of adequate food and safe drinking water';
+    };
+  };
+      
   src.authored as authored -> condition.onset = create('Period') as period,
     period.start = authored;
 
@@ -201,6 +232,3 @@ group SetConditionFullUrl(source condition: sdohccCondition, target entry)
 
 ```
 
-
-
-[Next Page - Mapping Instructions PRAPARE Questionnaire](mapping_instructions_prapare_questionnaire.html)

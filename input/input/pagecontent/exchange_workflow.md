@@ -1,5 +1,3 @@
-[Previous Page - Support for Multiple Domains](support_for_multiple_domains.html)
-
 ###  Exchange Workflow
 
 The following diagram depicts the primary exchange workflows that are anticipated by the current version this IG.
@@ -13,6 +11,3 @@ The following diagram depicts the primary exchange workflows that are anticipate
 	*  Responsible Payer -- provide access to health concerns (Problems) and Interventions to faciliate shared care planning for the covered member.
 
 <table><tr><td><img src="Exchange Workflow.png" /></td></tr></table>
-
-
-[Next Page - Technical Background](technical_background.html)
