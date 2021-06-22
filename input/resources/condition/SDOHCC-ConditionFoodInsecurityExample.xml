@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ConditionFoodInsecurityExample"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-06-03T01:35:12.429+00:00"/>
-        <source value="#vEZPm2owLePJgBnS"/>
+        <versionId value="3"/>
+        <lastUpdated value="2021-06-17T19:04:43.302+00:00"/>
+        <source value="#0R7Gw7f50bKBvXZl"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
     </meta>
     <clinicalStatus>
@@ -41,6 +41,11 @@
             <system value="http://snomed.info/sct"/>
             <code value="733423003"/>
             <display value="Food insecurity"/>
+        </coding>
+        <coding>
+            <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+            <code value="Z59.4"/>
+            <display value="Lack of adequate food and safe drinking water"/>
         </coding>
     </code>
     <subject>

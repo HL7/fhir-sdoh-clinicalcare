@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ValueSetICD10CM"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-05-27T14:47:48.980+00:00"/>
-        <source value="#eU404exsvYT1R0vm"/>
+        <versionId value="2"/>
+        <lastUpdated value="2021-06-17T19:04:43.302+00:00"/>
+        <source value="#8yu8B9IYDNV8WQov"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetICD10CM"/>
     <version value="0.1.0"/>
@@ -15,7 +15,7 @@
     <description value="This value set contains all of ICD-10-CM."/>
     <compose>
         <include>
-            <system value="http://hl7.org/fhir/sid/icd-10"/>
+            <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
         </include>
     </compose>
 </ValueSet>

@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Condition"/>
     <meta>
-        <versionId value="5"/>
-        <lastUpdated value="2021-06-10T22:33:14.977+00:00"/>
-        <source value="#ZfL8COu1t8OQgRb2"/>
+        <versionId value="6"/>
+        <lastUpdated value="2021-06-17T18:47:26.529+00:00"/>
+        <source value="#jYqF7G7oG8x0Lhmd"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
     <version value="0.1.0"/>
@@ -164,7 +164,6 @@
                 </discriminator>
                 <rules value="open"/>
             </slicing>
-            <max value="1"/>
         </element>
         <element id="Condition.code.coding:ICD-10Coding">
             <path value="Condition.code.coding"/>
