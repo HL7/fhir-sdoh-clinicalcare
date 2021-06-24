@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="sdoh-clinicalcare"/>
     <meta>
-        <versionId value="460"/>
-        <lastUpdated value="2021-06-22T14:44:40.108+00:00"/>
-        <source value="#UkvMKtnh67Iii1M3"/>
+        <versionId value="482"/>
+        <lastUpdated value="2021-06-23T20:29:02.597+00:00"/>
+        <source value="#3QV15ZKTZi7kc0VE"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/sdoh-clinicalcare"/>
     <version value="0.1.1"/>
@@ -99,7 +99,7 @@
                 <display value="SDOHCC Observation Assessment"/>
             </reference>
             <name value="SDOHCC Observation Assessment"/>
-            <description value="This profile constrains the Observation resource for use related to Social Determinants of Health observations that involve assessment (e.g., by a provider or payer) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation). Cross product work group granted an exception to US Core on 06/09/2021 - Jira ticket 32892."/>
+            <description value="This profile constrains the Observation resource for use related to Social Determinants of Health observations that involve assessment (e.g., by a provider or payer) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation). The Cross-Group Projects work group granted an exception to US Core on 12/03/2020 - Jira ticket 29795."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group1"/>
         </resource>
@@ -109,7 +109,7 @@
                 <display value="SDOHCC Observation Screening Response"/>
             </reference>
             <name value="SDOHCC Observation Screening Response"/>
-            <description value="This profile constrains the Observation resource for observations that represent question and answer pairs from SDOH screening instruments that are represented in LOINC. Cross product work group granted an exception to US Core on 12/03/2020 - Jira ticket 29795."/>
+            <description value="This profile constrains the Observation resource for observations that represent question and answer pairs from SDOH screening instruments that are represented in LOINC. The Cross-Group Projects work group granted an exception to US Core on 12/03/2020 - Jira ticket 29795."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group1"/>
         </resource>
@@ -476,7 +476,7 @@
             </reference>
             <name value="SDOHCC StructureMap PRAPARE"/>
             <description value="A StructureMap instance that represents the resource that transforms specific questions and answers from the PRAPARE questionnaire represented in LOINC (code 93025-5) to their corresponding Observations and derived Conditions (health concerns)."/>
-            <exampleBoolean value="false"/>
+            <exampleBoolean value="true"/>
             <groupingId value="new-group2"/>
         </resource>
         <resource>
