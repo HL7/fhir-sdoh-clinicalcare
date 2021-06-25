@@ -1,7 +1,8 @@
-<Parameters
-    <id value="exp-parms"/>
-    <parameter>
-        <name value="system-version"/>
-        <valueURI value="http://snomed.info/sct|http://snomed.info/sct/731000124108"/>
-    </parameter>
-</Parameters>
+{
+    "resourceType" : "Parameters",
+    "id" : "exp-params",
+    "parameter" : [{
+      "name" : "system-version",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+    }]
+  }
