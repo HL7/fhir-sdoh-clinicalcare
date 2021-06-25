@@ -64,7 +64,7 @@ Implementers sould pay specific attention to the following sections:
 <tbody>
 <tr>
 <td>HL7 International - Patient Care</td>
-<td><a href="http://www.hl7.org/Special/committees/patientare" target="_new">http://www.hl7.org/Special/committees/patientare</a></td>
+<td><a href="http://www.hl7.org/Special/committees/patientcare" target="_new">http://www.hl7.org/Special/committees/patientcare</a></td>
 </tr>
 </tbody>
 </table>
