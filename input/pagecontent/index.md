@@ -48,6 +48,7 @@ Implementers sould pay specific attention to the following sections:
 * Version 0.1.1 l (updated of home page, Privacy and Security, and Credits 6/21/2021)
 * Version 0.1.1 m (updated of Technical background, Must Support, Gravity background 6/22/2021)
 * Version 0.1.1 n (test .json to include US version of SNOMED-CT 6/24/2021)
+* Version 0.1.1.o (updated mapping, support 6/26/2021)
 
 
 

@@ -15,7 +15,7 @@ This implementation guide uses terminology, notations and design principles that
 
 Implementers should also be familiar with the following implementation guides utilized by this specification:
 
-* [US Core Profiles](http://hl7.org/fhir/us/core/)
+* [US Core Profiles](http://hl7.org/fhir/us/core/STU3.1.1/index.html)
 * [Structured Data Capture](http://hl7.org/fhir/us/sdc/) 
 
 This implementation guide supports the [R4 version](http://hl7.org/fhir/) of the FHIR standard. R4 is recently published and the goal is to ensure the implementation guide is aligned with the current direction of the FHIR standard.
