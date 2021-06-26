@@ -10,7 +10,7 @@ Complying with this implementation guide means complying with a number of resour
 
 The FHIR resources and profiles used by the SDOH ClinicalCare IG are hyperlinked in this section to the base resource, US Core profile (if used), the specific profiles defined in this implementation guide (if used), and the use.
 
-| [Resource (R4)  ](http://hl7.org/fhir/)   | [US Core Profile  ](http://hl7.org/fhir/us/core/)   | [SDOH ClinicalCare Profile  ](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/artifacts.html)   | Used to exchange |
+| [Resource (R4)  ](http://hl7.org/fhir/)   | [US Core Profile  ]http://hl7.org/fhir/us/core/STU3.1.1/index.html)   | [SDOH ClinicalCare Profile  ](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/artifacts.html)   | Used to exchange |
 | ----------------- | ---------------------- | ---------------------------- | -------- |
 | [Consent]( http://hl7.org/fhir/consent.html) | No  | [Yes](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Consent.html)   | patient consent to share information|
 | [Condition]( http://hl7.org/fhir/condition.html) | [Yes](http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html)   | [Yes](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Condition.html)   |health concerns, problems, diagnoses|
@@ -22,7 +22,7 @@ The FHIR resources and profiles used by the SDOH ClinicalCare IG are hyperlinked
 | [Organization]( http://hl7.org/fhir/organization.html) | [Yes](http://hl7.org/fhir/us/core/StructureDefinition-us-core-organization.html)   | No | organization demographics |
 | [Patient]( http://hl7.org/fhir/patient.html) | [Yes](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html)   | No | patient demographics |
 | [Practitioner]( http://hl7.org/fhir/practitioner.html) | [Yes](http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitioner.html)   | No | provider demographics |
-| [PractitionerRole]( http://hl7.org/fhir/PractitionerRole.html) | [Yes](http://hl7.org/fhir/us/core/StructureDefinition-us-core-PractitionerRole.html)   | No | provider role |
+| [PractitionerRole]( http://hl7.org/fhir/PractitionerRole.html) | [Yes](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-practitionerrole.html)   | No | provider role |
 | [Procedure]( http://hl7.org/fhir/procedure.html) | [Yes](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html)   | [Yes](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Procedure.html)   | service/intervention delivered to a patient |
 | [ServiceRequest]( http://hl7.org/fhir/ServiceRequest.html) | No | [Yes](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-ServiceRequest.html)   |request an intervention or referral |
 | [Task]( http://hl7.org/fhir/Task.html) | No  | [Yes](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Task.html)   |coordination of an intervention or referral|
