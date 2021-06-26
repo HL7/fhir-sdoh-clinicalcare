@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ConditionHomelessExample"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2021-06-07T20:38:38.574+00:00"/>
-        <source value="#xhO0onldkd5REo7F"/>
+        <versionId value="5"/>
+        <lastUpdated value="2021-06-25T18:58:01.507+00:00"/>
+        <source value="#nUKafeh0gl4Fksae"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
     </meta>
     <clinicalStatus>
@@ -41,6 +41,11 @@
             <system value="http://snomed.info/sct"/>
             <code value="32911000"/>
             <display value="Homeless"/>
+        </coding>
+        <coding>
+            <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+            <code value="Z59.0"/>
+            <display value="Homelessness"/>
         </coding>
     </code>
     <subject>

@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ConditionUnemployedExample"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2021-06-03T15:44:45.676+00:00"/>
-        <source value="#oxiMj7EXTx40qWv7"/>
+        <versionId value="3"/>
+        <lastUpdated value="2021-06-25T16:28:03.017+00:00"/>
+        <source value="#gfGbbXBqHQ271B1H"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
     </meta>
     <clinicalStatus>
@@ -41,6 +41,11 @@
             <system value="http://snomed.info/sct"/>
             <code value="73438004"/>
             <display value="Unemployed"/>
+        </coding>
+        <coding>
+            <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+            <code value="Z56.0"/>
+            <display value="Unemployment, unspecified"/>
         </coding>
     </code>
     <subject>
