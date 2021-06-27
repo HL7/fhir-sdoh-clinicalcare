@@ -6,13 +6,13 @@ The following diagram depicts the suggested approach to incorporating risk surve
 
 1. Establish complete survey as [LOINC Components](https://loinc.org/kb/faq/structure/) with [LOINC Answer Lists](https://loinc.org/forums/topic/answer-lists/).  
 
-2. Establish calculation logic for the [SDC FHIR Questionnaire]() (e.g., where two questions determine the answer to another "question").
+2. Establish calculation logic for the [SDC FHIR Questionnaire](http://hl7.org/fhir/us/sdc/sdc-questionnaire.html) (e.g., where two questions determine the answer to another "question").
 
 3. Conversion of the LOINC survey to an S[DC FHIR Questionnaire](http://hl7.org/fhir/us/sdc/sdc-questionnaire.html) using an appropriate conversion tool (Note:the reference implementation of this IG use the open source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms)) .
 
 4. Execute the [SDC FHIR Questionnaire]((http://hl7.org/fhir/us/sdc/sdc-questionnaire.html) using an appropriate application (Note: the reference implementation of this IG uses the open source NLM [SDC Questionnaire App](https://lhcforms.nlm.nih.gov/sdc)) and create an [SDC QuestionnaireResponse](http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html).
 
-5. Using a [StructureMap](http://www.hl7.org/fhir/structuremap.html) and an appropriate validation tool convert the [SDC Questionnaire Response]((http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html) to:
+5. Using a [StructureMap](http://www.hl7.org/fhir/structuremap.html) and an appropriate validation tool convert the [SDC Questionnaire Response](http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html) to:
 
    1. LOINC Coded [Observation resources](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-ObservationScreeningResponse.html) (each representing a survey question-answer(s) pair), 
 
