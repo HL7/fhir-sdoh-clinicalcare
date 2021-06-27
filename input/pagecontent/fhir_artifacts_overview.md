@@ -13,7 +13,7 @@ The FHIR resources and profiles used by the SDOH ClinicalCare IG are hyperlinked
 | [Resource (R4)  ](http://hl7.org/fhir/)   | [US Core Profile  ](http://hl7.org/fhir/us/core/STU3.1.1/index.html)   | [SDOH ClinicalCare Profile  ](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/artifacts.html)   | Used to exchange |
 | ----------------- | ---------------------- | ---------------------------- | -------- |
 | [Consent]( http://hl7.org/fhir/consent.html) | No  | [Yes](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Consent.html)   | patient consent to share information|
-| [Condition]( http://hl7.org/fhir/condition.html) | [Yes](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/master/StructureDefinition-SDOHCC-Consent.html)   | [Yes](http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition)   |health concerns, problems, diagnoses|
+| [Condition]( http://hl7.org/fhir/condition.html) | [Yes](StructureDefinition-SDOHCC-Consent.html)   | [Yes](http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition)   |health concerns, problems, diagnoses|
 | [Goal](http://hl7.org/fhir/goal.html) | [Yes](http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html)   | [Yes](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Goal.html)   | goal and attainment specified for or by the patient |
 | [Group]( http://hl7.org/fhir/group.html) | No  | [Yes](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Group.html)   | a cohort of patients with a common characteristic |
 | [Location]( http://hl7.org/fhir/location.html) | [Yes](http://hl7.org/fhir/us/core/StructureDefinition-us-core-location.html)   | No | location of an organization |
@@ -54,4 +54,4 @@ The FHIR Code System defined by the SDOH ClinicalCare IG is hyperlinked from thi
 
 
 
-Additional information about the use of these artifacts can be found in the relevant specification.
+Additional information about the use of these artifacts can be found in the relevant specification and on the [artifacts](artifacts.html#profiles) page.
