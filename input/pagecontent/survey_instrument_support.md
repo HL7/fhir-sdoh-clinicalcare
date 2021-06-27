@@ -1,6 +1,6 @@
 ###  Enabling Survey Instruments
 
-This Implementation Guide utilizes the work from both [Regenstrief](https://www.regenstrief.org/) and [National Libraries of Medicine](https://www.nlm.nih.gov/) (NLM) to utilize their capabilities to standardize the coding and output of SDOH risk surveys.
+This Implementation Guide utilizes the work from both the [Regenstrief Institute](https://www.regenstrief.org/) and the  [National Libraries of Medicine](https://www.nlm.nih.gov/) (NLM) to to standardize the capture, coding and output of SDOH risk surveys. The purpose is to use standardized risk surveys to identify health concerns that can be validated by the patient and provider and, where appropriate, promoted to problems on the problem list.  The process ensures that the health concerns and ultimately the problems have appropriate [SNOMED-CT](http://hl7.org/fhir/R4/valueset-condition-code.html) and [ICD-10-CM](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/ValueSet-SDOHCC-ValueSetICD10CM.html) codes consistent with the intent of the risk survey and consensus work by the Gravity Project. The alternative is to have each provider perform the specific coding.  While this method is supported in the exchange standard created by this IG, it introduces significant variability in the coding process.  LOINC codes are used to describe the the results of the question and answer from the risk survey since they are the only terminology system that has the capability of fully encoding standard survey tools.  While the output of the survey process is an SDC Questionnaire, we convert the questions and answers to FHIR Observation and Condition resources to facilitate searching for specific survey results (something that is very hard to do with an SDC Questionnaire) and to identify the health concerns so they can be communicated and promoted to problems on the problem list. 
 
 The following diagram depicts the suggested approach to incorporating risk surveys into the overall information flow for SDOH.
 
@@ -14,16 +14,61 @@ The following diagram depicts the suggested approach to incorporating risk surve
 
 5. Using a [StructureMap](http://www.hl7.org/fhir/structuremap.html) and an appropriate validation tool convert the [SDC Questionnaire Response](http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html) to:
 
-   1. LOINC Coded [Observation resources](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-ObservationScreeningResponse.html) (each representing a survey question-answer(s) pair), 
+   - LOINC Coded [Observation resources](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-ObservationScreeningResponse.html) (each representing a survey question-answer(s) pair), 
 
-   2. A group [Observation resource](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-ObservationScreeningResponse.html) to group the Observations associated with a risk assessment together,
+   - A group [Observation resource](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-ObservationScreeningResponse.html) to group the Observations associated with a risk assessment together,
 
-   3. and as many [Condition(s) resources](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Condition.html) indicating Health Concerns identified by the risk survey tool answers that should be coded with both [SNOMED-CT](http://hl7.org/fhir/R4/valueset-condition-code.html) (required) and [ICD-10-CM](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/ValueSet-SDOHCC-ValueSetICD10CM.html) (if available) 
+   - and as many [Condition(s) resources](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-Condition.html) indicating Health Concerns identified by the risk survey tool answers that should be coded with both [SNOMED-CT](http://hl7.org/fhir/R4/valueset-condition-code.html) (required) and [ICD-10-CM](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/ValueSet-SDOHCC-ValueSetICD10CM.html) (if available) 
 
       Each of the above resources SHALL be compliant with the linked profiles in this IG.
-
-      
 
 6. Example output and [StructureMap](http://www.hl7.org/fhir/structuremap.html) are available in this IG for the [Hunger Vital Signs](https://loinc.org/88121-9/) and [PRAPARE](https://loinc.org/93025-5/) risk assessment surveys.
 
 <table><tr><td><img src="enablingsurveyinstruments.jpg" /></td></tr></table>
+
+#### [Hunger Vital Signs (HVS) Survey](https://loinc.org/88121-9/)) Example
+
+This implementation guide includes a complete example of the HVS Survey representation as:
+
+1) an [SDC Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)
+
+2) an [SDC QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html)
+
+3) a [StructureMap](StructureMap-SDOHCC-StructureMapHungerVitalSign.html) that takes the [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) and creates the appropriate Observations and Condition resources
+
+4) an [Observation](Observation-SDOHCC-ObservationResponseHungerVitalSignGroupingExample.html) used to group the specific questions and answers from survey
+
+5) multiple Observations used to record the question and answers for each of the elements of the survey
+
+- ​	[Question 1](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion1Example.html)
+
+- ​	[Question 2](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion2Example.html)
+
+- ​	[Question 3](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example.html) (computed)
+
+
+6)  a [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) resource to record the health concern based on the result of the survey
+
+
+
+#### [Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences (PRAPARE) Survey](https://loinc.org/93025-5/) Example
+
+This implementation guide includes a partial example of the PRAPARE Survey representation as:
+
+1) an [SDC Questionnaire](Questionnaire-SDOHCC-QuestionnairePRAPARE.html)
+
+2) an [SDC Questionnaire Response](QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html)
+
+3) a [StructureMap](StructureMap-SDOHCC-StructureMapPRAPARE.html) that takes the [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html) and creates the appropriate Observations and Condition resources
+
+4) multiple Observations used to record the question and answers for a select set of the survey elements (not all questions are provided in these examples)
+
+- [Employment Status](Observation-SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample.html)
+- [Housing Status](Observation-SDOHCC-ObservationResponsePRAPAREHousingStatusExample.html)
+- [Unmet Needs](Observation-SDOHCC-ObservationResponsePRAPAREUnmetNeedsMultiselectExample.html)  -- demonstrates use of components for a multi-select question/response
+
+5)  two  Condition resource to record the health concerns based on the result of the  (as recorded in the QuestionnaireResponse and the Observations)
+
+- [Unemployed](Condition-SDOHCC-ConditionUnemployedExample.html)
+- [Homeless](Condition-SDOHCC-ConditionHomelessExample.html)
+
