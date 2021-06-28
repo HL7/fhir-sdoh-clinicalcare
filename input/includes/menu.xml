@@ -29,6 +29,7 @@
     </a>
     <ul class="dropdown-menu">
       <li><a href="fhir_artifacts_overview.html">FHIR Artifacts Overview</a></li>
+      <li><a href="checking_task_status.html">Checking Task Status</a></li>
       <li><a href="privacy_and_security.html">Privacy and Security</a></li>
       <li><a href="mustsupport_and_missing_data.html">MustSupport and Missing Data</a></li>    </ul>
   </li>
