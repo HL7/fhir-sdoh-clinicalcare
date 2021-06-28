@@ -9,7 +9,7 @@ This implementation guide uses terminology, notations and design principles that
 * 	[FHIR data types](http://www.hl7.org/fhir/datatypes.html)
 * 	[Using codes](http://www.hl7.org/fhir/codesystem.html)
 * 	[References between resources](http://www.hl7.org/fhir/references.html)
-* 	[How to read [resource](http://www.hl7.org/fhir/resourcelist.html) & [profile](http://www.hl7.org/fhir/profiling.html) definitions
+* 	How to read [resource](http://www.hl7.org/fhir/resourcelist.html) & [profile](http://www.hl7.org/fhir/profiling.html) definitions
 * 	[Base resource](http://www.hl7.org/fhir/STU3/resource.html)
 
 Implementers should also be familiar with the following implementation guides utilized by this specification:
