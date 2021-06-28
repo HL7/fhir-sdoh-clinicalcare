@@ -9,13 +9,13 @@ The Gravity Project focus is on defining structure and coded content exchange to
 ####  Out of Scope
 
 This project will not validate or provide incentives for implementation of the identified SDOH data elements.
-Providing guidance on the frequency of administering asseessment (this is left up to the resposible organizations based on their standards of practice).
-Standards for reporting quality measures to payers or quality organizattions -- this is left to the Data Exchange for Quality Meaures Implementaion Guide that was co-authored by NCQA.
+Providing guidance on the frequency of administering assessment (this is left up to the responsible organizations based on their standards of practice).
+Standards for reporting quality measures to payers or quality organizations -- this is left to the Data Exchange for Quality Measures Implementation Guide that was co-authored by NCQA.
 
 <br>
 ### Conceptual Framework
 
-Coded SDOH content is captured across core health care activities: screening/assessment, establishing health concerns, goal setting, care planning, interventions, outcomes and reporting. The conceptual framework illustrated below shows how these activities form a cycle of care. Over time, a patient's progress toward care goals can be tracked and measured.
+Coded SDOH content is captured across core health care activities: screening/assessment, establishing health concerns, goal setting, care planning, interventions, outcomes and reporting. The conceptual framework, illustrated below, shows how these activities form a cycle of care. Over time, a patient's progress toward care goals can be tracked and measured.
 
 
 <table><tr><td><img src="ConceptualFramework2.jpg" /></td></tr></table>

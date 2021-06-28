@@ -1,12 +1,12 @@
 ### Acknowledgements
 
-The following individuals and organizations deserve credit for their signficant effort in the creation of the implemenation guide.
+The following individuals and organizations deserve credit for their signficant effort in the creation of the implementation guide.
 
-We would like to thank the [Agency for Healthcare Research and Quality (AHRQ)](https://www.ahrq.gov/), [SIREN UCSF](https://sirenetwork.ucsf.edu/), and [Larner College of Medicine at the University of Vermont](http://www.med.uvm.edu/) for their support for developing this IG and all [Gravity Project sponsors](https://confluence.hl7.org/display/GRAV/Gravity+Project+Sponsors) for their contributions to make rapid progress on the standardization of social determinants of health data.
+We would like to thank the [Agency for Healthcare Research and Quality (AHRQ)](https://www.ahrq.gov/), [SIREN UCSF](https://sirenetwork.ucsf.edu/), and [Larner College of Medicine at the University of Vermont](http://www.med.uvm.edu/) for their support in developing this IG and all [Gravity Project sponsors](https://confluence.hl7.org/display/GRAV/Gravity+Project+Sponsors) for their contributions to make rapid progress on the standardization of social determinants of health data.
 
 | **Name**           | **Organization**                                             |
 | ------------------ | ------------------------------------------------------------ |
-| Robert Dieterle    | [EnableCare LLC](http://http://enablecare.us/)               |
+| Robert Dieterle    | [EnableCare LLC](http://www.enablecare.us/)               |
 | Corey Smith        | [AMA](https://www.ama-assn.org/)                             |
 | Monique van Berkum | [AMA ](https://www.ama-assn.org/)                            |
 | James Shalaby      | [Elimu](https://www.elimu.io/)                               |

@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="sdoh-clinicalcare"/>
     <meta>
-        <versionId value="553"/>
-        <lastUpdated value="2021-06-27T20:19:42.198+00:00"/>
-        <source value="#iAdFN20aYsQZp7F7"/>
+        <versionId value="569"/>
+        <lastUpdated value="2021-06-28T09:19:38.263+00:00"/>
+        <source value="#REhyxIvfD1t9rIRZ"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/sdoh-clinicalcare"/>
     <version value="0.1.1"/>
@@ -566,16 +566,6 @@
                 <nameUrl value="mapping_instructions.html"/>
                 <title value="Mapping Instructions"/>
                 <generation value="markdown"/>
-                <page>
-                    <nameUrl value="mapping_instructions_hvs_questionnaire.html"/>
-                    <title value="Mapping Instructions HVS Questionnaire"/>
-                    <generation value="markdown"/>
-                </page>
-                <page>
-                    <nameUrl value="mapping_instructions_prapare_questionnaire.html"/>
-                    <title value="Mapping Instructions PRAPARE Questionnaire"/>
-                    <generation value="markdown"/>
-                </page>
             </page>
             <page>
                 <nameUrl value="support_for_multiple_domains.html"/>
