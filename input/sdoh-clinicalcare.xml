@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="sdoh-clinicalcare"/>
     <meta>
-        <versionId value="582"/>
-        <lastUpdated value="2021-06-29T11:27:52.314+00:00"/>
-        <source value="#7Fcq3Zfh3y7ZFSCt"/>
+        <versionId value="588"/>
+        <lastUpdated value="2021-06-29T12:53:06.984+00:00"/>
+        <source value="#wEsJK8tTL9JYuAxf"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/sdoh-clinicalcare"/>
     <version value="0.1.1"/>
@@ -382,7 +382,7 @@
                 <display value="SDOHCC StructureMap Hunger Vital Sign"/>
             </reference>
             <name value="SDOHCC StructureMap Hunger Vital Sign"/>
-            <description value="A StructureMap instance that represents the resource that transforms specific questions and answers from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9) to their corresponding Observations (SDOHCC Observation Response Hunger Vital Sign Q1 Example, SDOHCC Observation Response Hunger Vital Sign Q2 Example, and SDOHCC Observation response Hunger Vital Sign Q3 Example) and derived Condition (SDOHCC Condition Food Insecurity Example)."/>
+            <description value="A StructureMap instance that represents the resource that transforms specific questions and answers from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9) into their corresponding Observations (SDOHCC Observation Response Hunger Vital Sign Q1 Example, SDOHCC Observation Response Hunger Vital Sign Q2 Example, and SDOHCC Observation response Hunger Vital Sign Q3 Example) and derived Condition (SDOHCC Condition Food Insecurity Example)."/>
             <exampleBoolean value="true"/>
             <groupingId value="new-group5"/>
         </resource>
@@ -469,7 +469,7 @@
                 <display value="SDOHCC StructureMap PRAPARE"/>
             </reference>
             <name value="SDOHCC StructureMap PRAPARE"/>
-            <description value="A StructureMap instance that represents the resource that transforms specific questions and answers from the PRAPARE questionnaire represented in LOINC (code 93025-5) to their corresponding Observations and derived Conditions (health concerns)."/>
+            <description value="A StructureMap instance that represents the resource that transforms specific questions and answers from the PRAPARE questionnaire represented in LOINC (code 93025-5) into their corresponding Observations and derived Conditions (health concerns)."/>
             <exampleBoolean value="true"/>
             <groupingId value="new-group6"/>
         </resource>
