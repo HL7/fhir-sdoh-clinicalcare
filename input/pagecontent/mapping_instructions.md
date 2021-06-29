@@ -1,12 +1,17 @@
-The following are examples of maps that are used to generate StructureMaps to extract a Bundle of Observations and Conditions from:
+In this IG, information is first captured in QuestionnaireResponses and is then automatically transformed into Observations and Conditions using the HL7 StructureMap resource. This approach is selected because it supports complex transformation of data and allows the conversion process between data and Questionnaire to be maintained independently. The StuctureMap-based extraction mechanism (considerations, error handling and other details) is documented in the HL7 Structured Data Capture IG [here](http://hl7.org/fhir/uv/sdc/2019May/extraction.html#structuremap-based-extraction). Examples are provided of a Questionnaire, QuestionnaireResponse, resulting Observations and Conditions, and the StructureMap used to convert from one to the other:
 
- 1) a [Hunger Vital Sign (HVS) QuestionnaireResponse](mapping_instructions.html#HVS)
- 2) a [PRAPARE QuestionnaireResponse](mapping_instructions.html#HVS)
+1. [Hunger Vital Sign Examples](artifacts.html#hunger-vital-signs-examples)
+2. [PRAPARE Examples](artifacts.html#prapare-examples)
+
+The StructureMap resource examples in this IG are generated using the FHIR Mapping Language. Instructions and tutorials on how to use the FHIR Mapping Language to convert and transform resources are found [here](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Mapping+Language).
+
+The following are the contents of the FHIR Mapping Language file that can be used to generate the StructureMaps for the Hunger Vital Sign (HVS) and PRAPARE Questionnaires:
+
+1. [Hunger Vital Sign (HVS) FHIR Mapping Language file](mapping_instructions.html#hvs)
+2. [PRAPARE FHIR Mapping Language file](mapping_instructions.html#prapare)
 
 ### HVS
-
-The following is an example of a map that is used to generate a StructureMap to extract a Bundle of Observations and Conditions from a Hunger Vital Sign [HVS] QuestionnaireResponse. 
-
+```
 /// name = "SDOHCC-Hunger-Vital-Sign-Map"
 /// status = draft
 
@@ -235,28 +240,26 @@ group SetConditionFullUrl(source condition: sdohccCondition, target entry)
 {
   condition.id as id -> entry.fullUrl = append('http://hl7.org/fhir/us/sdoh-clinicalcare/Condition/', id);
 }
-
+```
 ### PRAPARE
-
-The following is an example of a map that is used to generate a StructureMap to extract a Bundle of Observations and Conditions from a PRAPARE QuestionnaireResponse. 
-
-/// name = "SDOHCC_StructureMap_PRAPAREMapper"
+```
+/// name = "SDOHCC-PRAPARE-Map"
 /// status = draft
 
-map "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMap-PRAPAREMapper" = "SDOHCC StructureMap PRAPARE Mapper"
+map "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE" = "SDOHCC StructureMap PRAPARE"
 
 uses "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse" alias questionnaireResponse as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
 uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
-uses "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition-Base-1" alias sdohccCondition as target
-uses "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1" alias sdohccObservation as target
+uses "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition" alias sdohccCondition as target
+uses "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment" alias sdohccObservation as target
 
 group sdohMapping(source src : questionnaireResponse, target bundle : Bundle) {
   //temporarily set id to human-readable id as example
   //src -> bundle.id = uuid();
-  src -> bundle.id = 'SDOHCC-Bundle-PRAPARE-Example';
+  src -> bundle.id = 'SDOHCC-BundlePRAPAREExample';
   src -> bundle.type = 'transaction';
-
+  
   //for each answer item in the questionnareResponse, create an Observation and add it to the groupObservation
   src.item as rootItem -> bundle.entry as entry then 
     rootContent(src, rootItem, bundle);
@@ -283,10 +286,14 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
   src -> observation.status = 'final';
   src -> observation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'social-history', 'Social History');
   src -> observation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'survey', 'Survey');
+ 
+  src -> observation.meta = create('Meta') as newMeta then {
+    src -> newMeta.profile = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse';
+  };
 
   //set dates
   src.authored as authored -> observation.issued = authored, observation.effective = authored;
-
+  
   src.subject as qSubject -> observation.subject = create('Reference') as newReference then {
     qSubject.reference as qReference -> newReference.reference = qReference;
     qSubject.display as qDisplay -> newReference.display = qDisplay;
@@ -308,32 +315,18 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
   // 1. Ethnicity
   answerItem where "linkId = '/93043-8/56051-6'" -> observation.code = cc('http://loinc.org', '56051-6') as code then 
     SetValueCodeableConcept(answerItem, observation);
-  answerItem where "linkId = '/93043-8/56051-6'" -> observation.category = create('CodeableConcept') as newCC then {
-    src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
-      src -> newCoding.code = 'sdoh-category-unspecified';
-      src -> newCoding.display = 'SDOH Category Unspecified';
-    };
-  };
-
+  
   // 2. Race
   //TBD: How to handle "Others" text?
   answerItem where "linkId = '/93043-8/32624-9'" -> observation.code = cc('http://loinc.org', '32624-9') as code then 
     SetValuesToComponents(answerItem, observation, observation);
-  answerItem where "linkId = '/93043-8/32624-9'" -> observation.category = create('CodeableConcept') as newCC then {
-    src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
-      src -> newCoding.code = 'sdoh-category-unspecified';
-      src -> newCoding.display = 'SDOH Category Unspecified';
-    };
-  };  
 
   // 3. Farm Worker Status
   answerItem where "linkId = '/93043-8/93035-4'" -> observation.code = cc('http://loinc.org', '93035-4') as code then
     SetValueCodeableConcept(answerItem, observation);
   answerItem where "linkId = '/93043-8/93035-4'" -> observation.category = create('CodeableConcept') as newCC then {
     src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
       src -> newCoding.code = 'sdoh-category-unspecified';
       src -> newCoding.display = 'SDOH Category Unspecified';
     };
@@ -344,22 +337,15 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
     SetValueCodeableConcept(answerItem, observation);
   answerItem where "linkId = '/93043-8/93034-7'" -> observation.category = create('CodeableConcept') as newCC then {
     src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
       src -> newCoding.code = 'veteran-status';
       src -> newCoding.display = 'Veteran Status';
     };
   };  
-
+  
   // 5. English Proficiency
   answerItem where "linkId = '/93043-8/54899-0'" -> observation.code = cc('http://loinc.org', '54899-0') as code then
     SetValueCodeableConcept(answerItem, observation);
-  answerItem where "linkId = '/93043-8/54899-0'" -> observation.category = create('CodeableConcept') as newCC then {
-    src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
-      src -> newCoding.code = 'sdoh-category-unspecified';
-      src -> newCoding.display = 'SDOH Category Unspecified';
-    };
-  }; 
 
   // 6. Household Size
   answerItem where "linkId = '/93042-0/63512-8'" -> observation.code = cc('http://loinc.org', '63512-8') as code then {
@@ -370,22 +356,15 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
       src -> newQty.code = '{#}';
     };
   };
-  answerItem where "linkId = '/93042-0/63512-8'" -> observation.category = create('CodeableConcept') as newCC then {
-    src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
-      src -> newCoding.code = 'housing-instability-homelessness';
-      src -> newCoding.display = 'Housing Instability Homelessness';
-    };
-  };
 
   // 7. Housing
   answerItem where "linkId = '/93042-0/71802-3'" -> observation.code = cc('http://loinc.org', '71802-3') as code then
     SetValueCodeableConcept(answerItem, observation);
   answerItem where "linkId = '/93042-0/71802-3'" -> observation.category = create('CodeableConcept') as newCC then {
     src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
-      src -> newCoding.code = 'housing-instability-homelessness';
-      src -> newCoding.display = 'Housing Instability Homelessness';
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
+      src -> newCoding.code = 'homelessness';
+      src -> newCoding.display = 'Homelessness';
     };
   };
 
@@ -394,31 +373,24 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
     SetValueCodeableConcept(answerItem, observation);
   answerItem where "linkId = '/93042-0/93033-9'" -> observation.category = create('CodeableConcept') as newCC then {
     src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
-      src -> newCoding.code = 'housing-instability-homelessness';
-      src -> newCoding.display = 'Housing Instability Homelessness';
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
+      src -> newCoding.code = 'housing-instability';
+      src -> newCoding.display = 'Housing Instability';
     };
   };  
 
   // 9. Neighborhood
   answerItem where "linkId = '/93042-0/56799-0'" -> observation.code = cc('http://loinc.org', '56799-0') as code then
     SetValue(answerItem, observation);
-  answerItem where "linkId = '/93042-0/93033-9'" -> observation.category = create('CodeableConcept') as newCC then {
-    src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
-      src -> newCoding.code = 'sdoh-category-unspecified';
-      src -> newCoding.display = 'SDOH Category Unspecified';
-    };
-  };  
 
   // 10. Education
   answerItem where "linkId = '/93041-2/82589-3'" -> observation.code = cc('http://loinc.org', '82589-3') as code then
     SetValueCodeableConcept(answerItem, observation);
   answerItem where "linkId = '/93041-2/82589-3'" -> observation.category = create('CodeableConcept') as newCC then {
     src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
       src -> newCoding.code = 'educational-attainment';
-      src -> newCoding.display = 'Educational attainment';
+      src -> newCoding.display = 'Educational Attainment';
     };
   }; 
 
@@ -427,7 +399,7 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
     SetValueCodeableConcept(answerItem, observation);
   answerItem where "linkId = '/93041-2/67875-5'" -> observation.category = create('CodeableConcept') as newCC then {
     src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
       src -> newCoding.code = 'employment-status';
       src -> newCoding.display = 'Employment Status';
     };
@@ -436,13 +408,6 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
   // 12. Insurance
   answerItem where "linkId = '/93041-2/76437-3'" -> observation.code = cc('http://loinc.org', '76437-3') as code then
     SetValueCodeableConcept(answerItem, observation);
-  answerItem where "linkId = '/93041-2/76437-3'" -> observation.category = create('CodeableConcept') as newCC then {
-    src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
-      src -> newCoding.code = 'sdoh-category-unspecified';
-      src -> newCoding.display = 'SDOH Category Unspecified';
-    };
-  };
 
   // 13. Household Income
   answerItem where "linkId = '/93041-2/63586-2'" -> observation.code = cc('http://loinc.org', '63586-2') as code then {
@@ -453,32 +418,25 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
       src -> newQty.code = '/a';
     };
   };
-  answerItem where "linkId = '/93041-2/63586-2'" -> observation.category = create('CodeableConcept') as newCC then {
-    src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
-      src -> newCoding.code = 'financial-insecurity';
-      src -> newCoding.display = 'Financial Insecurity';
-    };
-  };
 
   // 14. Material Security
   answerItem where "linkId = '/93041-2/93031-3'" -> observation.code = cc('http://loinc.org', '93031-3') as code then 
     SetValuesToComponents(answerItem, observation, observation);
   // answer: Food
-  answerItem where "linkId = '/93041-2/93031-3' and answer.valueCoding.code ='LA30125-1'" -> observation.category = create('CodeableConcept') as newCC then {
+  answerItem where "linkId = '/93041-2/93031-3'" -> observation.category = create('CodeableConcept') as newCC then {
     src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
-      src -> newCoding.code = 'food-insecurity';
-      src -> newCoding.display = 'Food insecurity';
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
+      src -> newCoding.code = 'sdoh-category-unspecified';
+      src -> newCoding.display = 'SDOH Category Unspecified';
     };
   };
-
+  
   // 15. Transportation
   answerItem where "linkId = '/93041-2/93030-5'" -> observation.code = cc('http://loinc.org', '93030-5') as code then
     SetValueCodeableConcept(answerItem, observation);
   answerItem where "linkId = '/93041-2/93030-5'" -> observation.category = create('CodeableConcept') as newCC then {
     src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
       src -> newCoding.code = 'transportation-insecurity';
       src -> newCoding.display = 'Transportation Insecurity';
     };
@@ -489,7 +447,7 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
     SetValueCodeableConcept(answerItem, observation);
   answerItem where "linkId = '/93040-4/93029-7'" -> observation.category = create('CodeableConcept') as newCC then {
     src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
       src -> newCoding.code = 'sdoh-category-unspecified';
       src -> newCoding.display = 'SDOH Category Unspecified';
     };
@@ -500,9 +458,9 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
     SetValueCodeableConcept(answerItem, observation);
   answerItem where "linkId = '/93040-4/93038-8'" -> observation.category = create('CodeableConcept') as newCC then {
     src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
-      src -> newCoding.code = 'sdoh-category-unspecified';
-      src -> newCoding.display = 'SDOH Category Unspecified';
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
+      src -> newCoding.code = 'stress';
+      src -> newCoding.display = 'Stress';
     };
   };
 
@@ -511,7 +469,7 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
     SetValueCodeableConcept(answerItem, observation);
   answerItem where "linkId = '/93039-6/93028-9'" -> observation.category = create('CodeableConcept') as newCC then {
     src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
       src -> newCoding.code = 'sdoh-category-unspecified';
       src -> newCoding.display = 'SDOH Category Unspecified';
     };
@@ -522,29 +480,22 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
     SetValueCodeableConcept(answerItem, observation);
   answerItem where "linkId = '/93039-6/93027-1'" -> observation.category = create('CodeableConcept') as newCC then {
     src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
       src -> newCoding.code = 'sdoh-category-unspecified';
       src -> newCoding.display = 'SDOH Category Unspecified';
     };
   };  
 
   // 20. Safety
-  answerItem where "linkId = '/93040-4/93038-8'" -> observation.code = cc('http://loinc.org', '93038-8') as code then
-    SetValueCodeableConcept(answerItem, observation);
-  answerItem where "linkId = '/93040-4/93038-8'" -> observation.category = create('CodeableConcept') as newCC then {
-    src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
-      src -> newCoding.code = 'sdoh-category-unspecified';
-      src -> newCoding.display = 'SDOH Category Unspecified';
-    };
-  };
-
-  // 21. Domestic Violence
   answerItem where "linkId = '/93039-6/93026-3'" -> observation.code = cc('http://loinc.org', '93026-3') as code then
     SetValueCodeableConcept(answerItem, observation);
-  answerItem where "linkId = '/93039-6/93026-3'" -> observation.category = create('CodeableConcept') as newCC then {
+
+  // 21. Domestic Violence
+  answerItem where "linkId = '/93039-6/76501-6'" -> observation.code = cc('http://loinc.org', '76501-6') as code then
+    SetValueCodeableConcept(answerItem, observation);
+  answerItem where "linkId = '/93039-6/76501-6'" -> observation.category = create('CodeableConcept') as newCC then {
     src -> newCC.coding = create('Coding') as newCoding then {
-      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/sdohcc-temporary-codes';
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
       src -> newCoding.code = 'sdoh-category-unspecified';
       src -> newCoding.display = 'SDOH Category Unspecified';
     };
@@ -552,11 +503,11 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
 
   //create a Condition if homeless
   answerItem where "linkId = '/93042-0/71802-3' and answer.valueCoding.code ='LA30190-5'" -> bundle.entry as entry, entry.resource = create('sdohccCondition') as condition then
-    TransformCondition(src, bundle, condition, entry), SetConditionCodeAndEvidence1(bundle, condition);
+    TransformCondition(src, bundle, condition, entry), SetConditionCodeAndEvidence1(src, bundle, condition);
 
   //create a Condition if unemployed
   answerItem where "linkId = '/93041-2/67875-5' and answer.valueCoding.code ='LA17956-6'" -> bundle.entry as entry, entry.resource = create('sdohccCondition') as condition then
-    TransformCondition(src, bundle, condition, entry), SetConditionCodeAndEvidence2(bundle, condition);
+    TransformCondition(src, bundle, condition, entry), SetConditionCodeAndEvidence2(src, bundle, condition);
 }
 
 group SetValue(source answerItem, target observation) {
@@ -591,10 +542,20 @@ group TransformCondition(source src: questionnaireResponse, source bundle, targe
   src -> condition.id = uuid() then
     SetConditionFullUrl(condition, entry);
 
+  src -> condition.meta = create('Meta') as newMeta then {
+    src -> newMeta.profile = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition';
+  };
+
   src -> condition.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical', 'active', 'Active');
   src -> condition.verificationStatus = cc('http://terminology.hl7.org/CodeSystem/condition-ver-status', 'unconfirmed', 'Unconfirmed');
 
-  src -> condition.category = cc('http://hl7.org/fhir/us/core/CodeSystem/condition-category', 'health-concern', 'Health Concern') as category;
+  src -> condition.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/core/CodeSystem/condition-category';
+      src -> newCoding.code = 'health-concern';
+      src -> newCoding.display = 'Health Concern';
+    };
+  };
     
   src.authored as authored -> condition.onset = create('Period') as period,
     period.start = authored;
@@ -615,17 +576,55 @@ group SetConditionFullUrl(source condition: sdohccCondition, target entry)
   condition.id as id -> entry.fullUrl = append('http://hl7.org/fhir/us/sdoh-clinicalcare/Condition/', id);
 }
 
-group SetConditionCodeAndEvidence1(source bundle, target condition)
+group SetConditionCodeAndEvidence1(source src: questionnaireResponse, source bundle, target condition)
 {
-  bundle -> condition.code = cc('http://snomed.info/sct', '32911000') as code;
+  src -> condition.code = create('CodeableConcept') as newCodeCC then {
+      src -> newCodeCC.coding = create('Coding') as newCoding then {
+        src -> newCoding.system = 'http://snomed.info/sct';
+        src -> newCoding.code = '32911000';
+        src -> newCoding.display = 'Homeless';
+    };
+    src -> newCodeCC.coding = create('Coding') as newCoding2 then {
+        src -> newCoding2.system = 'http://hl7.org/fhir/sid/icd-10-cm';
+        src -> newCoding2.code = 'Z59.0';
+        src -> newCoding2.display = 'Homelessness';
+    };
+  }; 
+  //Add sdoh category
+  src -> condition.category = create('CodeableConcept') as newCC then {
+      src -> newCC.coding = create('Coding') as newCoding then {
+        src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
+        src -> newCoding.code = 'homelessness';
+        src -> newCoding.display = 'Homelessness';
+    };
+  };  
   bundle.entry as entries -> condition.evidence as evidence, evidence.detail = create('Reference') as detailReference then {
   	entries.resource as obs where "code.coding.code = '71802-3'"-> detailReference.reference = reference(obs); 
   };
 }
 
-group SetConditionCodeAndEvidence2(source bundle, target condition)
+group SetConditionCodeAndEvidence2(source src: questionnaireResponse, source bundle, target condition)
 {
-  bundle -> condition.code = cc('http://snomed.info/sct', '73438004') as code;
+  src -> condition.code = create('CodeableConcept') as newCodeCC then {
+      src -> newCodeCC.coding = create('Coding') as newCoding then {
+        src -> newCoding.system = 'http://snomed.info/sct';
+        src -> newCoding.code = '73438004';
+        src -> newCoding.display = 'Unemployed';
+    };
+    src -> newCodeCC.coding = create('Coding') as newCoding2 then {
+        src -> newCoding2.system = 'http://hl7.org/fhir/sid/icd-10-cm';
+        src -> newCoding2.code = 'Z56.0';
+        src -> newCoding2.display = 'Unemployment, unspecified';
+    };
+  };
+  //Add sdoh category
+  src -> condition.category = create('CodeableConcept') as newCC then {
+      src -> newCC.coding = create('Coding') as newCoding then {
+        src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes';
+        src -> newCoding.code = 'employment-status';
+        src -> newCoding.display = 'Employment Status';
+    };
+  };    
   bundle.entry as entries -> condition.evidence as evidence, evidence.detail = create('Reference') as detailReference then {
   	entries.resource as obs where "code.coding.code = '67875-5'"-> detailReference.reference = reference(obs); 
   };
@@ -639,6 +638,10 @@ group TransformGroupObservation(source src: questionnaireResponse, source bundle
   src -> groupObservation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'social-history', 'Social History');
   src -> groupObservation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'survey', 'Survey');
 
+  src -> groupObservation.meta = create('Meta') as newMeta then {
+    src -> newMeta.profile = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse';
+  };
+
   src.authored as authored -> groupObservation.effective = authored;
   src.subject as qSubject -> groupObservation.subject = create('Reference') as newReference then {
     qSubject.reference as qReference -> newReference.reference = qReference;
@@ -651,4 +654,9 @@ group TransformGroupObservation(source src: questionnaireResponse, source bundle
   bundle.entry as entries -> groupObservation.hasMember = create('Reference') as df then {
     entries.resource as obs where "status.exists() and hasMember.exists().not()"-> df.reference = reference(obs); 
   };
+
+  src.id as id -> groupObservation.derivedFrom = create('Reference') as newReference then {
+    id -> newReference.reference = append('QuestionnaireResponse/', id);
+  };
 }
+```

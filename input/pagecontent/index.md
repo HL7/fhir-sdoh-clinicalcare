@@ -51,6 +51,7 @@ Implementers should pay specific attention to the following sections:
 * Version 0.1.1 o (updated mapping, support 6/26/2021)
 * Version 0.1.1 p (updated multiple sections and corrected hyperlinks 6/27/2021)
 * Version 0.1.1 q (updated hyperlinks in all completed section 6/27/2021)
+* Version 0.1.1 r (updated sections and examples 6/29/2021)
 
 
 
