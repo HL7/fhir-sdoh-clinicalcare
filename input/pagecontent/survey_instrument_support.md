@@ -67,7 +67,7 @@ This implementation guide includes a partial example of the PRAPARE Survey repre
 - [Housing Status](Observation-SDOHCC-ObservationResponsePRAPAREHousingStatusExample.html)
 - [Unmet Needs](Observation-SDOHCC-ObservationResponsePRAPAREUnmetNeedsMultiselectExample.html)  -- demonstrates use of components for a multi-select question/response
 
-5)  two  Condition resource to record the health concerns based on the results of the survey
+5)  two Condition resources to record the health concerns based on the results of the survey
 
 - [Unemployed](Condition-SDOHCC-ConditionUnemployedExample.html)
 - [Homeless](Condition-SDOHCC-ConditionHomelessExample.html)

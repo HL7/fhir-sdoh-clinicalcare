@@ -32,7 +32,7 @@ E.g.
 or
 ```[base]/Task?owner=Organization/456&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
 
-The time-stamp specified would be the search result returned from the last search.  An example of a response from the search would look like [this](todo.html).
+The time-stamp specified would be the search result returned from the last search.  
 
 OPEN ISSUE: Are the organizations in question going to have RESTful ids on the server that holds the tasks or do we need to change this to:
 ```[base]/Task?owner:identifier=http%3A%2F%2Fsomeorganization%2Fsome%2Fidentifier%2Fsystem|123&_lastupdated=2021-05-03T17:23:18.1732-04:00```
