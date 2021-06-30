@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationScreeningResponse"/>
     <meta>
-        <versionId value="12"/>
-        <lastUpdated value="2021-06-23T13:20:46.289+00:00"/>
-        <source value="#a3BKH8WkVhtXaEU9"/>
+        <versionId value="13"/>
+        <lastUpdated value="2021-06-29T15:58:16.057+00:00"/>
+        <source value="#6aRugQ5h7uHvNe0Q"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
     <version value="0.1.0"/>
@@ -128,7 +128,7 @@
         </element>
         <element id="Observation.code">
             <path value="Observation.code"/>
-            <comment value="*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.&#xD;&#xA;&#xD;&#xA;For SDOH questions represented in LOINC that specify “check all that apply”, the LOINC question should be used for Observation.code and for Observation.component.code. Answers, whether multiple or single (including exceptions and flavors of null), should only be represented using Observation.component.value and Observation.value should be omitted. &#xD;&#xA;&#xD;&#xA;As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories."/>
+            <comment value="*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.&#xD;&#xA;&#xD;&#xA;For SDOH questions represented in LOINC that specify “check all that apply”, the LOINC question should be used for Observation.code and for Observation.component.code. For “check all that apply” questions, the answers (regardless of whether one or more are selected) should only be represented using Observation.component.value and Observation.value should be empty. &#xD;&#xA;&#xD;&#xA;As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories."/>
             <requirements value="Knowing what kind of observation is being made is essential to understanding the observation.&#xD;&#xA;&#xD;&#xA;The Gravity implemenation guide restricts questionnaire/survey observations to LOINC to move the industry to the use of LOINC panels/surveys (structures that are not available in other terminology systems) to standardize the coding of SDOH related risk assessment instruments. In addition, USCDI and US Core have standardized on the use of LOINC to represent Observations in general."/>
             <mustSupport value="true"/>
             <binding>
@@ -181,7 +181,7 @@
                 </discriminator>
                 <rules value="open"/>
             </slicing>
-            <meaningWhenMissing value="Observation.value may be missing in two cases:&#xD;&#xA;1) For SDOH questions represented in LOINC that allow one answer, If the LOINC Normative Answer List for a LOINC code offers an adequate code for why an Observation.value may not be known, it should be used as the value for Observation.value. However, If the LOINC Normative Answer List for a LOINC code does not offer an adequate code for why an Observation.value may not be known, Observation.dataAbsentReason should be used in lieu of Observation.value.&#xD;&#xA;&#xD;&#xA;2) For SDOH questions represented in LOINC that specify “check all that apply”, the LOINC question should be used for Observation.code and for Observation.component.code. Answers, whether multiple or single (including exceptions and flavors of null), should only be represented using Observation.component.value and Observation.value should be omitted."/>
+            <meaningWhenMissing value="Observation.value may be missing in two cases:&#xD;&#xA;1) For SDOH questions represented in LOINC that allow one answer, If the LOINC Normative Answer List for a LOINC code offers an adequate code for why an Observation.value may not be known, it should be used as the value for Observation.value. However, If the LOINC Normative Answer List for a LOINC code does not offer an adequate code for why an Observation.value may not be known, Observation.dataAbsentReason should be used in lieu of Observation.value.&#xD;&#xA;&#xD;&#xA;2) For SDOH questions represented in LOINC that specify “check all that apply”, the LOINC question should be used for Observation.code and for Observation.component.code. For “check all that apply” questions, the answers (regardless of whether one or more are selected) should only be represented using Observation.component.value and Observation.value should be empty."/>
             <mustSupport value="true"/>
         </element>
         <element id="Observation.value[x]:valueQuantity">
@@ -258,7 +258,7 @@
         <element id="Observation.component">
             <path value="Observation.component"/>
             <definition value="Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples:&#xD;&#xA;1) Individuals may be multiracial. Component is used to capture one or more races.&#xD;&#xA;2) “Material hardship” can be assessed based on a number of factors (adequate food, clothing, utilities, etc.). One, or all, of which can be captured using Component."/>
-            <comment value="For a discussion on the ways Observations can be assembled in groups together see [Notes]({{site.data.fhir.path}}observation.html#notes) below. &#xD;&#xA;&#xD;&#xA;For SDOH questions represented in LOINC where the question specifies “check all that apply”, the LOINC question should be used for Observation.code and for Observation.component.code. Answers, whether multiple or single (including exceptions and flavors of null), should only be represented using Observation.component.value and Observation.value should be omitted."/>
+            <comment value="For a discussion on the ways Observations can be assembled in groups together see [Notes]({{site.data.fhir.path}}observation.html#notes) below. &#xD;&#xA;&#xD;&#xA;For SDOH questions represented in LOINC that specify “check all that apply”, the LOINC question should be used for Observation.code and for Observation.component.code. For “check all that apply” questions, the answers (regardless of whether one or more are selected) should only be represented using Observation.component.value and Observation.value should be empty."/>
         </element>
         <element id="Observation.component.code">
             <path value="Observation.component.code"/>
@@ -308,7 +308,7 @@
         </element>
         <element id="Observation.component.dataAbsentReason">
             <path value="Observation.component.dataAbsentReason"/>
-            <comment value="&quot;Null&quot; or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  For a given LOINC question, if the LOINC answer list includes concepts such as 'unknown' or 'not available', they should be used for Observation.component.value. Where these concepts are not part of the value set for Observation.component.value, the Observation.component.dataAbsentReason can be used if necessary and appropriate."/>
+            <comment value="&quot;Null&quot; or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  For a given &quot;check all that apply&quot; LOINC question, if the LOINC answer list includes concepts such as 'unknown' or 'not available', they should be used for Observation.component.value. Where these concepts are not part of the value set for Observation.component.value, the Observation.component.dataAbsentReason can be used if necessary and appropriate."/>
             <mustSupport value="true"/>
         </element>
         <element id="Observation.component.interpretation">
