@@ -12,7 +12,7 @@ There is a growing awareness that SDOH information improves whole person care an
 * Housing instability factors into lower treatment adherence
 * Transportation barriers result in missed appointments, delayed care, and lower medication compliance
 
-Addressing SDOH is a primary approach to achieve health equity
+Addressing SDOH is a primary approach to achieve health equity.
 * Link: https://www.cdc.gov/nchhstp/socialdeterminants/faq.html
 
 These national calls to action for health care systems have spurred innovations, including a wide range of social risk screening tools and practice-based interventions.   Some of these innovations have helped to reduce social risks, improve health outcomes, and lower costs.   The experimentation in this area has been bolstered by new value-based payment models and accountable care organizations (ACOs), which together offer financial incentives to advance coordinated care between medical and social service organizations and other organizations directly connected to patients. 

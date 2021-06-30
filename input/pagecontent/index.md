@@ -31,7 +31,7 @@ Implementers should pay specific attention to the following sections:
 * [Privacy and Security](privacy_and_security.html) for implementers that are concerned with privacy and security aspects related to implementing the information exchanges defined in this IG
 * [MustSupport and Missing Data](mustsupport_and_missing_data.html) to understand the interpretation of the MustSupport flags and the treatment of Missing Data used in this IG 
 * [Artifacts Index](artifacts.html) all implementers need to understand the FHIR R4 profiles, examples and other FHIR artifacts defined in this implementation guide and linked from this section
-* [Downloads](downloads.html) links to allow implementers to download the IG and various artifacts. 
+* [Downloads](downloads.html) links to allow implementers to download the IG and various artifacts
 
 ### Update Tracking
 
@@ -52,6 +52,7 @@ Implementers should pay specific attention to the following sections:
 * Version 0.1.1 p (updated multiple sections and corrected hyperlinks 6/27/2021)
 * Version 0.1.1 q (updated hyperlinks in all completed section 6/27/2021)
 * Version 0.1.1 r (updated sections and examples 6/29/2021)
+* Version 0.1.1 S (updated sections and examples 6/30/2021)
 
 
 

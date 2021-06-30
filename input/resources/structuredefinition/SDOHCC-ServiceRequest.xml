@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ServiceRequest"/>
     <meta>
-        <versionId value="6"/>
-        <lastUpdated value="2021-06-16T15:14:19.840+00:00"/>
-        <source value="#rj49RKGMs91LngEl"/>
+        <versionId value="7"/>
+        <lastUpdated value="2021-06-29T15:58:16.059+00:00"/>
+        <source value="#bDRkHjLqGXwdq2YM"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
     <version value="0.1.0"/>
@@ -98,7 +98,7 @@
         </element>
         <element id="ServiceRequest.status">
             <path value="ServiceRequest.status"/>
-            <comment value="The status is generally fully in the control of the requester - they determine whether the order is draft or active and, after it has been activated, competed, cancelled or suspended. States relating to the activities of the performer are reflected on either the corresponding event (see [Event Pattern](event.html) for general discussion) or using the [Task](task.html) resource. &#xD;&#xA;While all values are currently allowed, there may be a contraint on the values in future releases based on implementation feedback."/>
+            <comment value="The status is generally fully in the control of the requester - they determine whether the order is draft or active and, after it has been activated, competed, cancelled or suspended. States relating to the activities of the performer are reflected on either the corresponding event (see [Event Pattern](event.html) for general discussion) or using the [Task](task.html) resource. &#xD;&#xA;While all values are currently allowed, there may be a constraint on the values in future releases based on implementation feedback."/>
             <mustSupport value="true"/>
         </element>
         <element id="ServiceRequest.intent">
