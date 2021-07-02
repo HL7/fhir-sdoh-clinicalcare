@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="sdoh-clinicalcare"/>
     <meta>
-        <versionId value="621"/>
-        <lastUpdated value="2021-07-02T10:54:33.031+00:00"/>
-        <source value="#JxaOFJ6MKJiPpRoI"/>
+        <versionId value="626"/>
+        <lastUpdated value="2021-07-02T13:16:31.542+00:00"/>
+        <source value="#8FCWOMGOZPe1lqB1"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/sdoh-clinicalcare"/>
     <version value="0.1.1"/>
@@ -608,7 +608,7 @@
             <value value="sdoh-cc"/>
         </parameter>
         <parameter>
-            <code value="path-expansion-params"/>
+            <code value="path-expansion-params-bad"/>
             <value value="SDOH-expansion-parameters.json"/>
         </parameter>
         <parameter>
