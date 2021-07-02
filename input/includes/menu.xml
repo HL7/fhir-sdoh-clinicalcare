@@ -8,9 +8,7 @@
     <ul class="dropdown-menu">
       <li><a href="gravity_background.html">Gravity Background</a></li>
       <li><a href="sdoh_clinical_care_scope.html">SDOH Clinical Care Scope</a></li>
-      <li><a href="personas_and_patient_stories.html">Personas and Patient Stories</a></li>
-      <li><a href="patient_story_1_personas.html">Patient Story 1 Personas</a></li>
-      <li><a href="patient_story_1.html">Patient Story 1</a></li>
+      <li><a href="functional_use_cases.html">Functional Use Cases</a></li>
       <li><a href="technical_background.html">Technical Background</a></li>    </ul>
   </li>
   <li class="dropdown">
