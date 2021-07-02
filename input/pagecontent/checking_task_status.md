@@ -3,12 +3,12 @@ The Gravity workflow around referrals involves all parties involved being aware 
 In most cases, the Tasks will reside within the EHR system of the initiating practitioner.  In this case, the EHR will always be aware when the Task is updated, so
 the challenge of monitoring Tasks will fall solely on the service delivery organization.  However, the Gravity workflow also supports Tasks being posted to an
 intermediary organization that is responsible for managing the referral fulfillment process.  In these circumstances, both EHR and service delivery organizations will
-need to monitor for changes to tasks.
+need to monitor for changes to Tasks.
 
 The specific types of events to be monitored for include:
 **Service Delivery Organizations**
 * A new Task has been assigned to the organization
-* A new Task that is unassigned - but which is seeking action within the organization's purvue has been created
+* A new Task that is unassigned - but which is seeking action within the organization's purview has been created
 * A ServiceRequest associated with a Task assigned to the organization has been modified
 * A ServiceRequest associated with a Task assigned to the organization has been cancelled
 
@@ -24,7 +24,7 @@ There are two mechanisms for detecting the above changes - polling and subscript
 #### Polling
 In this mode, the system needing information (the 'client') occasionally queries the system maintaining the relevant Tasks and/or ServiceRequests to see if there is
 anything 'new'.  Clients may need to perform queries against multiple clients if not all relevant Tasks and ServiceRequests will be maintained on the same server.
-To poll, the client will perform a [search]({{site.data.fhir.path}}search.html) for Tasks that filtered to those either owned by or requested by the searching organization.
+To poll, the client will perform a [search]({{site.data.fhir.path}}search.html) for Tasks that are filtered to those either owned by or requested by the searching organization.
 The search would also filter to only include those Tasks that had been created or changed since the server last looked.
 E.g.
 
@@ -43,13 +43,13 @@ organizations interested in examining Tasks available to claim would poll as fol
 ```[base]/Task?owner:missing=true&status=requested&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
 
 The frequency of polling needs to be often enough to allow for timely response to changes, while not imposing too high a requirement on system performance.
-For Gravity, systems that use polling SHALL check for new/updated information at least once per business day and SHOULD check for informaiton at least once per hour during
+For Gravity, systems that use polling SHALL check for new/updated information at least once per business day and SHOULD check for information at least once per hour during
 normal hours of operation.  Systems SHOULD NOT query more often than every 15 minutes unless there is an urgent change they are monitoring for.
 
 #### Subscription
 In the subscription mechanism, instead of the client system regularly querying the server to see if there are new Tasks or changes to existing Tasks, the client creates a
 Subscription instance on the server that indicates that it wants to be notified about changes to Tasks and, in the Subscription, provides filters that describe what
-subset of tasks it is interested in.  The server will then push notifications when there are new tasks and the client can then query for the specific Tasks that have changed.
+subset of Tasks it is interested in.  The server will then push notifications when there are new Tasks and the client can then query for the specific Tasks that have changed.
 
 This Gravity functionality is based on the [R4 Subscription backport](http://hl7.org/fhir/uv/subscriptions-backport/) implementation guide.  This implementation guide 
 allows pre-adoption of the FHIR R5 topic-based subscription approach in R4 implementations and is the subscription approach that most U.S. EHR vendors have agreed to 
@@ -131,7 +131,7 @@ This topic allow for monitoring for newly created tasks as well as updates to as
 
 ##### ServiceRequest topic
 This topic allow for monitoring for changes to a ServiceRequest when an organization is involved in fulfilling that request.  (E.g. to be
-aware if the request is suspended, cancelled or otherwise modified.  The intent with this subscription is that the filter criter will be
+aware if the request is suspended, cancelled or otherwise modified.  The intent with this subscription is that the filter criteria will be
 updated regularly to refer to the specific ServiceRequest ids the organization is fulfilling.  Once fulfillment is complete, the ServiceRequest
 will no longer need to be monitored.
 
