@@ -26,7 +26,7 @@ The following diagram depicts the suggested approach to incorporating risk surve
 
 <table><tr><td><img src="enablingsurveyinstruments.jpg" /></td></tr></table>
 
-#### [Hunger Vital Signs (HVS) Survey](https://loinc.org/88121-9/)) Example
+#### [Hunger Vital Sign (HVS) Survey](https://loinc.org/88121-9/)) Example
 
 This implementation guide includes a complete example of the HVS Survey representation as:
 

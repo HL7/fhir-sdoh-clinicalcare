@@ -33,26 +33,7 @@ Implementers should pay specific attention to the following sections:
 * [Artifacts Index](artifacts.html) all implementers need to understand the FHIR R4 profiles, examples and other FHIR artifacts defined in this implementation guide and linked from this section
 * [Downloads](downloads.html) links to allow implementers to download the IG and various artifacts
 
-### Update Tracking
 
-* Version 0.1.1 b (second update pushed to continuous build on 5/7/2021)
-* Version 0.1.1 c (update to support PRAPARE pushed to continuous build on 5/10/2021)
-* Version 0.1.1 d (update to fix deletions and support specific PRAPARE items pushed to continuous build on 5/12/2021)
-* Version 0.1.1 e (fixing deletions -- 5/12/2021)
-* Version 0.1.1 f (fixed deletions and updated support of and examples for PRAPARE -- pushed to continuous build on 5/13/2021
-* Version 0.1.1 g (renamed resource profiles, value sets, code systems, and examples -- deleted old versions -- includes updated profiles and examples (6/8/2021)
-* Version 0.1.1 h (updated and moved on 6/11/2021)
-* Version 0.1.1 i (base for next set of updates 6/13/2021)
-* Version 0.1.1 j (initial non-artifact ballot updates 6/13/2021)
-* Version 0.1.1 k (continued ballot updates 6/15/2021)
-* Version 0.1.1 l (updated of home page, Privacy and Security, and Credits 6/21/2021)
-* Version 0.1.1 m (updated of Technical background, Must Support, Gravity background 6/22/2021)
-* Version 0.1.1 n (test .json to include US version of SNOMED-CT 6/24/2021)
-* Version 0.1.1 o (updated mapping, support 6/26/2021)
-* Version 0.1.1 p (updated multiple sections and corrected hyperlinks 6/27/2021)
-* Version 0.1.1 q (updated hyperlinks in all completed section 6/27/2021)
-* Version 0.1.1 r (updated sections and examples 6/29/2021)
-* Version 0.1.1 S (updated sections and examples 6/30/2021)
 
 
 
