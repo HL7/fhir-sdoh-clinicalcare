@@ -1,10 +1,11 @@
+
 ###  SDOH Clinical Care Scope
 
-The Gravity Project focus for this version of the IG is to standardized the exchange of SDOH information related to the following activities:
+The Gravity Project focus for this version of the IG is to standardize the exchange of SDOH information related to the following activities:
 
 1)	assessment of social risk, 
 
-2)	establishing coded health concerns / problems, 
+2)	establishing coded health concerns/problems, 
 
 3) 	creating patient driven goals, and 
 
@@ -28,7 +29,7 @@ The following items are out of scope for this version of the IG.
 
 1) Providing guidance on the frequency of administering assessment (this is left up to the responsible organizations based on their standards of practice).
 
-2) Standards for reporting quality measures to payers or quality organizations -- this is left to the Data Exchange for Quality Measures Implementation Guide that was co-authored by NCQA.
+2) Standards for reporting quality measures to payers or quality organizations (this is left to the Data Exchange for Quality Measures Implementation Guide that was co-authored by NCQA).
 
 3) Addressing Consent beyond the consent to share information between a HIPAA covered entity and entities that are not covered by HIPAA.
 
