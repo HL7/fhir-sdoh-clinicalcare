@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Consent"/>
     <meta>
-        <versionId value="15"/>
-        <lastUpdated value="2021-05-27T13:43:51.068+00:00"/>
-        <source value="#wudLqAlb0DzNF31w"/>
+        <versionId value="16"/>
+        <lastUpdated value="2021-07-06T23:53:51.864+00:00"/>
+        <source value="#Jm1gZtQwnwt8Gxjk"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent"/>
     <name value="SDOHCCConsent"/>
@@ -98,13 +98,12 @@
             <requirements value="This element is not mandatory . There is not a use case that Performer be computable since it will normally be present in the consent &quot;form&quot;."/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
                 <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
                 <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
                 <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
             </type>
-            <mustSupport value="false"/>
         </element>
         <element id="Consent.organization">
             <path value="Consent.organization"/>

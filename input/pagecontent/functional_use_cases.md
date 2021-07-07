@@ -1,6 +1,8 @@
-### Indirect Referral 
+Note: SDOH IG related Patient Stories are available on the Gravity Project Confluence site [here](https://confluence.hl7.org/display/GRAV/Patient+Stories)
 
-<table><tr><td><img src="IndirectReferral.jpg" /></td></tr></table>
+
+
+### Indirect Referral 
 
 Note: applies to Providers and Payers as the referral originator
 
@@ -8,9 +10,9 @@ Patient is assessed by a caregiver and referred to CP.  CP refers to a CBO to de
 
 ##### Actors
 
-- Caregiver
-- Care Coordinator
-- Patient
+- Caregiver (includes licensed providers and others that interact with the patient to assess social risk, set goal, and determine/recommend referrals )
+- Care Coordinator (coordinates the care and referral activities but normally does not make assessment, goal, or referral decisions)
+- Patient (consumer, client, ect.)
 - Coordination Platform (CP)
 - Community Based Organization (CBO)
 
@@ -21,7 +23,7 @@ Patient is assessed by a caregiver and referred to CP.  CP refers to a CBO to de
 3. Provider and patient determine that it is most important to address the Food Insecurity first – provider promotes the health concern to the problem list
 4. Provider and patient add a goal related to this problem to pursue enrollment in a SNAP program
 5. Provider and patient agree that the contracted CP should handle identifying a CBO that will provide a solution to the Food Insecurity problem
-6. Patient consents to have the referral and its accompanying information (including the consent authorization) sent to the CP (which is a business associate of the providers organization)
+6. Patient consents to have the referral and its accompanying information (including the consent authorization) sent to the CP (which is a business associate of the provider's organization)
 
 ##### Provider – CP – CBO workflow 
 
@@ -46,8 +48,6 @@ Patient is assessed by a caregiver and referred to CP.  CP refers to a CBO to de
  
 
 ### Direct Referral
-
-<table><tr><td><img src="DirectReferral.jpg" /></td></tr></table>
 
 Note: applies to Providers, Payers and CPs as the referral originator
 
