@@ -663,7 +663,7 @@
             <value value="sdoh-cc"/>
         </parameter>
         <parameter>
-            <code value="path-expansion-params-bad"/>
+            <code value="path-expansion-params"/>
             <value value="SDOH-expansion-parameters.json"/>
         </parameter>
         <parameter>
