@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Task"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2021-06-15T18:23:50.186+00:00"/>
-        <source value="#OzXu2f2cZT7hDiLR"/>
+        <versionId value="5"/>
+        <lastUpdated value="2021-07-06T18:59:47.952+00:00"/>
+        <source value="#sF1DP2T6GUCDeBGQ"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task"/>
     <version value="0.1.0"/>
@@ -51,6 +51,26 @@
             <path value="Task"/>
             <short value="A request to fulfill an SDOH service request"/>
             <comment value="For Tasks used in requesting fulfillment of an SDOHCC ServiceRequest (i.e. referral for service) and subsequently tracking and managing the fulfillment of that referral."/>
+        </element>
+        <element id="Task.partOf">
+            <path value="Task.partOf"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Task.partOf:SupportedPartOf">
+            <path value="Task.partOf"/>
+            <sliceName value="SupportedPartOf"/>
+            <requirements value="Allows an organization (e.g., a Coordination Platform) to create a Task, based on an SDOHCC Task from a referral source, to pass on to another organization (e.g., a  Community Based Organization)."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task"/>
+            </type>
+            <mustSupport value="true"/>
         </element>
         <element id="Task.status">
             <path value="Task.status"/>

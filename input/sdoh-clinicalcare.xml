@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="sdoh-clinicalcare"/>
     <meta>
-        <versionId value="626"/>
-        <lastUpdated value="2021-07-02T13:16:31.542+00:00"/>
-        <source value="#8FCWOMGOZPe1lqB1"/>
+        <versionId value="647"/>
+        <lastUpdated value="2021-07-07T12:18:47.664+00:00"/>
+        <source value="#ZSVhx38vaXP2G96i"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/sdoh-clinicalcare"/>
     <version value="0.1.1"/>
@@ -327,7 +327,40 @@
                 <display value="SDOHCC ServiceRequest Food Pantry Application Assistance Example"/>
             </reference>
             <name value="SDOHCC ServiceRequest Food Pantry Application Assistance Example"/>
-            <description value="An example of a ServiceRequest for assistance with applying to a food pantry that references as its reason a food insecurity Condition."/>
+            <description value="An example of a completed ServiceRequest for assistance with applying to a food pantry that references as its reason a food insecurity Condition."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ServiceRequest/SDOHCC-ServiceRequestBasedOnAnotherServiceRequestExample"/>
+                <display value="SDOHCC ServiceRequest Based On Another Service Request Example"/>
+            </reference>
+            <name value="SDOHCC ServiceRequest Based On Another Service Request Example"/>
+            <description value="An example of a completed filler order ServiceRequest that can be used to pass on another ServiceRequest (i.e., SDOHCC ServiceRequest Food Pantry Application Assistance Example) from an intermediary organization to another organization (e.g., when a Coordination Platform receives a ServiceRequest from a referral source and passes it on to a Community Based Organization)."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ServiceRequest/SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample"/>
+                <display value="SDOHCC Service Request Active Food Pantry Application Assist Example"/>
+            </reference>
+            <name value="SDOHCC Service Request Active Food Pantry Application Assist Example"/>
+            <description value="An example of an active ServiceRequest for assistance with applying to a food pantry that references as its reason a food insecurity Condition."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ServiceRequest/SDOHCC-ServiceRequestActiveBasedOnAnotherServiceRequestExample"/>
+                <display value="SDOHCC Service Request Active Based On Another Service Request Example"/>
+            </reference>
+            <name value="SDOHCC Service Request Active Based On Another Service Request Example"/>
+            <description value="An example of an active filler order ServiceRequest that can be used to pass on another ServiceRequest (i.e., SDOHCC ServiceRequest Active Food Pantry Application Assist Example) from an intermediary organization to another organization (e.g., when a Coordination Platform receives a ServiceRequest from a referral source and passes it on to a Community Based Organization)."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
             <groupingId value="new-group2"/>
@@ -345,11 +378,33 @@
         </resource>
         <resource>
             <reference>
+                <reference value="Task/SDOHCC-TaskOrderAcceptedPartOfAnotherTaskExample"/>
+                <display value="SDOHCC Task Order Accepted Part Of Another Task Example"/>
+            </reference>
+            <name value="SDOHCC Task Order Accepted Part Of Another Task Example"/>
+            <description value="An example of an accepted Task that can be used to pass on another Task (i.e., SDOHCC Task Order Fulfillment Accepted Example) from an intermediary organization to another organization (e.g., when a Coordination Platform receives a Task from a referral source and passes it on to a Community Based Organization)."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
                 <reference value="Task/SDOHCC-TaskOrderFulfillmentCompletedExample"/>
                 <display value="SDOHCC Task Order Fulfillment Completed Example"/>
             </reference>
             <name value="SDOHCC Task Order Fulfillment Completed Example"/>
-            <description value="An example of a completed Task that has a ServiceRequest for assistance with applying to a food pantry as the Task.focus and referral to a food pantry program as the Task.output."/>
+            <description value="An example of a completed Task that has a ServiceRequest for assistance with applying to a food pantry as the Task.focus and a Procedure for assistance with applying to a food pantry as the Task.output."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Task/SDOHCC-TaskOrderCompletedPartOfAnotherTaskExample"/>
+                <display value="SDOHCC Task Order Completed Part Of Another Task Example"/>
+            </reference>
+            <name value="SDOHCC Task Order Completed Part Of Another Task Example"/>
+            <description value="An example of a completed Task that can be used to pass on another Task (i.e., SDOHCC Task Order Fulfillment Completed Example) from an intermediary organization to another organization (e.g., when a Coordination Platform receives a Task from a referral source and passes it on to a Community Based Organization)."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task"/>
             <groupingId value="new-group2"/>

@@ -30,15 +30,15 @@ The following diagram depicts one example of an exchange workflow supported by t
 
 #### Actors
 
-	Referring Entity (RE) -- this can be any of the following:
-	
+Referral Source / Referring Entity (RE)  -- this can be any of the following:
+
 		1) a provider or other caregiver
 	
 		2) a payer as part of care management, risk assessment, or via programs that assess and intervene regarding social risk
 	
 		3) a Coordination Platform
 
-Coordination Platform (CP)
+Intermediary / Coordination Platform (CP)
 
 		1) This is a service that accepts referrals (it may also create them)
 	
@@ -50,11 +50,26 @@ Coordination Platform (CP)
 	
 		5) Reports status back to the Referring Entity
 
-Community Based Organization (CBO)
+Referral Performer / Community Based Organization (CBO)
 
 		1) Provides one or more social risk services
 	
 		2) Interacts with the CP or RE to provide status of the referral
 
+#### Direct Referral
 
-<table><tr><td><img src="ReferrerCPCBO.jpg" /></td></tr></table>
+The referral occurs between the Referral Source and the Referral Receiver.  The Referral Receiver may be the Referral Performer or an Intermediary that does not have the ability to communicate with a Referral Performer via a FHIR API.
+
+<table><tr><td><img src="DirectReferralSF.jpg" /></td></tr></table>
+
+#### Indirect Referral
+
+The referral occurs in two separate interactions. The first is between the Referral Source and the Intermediary and the second is between the Intermediary and the Referral Performer
+
+This IG assumes that, in an Indirect Referral, the Referral Performer does not have the ability to communicate directly with the Referral Source.  Therefore the the intermediary SHALL support the following.
+1) Create a local copy of all of the relevant referenced resources from the Referral Source
+2) Create a Task to be Posted to the Referral Performer that references the Referral Source Task via Task.partof
+3) Create a ServiceRequest with ServiceRequest.intent value filler-order and ServiceRquest.basedon references the original Referral Source ServiceRequest
+4) Since local copies of the referenced resources are maintained by the Intermediary, the intermeidary must periodically query the Referral Source for updates to the referenced resources.
+
+<table><tr><td><img src="IndirectReferralSF.jpg" /></td></tr></table>
