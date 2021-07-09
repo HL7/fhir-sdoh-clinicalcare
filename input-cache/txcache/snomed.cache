@@ -27,8 +27,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:8d158396-3c68-4203-8604-ccdd98010e2e",
-    "timestamp" : "2021-06-24T22:08:42.419Z",
+    "identifier" : "urn:uuid:f5b73c98-3cbf-41ef-9c6d-cd7875bd13b2",
+    "timestamp" : "2021-06-29T13:12:17.279Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -491,9 +491,9 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Unable to find code 467771000124109 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20210131); The code \"467771000124109\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#467771000124109) is not valid (from http://tx.fhir.org/r4)"
+  "display" : "Assistance with application for food pantry program",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -523,9 +523,9 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Unable to find code 467771000124109 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20210131); The code \"467771000124109\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#467771000124109) is not valid in the value set 'SDOHCCValueSetSNOMEDCTCPTLOINCHCPCSII' (from http://tx.fhir.org/r4)"
+  "display" : "Assistance with application for food pantry program",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -533,9 +533,9 @@ v: {
   "code" : "467771000124109"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Unable to find code 467771000124109 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20210131); The code \"467771000124109\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#467771000124109) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+  "display" : "Assistance with application for food pantry program",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -556,9 +556,9 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Unable to find code 467771000124109 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20210131); The code \"467771000124109\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#467771000124109) is not valid in the value set 'ProcedureCodes(SNOMEDCT)' (from http://tx.fhir.org/r4)"
+  "display" : "Assistance with application for food pantry program",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -567,9 +567,9 @@ v: {
   "display" : "Referral to food pantry program"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Unable to find code 464031000124101 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20210131); The code \"464031000124101\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#464031000124101) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+  "display" : "Referral to food pantry program",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
@@ -599,15 +599,15 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:0fe4486a-c2ae-4f57-ac14-2801bf54a6c4",
-    "timestamp" : "2021-06-24T22:09:44.028Z",
+    "identifier" : "urn:uuid:43502aa2-67fc-46e2-8dd3-e0f3107540de",
+    "timestamp" : "2021-06-29T13:14:06.810Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
     },
     {
       "name" : "version",
-      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20210131"
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20210301"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
@@ -5611,17 +5611,6 @@ e: {
     }]
   }
 },
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "467771000124109",
-  "display" : "Assistance with application for food pantry program"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "Assistance with application for food pantry program",
-  "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------

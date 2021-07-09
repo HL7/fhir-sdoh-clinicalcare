@@ -1,0 +1,15 @@
+<SearchParameter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir ../../../input-cache/schemas/R4/fhir-single.xsd">
+	<id value="ServiceRequest-supporting-info"/>
+	<url value="http://hl7.org/fhir/us/sdoh-clinicalcare/SearchParameter/ServiceRequest-supporting-info"/>
+	<name value="ServiceRequestSupportingInfo"/>
+	<status value="draft"/>
+	<experimental value="false"/>
+	<date value="2021-07"/>
+	<description value="Any resources referenced by ServiceRequest.supportingInfo"/>
+	<code value="supporting-info"/>
+	<base value="ServiceRequest"/>
+	<type value="reference"/>
+	<expression value="ServiceRequest.supportingInfo"/>
+	<xpath value="f:ServiceRequest/f:supportingInfo"/>
+	<xpathUsage value="normal"/>
+</SearchParameter>
