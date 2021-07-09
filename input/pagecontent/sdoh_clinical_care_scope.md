@@ -1,21 +1,42 @@
+
 ###  SDOH Clinical Care Scope
 
-The Gravity Project focus is on defining structure and coded content exchange to support multiple social domains. The initial focus is on three domains: food insecurity, housing instability and homelessness, and transportation access.
+The Gravity Project focus for this version of the IG is to standardize the exchange of SDOH information related to the following activities:
 
-<table><tr><td><img src="InitialDomains.jpg" /></td></tr></table>
+1)	assessment of social risk, 
 
+2)	establishing coded health concerns/problems, 
+
+3) 	creating patient driven goals, and 
+
+4)	defining a RESTful closed loop referral process to manage interventions.
+
+<table><tr><td><img src="IGScope.jpg" /></td></tr></table>
+
+Currently, the Gravity Project has identified a number of SDOH domains that describe various types of social risk.  Work is underway to identify value sets for the above activities related to each of the SDOH domains.  Information on the approach taken by this IG to support code systems and value sets for these SDOH domains can be found [here](support_for_multiple_domains.html).
+
+A current list of the domains and the active terminology work effort can be found on the Gravity Project [Terminology Pages](https://confluence.hl7.org/display/GRAV/Terminology+Workstream+Dashboard) on Confluence.
+
+The scope of interactions is intended to cover all of the interactions shown with blue arrows below.
+
+<table><tr><td><img src="SDOHInteractionsDrawingexpandedV5.jpg" /></td></tr></table>
 
 <br>
+
 ####  Out of Scope
 
-This project will not validate or provide incentives for implementation of the identified SDOH data elements.
-Providing guidance on the frequency of administering asseessment (this is left up to the resposible organizations based on their standards of practice).
-Standards for reporting quality measures to payers or quality organizattions -- this is left to the Data Exchange for Quality Meaures Implementaion Guide that was co-authored by NCQA.
+The following items are out of scope for this version of the IG.  
+
+1) Providing guidance on the frequency of administering assessment (this is left up to the responsible organizations based on their standards of practice).
+
+2) Standards for reporting quality measures to payers or quality organizations (this is left to the Data Exchange for Quality Measures Implementation Guide that was co-authored by NCQA).
+
+3) Addressing Consent beyond the consent to share information between a HIPAA covered entity and entities that are not covered by HIPAA.
 
 <br>
 ### Conceptual Framework
 
-Coded SDOH content is captured across core health care activities: screening/assessment, establishing health concerns, goal setting, care planning, interventions, outcomes and reporting. The conceptual framework illustrated below shows how these activities form a cycle of care. Over time, a patient's progress toward care goals can be tracked and measured.
+Coded SDOH content is captured across core health care activities: screening/assessment, establishing health concerns, goal setting, care planning, interventions, outcomes and reporting. The conceptual framework, illustrated below, shows how these activities form a cycle of care. Over time, a patient's progress toward care goals can be tracked and measured.
 
 
 <table><tr><td><img src="ConceptualFramework2.jpg" /></td></tr></table>
@@ -23,13 +44,6 @@ Coded SDOH content is captured across core health care activities: screening/ass
 
 <br>
 ### Data Modeling Framework
-The figure below was derived from the HL7 Patient Care WG Domain Analysis model for Care Plan information. It informs the design of the FHIR Resources used in this IG.
+The diagram below shows the data model for the assessment process including the creation of health concerns, goal setting (patient-centered goals), and creation of referrals using service request and procedure/intervention. The graphic represents relationships defined in this IG for the Questionnaire, Questionnaire Response, Observation, Condition, Goal, Task, ServiceRequest and Procedure Resources. The following [link](fhir_artifacts_overview.html) will take you to a page that describes the FHIR resources and their uses as well as providing further links to each of the detailed profiles.
 
-<table><tr><td><img src="DataModelingFrameword.jpg" /></td></tr></table>
-
-The relationships between the various types of information are supported by the designs developed for the resources. The diagram below shows the data model for the screening response observation, condition (health concern), goal (patient-centered goal), service request and procedure/intervention. The mind map illustration represents profiles developed in this IG for the FHIR Observation, Condition, Goal, ServiceRequest and Procedure Resources. 
-
-<table><tr><td><img src="FHIR_Resource_Reference_MiMind_3.png" /></td></tr></table>
-
-
-
+<table><tr><td><img src="FHIR Modeling.jpg" /></td></tr></table>

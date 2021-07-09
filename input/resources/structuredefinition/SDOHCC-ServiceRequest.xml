@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ServiceRequest"/>
     <meta>
-        <versionId value="6"/>
-        <lastUpdated value="2021-06-16T15:14:19.840+00:00"/>
-        <source value="#rj49RKGMs91LngEl"/>
+        <versionId value="9"/>
+        <lastUpdated value="2021-07-06T18:59:47.950+00:00"/>
+        <source value="#I2aqNdtMLqHv9Dpl"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
     <version value="0.1.0"/>
@@ -90,15 +90,32 @@
         </element>
         <element id="ServiceRequest.basedOn">
             <path value="ServiceRequest.basedOn"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
                 <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
             </type>
         </element>
+        <element id="ServiceRequest.basedOn:SupportedBasedOn">
+            <path value="ServiceRequest.basedOn"/>
+            <sliceName value="SupportedBasedOn"/>
+            <requirements value="Allows an organization (e.g., a Coordination Platform) to create a ServiceRequest for another organization (e.g., a Community Based Organization) based on a SDOHCC ServiceRequest from a referral source (e.g., a provider or a payor involved in care management)."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
         <element id="ServiceRequest.status">
             <path value="ServiceRequest.status"/>
-            <comment value="The status is generally fully in the control of the requester - they determine whether the order is draft or active and, after it has been activated, competed, cancelled or suspended. States relating to the activities of the performer are reflected on either the corresponding event (see [Event Pattern](event.html) for general discussion) or using the [Task](task.html) resource. &#xD;&#xA;While all values are currently allowed, there may be a contraint on the values in future releases based on implementation feedback."/>
+            <comment value="The status is generally fully in the control of the requester - they determine whether the order is draft or active and, after it has been activated, competed, cancelled or suspended. States relating to the activities of the performer are reflected on either the corresponding event (see [Event Pattern](event.html) for general discussion) or using the [Task](task.html) resource. &#xD;&#xA;While all values are currently allowed, there may be a constraint on the values in future releases based on implementation feedback."/>
             <mustSupport value="true"/>
         </element>
         <element id="ServiceRequest.intent">

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Task
     xmlns="http://hl7.org/fhir">
-    <id value="SDOHCC-TaskOrderFulfillmentCompletedExample"/>
+    <id value="SDOHCC-TaskOrderCompletedPartOfAnotherTaskExample"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2021-07-06T18:22:14.415+00:00"/>
-        <source value="#heNH0FQtI4G6Fttd"/>
+        <versionId value="2"/>
+        <lastUpdated value="2021-07-06T18:54:23.454+00:00"/>
+        <source value="#DMAsuIB9cRqCujYw"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task"/>
     </meta>
+    <partOf>
+        <reference value="Task/SDOHCC-TaskOrderFulfillmentCompletedExample"/>
+    </partOf>
     <status value="completed"/>
     <intent value="order"/>
     <code>
@@ -18,7 +21,7 @@
         </coding>
     </code>
     <focus>
-        <reference value="ServiceRequest/SDOHCC-ServiceRequestFoodPantryApplicationAssistanceExample"/>
+        <reference value="ServiceRequest/SDOHCC-ServiceRequestBasedOnAnotherServiceRequestExample"/>
     </focus>
     <for>
         <reference value="Patient/pat-53234"/>
