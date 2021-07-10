@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Referral recipient light - no server expectations
+-->
+<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../input-cache/schemas/R4/fhir-single.xsd">
+  <id value="SDOH-ClinicalCareReferralRecipientLight"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>SDOH Clinical Care Referral Recipient - Light</h2>
+      <p>(Requirements Definition Capability Statement)</p>
+      <p>Canonical URL: http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOH-ClinicalCareReferralRecipientLight Published: 2021-06 (draft)</p>
+      <p>This resource describes the required and desired behavior of systems acting as 'light-weight' SDOH clinical care 'referral recipients'.  These systems fit into the SDOH care workflow in the same manner as <a href="CapabilityStatement-SDOH-ClinicalCareReferralRecipient.html">'regular' Referral Recipients</a>, however they have simpler interface requirements reflecting the inability of the systems to store data locally and/or expose a FHIR service allowing access to that data.  'Light' referral recipients are not expected to expose any FHIR restful services.  Instead, they act as clients, querying for tasks on the initiating <a href="CapabilityStatement-SDOH-ClinicalCareReferralSource.html">Referral Sources</a> or <a href="CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html">Coordination Platforms</a> and creating any resulting Procedure records within the server they received the request from.</p>
+      <h2>General</h2>
+      <div class="table-wrapper">
+        <table class="grid">
+          <tbody>
+            <tr>
+              <th>FHIR Version:</th>
+              <td>4.0.1</td>
+            </tr>
+            <tr>
+              <th>Supported formats:</th>
+              <td>xml, json</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>REST client behavior</h2>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOH-ClinicalCareReferralRecipientLight"/>
+  <name value="SDOH_ClinicalCareReferralRecipientLight"/>
+  <title value="SDOH Clinical Care Referral Recipient - Light"/>
+  <status value="draft"/>
+  <date value="2021-06"/>
+  <description value="This resource describes the required and desired behavior of systems acting as 'light-weight' SDOH clinical care 'referral recipients'.  These systems fit into the SDOH care workflow in the same manner as [[CapabilityStatement-SDOH-ClinicalCareReferralRecipient.html|'regular' Referral Recipients]], however they have simpler interface requirements reflecting the inability of the systems to store data locally and/or expose a FHIR service allowing access to that data.  'Light' referral recipients are not expected to expose any FHIR restful services.  Instead, they act as clients, querying for tasks on the initiating [[CapabilityStatement-SDOH-ClinicalCareReferralSource.html|Referral Sources]] or [[CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html|Coordination Platforms]] and creating any resulting Procedure records within the server they received the request from."/>
+  <kind value="requirements"/>
+  <fhirVersion value="4.0.1"/>
+  <format value="xml"/>
+  <format value="json"/>
+  <rest>
+    <mode value="client"/>
+  </rest>
+</CapabilityStatement>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+referral-source - same as coordination platform except that client expectations are reduced to 'should'
+-->
+<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../input-cache/schemas/R4/fhir-single.xsd">
+  <id value="SDOH-ClinicalCareReferralSource"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>SDOH Clinical Care Referral Source</h2>
+      <p>(Requirements Definition Capability Statement)</p>
+      <p>Canonical URL: http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOH-ClinicalCareReferralSource Published: 2021-06 (draft)</p>
+      <p>This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral sources'.  These are typically EHR or Payer systems that initiate the process of identifying patients with SDOH needs and requesting appropriate services.  Because systems that originate requests for service may sometimes also be recipients of requests for service, the requirements include 'SHOULD' expectations to also accept and process requests from other systems.  The referral source may either interact directly with a <a href="CapabilityStatement-SDOH-ClinicalCareReferralRecipient.html">Referral Recipient</a> or will interact through an intermediary <a href="CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html">Coordination Platform</a>.  Responsibilities of Referral Sources include capturing information from a patient in the form of QuestionnaireResponses, Observations, Conditions and Goals as well as creating the ServiceRequest instances that refer patients for needed services and the Tasks that initiate fulfillment of those referrals.</p>
+      <h2>General</h2>
+      <div class="table-wrapper">
+        <table class="grid">
+          <tbody>
+            <tr>
+              <th>FHIR Version:</th>
+              <td>4.0.1</td>
+            </tr>
+            <tr>
+              <th>Supported formats:</th>
+              <td>xml, json</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>REST client behavior</h2>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOH-ClinicalCareReferralSource"/>
+  <name value="SDOH_ClinicalCareReferralSource"/>
+  <title value="SDOH Clinical Care Referral Source"/>
+  <status value="draft"/>
+  <date value="2021-06"/>
+  <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral sources'.  These are typically EHR or Payer systems that initiate the process of identifying patients with SDOH needs and requesting appropriate services.  Because systems that originate requests for service may sometimes also be recipients of requests for service, the requirements include 'SHOULD' expectations to also accept and process requests from other systems.  The referral source may either interact directly with a [[CapabilityStatement-SDOH-ClinicalCareReferralRecipient.html|Referral Recipient]] or will interact through an intermediary [[CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html|Coordination Platform]].  Responsibilities of Referral Sources include capturing information from a patient in the form of QuestionnaireResponses, Observations, Conditions and Goals as well as creating the ServiceRequest instances that refer patients for needed services and the Tasks that initiate fulfillment of those referrals."/>
+  <kind value="requirements"/>
+  <fhirVersion value="4.0.1"/>
+  <format value="xml"/>
+  <format value="json"/>
+  <rest>
+    <mode value="client"/>
+  </rest>
+</CapabilityStatement>

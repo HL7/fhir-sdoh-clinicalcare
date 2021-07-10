@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Referral recipient - low server expectations
+-->
+<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../input-cache/schemas/R4/fhir-single.xsd">
+  <id value="SDOH-ClinicalCareReferralRecipient"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>SDOH Clinical Care Referral Recipient</h2>
+      <p>(Requirements Definition Capability Statement)</p>
+      <p>Canonical URL: http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOH-ClinicalCareReferralRecipient Published: 2021-06 (draft)</p>
+      <p>This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral recipients'.  These are typically community-based organizations that can provide services such as food bank access, housing remediation, etc.  In some cases, a referral recipient might actually further refer the patient to a downstream service provider through non-FHIR means.  In such cases, the system is still treated as a 'referral recipient' rather than a <a href="CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html">Coordination Platform</a> because, from a FHIR interface perspective, the referral process 'stops' with that system.  Referral recipients must be able to receive or monitor for Tasks issued by <a href="CapabilityStatement-SDOH-ClinicalCareReferralSource.html">Referral Sources</a> and <a href="CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html">Coordination Platforms</a>.  They must also be able to respond to access the ServiceRequest representing the referral pointed to by the Task and any relevant information referenced by the referral, update the Task with their acceptance or rejection of the referral, and finally provide information about what interventions were actually performmed using the Procedure resource.\n\n There are actually two types of referral recipients defined in this implementation guide.  This CapabilityStatement describes the expected behavior of more sophisticated service delivery systems that are capable of exposing a FHIR service and persisting Tasks and Procedures in their own environment.  A separate set of interface expectations is defined for <a href="CapabilityStatement-SDOH-ClinicalCareReferralRecipientLight.html">'Light' Referral Recipients</a> that are not capable of exposing an endpoint and where the Task and any resulting Procedures must be stored in the requesting system's database.</p>
+      <h2>General</h2>
+      <div class="table-wrapper">
+        <table class="grid">
+          <tbody>
+            <tr>
+              <th>FHIR Version:</th>
+              <td>4.0.1</td>
+            </tr>
+            <tr>
+              <th>Supported formats:</th>
+              <td>xml, json</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>REST client behavior</h2>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOH-ClinicalCareReferralRecipient"/>
+  <name value="SDOH_ClinicalCareReferralRecipient"/>
+  <title value="SDOH Clinical Care Referral Recipient"/>
+  <status value="draft"/>
+  <date value="2021-06"/>
+  <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral recipients'.  These are typically community-based organizations that can provide services such as food bank access, housing remediation, etc.  In some cases, a referral recipient might actually further refer the patient to a downstream service provider through non-FHIR means.  In such cases, the system is still treated as a 'referral recipient' rather than a [[CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html|Coordination Platform]] because, from a FHIR interface perspective, the referral process 'stops' with that system.  Referral recipients must be able to receive or monitor for Tasks issued by [[CapabilityStatement-SDOH-ClinicalCareReferralSource.html|Referral Sources]] and [[CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html|Coordination Platforms]].  They must also be able to respond to access the ServiceRequest representing the referral pointed to by the Task and any relevant information referenced by the referral, update the Task with their acceptance or rejection of the referral, and finally provide information about what interventions were actually performmed using the Procedure resource.\n\n There are actually two types of referral recipients defined in this implementation guide.  This CapabilityStatement describes the expected behavior of more sophisticated service delivery systems that are capable of exposing a FHIR service and persisting Tasks and Procedures in their own environment.  A separate set of interface expectations is defined for [[CapabilityStatement-SDOH-ClinicalCareReferralRecipientLight.html|'Light' Referral Recipients]] that are not capable of exposing an endpoint and where the Task and any resulting Procedures must be stored in the requesting system's database."/>
+  <kind value="requirements"/>
+  <fhirVersion value="4.0.1"/>
+  <format value="xml"/>
+  <format value="json"/>
+  <rest>
+    <mode value="client"/>
+  </rest>
+</CapabilityStatement>

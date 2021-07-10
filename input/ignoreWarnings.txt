@@ -9,6 +9,15 @@ ERROR: /scratch/ig-build-temp-RZ4IS3/repo/output/StructureDefinition-SDOHCC-Serv
 ERROR: /scratch/ig-build-temp-RZ4IS3/repo/output/StructureDefinition-SDOHCC-ServiceRequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 432, column 397: The link 'task.html' for "Task" cannot be resolved
 ERROR: /scratch/ig-build-temp-RZ4IS3/repo/output/StructureDefinition-SDOHCC-ServiceRequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 653, column 288: The link 'servicerequest-example-di.html' for "CT Scan example" cannot be resolved
 ERROR: /scratch/ig-build-temp-RZ4IS3/repo/output/StructureDefinition-SDOHCC-ServiceRequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 664, column 795: The link 'servicerequest-example-di.html' for "CT Scan example" cannot be resolved
+# The US Core canonical URLs have redirects, but those redirects aren't going to pages that actually have content - this is a US Core publication issue
+The link 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam.html' for "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam" cannot be resolved
+The link 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference.html' for "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference" cannot be resolved
+The link 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization.html' for "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization" cannot be resolved
+The link 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient.html' for "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient" cannot be resolved
+The link 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner.html' for "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner" cannot be resolved
+The link 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole.html' for "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole" cannot be resolved
+The link 'http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract.html' for "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract" cannot be resolved
+The link 'http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse.html' for "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse" cannot be resolved
 # The following issue is inherited from the FHIR specification for Consent.
 ERROR: StructureDefinition/SDOHCC-Consent: StructureDefinition.snapshot.element[9].example[0].value.ofType(Identifier): Consent: if identifier.system is ''urn:ietf:rfc:3986'', then the identifier.value must be a full URI (e.g. start with a scheme)
 # The following will be covered by the issue raised to HL7 that integer, string, and decimal should be allowed datatypes based on the datatype specified in LOINC (See https://chat.fhir.org/#narrow/stream/179255-questionnaire/topic/Valid.20datatype.20for.20LOINC.20answers)

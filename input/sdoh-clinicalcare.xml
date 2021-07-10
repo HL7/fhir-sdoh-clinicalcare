@@ -75,11 +75,41 @@
         </grouping>
         <resource>
             <reference>
-                <reference value="CapabilityStatement/SDOH-ClinicalCareCoordinationPlatform"/>
-                <display value="SDOH Clinical Care Manager"/>
+                <reference value="CapabilityStatement/SDOH-ClinicalCareReferralSource"/>
+                <display value="SDOH Clinical Care Referral Source"/>
             </reference>
-            <name value="SDOH Clinical Care Manager"/>
-            <description value="Defines the capabilities of EHR or Payer systems that manage SDOH concerns"/>
+            <name value="SDOH Clinical Care Referral Source"/>
+            <description value="Defines the capabilities of systems that initiate referrals and other aspects of the SDOH care process"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group0"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="CapabilityStatement/SDOH-ClinicalCareCoordinationPlatform"/>
+                <display value="SDOH Clinical Care Coordination Platform"/>
+            </reference>
+            <name value="SDOH Clinical Care Coordination Platform"/>
+            <description value="Defines the capabilities of systems that act as intermediaries between systems that initiate referrals and those that action them"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group0"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="CapabilityStatement/SDOH-ClinicalCareReferralRecipient"/>
+                <display value="SDOH Clinical Care Referral Recipient"/>
+            </reference>
+            <name value="SDOH Clinical Care Referral Recipient"/>
+            <description value="Defines the capabilities of systems that action referrals for SDOH care"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group0"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="CapabilityStatement/SDOH-ClinicalCareReferralRecipientLight"/>
+                <display value="SDOH Clinical Care Referral Recipient - Light"/>
+            </reference>
+            <name value="SDOH Clinical Care Referral Recipient - Light"/>
+            <description value="Defines the capabilities of systems that action referrals for SDOH care that don't have their own FHIR server"/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group0"/>
         </resource>
