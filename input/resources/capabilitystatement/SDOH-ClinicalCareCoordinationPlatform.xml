@@ -66,10 +66,10 @@
             <tr>
               <th>Condition</th>
               <td>
-                <a title="Allows the monitoring of previously-retrieved CareTeams that are the performer of ServiceRequests." href="#Condition-search-type">SHOULD</a>
+                <a title="Allows the monitoring of previously-retrieved Conditions that are the performer of ServiceRequests." href="#Condition-search-type">SHOULD</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve a CareTeam that is the requester or performer of a ServiceRequest." href="#Condition-read">SHALL</a>
+                <a title="Allows the system to retrieve a Condition that is the requester or performer of a ServiceRequest." href="#Condition-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -98,10 +98,10 @@
             <tr>
               <th>Device</th>
               <td>
-                <a title="Allows the monitoring of previously-retrieved Devices that are the requester or intended performer of ServiceRequests." href="#Device-search-type">MAY</a>
+                <a title="Allows the monitoring of previously-retrieved Devices that are the requester or intended performer of ServiceRequests." href="#Device-search-type">SHOULD</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve a Device that is the requester or intended performer of a ServiceRequest." href="#Device-read">MAY</a>
+                <a title="Allows the system to retrieve a Device that is the requester or intended performer of a ServiceRequest." href="#Device-read">SHOULD</a>
               </td>
               <td/>
               <td/>
@@ -280,7 +280,7 @@
                 <a title="Allows checking for updates in previously retrieved QuestionnaireResponses." href="#QuestionnaireResponse-search-type">SHOULD</a>
               </td>
               <td>
-                <a title="Allows the retrieval of QuestionnaireResponses pointed to as supporting information by a ServiceRequest." href="#QuestionnaireResponse-read">SHALL</a>
+                <a title="Allows the retrieval of QuestionnaireResponses pointed to as supporting information by a ServiceRequest." href="#QuestionnaireResponse-read">SHOULD</a>
               </td>
               <td/>
               <td/>
@@ -496,7 +496,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve a CareTeam that is the requester or performer of a ServiceRequest.</p>
+                <p>Allows the system to retrieve a Condition that is the requester or performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -506,7 +506,7 @@
               </th>
               <td>SHOULD</td>
               <td>
-                <p>Allows the monitoring of previously-retrieved CareTeams that are the performer of ServiceRequests.</p>
+                <p>Allows the monitoring of previously-retrieved Conditions that are the performer of ServiceRequests.</p>
               </td>
             </tr>
           </tbody>
@@ -699,7 +699,7 @@
                 <a name="Device-read"> </a>
                 <span>read</span>
               </th>
-              <td>MAY</td>
+              <td>SHOULD</td>
               <td>
                 <p>Allows the system to retrieve a Device that is the requester or intended performer of a ServiceRequest.</p>
               </td>
@@ -709,7 +709,7 @@
                 <a name="Device-search-type"> </a>
                 <span>search-type</span>
               </th>
-              <td>MAY</td>
+              <td>SHOULD</td>
               <td>
                 <p>Allows the monitoring of previously-retrieved Devices that are the requester or intended performer of ServiceRequests.</p>
               </td>
@@ -1806,7 +1806,7 @@
                 <a name="QuestionnaireResponse-read"> </a>
                 <span>read</span>
               </th>
-              <td>SHALL</td>
+              <td>SHOULD</td>
               <td>
                 <p>Allows the retrieval of QuestionnaireResponses pointed to as supporting information by a ServiceRequest.</p>
               </td>
@@ -2372,10 +2372,10 @@
             <tr>
               <th>CareTeam</th>
               <td>
-                <a title="Allows the monitoring of previously-retrieved CareTeams that are the intended performer of ServiceRequests." href="#CareTeam-search-type">SHOULD</a>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved CareTeams that are the intended performer of ServiceRequests." href="#CareTeam-search-type">MAY</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve a CareTeam that is the intended performer of a ServiceRequest." href="#CareTeam-read">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a CareTeam that is the intended performer of a ServiceRequest." href="#CareTeam-read">MAY</a>
               </td>
               <td/>
               <td/>
@@ -2388,10 +2388,10 @@
             <tr>
               <th>Condition</th>
               <td>
-                <a title="Allows the monitoring of previously-retrieved CareTeams that are the performer of ServiceRequests." href="#Condition-search-type">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Conditions that are the performer of ServiceRequests." href="#Condition-search-type">SHALL</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve a CareTeam that is the requester or performer of a ServiceRequest." href="#Condition-read">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a Condition that is the requester or performer of a ServiceRequest." href="#Condition-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -2408,10 +2408,10 @@
             <tr>
               <th>Consent</th>
               <td>
-                <a title="Allows the monitoring of previously-retrieved Consents related to ServiceRequests of interest." href="#Consent-search-type">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Consents related to ServiceRequests of interest." href="#Consent-search-type">SHALL</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve a Consent referenced as a 'supportingInformation' item of a ServiceRequest." href="#Consent-read">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a Consent referenced as a 'supportingInformation' item of a ServiceRequest." href="#Consent-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -2428,10 +2428,10 @@
             <tr>
               <th>Device</th>
               <td>
-                <a title="Allows the monitoring of previously-retrieved Devices that are the requester or intended performer of ServiceRequests." href="#Device-search-type">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Devices that are the requester or intended performer of ServiceRequests." href="#Device-search-type">SHOULD</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve a Device that is the requester or intended performer of a ServiceRequest." href="#Device-read">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a Device that is the requester or intended performer of a ServiceRequest." href="#Device-read">SHOULD</a>
               </td>
               <td/>
               <td/>
@@ -2444,10 +2444,10 @@
             <tr>
               <th>DocumentReference</th>
               <td>
-                <a title="Allows the monitoring of previously-retrieved DocumentReferences in the event the image/document is amended/corrected/updated." href="#DocumentReference-search-type">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved DocumentReferences in the event the image/document is amended/corrected/updated." href="#DocumentReference-search-type">SHALL</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve a PDF or similar content referenced by a Consent." href="#DocumentReference-read">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a PDF or similar content referenced by a Consent." href="#DocumentReference-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -2460,10 +2460,10 @@
             <tr>
               <th>Goal</th>
               <td>
-                <a title="Allows the monitoring of previously-retrieved Goals in the event they are updated." href="#Goal-search-type">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Goals in the event they are updated." href="#Goal-search-type">SHALL</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve a goal referenced by a ServiceRequest." href="#Goal-read">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a goal referenced by a ServiceRequest." href="#Goal-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -2480,10 +2480,10 @@
             <tr>
               <th>Group</th>
               <td>
-                <a title="Allows the searching for groups of interest." href="#Group-search-type">SHALL</a>
+                <a title="Allows a payer or oversight agency to search for groups of interest to allow monitoring of what patients are under care/management for SDOH issues." href="#Group-search-type">SHALL</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve a Group whose identity is already known (e.g. for polling)." href="#Group-read">SHALL</a>
+                <a title="Allows a payer or other oversight agency to a Group whose identity is already known (e.g. for polling)." href="#Group-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -2496,10 +2496,10 @@
             <tr>
               <th>HealthcareService</th>
               <td>
-                <a title="Allows the monitoring of previously-retrieved HealthcareServices that are the intended performer of ServiceRequests." href="#HealthcareService-search-type">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved HealthcareServices that are the intended performer of ServiceRequests." href="#HealthcareService-search-type">MAY</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve a HealthcareService that is the intended performer of a ServiceRequest." href="#HealthcareService-read">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a HealthcareService that is the intended performer of a ServiceRequest." href="#HealthcareService-read">MAY</a>
               </td>
               <td/>
               <td/>
@@ -2512,10 +2512,10 @@
             <tr>
               <th>Observation</th>
               <td>
-                <a title="Allows the monitoring of previously-retrieved Observations for updates/corrections." href="#Observation-search-type">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Observations for updates/corrections." href="#Observation-search-type">SHALL</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve an Observation referenced by a ServiceRequest." href="#Observation-read">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve an Observation referenced by a ServiceRequest." href="#Observation-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -2532,10 +2532,10 @@
             <tr>
               <th>Organization</th>
               <td>
-                <a title="Allows the monitoring of previously-retrieved Organizations that are the requester or intended performer of ServiceRequests." href="#Organization-search-type">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Organizations that are the requester or intended performer of ServiceRequests." href="#Organization-search-type">SHALL</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve an Organization that is the requester or intended performer of a ServiceRequest." href="#Organization-read">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve an Organization that is the requester or intended performer of a ServiceRequest." href="#Organization-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -2548,10 +2548,10 @@
             <tr>
               <th>Patient</th>
               <td>
-                <a title="Allows the monitoring of previously-retrieved Patients." href="#Patient-search-type">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Patients." href="#Patient-search-type">SHALL</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve the Patient that is the subject of a ServiceRequest." href="#Patient-read">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve the Patient that is the subject of a ServiceRequest." href="#Patient-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -2564,10 +2564,10 @@
             <tr>
               <th>Practitioner</th>
               <td>
-                <a title="Allows the monitoring of previously-retrieved Practitioners that are the requester or intended performer of ServiceRequests." href="#Practitioner-search-type">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Practitioners that are the requester or intended performer of ServiceRequests." href="#Practitioner-search-type">SHALL</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest." href="#Practitioner-read">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest." href="#Practitioner-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -2580,10 +2580,10 @@
             <tr>
               <th>PractitionerRole</th>
               <td>
-                <a title="Allows the monitoring of previously-retrieved PractitionerRoles that are the requester or intended performer of ServiceRequests." href="#PractitionerRole-search-type">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved PractitionerRoles that are the requester or intended performer of ServiceRequests." href="#PractitionerRole-search-type">SHALL</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest." href="#PractitionerRole-read">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest." href="#PractitionerRole-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -2596,19 +2596,19 @@
             <tr>
               <th>Procedure</th>
               <td>
-                <a title="Allows the coordination platform to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to to the Tasks that initiated the work." href="#Procedure-search-type">SHALL</a>
+                <a title="Allows upstream systems to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to to the Tasks that initiated the work." href="#Procedure-search-type">SHALL</a>
               </td>
               <td>
-                <a title="Allows the coordination platform to retrieve procedures referenced by Tasks from more sophisticated 'delivery' systems that store their data on their own system rather than using the coordination platform as a persistence layer." href="#Procedure-read">SHALL</a>
+                <a title="Allows upstream systems to retrieve procedures referenced by Tasks." href="#Procedure-read">SHALL</a>
               </td>
               <td/>
               <td/>
               <td/>
               <td>
-                <a title="Allows the system to write records of procedures done in response to a referral on the system that asked for the referral." href="#Procedure-create">SHALL</a>
+                <a title="Allows downstream coordination plaforms and referral recipients to write records of procedures done in response to a referral in situations where they can't store the procedure on their own local system." href="#Procedure-create">SHALL</a>
               </td>
               <td>
-                <a title="Allows the system to update records of procedures done in response to a referral on the system that asked for the referral." href="#Procedure-update">SHALL</a>
+                <a title="Allows downstream coordination plaforms and referral recipients to update records of procedures done - e.g. changing status, adding notes." href="#Procedure-update">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -2616,7 +2616,7 @@
             <tr>
               <th>Questionnaire</th>
               <td>
-                <a title="Allows the coordination platform to search for questionnaires relevant to a patient context." href="#Questionnaire-search-type">MAY</a>
+                <a title="Allows SMART apps or downstream systems to search for questionnaires relevant to a patient context." href="#Questionnaire-search-type">MAY</a>
               </td>
               <td/>
               <td/>
@@ -2631,19 +2631,19 @@
             <tr>
               <th>QuestionnaireResponse</th>
               <td>
-                <a title="Allows checking for updates in previously retrieved QuestionnaireResponses." href="#QuestionnaireResponse-search-type">SHALL</a>
+                <a title="Allows checking for updates in previously retrieved QuestionnaireResponses." href="#QuestionnaireResponse-search-type">SHOULD</a>
               </td>
               <td>
-                <a title="Allows the retrieval of QuestionnaireResponses pointed to as supporting information by a ServiceRequest." href="#QuestionnaireResponse-read">SHALL</a>
+                <a title="Allows the retrieval of QuestionnaireResponses to use as a starting point for new responses or to continue editing." href="#QuestionnaireResponse-read">SHOULD</a>
               </td>
               <td/>
               <td/>
               <td/>
               <td>
-                <a title="Allows records to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface." href="#QuestionnaireResponse-create">SHALL</a>
+                <a title="Allows questionnaire responses to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface." href="#QuestionnaireResponse-create">SHOULD</a>
               </td>
               <td>
-                <a title="Allows records to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface." href="#QuestionnaireResponse-update">SHALL</a>
+                <a title="Allows questionnaire responses to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface." href="#QuestionnaireResponse-update">SHOULD</a>
               </td>
               <td/>
               <td/>
@@ -2651,10 +2651,10 @@
             <tr>
               <th>RelatedPerson</th>
               <td>
-                <a title="Allows the monitoring of previously-retrieved RelatedPersons that are the requester or intended performer of ServiceRequests." href="#RelatedPerson-search-type">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved RelatedPersons that are the requester or intended performer of ServiceRequests." href="#RelatedPerson-search-type">MAY</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve a RelatedPerson that is the requester or intended performer of a ServiceRequest." href="#RelatedPerson-read">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a RelatedPerson that is the requester or intended performer of a ServiceRequest." href="#RelatedPerson-read">MAY</a>
               </td>
               <td/>
               <td/>
@@ -2692,32 +2692,32 @@
               <td/>
               <td/>
               <td>
-                <a title="Necessary if using subscriptions to monitor updates to the Task" href="#Subscription-create">SHOULD</a>
+                <a title="Allows upstream systems to initiate a subscription to monitor updates to Tasks (and theoretically other things)" href="#Subscription-create">SHOULD</a>
               </td>
               <td>
-                <a title="Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id)typically to cancel a request for fulfillment" href="#Subscription-update">MAY</a>
+                <a title="Allows upstream systems to revise existing subscriptions - to adjust delivery target, to add additional tasks to monitor (if subscribing by id), etc." href="#Subscription-update">MAY</a>
               </td>
               <td/>
-              <td>$status: <a title="Necessary for systems supporting subscriptions to ensure that the subscription is functioning properly and to check for errors" href="#Subscription-status">SHOULD</a>
-                <br/>$topic-list: <a title="Allows discovery of what subscription topics the systems supports - needed for systems that aren't pre-configured to be aware of what topics are available for use." href="#Subscription-topic-list">MAY</a>
+              <td>$status: <a title="Allows upstream systems to verify their subscription is functioning properly and to check for errors" href="#Subscription-status">SHOULD</a>
+                <br/>$topic-list: <a title="Allows upstream systems to discover of what subscription topics this system supports - needed for systems that aren't pre-configured to be aware of what topics are available for use." href="#Subscription-topic-list">MAY</a>
               </td>
             </tr>
             <tr>
               <th>Task</th>
               <td>
-                <a title="Allows the coordination platform to poll multiple tasks simultaneously, as well as to retrieve referenced resources as part of a single query." href="#Task-search-type">SHALL</a>
+                <a title="Allows the other systems to poll multiple tasks simultaneously, as well as to retrieve referenced resources as part of a single query." href="#Task-search-type">SHALL</a>
               </td>
               <td>
-                <a title="Allows the coordination platform to poll a single Task for changes." href="#Task-read">SHALL</a>
+                <a title="Allows retrieval of a Task that was referenced in a subscription notification or per-Task polling for change." href="#Task-read">SHALL</a>
                 <br/>(conditional read:<br/>modified-since)</td>
               <td/>
               <td/>
               <td/>
               <td>
-                <a title="Allows the coordination platform system to create tasks on a delivery system (or downstream coordination system)." href="#Task-create">SHALL</a>
+                <a title="Allows upstream coordination platforms and referral sources system to create tasks on this system seeking fulfillment of a ServiceRequest." href="#Task-create">SHALL</a>
               </td>
               <td>
-                <a title="Allows the coordination platform to modify the status of previously created tasks - e.g. to cancel them." href="#Task-update">SHALL</a>
+                <a title="Allows modification of an existing Task by upstream systems (e.g. to cancel it) or by downstream systems (to accept or reject it or add output links to performed procedures)." href="#Task-update">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -2778,9 +2778,9 @@
                 <a name="CareTeam-read"> </a>
                 <span>read</span>
               </th>
-              <td>SHALL</td>
+              <td>MAY</td>
               <td>
-                <p>Allows the system to retrieve a CareTeam that is the intended performer of a ServiceRequest.</p>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a CareTeam that is the intended performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -2788,9 +2788,9 @@
                 <a name="CareTeam-search-type"> </a>
                 <span>search-type</span>
               </th>
-              <td>SHOULD</td>
+              <td>MAY</td>
               <td>
-                <p>Allows the monitoring of previously-retrieved CareTeams that are the intended performer of ServiceRequests.</p>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved CareTeams that are the intended performer of ServiceRequests.</p>
               </td>
             </tr>
           </tbody>
@@ -2879,7 +2879,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve a CareTeam that is the requester or performer of a ServiceRequest.</p>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a Condition that is the requester or performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -2889,7 +2889,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the monitoring of previously-retrieved CareTeams that are the performer of ServiceRequests.</p>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Conditions that are the performer of ServiceRequests.</p>
               </td>
             </tr>
           </tbody>
@@ -3018,7 +3018,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve a Consent referenced as a 'supportingInformation' item of a ServiceRequest.</p>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a Consent referenced as a 'supportingInformation' item of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -3028,7 +3028,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the monitoring of previously-retrieved Consents related to ServiceRequests of interest.</p>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Consents related to ServiceRequests of interest.</p>
               </td>
             </tr>
           </tbody>
@@ -3103,9 +3103,9 @@
                 <a name="Device-read"> </a>
                 <span>read</span>
               </th>
-              <td>SHALL</td>
+              <td>SHOULD</td>
               <td>
-                <p>Allows the system to retrieve a Device that is the requester or intended performer of a ServiceRequest.</p>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a Device that is the requester or intended performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -3113,9 +3113,9 @@
                 <a name="Device-search-type"> </a>
                 <span>search-type</span>
               </th>
-              <td>SHALL</td>
+              <td>SHOULD</td>
               <td>
-                <p>Allows the monitoring of previously-retrieved Devices that are the requester or intended performer of ServiceRequests.</p>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Devices that are the requester or intended performer of ServiceRequests.</p>
               </td>
             </tr>
           </tbody>
@@ -3183,7 +3183,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve a PDF or similar content referenced by a Consent.</p>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a PDF or similar content referenced by a Consent.</p>
               </td>
             </tr>
             <tr>
@@ -3193,7 +3193,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the monitoring of previously-retrieved DocumentReferences in the event the image/document is amended/corrected/updated.</p>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved DocumentReferences in the event the image/document is amended/corrected/updated.</p>
               </td>
             </tr>
           </tbody>
@@ -3282,7 +3282,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve a goal referenced by a ServiceRequest.</p>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a goal referenced by a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -3292,7 +3292,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the monitoring of previously-retrieved Goals in the event they are updated.</p>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Goals in the event they are updated.</p>
               </td>
             </tr>
           </tbody>
@@ -3400,7 +3400,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve a Group whose identity is already known (e.g. for polling).</p>
+                <p>Allows a payer or other oversight agency to a Group whose identity is already known (e.g. for polling).</p>
               </td>
             </tr>
             <tr>
@@ -3410,7 +3410,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the searching for groups of interest.</p>
+                <p>Allows a payer or oversight agency to search for groups of interest to allow monitoring of what patients are under care/management for SDOH issues.</p>
               </td>
             </tr>
           </tbody>
@@ -3509,9 +3509,9 @@
                 <a name="HealthcareService-read"> </a>
                 <span>read</span>
               </th>
-              <td>SHALL</td>
+              <td>MAY</td>
               <td>
-                <p>Allows the system to retrieve a HealthcareService that is the intended performer of a ServiceRequest.</p>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a HealthcareService that is the intended performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -3519,9 +3519,9 @@
                 <a name="HealthcareService-search-type"> </a>
                 <span>search-type</span>
               </th>
-              <td>SHALL</td>
+              <td>MAY</td>
               <td>
-                <p>Allows the monitoring of previously-retrieved HealthcareServices that are the intended performer of ServiceRequests.</p>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved HealthcareServices that are the intended performer of ServiceRequests.</p>
               </td>
             </tr>
           </tbody>
@@ -3613,7 +3613,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve an Observation referenced by a ServiceRequest.</p>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve an Observation referenced by a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -3623,7 +3623,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the monitoring of previously-retrieved Observations for updates/corrections.</p>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Observations for updates/corrections.</p>
               </td>
             </tr>
           </tbody>
@@ -3747,7 +3747,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve an Organization that is the requester or intended performer of a ServiceRequest.</p>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve an Organization that is the requester or intended performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -3757,7 +3757,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the monitoring of previously-retrieved Organizations that are the requester or intended performer of ServiceRequests.</p>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Organizations that are the requester or intended performer of ServiceRequests.</p>
               </td>
             </tr>
           </tbody>
@@ -3825,7 +3825,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve the Patient that is the subject of a ServiceRequest.</p>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve the Patient that is the subject of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -3835,7 +3835,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the monitoring of previously-retrieved Patients.</p>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Patients.</p>
               </td>
             </tr>
           </tbody>
@@ -3903,7 +3903,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest.</p>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -3913,7 +3913,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the monitoring of previously-retrieved Practitioners that are the requester or intended performer of ServiceRequests.</p>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Practitioners that are the requester or intended performer of ServiceRequests.</p>
               </td>
             </tr>
           </tbody>
@@ -3981,7 +3981,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest.</p>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -3991,7 +3991,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the monitoring of previously-retrieved PractitionerRoles that are the requester or intended performer of ServiceRequests.</p>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved PractitionerRoles that are the requester or intended performer of ServiceRequests.</p>
               </td>
             </tr>
           </tbody>
@@ -4077,7 +4077,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to write records of procedures done in response to a referral on the system that asked for the referral.</p>
+                <p>Allows downstream coordination plaforms and referral recipients to write records of procedures done in response to a referral in situations where they can't store the procedure on their own local system.</p>
               </td>
             </tr>
             <tr>
@@ -4087,7 +4087,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to update records of procedures done in response to a referral on the system that asked for the referral.</p>
+                <p>Allows downstream coordination plaforms and referral recipients to update records of procedures done - e.g. changing status, adding notes.</p>
               </td>
             </tr>
             <tr>
@@ -4097,7 +4097,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the coordination platform to retrieve procedures referenced by Tasks from more sophisticated 'delivery' systems that store their data on their own system rather than using the coordination platform as a persistence layer.</p>
+                <p>Allows upstream systems to retrieve procedures referenced by Tasks.</p>
               </td>
             </tr>
             <tr>
@@ -4107,7 +4107,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the coordination platform to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to to the Tasks that initiated the work.</p>
+                <p>Allows upstream systems to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to to the Tasks that initiated the work.</p>
               </td>
             </tr>
           </tbody>
@@ -4231,7 +4231,7 @@
               </th>
               <td>MAY</td>
               <td>
-                <p>Allows the coordination platform to search for questionnaires relevant to a patient context.</p>
+                <p>Allows SMART apps or downstream systems to search for questionnaires relevant to a patient context.</p>
               </td>
             </tr>
             <tr>
@@ -4364,9 +4364,9 @@
                 <a name="QuestionnaireResponse-create"> </a>
                 <span>create</span>
               </th>
-              <td>SHALL</td>
+              <td>SHOULD</td>
               <td>
-                <p>Allows records to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface.</p>
+                <p>Allows questionnaire responses to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface.</p>
               </td>
             </tr>
             <tr>
@@ -4374,9 +4374,9 @@
                 <a name="QuestionnaireResponse-update"> </a>
                 <span>update</span>
               </th>
-              <td>SHALL</td>
+              <td>SHOULD</td>
               <td>
-                <p>Allows records to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface.</p>
+                <p>Allows questionnaire responses to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface.</p>
               </td>
             </tr>
             <tr>
@@ -4384,9 +4384,9 @@
                 <a name="QuestionnaireResponse-read"> </a>
                 <span>read</span>
               </th>
-              <td>SHALL</td>
+              <td>SHOULD</td>
               <td>
-                <p>Allows the retrieval of QuestionnaireResponses pointed to as supporting information by a ServiceRequest.</p>
+                <p>Allows the retrieval of QuestionnaireResponses to use as a starting point for new responses or to continue editing.</p>
               </td>
             </tr>
             <tr>
@@ -4394,7 +4394,7 @@
                 <a name="QuestionnaireResponse-search-type"> </a>
                 <span>search-type</span>
               </th>
-              <td>SHALL</td>
+              <td>SHOULD</td>
               <td>
                 <p>Allows checking for updates in previously retrieved QuestionnaireResponses.</p>
               </td>
@@ -4502,9 +4502,9 @@
                 <a name="RelatedPerson-read"> </a>
                 <span>read</span>
               </th>
-              <td>SHALL</td>
+              <td>MAY</td>
               <td>
-                <p>Allows the system to retrieve a RelatedPerson that is the requester or intended performer of a ServiceRequest.</p>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a RelatedPerson that is the requester or intended performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -4512,9 +4512,9 @@
                 <a name="RelatedPerson-search-type"> </a>
                 <span>search-type</span>
               </th>
-              <td>SHALL</td>
+              <td>MAY</td>
               <td>
-                <p>Allows the monitoring of previously-retrieved RelatedPersons that are the requester or intended performer of ServiceRequests.</p>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved RelatedPersons that are the requester or intended performer of ServiceRequests.</p>
               </td>
             </tr>
           </tbody>
@@ -4752,7 +4752,7 @@
               </th>
               <td>SHOULD</td>
               <td>
-                <p>Necessary if using subscriptions to monitor updates to the Task</p>
+                <p>Allows upstream systems to initiate a subscription to monitor updates to Tasks (and theoretically other things)</p>
               </td>
             </tr>
             <tr>
@@ -4762,7 +4762,7 @@
               </th>
               <td>MAY</td>
               <td>
-                <p>Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id)typically to cancel a request for fulfillment</p>
+                <p>Allows upstream systems to revise existing subscriptions - to adjust delivery target, to add additional tasks to monitor (if subscribing by id), etc.</p>
               </td>
             </tr>
             <tr>
@@ -4772,7 +4772,7 @@
               </th>
               <td>SHOULD</td>
               <td>
-                <p>Necessary for systems supporting subscriptions to ensure that the subscription is functioning properly and to check for errors</p>
+                <p>Allows upstream systems to verify their subscription is functioning properly and to check for errors</p>
               </td>
             </tr>
             <tr>
@@ -4782,7 +4782,7 @@
               </th>
               <td>MAY</td>
               <td>
-                <p>Allows discovery of what subscription topics the systems supports - needed for systems that aren't pre-configured to be aware of what topics are available for use.</p>
+                <p>Allows upstream systems to discover of what subscription topics this system supports - needed for systems that aren't pre-configured to be aware of what topics are available for use.</p>
               </td>
             </tr>
           </tbody>
@@ -4820,7 +4820,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the coordination platform system to create tasks on a delivery system (or downstream coordination system).</p>
+                <p>Allows upstream coordination platforms and referral sources system to create tasks on this system seeking fulfillment of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -4830,7 +4830,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the coordination platform to modify the status of previously created tasks - e.g. to cancel them.</p>
+                <p>Allows modification of an existing Task by upstream systems (e.g. to cancel it) or by downstream systems (to accept or reject it or add output links to performed procedures).</p>
               </td>
             </tr>
             <tr>
@@ -4840,7 +4840,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the coordination platform to poll a single Task for changes.</p>
+                <p>Allows retrieval of a Task that was referenced in a subscription notification or per-Task polling for change.</p>
               </td>
             </tr>
             <tr>
@@ -4850,7 +4850,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the coordination platform to poll multiple tasks simultaneously, as well as to retrieve referenced resources as part of a single query.</p>
+                <p>Allows the other systems to poll multiple tasks simultaneously, as well as to retrieve referenced resources as part of a single query.</p>
               </td>
             </tr>
           </tbody>
@@ -5015,14 +5015,14 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve a CareTeam that is the requester or performer of a ServiceRequest."/>
+        <documentation value="Allows the system to retrieve a Condition that is the requester or performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHOULD"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the monitoring of previously-retrieved CareTeams that are the performer of ServiceRequests."/>
+        <documentation value="Allows the monitoring of previously-retrieved Conditions that are the performer of ServiceRequests."/>
       </interaction>
       <referencePolicy value="literal"/>
       <searchParam>
@@ -5145,17 +5145,16 @@
       <type value="Device"/>
       <supportedProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
       <documentation value="Used to retrieve the requester or intended performer of an SDOH ServiceRequest.  Note: Conformance expectations for this resource are lower because Device requesters and performers are expected to be uncommon in most SDOH uses"/>
-      <!-- Why do we allow this?-->
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="MAY"/>
+          <valueCode value="SHOULD"/>
         </extension>
         <code value="read"/>
         <documentation value="Allows the system to retrieve a Device that is the requester or intended performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="MAY"/>
+          <valueCode value="SHOULD"/>
         </extension>
         <code value="search-type"/>
         <documentation value="Allows the monitoring of previously-retrieved Devices that are the requester or intended performer of ServiceRequests."/>
@@ -5631,7 +5630,6 @@
         </extension>
         <code value="create"/>
         <documentation value="Allows the system to write records of procedures done in response to a referral on the system that asked for the referral."/>
-        <!-- Do intermediaries write procedures to EHRs, or do EHRs query for them and store them if they feel like it? -->
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -5639,7 +5637,6 @@
         </extension>
         <code value="update"/>
         <documentation value="Allows the system to update records of procedures done in response to a referral on the system that asked for the referral."/>
-        <!-- Do intermediaries write procedures to EHRs, or do EHRs query for them and store them if they feel like it? -->
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -5847,7 +5844,7 @@
       <documentation value="Used to allow QuestionnaireResponses referenced by a ServiceRequest"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
+          <valueCode value="SHOULD"/>
         </extension>
         <code value="read"/>
         <documentation value="Allows the retrieval of QuestionnaireResponses pointed to as supporting information by a ServiceRequest."/>
@@ -6119,7 +6116,7 @@
     <resource>
       <type value="Subscription"/>
       <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
-      <documentation value="Used to access information about actions taken to fulfill SDOH-related referrals"/>
+      <documentation value="Used to monitor updates to Tasks on downstream systems"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHOULD"/>
@@ -6154,7 +6151,7 @@
     <resource>
       <type value="Task"/>
       <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task"/>
-      <documentation value="Used to create Tasks seeking fufillment of ServiceRequests on a coordinating system serving as an intermediary and to retrieve Task updates from a fulfilling system"/>
+      <documentation value="Used to create Tasks on downstream systems seeking fufillment of ServiceRequests on a coordinating system serving as an intermediary and to retrieve Task updates from a fulfilling system"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
@@ -6336,20 +6333,20 @@
     <resource>
       <type value="CareTeam"/>
       <supportedProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"/>
-      <documentation value="Used to allow access to information about the intended performer of a ServiceRequest when the performer is a specific team of people"/>
+      <documentation value="Used to allow downstream systems to access to information about the intended performer of a ServiceRequest when the performer is a specific team of people"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
+          <valueCode value="MAY"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve a CareTeam that is the intended performer of a ServiceRequest."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve a CareTeam that is the intended performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHOULD"/>
+          <valueCode value="MAY"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the monitoring of previously-retrieved CareTeams that are the intended performer of ServiceRequests."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved CareTeams that are the intended performer of ServiceRequests."/>
       </interaction>
       <referencePolicy value="literal"/>
       <searchParam>
@@ -6374,7 +6371,7 @@
     <resource>
       <type value="Condition"/>
       <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
-      <documentation value="Used to allow access to information about a patient's SDOH-related conditions, particularly those that are the reason for a referral"/>
+      <documentation value="Used to allow downstream systems to access to information about a patient's SDOH-related conditions, particularly those that are the reason for a referral"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="MAY"/>
@@ -6394,14 +6391,14 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve a CareTeam that is the requester or performer of a ServiceRequest."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve a Condition that is the requester or performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the monitoring of previously-retrieved CareTeams that are the performer of ServiceRequests."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Conditions that are the performer of ServiceRequests."/>
       </interaction>
       <versioning value="versioned-update"/>
       <referencePolicy value="literal"/>
@@ -6492,14 +6489,14 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve a Consent referenced as a 'supportingInformation' item of a ServiceRequest."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve a Consent referenced as a 'supportingInformation' item of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the monitoring of previously-retrieved Consents related to ServiceRequests of interest."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Consents related to ServiceRequests of interest."/>
       </interaction>
       <versioning value="versioned-update"/>
       <referencePolicy value="literal"/>
@@ -6543,17 +6540,17 @@
       <!-- Why do we allow this?-->
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
+          <valueCode value="SHOULD"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve a Device that is the requester or intended performer of a ServiceRequest."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve a Device that is the requester or intended performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
+          <valueCode value="SHOULD"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the monitoring of previously-retrieved Devices that are the requester or intended performer of ServiceRequests."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Devices that are the requester or intended performer of ServiceRequests."/>
       </interaction>
       <referencePolicy value="literal"/>
       <searchParam>
@@ -6584,14 +6581,14 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve a PDF or similar content referenced by a Consent."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve a PDF or similar content referenced by a Consent."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the monitoring of previously-retrieved DocumentReferences in the event the image/document is amended/corrected/updated."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved DocumentReferences in the event the image/document is amended/corrected/updated."/>
       </interaction>
       <referencePolicy value="literal"/>
       <searchParam>
@@ -6636,14 +6633,14 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve a goal referenced by a ServiceRequest."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve a goal referenced by a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the monitoring of previously-retrieved Goals in the event they are updated."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Goals in the event they are updated."/>
       </interaction>
       <versioning value="versioned-update"/>
       <referencePolicy value="literal"/>
@@ -6720,14 +6717,14 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve a Group whose identity is already known (e.g. for polling)."/>
+        <documentation value="Allows a payer or other oversight agency to a Group whose identity is already known (e.g. for polling)."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the searching for groups of interest."/>
+        <documentation value="Allows a payer or oversight agency to search for groups of interest to allow monitoring of what patients are under care/management for SDOH issues."/>
       </interaction>
       <referencePolicy value="literal"/>
       <searchInclude value="Group:member">
@@ -6793,20 +6790,20 @@
     <resource>
       <type value="HealthcareService"/>
       <supportedProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService"/>
-      <documentation value="Used to allow access to information about the intended performer of a ServiceRequest when the performer is a specific service within a larger facility"/>
+      <documentation value="Used to allow downstream systems to access to information about the intended performer of a ServiceRequest when the performer is a specific service within a larger facility"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
+          <valueCode value="MAY"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve a HealthcareService that is the intended performer of a ServiceRequest."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve a HealthcareService that is the intended performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
+          <valueCode value="MAY"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the monitoring of previously-retrieved HealthcareServices that are the intended performer of ServiceRequests."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved HealthcareServices that are the intended performer of ServiceRequests."/>
       </interaction>
       <referencePolicy value="literal"/>
       <searchParam>
@@ -6832,7 +6829,7 @@
       <type value="Observation"/>
       <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"/>
       <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
-      <documentation value="Used to allow access to information about SDOH-related observations for a patient - particularly those that are reasons for a referral"/>
+      <documentation value="Used to allow downstream systems to access to information about SDOH-related observations for a patient - particularly those that are reasons for a referral"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="MAY"/>
@@ -6852,14 +6849,14 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve an Observation referenced by a ServiceRequest."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve an Observation referenced by a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the monitoring of previously-retrieved Observations for updates/corrections."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Observations for updates/corrections."/>
       </interaction>
       <versioning value="versioned-update"/>
       <referencePolicy value="literal"/>
@@ -6948,20 +6945,20 @@
     <resource>
       <type value="Organization"/>
       <supportedProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
-      <documentation value="Used to allow access to information about an Organization that is the requester or intended performer of a ServiceRequest"/>
+      <documentation value="Used to allow downstream systems to access to information about an Organization that is the requester or intended performer of a ServiceRequest"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve an Organization that is the requester or intended performer of a ServiceRequest."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve an Organization that is the requester or intended performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the monitoring of previously-retrieved Organizations that are the requester or intended performer of ServiceRequests."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Organizations that are the requester or intended performer of ServiceRequests."/>
       </interaction>
       <referencePolicy value="literal"/>
       <searchParam>
@@ -6986,20 +6983,20 @@
     <resource>
       <type value="Patient"/>
       <supportedProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
-      <documentation value="Used to allow access to information about the Patient that is the subject a ServiceRequest"/>
+      <documentation value="Used to allow downstream systems to access to information about the Patient that is the subject a ServiceRequest"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve the Patient that is the subject of a ServiceRequest."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve the Patient that is the subject of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the monitoring of previously-retrieved Patients."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Patients."/>
       </interaction>
       <referencePolicy value="literal"/>
       <searchParam>
@@ -7024,20 +7021,20 @@
     <resource>
       <type value="Practitioner"/>
       <supportedProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
-      <documentation value="Used to allow access to information about an Practitioner that is the requester or intended performer of a ServiceRequest"/>
+      <documentation value="Used to allow downstream systems to access to information about an Practitioner that is the requester or intended performer of a ServiceRequest"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the monitoring of previously-retrieved Practitioners that are the requester or intended performer of ServiceRequests."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Practitioners that are the requester or intended performer of ServiceRequests."/>
       </interaction>
       <referencePolicy value="literal"/>
       <searchParam>
@@ -7062,20 +7059,20 @@
     <resource>
       <type value="PractitionerRole"/>
       <supportedProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
-      <documentation value="Used to allow access to information about an PractitionerRole that is the requester or intended performer of a ServiceRequest"/>
+      <documentation value="Used to allow downstream systems to access to information about an PractitionerRole that is the requester or intended performer of a ServiceRequest"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the monitoring of previously-retrieved PractitionerRoles that are the requester or intended performer of ServiceRequests."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved PractitionerRoles that are the requester or intended performer of ServiceRequests."/>
       </interaction>
       <referencePolicy value="literal"/>
       <searchInclude value="PractitionerRole:organization">
@@ -7128,36 +7125,34 @@
     <resource>
       <type value="Procedure"/>
       <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
-      <documentation value="Used to allow access to information about actions that have been performed as a result of a referral as well as to create and update that information on a requesting system"/>
+      <documentation value="Used to allow downstream coordination plaforms and referral recipients to provide information about actions that have been performed as a result of a referral as well as to allow upstream systems to access that information."/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="create"/>
-        <documentation value="Allows the system to write records of procedures done in response to a referral on the system that asked for the referral."/>
-        <!-- Do intermediaries write procedures to EHRs, or do EHRs query for them and store them if they feel like it? -->
+        <documentation value="Allows downstream coordination plaforms and referral recipients to write records of procedures done in response to a referral in situations where they can't store the procedure on their own local system."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="update"/>
-        <documentation value="Allows the system to update records of procedures done in response to a referral on the system that asked for the referral."/>
-        <!-- Do intermediaries write procedures to EHRs, or do EHRs query for them and store them if they feel like it? -->
+        <documentation value="Allows downstream coordination plaforms and referral recipients to update records of procedures done - e.g. changing status, adding notes."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the coordination platform to retrieve procedures referenced by Tasks from more sophisticated 'delivery' systems that store their data on their own system rather than using the coordination platform as a persistence layer."/>
+        <documentation value="Allows upstream systems to retrieve procedures referenced by Tasks."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the coordination platform to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to to the Tasks that initiated the work."/>
+        <documentation value="Allows upstream systems to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to to the Tasks that initiated the work."/>
       </interaction>
       <versioning value="versioned-update"/>
       <referencePolicy value="literal"/>
@@ -7252,7 +7247,7 @@
           <valueCode value="MAY"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the coordination platform to search for questionnaires relevant to a patient context."/>
+        <documentation value="Allows SMART apps or downstream systems to search for questionnaires relevant to a patient context."/>
       </interaction>
       <referencePolicy value="literal"/>
       <searchParam>
@@ -7348,31 +7343,31 @@
     <resource>
       <type value="QuestionnaireResponse"/>
       <supportedProfile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"/>
-      <documentation value="Used to allow access to QuestionnaireResponses referenced by a ServiceRequest"/>
+      <documentation value="Used to allow SMART apps to cread, update and retrieve QuestionnaireResponses relevant to SDOH care"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
+          <valueCode value="SHOULD"/>
         </extension>
         <code value="create"/>
-        <documentation value="Allows records to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface."/>
+        <documentation value="Allows questionnaire responses to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
+          <valueCode value="SHOULD"/>
         </extension>
         <code value="update"/>
-        <documentation value="Allows records to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface."/>
+        <documentation value="Allows questionnaire responses to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
+          <valueCode value="SHOULD"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the retrieval of QuestionnaireResponses pointed to as supporting information by a ServiceRequest."/>
+        <documentation value="Allows the retrieval of QuestionnaireResponses to use as a starting point for new responses or to continue editing."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
+          <valueCode value="SHOULD"/>
         </extension>
         <code value="search-type"/>
         <documentation value="Allows checking for updates in previously retrieved QuestionnaireResponses."/>
@@ -7446,20 +7441,20 @@
     <resource>
       <type value="RelatedPerson"/>
       <supportedProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-      <documentation value="Used to allow access to information about the requester or intended performer of a ServiceRequest when they are someone with a personal relationship to the Patient"/>
+      <documentation value="Used to allow downstream systems to access to information about the requester or intended performer of a ServiceRequest when they are someone with a personal relationship to the Patient"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
+          <valueCode value="MAY"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve a RelatedPerson that is the requester or intended performer of a ServiceRequest."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve a RelatedPerson that is the requester or intended performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
+          <valueCode value="MAY"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the monitoring of previously-retrieved RelatedPersons that are the requester or intended performer of ServiceRequests."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved RelatedPersons that are the requester or intended performer of ServiceRequests."/>
       </interaction>
       <referencePolicy value="literal"/>
       <searchParam>
@@ -7653,20 +7648,20 @@
     <resource>
       <type value="Subscription"/>
       <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
-      <documentation value="Used to allow access to information about actions taken to fulfill SDOH-related referrals"/>
+      <documentation value="Used to allow upstream and occasionally downstream systems to subscribe to and monitor Tasks this system for change"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHOULD"/>
         </extension>
         <code value="create"/>
-        <documentation value="Necessary if using subscriptions to monitor updates to the Task"/>
+        <documentation value="Allows upstream systems to initiate a subscription to monitor updates to Tasks (and theoretically other things)"/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="MAY"/>
         </extension>
         <code value="update"/>
-        <documentation value="Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id)typically to cancel a request for fulfillment"/>
+        <documentation value="Allows upstream systems to revise existing subscriptions - to adjust delivery target, to add additional tasks to monitor (if subscribing by id), etc."/>
       </interaction>
       <operation>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -7674,7 +7669,7 @@
         </extension>
         <name value="status"/>
         <definition value="http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/Backport-subscription-status"/>
-        <documentation value="Necessary for systems supporting subscriptions to ensure that the subscription is functioning properly and to check for errors"/>
+        <documentation value="Allows upstream systems to verify their subscription is functioning properly and to check for errors"/>
       </operation>
       <operation>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -7682,40 +7677,40 @@
         </extension>
         <name value="topic-list"/>
         <definition value="http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/Backport-subscriptiontopic-list"/>
-        <documentation value="Allows discovery of what subscription topics the systems supports - needed for systems that aren't pre-configured to be aware of what topics are available for use."/>
+        <documentation value="Allows upstream systems to discover of what subscription topics this system supports - needed for systems that aren't pre-configured to be aware of what topics are available for use."/>
       </operation>
     </resource>
     <resource>
       <type value="Task"/>
       <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task"/>
-      <documentation value="Used to create and update Tasks seeking fufillment of ServiceRequests on a coordinating system serving as an intermediary, as well as retrieve Tasks from a referring system"/>
+      <documentation value="Used by upstream referral sources and coordination platforms to  create and update Tasks seeking fufillment of ServiceRequests.  Also used by downstream referral recipiencts to monitor and update Tasks stored on this system as they respond to requests to fulfill referrals and link in information about actions taken so far"/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="create"/>
-        <documentation value="Allows the coordination platform system to create tasks on a delivery system (or downstream coordination system)."/>
+        <documentation value="Allows upstream coordination platforms and referral sources system to create tasks on this system seeking fulfillment of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="update"/>
-        <documentation value="Allows the coordination platform to modify the status of previously created tasks - e.g. to cancel them."/>
+        <documentation value="Allows modification of an existing Task by upstream systems (e.g. to cancel it) or by downstream systems (to accept or reject it or add output links to performed procedures)."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the coordination platform to poll a single Task for changes."/>
+        <documentation value="Allows retrieval of a Task that was referenced in a subscription notification or per-Task polling for change."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the coordination platform to poll multiple tasks simultaneously, as well as to retrieve referenced resources as part of a single query."/>
+        <documentation value="Allows the other systems to poll multiple tasks simultaneously, as well as to retrieve referenced resources as part of a single query."/>
       </interaction>
       <versioning value="versioned-update"/>
       <conditionalRead value="modified-since"/>
