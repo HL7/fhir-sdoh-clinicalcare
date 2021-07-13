@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide
+    xmlns="http://hl7.org/fhir">
+    <id value="sdoh-clinicalcare"/>
+    <meta>
+        <versionId value="647"/>
+        <lastUpdated value="2021-07-07T12:18:47.664+00:00"/>
+        <source value="#ZSVhx38vaXP2G96i"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/sdoh-clinicalcare"/>
+    <version value="0.1.1"/>
+    <name value="Sdohclinicalcare"/>
+    <title value="SDOH Clinical Care"/>
+    <status value="draft"/>
+    <date value="2021-05-03"/>
+    <publisher value="HL7 International - Patient Care WG"/>
+    <contact>
+        <name value="HL7 International - Patient Care"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/patientcare"/>
+        </telecom>
+    </contact>
+    <description value="Social Determinants of Health (SDOH) are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange SDOH content defined by the Gravity Project using the Fast Healthcare Interoperability Resources (FHIR) standard. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. This IG addresses the need to gather SDOH information in multiple settings, share that information between stakeholders, and exchange referrals between organizations to address specific social risk needs, all with appropriate patient consent.  In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. The guide supports the following use cases:&#xA;* 	Document SDOH data in conjunction with the patient encounters with providers, payers, and community services&#xA;* 	Document and track SDOH related interventions to completion&#xA;* 	Identify cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer)&#xA;&#xA;&#xA;This implementation guide was developed by the Gravity Project, which specifically focuses on using HL7 FHIR to define standards for the exchange of SDOH-related information.  Both the project and this implementation guide are focused on the U.S. environment.  This implementation guide leverages content from the US Core implementation guide and binds to US-specific terminology.  However, the basic constructs and interaction patterns may well be applicable outside the U.S.&#xA;&#xA;### Content and organization&#xA;&#xA;The implementation guide is organized into the following sections:&#xA;&#xA;* Background: Includes [Gravity Background](gravity_background.html), [SDOH Clinical Care Scope](sdoh_clinical_care_scope.html), [Functional Use Cases](functional_use_cases.html), and [Technical Background](technical_background.html), that describe the environment in which this implementation guide establishes standards for information exchange&#xA;* Context: Describes the [Survey Instrument Support](survey_instrument_support.html),[ QuestionnaireResponse Mapping Instructions](mapping_instructions.html), [Support for Multiple Domains](support_for_multiple_domains.html), and [Exchange Workflow diagram](exchange_workflow.html) that describes a high-level overview of expected process flow&#xA;* Specifications: Provides a overview of the [FHIR Artifacts](fhir_artifacts_overview.html) defined and used in this IG, description of [Privacy and Security](privacy_and_security.html) issues, and explains [MustSupport and Missing Data](mustsupport_and_missing_data.html) concepts &#xA;* [Downloads](downloads.html): Provides for the download of various IG related artifacts&#xA;* [Credits](credits.html): Identifies the individuals and organizations involved in developing this implementation guide&#xA;* [Artifacts Index](artifacts.html):  Introduces and provides links to the FHIR R4 profiles, examples and other FHIR artifacts used in this implementation guide&#xA;&#xA;### Note to Implementers&#xA;&#xA;Implementers should pay specific attention to the following sections:&#xA;&#xA;* [Technical Background](technical_background.html) if the implementer needs basic FHIR information references&#xA;* [Survey Instrument Support](survey_instrument_support.html), and [ QuestionnaireResponse Mapping Instructions](mapping_instructions.html) if implementing support for structured assessment instruments&#xA;* [Support for Multiple Domains](support_for_multiple_domains.html) to understand this IG's approach to domain specific value sets&#xA;* [Exchange Workflow diagram](exchange_workflow.html) to understand the exchange workflows&#xA;* [FHIR Artifacts](fhir_artifacts_overview.html) to understand the individual FHIR artifacts described in this IG&#xA;* [Privacy and Security](privacy_and_security.html) for implementers that are concerned with privacy and security aspects related to implementing the information exchanges defined in this IG&#xA;* [MustSupport and Missing Data](mustsupport_and_missing_data.html) to understand the interpretation of the MustSupport flags and the treatment of Missing Data used in this IG &#xA;* [Artifacts Index](artifacts.html) all implementers need to understand the FHIR R4 profiles, examples and other FHIR artifacts defined in this implementation guide and linked from this section&#xA;* [Downloads](downloads.html) links to allow implementers to download the IG and various artifacts&#xA;&#xA;"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <packageId value="hl7.fhir.us.sdoh-clinicalcare"/>
+    <fhirVersion value="4.0.1"/>
+    <dependsOn>
+        <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
+        <packageId value="hl7.fhir.us.core"/>
+        <version value="3.1.1"/>
+    </dependsOn>
+    <dependsOn>
+        <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc"/>
+        <packageId value="hl7.fhir.uv.sdc"/>
+        <version value="2.7.0"/>
+    </dependsOn>
+    <dependsOn>
+        <uri value="http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"/>
+        <packageId value="hl7.fhir.uv.subscriptions-backport"/>
+        <version value="0.1.0"/>
+    </dependsOn>
+    <definition>
+        <grouping id="new-group0">
+            <name value="Capabilities"/>
+        </grouping>
+        <grouping id="new-group1">
+            <name value="Profiles"/>
+        </grouping>
+        <grouping id="new-group4">
+            <name value="Value Sets"/>
+        </grouping>
+        <grouping id="new-group7">
+            <name value="Code Systems"/>
+        </grouping>
+        <grouping id="new-group2">
+            <name value="Examples"/>
+        </grouping>
+        <grouping id="new-group5">
+            <name value="Hunger Vital Signs Examples"/>
+        </grouping>
+        <grouping id="new-group6">
+            <name value="PRAPARE Examples"/>
+        </grouping>
+        <grouping id="new-group3">
+            <name value="Images"/>
+        </grouping>
+        <grouping id="new-group8">
+            <name value="Search Parameters"/>
+        </grouping>
+        <resource>
+            <reference>
+                <reference value="CapabilityStatement/SDOH-ClinicalCareReferralSource"/>
+                <display value="SDOH Clinical Care Referral Source"/>
+            </reference>
+            <name value="SDOH Clinical Care Referral Source"/>
+            <description value="Defines the capabilities of systems that initiate referrals and other aspects of the SDOH care process"/>
+            <groupingId value="new-group0"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="CapabilityStatement/SDOH-ClinicalCareCoordinationPlatform"/>
+                <display value="SDOH Clinical Care Coordination Platform"/>
+            </reference>
+            <name value="SDOH Clinical Care Coordination Platform"/>
+            <description value="Defines the capabilities of systems that act as intermediaries between systems that initiate referrals and those that action them"/>
+            <groupingId value="new-group0"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="CapabilityStatement/SDOH-ClinicalCareReferralRecipient"/>
+                <display value="SDOH Clinical Care Referral Recipient"/>
+            </reference>
+            <name value="SDOH Clinical Care Referral Recipient"/>
+            <description value="Defines the capabilities of systems that action referrals for SDOH care"/>
+            <groupingId value="new-group0"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="CapabilityStatement/SDOH-ClinicalCareReferralRecipientLight"/>
+                <display value="SDOH Clinical Care Referral Recipient - Light"/>
+            </reference>
+            <name value="SDOH Clinical Care Referral Recipient - Light"/>
+            <description value="Defines the capabilities of systems that action referrals for SDOH care that don't have their own FHIR server"/>
+            <groupingId value="new-group0"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="SearchParameter/Task-output-reference"/>
+                <display value="Task.output.valueReference SearchParameter"/>
+            </reference>
+            <name value="Task.output.valueReference SearchParameter"/>
+            <description value="Allows searching by Task.output.value"/>
+            <groupingId value="new-group8"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="SearchParameter/ServiceRequest-supporting-info"/>
+                <display value="ServiceRequest.supportingInfo SearchParameter"/>
+            </reference>
+            <name value="ServiceRequest.supportingInfo SearchParameter"/>
+            <description value="Allows searching by ServiceRequest.supportingInfo"/>
+            <groupingId value="new-group8"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-Condition"/>
+                <display value="SDOHCC Condition"/>
+            </reference>
+            <name value="SDOHCC Condition"/>
+            <description value="This profile constrains the Condition resource for conditions that represent Social Determinants of Health."/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-Consent"/>
+                <display value="SDOHCC Consent"/>
+            </reference>
+            <name value="SDOHCC Consent"/>
+            <description value="This profile constrains the Consent resource for use related to the release of Social Determinants of Health information to non-HIPAA covered organizations."/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-Goal"/>
+                <display value="SDOHCC Goal"/>
+            </reference>
+            <name value="SDOHCC Goal"/>
+            <description value="This profile constrains the Goal resource for goals that address Social Determinants of Health."/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-Group"/>
+                <display value="SDOHCC Group"/>
+            </reference>
+            <name value="SDOHCC Group"/>
+            <description value="This profile constrains the Group resource for use in identifying patients who have any Social Determinants of Health condition and are members of a specific payer organization."/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-ObservationAssessment"/>
+                <display value="SDOHCC Observation Assessment"/>
+            </reference>
+            <name value="SDOHCC Observation Assessment"/>
+            <description value="This profile constrains the Observation resource for use related to Social Determinants of Health observations that involve assessment (e.g., by a provider or payer) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation). The Cross-Group Projects work group granted an exception to US Core on 12/03/2020 - Jira ticket 29795."/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+                <display value="SDOHCC Observation Screening Response"/>
+            </reference>
+            <name value="SDOHCC Observation Screening Response"/>
+            <description value="This profile constrains the Observation resource for observations that represent question and answer pairs from SDOH screening instruments that are represented in LOINC. The Cross-Group Projects work group granted an exception to US Core on 12/03/2020 - Jira ticket 29795."/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-Procedure"/>
+                <display value="SDOHCC Procedure"/>
+            </reference>
+            <name value="SDOHCC Procedure"/>
+            <description value="This profile constrains the Procedure resource for interventions that address Social Determinants of Health."/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-ServiceRequest"/>
+                <display value="SDOHCC ServiceRequest"/>
+            </reference>
+            <name value="SDOHCC ServiceRequest"/>
+            <description value="This profile constrains the ServiceRequest resource for requests that address Social Determinants of Health."/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-Task"/>
+                <display value="SDOHCC Task"/>
+            </reference>
+            <name value="SDOHCC Task"/>
+            <description value="This profile constrains the Task resource for use in requesting fulfillment of an SDOHCC ServiceRequest (i.e. referral for service) and subsequently tracking and managing the fulfillment of that referral."/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/SDOHCC-ValueSetHCPCSII"/>
+                <display value="SDOHCC ValueSet HCPCSII"/>
+            </reference>
+            <name value="SDOHCC ValueSet HCPCSII"/>
+            <description value="This value set is defined intensionally to include all Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes."/>
+            <groupingId value="new-group4"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/SDOHCC-ValueSetICD10CM"/>
+                <display value="SDOHCC ValueSet ICD10CM"/>
+            </reference>
+            <name value="SDOHCC ValueSet ICD10CM"/>
+            <description value="This value set contains all of ICD-10-CM."/>
+            <groupingId value="new-group4"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT"/>
+                <display value="SDOHCC ValueSet LOINC SNOMEDCT"/>
+            </reference>
+            <name value="SDOHCC ValueSet LOINC SNOMEDCT"/>
+            <description value="This value set contains all of LOINC and SNOMED CT."/>
+            <groupingId value="new-group4"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/SDOHCC-ValueSetObservationStatus"/>
+                <display value="SDOHCC ValueSet Observation Status"/>
+            </reference>
+            <name value="SDOHCC ValueSet Observation Status"/>
+            <description value="This value set is defined intensionally to include the specified codes from the HL7 ObservationStatus value set."/>
+            <groupingId value="new-group4"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/SDOHCC-ValueSetSDOHCategory"/>
+                <display value="SDOHCC ValueSet SDOH Category"/>
+            </reference>
+            <name value="SDOHCC ValueSet SDOH Category"/>
+            <description value="This value set is defined extensionally to include codes that represent Social Determinant of Health domains."/>
+            <groupingId value="new-group4"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/SDOHCC-ValueSetSNOMEDCTCPTLOINCHCPCSII"/>
+                <display value="SDOHCC ValueSet SNOMEDCT CPT LOINC HCPCSII"/>
+            </reference>
+            <name value="SDOHCC ValueSet SNOMEDCT CPT LOINC HCPCSII"/>
+            <description value="This value set contains all SNOMED CT Procedure codes, and all of CPT, LOINC and HCPCSII."/>
+            <groupingId value="new-group4"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                <display value="SDOHCC CodeSystem Temporary Codes"/>
+            </reference>
+            <name value="SDOHCC CodeSystem Temporary Codes"/>
+            <description value="A local code system defined within the context of the SDOH-ClinicalCare IG."/>
+            <groupingId value="new-group7"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Consent/SDOHCC-ConsentInformationDisclosureExample"/>
+                <display value="SDOHCC Consent Information Disclosure Example"/>
+            </reference>
+            <name value="SDOHCC Consent Information Disclosure Example"/>
+            <description value="An example of a Consent for information disclosure related to SDOH information."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Goal/SDOHCC-GoalFoodSecurityExample"/>
+                <display value="SDOHCC Goal Food Security Example"/>
+            </reference>
+            <name value="SDOHCC Goal Food Security Example"/>
+            <description value="An example of a food security Goal that addresses a food insecurity Condition."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Group/SDOHCC-GroupSDOHPatientsForPayerExample"/>
+                <display value="SDOHCC Group SDOH Patients For Payer Example"/>
+            </reference>
+            <name value="SDOHCC Group SDOH Patients For Payer Example"/>
+            <description value="An example of Group for patients that have any SDOH condition and are members of a specific payer organization."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Group"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationAssessmentSocialIsolationExample"/>
+                <display value="SDOHCC Observation Assessment Social Isolation Example"/>
+            </reference>
+            <name value="SDOHCC Observation Assessment Social Isolation Example"/>
+            <description value="An example of a social isolation Observation that is not necessarily derived only from a screening survey. This observation involves additional assessment (e.g., by a provider, payer, etc.). This example also includes an Observation.category (i.e., Social Connectedness) that is not currently included in the “SDOHCC ValueSet SDOH Category”. This illustrates that categorization is possible using SDOH category codes that are not yet in the SDOHCC ValueSet SDOH Category (which will continue to be expanded as the Gravity Project continues to develop SDOH terminology content)."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationAssessmentInadequateFoodIntakeExample"/>
+                <display value="SDOHCC Observation Assessment Inadequate Food Intake Example"/>
+            </reference>
+            <name value="SDOHCC Observation Assessment Inadequate Food Intake Example"/>
+            <description value="An example of an inadequate food intake Observation that is not necessarily derived only from a screening survey. This observation involves additional assessment (e.g., by a provider, payer, etc.)."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationAssessmentTransportTooExpensiveExample"/>
+                <display value="SDOHCC Observation Assessment Transport Too Expensive Example"/>
+            </reference>
+            <name value="SDOHCC Observation Assessment Transport Too Expensive Example"/>
+            <description value="An example of a transportation Observation that is not necessarily derived only from a screening survey. This observation involves additional assessment (e.g., by a provider, payer, etc.). This example also includes an Observation.category (i.e., Transportation Insecurity) that is included in the “SDOHCC ValueSet SDOH Category”. Additionally, a subcategory of Transportation Insecurity (i.e., Transportation Insecurity Financial) is included to illustrate that it is possible to further subcategorize a “SDOHCC ValueSet SDOH Category” code with a code that is not in the ValueSet."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Organization/SDOHCC-OrganizationPayerExample"/>
+                <display value="SDOHCC Organization Payer Example"/>
+            </reference>
+            <name value="SDOHCC Organization Payer Example"/>
+            <description value="An example of a payer organization. This example is used as the referenced organization in other SDOHCC examples."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Patient/pat-53234"/>
+                <display value="Patient Colin Abbas Example"/>
+            </reference>
+            <name value="Patient Colin Abbas Example"/>
+            <description value="An example of a patient. This example is used as the referenced subject in other SDOHCC examples."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Procedure/SDOHCC-ProcedureFoodPantryApplicationAssistanceExample"/>
+                <display value="SDOHCC Procedure Food Pantry Application Assistance Example"/>
+            </reference>
+            <name value="SDOHCC Procedure Food Pantry Application Assistance Example"/>
+            <description value="An example of a Procedure for assistance with applying to a food pantry that is based on a ServiceRequest and references as its reason a food insecurity Condition."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ServiceRequest/SDOHCC-ServiceRequestFoodPantryApplicationAssistanceExample"/>
+                <display value="SDOHCC ServiceRequest Food Pantry Application Assistance Example"/>
+            </reference>
+            <name value="SDOHCC ServiceRequest Food Pantry Application Assistance Example"/>
+            <description value="An example of a completed ServiceRequest for assistance with applying to a food pantry that references as its reason a food insecurity Condition."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ServiceRequest/SDOHCC-ServiceRequestBasedOnAnotherServiceRequestExample"/>
+                <display value="SDOHCC ServiceRequest Based On Another Service Request Example"/>
+            </reference>
+            <name value="SDOHCC ServiceRequest Based On Another Service Request Example"/>
+            <description value="An example of a completed filler order ServiceRequest that can be used to pass on another ServiceRequest (i.e., SDOHCC ServiceRequest Food Pantry Application Assistance Example) from an intermediary organization to another organization (e.g., when a Coordination Platform receives a ServiceRequest from a referral source and passes it on to a Community Based Organization)."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ServiceRequest/SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample"/>
+                <display value="SDOHCC Service Request Active Food Pantry Application Assist Example"/>
+            </reference>
+            <name value="SDOHCC Service Request Active Food Pantry Application Assist Example"/>
+            <description value="An example of an active ServiceRequest for assistance with applying to a food pantry that references as its reason a food insecurity Condition."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ServiceRequest/SDOHCC-ServiceRequestActiveBasedOnAnotherServiceRequestExample"/>
+                <display value="SDOHCC Service Request Active Based On Another Service Request Example"/>
+            </reference>
+            <name value="SDOHCC Service Request Active Based On Another Service Request Example"/>
+            <description value="An example of an active filler order ServiceRequest that can be used to pass on another ServiceRequest (i.e., SDOHCC ServiceRequest Active Food Pantry Application Assist Example) from an intermediary organization to another organization (e.g., when a Coordination Platform receives a ServiceRequest from a referral source and passes it on to a Community Based Organization)."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Task/SDOHCC-TaskOrderFulfillmentAcceptedExample"/>
+                <display value="SDOHCC Task Order Fulfillment Accepted Example"/>
+            </reference>
+            <name value="SDOHCC Task Order Fulfillment Accepted Example"/>
+            <description value="An example of an accepted Task that has as the Task.focus a ServiceRequest for assistance with applying to a food pantry."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Task/SDOHCC-TaskOrderAcceptedPartOfAnotherTaskExample"/>
+                <display value="SDOHCC Task Order Accepted Part Of Another Task Example"/>
+            </reference>
+            <name value="SDOHCC Task Order Accepted Part Of Another Task Example"/>
+            <description value="An example of an accepted Task that can be used to pass on another Task (i.e., SDOHCC Task Order Fulfillment Accepted Example) from an intermediary organization to another organization (e.g., when a Coordination Platform receives a Task from a referral source and passes it on to a Community Based Organization)."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Task/SDOHCC-TaskOrderFulfillmentCompletedExample"/>
+                <display value="SDOHCC Task Order Fulfillment Completed Example"/>
+            </reference>
+            <name value="SDOHCC Task Order Fulfillment Completed Example"/>
+            <description value="An example of a completed Task that has a ServiceRequest for assistance with applying to a food pantry as the Task.focus and a Procedure for assistance with applying to a food pantry as the Task.output."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Task/SDOHCC-TaskOrderCompletedPartOfAnotherTaskExample"/>
+                <display value="SDOHCC Task Order Completed Part Of Another Task Example"/>
+            </reference>
+            <name value="SDOHCC Task Order Completed Part Of Another Task Example"/>
+            <description value="An example of a completed Task that can be used to pass on another Task (i.e., SDOHCC Task Order Fulfillment Completed Example) from an intermediary organization to another organization (e.g., when a Coordination Platform receives a Task from a referral source and passes it on to a Community Based Organization)."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Questionnaire/SDOHCC-QuestionnaireHungerVitalSign"/>
+                <display value="SDOHCC Questionnaire Hunger Vital Sign"/>
+            </reference>
+            <name value="SDOHCC Questionnaire Hunger Vital Sign"/>
+            <description value="A Questionnaire instance that represents the questions and answers from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9)."/>
+            <exampleCanonical value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract|2.7"/>
+            <groupingId value="new-group5"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="QuestionnaireResponse/SDOHCC-QuestionnaireResponseHungerVitalSignExample"/>
+                <display value="SDOHCC QuestionnaireResponse Hunger Vital Sign Example"/>
+            </reference>
+            <name value="SDOHCC QuestionnaireResponse Hunger Vital Sign Example"/>
+            <description value="An example of an SDC QuestionnaireResponse that represents questions and selected answers from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9). The example is generated using the LHC-Forms SDC Questionnaire App."/>
+            <exampleCanonical value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"/>
+            <groupingId value="new-group5"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureMap/SDOHCC-StructureMapHungerVitalSign"/>
+                <display value="SDOHCC StructureMap Hunger Vital Sign"/>
+            </reference>
+            <name value="SDOHCC StructureMap Hunger Vital Sign"/>
+            <description value="A StructureMap instance that represents the resource that transforms specific questions and answers from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9) into their corresponding Observations (SDOHCC Observation Response Hunger Vital Sign Q1 Example, SDOHCC Observation Response Hunger Vital Sign Q2 Example, and SDOHCC Observation response Hunger Vital Sign Q3 Example) and derived Condition (SDOHCC Condition Food Insecurity Example)."/>
+            <groupingId value="new-group5"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationResponseHungerVitalSignGroupingExample"/>
+                <display value="SSDOHCC Observation Response Hunger Vital Sign Grouping Example"/>
+            </reference>
+            <name value="SDOHCC Observation Response Hunger Vital Sign Grouping Example"/>
+            <description value="An example of an Observation grouping that has as its members the 3 Observations generated from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9)."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+            <groupingId value="new-group5"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion1Example"/>
+                <display value="SDOHCC Observation Response Hunger Vital Sign Question 1 Example"/>
+            </reference>
+            <name value="SDOHCC Observation Response Hunger Vital Sign Question 1 Example"/>
+            <description value="An example of a screening response Observation that represents the first question (LOINC code 88122-7) and answer from the Hunger Vital Sign [HVS] screening questionnaire represented in LOINC."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+            <groupingId value="new-group5"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion2Example"/>
+                <display value="SDOHCC Observation Response Hunger Vital Sign Question 2 Example"/>
+            </reference>
+            <name value="SDOHCC Observation Response Hunger Vital Sign Question 2 Example"/>
+            <description value="An example of a screening response Observation that represents the second question (LOINC code 88123-5) and answer from the Hunger Vital Sign [HVS] screening questionnaire represented in LOINC."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+            <groupingId value="new-group5"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion3Example"/>
+                <display value="SDOHCC Observation Response Hunger Vital Sign Question 3 Example"/>
+            </reference>
+            <name value="SDOHCC Observation Response Hunger Vital Sign Question 3 Example"/>
+            <description value="An example of a screening response Observation that represents Food insecurity risk [HVS] (LOINC code 88124-3) from the Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9).  This Observation is derived from the two Observations generated from the first two questions in the Hunger Vital Sign [HVS] questionnaire. This Observation does not have an Observation.performer because Food insecurity risk [HVS] is derived as opposed to answered directly on the questionnaire."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+            <groupingId value="new-group5"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Condition/SDOHCC-ConditionFoodInsecurityExample"/>
+                <display value="SDOHCC Condition Food Insecurity Example"/>
+            </reference>
+            <name value="SDOHCC Condition Food Insecurity Example"/>
+            <description value="An example of a food insecurity Condition (a health concern) that references, as evidence, Observations derived from the LOINC Hunger Vital Sign [HVS] questionnaire (88121-9)."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            <groupingId value="new-group5"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Questionnaire/SDOHCC-QuestionnairePRAPARE"/>
+                <display value="SDOHCC Questionnaire PRAPARE"/>
+            </reference>
+            <name value="SDOHCC Questionnaire PRAPARE"/>
+            <description value="A Questionnaire instance that represents the questions and answers from the PRAPARE questionnaire represented in LOINC (code 93025-5)."/>
+            <exampleCanonical value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract|2.7"/>
+            <groupingId value="new-group6"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="QuestionnaireResponse/SDOHCC-QuestionnaireResponsePRAPAREExample"/>
+                <display value="SDOHCC QuestionnaireResponse PRAPARE Example"/>
+            </reference>
+            <name value="SDOHCC QuestionnaireResponse PRAPARE Example"/>
+            <description value="An example of an SDC QuestionnaireResponse that represents questions and selected answers from the PRAPARE questionnaire represented in LOINC (code 93025-5). The example is generated using the LHC-Forms SDC Questionnaire App."/>
+            <exampleCanonical value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"/>
+            <groupingId value="new-group6"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureMap/SDOHCC-StructureMapPRAPARE"/>
+                <display value="SDOHCC StructureMap PRAPARE"/>
+            </reference>
+            <name value="SDOHCC StructureMap PRAPARE"/>
+            <description value="A StructureMap instance that represents the resource that transforms specific questions and answers from the PRAPARE questionnaire represented in LOINC (code 93025-5) into their corresponding Observations and derived Conditions (health concerns)."/>
+            <groupingId value="new-group6"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample"/>
+                <display value="SDOHCC Observation Response PRAPARE Employment Status Example"/>
+            </reference>
+            <name value="SDOHCC Observation Response PRAPARE Employment Status Example"/>
+            <description value="An example of a screening response Observation that represents a question and answer related to employment status from the PRAPARE questionnaire represented in LOINC."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+            <groupingId value="new-group6"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationResponsePRAPAREHousingStatusExample"/>
+                <display value="SDOHCC Observation Response PRAPARE Housing Status Example"/>
+            </reference>
+            <name value="SDOHCC Observation Response PRAPARE Housing Status Example"/>
+            <description value="An example of a screening response Observation that represents a question and answer related to housing status from the PRAPARE questionnaire represented in LOINC."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+            <groupingId value="new-group6"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationResponsePRAPAREUnmetNeedsMultiselectExample"/>
+                <display value="SDOHCC Observation Response PRAPARE Unmet Needs Multiselect Example"/>
+            </reference>
+            <name value="SDOHCC Observation Response PRAPARE Unmet Needs Multiselect Example"/>
+            <description value="An example of a screening response Observation that represents a PRAPARE question represented in LOINC that allows more than one answer. In this case, the LOINC question is used for Observation.code and for Observation.component.code. Observation.value is omitted. Answers, whether multiple or single (including exceptions and flavors of null), are represented using Observation.component.value."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+            <groupingId value="new-group6"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Condition/SDOHCC-ConditionUnemployedExample"/>
+                <display value="SDOHCC Condition Unemployed Example"/>
+            </reference>
+            <name value="SDOHCC Condition Unemployed Example"/>
+            <description value="An example of a Condition (a health concern) that is based on an Observation related to employment status that is derived from a QuestionnaireResponse to PRAPARE (represented in LOINC)."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            <groupingId value="new-group6"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Condition/SDOHCC-ConditionHomelessExample"/>
+                <display value="SDOHCC Condition Homeless Example"/>
+            </reference>
+            <name value="SDOHCC Condition Homeless Example"/>
+            <description value="An example of a homelessness Condition (a health concern) that is based on an Observation related to housing status that is derived from a QuestionnaireResponse to PRAPARE (represented in LOINC)."/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            <groupingId value="new-group6"/>
+        </resource>
+        <page>
+            <nameUrl value="index.html"/>
+            <title value="Home Page"/>
+            <generation value="markdown"/>
+            <page>
+                <nameUrl value="gravity_background.html"/>
+                <title value="Gravity Background"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="sdoh_clinical_care_scope.html"/>
+                <title value="SDOH Clinical Care Scope"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="functional_use_cases.html"/>
+                <title value="Functional Use Cases"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="survey_instrument_support.html"/>
+                <title value="Survey Instrument Support"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="mapping_instructions.html"/>
+                <title value="Mapping Instructions"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="support_for_multiple_domains.html"/>
+                <title value="Support for Multiple Domains"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="exchange_workflow.html"/>
+                <title value="Exchange Workflow"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="technical_background.html"/>
+                <title value="Technical Background"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="fhir_artifacts_overview.html"/>
+                <title value="FHIR Artifacts Overview"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="checking_task_status.html"/>
+                <title value="Checking Task Status"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="privacy_and_security.html"/>
+                <title value="Privacy and Security"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="mustsupport_and_missing_data.html"/>
+                <title value="MustSupport and Missing Data"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="downloads.html"/>
+                <title value="Downloads"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="credits.html"/>
+                <title value="Credits"/>
+                <generation value="markdown"/>
+            </page>
+        </page>
+        <parameter>
+            <code value="jira-code"/>
+            <value value="sdoh-cc"/>
+        </parameter>
+        <parameter>
+            <code value="path-expansion-params"/>
+            <value value="SDOH-expansion-parameters.json"/>
+        </parameter>
+        <parameter>
+            <code value="copyrightyear"/>
+            <value value="2020+"/>
+        </parameter>
+        <parameter>
+            <code value="releaselabel"/>
+            <value value="CI Build"/>
+        </parameter>
+    </definition>
+</ImplementationGuide>
