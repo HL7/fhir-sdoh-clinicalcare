@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="sdoh-clinicalcare"/>
     <meta>
-        <versionId value="647"/>
-        <lastUpdated value="2021-07-07T12:18:47.664+00:00"/>
-        <source value="#ZSVhx38vaXP2G96i"/>
+        <versionId value="670"/>
+        <lastUpdated value="2021-07-13T12:52:56.687+00:00"/>
+        <source value="#Ns2bgXAW08q6yXiR"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/sdoh-clinicalcare"/>
     <version value="0.1.1"/>
@@ -40,15 +40,7 @@
         <packageId value="hl7.fhir.uv.sdc"/>
         <version value="2.7.0"/>
     </dependsOn>
-    <dependsOn>
-        <uri value="http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"/>
-        <packageId value="hl7.fhir.uv.subscriptions-backport"/>
-        <version value="0.1.0"/>
-    </dependsOn>
     <definition>
-        <grouping id="new-group0">
-            <name value="Capabilities"/>
-        </grouping>
         <grouping id="new-group1">
             <name value="Profiles"/>
         </grouping>
@@ -70,69 +62,6 @@
         <grouping id="new-group3">
             <name value="Images"/>
         </grouping>
-        <grouping id="new-group8">
-            <name value="Search Parameters"/>
-        </grouping>
-        <resource>
-            <reference>
-                <reference value="CapabilityStatement/SDOH-ClinicalCareReferralSource"/>
-                <display value="SDOH Clinical Care Referral Source"/>
-            </reference>
-            <name value="SDOH Clinical Care Referral Source"/>
-            <description value="Defines the capabilities of systems that initiate referrals and other aspects of the SDOH care process"/>
-            <exampleBoolean value="false"/>
-            <groupingId value="new-group0"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="CapabilityStatement/SDOH-ClinicalCareCoordinationPlatform"/>
-                <display value="SDOH Clinical Care Coordination Platform"/>
-            </reference>
-            <name value="SDOH Clinical Care Coordination Platform"/>
-            <description value="Defines the capabilities of systems that act as intermediaries between systems that initiate referrals and those that action them"/>
-            <exampleBoolean value="false"/>
-            <groupingId value="new-group0"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="CapabilityStatement/SDOH-ClinicalCareReferralRecipient"/>
-                <display value="SDOH Clinical Care Referral Recipient"/>
-            </reference>
-            <name value="SDOH Clinical Care Referral Recipient"/>
-            <description value="Defines the capabilities of systems that action referrals for SDOH care"/>
-            <exampleBoolean value="false"/>
-            <groupingId value="new-group0"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="CapabilityStatement/SDOH-ClinicalCareReferralRecipientLight"/>
-                <display value="SDOH Clinical Care Referral Recipient - Light"/>
-            </reference>
-            <name value="SDOH Clinical Care Referral Recipient - Light"/>
-            <description value="Defines the capabilities of systems that action referrals for SDOH care that don't have their own FHIR server"/>
-            <exampleBoolean value="false"/>
-            <groupingId value="new-group0"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="SearchParameter/Task-output-reference"/>
-                <display value="Task.output.valueReference SearchParameter"/>
-            </reference>
-            <name value="Task.output.valueReference SearchParameter"/>
-            <description value="Allows searching by Task.output.value"/>
-            <exampleBoolean value="false"/>
-            <groupingId value="new-group8"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="SearchParameter/ServiceRequest-supporting-info"/>
-                <display value="ServiceRequest.supportingInfo SearchParameter"/>
-            </reference>
-            <name value="ServiceRequest.supportingInfo SearchParameter"/>
-            <description value="Allows searching by ServiceRequest.supportingInfo"/>
-            <exampleBoolean value="false"/>
-            <groupingId value="new-group8"/>
-        </resource>
         <resource>
             <reference>
                 <reference value="StructureDefinition/SDOHCC-Condition"/>
@@ -387,7 +316,7 @@
                 <display value="SDOHCC Procedure Food Pantry Application Assistance Example"/>
             </reference>
             <name value="SDOHCC Procedure Food Pantry Application Assistance Example"/>
-            <description value="An example of a Procedure for assistance with applying to a food pantry that is based on a ServiceRequest and references as its reason a food insecurity Condition."/>
+            <description value="An example of a completed Procedure for assistance with applying to a food pantry that is based on a ServiceRequest and references as its reason a food insecurity Condition."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
             <groupingId value="new-group2"/>
@@ -734,7 +663,7 @@
             <value value="sdoh-cc"/>
         </parameter>
         <parameter>
-            <code value="path-expansion-params"/>
+            <code value="path-expansion-params-bad"/>
             <value value="SDOH-expansion-parameters.json"/>
         </parameter>
         <parameter>

@@ -62,6 +62,14 @@ The referral occurs between the Referral Source and the Referral Receiver.  The 
 
 <table><tr><td><img src="DirectReferralSF.jpg" /></td></tr></table>
 
+#### Direct Referral Light
+
+The referral occurs between the Referral Source and the Referral Receiver where the Referral Receiver does not have a FHRI API (FHIR Server or FHRI Façade) .  The Referral Receiver may be the Referral Performer or an Intermediary.  The exchange with the Referral Receiver is initiated via an email with a secure link to the Referral Source API that can be used by an application available to the Referral Receiver to communicate with the Referral Source using RESTful exchanges that read, create, update resources via the Referral Source API.
+
+<table><tr><td><img src="DirectReferralLightSF.jpg" /></td></tr></table>
+
+
+
 #### Indirect Referral
 
 The referral occurs in two separate interactions. The first is between the Referral Source and the Intermediary and the second is between the Intermediary and the Referral Performer
@@ -70,6 +78,16 @@ This IG assumes that, in an Indirect Referral, the Referral Performer does not h
 1) Create a local copy of all of the relevant referenced resources from the Referral Source
 2) Create a Task to be Posted to the Referral Performer that references the Referral Source Task via Task.partof
 3) Create a ServiceRequest with ServiceRequest.intent value filler-order and ServiceRquest.basedon references the original Referral Source ServiceRequest
-4) Since local copies of the referenced resources are maintained by the Intermediary, the intermeidary must periodically query the Referral Source for updates to the referenced resources.
+4) Since local copies of the referenced resources are maintained by the Intermediary, the intermediary must periodically query the Referral Source for updates to the referenced resources.
 
 <table><tr><td><img src="IndirectReferralSF.jpg" /></td></tr></table>
+
+#### Notes on Direct and Indirect Referral
+1) Parties SHOULD use polling if one or both of the parties is unable to support the subscription model see notes on the [Checking Task Status](checking_task_status.html) page
+2) The receiving party for the referral MAY use the batch process to request periodic updates of reference resources. 
+3) The above system flows do not define the handling of all possible scenarios. , such as refusing the referral, canceling the referral by either party, error conditions that may occur when using RESTful exchanges.  It is up to each party to follow current best practice in managing the state of the referral.
+4) The Referral Source SHOULD set the Task.status to "requested" until it receives a valid HTTPS response indicating that the Task was received at which point it SHOULD set the Task.status to "received".
+
+### Support for API Access to SDOH Information
+
+The Referral Source, Intermediary, and Referral Recipient SHOULD make SDOH information available to authenticated and authorized APIs and applications to to retrieve, and where possible, update a patients SDOH information with the patient's consent where required or appropriate.  All of the resources defined on the [FHIR Artifacts Overview](fhir_artifacts_overview.html) page SHOULD be available for read access.

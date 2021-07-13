@@ -40,14 +40,19 @@ This implementation guide includes a complete example of the HVS Survey represen
 
 5) multiple Observations used to record the question and answers for each of the elements of the survey
 
-- ​	[Question 1](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion1Example.html)
+- 	[Question 1](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion1Example.html)
 
-- ​	[Question 2](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion2Example.html)
+- 	[Question 2](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion2Example.html)
 
-- ​	[Question 3](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example.html) (computed)
-
+- 	[Question 3](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example.html) (computed)
 
 6)  a [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) resource to record the health concern based on the result of the survey
+
+
+
+The Hunger Vital Sign Survey is included as an example with permission 
+
+© 2010 Dr. Erin Hager and Dr. Anna Quigg and the Children’s HealthWatch research team.
 
 
 
@@ -72,3 +77,8 @@ This implementation guide includes a partial example of the PRAPARE Survey repre
 - [Unemployed](Condition-SDOHCC-ConditionUnemployedExample.html)
 - [Homeless](Condition-SDOHCC-ConditionHomelessExample.html)
 
+
+
+Portions of the PRAPARE Survey are included as an example with permission 
+
+ © 2019. This item comes from the national PRAPARE social determinants of health assessment protocol, developed and owned by the National Association of Community Health Centers (NACHC), in partnership with the Association of Asian Pacific Community Health Organization (AAPCHO), the Oregon Primary Care Association (OPCA), and the Institute for Alternative Futures (IAF). For more information, visit [www.nachc.org/prapare](http://www.nachc.org/prapare)
