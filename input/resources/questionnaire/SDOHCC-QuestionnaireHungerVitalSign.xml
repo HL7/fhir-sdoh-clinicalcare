@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-QuestionnaireHungerVitalSign"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-06-03T00:59:29.873+00:00"/>
-        <source value="#topWr2QAVfZLpJqJ"/>
+        <versionId value="2"/>
+        <lastUpdated value="2021-07-13T16:29:03.787+00:00"/>
+        <source value="#WVbTmYcNvUitCCSu"/>
         <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract|2.7"/>
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/variable">
@@ -52,6 +52,7 @@
     <status value="draft"/>
     <subjectType value="Patient"/>
     <date value="2020-09-01T04:01:34+00:00"/>
+    <copyright value="Content is from the Hunger Vital Sign Survey with permission: © 2010 Dr. Erin Hager and Dr. Anna Quigg and the Children’s HealthWatch research team"/>
     <item>
         <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
             <valueCodeableConcept>
