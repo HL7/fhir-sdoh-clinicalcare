@@ -10,15 +10,6 @@
 			"date": "2020-12-01"
 		},
 		{
-			"version": "0.1.1",
-			"current": true,
-			"desc": "STU1 ready for publication",
-			"path": "http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare",
-			"fhirversion": "4.0.1",
-			"date": "2021-07-14",
-			"status": "ci-build"
-		},
-		{
 			"version": "0.1.0",
 			"desc": "STU 1",
 			"status": "ballot",
