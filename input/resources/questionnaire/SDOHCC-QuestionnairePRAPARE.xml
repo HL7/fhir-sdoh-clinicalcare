@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-QuestionnairePRAPARE"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-06-03T00:59:29.923+00:00"/>
-        <source value="#fUlHDoibLEAU48Xd"/>
+        <versionId value="2"/>
+        <lastUpdated value="2021-07-13T20:27:25.959+00:00"/>
+        <source value="#rku93oA0ZVERGZAr"/>
         <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract|2.7"/>
     </meta>
     <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
@@ -31,6 +31,7 @@
             <code value="US"/>
         </coding>
     </jurisdiction>
+    <copyright value="Content is from the PRAPARE Survey with permission: © 2019. This item comes from the national PRAPARE social determinants of health assessment protocol, developed and owned by the National Association of Community Health Centers (NACHC), in partnership with the Association of Asian Pacific Community Health Organization (AAPCHO), the Oregon Primary Care Association (OPCA), and the Institute for Alternative Futures (IAF). For more information, visit [www.nachc.org/prapare](http://www.nachc.org/prapare)"/>
     <item>
         <linkId value="/93025-5"/>
         <code>
