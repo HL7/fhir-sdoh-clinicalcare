@@ -7,7 +7,7 @@
 			"fhirversion": "4.0.1",
 			"status": "ci-build",
 			"current": true,
-			"date": "2021-05-03"
+			"date": "2020-12-01"
 		},
 		{
 			"version": "0.1.0",
@@ -16,7 +16,18 @@
 			"sequence": "STU 1",
 			"fhirversion": "4.0.1",
 			"path": "http://hl7.org/fhir/us/sdoh-clinicalcare/2021-Jan",
-			"date": "2020-12-01"
+			"date": "2020-12-01",
+			"current": false
+		},
+		{
+			"version": "0.1.1",
+			"current": true,
+			"desc": "STU 1",
+			"path": "http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare",
+			"fhirversion": "4.0.1",
+			"date": "2021-07-14",
+			"sequence": "STU1",
+			"status": "ballot"
 		}
 	],
 	"package-id": "hl7.fhir.us.sdoh-clinicalcare",
