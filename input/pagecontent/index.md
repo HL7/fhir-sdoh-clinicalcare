@@ -34,24 +34,3 @@ Implementers should pay specific attention to the following sections:
 * [Downloads](downloads.html) links to allow implementers to download the IG and various artifacts
 
 
-
-
-
-### Authors
-
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Email/URL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>HL7 International - Patient Care</td>
-<td><a href="http://www.hl7.org/Special/committees/patientcare" target="_new">http://www.hl7.org/Special/committees/patientcare</a></td>
-</tr>
-</tbody>
-</table>
-
-
