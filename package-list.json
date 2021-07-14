@@ -10,6 +10,15 @@
 			"date": "2020-12-01"
 		},
 		{
+			"version": "0.1.1",
+			"current": true,
+			"desc": "STU1 ready for publication",
+			"path": "http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare",
+			"fhirversion": "4.0.1",
+			"date": "2021-07-14",
+			"status": "ci-build"
+		},
+		{
 			"version": "0.1.0",
 			"desc": "STU 1",
 			"status": "ballot",
@@ -18,19 +27,11 @@
 			"path": "http://hl7.org/fhir/us/sdoh-clinicalcare/2021-Jan",
 			"date": "2020-12-01",
 			"current": false
-		},
-		{
-			"version": "0.1.1",
-			"current": true,
-			"desc": "STU 1",
-			"path": "http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare",
-			"fhirversion": "4.0.1",
-			"date": "2021-07-14",
-			"sequence": "STU1",
-			"status": "ballot"
 		}
+		
 	],
 	"package-id": "hl7.fhir.us.sdoh-clinicalcare",
 	"title": "SDOH Clinical Care for Multiple Domains",
-	"canonical": "http://hl7.org/fhir/us/sdoh-clinicalcare"
+	"canonical": "http://hl7.org/fhir/us/sdoh-clinicalcare",
+	"category": "Care Planning"
 }
