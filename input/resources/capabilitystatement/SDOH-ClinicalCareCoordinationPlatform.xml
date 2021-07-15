@@ -213,7 +213,7 @@
                 <a title="Allows the monitoring of previously-retrieved Practitioners that are the requester or intended performer of ServiceRequests." href="#Practitioner-search-type">SHOULD</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest." href="#Practitioner-read">SHALL</a>
+                <a title="Allows the system to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest." href="#Practitioner-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -229,7 +229,7 @@
                 <a title="Allows the monitoring of previously-retrieved PractitionerRoles that are the requester or intended performer of ServiceRequests." href="#PractitionerRole-search-type">SHOULD</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest." href="#PractitionerRole-read">SHALL</a>
+                <a title="Allows the system to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest." href="#PractitionerRole-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -242,7 +242,7 @@
             <tr>
               <th>Procedure</th>
               <td>
-                <a title="Allows the coordination platform to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to to the Tasks that initiated the work." href="#Procedure-search-type">SHOULD</a>
+                <a title="Allows the coordination platform to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to the Tasks that initiated the work." href="#Procedure-search-type">SHOULD</a>
               </td>
               <td>
                 <a title="Allows the coordination platform to retrieve procedures referenced by Tasks from more sophisticated 'delivery' systems that store their data on their own system rather than using the coordination platform as a persistence layer." href="#Procedure-read">SHALL</a>
@@ -309,7 +309,7 @@
             <tr>
               <th>ServiceRequest</th>
               <td>
-                <a title="Allows client systems to monitor multiple ServiceRequests for change simultaniously via polling." href="#ServiceRequest-search-type">SHOULD</a>
+                <a title="Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling." href="#ServiceRequest-search-type">SHOULD</a>
               </td>
               <td>
                 <a title="Allows client systems to retrieve the ServiceRequest pointed to by a Task." href="#ServiceRequest-read">SHALL</a>
@@ -333,7 +333,7 @@
                 <a title="Necessary if using subscriptions to monitor updates to the Task" href="#Subscription-create">SHOULD</a>
               </td>
               <td>
-                <a title="Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id)typically to cancel a request for fulfillment" href="#Subscription-update">MAY</a>
+                <a title="Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id) typically to cancel a request for fulfillment" href="#Subscription-update">MAY</a>
               </td>
               <td/>
               <td>$status: <a title="Necessary for systems supporting subscriptions to ensure that the subscription is functioning properly and to check for errors" href="#Subscription-status">SHOULD</a>
@@ -1346,7 +1346,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest.</p>
+                <p>Allows the system to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -1424,7 +1424,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest.</p>
+                <p>Allows the system to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -1550,7 +1550,7 @@
               </th>
               <td>SHOULD</td>
               <td>
-                <p>Allows the coordination platform to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to to the Tasks that initiated the work.</p>
+                <p>Allows the coordination platform to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to the Tasks that initiated the work.</p>
               </td>
             </tr>
           </tbody>
@@ -2014,7 +2014,7 @@
               </th>
               <td>SHOULD</td>
               <td>
-                <p>Allows client systems to monitor multiple ServiceRequests for change simultaniously via polling.</p>
+                <p>Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling.</p>
               </td>
             </tr>
           </tbody>
@@ -2163,7 +2163,7 @@
               </th>
               <td>MAY</td>
               <td>
-                <p>Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id)typically to cancel a request for fulfillment</p>
+                <p>Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id) typically to cancel a request for fulfillment</p>
               </td>
             </tr>
             <tr>
@@ -2567,7 +2567,7 @@
                 <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Practitioners that are the requester or intended performer of ServiceRequests." href="#Practitioner-search-type">SHALL</a>
               </td>
               <td>
-                <a title="Allows downstream coordination platforms or referral recipients to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest." href="#Practitioner-read">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest." href="#Practitioner-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -2583,7 +2583,7 @@
                 <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved PractitionerRoles that are the requester or intended performer of ServiceRequests." href="#PractitionerRole-search-type">SHALL</a>
               </td>
               <td>
-                <a title="Allows downstream coordination platforms or referral recipients to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest." href="#PractitionerRole-read">SHALL</a>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest." href="#PractitionerRole-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -2596,7 +2596,7 @@
             <tr>
               <th>Procedure</th>
               <td>
-                <a title="Allows upstream systems to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to to the Tasks that initiated the work." href="#Procedure-search-type">SHALL</a>
+                <a title="Allows upstream systems to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to the Tasks that initiated the work." href="#Procedure-search-type">SHALL</a>
               </td>
               <td>
                 <a title="Allows upstream systems to retrieve procedures referenced by Tasks." href="#Procedure-read">SHALL</a>
@@ -2605,10 +2605,10 @@
               <td/>
               <td/>
               <td>
-                <a title="Allows downstream coordination plaforms and referral recipients to write records of procedures done in response to a referral in situations where they can't store the procedure on their own local system." href="#Procedure-create">SHALL</a>
+                <a title="Allows downstream coordination platforms and referral recipients to write records of procedures done in response to a referral in situations where they can't store the procedure on their own local system." href="#Procedure-create">SHALL</a>
               </td>
               <td>
-                <a title="Allows downstream coordination plaforms and referral recipients to update records of procedures done - e.g. changing status, adding notes." href="#Procedure-update">SHALL</a>
+                <a title="Allows downstream coordination platforms and referral recipients to update records of procedures done - e.g. changing status, adding notes." href="#Procedure-update">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -2667,7 +2667,7 @@
             <tr>
               <th>ServiceRequest</th>
               <td>
-                <a title="Allows client systems to monitor multiple ServiceRequests for change simultaniously via polling." href="#ServiceRequest-search-type">SHALL</a>
+                <a title="Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling." href="#ServiceRequest-search-type">SHALL</a>
               </td>
               <td>
                 <a title="Allows client systems to retrieve the ServiceRequest pointed to by a Task." href="#ServiceRequest-read">SHALL</a>
@@ -3474,7 +3474,7 @@
               <td>SHALL</td>
               <td>reference</td>
               <td>
-                <p>Allows performaing an _include to retrieve the members of the group</p>
+                <p>Allows performing an _include to retrieve the members of the group</p>
               </td>
             </tr>
           </tbody>
@@ -3903,7 +3903,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows downstream coordination platforms or referral recipients to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest.</p>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -3981,7 +3981,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows downstream coordination platforms or referral recipients to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest.</p>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -4077,7 +4077,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows downstream coordination plaforms and referral recipients to write records of procedures done in response to a referral in situations where they can't store the procedure on their own local system.</p>
+                <p>Allows downstream coordination platforms and referral recipients to write records of procedures done in response to a referral in situations where they can't store the procedure on their own local system.</p>
               </td>
             </tr>
             <tr>
@@ -4087,7 +4087,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows downstream coordination plaforms and referral recipients to update records of procedures done - e.g. changing status, adding notes.</p>
+                <p>Allows downstream coordination platforms and referral recipients to update records of procedures done - e.g. changing status, adding notes.</p>
               </td>
             </tr>
             <tr>
@@ -4107,7 +4107,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows upstream systems to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to to the Tasks that initiated the work.</p>
+                <p>Allows upstream systems to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to the Tasks that initiated the work.</p>
               </td>
             </tr>
           </tbody>
@@ -4613,7 +4613,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows client systems to monitor multiple ServiceRequests for change simultaniously via polling.</p>
+                <p>Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling.</p>
               </td>
             </tr>
           </tbody>
@@ -5525,7 +5525,7 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest."/>
+        <documentation value="Allows the system to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -5563,7 +5563,7 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest."/>
+        <documentation value="Allows the system to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -5650,7 +5650,7 @@
           <valueCode value="SHOULD"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows the coordination platform to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to to the Tasks that initiated the work."/>
+        <documentation value="Allows the coordination platform to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to the Tasks that initiated the work."/>
       </interaction>
       <versioning value="versioned-update"/>
       <referencePolicy value="literal"/>
@@ -5975,7 +5975,7 @@
           <valueCode value="SHOULD"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows client systems to monitor multiple ServiceRequests for change simultaniously via polling."/>
+        <documentation value="Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling."/>
       </interaction>
       <referencePolicy value="literal"/>
       <searchInclude value="ServiceRequest:supporting-info">
@@ -6129,7 +6129,7 @@
           <valueCode value="MAY"/>
         </extension>
         <code value="update"/>
-        <documentation value="Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id)typically to cancel a request for fulfillment"/>
+        <documentation value="Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id) typically to cancel a request for fulfillment"/>
       </interaction>
       <operation>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -6784,7 +6784,7 @@
         <name value="member"/>
         <definition value="http://hl7.org/fhir/SearchParameter/Group-member"/>
         <type value="reference"/>
-        <documentation value="Allows performaing an _include to retrieve the members of the group"/>
+        <documentation value="Allows performing an _include to retrieve the members of the group"/>
       </searchParam>
     </resource>
     <resource>
@@ -7027,7 +7027,7 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -7065,7 +7065,7 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest."/>
+        <documentation value="Allows downstream coordination platforms or referral recipients to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -7125,20 +7125,20 @@
     <resource>
       <type value="Procedure"/>
       <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
-      <documentation value="Used to allow downstream coordination plaforms and referral recipients to provide information about actions that have been performed as a result of a referral as well as to allow upstream systems to access that information."/>
+      <documentation value="Used to allow downstream coordination platforms and referral recipients to provide information about actions that have been performed as a result of a referral as well as to allow upstream systems to access that information."/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="create"/>
-        <documentation value="Allows downstream coordination plaforms and referral recipients to write records of procedures done in response to a referral in situations where they can't store the procedure on their own local system."/>
+        <documentation value="Allows downstream coordination platforms and referral recipients to write records of procedures done in response to a referral in situations where they can't store the procedure on their own local system."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
         </extension>
         <code value="update"/>
-        <documentation value="Allows downstream coordination plaforms and referral recipients to update records of procedures done - e.g. changing status, adding notes."/>
+        <documentation value="Allows downstream coordination platforms and referral recipients to update records of procedures done - e.g. changing status, adding notes."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -7152,7 +7152,7 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows upstream systems to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to to the Tasks that initiated the work."/>
+        <documentation value="Allows upstream systems to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to the Tasks that initiated the work."/>
       </interaction>
       <versioning value="versioned-update"/>
       <referencePolicy value="literal"/>
@@ -7506,7 +7506,7 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows client systems to monitor multiple ServiceRequests for change simultaniously via polling."/>
+        <documentation value="Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling."/>
       </interaction>
       <versioning value="versioned-update"/>
       <referencePolicy value="literal"/>

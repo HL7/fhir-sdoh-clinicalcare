@@ -216,7 +216,7 @@ Referral recipient light - no server expectations
                 <a title="Allows the monitoring of previously-retrieved Practitioners that are the requester or intended performer of ServiceRequests." href="#Practitioner-search-type">SHOULD</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest." href="#Practitioner-read">SHALL</a>
+                <a title="Allows the system to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest." href="#Practitioner-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -232,7 +232,7 @@ Referral recipient light - no server expectations
                 <a title="Allows the monitoring of previously-retrieved PractitionerRoles that are the requester or intended performer of ServiceRequests." href="#PractitionerRole-search-type">SHOULD</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest." href="#PractitionerRole-read">SHALL</a>
+                <a title="Allows the system to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest." href="#PractitionerRole-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -261,7 +261,7 @@ Referral recipient light - no server expectations
             <tr>
               <th>ServiceRequest</th>
               <td>
-                <a title="Allows client systems to monitor multiple ServiceRequests for change simultaniously via polling." href="#ServiceRequest-search-type">SHOULD</a>
+                <a title="Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling." href="#ServiceRequest-search-type">SHOULD</a>
               </td>
               <td>
                 <a title="Allows client systems to retrieve the ServiceRequest pointed to by a Task." href="#ServiceRequest-read">SHALL</a>
@@ -285,7 +285,7 @@ Referral recipient light - no server expectations
                 <a title="Necessary if using subscriptions to monitor updates to the Task" href="#Subscription-create">SHOULD</a>
               </td>
               <td>
-                <a title="Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id)typically to cancel a request for fulfillment" href="#Subscription-update">MAY</a>
+                <a title="Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id) typically to cancel a request for fulfillment" href="#Subscription-update">MAY</a>
               </td>
               <td/>
               <td>$status: <a title="Necessary for systems supporting subscriptions to ensure that the subscription is functioning properly and to check for errors" href="#Subscription-status">SHOULD</a>
@@ -1278,7 +1278,7 @@ Referral recipient light - no server expectations
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest.</p>
+                <p>Allows the system to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -1356,7 +1356,7 @@ Referral recipient light - no server expectations
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest.</p>
+                <p>Allows the system to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -1539,7 +1539,7 @@ Referral recipient light - no server expectations
               </th>
               <td>SHOULD</td>
               <td>
-                <p>Allows client systems to monitor multiple ServiceRequests for change simultaniously via polling.</p>
+                <p>Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling.</p>
               </td>
             </tr>
           </tbody>
@@ -1688,7 +1688,7 @@ Referral recipient light - no server expectations
               </th>
               <td>MAY</td>
               <td>
-                <p>Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id)typically to cancel a request for fulfillment</p>
+                <p>Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id) typically to cancel a request for fulfillment</p>
               </td>
             </tr>
             <tr>
@@ -2295,7 +2295,7 @@ Referral recipient light - no server expectations
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest."/>
+        <documentation value="Allows the system to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -2333,7 +2333,7 @@ Referral recipient light - no server expectations
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest."/>
+        <documentation value="Allows the system to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -2444,7 +2444,7 @@ Referral recipient light - no server expectations
           <valueCode value="SHOULD"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows client systems to monitor multiple ServiceRequests for change simultaniously via polling."/>
+        <documentation value="Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling."/>
       </interaction>
       <referencePolicy value="literal"/>
       <searchInclude value="ServiceRequest:supporting-info">
@@ -2598,7 +2598,7 @@ Referral recipient light - no server expectations
           <valueCode value="MAY"/>
         </extension>
         <code value="update"/>
-        <documentation value="Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id)typically to cancel a request for fulfillment"/>
+        <documentation value="Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id) typically to cancel a request for fulfillment"/>
       </interaction>
       <operation>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">

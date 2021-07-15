@@ -7,7 +7,7 @@
       <h2>SDOH Clinical Care Referral Recipient</h2>
       <p>(Requirements Definition Capability Statement)</p>
       <p>Canonical URL: http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOH-ClinicalCareReferralRecipient Published: 2021-06 (draft)</p>
-      <p>This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral recipients'.  These are typically community-based organizations that can provide services such as food bank access, housing remediation, etc.  In some cases, a referral recipient might actually further refer the patient to a downstream service provider through non-FHIR means.  In such cases, the system is still treated as a 'referral recipient' rather than a <a href="CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html">Coordination Platform</a> because, from a FHIR interface perspective, the referral process 'stops' with that system.  Referral recipients must be able to receive or monitor for Tasks issued by <a href="CapabilityStatement-SDOH-ClinicalCareReferralSource.html">Referral Sources</a> and <a href="CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html">Coordination Platforms</a>.  They must also be able to respond to access the ServiceRequest representing the referral pointed to by the Task and any relevant information referenced by the referral, update the Task with their acceptance or rejection of the referral, and finally provide information about what interventions were actually performmed using the Procedure resource.\n\n There are actually two types of referral recipients defined in this implementation guide.  This CapabilityStatement describes the expected behavior of more sophisticated service delivery systems that are capable of exposing a FHIR service and persisting Tasks and Procedures in their own environment.  A separate set of interface expectations is defined for <a href="CapabilityStatement-SDOH-ClinicalCareReferralRecipientLight.html">'Light' Referral Recipients</a> that are not capable of exposing an endpoint and where the Task and any resulting Procedures must be stored in the requesting system's database.</p>
+      <p>This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral recipients'.  These are typically community-based organizations that can provide services such as food bank access, housing remediation, etc.  In some cases, a referral recipient might actually further refer the patient to a downstream service provider through non-FHIR means.  In such cases, the system is still treated as a 'referral recipient' rather than a <a href="CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html">Coordination Platform</a> because, from a FHIR interface perspective, the referral process 'stops' with that system.  Referral recipients must be able to receive or monitor for Tasks issued by <a href="CapabilityStatement-SDOH-ClinicalCareReferralSource.html">Referral Sources</a> and <a href="CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html">Coordination Platforms</a>.  They must also be able to respond to access the ServiceRequest representing the referral pointed to by the Task and any relevant information referenced by the referral, update the Task with their acceptance or rejection of the referral, and finally provide information about what interventions were actually performed using the Procedure resource.\n\n There are actually two types of referral recipients defined in this implementation guide.  This CapabilityStatement describes the expected behavior of more sophisticated service delivery systems that are capable of exposing a FHIR service and persisting Tasks and Procedures in their own environment.  A separate set of interface expectations is defined for <a href="CapabilityStatement-SDOH-ClinicalCareReferralRecipientLight.html">'Light' Referral Recipients</a> that are not capable of exposing an endpoint and where the Task and any resulting Procedures must be stored in the requesting system's database.</p>
       <h2>General</h2>
       <div class="table-wrapper">
         <table class="grid">
@@ -213,7 +213,7 @@
                 <a title="Allows the monitoring of previously-retrieved Practitioners that are the requester or intended performer of ServiceRequests." href="#Practitioner-search-type">SHOULD</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest." href="#Practitioner-read">SHALL</a>
+                <a title="Allows the system to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest." href="#Practitioner-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -229,7 +229,7 @@
                 <a title="Allows the monitoring of previously-retrieved PractitionerRoles that are the requester or intended performer of ServiceRequests." href="#PractitionerRole-search-type">SHOULD</a>
               </td>
               <td>
-                <a title="Allows the system to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest." href="#PractitionerRole-read">SHALL</a>
+                <a title="Allows the system to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest." href="#PractitionerRole-read">SHALL</a>
               </td>
               <td/>
               <td/>
@@ -258,7 +258,7 @@
             <tr>
               <th>ServiceRequest</th>
               <td>
-                <a title="Allows client systems to monitor multiple ServiceRequests for change simultaniously via polling." href="#ServiceRequest-search-type">SHOULD</a>
+                <a title="Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling." href="#ServiceRequest-search-type">SHOULD</a>
               </td>
               <td>
                 <a title="Allows client systems to retrieve the ServiceRequest pointed to by a Task." href="#ServiceRequest-read">SHALL</a>
@@ -282,7 +282,7 @@
                 <a title="Necessary if using subscriptions to monitor updates to the Task" href="#Subscription-create">SHOULD</a>
               </td>
               <td>
-                <a title="Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id)typically to cancel a request for fulfillment" href="#Subscription-update">MAY</a>
+                <a title="Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id) typically to cancel a request for fulfillment" href="#Subscription-update">MAY</a>
               </td>
               <td/>
               <td>$status: <a title="Necessary for systems supporting subscriptions to ensure that the subscription is functioning properly and to check for errors" href="#Subscription-status">SHOULD</a>
@@ -1275,7 +1275,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest.</p>
+                <p>Allows the system to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -1353,7 +1353,7 @@
               </th>
               <td>SHALL</td>
               <td>
-                <p>Allows the system to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest.</p>
+                <p>Allows the system to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest.</p>
               </td>
             </tr>
             <tr>
@@ -1536,7 +1536,7 @@
               </th>
               <td>SHOULD</td>
               <td>
-                <p>Allows client systems to monitor multiple ServiceRequests for change simultaniously via polling.</p>
+                <p>Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling.</p>
               </td>
             </tr>
           </tbody>
@@ -1685,7 +1685,7 @@
               </th>
               <td>MAY</td>
               <td>
-                <p>Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id)typically to cancel a request for fulfillment</p>
+                <p>Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id) typically to cancel a request for fulfillment</p>
               </td>
             </tr>
             <tr>
@@ -2028,7 +2028,7 @@
   <title value="SDOH Clinical Care Referral Recipient"/>
   <status value="draft"/>
   <date value="2021-06"/>
-  <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral recipients'.  These are typically community-based organizations that can provide services such as food bank access, housing remediation, etc.  In some cases, a referral recipient might actually further refer the patient to a downstream service provider through non-FHIR means.  In such cases, the system is still treated as a 'referral recipient' rather than a [[CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html|Coordination Platform]] because, from a FHIR interface perspective, the referral process 'stops' with that system.  Referral recipients must be able to receive or monitor for Tasks issued by [[CapabilityStatement-SDOH-ClinicalCareReferralSource.html|Referral Sources]] and [[CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html|Coordination Platforms]].  They must also be able to respond to access the ServiceRequest representing the referral pointed to by the Task and any relevant information referenced by the referral, update the Task with their acceptance or rejection of the referral, and finally provide information about what interventions were actually performmed using the Procedure resource.\n\n There are actually two types of referral recipients defined in this implementation guide.  This CapabilityStatement describes the expected behavior of more sophisticated service delivery systems that are capable of exposing a FHIR service and persisting Tasks and Procedures in their own environment.  A separate set of interface expectations is defined for [[CapabilityStatement-SDOH-ClinicalCareReferralRecipientLight.html|'Light' Referral Recipients]] that are not capable of exposing an endpoint and where the Task and any resulting Procedures must be stored in the requesting system's database."/>
+  <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral recipients'.  These are typically community-based organizations that can provide services such as food bank access, housing remediation, etc.  In some cases, a referral recipient might actually further refer the patient to a downstream service provider through non-FHIR means.  In such cases, the system is still treated as a 'referral recipient' rather than a [[CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html|Coordination Platform]] because, from a FHIR interface perspective, the referral process 'stops' with that system.  Referral recipients must be able to receive or monitor for Tasks issued by [[CapabilityStatement-SDOH-ClinicalCareReferralSource.html|Referral Sources]] and [[CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html|Coordination Platforms]].  They must also be able to respond to access the ServiceRequest representing the referral pointed to by the Task and any relevant information referenced by the referral, update the Task with their acceptance or rejection of the referral, and finally provide information about what interventions were actually performed using the Procedure resource.\n\n There are actually two types of referral recipients defined in this implementation guide.  This CapabilityStatement describes the expected behavior of more sophisticated service delivery systems that are capable of exposing a FHIR service and persisting Tasks and Procedures in their own environment.  A separate set of interface expectations is defined for [[CapabilityStatement-SDOH-ClinicalCareReferralRecipientLight.html|'Light' Referral Recipients]] that are not capable of exposing an endpoint and where the Task and any resulting Procedures must be stored in the requesting system's database."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="xml"/>
@@ -2602,7 +2602,7 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve an Practitioner that is the requester or intended performer of a ServiceRequest."/>
+        <documentation value="Allows the system to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -2640,7 +2640,7 @@
           <valueCode value="SHALL"/>
         </extension>
         <code value="read"/>
-        <documentation value="Allows the system to retrieve an PractitionerRole that is the requester or intended performer of a ServiceRequest."/>
+        <documentation value="Allows the system to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -2751,7 +2751,7 @@
           <valueCode value="SHOULD"/>
         </extension>
         <code value="search-type"/>
-        <documentation value="Allows client systems to monitor multiple ServiceRequests for change simultaniously via polling."/>
+        <documentation value="Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling."/>
       </interaction>
       <referencePolicy value="literal"/>
       <searchInclude value="ServiceRequest:supporting-info">
@@ -2905,7 +2905,7 @@
           <valueCode value="MAY"/>
         </extension>
         <code value="update"/>
-        <documentation value="Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id)typically to cancel a request for fulfillment"/>
+        <documentation value="Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id) typically to cancel a request for fulfillment"/>
       </interaction>
       <operation>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
