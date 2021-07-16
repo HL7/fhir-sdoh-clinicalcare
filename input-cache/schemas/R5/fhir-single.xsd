@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Fri, Jul 9, 2021 17:10+0000 for FHIR v4.6.0 
+  Generated on Wed, Jul 14, 2021 02:27+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -13824,7 +13824,7 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">The incidence of the interaction, e.g. theoretical, observed.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="management" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="management" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Actions for managing the interaction.</xs:documentation>
            </xs:annotation>
@@ -38670,11 +38670,6 @@ For resource issues, this will be a simple XPath limited to element names, repet
               <xs:documentation xml:lang="en">States whether a drug product is supplied with another item such as a diluent or adjuvant.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="marketingAuthorization" minOccurs="0" maxOccurs="1" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">An authorization for this package type.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
           <xs:element name="manufacturer" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Manufacturer of this package type. When there are multiple it means these are all possible manufacturers.</xs:documentation>
@@ -38788,7 +38783,7 @@ For resource issues, this will be a simple XPath limited to element names, repet
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="item" minOccurs="0" maxOccurs="unbounded" type="CodeableReference">
+          <xs:element name="item" minOccurs="1" maxOccurs="1" type="CodeableReference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The actual item(s) of medication, as manufactured, or a device (typically, but not necessarily, a co-packaged one), or other medically related item (such as food, biologicals, raw materials, medical fluids, gases etc.), as contained in the package. This also allows another packaged product to be included, which is solely for the case where a package of other entire packages is wanted - such as a wholesale or distribution pack.</xs:documentation>
            </xs:annotation>
@@ -46339,6 +46334,11 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
               <xs:documentation xml:lang="en">General information detailing this substance.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="molecularWeight" type="SubstanceDefinition.MolecularWeight" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The molecular weight or weight range (for proteins, polymers or nucleic acids).</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="structure" type="SubstanceDefinition.Structure" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">Structural information.</xs:documentation>
@@ -46352,11 +46352,6 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           <xs:element name="name" type="SubstanceDefinition.Name" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Names applicable to this substance.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="molecularWeight" type="SubstanceDefinition.MolecularWeight" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The molecular weight or weight range (for proteins, polymers or nucleic acids).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="relationship" type="SubstanceDefinition.Relationship" minOccurs="0" maxOccurs="unbounded">
@@ -46489,6 +46484,32 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="SubstanceDefinition.MolecularWeight">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">The detailed description of a substance, typically at a level beyond what is used for prescribing.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="method" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The method by which the molecular weight was determined.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Type of molecular weight such as exact, average (also known as. number average), weight average.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="amount" minOccurs="1" maxOccurs="1" type="Quantity">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="SubstanceDefinition.Structure">
     <xs:annotation>
       <xs:documentation xml:lang="en">The detailed description of a substance, typically at a level beyond what is used for prescribing.</xs:documentation>
@@ -46516,11 +46537,6 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
               <xs:documentation xml:lang="en">Specified per moiety according to the Hill system, i.e. first C, then H, then alphabetical, each moiety separated by a dot.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="isotope" type="SubstanceDefinition.Isotope" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
           <xs:element name="molecularWeight" type="SubstanceDefinition.MolecularWeight" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">The molecular weight or weight range (for proteins, polymers or nucleic acids).</xs:documentation>
@@ -46539,68 +46555,6 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           <xs:element name="representation" type="SubstanceDefinition.Representation" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">A depiction of the structure or characterization of the substance.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="SubstanceDefinition.Isotope">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">The detailed description of a substance, typically at a level beyond what is used for prescribing.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="identifier" minOccurs="0" maxOccurs="1" type="Identifier">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Substance identifier for each non-natural or radioisotope.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="name" minOccurs="0" maxOccurs="1" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Substance name for each non-natural or radioisotope.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="substitution" minOccurs="0" maxOccurs="1" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The type of isotopic substitution present in a single substance.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="halfLife" minOccurs="0" maxOccurs="1" type="Quantity">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Half life - for a non-natural nuclide.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="molecularWeight" type="SubstanceDefinition.MolecularWeight" minOccurs="0" maxOccurs="1">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The molecular weight or weight range (for proteins, polymers or nucleic acids).</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="SubstanceDefinition.MolecularWeight">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">The detailed description of a substance, typically at a level beyond what is used for prescribing.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="method" minOccurs="0" maxOccurs="1" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The method by which the molecular weight was determined.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Type of molecular weight such as exact, average (also known as. number average), weight average.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="amount" minOccurs="0" maxOccurs="1" type="Quantity">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>

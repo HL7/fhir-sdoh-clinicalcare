@@ -10,8 +10,18 @@
 			"date": "2020-12-01"
 		},
 		{
+			"version": "1.0.0",
+			"desc": "STU 1 release",
+			"status": "ballot",
+			"sequence": "STU 1",
+			"fhirversion": "4.0.1",
+			"path": "http://hl7.org/fhir/us/sdoh-clinicalcare/STU1",
+			"date": "2021-07-23",
+			"current": false
+		},
+		{
 			"version": "0.1.0",
-			"desc": "STU 1",
+			"desc": "STU 1 ballot",
 			"status": "ballot",
 			"sequence": "STU 1",
 			"fhirversion": "4.0.1",
