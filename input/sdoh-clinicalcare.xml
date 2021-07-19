@@ -169,7 +169,7 @@
                 <display value="SDOHCC Observation Assessment"/>
             </reference>
             <name value="SDOHCC Observation Assessment"/>
-            <description value="This profile constrains the Observation resource for use related to Social Determinants of Health observations that involve assessment (e.g., by a provider or payer) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation). The Cross-Group Projects work group granted an exception to US Core on 12/03/2020 - Jira ticket 29795."/>
+            <description value="This profile constrains the Observation resource for use related to Social Determinants of Health observations that involve assessment (e.g., by a provider or payer) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation). The Cross-Group Projects work group granted an exception to US Core on 06/10/2022 - Jira ticket 32892."/>
             <groupingId value="new-group1"/>
         </resource>
         <resource>
