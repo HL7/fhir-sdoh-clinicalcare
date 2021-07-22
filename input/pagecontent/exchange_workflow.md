@@ -64,7 +64,7 @@ The referral occurs between the Referral Source and the Referral Receiver.  The 
 
 #### Direct Referral Light
 
-The referral occurs between the Referral Source and the Referral Receiver where the Referral Receiver does not have a FHRI API (FHIR Server or FHRI Façade) .  The Referral Receiver may be the Referral Performer or an Intermediary.  The exchange with the Referral Receiver is initiated via an email with a secure link to the Referral Source API that can be used by an application available to the Referral Receiver to communicate with the Referral Source using RESTful exchanges that read, create, update resources via the Referral Source API.
+The referral occurs between the Referral Source and the Referral Receiver where the Referral Receiver does not have a FHRI API (FHIR Server or FHRI Façade).  The Referral Receiver may be the Referral Performer or an Intermediary.  The exchange with the Referral Receiver is initiated via an email with a secure link to the Referral Source API that can be used by an application available to the Referral Receiver to communicate with the Referral Source using RESTful exchanges that read, create, update resources via the Referral Source API.
 
 <table><tr><td><img src="DirectReferralLightSF.jpg" /></td></tr></table>
 
@@ -74,7 +74,7 @@ The referral occurs between the Referral Source and the Referral Receiver where 
 
 The referral occurs in two separate interactions. The first is between the Referral Source and the Intermediary and the second is between the Intermediary and the Referral Performer
 
-This IG assumes that, in an Indirect Referral, the Referral Performer does not have the ability to communicate directly with the Referral Source.  Therefore the the intermediary SHALL support the following.
+This IG assumes that, in an Indirect Referral, the Referral Performer does not have the ability to communicate directly with the Referral Source.  Therefore, the intermediary SHALL support the following.
 
 1. Create a local copy of all of the relevant referenced resources from the Referral Source
 2. Create a Task to be Posted to the Referral Performer that references the Referral Source Task via Task.partof
