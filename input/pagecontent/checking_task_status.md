@@ -71,7 +71,7 @@ If search is used, the client MAY use _include=Task:focus to retrieve the refere
 <code>[base]/Task?_id=1234m5678&_include=Task:focus</code>
 
 ##### Task topic
-This topic allow for monitoring for newly created tasks as well as updates to assigned or requested tasks.
+This topic allows for monitoring for newly created tasks as well as updates to assigned or requested tasks.
 
 <table class="grid">
   <thead>
@@ -130,7 +130,7 @@ This topic allow for monitoring for newly created tasks as well as updates to as
 </table>
 
 ##### ServiceRequest topic
-This topic allow for monitoring for changes to a ServiceRequest when an organization is involved in fulfilling that request.  (E.g. to be
+This topic allows for monitoring for changes to a ServiceRequest when an organization is involved in fulfilling that request.  (E.g. to be
 aware if the request is suspended, cancelled or otherwise modified.  The intent with this subscription is that the filter criteria will be
 updated regularly to refer to the specific ServiceRequest ids the organization is fulfilling.  Once fulfillment is complete, the ServiceRequest
 will no longer need to be monitored.

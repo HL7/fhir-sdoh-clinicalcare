@@ -12,7 +12,7 @@ The following depicts the general workflow anticipated by this Implementation gu
 
 ### Workflow and Managing Consent
 
-The Gravity Project recognizes the need to appropriately manage privacy and consent related to a patient's social risk issues.  This IG assumes that each organization has appropriate mechanisms in place to secure SDOH information and only release it with appropriate consent.  The [Office of the National Coordinator (ONC)](https://www.healthit.gov/) and [HL7 International (HL7)](http://www.hl7.org/index.cfm), and the [Office of Civil Rights (OCR)](https://www.hhs.gov/ocr/index.html) (this is not an exhaustive list) have active programs in place to determine what needs to be done to protect all personal information (including SDOH) from inappropriate disclosure and use.  In this version of the IG, we are providing a specification for a FHIR Consent resource that should be exchanged between a [Covered Entity](https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html) and a [Business Associate (BA)](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html) when the patient has authorized the BA to release their information to a non-HIPAA covered entity.  While this is not a complete treatment of the issues related to consent, it is a starting point to test the viability of exchanging consent information.  Future versions of this IG will incorporate additional technical standards to support the protection and authorized release of SDOH information as they are developed by the ONC, HL7, and OCR.  The diagram below illustrates the approach taken by this IG to exchange a Consent resource between a Covered Entity and its BA.
+The Gravity Project recognizes the need to appropriately manage privacy and consent related to a patient's social risk issues.  This IG assumes that each organization has appropriate mechanisms in place to secure SDOH information and will only release it with appropriate consent.  The [Office of the National Coordinator (ONC)](https://www.healthit.gov/) and [HL7 International (HL7)](http://www.hl7.org/index.cfm), and the [Office of Civil Rights (OCR)](https://www.hhs.gov/ocr/index.html) (this is not an exhaustive list) have active programs in place to determine what needs to be done to protect all personal information (including SDOH) from inappropriate disclosure and use.  In this version of the IG, we are providing a specification for a FHIR Consent resource that should be exchanged between a [Covered Entity](https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html) and a [Business Associate (BA)](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html) when the patient has authorized the BA to release their information to a non-HIPAA covered entity.  While this is not a complete treatment of the issues related to consent, it is a starting point to test the viability of exchanging consent information.  Future versions of this IG will incorporate additional technical standards to support the protection and authorized release of SDOH information as they are developed by the ONC, HL7, and OCR.  The diagram below illustrates the approach taken by this IG to exchange a Consent resource between a Covered Entity and its BA.
 
 The following diagram depicts one example of an exchange workflow supported by this version of the IG.
 
@@ -64,7 +64,7 @@ The referral occurs between the Referral Source and the Referral Receiver.  The 
 
 #### Direct Referral Light
 
-The referral occurs between the Referral Source and the Referral Receiver where the Referral Receiver does not have a FHRI API (FHIR Server or FHRI Façade).  The Referral Receiver may be the Referral Performer or an Intermediary.  The exchange with the Referral Receiver is initiated via an email with a secure link to the Referral Source API that can be used by an application available to the Referral Receiver to communicate with the Referral Source using RESTful exchanges that read, create, update resources via the Referral Source API.
+The referral occurs between the Referral Source and the Referral Receiver where the Referral Receiver does not have a FHRI API (FHIR Server or FHIR Façade).  The Referral Receiver may be the Referral Performer or an Intermediary.  The exchange with the Referral Receiver is initiated via an email with a secure link to the Referral Source API that can be used by an application available to the Referral Receiver to communicate with the Referral Source using RESTful exchanges that read, create, update resources via the Referral Source API.
 
 <table><tr><td><img src="DirectReferralLightSF.jpg" /></td></tr></table>
 
@@ -77,14 +77,14 @@ The referral occurs in two separate interactions. The first is between the Refer
 This IG assumes that, in an Indirect Referral, the Referral Performer does not have the ability to communicate directly with the Referral Source.  Therefore, the intermediary SHALL support the following.
 
 1. Create a local copy of all of the relevant referenced resources from the Referral Source
-2. Create a Task to be Posted to the Referral Performer that references the Referral Source Task via Task.partof
-3. Create a ServiceRequest with ServiceRequest.intent value filler-order and ServiceRquest.basedon references the original Referral Source ServiceRequest
-4. Since local copies of the referenced resources are maintained by the Intermediary, the intermediary must periodically query the Referral Source for updates to the referenced resources.
+2. Create a Task to be Posted to the Referral Performer that references the Referral Source Task via Task.partOf
+3. Create a ServiceRequest with ServiceRequest.intent value filler-order and ServiceRquest.basedOn references the original Referral Source ServiceRequest
+4. Since local copies of the referenced resources are maintained by the Intermediary, the intermediary must periodically query the Referral Source for updates to the referenced resources
 
 <table><tr><td><img src="IndirectReferralSF.jpg" /></td></tr></table>
 
 #### Notes on Direct and Indirect Referral
-1. Parties SHOULD use polling if one or both of the parties is unable to support the subscription model (see notes on the [Checking Task Status](checking_task_status.html) page)
+1. Parties SHOULD use polling if one or both of the parties is unable to support the subscription model (see notes on the [Checking Task Status](checking_task_status.html) page).
 2. The receiving party for the referral SHOULD use the batch query process to request periodic updates of reference resources. 
 3. The above system flows do not define the handling of all possible scenarios. Exchange scenarios may include refusing the referral, canceling the referral by either party, and error conditions that may occur when using RESTful exchanges.  It is up to each party to follow current best practice in managing the state of the referral.
 4. The Referral Source SHOULD set the Task.status to "requested" until it receives a valid HTTPS response indicating that the Task was received at which point it SHOULD set the Task.status to "received".

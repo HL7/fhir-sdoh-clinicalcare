@@ -32,3 +32,26 @@ Implementers should pay specific attention to the following sections:
 * [MustSupport and Missing Data](mustsupport_and_missing_data.html) to understand the interpretation of the MustSupport flags and the treatment of Missing Data used in this IG 
 * [Artifacts Index](artifacts.html) all implementers need to understand the FHIR R4 profiles, examples and other FHIR artifacts defined in this implementation guide and linked from this section
 * [Downloads](downloads.html) links to allow implementers to download the IG and various artifacts
+
+
+
+
+
+### Authors
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Email/URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HL7 International - Patient Care</td>
+<td><a href="http://www.hl7.org/Special/committees/patientcare" target="_new">http://www.hl7.org/Special/committees/patientcare</a></td>
+</tr>
+</tbody>
+</table>
+
+
