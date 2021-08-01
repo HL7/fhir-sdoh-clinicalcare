@@ -10,9 +10,9 @@ Patient is assessed by a caregiver and referred to CP.  CP refers to a CBO to de
 
 ##### Actors
 
-- Caregiver (includes licensed providers and others that interact with the patient to assess social risk, set goal, and determine/recommend referrals )
+- Caregiver (includes licensed providers and others that interact with the patient to assess social risk, set goal, and determine/recommend referrals)
 - Care Coordinator (coordinates the care and referral activities but normally does not make assessment, goal, or referral decisions)
-- Patient (consumer, client, ect.)
+- Patient (consumer, client, etc.)
 - Coordination Platform (CP)
 - Community Based Organization (CBO)
 

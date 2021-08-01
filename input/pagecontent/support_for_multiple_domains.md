@@ -6,7 +6,7 @@ Each profile element that defines specific SDOH coded concepts will reference th
 
 The Gravity Project plans to work with the HL7 Vocabulary WG to determine how best to represent the domain specific value sets in each of the relevant resources and to establish appropriate methods to validate the consistent use of the correct domain specific codes. Future versions of this IG will include the logic to select specific value sets based on the SDOH domain.
 
-In this IG, the exchange of the following activities are supported with specific SDOH profiles on either the base resources or on the respective US Core Profile  ](http://hl7.org/fhir/us/core/STU3.1.1/index.html). A complete listing of the resources used is contained in the [FHIR Artifacts Overview](fhir_artifacts_overview.html) page.  The following is a brief summary focused on the specific activities:
+In this IG, the exchange of the following activities are supported with specific SDOH profiles on either the base resources or on the respective [US Core Profile ](http://hl7.org/fhir/us/core/STU3.1.1/index.html). A complete listing of the resources used is contained in the [FHIR Artifacts Overview](fhir_artifacts_overview.html) page.  The following is a brief summary focused on the specific activities:
 
 * Assessments
   * [Observation](StructureDefinition-SDOHCC-ObservationScreeningResponse.html) profile based on the [Survey process](survey_instrument_support.html) defined in this IG uses [LOINC](https://loinc.org/) codes.  Each of the supported survey instruments are defined as [Survey Panels](https://loinc.org/panels/category/survey-instruments/) in the LOINC database. 
@@ -17,6 +17,3 @@ In this IG, the exchange of the following activities are supported with specific
   *  [Goal](StructureDefinition-SDOHCC-Goal.html) profile that uses both [LOINC](https://loinc.org/)  and [SNOMED CT](http://www.snomed.org/) codes for patient goals, and domain specific Goals.
 * Interventions/Referrals 
   * [Service Request](StructureDefinition-SDOHCC-ServiceRequest.html) profile and [Procedure](StructureDefinition-SDOHCC-Procedure.html) profile use a combination of terminologies ([SNOMED CT Procedure Codes](http://www.snomed.org/), [HCPCS II](https://terminology.hl7.org/2.1.0/CodeSystem-HCPCS-all-codes.html), [CPT](http://terminology.hl7.org/2.1.0/CodeSystem-v3-cpt-4.html), and occasionally [LOINC](https://loinc.org/)  ) to define specific referrals and interventions that may be domain specific, cross domains or reflect a subset of a domain specific health concerns, problems, and goals. 
-
-
-

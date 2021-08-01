@@ -7,7 +7,7 @@ All implementations of the SDOH ClinicalCare FHIR Implementation Guide (IG)
 * **SHOULD** support the consent and data sharing policies of trading partners involved in the exchange that are more protective so long as policies are consistent with or more restrictive than Federal and State statutes and regulations.
 
 ### FHIR Security and Implementation Guidance
-All implementations of the SDOH ClinicalCare FHIR Implementation Guide (IG) **SHOULD** follow the FHIR Security guidance and FHIR Implementer’s Safety guidance as defined in the relevant FHIR specification (e.g. Release 4.1.0) where applicable and not superseded by this Section or specific IG requirements.
+All implementations of the SDOH ClinicalCare FHIR Implementation Guide (IG) **SHOULD** follow the FHIR Security guidance and FHIR Implementer’s Safety guidance as defined in the relevant FHIR specification (e.g., Release 4.1.0) where applicable and not superseded by this Section or specific IG requirements.
 
 The FHIR Security specification provides guidance related to communication security, authentication, authorization/access control, audit, digital signatures, attachments, labels, narrative, and input validation. The FHIR security specification is available [here](http://hl7.org/fhir/R4/security.html)
 
@@ -32,7 +32,7 @@ When the identity of the requesting or receiving party is important, implementat
 Note: There is ongoing work to enhance the capabilities of the above specifications to ensure a more secure exchange that recognizes issues related to fine grain scopes.
 
 ### Additionally Protected Information
-Additionally protected information may include items defined by Federal (e.g. 42 CFR Part 2), State (e.g. many states protect substance abuse disorder, HIV diagnosis/treatment records, release of information on minors – note this is not an exhaustive list) statutes and regulations. In addition, organizations may provide for additional protection for specific types of information that are deemed sensitive to the individual (e.g. SDOH information). The following guidelines apply unless otherwise dictated by statute or regulation:
+Additionally protected information may include items defined by Federal (e.g., 42 CFR Part 2), State (e.g., many states protect substance abuse disorder, HIV diagnosis/treatment records, release of information on minors – note this is not an exhaustive list) statutes and regulations. In addition, organizations may provide for additional protection for specific types of information that are deemed sensitive to the individual (e.g., SDOH information). The following guidelines apply unless otherwise dictated by statute or regulation:
 
 Where permitted by law and in accordance with legal requirements and, where appropriate, consent of the individual, release of additionally protected information **SHALL** always be supported.
-Release of the information without explicit request of the patient/member **SHALL** be based on organization policy consistent with Federal and State regulations. Examples are legal request for information and “break glass” to treat a patient that is unable to provide consent.
+Release of the information without explicit request of the patient/member **SHALL** be based on organization policy consistent with Federal and State regulations. Examples are legal requests for information and “break glass” to treat a patient that is unable to provide consent.

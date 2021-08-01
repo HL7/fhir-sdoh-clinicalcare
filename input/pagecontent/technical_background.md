@@ -5,7 +5,7 @@ This guide is based on the [HL7 FHIR](http://www.hl7.org/implement/standards/pro
 This implementation guide uses terminology, notations and design principles that are specific to FHIR. Before reading this implementation guide, it’s important to be familiar with some of the basic principles of FHIR as well as general guidance on how to read FHIR specifications. Readers who are unfamiliar with FHIR are encouraged to read (or at least skim) the following prior to reading the rest of this implementation guide.
 
 * 	[FHIR overview](http://www.hl7.org/fhir/overview.html)
-* 	[Developers introduction (or Clinical introduction)](http://www.hl7.org/fhir/overview-dev.html)
+* 	[Developer's introduction (or Clinical introduction)](http://www.hl7.org/fhir/overview-dev.html)
 * 	[FHIR data types](http://www.hl7.org/fhir/datatypes.html)
 * 	[Using codes](http://www.hl7.org/fhir/codesystem.html)
 * 	[References between resources](http://www.hl7.org/fhir/references.html)
