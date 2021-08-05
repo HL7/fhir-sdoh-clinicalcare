@@ -5,7 +5,7 @@
 			"path": "http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare",
 			"desc": "Continuous  Integration Build",
 			"fhirversion": "4.0.1",
-			"status": "ci-build",
+			"status": "STU1",
 			"current": true,
 			"date": "2020-12-01"
 		},
