@@ -5,7 +5,7 @@
 			"path": "http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare",
 			"desc": "Continuous  Integration Build",
 			"fhirversion": "4.0.1",
-			"status": "STU1",
+			"status": "ci-build",
 			"current": true,
 			"date": "2020-12-01"
 		},
@@ -13,7 +13,7 @@
 			"version": "1.0.0",
 			"desc": "STU 1 release",
 			"status": "ballot",
-			"sequence": "STU 1",
+			"sequence": "trial-use",
 			"fhirversion": "4.0.1",
 			"path": "http://hl7.org/fhir/us/sdoh-clinicalcare/STU1",
 			"date": "2021-07-23",
