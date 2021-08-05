@@ -688,7 +688,7 @@
         </parameter>
         <parameter>
             <code value="releaselabel"/>
-            <value value="CI Build"/>
+            <value value="STU 1"/>
         </parameter>
     </definition>
 </ImplementationGuide>
