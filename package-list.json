@@ -17,7 +17,7 @@
 			"fhirversion": "4.0.1",
 			"path": "http://hl7.org/fhir/us/sdoh-clinicalcare/STU1",
 			"date": "2021-07-23",
-			"current": false
+			"current": true
 		},
 		{
 			"version": "0.1.0",
