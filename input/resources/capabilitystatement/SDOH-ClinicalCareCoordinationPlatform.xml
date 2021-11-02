@@ -395,7 +395,7 @@
       <p>Supported Profile(s):</p>
       <ul>
         <li>
-          <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam.html">http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam</a>
+          <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-careteam.html">http://hl7.org/fhir/us/core/StructureDefinition-us-core-careteam</a>
         </li>
       </ul>
       <h4>Behavior</h4>
@@ -756,7 +756,7 @@
       <p>Supported Profile(s):</p>
       <ul>
         <li>
-          <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference.html">http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference</a>
+          <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html">http://hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference</a>
         </li>
       </ul>
       <h4>Behavior</h4>
@@ -1167,7 +1167,7 @@
       <p>Supported Profile(s):</p>
       <ul>
         <li>
-          <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization.html">http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization</a>
+          <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-organization.html">http://hl7.org/fhir/us/core/StructureDefinition-us-core-organization</a>
         </li>
       </ul>
       <h4>Behavior</h4>
