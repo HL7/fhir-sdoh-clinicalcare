@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Location
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-LocationExample"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2021-10-29T17:54:41.611+00:00"/>
+        <source value="#Hk9s4usRMITPUGw4"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Location"/>
+    </meta>
+    <name value="Family Counseling Services Deerland Clinic"/>
+    <address>
+        <text value="245 Amble St, Deerland, IL 62223"/>
+        <line value="245 Amble St,"/>
+        <city value="Deerland"/>
+        <state value="IL"/>
+        <postalCode value="62223"/>
+    </address>
+</Location>

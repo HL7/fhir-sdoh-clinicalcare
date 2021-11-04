@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Goal"/>
     <meta>
-        <versionId value="5"/>
-        <lastUpdated value="2021-06-11T14:37:43.830+00:00"/>
-        <source value="#X7ypkyf5Yuh4IGdz"/>
+        <versionId value="6"/>
+        <lastUpdated value="2021-10-27T17:12:16.788+00:00"/>
+        <source value="#W19xqTdF9UwfQZtu"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal"/>
     <version value="0.1.0"/>
@@ -13,7 +13,7 @@
     <title value="SDOHCC Goal"/>
     <status value="draft"/>
     <date value="2020-12-14T04:01:34+00:00"/>
-    <description value="This profile constrains the Goal resource for goals that address Social Determinants of Health."/>
+    <description value="Profile for goals that address Social Determinants of Health (SDOH)."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>

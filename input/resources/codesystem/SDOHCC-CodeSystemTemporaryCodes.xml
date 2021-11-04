@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-CodeSystemTemporaryCodes"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2021-06-14T15:48:44.088+00:00"/>
-        <source value="#3UiNjtreoPIpWf7V"/>
+        <versionId value="9"/>
+        <lastUpdated value="2021-10-29T17:30:15.484+00:00"/>
+        <source value="#iTUJuo5BEWONWKBw"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
     <version value="0.1.0"/>
@@ -22,7 +22,7 @@
             <value value="http://www.hl7.org/Special/committees/patientcare"/>
         </telecom>
     </contact>
-    <description value="A local code system defined within the context of the SDOH-ClinicalCare IG."/>
+    <description value="A local code system defined within the context of the SDOH-CC IG."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -93,6 +93,16 @@
         <definition value="Category for Social Determinant of Health artifacts that pertain to Stress (which is defined as: When a person perceives the demands of environmental stimuli to be greater than their ability to meet, mitigate, or alter those demands.) This SDOH category covers records relevant to circumstances that range from Stress to 'No stress'."/>
     </concept>
     <concept>
+        <code value="social-connection"/>
+        <display value="Social Connection"/>
+        <definition value="Category for Social Determinant of Health artifacts that pertain to Social Connection (which is defined as: An umbrella term that encompasses the structural, functional, and quality aspects of how individuals connect to each other.) This SDOH category covers records relevant to circumstances that range from inadequate social connections to adequate/satisfying social connections."/>
+    </concept>
+    <concept>
+        <code value="intimate-partner-violence"/>
+        <display value="Intimate Partner Violence"/>
+        <definition value="Category for Social Determinant of Health artifacts that pertain to Intimate Partner Violence (IPV) (which is defined as: Physical violence, sexual violence, or psychological harm by a current or former partner or spouse. Often including a pattern of methods and tactics to gain and maintain power and control over the other person.) This SDOH category covers records relevant to circumstances that range from being a victim of IPV to not being a victim of IPV."/>
+    </concept>
+    <concept>
         <code value="resulting-activity"/>
         <display value="Resulting Activity"/>
         <definition value="Code used for Task.output.type to represent the activity/action that is the result of a fulfilled task."/>
@@ -106,5 +116,60 @@
         <code value="payer-coverage"/>
         <display value="Coverage By Payer Organization"/>
         <definition value="Code used for Group.characteristic to identify Group members currently covered by a specific payer organization."/>
+    </concept>
+    <concept>
+        <code value="adhoc"/>
+        <display value="Adhoc"/>
+        <definition value="Designates that further information with respect to an action to be performed 1) will be captured by another profile element in text form and 2) has no computable expectation."/>
+    </concept>
+    <concept>
+        <code value="make-contact"/>
+        <display value="Make Contact"/>
+        <definition value="Designates that the action performed is to make contact (e.g., schedule an appointment, call for results, etc.) with a designated entity (e.g., a healthcare provider, social program, etc.). Details about the the reason for the contact may captured elsewhere"/>
+    </concept>
+    <concept>
+        <code value="review-material"/>
+        <display value="Review Material"/>
+        <definition value="Designates that the action performed is to review material (e.g., attached instructions). Details about the type of material to be reviewed, the reason for reviewing the material, etc. may captured elsewhere."/>
+    </concept>
+    <concept>
+        <code value="risk-questionnaire"/>
+        <display value="Risk Questionnaire"/>
+        <definition value="A type of questionnaire that evaluates SDOH-related risk(s)."/>
+    </concept>
+    <concept>
+        <code value="feedback-questionnaire"/>
+        <display value="Feedback Questionnaire"/>
+        <definition value="A type of questionnaire that obtains feedback on a service that was offered or received."/>
+    </concept>
+    <concept>
+        <code value="application-questionnaire"/>
+        <display value="Application Questionnaire"/>
+        <definition value="A type of questionnaire that obtains information required on an application (e.g., for a social service program, insurance, benefits, etc.)."/>
+    </concept>
+    <concept>
+        <code value="other-questionnaire"/>
+        <display value="Other Questionnaire"/>
+        <definition value="A questionnaire of a type other than a 'risk-questionnaire','feedback-questionnaire', or 'application-questionnaire'."/>
+    </concept>
+    <concept>
+        <code value="contact-entity"/>
+        <display value="Contact Entity"/>
+        <definition value="Identifies an entity (e.g., a practitioner, organization, or service) that needs to be contacted."/>
+    </concept>
+    <concept>
+        <code value="adhoc-response"/>
+        <display value="Adhoc Response"/>
+        <definition value="When Task.code is 'adhoc', 'adhoc-response' for Task.input.type indicates that a free text response can be provided."/>
+    </concept>
+    <concept>
+        <code value="questionnaire-category"/>
+        <display value="Questionnaire Category"/>
+        <definition value="Identifies the category of questionnaire that should be completed."/>
+    </concept>
+    <concept>
+        <code value="contacting-subject-prohibited"/>
+        <display value="Contacting Subject Prohibited"/>
+        <definition value="Identifies that the subject does not want to be contacted for any reason related to this request. There will be alternate arrangements made with respect to contact by the subject or someone acting on their behalf."/>
     </concept>
 </CodeSystem>

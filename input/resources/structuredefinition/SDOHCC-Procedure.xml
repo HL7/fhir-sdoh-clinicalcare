@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Procedure"/>
     <meta>
-        <versionId value="5"/>
-        <lastUpdated value="2021-06-10T22:33:15.049+00:00"/>
-        <source value="#JfUnPGfoqsgql4MS"/>
+        <versionId value="8"/>
+        <lastUpdated value="2021-11-02T19:58:40.975+00:00"/>
+        <source value="#lYqYrWotG1dy4DBL"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
     <version value="0.1.0"/>
@@ -13,7 +13,7 @@
     <title value="SDOHCC Procedure"/>
     <status value="draft"/>
     <date value="2020-12-14T04:01:34+00:00"/>
-    <description value="This profile constrains the Procedure resource for interventions that address Social Determinants of Health."/>
+    <description value="Profile for interventions that address Social Determinants of Health."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -75,11 +75,13 @@
                 </discriminator>
                 <rules value="open"/>
             </slicing>
+            <min value="0"/>
         </element>
         <element id="Procedure.extension:CategorySDOH">
             <path value="Procedure.extension"/>
             <sliceName value="CategorySDOH"/>
             <requirements value="This extension can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a procedure. It is recommended that SDOH category codes be used to facilitate searching for procedures that address SDOH conditions. observations, or goals."/>
+            <min value="0"/>
             <type>
                 <code value="Extension"/>
                 <profile value="http://hl7.org/fhir/4.5/StructureDefinition/extension-Procedure.category"/>
@@ -97,6 +99,7 @@
             <short value="Pertains to SDOH goal"/>
             <definition value="Indicates that the resource is related to either the measurement, achievement or progress towards the referenced goal.  For example, a Procedure to provide food vouchers pertainsToGoal of achieving food security."/>
             <requirements value="Indicates that the procedure is related to the referenced SDOHCC Goal."/>
+            <min value="0"/>
             <type>
                 <code value="Extension"/>
                 <profile value="http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal"/>
@@ -143,14 +146,10 @@
         </element>
         <element id="Procedure.code">
             <path value="Procedure.code"/>
-            <short value="Procedure codes from SNOMED CT"/>
             <definition value="The specific procedure that is performed. Use text if the exact nature of the procedure cannot be coded."/>
             <comment value="As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), the value sets allowed for coding will be refined to codes that pertain to SDOH categories."/>
-            <requirements value="In US Core and this IG, computable procedure codes are essential to track execution against best practices and to justify payment."/>
             <binding>
                 <strength value="required"/>
-                <description value="SNOMED CT codes describing the type of Procedure"/>
-                <valueSet value="http://hl7.org/fhir/ValueSet/procedure-code"/>
             </binding>
         </element>
         <element id="Procedure.code.coding">
@@ -158,70 +157,25 @@
             <slicing>
                 <discriminator>
                     <type value="value"/>
-                    <path value="system"/>
+                    <path value="$this"/>
                 </discriminator>
                 <rules value="open"/>
             </slicing>
+            <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.&#xD;&#xA;&#xD;&#xA;Where more than one coding is used, the codings should have overlapping meaning. For example, a code related to providing meal vouchers and a code related to home delivered meals may be appropriate. However, a code related to providing meal vouchers and a code related to providing transportation vouchers would not be appropriate."/>
             <mustSupport value="true"/>
         </element>
-        <element id="Procedure.code.coding:CPTCoding">
+        <element id="Procedure.code.coding:211LA">
             <path value="Procedure.code.coding"/>
-            <sliceName value="CPTCoding"/>
-            <short value="Procedure codes from CPT"/>
-            <definition value="A reference to a CPT code for the purpose of billing."/>
-            <comment value="Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
-            <requirements value="Allows for alternative encoding with a CPT code."/>
+            <sliceName value="211LA"/>
+            <short value="Code defined by 211 LA County Taxonomy"/>
+            <definition value="A reference to a code defined by 211 LA County Taxonomy."/>
+            <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.&#xD;&#xA;&#xD;&#xA;Where more than one coding is used, the codings should have overlapping meaning. For example, a code related to providing meal vouchers and a code related to home delivered meals may be appropriate. However, a code related to providing meal vouchers and a code related to providing transportation vouchers would not be appropriate."/>
             <mustSupport value="true"/>
             <binding>
                 <strength value="required"/>
-                <description value="CPT codes describing the type of Procedure"/>
-                <valueSet value="http://hl7.org/fhir/ValueSet/cpt-all"/>
+                <description value="211 LA County codes"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet211LACounty"/>
             </binding>
-        </element>
-        <element id="Procedure.code.coding:CPTCoding.system">
-            <path value="Procedure.code.coding.system"/>
-            <min value="1"/>
-            <fixedUri value="http://www.ama-assn.org/go/cpt"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Procedure.code.coding:LOINCCoding">
-            <path value="Procedure.code.coding"/>
-            <sliceName value="LOINCCoding"/>
-            <short value="Procedure codes from LOINC"/>
-            <definition value="A reference to a LOINC code that may be used to further specify the procedure performed."/>
-            <comment value="Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
-            <requirements value="Allows for alternative encoding with a LOINC code."/>
-            <mustSupport value="true"/>
-            <binding>
-                <strength value="required"/>
-                <description value="LOINC codes describing the type of Procedure"/>
-                <valueSet value="http://hl7.org/fhir/ValueSet/observation-codes"/>
-            </binding>
-        </element>
-        <element id="Procedure.code.coding:LOINCCoding.system">
-            <path value="Procedure.code.coding.system"/>
-            <min value="1"/>
-            <fixedUri value="http://loinc.org"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Procedure.code.coding:HCPCSIICoding">
-            <path value="Procedure.code.coding"/>
-            <sliceName value="HCPCSIICoding"/>
-            <short value="Procedure codes from HCPCS Level II"/>
-            <definition value="A reference to a HCPCS Level II code for the purpose of billing."/>
-            <comment value="Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
-            <requirements value="Allows for alternative encoding with a HCPCS Level II code."/>
-            <mustSupport value="true"/>
-            <binding>
-                <strength value="required"/>
-                <description value="HCPCS Level II codes describing the type of Procedure"/>
-                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetHCPCSII"/>
-            </binding>
-        </element>
-        <element id="Procedure.code.coding:HCPCSIICoding.system">
-            <path value="Procedure.code.coding.system"/>
-            <min value="1"/>
-            <fixedUri value="urn:oid:2.16.840.1.113883.6.285"/>
         </element>
         <element id="Procedure.reasonCode">
             <path value="Procedure.reasonCode"/>

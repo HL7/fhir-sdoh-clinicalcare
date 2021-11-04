@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-TaskForPatient"/>
+    <meta>
+        <versionId value="8"/>
+        <lastUpdated value="2021-10-27T17:12:16.613+00:00"/>
+        <source value="#OOStvGB1l7U1aYw5"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"/>
+    <name value="SDOHCCTaskForPatient"/>
+    <title value="SDOHCC Task For Patient"/>
+    <status value="draft"/>
+    <description value="Profile for SDOH-related tasks to be carried out by the patient or someone acting on their behalf."/>
+    <fhirVersion value="4.0.1"/>
+    <mapping>
+        <identity value="workflow"/>
+        <uri value="http://hl7.org/fhir/workflow"/>
+        <name value="Workflow Pattern"/>
+    </mapping>
+    <mapping>
+        <identity value="rim"/>
+        <uri value="http://hl7.org/v3"/>
+        <name value="RIM Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="w5"/>
+        <uri value="http://hl7.org/fhir/fivews"/>
+        <name value="FiveWs Pattern Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="v2"/>
+        <uri value="http://hl7.org/v2"/>
+        <name value="HL7 v2 Mapping"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Task"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Task"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Task">
+            <path value="Task"/>
+            <short value="A request to fulfll a SDOH questionnaire or service request"/>
+            <constraint>
+                <key value="SDOH-Task-1"/>
+                <severity value="error"/>
+                <human value="If Task.code is “complete-questionnaire”, then Task.input of &quot;questionnaire&quot; and &quot;questionnaire-category&quot; are required, Task.input of &quot;contact-entity&quot; is prohibited, Task.output of &quot;adhoc-response&quot; is prohibited, and Task.focus is prohibited."/>
+                <expression value="code.coding.where(system='http://hl7.org/fhir/uv/sdc/CodeSystem/temp' and code='complete-questionnaire').exists() implies (input.type.coding.where(system='http://hl7.org/fhir/uv/sdc/CodeSystem/temp' and code='questionnaire').exists() and input.type.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='questionnaire-category').exists() and input.type.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='contact-entity').empty() and output.type.coding.where(system='http://hl7.org/fhir/uv/sdc/CodeSystem/temp' and code='adhoc-response').empty() and focus.empty())"/>
+                <xpath value="true()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Task-2"/>
+                <severity value="error"/>
+                <human value="If Task.code is “adhoc”, then Task.description is required, Task.input is prohibited, Task.focus is prohibited, and either Task.output is absent or Task.output must be “adhoc-response”."/>
+                <expression value="code.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='adhoc').exists() implies (description.exists() and input.empty() and focus.empty() and output.empty() or output.type.coding.all(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='adhoc-response').exists())"/>
+                <xpath value="true()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Task-3"/>
+                <severity value="error"/>
+                <human value="If Task.code is “review-material”, then Task.input of &quot;questionnaire&quot;, &quot;contact-entity&quot;, and &quot;questionnaire-category&quot; are prohibited, Task.output of &quot;questionnaire-response&quot; and “adhoc-response” are prohibited, and Task.focus of DocumentReference is required."/>
+                <expression value="code.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='review-material').exists() implies (input.type.coding.where(system='http://hl7.org/fhir/uv/sdc/CodeSystem/temp' and code='questionnaire').empty() and input.type.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='contact-entity').empty() and input.type.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='questionnaire-category').empty() and output.type.coding.where(system='http://hl7.org/fhir/uv/sdc/CodeSystem/temp' and code='questionnaire-response').empty() and output.type.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='adhoc-response').empty() and focus.resolve() is DocumentReference)"/>
+                <xpath value="true()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Task-4"/>
+                <severity value="error"/>
+                <human value="If Task.code is “make-contact”, then Task.input of at least one &quot;contact-entity&quot; is required, Task.input of &quot;questionnaire&quot; and &quot;questionnaire-category&quot; are prohibited, Task.output of &quot;questionnaire-response&quot; and “adhoc-response” are prohibited, and Task.focus is prohibited."/>
+                <expression value="code.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='make-contact').exists() implies (input.type.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='contact-entity').exists() and input.type.coding.where(system='http://hl7.org/fhir/uv/sdc/CodeSystem/temp' and code='questionnaire').empty() and input.type.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='questionnaire-category').empty() and output.type.coding.where(system='http://hl7.org/fhir/uv/sdc/CodeSystem/temp' and code='questionnaire-response').empty() and output.type.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='adhoc-response').empty() and focus.empty())"/>
+                <xpath value="true()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"/>
+            </constraint>
+        </element>
+        <element id="Task.partOf">
+            <path value="Task.partOf"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Task.partOf:SupportedPartOf">
+            <path value="Task.partOf"/>
+            <sliceName value="SupportedPartOf"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.status">
+            <path value="Task.status"/>
+            <short value="ready | cancelled | completed | in progress"/>
+            <requirements value="These states enable coordination of task status with off-the-shelf workflow solutions that support automation of tasks. The values are constrained to ready | cancelled | completed because the task come to the patient in the ready status and the patient can cancel it or complete it."/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetTaskStatus"/>
+            </binding>
+        </element>
+        <element id="Task.statusReason">
+            <path value="Task.statusReason"/>
+            <definition value="If the task is cancelled by the patient, an explanation as to why should be provided."/>
+            <comment value="This applies to the current status.  Look at the history of the task to see reasons for past statuses. If the Task.status is cancelled, then Task.statusReason.text should be included."/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.statusReason.text">
+            <path value="Task.statusReason.text"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.intent">
+            <path value="Task.intent"/>
+            <short value="order"/>
+            <definition value="Indicates the &quot;level&quot; of actionability associated with the Task."/>
+            <comment value="Patient tasks will always be orders."/>
+            <fixedCode value="order"/>
+        </element>
+        <element id="Task.priority">
+            <path value="Task.priority"/>
+            <short value="routine | urgent"/>
+            <definition value="Indicates how quickly the Task should be addressed by the patient."/>
+            <requirements value="Used to identify the level of priority assigned to this task. For tasks identified as urgent, the ability to deliver a related sevice may be dependent on task completion."/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetTaskPriority"/>
+            </binding>
+        </element>
+        <element id="Task.code">
+            <path value="Task.code"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="extensible"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetTaskCode"/>
+            </binding>
+        </element>
+        <element id="Task.code.text">
+            <path value="Task.code.text"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.description">
+            <path value="Task.description"/>
+            <comment value="If Task.code is &quot;adhoc&quot;, Task.description should be displayed to the user with no other computable expectation other than allowing the patient to update the Task.status and optionally capture a free text response for Task.output."/>
+            <condition value="SDOH-Task-2"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.focus">
+            <path value="Task.focus"/>
+            <condition value="SDOH-Task-1"/>
+            <condition value="SDOH-Task-2"/>
+            <condition value="SDOH-Task-3"/>
+            <condition value="SDOH-Task-4"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.for">
+            <path value="Task.for"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.authoredOn">
+            <path value="Task.authoredOn"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.requester">
+            <path value="Task.requester"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.owner">
+            <path value="Task.owner"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.input">
+            <path value="Task.input"/>
+            <slicing>
+                <discriminator>
+                    <type value="pattern"/>
+                    <path value="type"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <condition value="SDOH-Task-2"/>
+        </element>
+        <element id="Task.input:Questionnaire">
+            <path value="Task.input"/>
+            <sliceName value="Questionnaire"/>
+            <max value="1"/>
+            <condition value="SDOH-Task-1"/>
+            <condition value="SDOH-Task-3"/>
+            <condition value="SDOH-Task-4"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.input:Questionnaire.type">
+            <path value="Task.input.type"/>
+            <comment value="If Task.code is &quot;complete-questionnaire&quot;  MONIQUE to finish."/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/uv/sdc/CodeSystem/temp"/>
+                    <code value="questionnaire"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="example"/>
+                <description value="Codes to identify types of input parameters.  These will typically be specific to a particular workflow.  The codes represent types of questionnaires that the patient might be asked to complete."/>
+            </binding>
+        </element>
+        <element id="Task.input:Questionnaire.value[x]">
+            <path value="Task.input.value[x]"/>
+            <type>
+                <code value="canonical"/>
+                <targetProfile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract|2.7"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.input:Contact">
+            <path value="Task.input"/>
+            <sliceName value="Contact"/>
+            <comment value="If Task.code is &quot;make-contact&quot; and multiple Task.inputs are provided, the intent is that the task owner selects only one to contact. If more than one contact needs to be made, there should be separate Tasks."/>
+            <condition value="SDOH-Task-1"/>
+            <condition value="SDOH-Task-3"/>
+            <condition value="SDOH-Task-4"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.input:Contact.type">
+            <path value="Task.input.type"/>
+            <comment value="When Task.code is &quot;make-contact&quot;, &quot;contact-service&quot; is used for Task.input.type to indicate that the task owner should contact one of the healthcare services represented in Task.input.value."/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                    <code value="contact-entity"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.input:Contact.value[x]">
+            <path value="Task.input.value[x]"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.input:QuestionnaireCategory">
+            <path value="Task.input"/>
+            <sliceName value="QuestionnaireCategory"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.input:QuestionnaireCategory.type">
+            <path value="Task.input.type"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                    <code value="questionnaire-category"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.input:QuestionnaireCategory.value[x]">
+            <path value="Task.input.value[x]"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="required"/>
+                <description value="Types of Social Determinant of Health (SDOH) questionnaires that the patient might be asked to complete"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHQuestionnaireCategory"/>
+            </binding>
+        </element>
+        <element id="Task.output">
+            <path value="Task.output"/>
+            <slicing>
+                <discriminator>
+                    <type value="pattern"/>
+                    <path value="type"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <condition value="SDOH-Task-2"/>
+        </element>
+        <element id="Task.output:QuestionnaireResponse">
+            <path value="Task.output"/>
+            <sliceName value="QuestionnaireResponse"/>
+            <max value="1"/>
+            <condition value="SDOH-Task-1"/>
+            <condition value="SDOH-Task-3"/>
+            <condition value="SDOH-Task-4"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.output:QuestionnaireResponse.type">
+            <path value="Task.output.type"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/uv/sdc/CodeSystem/temp"/>
+                    <code value="questionnaire-response"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.output:QuestionnaireResponse.value[x]">
+            <path value="Task.output.value[x]"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

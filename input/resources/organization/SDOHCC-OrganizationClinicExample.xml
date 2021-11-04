@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Organization
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-OrganizationClinicExample"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2021-10-24T18:42:27.475+00:00"/>
+        <source value="#D8akw9poFN0XhmsN"/>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+    </meta>
+    <active value="true"/>
+    <name value="Better Health Clinic"/>
+    <address>
+        <text value="133th St, Deerland, IL 62223"/>
+        <line value="133th Street,"/>
+        <city value="Deerland"/>
+        <state value="IL"/>
+        <postalCode value="62223"/>
+    </address>
+</Organization>

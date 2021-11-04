@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationAssessmentSocialIsolationExample"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2021-06-11T17:03:08.835+00:00"/>
-        <source value="#LYx0U9Q8dlRVLGfz"/>
+        <versionId value="3"/>
+        <lastUpdated value="2021-10-29T21:48:53.994+00:00"/>
+        <source value="#hSDsPKJFTRukrwFp"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"/>
     </meta>
     <status value="final"/>
@@ -19,8 +19,8 @@
     <category>
         <coding>
             <system value="http://example.org/CodeSystem/other-code-system"/>
-            <code value="social-connectedness"/>
-            <display value="Social Connectedness"/>
+            <code value="social-connection"/>
+            <display value="Social Connection"/>
         </coding>
     </category>
     <code>
