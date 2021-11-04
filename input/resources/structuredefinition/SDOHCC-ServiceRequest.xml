@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ServiceRequest"/>
     <meta>
-        <versionId value="9"/>
-        <lastUpdated value="2021-07-06T18:59:47.950+00:00"/>
-        <source value="#I2aqNdtMLqHv9Dpl"/>
+        <versionId value="17"/>
+        <lastUpdated value="2021-11-02T21:51:31.348+00:00"/>
+        <source value="#MawnUx8WlWJI06P1"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
     <version value="0.1.0"/>
@@ -13,7 +13,7 @@
     <title value="SDOHCC ServiceRequest"/>
     <status value="draft"/>
     <date value="2020-12-14T04:01:34+00:00"/>
-    <description value="This profile constrains the ServiceRequest resource for requests that address Social Determinants of Health."/>
+    <description value="Profile for service requests that address Social Determinants of Health."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -67,6 +67,7 @@
                 </discriminator>
                 <rules value="open"/>
             </slicing>
+            <min value="0"/>
         </element>
         <element id="ServiceRequest.extension:pertainsToGoal">
             <path value="ServiceRequest.extension"/>
@@ -74,6 +75,7 @@
             <short value="Pertains to SDOH goal"/>
             <definition value="Indicates that the resource is related to either the measurement, achievement or progress towards the referenced goal.  For example, a ServiceRequest to provide food vouchers pertainsToGoal of achieving food security."/>
             <requirements value="Indicates that the service request is related to the referenced SDOHCC Goal."/>
+            <min value="0"/>
             <type>
                 <code value="Extension"/>
                 <profile value="http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal"/>
@@ -115,7 +117,7 @@
         </element>
         <element id="ServiceRequest.status">
             <path value="ServiceRequest.status"/>
-            <comment value="The status is generally fully in the control of the requester - they determine whether the order is draft or active and, after it has been activated, competed, cancelled or suspended. States relating to the activities of the performer are reflected on either the corresponding event (see [Event Pattern](event.html) for general discussion) or using the [Task](task.html) resource. &#xD;&#xA;While all values are currently allowed, there may be a constraint on the values in future releases based on implementation feedback."/>
+            <comment value="The status is generally fully in the control of the requester - they determine whether the order is draft or active and, after it has been activated, competed, cancelled or suspended. States relating to the activities of the performer are reflected on either the corresponding event (see [Event Pattern](event.html) for general discussion) or using the [Task](task.html) resource.&#xD;&#xA;&#xD;&#xA;While all values are currently allowed, there may be a constraint on the values in future releases based on implementation feedback."/>
             <mustSupport value="true"/>
         </element>
         <element id="ServiceRequest.intent">
@@ -161,8 +163,56 @@
             <binding>
                 <strength value="preferred"/>
                 <description value="Codes for tests or services that can be carried out by a designated individual, organization or healthcare service."/>
-                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSNOMEDCTCPTLOINCHCPCSII"/>
+                <valueSet value="http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code"/>
             </binding>
+        </element>
+        <element id="ServiceRequest.code.coding">
+            <path value="ServiceRequest.code.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="$this"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.&#xD;&#xA;&#xD;&#xA;Where more than one coding is used, the codings should have overlapping meaning. For example, a code related to providing meal vouchers and a code related to home delivered meals may be appropriate. However, a code related to providing meal vouchers and a code related to providing transportation vouchers would not be appropriate."/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="ServiceRequest.code.coding:211LA">
+            <path value="ServiceRequest.code.coding"/>
+            <sliceName value="211LA"/>
+            <short value="Code defined by 211 LA County Taxonomy"/>
+            <definition value="A reference to a code defined by 211 LA County Taxonomy."/>
+            <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.&#xD;&#xA;&#xD;&#xA;Where more than one coding is used, the codings should have overlapping meaning. For example, a code related to providing meal vouchers and a code related to home delivered meals may be appropriate. However, a code related to providing meal vouchers and a code related to providing transportation vouchers would not be appropriate."/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <description value="211 LA County codes"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet211LACounty"/>
+            </binding>
+        </element>
+        <element id="ServiceRequest.orderDetail">
+            <path value="ServiceRequest.orderDetail"/>
+            <slicing>
+                <discriminator>
+                    <type value="pattern"/>
+                    <path value="coding"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="ServiceRequest.orderDetail:SubjectContactDetail">
+            <path value="ServiceRequest.orderDetail"/>
+            <sliceName value="SubjectContactDetail"/>
+            <requirements value="Allows flagging of a service request where the subject of the request explictly designates that they do not want to be contacted (e.g., in domestic violence cases where contact may place subject at risk)."/>
+            <max value="1"/>
+            <fixedCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                    <code value="contacting-subject-prohibited"/>
+                </coding>
+            </fixedCodeableConcept>
+            <mustSupport value="true"/>
         </element>
         <element id="ServiceRequest.subject">
             <path value="ServiceRequest.subject"/>
@@ -219,11 +269,12 @@
                 </discriminator>
                 <rules value="open"/>
             </slicing>
-            <comment value="This element represents why the referral is being made and may be used to decide how the service will be performed, or even if it will be performed at all.  To be as specific as possible,  a reference to  *Observation* or *Condition* should be used if available.  Otherwise when referencing  *DiagnosticReport*  it should contain a finding  in `DiagnosticReport.conclusion` and/or `DiagnosticReport.conclusionCode`.   When using a reference to *DocumentReference*, the target document should contain clear findings language providing the relevant reason for this service request.  Use  the CodeableConcept text element in `ServiceRequest.reasonCode` if the data is free (uncoded) text as shown in the [CT Scan example](servicerequest-example-di.html).&#xD;&#xA;&#xD;&#xA;Additionally, see Comment on reasonCode."/>
+            <comment value="This element represents why the referral is being made and may be used to decide how the service will be performed, or even if it will be performed at all.  To be as specific as possible,  a reference to  *Observation* or *Condition* should be used if available.  Otherwise when referencing  *DiagnosticReport*  it should contain a finding  in `DiagnosticReport.conclusion` and/or `DiagnosticReport.conclusionCode`.   When using a reference to *DocumentReference*, the target document should contain clear findings language providing the relevant reason for this service request.  Use the CodeableConcept text element in `ServiceRequest.reasonCode` if the data is free (uncoded) text.&#xD;&#xA;&#xD;&#xA;Additionally, see Comment on reasonCode."/>
         </element>
         <element id="ServiceRequest.reasonReference:SupportedReasonReference">
             <path value="ServiceRequest.reasonReference"/>
             <sliceName value="SupportedReasonReference"/>
+            <comment value="This element represents why the referral is being made and may be used to decide how the service will be performed, or even if it will be performed at all.    To be as specific as possible,  a reference to  *Observation* or *Condition* should be used if available.  Otherwise when referencing  *DiagnosticReport*  it should contain a finding  in `DiagnosticReport.conclusion` and/or `DiagnosticReport.conclusionCode`.   When using a reference to *DocumentReference*, the target document should contain clear findings language providing the relevant reason for this service request.  Use the CodeableConcept text element in `ServiceRequest.reasonCode` if the data is free (uncoded) text."/>
             <requirements value="When a service request is justified by one or more SDOH conditions or observations, ServiceRequest.reasonReference should reference instances that comply with the SDOHCC Condition profile, or one of the SDOHCC Observation profiles. However, references to other instance types are also possible."/>
             <type>
                 <code value="Reference"/>

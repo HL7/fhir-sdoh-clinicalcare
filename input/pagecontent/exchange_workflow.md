@@ -91,4 +91,4 @@ This IG assumes that, in an Indirect Referral, the Referral Performer does not h
 
 ### Support for API Access to SDOH Information
 
-The Referral Source, Intermediary, and Referral Recipient SHOULD make SDOH information available to authenticated and authorized APIs and applications via a FHIR API conformant to the [ONC 21st Century Cures Act Final Rule](https://www.healthit.gov/curesrule/).  The API SHOULD allow for the exchange of all resources defined on the [FHIR Artifacts Overview](fhir_artifacts_overview.html) page with the patient’s consent where required or appropriate.  
+The Referral Source, Intermediary, and Referral Recipient SHOULD make SDOH information available to authenticated and authorized APIs and applications via a FHIR API conformant to the [ONC 21st Century Cures Act Final Rule](https://www.healthit.gov/curesrule/).  The API SHOULD allow for the exchange of all resources defined on the [FHIR Artifacts Overview](fhir_artifacts_overview.html) page with the patient’s consent where required or appropriate.

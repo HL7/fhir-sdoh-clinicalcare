@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Consent"/>
     <meta>
-        <versionId value="16"/>
-        <lastUpdated value="2021-07-06T23:53:51.864+00:00"/>
-        <source value="#Jm1gZtQwnwt8Gxjk"/>
+        <versionId value="17"/>
+        <lastUpdated value="2021-10-27T17:12:16.709+00:00"/>
+        <source value="#c8MwzPSxegU4R8sO"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent"/>
     <name value="SDOHCCConsent"/>
     <title value="SDOHCC Consent"/>
     <status value="draft"/>
-    <description value="This profile constrains the Consent resource for use related to the release of Social Determinants of Health information to non-HIPAA covered organizations."/>
+    <description value="Profile for consent related to the release of Social Determinants of Health (SDOH) information to non-HIPAA covered organizations."/>
     <fhirVersion value="4.0.1"/>
     <mapping>
         <identity value="workflow"/>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PractitionerRole
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-PractitionerRoleDrJanWaterExample"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2021-10-25T21:18:43.088+00:00"/>
+        <source value="#RPFdSb0VjhCagQag"/>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+    </meta>
+    <identifier>
+        <system value="http://www.deerland.org/practitioners"/>
+        <value value="2424"/>
+    </identifier>
+    <active value="true"/>
+    <practitioner>
+        <reference value="Practitioner/SDOHCC-PractitionerDrJanWaterExample"/>
+        <display value="Dr Jan Water"/>
+    </practitioner>
+    <code>
+        <coding>
+            <system value="http://nucc.org/provider-taxonomy"/>
+            <code value="207Q00000X"/>
+            <display value="Family Medicine Physician"/>
+        </coding>
+    </code>
+</PractitionerRole>

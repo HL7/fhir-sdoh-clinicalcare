@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-HealthcareService"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2021-10-29T18:13:46.805+00:00"/>
+        <source value="#PxdXZ4jOlS2EGPn0"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService"/>
+    <name value="SDOHCCHealthcareService"/>
+    <title value="SDOHCC Healthcare Service"/>
+    <status value="draft"/>
+    <description value="Profile that describes the means by which a healthcare service can be contacted."/>
+    <fhirVersion value="4.0.1"/>
+    <mapping>
+        <identity value="rim"/>
+        <uri value="http://hl7.org/v3"/>
+        <name value="RIM Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="w5"/>
+        <uri value="http://hl7.org/fhir/fivews"/>
+        <name value="FiveWs Pattern Mapping"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="HealthcareService"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/HealthcareService"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="HealthcareService.active">
+            <path value="HealthcareService.active"/>
+            <fixedBoolean value="true"/>
+        </element>
+        <element id="HealthcareService.location">
+            <path value="HealthcareService.location"/>
+            <requirements value="The location must support Location.address so that the patient knows potential addresses when booking an appointment."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Location"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="HealthcareService.name">
+            <path value="HealthcareService.name"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="HealthcareService.telecom">
+            <path value="HealthcareService.telecom"/>
+            <slicing>
+                <discriminator>
+                    <type value="exists"/>
+                    <path value="extension('http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ExtensionHealthcareServiceTelecomAppointment')"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <min value="1"/>
+            <mustSupport value="false"/>
+        </element>
+        <element id="HealthcareService.telecom:AppointmentContact">
+            <path value="HealthcareService.telecom"/>
+            <sliceName value="AppointmentContact"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="HealthcareService.telecom:AppointmentContact.extension">
+            <path value="HealthcareService.telecom.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <min value="1"/>
+        </element>
+        <element id="HealthcareService.telecom:AppointmentContact.extension:ForAppointment">
+            <path value="HealthcareService.telecom.extension"/>
+            <sliceName value="ForAppointment"/>
+            <min value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ExtensionHealthcareServiceTelecomAppointment"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="HealthcareService.telecom:AppointmentContact.system">
+            <path value="HealthcareService.telecom.system"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="HealthcareService.telecom:AppointmentContact.value">
+            <path value="HealthcareService.telecom.value"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="HealthcareService.communication">
+            <path value="HealthcareService.communication"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="HealthcareService.appointmentRequired">
+            <path value="HealthcareService.appointmentRequired"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="HealthcareService.availableTime">
+            <path value="HealthcareService.availableTime"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="HealthcareService.notAvailable">
+            <path value="HealthcareService.notAvailable"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="HealthcareService.availabilityExceptions">
+            <path value="HealthcareService.availabilityExceptions"/>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

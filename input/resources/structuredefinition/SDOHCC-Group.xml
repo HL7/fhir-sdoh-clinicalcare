@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Group"/>
     <meta>
-        <versionId value="16"/>
-        <lastUpdated value="2021-06-04T14:30:59.931+00:00"/>
-        <source value="#3VU6k1T568Fg5Mfx"/>
+        <versionId value="17"/>
+        <lastUpdated value="2021-10-27T17:12:16.882+00:00"/>
+        <source value="#9yJkEPfgcxpqCyWR"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Group"/>
     <name value="SDOHCCGroup"/>
     <title value="SDOHCC Group"/>
     <status value="draft"/>
-    <description value="This profile constrains the Group resource for use in identifying patients who have any Social Determinants of Health condition and are members of a specific payer organization."/>
+    <description value="Profile for identifying groups of patients who have a Social Determinants of Health (SDOH) condition and are members of a specific payer organization."/>
     <fhirVersion value="4.0.1"/>
     <mapping>
         <identity value="rim"/>

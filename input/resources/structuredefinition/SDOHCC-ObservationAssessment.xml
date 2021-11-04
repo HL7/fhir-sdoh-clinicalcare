@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationAssessment"/>
     <meta>
-        <versionId value="10"/>
-        <lastUpdated value="2021-07-16T13:52:22.597+00:00"/>
-        <source value="#yOsuJFyrNWLsatYk"/>
+        <versionId value="11"/>
+        <lastUpdated value="2021-10-27T17:12:16.544+00:00"/>
+        <source value="#QhoU668vBZMNRetj"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"/>
     <name value="SDOHCCObservationAssessment"/>
     <title value="SDOHCC Observation Assessment"/>
     <status value="draft"/>
-    <description value="This profile constrains the Observation resource for use related to Social Determinants of Health observations that involve assessment (e.g., by a provider or payer) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation). The Cross-Group Projects work group granted an exception to US Core on 06/10/2021 - Jira ticket 32892."/>
+    <description value="Profile for Social Determinants of Health (SDOH) observations that involve assessment (e.g., by a provider or payer) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation). The Cross-Group Projects work group granted an exception to US Core on 06/10/2021 - Jira ticket 32892."/>
     <fhirVersion value="4.0.1"/>
     <mapping>
         <identity value="workflow"/>

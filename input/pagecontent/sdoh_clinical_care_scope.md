@@ -1,4 +1,3 @@
-
 ###  SDOH Clinical Care Scope
 
 The Gravity Project focus for this version of the IG is to standardize the exchange of SDOH information related to the following activities:
