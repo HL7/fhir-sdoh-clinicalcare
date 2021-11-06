@@ -3,13 +3,13 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ProcedureFoodPantryApplicationAssistanceExample"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-06-03T00:59:29.914+00:00"/>
-        <source value="#kfhbsE6g1oNyclUf"/>
+        <versionId value="2"/>
+        <lastUpdated value="2021-11-05T18:23:33.508+00:00"/>
+        <source value="#1DA3G0iAshix8mTK"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
     </meta>
     <basedOn>
-        <reference value="ServiceRequest/SDOHCC-ServiceRequestFoodPantryApplicationAssistanceExample"/>
+        <reference value="ServiceRequest/SDOHCC-ServiceRequestFoodPantryApplicationAssistExample"/>
     </basedOn>
     <status value="completed"/>
     <category>

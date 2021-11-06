@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-TaskForReferralManagement"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2021-10-27T17:12:16.602+00:00"/>
-        <source value="#RrU5hrqn72UZDTd9"/>
+        <versionId value="4"/>
+        <lastUpdated value="2021-11-05T18:28:33.509+00:00"/>
+        <source value="#osczH2MaHvHnL9UC"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"/>
     <version value="0.1.0"/>
@@ -68,7 +68,7 @@
             <requirements value="Allows an organization (e.g., a Coordination Platform) to create a Task, based on an SDOHCC Task from a referral source, to pass on to another organization (e.g., a  Community Based Organization)."/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"/>
             </type>
             <mustSupport value="true"/>
         </element>

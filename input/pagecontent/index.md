@@ -33,6 +33,9 @@ Implementers should pay specific attention to the following sections:
 * [Artifacts Index](artifacts.html) all implementers need to understand the FHIR R4 profiles, examples and other FHIR artifacts defined in this implementation guide and linked from this section
 * [Downloads](downloads.html) links to allow implementers to download the IG and various artifacts
 
+New updates
+Includes all changes as of 11/4/2021 4:28 pm CT
+
 
 
 ### Authors

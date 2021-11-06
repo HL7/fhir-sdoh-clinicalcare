@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Task
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-TaskReferralManagementOrderSubtaskAcceptedExample"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2021-10-25T18:14:28.542+00:00"/>
+        <source value="#PhLQ1dN17P1h7ZIY"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"/>
+    </meta>
+    <partOf>
+        <reference value="Task/SDOHCC-TaskReferralManagementOrderFulfillmentAcceptedExample"/>
+    </partOf>
+    <status value="accepted"/>
+    <intent value="order"/>
+    <code>
+        <coding>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+            <code value="fulfill"/>
+            <display value="Fulfill the focal request"/>
+        </coding>
+    </code>
+    <focus>
+        <reference value="ServiceRequest/SDOHCC-ServiceRequestActiveBasedOnAnotherServiceRequestExample"/>
+    </focus>
+    <for>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </for>
+    <authoredOn value="2021-10-11T20:56:53.671Z"/>
+    <requester>
+        <reference value="Organization/SDOHCC-OrganizationCoordinationPlatformExample"/>
+        <display value="ABC Coordination Platform"/>
+    </requester>
+    <owner>
+        <reference value="Organization/SDOHCC-OrganizationClinicExample"/>
+        <display value="Better Health Clinic"/>
+    </owner>
+</Task>
