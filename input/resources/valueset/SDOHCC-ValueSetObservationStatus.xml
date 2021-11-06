@@ -3,16 +3,16 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ValueSetObservationStatus"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-05-27T14:47:48.978+00:00"/>
-        <source value="#wrFz3aIxZB3kW06b"/>
+        <versionId value="2"/>
+        <lastUpdated value="2021-10-27T17:29:53.685+00:00"/>
+        <source value="#EIv5ZMXV2znVY38Z"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetObservationStatus"/>
     <version value="0.1.0"/>
     <name value="SDOHCCValueSetObservationStatus"/>
     <title value="SDOHCC ValueSet Observation Status"/>
     <status value="draft"/>
-    <description value="This value set is defined intensionally to include the specified codes from the HL7 ObservationStatus value set."/>
+    <description value="Codes for the status of a screening response observation."/>
     <compose>
         <include>
             <system value="http://hl7.org/fhir/observation-status"/>

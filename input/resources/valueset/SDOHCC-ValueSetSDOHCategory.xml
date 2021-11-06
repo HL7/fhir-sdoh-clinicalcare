@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ValueSetSDOHCategory"/>
     <meta>
-        <versionId value="5"/>
-        <lastUpdated value="2021-06-07T20:21:14.414+00:00"/>
-        <source value="#BduNCxGsdlXjolr5"/>
+        <versionId value="7"/>
+        <lastUpdated value="2021-10-22T19:59:41.951+00:00"/>
+        <source value="#APpOdfwYAK1TYTVG"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory"/>
     <version value="0.1.0"/>
@@ -21,7 +21,7 @@
             <value value="http://www.hl7.org/Special/committees/patientcare"/>
         </telecom>
     </contact>
-    <description value="This value set is defined extensionally to include codes that represent Social Determinant of Health domains."/>
+    <description value="Codes that represent Social Determinants of Health (SDOH) domains."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -78,6 +78,14 @@
             <concept>
                 <code value="stress"/>
                 <display value="Stress"/>
+            </concept>
+            <concept>
+                <code value="social-connection"/>
+                <display value="Social Connection"/>
+            </concept>
+            <concept>
+                <code value="intimate-partner-violence"/>
+                <display value="Intimate Partner Violence"/>
             </concept>
         </include>
     </compose>

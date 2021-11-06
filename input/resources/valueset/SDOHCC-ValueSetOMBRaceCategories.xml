@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ValueSetOMBRaceCategories"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2021-10-28T14:11:29.645+00:00"/>
+        <source value="#B1KMJ71DhXcPmvlb"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetOMBRaceCategories"/>
+    <version value="0.1.0"/>
+    <name value="SDOHCCValueSetOMBRaceCategories"/>
+    <title value="SDOHCC ValueSet OMB Race Categories"/>
+    <status value="draft"/>
+    <description value="Codes for the five Office of Management and Budget (OMB) race categories but without the'Unknown' and 'Asked but no answer' codes that were included in the US Core OMB Race Categories valueset."/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.6.238"/>
+            <concept>
+                <code value="1002-5"/>
+                <display value="American Indian or Alaska Native"/>
+            </concept>
+            <concept>
+                <code value="2028-9"/>
+                <display value="Asian"/>
+            </concept>
+            <concept>
+                <code value="2054-5"/>
+                <display value="Black or African American"/>
+            </concept>
+            <concept>
+                <code value="2076-8"/>
+                <display value="Native Hawaiian or Other Pacific Islander"/>
+            </concept>
+            <concept>
+                <code value="2106-3"/>
+                <display value="White"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>
