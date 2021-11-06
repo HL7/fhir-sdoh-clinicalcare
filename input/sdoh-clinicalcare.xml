@@ -937,7 +937,7 @@
         </parameter>
         <parameter>
             <code value="path-expansion-params"/>
-            <value value="resources/parameters/terminology-settings.json"/>
+            <value value="resources/parameters/terminology-settings.xml"/>
         </parameter>
         <parameter>
             <code value="copyrightyear"/>
