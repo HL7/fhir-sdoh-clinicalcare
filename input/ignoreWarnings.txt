@@ -3,10 +3,6 @@
 # The following issue is inherited from the FHIR specification for Consent.
 ERROR: StructureDefinition/SDOHCC-Consent: StructureDefinition.snapshot.element[9].example[0].value.ofType(Identifier): Consent: if identifier.system is ''urn:ietf:rfc:3986'', then the identifier.value must be a full URI (e.g. start with a scheme)
 
-# The following will be covered by the Publisher issue raised to HL7 that links to the core specification are not linked to the proper URLs (see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/link.20errors.20for.20ServiceRequest)
-ERROR: output/StructureDefinition-SDOHCC-ServiceRequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 440, column 321: The link 'event.html' for "Event Pattern" cannot be resolved
-ERROR: output/StructureDefinition-SDOHCC-ServiceRequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 738, column 288: The link 'servicerequest-example-di.html' for "CT Scan example" cannot be resolved
-
 # The following issues have been reviewed and these items are not intended to validate against one of the slices.
 INFORMATION: HealthcareService/SDOHCC-HealthcareServiceTelecomAppointmentExample: HealthcareService.telecom[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService
 INFORMATION: HealthcareService/SDOHCC-HealthcareServiceTelecomAppointmentExample: HealthcareService.telecom[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService
@@ -15,6 +11,7 @@ INFORMATION: Condition/SDOHCC-ConditionHomelessExample: Condition.category[0]: T
 INFORMATION: Condition/SDOHCC-ConditionUnemployedExample: Condition.category[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition 
 INFORMATION: Observation/SDOHCC-ObservationAssessmentSocialIsolationExample: Observation.category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment  
 INFORMATION: Observation/SDOHCC-ObservationAssessmentTransportTooExpensiveExample: Observation.category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment 
+INFORMATION: Practitioner/SDOHCC-PractitionerDrJanWaterExample: Practitioner.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 INFORMATION: Questionnaire/SDOHCC-QuestionnairePRAPARE: Questionnaire.item[0].item[0].item[0].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract
 INFORMATION: Questionnaire/SDOHCC-QuestionnairePRAPARE: Questionnaire.item[0].item[0].item[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract
 INFORMATION: Questionnaire/SDOHCC-QuestionnairePRAPARE: Questionnaire.item[0].item[0].item[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract
@@ -46,10 +43,19 @@ INFORMATION: Questionnaire/SDOHCC-QuestionnaireHungerVitalSign: Questionnaire.it
 INFORMATION: Questionnaire/SDOHCC-QuestionnaireHungerVitalSign: Questionnaire.item[2].extension[5]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract
 INFORMATION: Questionnaire/SDOHCC-QuestionnaireHungerVitalSign: Questionnaire.item[2].item[0].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract
 
-
 # The following issues are because the code system is fake and there is no expectation that the validator would have access to it.
 INFORMATION: Observation/SDOHCC-ObservationAssessmentSocialIsolationExample: Observation.category[1].coding[0]: Code System URI 'http://example.org/CodeSystem/other-code-system' is unknown so the code cannot be validated		
 INFORMATION: Observation/SDOHCC-ObservationAssessmentTransportTooExpensiveExample: Observation.category[1].coding[1]: Code System URI 'http://example.org/CodeSystem/other-code-system' is unknown so the code cannot be validated
+
+# The following issues have been reviewed and are because the referenced Code System URI 'http://example.org/TBD/211LACountyTaxonomy' is a fake/placeholder code system in this IG and there is no expectation that the validator would have access to it.
+INFORMATION: Procedure/SDOHCC-ProcedureFoodPantryApplicationAssistanceExample: Procedure.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure
+INFORMATION: Procedure/SDOHCC-ProcedureProvisionOfFoodExample: Procedure.code.coding[1]: Code System URI 'http://example.org/TBD/211LACountyTaxonomy' is unknown so the code cannot be validated
+INFORMATION: Procedure/SDOHCC-ProcedureProvisionOfFoodExample: Procedure.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure
+INFORMATION: Procedure/SDOHCC-ProcedureProvisionOfFoodExample: Procedure.code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure
+INFORMATION: ServiceRequest/SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample: ServiceRequest.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest
+INFORMATION: ServiceRequest/SDOHCC-ServiceRequestCompletedFoodPantryApplicationAssistExample: ServiceRequest.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest
+INFORMATION: ServiceRequest/SDOHCC-ServiceRequestSubreferralGardenProgramExample: ServiceRequest.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest
+INFORMATION: ServiceRequest/SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample: ServiceRequest.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest
 
 # The following will be covered by the issue that LOINC code system should recognize LOINC question text/answer text as designations (See: https://chat.fhir.org/#narrow/stream/179202-terminology/topic/Valid.20display.20for.20LOINC.20codes)
 WARNING: Questionnaire/SDOHCC-QuestionnairePRAPARE: Questionnaire.item[0].item[0].code[0]: The display "Personal characteristics" is not a valid display for the code {http://loinc.org}93043-8 - should be one of ['Personal characteristics [PRAPARE]', ''] (from http://tx.fhir.org/r4) for 'http://loinc.org#93043-8'
