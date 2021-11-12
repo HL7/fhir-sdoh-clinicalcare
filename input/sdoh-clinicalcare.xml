@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="sdoh-clinicalcare"/>
     <meta>
-        <versionId value="886"/>
-        <lastUpdated value="2021-11-12T11:43:56.627+00:00"/>
-        <source value="#PULqHCuDQvs3hfZH"/>
+        <versionId value="887"/>
+        <lastUpdated value="2021-11-12T12:10:39.676+00:00"/>
+        <source value="#gmMqZUgb01cMZ2FX"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/sdoh-clinicalcare"/>
     <version value="1.0.0"/>
@@ -446,7 +446,7 @@
         <resource>
             <reference>
                 <reference value="ServiceRequest/SDOHCC-ServiceRequestSubreferralGardenProgramExample"/>
-                <display value=" SDOHCC ServiceRequest Subreferral Garden Program Example"/>
+                <display value="SDOHCC ServiceRequest Subreferral Garden Program Example"/>
             </reference>
             <name value="SDOHCC ServiceRequest Subreferral Garden Program Example"/>
             <description value="An example of a completed, original-order ServiceRequest (i.e., SDOHCC Service Request Active Food Pantry Application Assist Example) that is based on a Service Request to an intermediary organization (e.g., a Coordination Platform) that then created this Service Request (i.e., Assistance with application for garden program) to be fulfilled by a Community Based Organization."/>
