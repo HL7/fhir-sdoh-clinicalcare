@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Condition"/>
     <meta>
-        <versionId value="9"/>
-        <lastUpdated value="2021-10-27T17:12:16.624+00:00"/>
-        <source value="#Dlc1iyxKuhpdizQ4"/>
+        <versionId value="14"/>
+        <lastUpdated value="2021-11-09T22:56:25.128+00:00"/>
+        <source value="#ZF7GVasT9iwdlbV6"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
     <version value="0.1.0"/>
@@ -141,7 +141,7 @@
         </element>
         <element id="Condition.code">
             <path value="Condition.code"/>
-            <comment value="As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories."/>
+            <comment value="As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories. For further guidance on external value sets vetted by the Gravity Project see: [SDOH terminology guidance](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/support_for_multiple_domains.html#external-value-set-guidance)"/>
             <requirements value="Code is required and must be selected from the bound value set."/>
             <binding>
                 <strength value="required"/>

@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationRace"/>
     <meta>
-        <versionId value="7"/>
-        <lastUpdated value="2021-11-02T14:35:38.358+00:00"/>
-        <source value="#bhts9dIbyiRuPFXZ"/>
+        <versionId value="10"/>
+        <lastUpdated value="2021-11-11T23:42:59.970+00:00"/>
+        <source value="#MLpsBo75PhMuSNtt"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRace"/>
     <name value="SDOHCCObservationRace"/>
     <title value="SDOHCC Observation Race"/>
     <status value="draft"/>
-    <description value="Profile for observations about race using Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only."/>
+    <description value="Profile for observations about race using Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on 11/18/2021 - Jira ticket 34245."/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>
@@ -28,6 +28,14 @@
                 <severity value="error"/>
                 <human value="Must have either a dataAbsentReason or a component with a code of race and a value of string."/>
                 <expression value="dataAbsentReason.exists() or component.where(code.coding.where(system='http://loinc.org' and code='72826-1').exists() and value.ofType(string).exists())"/>
+                <xpath value="true()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRace"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Obs-2"/>
+                <severity value="error"/>
+                <human value="Must have either performer or derivedFrom."/>
+                <expression value="performer.exists() or derivedFrom.exists()"/>
                 <xpath value="true()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRace"/>
             </constraint>
@@ -57,7 +65,6 @@
         </element>
         <element id="Observation.performer">
             <path value="Observation.performer"/>
-            <min value="1"/>
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
@@ -81,7 +88,12 @@
         </element>
         <element id="Observation.method">
             <path value="Observation.method"/>
+            <requirements value="In some cases, method can impact results and is thus used for determining whether results can be compared or determining significance of results."/>
             <mustSupport value="true"/>
+            <binding>
+                <strength value="extensible"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetObservationMethod"/>
+            </binding>
         </element>
         <element id="Observation.specimen">
             <path value="Observation.specimen"/>
