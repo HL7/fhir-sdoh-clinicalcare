@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Task
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-TaskReferralManagementOrderSubtaskCompletedExample"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2021-10-25T18:25:33.601+00:00"/>
+        <source value="#jDKI6oPEwj2eEixz"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"/>
+    </meta>
+    <partOf>
+        <reference value="Task/SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample"/>
+    </partOf>
+    <status value="completed"/>
+    <intent value="order"/>
+    <code>
+        <coding>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+            <code value="fulfill"/>
+            <display value="Fulfill the focal request"/>
+        </coding>
+    </code>
+    <focus>
+        <reference value="ServiceRequest/SDOHCC-ServiceRequestBasedOnAnotherServiceRequestExample"/>
+    </focus>
+    <for>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </for>
+    <authoredOn value="2021-10-25T21:56:54.671Z"/>
+    <requester>
+        <reference value="Organization/SDOHCC-OrganizationCoordinationPlatformExample"/>
+        <display value="ABC Coordination Platform"/>
+    </requester>
+    <owner>
+        <reference value="Organization/SDOHCC-OrganizationClinicExample"/>
+        <display value="Better Health Clinic"/>
+    </owner>
+    <output>
+        <type>
+            <coding>
+                <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                <code value="resulting-activity"/>
+                <display value="Resulting Activity"/>
+            </coding>
+        </type>
+        <valueReference>
+            <reference value="Procedure/SDOHCC-ProcedureFoodPantryApplicationAssistanceExample"/>
+        </valueReference>
+    </output>
+</Task>

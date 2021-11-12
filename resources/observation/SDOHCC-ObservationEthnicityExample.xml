@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ObservationEthnicityExample"/>
+    <meta>
+        <versionId value="4"/>
+        <lastUpdated value="2021-10-29T15:57:37.933+00:00"/>
+        <source value="#Inysg0aLdr6DXFrL"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicity"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="69490-1"/>
+            <display value="Ethnicity OMB.1997"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <effectiveDateTime value="2021-10-25T23:56:54.671Z"/>
+    <performer>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </performer>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="69490-1"/>
+                <display value="Ethnicity OMB.1997"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                <code value="2182-4"/>
+                <display value="Cuban"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="69490-1"/>
+                <display value="Ethnicity OMB.1997"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                <code value="2159-2"/>
+                <display value="Nicaraguan"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="69490-1"/>
+                <display value="Ethnicity OMB.1997"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                <code value="2135-2"/>
+                <display value="Hispanic or Latino"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="69490-1"/>
+                <display value="Ethnicity OMB.1997"/>
+            </coding>
+        </code>
+        <valueString value="Hispanic, Cuban on my mom's side and Nicaraguan on my dad's side"/>
+    </component>
+</Observation>
