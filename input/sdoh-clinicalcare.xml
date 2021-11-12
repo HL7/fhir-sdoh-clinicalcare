@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="sdoh-clinicalcare"/>
     <meta>
-        <versionId value="885"/>
-        <lastUpdated value="2021-11-12T03:04:45.519+00:00"/>
-        <source value="#wPKVutgRGFypliEC"/>
+        <versionId value="886"/>
+        <lastUpdated value="2021-11-12T11:43:56.627+00:00"/>
+        <source value="#PULqHCuDQvs3hfZH"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/sdoh-clinicalcare"/>
     <version value="1.0.0"/>
@@ -526,7 +526,7 @@
                 <display value="SDOHCC Task Patient Risk Questionnaire Completed Example"/>
             </reference>
             <name value="SDOHCC Task Patient Risk Questionnaire Completed Example"/>
-            <description value="An example of a completed Task For Patient where the task was to complete a Hunger Vital Signs questionnaire (a questionnaire of the category ‘risk questionnaire’). "/>
+            <description value="An example of a completed Task For Patient where the task was to complete a Hunger Vital Signs questionnaire (a questionnaire of the category ‘risk questionnaire’)."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"/>
             <groupingId value="new-group2"/>
@@ -811,7 +811,7 @@
                 <display value="SDOH Clinical Care Coordination Platform"/>
             </reference>
             <name value="SDOH Clinical Care Coordination Platform"/>
-            <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'coordination platforms' (CPs).  "/>
+            <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'coordination platforms' (CPs)."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group8"/>
         </resource>
@@ -821,7 +821,7 @@
                 <display value="SDOH Clinical Care Referral Recipient - Light"/>
             </reference>
             <name value="SDOH Clinical Care Referral Recipient - Light"/>
-            <description value="This resource describes the required and desired behavior of systems acting as 'light-weight' SDOH clinical care 'referral recipients'.  "/>
+            <description value="This resource describes the required and desired behavior of systems acting as 'light-weight' SDOH clinical care 'referral recipients'."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group8"/>
         </resource>
@@ -831,7 +831,7 @@
                 <display value="SDOH Clinical Care Referral Recipient"/>
             </reference>
             <name value="SDOH Clinical Care Referral Recipient"/>
-            <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral recipients'.  "/>
+            <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral recipients'."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group8"/>
         </resource>
@@ -841,7 +841,7 @@
                 <display value="SDOH Clinical Care Referral Source"/>
             </reference>
             <name value="SDOH Clinical Care Referral Source"/>
-            <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral sources'.  "/>
+            <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral sources'."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group8"/>
         </resource>
