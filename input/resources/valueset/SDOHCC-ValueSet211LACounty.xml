@@ -3,25 +3,29 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ValueSet211LACounty"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-11-02T19:58:41.022+00:00"/>
-        <source value="#tIHE3OneJIUfb8jF"/>
+        <versionId value="3"/>
+        <lastUpdated value="2021-11-09T23:03:45.913+00:00"/>
+        <source value="#Dt6xu7zD1OTrfqvS"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet211LACounty"/>
     <name value="SDOHCCValueSet211LACounty"/>
     <title value="SDOHCC ValueSet 211 LA County"/>
     <status value="draft"/>
-    <description value="This value set includes all of the 211 LA County Taxonomy."/>
+    <description value="This value set includes codes from the 211 LA County Taxonomy."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="US"/>
         </coding>
     </jurisdiction>
-    <copyright value="This value set includes content from: 211 LA County Taxonomy. The structure of the services index and definitions of the terms contained in the Taxonomy Website were originally published in A Taxonomy of Human Services A Conceptual Framework with Standardized Terminology and Definitions for the Field, Copyright© 1983-2011 Information and Referral Federation of Los Angeles County, Inc., PO Box 726, San Gabriel, CA 91778. No part of this listing of human services terms and definitions may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, electrical, mechanical, photocopying, recording or otherwise without the prior written permission of the Information and Referral Federation of Los Angeles County, Inc."/>
+    <copyright value="Copyright © 2004-2021 Information and Referral Federation of Los Angeles County, doing business as 211 LA County. All rights reserved. Version 5.8.5."/>
     <compose>
         <include>
             <system value="http://example.org/TBD/211LACountyTaxonomy"/>
+            <concept>
+                <code value="PH-2950.8500-850"/>
+                <display value="Thanksgiving Baskets"/>
+            </concept>
         </include>
     </compose>
 </ValueSet>

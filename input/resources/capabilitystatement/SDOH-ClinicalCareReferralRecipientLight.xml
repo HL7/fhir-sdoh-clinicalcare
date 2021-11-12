@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOH-ClinicalCareReferralRecipientLight"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2021-11-06T02:22:30.486+00:00"/>
-        <source value="#qD8Y8ucyZLAvHdqu"/>
+        <versionId value="4"/>
+        <lastUpdated value="2021-11-06T16:23:34.581+00:00"/>
+        <source value="#UY9QmmZCawutvypQ"/>
     </meta>
     <text>
         <status value="generated"/>
@@ -2297,7 +2297,7 @@
             </searchParam>
             <searchParam>
                 <name value="supporting-info"/>
-                <definition value="http://hl7.org/fhir/us/sdoh-clinicalcare/SearchParameter/ServiceRequest-supporting-info"/>
+                <definition value="http://hl7.org/fhir/us/sdoh-clinicalcare/SearchParameter/ServiceRequest-supportinginfo"/>
                 <type value="reference"/>
                 <documentation value="Allows _include to retrieve supporting information for a ServiceRequest - particularly Consent"/>
             </searchParam>
@@ -2316,12 +2316,12 @@
             </interaction>
             <operation>
                 <name value="status"/>
-                <definition value="http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/Backport-subscription-status"/>
+                <definition value="http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"/>
                 <documentation value="Necessary for systems supporting subscriptions to ensure that the subscription is functioning properly and to check for errors"/>
             </operation>
             <operation>
                 <name value="topic-list"/>
-                <definition value="http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/Backport-subscriptiontopic-list"/>
+                <definition value="http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscriptiontopic-list"/>
                 <documentation value="Allows discovery of what subscription topics the systems supports - needed for systems that aren't pre-configured to be aware of what topics are available for use."/>
             </operation>
         </resource>
