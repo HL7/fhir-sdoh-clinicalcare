@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationEthnicityExample"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2021-10-29T15:57:37.933+00:00"/>
-        <source value="#Inysg0aLdr6DXFrL"/>
+        <versionId value="5"/>
+        <lastUpdated value="2021-11-12T16:32:09.237+00:00"/>
+        <source value="#mK1K63Q1jAwV4jE8"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicity"/>
     </meta>
     <status value="final"/>
@@ -25,6 +25,13 @@
         <reference value="Patient/pat-53234"/>
         <display value="COLIN ABBAS"/>
     </performer>
+    <method>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="self-reported"/>
+            <display value="Self Reported"/>
+        </coding>
+    </method>
     <component>
         <code>
             <coding>

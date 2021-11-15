@@ -47,7 +47,7 @@ INFORMATION: Questionnaire/SDOHCC-QuestionnaireHungerVitalSign: Questionnaire.it
 INFORMATION: Observation/SDOHCC-ObservationAssessmentSocialIsolationExample: Observation.category[1].coding[0]: Code System URI 'http://example.org/CodeSystem/other-code-system' is unknown so the code cannot be validated		
 INFORMATION: Observation/SDOHCC-ObservationAssessmentTransportTooExpensiveExample: Observation.category[1].coding[1]: Code System URI 'http://example.org/CodeSystem/other-code-system' is unknown so the code cannot be validated
 
-# The following issues have been reviewed and are because the referenced Code System URI 'http://example.org/TBD/211LACountyTaxonomy' is a fake/placeholder code system in this IG and there is no expectation that the validator would have access to it.
+# The following issues have been reviewed and are because the referenced Code System URI 'http://example.org/TBD/211LACountyTaxonomy' is a placeholder code system in this IG and there is no expectation that the validator would have access to it.
 INFORMATION: Procedure/SDOHCC-ProcedureFoodPantryApplicationAssistanceExample: Procedure.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure
 INFORMATION: Procedure/SDOHCC-ProcedureProvisionOfFoodExample: Procedure.code.coding[1]: Code System URI 'http://example.org/TBD/211LACountyTaxonomy' is unknown so the code cannot be validated
 INFORMATION: Procedure/SDOHCC-ProcedureProvisionOfFoodExample: Procedure.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure
@@ -56,6 +56,8 @@ INFORMATION: ServiceRequest/SDOHCC-ServiceRequestActiveFoodPantryApplicationAssi
 INFORMATION: ServiceRequest/SDOHCC-ServiceRequestCompletedFoodPantryApplicationAssistExample: ServiceRequest.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest
 INFORMATION: ServiceRequest/SDOHCC-ServiceRequestSubreferralGardenProgramExample: ServiceRequest.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest
 INFORMATION: ServiceRequest/SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample: ServiceRequest.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest
+WARNING: ValueSet/SDOHCC-ValueSet211LACounty: ValueSet.compose[0].include[0]: Unknown System specified, so Concepts and Filters can''t be checked
+WARNING: ValueSet.where(id = 'SDOHCC-ValueSet211LACounty'): Error from server: Unable to provide support for code system http://example.org/TBD/211LACountyTaxonomy
 
 # The following will be covered by the issue that LOINC code system should recognize LOINC question text/answer text as designations (See: https://chat.fhir.org/#narrow/stream/179202-terminology/topic/Valid.20display.20for.20LOINC.20codes)
 WARNING: Questionnaire/SDOHCC-QuestionnairePRAPARE: Questionnaire.item[0].item[0].code[0]: The display "Personal characteristics" is not a valid display for the code {http://loinc.org}93043-8 - should be one of ['Personal characteristics [PRAPARE]', ''] (from http://tx.fhir.org/r4) for 'http://loinc.org#93043-8'

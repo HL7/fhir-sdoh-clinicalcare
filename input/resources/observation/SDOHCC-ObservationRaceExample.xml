@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationRaceExample"/>
     <meta>
-        <versionId value="5"/>
-        <lastUpdated value="2021-10-29T15:06:36.495+00:00"/>
-        <source value="#kPnVBayxvJ7oIkbz"/>
+        <versionId value="6"/>
+        <lastUpdated value="2021-11-12T16:32:09.257+00:00"/>
+        <source value="#9ZkOEuyzgV87EzNl"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRace"/>
     </meta>
     <status value="final"/>
@@ -25,6 +25,13 @@
         <reference value="Patient/pat-53234"/>
         <display value="COLIN ABBAS"/>
     </performer>
+    <method>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="self-reported"/>
+            <display value="Self Reported"/>
+        </coding>
+    </method>
     <component>
         <code>
             <coding>

@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationRace"/>
     <meta>
-        <versionId value="10"/>
-        <lastUpdated value="2021-11-11T23:42:59.970+00:00"/>
-        <source value="#MLpsBo75PhMuSNtt"/>
+        <versionId value="11"/>
+        <lastUpdated value="2021-11-12T16:32:44.479+00:00"/>
+        <source value="#qwSQ3LWsrArXq2Km"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRace"/>
     <name value="SDOHCCObservationRace"/>
@@ -88,7 +88,7 @@
         </element>
         <element id="Observation.method">
             <path value="Observation.method"/>
-            <requirements value="In some cases, method can impact results and is thus used for determining whether results can be compared or determining significance of results."/>
+            <min value="1"/>
             <mustSupport value="true"/>
             <binding>
                 <strength value="extensible"/>
@@ -102,6 +102,17 @@
         <element id="Observation.referenceRange">
             <path value="Observation.referenceRange"/>
             <max value="0"/>
+        </element>
+        <element id="Observation.derivedFrom">
+            <path value="Observation.derivedFrom"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence"/>
+            </type>
+            <mustSupport value="true"/>
         </element>
         <element id="Observation.component">
             <path value="Observation.component"/>
