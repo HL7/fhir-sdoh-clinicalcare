@@ -45,6 +45,11 @@
         <packageId value="us.nlm.vsac"/>
         <version value="0.4.0"/>
     </dependsOn>
+    <dependsOn id="sdohbackport">
+        <uri value="http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"/>
+        <packageId value="hl7.fhir.uv.subscriptions-backport"/>
+        <version value="0.1.0"/>
+    </dependsOn>
     <definition>
         <grouping id="new-group8">
             <name value="Capability Statements"/>
@@ -807,40 +812,40 @@
         </resource>
         <resource>
             <reference>
-                <reference value="CapabilityStatement/SDOH-ClinicalCareCoordinationPlatform"/>
-                <display value="SDOH Clinical Care Coordination Platform"/>
+                <reference value="CapabilityStatement/SDOHCC-CoordinationPlatform"/>
+                <display value="SDOHCC Coordination Platform Capability Statement"/>
             </reference>
-            <name value="SDOH Clinical Care Coordination Platform"/>
+            <name value="SDOHCC Coordination Platform Capability Statement"/>
             <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'coordination platforms' (CPs)."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group8"/>
         </resource>
         <resource>
             <reference>
-                <reference value="CapabilityStatement/SDOH-ClinicalCareReferralRecipientLight"/>
-                <display value="SDOH Clinical Care Referral Recipient - Light"/>
+                <reference value="CapabilityStatement/SDOHCC-ReferralRecipientLight"/>
+                <display value="SDOHCC Referral Recipient - Light Capability Statement"/>
             </reference>
-            <name value="SDOH Clinical Care Referral Recipient - Light"/>
+            <name value="SDOHCC Referral Recipient - Light Capability Statement"/>
             <description value="This resource describes the required and desired behavior of systems acting as 'light-weight' SDOH clinical care 'referral recipients'."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group8"/>
         </resource>
         <resource>
             <reference>
-                <reference value="CapabilityStatement/SDOH-ClinicalCareReferralRecipient"/>
-                <display value="SDOH Clinical Care Referral Recipient"/>
+                <reference value="CapabilityStatement/SDOHCC-ReferralRecipient"/>
+                <display value="SDOHCC Referral Recipient Capability Statement"/>
             </reference>
-            <name value="SDOH Clinical Care Referral Recipient"/>
+            <name value="SDOHCC Referral Recipient Capability Statement"/>
             <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral recipients'."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group8"/>
         </resource>
         <resource>
             <reference>
-                <reference value="CapabilityStatement/SDOH-ClinicalCareReferralSource"/>
-                <display value="SDOH Clinical Care Referral Source"/>
+                <reference value="CapabilityStatement/SDOHCC-ReferralSource"/>
+                <display value="SDOHCC Referral Source Capability Statement"/>
             </reference>
-            <name value="SDOH Clinical Care Referral Source"/>
+            <name value="SDOHCC Referral Source Capability Statement"/>
             <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral sources'."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group8"/>

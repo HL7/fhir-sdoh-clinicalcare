@@ -3,21 +3,21 @@
   "system" : "http://unitsofmeasure.org",
   "code" : "{#}",
   "display" : "{#}"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "{#}",
-  "severity" : null,
-  "error" : ""
+  "code" : "{#}",
+  "system" : "http://unitsofmeasure.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://unitsofmeasure.org",
   "code" : "/a",
   "display" : "/a"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "/a",
-  "severity" : null,
-  "error" : ""
+  "code" : "/a",
+  "system" : "http://unitsofmeasure.org"
 }
 -------------------------------------------------------------------------------------

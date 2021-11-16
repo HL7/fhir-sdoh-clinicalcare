@@ -1,915 +1,971 @@
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
+  "code" : "LA28397-0"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Often true",
+  "code" : "LA28397-0",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA19952-3"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "At risk",
+  "code" : "LA19952-3",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "69490-1"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Ethnicity OMB.1997",
+  "code" : "69490-1",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "72826-1"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Race OMB.1997",
+  "code" : "72826-1",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
   "code" : "88122-7",
   "display" : "(I/We) worried whether (my/our) food would run out before (I/we) got money to buy more."
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]",
-  "severity" : "warning",
-  "error" : "The display \"(I/We) worried whether (my/our) food would run out before (I/we) got money to buy more.\" is not a valid display for the code {http://loinc.org}88122-7 - should be one of [Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS], ] (from http://tx.fhir.org/r4)"
+  "code" : "88122-7",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA28397-0",
   "display" : "Often true"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Often true",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA28397-0",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA6729-3",
   "display" : "Sometimes true"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Sometimes true",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA6729-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA28398-8",
   "display" : "Never true"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Never true",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA28398-8",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA15775-2",
   "display" : "Don't know/refused"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Don't know/refused",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA15775-2",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "88123-5",
   "display" : "The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more."
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]",
-  "severity" : "warning",
-  "error" : "The display \"The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more.\" is not a valid display for the code {http://loinc.org}88123-5 - should be one of [Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS], ] (from http://tx.fhir.org/r4)"
+  "code" : "88123-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "88124-3",
   "display" : "Food insecurity risk"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Food insecurity risk [HVS]",
+  "code" : "88124-3",
+  "system" : "http://loinc.org",
   "severity" : "warning",
-  "error" : "The display \"Food insecurity risk\" is not a valid display for the code {http://loinc.org}88124-3 - should be one of [Food insecurity risk [HVS], ] (from http://tx.fhir.org/r4)"
+  "error" : "The display \"Food insecurity risk\" is not a valid display for the code {http://loinc.org}88124-3 - should be one of ['Food insecurity risk [HVS]', ''] (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA19952-3",
   "display" : "At risk"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "At risk",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA19952-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA19983-8",
   "display" : "No risk"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "No risk",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA19983-8",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93025-5",
   "display" : "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
-  "severity" : null,
-  "error" : ""
+  "code" : "93025-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93043-8",
   "display" : "Personal characteristics"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Personal characteristics [PRAPARE]",
+  "code" : "93043-8",
+  "system" : "http://loinc.org",
   "severity" : "warning",
-  "error" : "The display \"Personal characteristics\" is not a valid display for the code {http://loinc.org}93043-8 - should be one of [Personal characteristics [PRAPARE], ] (from http://tx.fhir.org/r4)"
+  "error" : "The display \"Personal characteristics\" is not a valid display for the code {http://loinc.org}93043-8 - should be one of ['Personal characteristics [PRAPARE]', ''] (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "56051-6",
   "display" : "Do you consider yourself Hispanic/Latino?"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Hispanic or Latino",
-  "severity" : "warning",
-  "error" : "The display \"Do you consider yourself Hispanic/Latino?\" is not a valid display for the code {http://loinc.org}56051-6 - should be one of [Hispanic or Latino, Hispanic or Latino, 依次型, 分类顺序型, 定性的, 序数型（或称等级型）, 性质上的, 有序型, 有序性分类应答, 有序性分类结果, 秩次型, 等级型, 筛查, 顺序型 医疗服务对象, 客户, 病人, 病患, 病号, 超系统 - 病人 发现是一个原子型临床观察指标，并不是作为印象的概括陈述。体格检查、病史、系统检查及其他此类观察指标的属性均为发现。它们的标尺对于编码型发现可能是名义型，而对于叙述型文本之中所报告的发现，则可能是叙述型。, 发现物, 所见, 结果, 结论 时刻, 随机, 随意, 瞬间 行政, 管理, 施行, 执行, 经营 行政管理（行政、管理、施行、执行、经营）.患者（病人、病患、病号、伤病员） 行政管理（行政、管理、施行、执行、经营）.患者（病人、病患、病号、伤病员）.人口统计学信息（人口统计学、人口统计、人口统计数据、人口统计学数据、人口统计特征、人口统计学特征、个人基本信息、人员基本信息、个人基本资料、个人基本数据） 西班牙裔美国人, 西班牙美国籍, 西班牙裔, 拉美裔美国籍, 拉美裔, 拉丁美洲人, 具有拉丁血统的人, 拉丁裔, 美籍拉美移民, 美籍拉美后裔, 美籍拉美人, Amministrativo Dati demografici del paziente Osservazione Paziente Punto nel tempo (episodio), Порядковый Точка во времени, Момент] (from http://tx.fhir.org/r4)"
+  "code" : "56051-6",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA33-6",
   "display" : "Yes"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Yes",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA33-6",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA32-8",
   "display" : "No"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "No",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA32-8",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30122-8",
   "display" : "I choose not to answer this question"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "I choose not to answer this question",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30122-8",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "32624-9",
   "display" : "Race"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Race",
-  "severity" : null,
-  "error" : ""
+  "code" : "32624-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA6156-9",
   "display" : "Asian"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Asian",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA6156-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA14045-1",
   "display" : "Native Hawaiian"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Native Hawaiian",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA14045-1",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30187-1",
   "display" : "Pacific Islander"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Pacific Islander",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30187-1",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA14042-8",
   "display" : "Black/African American"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Black/African American",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA14042-8",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA4457-3",
   "display" : "White"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "White",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA4457-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA4-4",
   "display" : "American Indian/Alaskan Native"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "American Indian/Alaskan Native",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA4-4",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA46-8",
   "display" : "Other"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Other",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA46-8",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93035-4",
   "display" : "At any point in the past 2 years, has season or migrant farm work been your or your family's main source of income?"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Has season or migrant farm work been your or your family's main source of income at any point in past 2 years [PRAPARE]",
-  "severity" : "warning",
-  "error" : "The display \"At any point in the past 2 years, has season or migrant farm work been your or your family's main source of income?\" is not a valid display for the code {http://loinc.org}93035-4 - should be one of [Has season or migrant farm work been your or your family's main source of income at any point in past 2 years [PRAPARE], ] (from http://tx.fhir.org/r4)"
+  "code" : "93035-4",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93034-7",
   "display" : "Have you been discharged from the armed forces of the United States?"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Discharged from the U.S. Armed Forces",
-  "severity" : "warning",
-  "error" : "The display \"Have you been discharged from the armed forces of the United States?\" is not a valid display for the code {http://loinc.org}93034-7 - should be one of [Discharged from the U.S. Armed Forces, ] (from http://tx.fhir.org/r4)"
+  "code" : "93034-7",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "54899-0",
   "display" : "Preferred language"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Preferred language",
-  "severity" : null,
-  "error" : ""
+  "code" : "54899-0",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA43-5",
   "display" : "English"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "English",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA43-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30188-9",
   "display" : "Language other than English"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Language other than English",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30188-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93042-0",
   "display" : "Family and home"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Family and home [PRAPARE]",
+  "code" : "93042-0",
+  "system" : "http://loinc.org",
   "severity" : "warning",
-  "error" : "The display \"Family and home\" is not a valid display for the code {http://loinc.org}93042-0 - should be one of [Family and home [PRAPARE], ] (from http://tx.fhir.org/r4)"
+  "error" : "The display \"Family and home\" is not a valid display for the code {http://loinc.org}93042-0 - should be one of ['Family and home [PRAPARE]', ''] (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "63512-8",
   "display" : "How many people are living or staying at this address?"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "How many people are living or staying at this address [#]",
-  "severity" : "warning",
-  "error" : "The display \"How many people are living or staying at this address?\" is not a valid display for the code {http://loinc.org}63512-8 - should be one of [How many people are living or staying at this address [#], No people this address, Consensus measures for Phenotypes and eXposures, PhenX, 暴露, 接触, 表型与暴露共识指标, 表现型与暴露共识指标, 表型与暴露公认指标 个数, 数量, 数量或计数（非负整数）, 计数 医疗服务对象, 客户, 病人, 病患, 病号, 超系统 - 病人 可用数量表示的, 定量性, 数值型, 数量型, 连续数值型标尺 在世, 生存着的, 有生命的, 在活动中, 没死 当前有多少人正在这个地址生活或暂住, 当前有多少人正在这个地址生活或停留 时刻, 随机, 随意, 瞬间, Numero (conta) paziente PhenX Punto nel tempo (episodio), Количественный Количество Точка во времени, Момент] (from http://tx.fhir.org/r4)"
+  "code" : "63512-8",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "71802-3",
   "display" : "Housing status"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Housing status",
-  "severity" : null,
-  "error" : ""
+  "code" : "71802-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30189-7",
   "display" : "I have housing"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "I have housing",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30189-7",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30190-5",
   "display" : "I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30190-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93033-9",
   "display" : "Are you worried about losing your housing?"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Are you worried about losing your housing [PRAPARE]",
-  "severity" : "warning",
-  "error" : "The display \"Are you worried about losing your housing?\" is not a valid display for the code {http://loinc.org}93033-9 - should be one of [Are you worried about losing your housing [PRAPARE], ] (from http://tx.fhir.org/r4)"
+  "code" : "93033-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "56799-0",
   "display" : "Address"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Address",
-  "severity" : null,
-  "error" : ""
+  "code" : "56799-0",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93041-2",
   "display" : "Money and resources"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Money and resources [PRAPARE]",
+  "code" : "93041-2",
+  "system" : "http://loinc.org",
   "severity" : "warning",
-  "error" : "The display \"Money and resources\" is not a valid display for the code {http://loinc.org}93041-2 - should be one of [Money and resources [PRAPARE], ] (from http://tx.fhir.org/r4)"
+  "error" : "The display \"Money and resources\" is not a valid display for the code {http://loinc.org}93041-2 - should be one of ['Money and resources [PRAPARE]', ''] (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "82589-3",
   "display" : "Highest level of educ"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Highest level of education",
-  "severity" : null,
-  "error" : ""
+  "code" : "82589-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30191-3",
   "display" : "Less than high school degree"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Less than high school degree",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30191-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30192-1",
   "display" : "High school diploma or GED"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "High school diploma or GED",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30192-1",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30193-9",
   "display" : "More than high school"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "More than high school",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30193-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "67875-5",
   "display" : "Employment status current"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Employment status - current",
-  "severity" : null,
-  "error" : ""
+  "code" : "67875-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA17956-6",
   "display" : "Unemployed"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Unemployed",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA17956-6",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30138-4",
   "display" : "Part-time or temporary work"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Part-time or temporary work",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30138-4",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30136-8",
   "display" : "Full-time work"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Full-time work",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30136-8",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30137-6",
   "display" : "Otherwise unemployed but not seeking work (ex: student, retired, disabled, unpaid primary care giver)"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Otherwise unemployed but not seeking work (ex: student, retired, disabled, unpaid primary care giver)",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30137-6",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "76437-3",
   "display" : "Primary insurance"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Primary insurance",
-  "severity" : null,
-  "error" : ""
+  "code" : "76437-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30194-7",
   "display" : "None/uninsured"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "None/uninsured",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30194-7",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA17849-3",
   "display" : "Medicaid"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Medicaid",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA17849-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30195-4",
   "display" : "CHIP Medicaid"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "CHIP Medicaid",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30195-4",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA15652-3",
   "display" : "Medicare"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Medicare",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA15652-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30196-2",
   "display" : "Other public insurance (not CHIP)"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Other public insurance (not CHIP)",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30196-2",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30197-0",
   "display" : "Other public insurance (CHIP)"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Other public insurance (CHIP)",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30197-0",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA6350-8",
   "display" : "Private insurance"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Private insurance",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA6350-8",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "63586-2",
   "display" : "What was your best estimate of the total income of all family members from all sources, before taxes, in last year?"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "What was your best estimate of the total income of all family members from all sources, before taxes, in last year [PhenX]",
-  "severity" : "warning",
-  "error" : "The display \"What was your best estimate of the total income of all family members from all sources, before taxes, in last year?\" is not a valid display for the code {http://loinc.org}63586-2 - should be one of [What was your best estimate of the total income of all family members from all sources, before taxes, in last year [PhenX], Annual family income nRate PhenX, Consensus measures for Phenotypes and eXposures, PhenX, 暴露, 接触, 表型与暴露共识指标, 表现型与暴露共识指标, 表型与暴露公认指标 Consensus measures for Phenotypes and eXposures, 表型与暴露公认指标 一年, 一岁, 12个月, 4个季度, 52个星期, 52个礼拜, 52周 全体数量 全部 共计 医疗服务对象, 客户, 病人, 病患, 病号, 超系统 - 病人 单位时间内的数量或计数, 数量/时间, 数量型速率, 数量型速率或计数型速率, 数量型速率或计数型速率(单位时间), 数量或计数型速率, 计数/时间, 计数型速率(单位时间), 数量或计数型速率(单位时间) 可用数量表示的, 定量性, 数值型, 数量型, 连续数值型标尺 总 总和 总数 总量 总额 汇总, Indice numerico paziente PhenX] (from http://tx.fhir.org/r4)"
+  "code" : "63586-2",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93031-3",
   "display" : "In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]",
-  "severity" : "warning",
-  "error" : "The display \"In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?\" is not a valid display for the code {http://loinc.org}93031-3 - should be one of [Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE], ] (from http://tx.fhir.org/r4)"
+  "code" : "93031-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30125-1",
   "display" : "Food"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Food",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30125-1",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30126-9",
   "display" : "Clothing"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Clothing",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30126-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30124-4",
   "display" : "Utilities"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Utilities",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30124-4",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30127-7",
   "display" : "Child care"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Child care",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30127-7",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30128-5",
   "display" : "Medicine or Any Health Care (Medical, Dental, Mental Health, Vision)"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Medicine or Any Health Care (Medical, Dental, Mental Health, Vision)",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30128-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30129-3",
   "display" : "Phone"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Phone",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30129-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93030-5",
   "display" : "Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
-  "display" : "Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living [PRAPARE]",
+  "display" : "Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living",
+  "code" : "93030-5",
+  "system" : "http://loinc.org",
   "severity" : "warning",
-  "error" : "The display \"Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?\" is not a valid display for the code {http://loinc.org}93030-5 - should be one of [Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living [PRAPARE], ] (from http://tx.fhir.org/r4)"
+  "error" : "The display \"Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?\" is not a valid display for the code {http://loinc.org}93030-5 - should be one of ['Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living', ''] (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30133-5",
   "display" : "Yes, it has kept me from medical appointments or from getting my medications"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Yes, it has kept me from medical appointments or from getting my medications",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30133-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30134-3",
   "display" : "Yes, it has kept me from non-medical meetings, appointments, work, or from getting things that I need"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Yes, it has kept me from non-medical meetings, appointments, work, or from getting things that I need",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30134-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30257-2",
   "display" : "Patient unable to respond"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Patient unable to respond",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30257-2",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93040-4",
   "display" : "Social and emotional health"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Social and emotional health [PRAPARE]",
+  "code" : "93040-4",
+  "system" : "http://loinc.org",
   "severity" : "warning",
-  "error" : "The display \"Social and emotional health\" is not a valid display for the code {http://loinc.org}93040-4 - should be one of [Social and emotional health [PRAPARE], ] (from http://tx.fhir.org/r4)"
+  "error" : "The display \"Social and emotional health\" is not a valid display for the code {http://loinc.org}93040-4 - should be one of ['Social and emotional health [PRAPARE]', ''] (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93029-7",
   "display" : "How often do you see or talk to people that you care about and feel close to (For example: talking to friends on the phone, visiting friends or family, going to church or club meetings)?"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "How often do you see or talk to people that you care about and feel close to [PRAPARE]",
-  "severity" : "warning",
-  "error" : "The display \"How often do you see or talk to people that you care about and feel close to (For example: talking to friends on the phone, visiting friends or family, going to church or club meetings)?\" is not a valid display for the code {http://loinc.org}93029-7 - should be one of [How often do you see or talk to people that you care about and feel close to [PRAPARE], ] (from http://tx.fhir.org/r4)"
+  "code" : "93029-7",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA27722-0",
   "display" : "Less than once a week"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Less than once a week",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA27722-0",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30130-1",
   "display" : "1 or 2 times a week"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "1 or 2 times a week",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30130-1",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30131-9",
   "display" : "3 to 5 times a week"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "3 to 5 times a week",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30131-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30132-7",
   "display" : "5 or more times a week"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "5 or more times a week",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30132-7",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93038-8",
   "display" : "Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
-  "display" : "Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled - how stressed are you [PRAPARE]",
+  "display" : "Stress level",
+  "code" : "93038-8",
+  "system" : "http://loinc.org",
   "severity" : "warning",
-  "error" : "The display \"Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?\" is not a valid display for the code {http://loinc.org}93038-8 - should be one of [Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled - how stressed are you [PRAPARE], ] (from http://tx.fhir.org/r4)"
+  "error" : "The display \"Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?\" is not a valid display for the code {http://loinc.org}93038-8 - should be one of ['Stress level', 'Stress level', 'Clinico Osservazione paziente Punto nel tempo (episodio)' (it-IT)] (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA6568-5",
   "display" : "Not at all"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Not at all",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA6568-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA13863-8",
   "display" : "A little bit"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "A little bit",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA13863-8",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA13909-9",
   "display" : "Somewhat"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Somewhat",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA13909-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA13902-4",
   "display" : "Quite a bit"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Quite a bit",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA13902-4",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA13914-9",
   "display" : "Very much"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Very much",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA13914-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93039-6",
   "display" : "Optional additional questions"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Optional additional questions [PRAPARE]",
+  "code" : "93039-6",
+  "system" : "http://loinc.org",
   "severity" : "warning",
-  "error" : "The display \"Optional additional questions\" is not a valid display for the code {http://loinc.org}93039-6 - should be one of [Optional additional questions [PRAPARE], ] (from http://tx.fhir.org/r4)"
+  "error" : "The display \"Optional additional questions\" is not a valid display for the code {http://loinc.org}93039-6 - should be one of ['Optional additional questions [PRAPARE]', ''] (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93028-9",
   "display" : "In the past year, have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility?"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility in past 1 year [PRAPARE]",
-  "severity" : "warning",
-  "error" : "The display \"In the past year, have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility?\" is not a valid display for the code {http://loinc.org}93028-9 - should be one of [Have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility in past 1 year [PRAPARE], ] (from http://tx.fhir.org/r4)"
+  "code" : "93028-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93027-1",
   "display" : "Are you a refugee?"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Are you a refugee",
-  "severity" : "warning",
-  "error" : "The display \"Are you a refugee?\" is not a valid display for the code {http://loinc.org}93027-1 - should be one of [Are you a refugee, ] (from http://tx.fhir.org/r4)"
+  "code" : "93027-1",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93026-3",
   "display" : "Do you feel physically and emotionally safe where you currently live?"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Do you feel physically and emotionally safe where you currently live [PRAPARE]",
-  "severity" : "warning",
-  "error" : "The display \"Do you feel physically and emotionally safe where you currently live?\" is not a valid display for the code {http://loinc.org}93026-3 - should be one of [Do you feel physically and emotionally safe where you currently live [PRAPARE], ] (from http://tx.fhir.org/r4)"
+  "code" : "93026-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA14072-5",
   "display" : "Unsure"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Unsure",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA14072-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "76501-6",
   "display" : "Within the last year, have you been afraid of your partner or ex-partner?"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
-  "display" : "Within the last year, have you been afraid of your partner or ex-partner [HARK]",
-  "severity" : "warning",
-  "error" : "The display \"Within the last year, have you been afraid of your partner or ex-partner?\" is not a valid display for the code {http://loinc.org}76501-6 - should be one of [Within the last year, have you been afraid of your partner or ex-partner [HARK], ] (from http://tx.fhir.org/r4)"
+  "display" : "Within the last year, have you been afraid of your partner or ex-partner",
+  "code" : "76501-6",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : false, "valueSet" :{
@@ -944,8 +1000,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:b93b71f9-83ba-4227-9e62-9186f5fe0817",
-    "timestamp" : "2021-07-09T20:57:51.910Z",
+    "identifier" : "urn:uuid:5ff2861b-deb3-4f6d-bbd4-cebbc6f384e3",
+    "timestamp" : "2021-11-14T22:46:55.191Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -956,7 +1012,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.69"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -1046,8 +1102,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:3f22f94d-4f54-47ab-bef2-1a37f4b01480",
-    "timestamp" : "2021-07-09T20:57:52.192Z",
+    "identifier" : "urn:uuid:911285a1-f769-4f5d-818c-b393c82eb3cb",
+    "timestamp" : "2021-11-14T22:46:55.347Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -1058,7 +1114,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.69"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -1148,8 +1204,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:f6bb894b-99fc-4d73-aeb4-00b5ee1f83d9",
-    "timestamp" : "2021-07-09T20:57:52.332Z",
+    "identifier" : "urn:uuid:9beed467-40ba-4cfa-856f-9a3eae1562b7",
+    "timestamp" : "2021-11-14T22:46:55.488Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -1160,7 +1216,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.69"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -1565,7 +1621,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "1007-4",
-      "display" : "Direct antiglobulin test.poly specific reagent [Presence] on Red Blood Cells"
+      "display" : "Direct antiglobulin test.polyspecific reagent [Presence] on Red Blood Cells"
     },
     {
       "system" : "http://loinc.org",
@@ -1620,7 +1676,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "1008-2",
-      "display" : "Indirect antiglobulin test.poly specific reagent [Presence] in Serum or Plasma"
+      "display" : "Indirect antiglobulin test.polyspecific reagent [Presence] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
@@ -6185,8 +6241,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:394b71b6-dc0f-451b-88b6-96c075acbfd4",
-    "timestamp" : "2021-07-09T20:57:54.051Z",
+    "identifier" : "urn:uuid:0426eb0a-74f7-4e2f-9da2-619835db18ed",
+    "timestamp" : "2021-11-14T22:46:59.207Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -6197,7 +6253,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.69"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -6219,11 +6275,11 @@ e: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]",
-  "severity" : null,
-  "error" : ""
+  "code" : "88122-7",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6237,21 +6293,21 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]",
-  "severity" : null,
-  "error" : ""
+  "code" : "88122-7",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "88122-7"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]",
-  "severity" : null,
-  "error" : ""
+  "code" : "88122-7",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6264,11 +6320,11 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Often true",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA28397-0",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6282,21 +6338,21 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "Often true",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA28397-0",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA28397-0"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Often true",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA28397-0",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6309,11 +6365,11 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]",
-  "severity" : null,
-  "error" : ""
+  "code" : "88123-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6327,21 +6383,21 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]",
-  "severity" : null,
-  "error" : ""
+  "code" : "88123-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "88123-5"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]",
-  "severity" : null,
-  "error" : ""
+  "code" : "88123-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6354,11 +6410,11 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Food insecurity risk [HVS]",
-  "severity" : null,
-  "error" : ""
+  "code" : "88124-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6372,21 +6428,21 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "Food insecurity risk [HVS]",
-  "severity" : null,
-  "error" : ""
+  "code" : "88124-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "88124-3"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Food insecurity risk [HVS]",
-  "severity" : null,
-  "error" : ""
+  "code" : "88124-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6399,11 +6455,11 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "At risk",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA19952-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6417,21 +6473,43 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "At risk",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA19952-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA19952-3"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "At risk",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA19952-3",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "69490-1",
+  "display" : "Ethnicity OMB.1997"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Ethnicity OMB.1997",
+  "code" : "69490-1",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "72826-1",
+  "display" : "Race OMB.1997"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Race OMB.1997",
+  "code" : "72826-1",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6444,11 +6522,11 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Hunger Vital Sign [HVS]",
-  "severity" : null,
-  "error" : ""
+  "code" : "88121-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6462,21 +6540,21 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "Hunger Vital Sign [HVS]",
-  "severity" : null,
-  "error" : ""
+  "code" : "88121-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "88121-9"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Hunger Vital Sign [HVS]",
-  "severity" : null,
-  "error" : ""
+  "code" : "88121-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6489,11 +6567,11 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Employment status - current",
-  "severity" : null,
-  "error" : ""
+  "code" : "67875-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6507,21 +6585,21 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "Employment status - current",
-  "severity" : null,
-  "error" : ""
+  "code" : "67875-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "67875-5"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Employment status - current",
-  "severity" : null,
-  "error" : ""
+  "code" : "67875-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6534,11 +6612,11 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Unemployed",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA17956-6",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6552,21 +6630,21 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "Unemployed",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA17956-6",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA17956-6"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Unemployed",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA17956-6",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6579,11 +6657,11 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Housing status",
-  "severity" : null,
-  "error" : ""
+  "code" : "71802-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6597,21 +6675,21 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "Housing status",
-  "severity" : null,
-  "error" : ""
+  "code" : "71802-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "71802-3"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Housing status",
-  "severity" : null,
-  "error" : ""
+  "code" : "71802-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6624,11 +6702,11 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30190-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6642,21 +6720,21 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30190-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30190-5"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30190-5",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6669,11 +6747,11 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]",
-  "severity" : null,
-  "error" : ""
+  "code" : "93031-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6687,21 +6765,21 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]",
-  "severity" : null,
-  "error" : ""
+  "code" : "93031-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "93031-3"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]",
-  "severity" : null,
-  "error" : ""
+  "code" : "93031-3",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6714,11 +6792,11 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Clothing",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30126-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6732,21 +6810,21 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "Clothing",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30126-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30126-9"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Clothing",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30126-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6759,11 +6837,11 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Child care",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30127-7",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6777,21 +6855,21 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "Child care",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30127-7",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA30127-7"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Child care",
-  "severity" : null,
-  "error" : ""
+  "code" : "LA30127-7",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
@@ -6812,15 +6890,15 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:736a624a-9b7f-4800-a9e3-363944dff00c",
-    "timestamp" : "2021-07-09T20:58:49.176Z",
+    "identifier" : "urn:uuid:68eb0371-90d5-4bfd-a73a-ad75eddd0324",
+    "timestamp" : "2021-11-14T22:48:25.349Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.69"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -7225,7 +7303,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "1007-4",
-      "display" : "Direct antiglobulin test.poly specific reagent [Presence] on Red Blood Cells"
+      "display" : "Direct antiglobulin test.polyspecific reagent [Presence] on Red Blood Cells"
     },
     {
       "system" : "http://loinc.org",
@@ -7280,7 +7358,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "1008-2",
-      "display" : "Indirect antiglobulin test.poly specific reagent [Presence] in Serum or Plasma"
+      "display" : "Indirect antiglobulin test.polyspecific reagent [Presence] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
