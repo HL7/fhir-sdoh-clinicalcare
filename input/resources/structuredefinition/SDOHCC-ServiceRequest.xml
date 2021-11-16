@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ServiceRequest"/>
     <meta>
-        <versionId value="18"/>
-        <lastUpdated value="2021-11-09T22:56:25.140+00:00"/>
-        <source value="#UqbyZcnYD7tWlpcH"/>
+        <versionId value="19"/>
+        <lastUpdated value="2021-11-12T16:32:44.479+00:00"/>
+        <source value="#ofUii9r12MGGy4Fk"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
     <version value="0.1.0"/>
@@ -161,7 +161,7 @@
             <min value="1"/>
             <mustSupport value="true"/>
             <binding>
-                <strength value="preferred"/>
+                <strength value="required"/>
                 <description value="Codes for tests or services that can be carried out by a designated individual, organization or healthcare service."/>
                 <valueSet value="http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code"/>
             </binding>

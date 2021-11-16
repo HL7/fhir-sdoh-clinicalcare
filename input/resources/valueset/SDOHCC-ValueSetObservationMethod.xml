@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ValueSetObservationMethod"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2021-11-11T23:48:34.644+00:00"/>
-        <source value="#h6rsUHCduVDOQVp7"/>
+        <versionId value="5"/>
+        <lastUpdated value="2021-11-12T16:37:21.487+00:00"/>
+        <source value="#FLEcWEDtIYEoPEFJ"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetObservationMethod"/>
     <version value="0.1.0"/>
@@ -21,7 +21,7 @@
             <value value="http://www.hl7.org/Special/committees/patientcare"/>
         </telecom>
     </contact>
-    <description value="Codes that represent specific methods by which an individual's race or ethnicity information can be elicited."/>
+    <description value="Codes that represent methods by which an individual's race or ethnicity information can be elicited."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -41,15 +41,15 @@
             </concept>
             <concept>
                 <code value="genetic-testing"/>
-                <display value="Genetic testing"/>
+                <display value="Genetic Testing"/>
             </concept>
             <concept>
-                <code value="derived-administrative"/>
-                <display value="Derived Administrative"/>
+                <code value="administrative"/>
+                <display value="Administrative"/>
             </concept>
             <concept>
-                <code value="derived-other-specify"/>
-                <display value="Derived Other Specify"/>
+                <code value="derived-specify"/>
+                <display value="Derived Specify"/>
             </concept>
             <concept>
                 <code value="other-specify"/>
@@ -57,7 +57,7 @@
             </concept>
             <concept>
                 <code value="observed"/>
-                <display value="Observation"/>
+                <display value="Observed"/>
             </concept>
             <concept>
                 <code value="unknown"/>

@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-CodeSystemTemporaryCodes"/>
     <meta>
-        <versionId value="11"/>
-        <lastUpdated value="2021-11-11T23:55:21.793+00:00"/>
-        <source value="#743on5dsV5LOtcoA"/>
+        <versionId value="12"/>
+        <lastUpdated value="2021-11-12T16:37:21.487+00:00"/>
+        <source value="#pT2iuZfWP1DvHlco"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
     <version value="0.1.0"/>
@@ -175,7 +175,7 @@
     <concept>
         <code value="self-reported"/>
         <display value="Self Reported"/>
-        <definition value="Identifies that the subject reported the information about the suject."/>
+        <definition value="Identifies that the subject reported the information about the subject."/>
     </concept>
     <concept>
         <code value="reported-by-related-person"/>
@@ -193,19 +193,19 @@
         <definition value="Identifies that the information about the subject was obtained by genetic testing."/>
     </concept>
     <concept>
-        <code value="derived-administrative"/>
-        <display value="Derived Administrative"/>
-        <definition value="Identifies that the information about the subject was derived (as opposed to directly reported by an individual) from a method used by an organization for administrative reasons not directly related to obtaining healthcare or health insurance."/>
+        <code value="administrative"/>
+        <display value="Administrative"/>
+        <definition value="Identifies that the information about the subject was collected by an organization for administrative reasons not directly related to obtaining healthcare or health insurance."/>
     </concept>
     <concept>
-        <code value="derived-other-specify"/>
-        <display value="Derived Other Specify"/>
-        <definition value="Identifies that the information about the subject was derived (as opposed to directly reported by an individual) by a method other than 'derived-administrative'. Text should be used to further specify the method."/>
+        <code value="derived-specify"/>
+        <display value="Derived Specify"/>
+        <definition value="Identifies that the information about the subject was derived from information or methods other than directly reported by an individual. Text should be used to further specify the method."/>
     </concept>
     <concept>
         <code value="other-specify"/>
         <display value="Other Specify"/>
-        <definition value="Identifies that the information about the subject was obtained by a method other than 'self-reported', 'reported-by-related-person', 'genetic-testing', 'observed', 'derived-other-specify' or 'derived-administrative'. Text should be used to further specify the method."/>
+        <definition value="Identifies that the information about the subject was obtained by a method other than 'self-reported', 'reported-by-related-person', 'genetic-testing', 'observed', 'derived-specify' or 'administrative'. Text should be used to further specify the method."/>
     </concept>
     <concept>
         <code value="unknown"/>
