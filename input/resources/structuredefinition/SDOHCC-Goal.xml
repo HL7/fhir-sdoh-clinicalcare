@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Goal"/>
     <meta>
-        <versionId value="7"/>
-        <lastUpdated value="2021-11-09T22:56:25.126+00:00"/>
-        <source value="#5kbT4dV55ZtAyiSG"/>
+        <versionId value="8"/>
+        <lastUpdated value="2021-11-16T18:03:33.695+00:00"/>
+        <source value="#ADARUMaAXCj3WJjT"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal"/>
     <version value="0.1.0"/>
@@ -83,7 +83,7 @@
         </element>
         <element id="Goal.description">
             <path value="Goal.description"/>
-            <comment value="If no code is available, use CodeableConcept.text.&#xD;&#xA;&#xD;&#xA;As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set binding strength may change and may be refined to codes (including LOINC and SNOMED) that pertain to SDOH categories. For further guidance on external value sets vetted by the Gravity Project see: [SDOH terminology guidance](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/support_for_multiple_domains.html#external-value-set-guidance)"/>
+            <comment value="If no code is available, use CodeableConcept.text.&#xD;&#xA;&#xD;&#xA;As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories. For further guidance on external value sets vetted by the Gravity Project see: [SDOH terminology guidance](support_for_multiple_domains.html#external-value-set-guidance)"/>
             <binding>
                 <strength value="preferred"/>
                 <description value="Codes providing the details of a particular goal.  In many systems, only the text element will be used."/>

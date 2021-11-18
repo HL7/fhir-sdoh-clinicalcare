@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ServiceRequest"/>
     <meta>
-        <versionId value="19"/>
-        <lastUpdated value="2021-11-12T16:32:44.479+00:00"/>
-        <source value="#ofUii9r12MGGy4Fk"/>
+        <versionId value="20"/>
+        <lastUpdated value="2021-11-16T18:11:10.819+00:00"/>
+        <source value="#MMRqAfKPReGXLTOd"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
     <version value="0.1.0"/>
@@ -157,7 +157,7 @@
             <path value="ServiceRequest.code"/>
             <short value="What is being requested/ordered."/>
             <definition value="A code that identifies a particular service (e.g., procedure) that has been requested."/>
-            <comment value="As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories. For further guidance on external value sets vetted by the Gravity Project see: [SDOH terminology guidance](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/support_for_multiple_domains.html#external-value-set-guidance)"/>
+            <comment value="As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories. For further guidance on external value sets vetted by the Gravity Project see: [SDOH terminology guidance](support_for_multiple_domains.html#external-value-set-guidance)"/>
             <min value="1"/>
             <mustSupport value="true"/>
             <binding>

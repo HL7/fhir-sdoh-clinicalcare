@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="sdoh-clinicalcare"/>
     <meta>
-        <versionId value="894"/>
-        <lastUpdated value="2021-11-14T23:16:25.742+00:00"/>
-        <source value="#9VP4Y2XMiAq3JBwE"/>
+        <versionId value="922"/>
+        <lastUpdated value="2021-11-18T19:53:46.504+00:00"/>
+        <source value="#OR564kuPObEWGJIs"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/sdoh-clinicalcare"/>
     <version value="1.0.0"/>
@@ -21,7 +21,7 @@
             <value value="http://www.hl7.org/Special/committees/patientcare"/>
         </telecom>
     </contact>
-    <description value="Social Determinants of Health (SDOH) are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange SDOH content defined by the Gravity Project using the Fast Healthcare Interoperability Resources (FHIR) standard. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. This IG addresses the need to gather SDOH information in multiple settings, share that information between stakeholders, and exchange referrals between organizations to address specific social risk needs, all with appropriate patient consent.  In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. The guide supports the following use cases:&#xA;* 	Document SDOH data in conjunction with the patient encounters with providers, payers, and community services&#xA;* 	Document and track SDOH related interventions to completion&#xA;* 	Identify cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer)&#xA;&#xA;&#xA;This implementation guide was developed by the Gravity Project, which specifically focuses on using HL7 FHIR to define standards for the exchange of SDOH-related information.  Both the project and this implementation guide are focused on the U.S. environment.  This implementation guide leverages content from the US Core implementation guide and binds to US-specific terminology.  However, the basic constructs and interaction patterns may well be applicable outside the U.S.&#xA;&#xA;### Content and organization&#xA;&#xA;The implementation guide is organized into the following sections:&#xA;&#xA;* Background: Includes [Gravity Background](gravity_background.html), [SDOH Clinical Care Scope](sdoh_clinical_care_scope.html), [Functional Use Cases](functional_use_cases.html), and [Technical Background](technical_background.html), that describe the environment in which this implementation guide establishes standards for information exchange&#xA;* Context: Describes the [Survey Instrument Support](survey_instrument_support.html),[ QuestionnaireResponse Mapping Instructions](mapping_instructions.html), [Support for Multiple Domains](support_for_multiple_domains.html), and [Exchange Workflow diagram](exchange_workflow.html) that describes a high-level overview of expected process flow&#xA;* Specifications: Provides a overview of the [FHIR Artifacts](fhir_artifacts_overview.html) defined and used in this IG, description of [Privacy and Security](privacy_and_security.html) issues, and explains [MustSupport and Missing Data](mustsupport_and_missing_data.html) concepts &#xA;* [Downloads](downloads.html): Provides for the download of various IG related artifacts&#xA;* [Credits](credits.html): Identifies the individuals and organizations involved in developing this implementation guide&#xA;* [Artifacts Index](artifacts.html):  Introduces and provides links to the FHIR R4 profiles, examples and other FHIR artifacts used in this implementation guide&#xA;&#xA;### Note to Implementers&#xA;&#xA;Implementers should pay specific attention to the following sections:&#xA;&#xA;* [Technical Background](technical_background.html) if the implementer needs basic FHIR information references&#xA;* [Survey Instrument Support](survey_instrument_support.html), and [ QuestionnaireResponse Mapping Instructions](mapping_instructions.html) if implementing support for structured assessment instruments&#xA;* [Support for Multiple Domains](support_for_multiple_domains.html) to understand this IG's approach to domain specific value sets&#xA;* [Exchange Workflow diagram](exchange_workflow.html) to understand the exchange workflows&#xA;* [FHIR Artifacts](fhir_artifacts_overview.html) to understand the individual FHIR artifacts described in this IG&#xA;* [Privacy and Security](privacy_and_security.html) for implementers that are concerned with privacy and security aspects related to implementing the information exchanges defined in this IG&#xA;* [MustSupport and Missing Data](mustsupport_and_missing_data.html) to understand the interpretation of the MustSupport flags and the treatment of Missing Data used in this IG &#xA;* [Artifacts Index](artifacts.html) all implementers need to understand the FHIR R4 profiles, examples and other FHIR artifacts defined in this implementation guide and linked from this section&#xA;* [Downloads](downloads.html) links to allow implementers to download the IG and various artifacts&#xA;&#xA;New updates&#xA;Includes all changes as of 11/14/2021 5:15 PM CT"/>
+    <description value="Social Determinants of Health (SDOH) are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange SDOH content defined by the Gravity Project using the Fast Healthcare Interoperability Resources (FHIR) standard. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. This IG addresses the need to gather SDOH information in multiple settings, share that information between stakeholders, and exchange referrals between organizations to address specific social risk needs, all with appropriate patient consent.  In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. The guide supports the following use cases:&#xA;* 	Document SDOH data in conjunction with the patient encounters with providers, payers, and community services&#xA;* 	Document and track SDOH related interventions to completion&#xA;* 	Identify cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer)&#xA;&#xA;&#xA;This implementation guide was developed by the Gravity Project, which specifically focuses on using HL7 FHIR to define standards for the exchange of SDOH-related information.  Both the project and this implementation guide are focused on the U.S. environment.  This implementation guide leverages content from the US Core implementation guide and binds to US-specific terminology.  However, the basic constructs and interaction patterns may well be applicable outside the U.S.&#xA;&#xA;### Content and organization&#xA;&#xA;The implementation guide is organized into the following sections:&#xA;&#xA;* Background: Includes [Gravity Background](gravity_background.html), [SDOH Clinical Care Scope](sdoh_clinical_care_scope.html), [Functional Use Cases](functional_use_cases.html), and [Technical Background](technical_background.html), that describe the environment in which this implementation guide establishes standards for information exchange&#xA;* Context: Describes the [Survey Instrument Support](survey_instrument_support.html),[ QuestionnaireResponse Mapping Instructions](mapping_instructions.html), [Support for Multiple Domains](support_for_multiple_domains.html), and [Exchange Workflow diagram](exchange_workflow.html) that describes a high-level overview of expected process flow&#xA;* Specifications: Provides a overview of the [FHIR Artifacts](fhir_artifacts_overview.html) defined and used in this IG, description of [Privacy and Security](privacy_and_security.html) issues, and explains [MustSupport and Missing Data](mustsupport_and_missing_data.html) concepts &#xA;* [Downloads](downloads.html): Provides for the download of various IG related artifacts&#xA;* [Credits](credits.html): Identifies the individuals and organizations involved in developing this implementation guide&#xA;* [Artifacts Index](artifacts.html):  Introduces and provides links to the FHIR R4 profiles, examples and other FHIR artifacts used in this implementation guide&#xA;&#xA;### Note to Implementers&#xA;&#xA;Implementers should pay specific attention to the following sections:&#xA;&#xA;* [Technical Background](technical_background.html) if the implementer needs basic FHIR information references&#xA;* [Survey Instrument Support](survey_instrument_support.html), and [ QuestionnaireResponse Mapping Instructions](mapping_instructions.html) if implementing support for structured assessment instruments&#xA;* [Support for Multiple Domains](support_for_multiple_domains.html) to understand this IG's approach to domain specific value sets&#xA;* [Exchange Workflow diagram](exchange_workflow.html) to understand the exchange workflows&#xA;* [FHIR Artifacts](fhir_artifacts_overview.html) to understand the individual FHIR artifacts described in this IG&#xA;* [Privacy and Security](privacy_and_security.html) for implementers that are concerned with privacy and security aspects related to implementing the information exchanges defined in this IG&#xA;* [MustSupport and Missing Data](mustsupport_and_missing_data.html) to understand the interpretation of the MustSupport flags and the treatment of Missing Data used in this IG &#xA;* [Artifacts Index](artifacts.html) all implementers need to understand the FHIR R4 profiles, examples and other FHIR artifacts defined in this implementation guide and linked from this section&#xA;* [Downloads](downloads.html) links to allow implementers to download the IG and various artifacts&#xA;&#xA;New updates&#xA;Includes all changes as of 11/18/2021 1:53 PM CT"/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -39,16 +39,6 @@
         <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc"/>
         <packageId value="hl7.fhir.uv.sdc"/>
         <version value="2.7.0"/>
-    </dependsOn>
-    <dependsOn id="sdohvsac">
-        <uri value="http://fhir.org/packages/us.nlm.vsac"/>
-        <packageId value="us.nlm.vsac"/>
-        <version value="0.4.0"/>
-    </dependsOn>
-    <dependsOn id="sdohbackport">
-        <uri value="http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"/>
-        <packageId value="hl7.fhir.uv.subscriptions-backport"/>
-        <version value="0.1.0"/>
     </dependsOn>
     <definition>
         <grouping id="new-group8">
@@ -77,6 +67,9 @@
         </grouping>
         <grouping id="new-group9">
             <name value="Extensions"/>
+        </grouping>
+        <grouping id="new-group10">
+            <name value="Draft Artifacts"/>
         </grouping>
         <resource>
             <reference>
@@ -156,7 +149,7 @@
             <name value="SDOHCC Observation Ethnicity"/>
             <description value="Profile for observations about ethnicity using Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on 11/18/2021 - Jira ticket 34245."/>
             <exampleBoolean value="false"/>
-            <groupingId value="new-group1"/>
+            <groupingId value="new-group10"/>
         </resource>
         <resource>
             <reference>
@@ -166,7 +159,7 @@
             <name value="SDOHCC Observation Race"/>
             <description value="Profile for observations about race using Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on 11/18/2021 - Jira ticket 34245."/>
             <exampleBoolean value="false"/>
-            <groupingId value="new-group1"/>
+            <groupingId value="new-group10"/>
         </resource>
         <resource>
             <reference>
@@ -336,7 +329,7 @@
             <description value="An example of a patient ethnicity Observation where the ethnicity is Hispanic or Latino (detailed as part Cuban, and part Puerto Rican)."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicity"/>
-            <groupingId value="new-group2"/>
+            <groupingId value="new-group10"/>
         </resource>
         <resource>
             <reference>
@@ -347,7 +340,7 @@
             <description value="An example of a patient race Observation highlighting all elements and repetitions where possible."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRace"/>
-            <groupingId value="new-group2"/>
+            <groupingId value="new-group10"/>
         </resource>
         <resource>
             <reference>
@@ -422,6 +415,17 @@
             </reference>
             <name value="SDOHCC Procedure Provision Of Food Example"/>
             <description value="An example of a completed Procedure where Procedure.code.coding includes a SNOMED CT code for ‘Provision of food’ and a more specific LA 211 Taxonomy code for “Thanksgiving Baskets’."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Procedure/SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample"/>
+                <display value="SDOHCC Procedure Summer Food Program Application Assistance Example"/>
+            </reference>
+            <name value="SDOHCC Procedure Summer Food Program Application Assistance Example"/>
+            <description value="An example of a completed Procedure for assistance with applying to a summer food program that is based on a ServiceRequest and references as its reason a food insecurity Condition. "/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
             <groupingId value="new-group2"/>
@@ -738,7 +742,7 @@
             <name value="SDOHCC ValueSet Observation DataAbsentReason"/>
             <description value="Codes for the reason an observation does not have a value."/>
             <exampleBoolean value="false"/>
-            <groupingId value="new-group4"/>
+            <groupingId value="new-group10"/>
         </resource>
         <resource>
             <reference>
@@ -748,7 +752,7 @@
             <name value="SDOHCC ValueSet Observation Method"/>
             <description value="Codes that represent specific methods by which an individual's race or ethnicity information can be elicited."/>
             <exampleBoolean value="false"/>
-            <groupingId value="new-group4"/>
+            <groupingId value="new-group10"/>
         </resource>
         <resource>
             <reference>
@@ -822,21 +826,18 @@
         </resource>
         <resource>
             <reference>
+                <reference value="Parameters/terminology-settings"/></reference>
+            <name value="terminology settings"/>
+            <description value="Terminology settings to point to the US version of SNOMED"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
                 <reference value="CapabilityStatement/SDOHCC-CoordinationPlatform"/>
                 <display value="SDOHCC Coordination Platform Capability Statement"/>
             </reference>
             <name value="SDOHCC Coordination Platform Capability Statement"/>
             <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'coordination platforms' (CPs)."/>
-            <exampleBoolean value="false"/>
-            <groupingId value="new-group8"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="CapabilityStatement/SDOHCC-ReferralRecipientLight"/>
-                <display value="SDOHCC Referral Recipient - Light Capability Statement"/>
-            </reference>
-            <name value="SDOHCC Referral Recipient - Light Capability Statement"/>
-            <description value="This resource describes the required and desired behavior of systems acting as 'light-weight' SDOH clinical care 'referral recipients'."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group8"/>
         </resource>
@@ -852,6 +853,16 @@
         </resource>
         <resource>
             <reference>
+                <reference value="CapabilityStatement/SDOHCC-ReferralRecipientLight"/>
+                <display value="SDOHCC Referral Recipient - Light Capability Statement"/>
+            </reference>
+            <name value="SDOHCC Referral Recipient - Light Capability Statement"/>
+            <description value="This resource describes the required and desired behavior of systems acting as 'light-weight' SDOH clinical care 'referral recipients'."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group8"/>
+        </resource>
+        <resource>
+            <reference>
                 <reference value="CapabilityStatement/SDOHCC-ReferralSource"/>
                 <display value="SDOHCC Referral Source Capability Statement"/>
             </reference>
@@ -859,13 +870,6 @@
             <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral sources'."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group8"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="Parameters/terminology-settings"/></reference>
-            <name value="terminology settings"/>
-            <description value="Terminology settings to point to the US version of SNOMED"/>
-            <exampleBoolean value="false"/>
         </resource>
         <page>
             <nameUrl value="index.html"/>
@@ -907,6 +911,11 @@
                 <generation value="markdown"/>
             </page>
             <page>
+                <nameUrl value="synchronizing_applications_with_api_data_sources.html"/>
+                <title value="Synchronizing Applications with API Data Sources"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
                 <nameUrl value="technical_background.html"/>
                 <title value="Technical Background"/>
                 <generation value="markdown"/>
@@ -929,6 +938,11 @@
             <page>
                 <nameUrl value="mustsupport_and_missing_data.html"/>
                 <title value="MustSupport and Missing Data"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="draft_specifications_for_race_and_ethnicity.html"/>
+                <title value="Draft Specifications for Race and Ethnicity"/>
                 <generation value="markdown"/>
             </page>
             <page>
