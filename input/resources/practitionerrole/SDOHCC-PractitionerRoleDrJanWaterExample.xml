@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-PractitionerRoleDrJanWaterExample"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2021-10-25T21:18:43.088+00:00"/>
-        <source value="#RPFdSb0VjhCagQag"/>
+        <versionId value="5"/>
+        <lastUpdated value="2021-11-16T15:52:03.949+00:00"/>
+        <source value="#T4wpE5GReCGgeyeF"/>
         <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
     </meta>
     <identifier>
@@ -24,4 +24,14 @@
             <display value="Family Medicine Physician"/>
         </coding>
     </code>
+    <telecom>
+        <system value="phone"/>
+        <value value="639 442 6719"/>
+        <use value="work"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="jan.water@deerland.org"/>
+        <use value="work"/>
+    </telecom>
 </PractitionerRole>

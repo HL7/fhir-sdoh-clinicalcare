@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-GoalFoodSecurityExample"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-06-03T01:31:59.696+00:00"/>
-        <source value="#InLIR7QajAcI3CDo"/>
+        <versionId value="2"/>
+        <lastUpdated value="2021-11-15T20:50:16.089+00:00"/>
+        <source value="#orOiNvQwbfO6pINw"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal"/>
     </meta>
     <lifecycleStatus value="active"/>
@@ -49,9 +49,9 @@
                 <display value="No risk"/>
             </coding>
         </detailCodeableConcept>
-        <dueDate value="2021-08-01"/>
+        <dueDate value="2020-12-10"/>
     </target>
-    <statusDate value="2021-05-01"/>
+    <statusDate value="2020-10-21"/>
     <addresses>
         <reference value="Condition/SDOHCC-ConditionFoodInsecurityExample"/>
     </addresses>

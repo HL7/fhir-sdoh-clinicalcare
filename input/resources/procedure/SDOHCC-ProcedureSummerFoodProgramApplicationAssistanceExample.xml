@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Procedure
     xmlns="http://hl7.org/fhir">
-    <id value="SDOHCC-ProcedureProvisionOfFoodExample"/>
+    <id value="SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample"/>
     <meta>
         <versionId value="2"/>
-        <lastUpdated value="2021-11-15T20:50:16.070+00:00"/>
-        <source value="#Ia3NJ2vidJMGkBfN"/>
+        <lastUpdated value="2021-11-15T20:50:16.079+00:00"/>
+        <source value="#4jt88ZQ5SiosSS3k"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
     </meta>
+    <basedOn>
+        <reference value="ServiceRequest/SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample"/>
+    </basedOn>
     <status value="completed"/>
     <category>
         <coding>
@@ -19,20 +22,15 @@
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="710925007"/>
-            <display value="Provision of food"/>
-        </coding>
-        <coding>
-            <system value="http://example.org/TBD/211LACountyTaxonomy"/>
-            <code value="PH-2950.8500-850"/>
-            <display value="Thanksgiving Baskets"/>
+            <code value="467681000124101"/>
+            <display value="Assistance with application for Summer Food Service Program"/>
         </coding>
     </code>
     <subject>
         <reference value="Patient/pat-53234"/>
         <display value="COLIN ABBAS"/>
     </subject>
-    <performedDateTime value="2020-11-16"/>
+    <performedDateTime value="2020-09-22"/>
     <reasonReference>
         <reference value="Condition/SDOHCC-ConditionFoodInsecurityExample"/>
     </reasonReference>

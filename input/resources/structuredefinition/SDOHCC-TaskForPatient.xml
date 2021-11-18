@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-TaskForPatient"/>
     <meta>
-        <versionId value="8"/>
-        <lastUpdated value="2021-10-27T17:12:16.613+00:00"/>
-        <source value="#OOStvGB1l7U1aYw5"/>
+        <versionId value="9"/>
+        <lastUpdated value="2021-11-17T16:57:24.805+00:00"/>
+        <source value="#XRsihcvRbRYQAOuV"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"/>
     <name value="SDOHCCTaskForPatient"/>
@@ -41,7 +41,7 @@
     <differential>
         <element id="Task">
             <path value="Task"/>
-            <short value="A request to fulfll a SDOH questionnaire or service request"/>
+            <short value="A request to fulfill an SDOH questionnaire or service request"/>
             <constraint>
                 <key value="SDOH-Task-1"/>
                 <severity value="error"/>

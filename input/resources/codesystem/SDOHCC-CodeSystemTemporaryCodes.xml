@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-CodeSystemTemporaryCodes"/>
     <meta>
-        <versionId value="12"/>
-        <lastUpdated value="2021-11-12T16:37:21.487+00:00"/>
-        <source value="#pT2iuZfWP1DvHlco"/>
+        <versionId value="13"/>
+        <lastUpdated value="2021-11-17T19:56:25.597+00:00"/>
+        <source value="#rhkjJfvECHwuQREt"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
     <version value="0.1.0"/>
@@ -188,11 +188,6 @@
         <definition value="Identifies that direct observation was used to obtain information about the subject."/>
     </concept>
     <concept>
-        <code value="genetic-testing"/>
-        <display value="Genetic Testing"/>
-        <definition value="Identifies that the information about the subject was obtained by genetic testing."/>
-    </concept>
-    <concept>
         <code value="administrative"/>
         <display value="Administrative"/>
         <definition value="Identifies that the information about the subject was collected by an organization for administrative reasons not directly related to obtaining healthcare or health insurance."/>
@@ -205,7 +200,7 @@
     <concept>
         <code value="other-specify"/>
         <display value="Other Specify"/>
-        <definition value="Identifies that the information about the subject was obtained by a method other than 'self-reported', 'reported-by-related-person', 'genetic-testing', 'observed', 'derived-specify' or 'administrative'. Text should be used to further specify the method."/>
+        <definition value="Identifies that the information about the subject was obtained by a method other than 'self-reported', 'reported-by-related-person', 'observed', 'derived-specify' or 'administrative'. Text should be used to further specify the method."/>
     </concept>
     <concept>
         <code value="unknown"/>
