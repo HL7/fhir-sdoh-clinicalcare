@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="sdoh-clinicalcare"/>
     <meta>
-        <versionId value="922"/>
-        <lastUpdated value="2021-11-18T19:53:46.504+00:00"/>
-        <source value="#OR564kuPObEWGJIs"/>
+        <versionId value="927"/>
+        <lastUpdated value="2021-11-19T04:28:45.796+00:00"/>
+        <source value="#E7JLSlM9sFIIHuEo"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/sdoh-clinicalcare"/>
     <version value="1.0.0"/>
@@ -67,6 +67,9 @@
         </grouping>
         <grouping id="new-group9">
             <name value="Extensions"/>
+        </grouping>
+        <grouping id="new-group11">
+            <name value="Search Parameters"/>
         </grouping>
         <grouping id="new-group10">
             <name value="Draft Artifacts"/>
@@ -425,7 +428,7 @@
                 <display value="SDOHCC Procedure Summer Food Program Application Assistance Example"/>
             </reference>
             <name value="SDOHCC Procedure Summer Food Program Application Assistance Example"/>
-            <description value="An example of a completed Procedure for assistance with applying to a summer food program that is based on a ServiceRequest and references as its reason a food insecurity Condition. "/>
+            <description value="An example of a completed Procedure for assistance with applying to a summer food program that is based on a ServiceRequest and references as its reason a food insecurity Condition."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
             <groupingId value="new-group2"/>
@@ -870,6 +873,26 @@
             <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral sources'."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group8"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="SearchParameter/ServiceRequest-supporting-info"/>
+                <display value="ServiceRequestSupportingInfo"/>
+            </reference>
+            <name value="ServiceRequestSupportingInfo"/>
+            <description value="Any resources referenced by ServiceRequest.supportingInfo"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group11"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="SearchParameter/Task-output-reference"/>
+                <display value="TaskOutputReference"/>
+            </reference>
+            <name value="TaskOutputReference"/>
+            <description value="The value of any outputs of type 'Reference'"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group11"/>
         </resource>
         <page>
             <nameUrl value="index.html"/>
