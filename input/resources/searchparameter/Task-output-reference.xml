@@ -1,15 +1,37 @@
-<SearchParameter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir ../../../input-cache/schemas/R4/fhir-single.xsd">
-	<id value="Task-output-reference"/>
-	<url value="http://hl7.org/fhir/us/sdoh-clinicalcare/SearchParameter/Task-output-reference"/>
-	<name value="TaskOutputReference"/>
-	<status value="draft"/>
-	<experimental value="false"/>
-	<date value="2021-07"/>
-	<description value="The value of any outputs of type 'Reference'"/>
-	<code value="output"/>
-	<base value="Task"/>
-	<type value="reference"/>
-	<expression value="(Task.output.value as Reference)"/>
-	<xpath value="f:Task/f:output/f:valueReference"/>
-	<xpathUsage value="normal"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchParameter
+    xmlns="http://hl7.org/fhir">
+    <id value="Task-output-reference"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2021-11-19T04:18:52.778+00:00"/>
+        <source value="#euF2X6YJgs01eKBr"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/SearchParameter/Task-output-reference"/>
+    <version value="1.0.0"/>
+    <name value="TaskOutputReference"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <date value="2021-07"/>
+    <publisher value="HL7 International - Patient Care WG"/>
+    <contact>
+        <name value="HL7 International - Patient Care"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/patientcare"/>
+        </telecom>
+    </contact>
+    <description value="The value of any outputs of type 'Reference'"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <code value="output"/>
+    <base value="Task"/>
+    <type value="reference"/>
+    <expression value="(Task.output.value as Reference)"/>
+    <xpath value="f:Task/f:output/f:valueReference"/>
+    <xpathUsage value="normal"/>
 </SearchParameter>

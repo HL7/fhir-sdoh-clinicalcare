@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ReferralSource"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-11-17T15:27:05.406+00:00"/>
-        <source value="#CyuuUonqz21Ul7Vx"/>
+        <versionId value="2"/>
+        <lastUpdated value="2021-11-19T03:20:19.669+00:00"/>
+        <source value="#b5EcrZ5T61AE35JN"/>
     </meta>
     <text>
         <status value="generated"/>
@@ -2056,7 +2056,7 @@
             <p>Supported Profile(s):</p>
             <ul>
                 <li>
-                    <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task</a>
+                    <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement</a>
                 </li>
             </ul>
             <h4>Behavior</h4>
@@ -4471,7 +4471,7 @@
             <p>Supported Profile(s):</p>
             <ul>
                 <li>
-                    <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task</a>
+                    <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement</a>
                 </li>
             </ul>
             <h4>Behavior</h4>
@@ -5404,7 +5404,7 @@
         </resource>
         <resource>
             <type value="Task"/>
-            <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task"/>
+            <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"/>
             <documentation value="Used to create Tasks on downstream systems seeking fufillment of ServiceRequests on a coordinating system serving as an intermediary and to retrieve Task updates from a fulfilling system"/>
             <interaction>
                 <code value="create"/>
@@ -6387,7 +6387,7 @@
         </resource>
         <resource>
             <type value="Task"/>
-            <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Task"/>
+            <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"/>
             <documentation value="Used by upstream referral sources and coordination platforms to  create and update Tasks seeking fufillment of ServiceRequests.  Also used by downstream referral recipiencts to monitor and update Tasks stored on this system as they respond to requests to fulfill referrals and link in information about actions taken so far"/>
             <interaction>
                 <code value="create"/>
