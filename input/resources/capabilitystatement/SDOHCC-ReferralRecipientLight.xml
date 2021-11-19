@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ReferralRecipientLight"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-11-17T15:10:15.217+00:00"/>
-        <source value="#CJGEgez0Dd6azl37"/>
+        <versionId value="2"/>
+        <lastUpdated value="2021-11-19T03:10:20.127+00:00"/>
+        <source value="#YJcJzHoxY0CRKx6v"/>
     </meta>
     <text>
         <status value="generated"/>
@@ -2178,7 +2178,7 @@
             </searchParam>
             <searchParam>
                 <name value="supporting-info"/>
-                <definition value="http://hl7.org/fhir/us/sdoh-clinicalcare/SearchParameter/ServiceRequest-supportinginfo"/>
+                <definition value="http://hl7.org/fhir/us/sdoh-clinicalcare/SearchParameter/ServiceRequest-supporting-info"/>
                 <type value="reference"/>
                 <documentation value="Allows _include to retrieve supporting information for a ServiceRequest - particularly Consent"/>
             </searchParam>

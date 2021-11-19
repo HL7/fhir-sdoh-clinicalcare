@@ -1,15 +1,37 @@
-<SearchParameter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir" xsi:schemaLocation="http://hl7.org/fhir ../../../input-cache/schemas/R4/fhir-single.xsd">
-	<id value="ServiceRequest-supporting-info"/>
-	<url value="http://hl7.org/fhir/us/sdoh-clinicalcare/SearchParameter/ServiceRequest-supporting-info"/>
-	<name value="ServiceRequestSupportingInfo"/>
-	<status value="draft"/>
-	<experimental value="false"/>
-	<date value="2021-07"/>
-	<description value="Any resources referenced by ServiceRequest.supportingInfo"/>
-	<code value="supporting-info"/>
-	<base value="ServiceRequest"/>
-	<type value="reference"/>
-	<expression value="ServiceRequest.supportingInfo"/>
-	<xpath value="f:ServiceRequest/f:supportingInfo"/>
-	<xpathUsage value="normal"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchParameter
+    xmlns="http://hl7.org/fhir">
+    <id value="ServiceRequest-supporting-info"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2021-11-19T04:12:56.592+00:00"/>
+        <source value="#burpFh4Jg6KP31k5"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/SearchParameter/ServiceRequest-supporting-info"/>
+    <version value="1.0.0"/>
+    <name value="ServiceRequestSupportingInfo"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <date value="2021-07"/>
+    <publisher value="HL7 International - Patient Care WG"/>
+    <contact>
+        <name value="HL7 International - Patient Care"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/patientcare"/>
+        </telecom>
+    </contact>
+    <description value="Any resources referenced by ServiceRequest.supportingInfo"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <code value="supporting-info"/>
+    <base value="ServiceRequest"/>
+    <type value="reference"/>
+    <expression value="ServiceRequest.supportingInfo"/>
+    <xpath value="f:ServiceRequest/f:supportingInfo"/>
+    <xpathUsage value="normal"/>
 </SearchParameter>
