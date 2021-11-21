@@ -10,8 +10,8 @@ We would like to thank [CyncHealth](https://cynchealth.org/), the [Agency for He
 | Corey Smith        | [AMA](https://www.ama-assn.org/)                             |
 | Monique van Berkum | [AMA ](https://www.ama-assn.org/)                            |
 | James Shalaby      | [Elimu](https://www.elimu.io/)                               |
-| Lloyd McKenzie     | [Gevity](https://www.gevityinc.com/)                         |
-| Joee Garcia     | [Gevity](https://www.gevityinc.com/)                         |
+| Lloyd McKenzie     | [Gevity](https://www.gevityinc.com/)/[Accenture](https://www.accenture.com)                         |
+| Joee Garcia     | [Gevity](https://www.gevityinc.com/)/[Accenture](https://www.accenture.com)                         |
 | Lisa Nelson        | [MaxMD ](https://www.maxmddirect.com/)                       |
 | Matt Elrod         | [MaxMD](https://www.maxmddirect.com/)                        |
 | Matt Menning       | [AMA  ](https://www.ama-assn.org/)                           |

@@ -9,7 +9,7 @@ Sending Systems are defined as: 1) Provider Systems, 2) Payer Systems, and 3) Co
 * The Sending System **SHALL** populate all elements with a MustSupport flag if the information exists.
 * The Sending System **SHALL NOT** include a data element in the resource instance if the cardinality is 0..n and the information for that particular data element is not present.
 * The Sending System **SHALL** provide the capability for elements with cardinality >=1..* when the information does not exist to send the reason that information is missing using values from the value set indicating the absent reason or, if a missing information reason does not exist in the defined value set, use the dataAbsentReason extension where it is defined.
-Note: populating the element with the value set absent reason or using the dataAbsent Reason **SHOULD** be handled by the Sending System and not require provider action. 
+Note: populating the element with the value set absent reason or using the dataAbsentReason **SHOULD** be handled by the Sending System and not require provider action. 
 
 **All Receiving Systems** 
 

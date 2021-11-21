@@ -78,7 +78,7 @@ This IG assumes that, in an Indirect Referral, the Referral Performer does not h
 
 1. Create a local copy of all of the relevant referenced resources from the Referral Source
 2. Create a Task to be Posted to the Referral Performer that references the Referral Source Task via Task.partOf
-3. Create a ServiceRequest with ServiceRequest.intent value filler-order and ServiceRquest.basedOn references the original Referral Source ServiceRequest
+3. Create a ServiceRequest with ServiceRequest.intent value filler-order and ServiceRequest.basedOn references the original Referral Source ServiceRequest
 4. Since local copies of the referenced resources are maintained by the Intermediary, the intermediary must periodically query the Referral Source for updates to the referenced resources
 
 <table><tr><td><img src="IndirectReferralSF.jpg" /></td></tr></table>

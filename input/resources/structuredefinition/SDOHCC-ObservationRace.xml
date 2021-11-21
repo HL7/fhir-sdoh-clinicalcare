@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationRace"/>
     <meta>
-        <versionId value="11"/>
-        <lastUpdated value="2021-11-12T16:32:44.479+00:00"/>
-        <source value="#qwSQ3LWsrArXq2Km"/>
+        <versionId value="12"/>
+        <lastUpdated value="2021-11-19T14:56:48.731+00:00"/>
+        <source value="#OXjXnvdFZnP0QLoM"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRace"/>
     <name value="SDOHCCObservationRace"/>
@@ -26,8 +26,8 @@
             <constraint>
                 <key value="SDOH-Obs-1"/>
                 <severity value="error"/>
-                <human value="Must have either a dataAbsentReason or a component with a code of race and a value of string."/>
-                <expression value="dataAbsentReason.exists() or component.where(code.coding.where(system='http://loinc.org' and code='72826-1').exists() and value.ofType(string).exists())"/>
+                <human value="Must have either a dataAbsentReason or at least one of the defined race components but not both"/>
+                <expression value="dataAbsentReason.exists() xor component.where(code.coding.where(system='http://loinc.org' and code='72826-1')).exists()"/>
                 <xpath value="true()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRace"/>
             </constraint>
@@ -141,6 +141,7 @@
             <sliceName value="RaceDescription"/>
             <definition value="Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes."/>
             <requirements value="Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable)."/>
+            <max value="1"/>
             <mustSupport value="true"/>
         </element>
         <element id="Observation.component:RaceDescription.code">

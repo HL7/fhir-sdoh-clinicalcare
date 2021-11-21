@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-CodeSystemTemporaryCodes"/>
     <meta>
-        <versionId value="13"/>
-        <lastUpdated value="2021-11-17T19:56:25.597+00:00"/>
-        <source value="#rhkjJfvECHwuQREt"/>
+        <versionId value="14"/>
+        <lastUpdated value="2021-11-19T14:37:41.131+00:00"/>
+        <source value="#cZtbOoEJsPfYBCwq"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
     <version value="0.1.0"/>
@@ -31,6 +31,7 @@
     </jurisdiction>
     <purpose value="The purpose of this code system is to enable temporary codes to be assigned to concepts that are needed to document SDOH-related data elements defined by the Gravity Project community and concepts that are needed to facilitate the use of FHIR to exchange data as required in the use cases covered by this IG.  After the IG has been sufficiently tested through HL7 Connectathons and the coded concepts have been confirmed as fit for the intended purpose, and consensus on the use of the codes has been confirmed through the HL7 Ballot process, the temporary codes will be replaced with coded concepts established within nationally recognized, open code systems.  The replacement of temporary codes with permanent codes is intended to happen prior to the IG being published by HL7."/>
     <copyright value="(c) 2020 HL7.org"/>
+    <caseSensitive value="true"/>
     <content value="complete"/>
     <concept>
         <code value="sdoh-category-unspecified"/>

@@ -87,4 +87,22 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalca
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicity').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRace').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 
-
+# The following errors and warnings are because this IG relies on the SDC IG and includes a few extensions from the integration build. The published version of the SDOH CC IG will refer to the final published version of SDC that includes those extensions. This is a problem only for ballot and has been acknowledged in the ballot text.
+ERROR: StructureDefinition/SDOHCC-TaskForPatient: StructureDefinition.snapshot.element[63].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System 'http://hl7.org/fhir/uv/sdc/CodeSystem/temp'
+ERROR: StructureDefinition/SDOHCC-TaskForPatient: StructureDefinition.snapshot.element[63].pattern.ofType(CodeableConcept).coding[0].system: URL value 'http://hl7.org/fhir/uv/sdc/CodeSystem/temp' does not resolve
+ERROR: StructureDefinition/SDOHCC-TaskForPatient: StructureDefinition.snapshot.element[87].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System 'http://hl7.org/fhir/uv/sdc/CodeSystem/temp'
+ERROR: StructureDefinition/SDOHCC-TaskForPatient: StructureDefinition.snapshot.element[87].pattern.ofType(CodeableConcept).coding[0].system: URL value 'http://hl7.org/fhir/uv/sdc/CodeSystem/temp' does not resolve
+ERROR: StructureDefinition/SDOHCC-TaskForPatient: StructureDefinition.differential.element[18].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System 'http://hl7.org/fhir/uv/sdc/CodeSystem/temp'
+ERROR: StructureDefinition/SDOHCC-TaskForPatient: StructureDefinition.differential.element[18].pattern.ofType(CodeableConcept).coding[0].system: URL value 'http://hl7.org/fhir/uv/sdc/CodeSystem/temp' does not resolve
+ERROR: StructureDefinition/SDOHCC-TaskForPatient: StructureDefinition.differential.element[28].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System 'http://hl7.org/fhir/uv/sdc/CodeSystem/temp'
+ERROR: StructureDefinition/SDOHCC-TaskForPatient: StructureDefinition.differential.element[28].pattern.ofType(CodeableConcept).coding[0].system: URL value 'http://hl7.org/fhir/uv/sdc/CodeSystem/temp' does not resolve
+WARNING: Task/SDOHCC-TaskPatientRiskQuestionnaireCompletedExample: Task.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetTaskCode because the value set or a code system it depends on is not known to the validator, Code System URI 'http://hl7.org/fhir/uv/sdc/CodeSystem/temp' is unknown so the code cannot be validated]
+ERROR: Task/SDOHCC-TaskPatientRiskQuestionnaireCompletedExample: Task.code.coding[0]: Unknown Code System 'http://hl7.org/fhir/uv/sdc/CodeSystem/temp'
+ERROR: Task/SDOHCC-TaskPatientRiskQuestionnaireCompletedExample: Task.code.coding[0].system: URL value 'http://hl7.org/fhir/uv/sdc/CodeSystem/temp' does not resolve
+ERROR: Task/SDOHCC-TaskPatientRiskQuestionnaireCompletedExample: Task.input[0].type.coding[0]: Unknown Code System 'http://hl7.org/fhir/uv/sdc/CodeSystem/temp'
+ERROR: Task/SDOHCC-TaskPatientRiskQuestionnaireCompletedExample: Task.input[0].type.coding[0].system: URL value 'http://hl7.org/fhir/uv/sdc/CodeSystem/temp' does not resolve
+ERROR: Task/SDOHCC-TaskPatientRiskQuestionnaireCompletedExample: Task.output[0].type.coding[0]: Unknown Code System 'http://hl7.org/fhir/uv/sdc/CodeSystem/temp'
+ERROR: Task/SDOHCC-TaskPatientRiskQuestionnaireCompletedExample: Task.output[0].type.coding[0].system: URL value 'http://hl7.org/fhir/uv/sdc/CodeSystem/temp' does not resolve
+ERROR: ValueSet/SDOHCC-ValueSetTaskCode: ValueSet.compose.include[1].system: URL value 'http://hl7.org/fhir/uv/sdc/CodeSystem/temp' does not resolve
+WARNING: ValueSet/SDOHCC-ValueSetTaskCode: ValueSet.compose[0].include[1]: Unknown System specified, so Concepts and Filters can''t be checked
+WARNING: ValueSet.where(id = 'SDOHCC-ValueSetTaskCode'): Error from server: Unable to provide support for code system http://hl7.org/fhir/uv/sdc/CodeSystem/temp
