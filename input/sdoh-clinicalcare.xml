@@ -990,7 +990,7 @@
         </parameter>
         <parameter>
             <code value="path-expansion-params"/>
-            <value value="resources/parameters/terminology-settings.xml"/>
+            <value value="terminology-settings.xml"/>
         </parameter>
         <parameter>
             <code value="copyrightyear"/>
