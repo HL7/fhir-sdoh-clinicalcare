@@ -34,7 +34,7 @@ Implementers should pay specific attention to the following sections:
 * [Downloads](downloads.html) links to allow implementers to download the IG and various artifacts
 
 New updates
-Includes all changes as of 11/18/2021 1:53 PM CT
+Includes all changes as of 11/20/2021 8:53 PM CT
 
 
 

@@ -2,7 +2,7 @@
 
 This Implementation Guide (IG) has defined draft specifications for the exchange of race and ethnicity data to meet reporting requirements promulgated by a number of states.  Specific organizations require that the source and method of collection of race and ethnicity data must also be reported.
 
-The current extension for race and ethnicity for the US Core Patient profile do not allow for multiple occurrence of either extension or the definition of source and method of collection.
+The current extension for race and ethnicity for the US Core Patient profile do not allow for multiple occurrences of either extension or the definition of source and method of collection.
 
 Since the characteristics of race and ethnicity data are more consistent with an observation than demographic data, we have elected to model the specification as profiles on the base Observation resource.
 
