@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationEthnicity"/>
     <meta>
-        <versionId value="9"/>
-        <lastUpdated value="2021-11-12T16:32:44.479+00:00"/>
-        <source value="#SaNPXw4A1Y6jzwed"/>
+        <versionId value="10"/>
+        <lastUpdated value="2021-11-19T14:56:48.730+00:00"/>
+        <source value="#uGUZb2Vgrp7LVXkO"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicity"/>
     <name value="SDOHCCObservationEthnicity"/>
@@ -26,8 +26,8 @@
             <constraint>
                 <key value="SDOH-Obs-1"/>
                 <severity value="error"/>
-                <human value="Must have either a dataAbsentReason or a component with a code of ethnicity and a value of string."/>
-                <expression value="dataAbsentReason.exists() or component.where(code.coding.where(system='http://loinc.org' and code='69490-1').exists() and value.ofType(string).exists())"/>
+                <human value="Must have either a dataAbsentReason or at least one of the defined ethnicity components but not both"/>
+                <expression value="dataAbsentReason.exists() xor component.where(code.coding.where(system='http://loinc.org' and code='69490-1')).exists()"/>
                 <xpath value="true()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicity"/>
             </constraint>
@@ -142,6 +142,7 @@
             <path value="Observation.component"/>
             <sliceName value="EthnicityDescription"/>
             <requirements value="Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable"/>
+            <max value="1"/>
             <condition value="SDOH-Obs-1"/>
             <mustSupport value="true"/>
         </element>
