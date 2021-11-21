@@ -834,13 +834,6 @@
         </resource>
         <resource>
             <reference>
-                <reference value="Parameters/terminology-settings"/></reference>
-            <name value="terminology settings"/>
-            <description value="Terminology settings to point to the US version of SNOMED"/>
-            <exampleBoolean value="false"/>
-        </resource>
-        <resource>
-            <reference>
                 <reference value="CapabilityStatement/SDOHCC-CoordinationPlatform"/>
                 <display value="SDOHCC Coordination Platform Capability Statement"/>
             </reference>
