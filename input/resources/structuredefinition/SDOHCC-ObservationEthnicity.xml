@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationEthnicity"/>
     <meta>
-        <versionId value="10"/>
-        <lastUpdated value="2021-11-19T14:56:48.730+00:00"/>
-        <source value="#uGUZb2Vgrp7LVXkO"/>
+        <versionId value="13"/>
+        <lastUpdated value="2021-11-22T23:18:21.045+00:00"/>
+        <source value="#oMDkYuzXSp4qg4d9"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicity"/>
     <name value="SDOHCCObservationEthnicity"/>
@@ -39,6 +39,52 @@
                 <xpath value="true()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicity"/>
             </constraint>
+            <constraint>
+                <key value="SDOH-Obs-3"/>
+                <severity value="error"/>
+                <human value="Either subject or extension-Observation.subject must exist but not both."/>
+                <expression value="subject.exists() xor extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.subject').exists()"/>
+                <xpath value="true()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicity"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Obs-4"/>
+                <severity value="error"/>
+                <human value="focus is only allowed if subject is present."/>
+                <expression value="focus.exists() implies subject.exists()"/>
+                <xpath value="true()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicity"/>
+            </constraint>
+        </element>
+        <element id="Observation.extension">
+            <path value="Observation.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <min value="0"/>
+        </element>
+        <element id="Observation.extension:OtherSubject">
+            <path value="Observation.extension"/>
+            <sliceName value="OtherSubject"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.subject"/>
+            </type>
+            <condition value="SDOH-Obs-3"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Observation.extension:OtherSubject.value[x]">
+            <path value="Observation.extension.value[x]"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+            </type>
         </element>
         <element id="Observation.status">
             <path value="Observation.status"/>
@@ -61,7 +107,19 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
             </type>
+            <condition value="SDOH-Obs-3"/>
+            <condition value="SDOH-Obs-4"/>
             <mustSupport value="true"/>
+        </element>
+        <element id="Observation.focus">
+            <path value="Observation.focus"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+                <versioning value="specific"/>
+            </type>
+            <condition value="SDOH-Obs-4"/>
         </element>
         <element id="Observation.performer">
             <path value="Observation.performer"/>

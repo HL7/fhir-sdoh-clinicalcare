@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ReferralRecipientLight"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2021-11-19T03:10:20.127+00:00"/>
-        <source value="#YJcJzHoxY0CRKx6v"/>
+        <versionId value="3"/>
+        <lastUpdated value="2021-11-25T01:43:27.349+00:00"/>
+        <source value="#r2VHnVFlgkAtLwjp"/>
     </meta>
     <text>
         <status value="generated"/>
@@ -2197,12 +2197,12 @@
             </interaction>
             <operation>
                 <name value="status"/>
-                <definition value="http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"/>
+                <definition value="http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/Backport-subscription-status"/>
                 <documentation value="Necessary for systems supporting subscriptions to ensure that the subscription is functioning properly and to check for errors"/>
             </operation>
             <operation>
                 <name value="topic-list"/>
-                <definition value="http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscriptiontopic-list"/>
+                <definition value="http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/Backport-subscriptiontopic-list"/>
                 <documentation value="Allows discovery of what subscription topics the systems supports - needed for systems that aren't pre-configured to be aware of what topics are available for use."/>
             </operation>
         </resource>

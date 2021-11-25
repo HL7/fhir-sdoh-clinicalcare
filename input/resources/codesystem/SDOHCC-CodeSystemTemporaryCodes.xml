@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-CodeSystemTemporaryCodes"/>
     <meta>
-        <versionId value="14"/>
-        <lastUpdated value="2021-11-19T14:37:41.131+00:00"/>
-        <source value="#cZtbOoEJsPfYBCwq"/>
+        <versionId value="15"/>
+        <lastUpdated value="2021-11-23T23:33:36.866+00:00"/>
+        <source value="#m8i9sOhJ9wuFpi03"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
     <version value="0.1.0"/>
@@ -161,12 +161,27 @@
     <concept>
         <code value="adhoc-response"/>
         <display value="Adhoc Response"/>
-        <definition value="When Task.code is 'adhoc', 'adhoc-response' for Task.input.type indicates that a free text response can be provided."/>
+        <definition value="When Task.code is 'adhoc', 'adhoc-response' for Task.output.type indicates that a free text response can be provided."/>
     </concept>
     <concept>
         <code value="questionnaire-category"/>
         <display value="Questionnaire Category"/>
         <definition value="Identifies the category of questionnaire that should be completed."/>
+    </concept>
+    <concept>
+        <code value="questionnaire-pdf"/>
+        <display value="Questionnaire PDF"/>
+        <definition value="Identifies the questionnaire PDF to be completed."/>
+    </concept>
+    <concept>
+        <code value="questionnaire-url"/>
+        <display value="Questionnaire URL"/>
+        <definition value="Identifies the URL where a questionnaire to be completed can be accessed."/>
+    </concept>
+    <concept>
+        <code value="questionnaire-pdf-completed"/>
+        <display value="Questionnaire PDF Completed"/>
+        <definition value="Identifies the completed questionnaire PDF."/>
     </concept>
     <concept>
         <code value="contacting-subject-prohibited"/>
