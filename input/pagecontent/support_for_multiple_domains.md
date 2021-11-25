@@ -19,3 +19,5 @@ In this IG, the exchange of the following activities are supported with specific
   * [Service Request](StructureDefinition-SDOHCC-ServiceRequest.html) profile and [Procedure](StructureDefinition-SDOHCC-Procedure.html) profile use a combination of terminologies ([SNOMED CT Procedure Codes](http://www.snomed.org/), [HCPCS II](https://terminology.hl7.org/2.1.0/CodeSystem-HCPCS-all-codes.html), [CPT](http://terminology.hl7.org/2.1.0/CodeSystem-v3-cpt-4.html), and occasionally [LOINC](https://loinc.org/)  ) to define specific referrals and interventions that may be domain specific, cross domains or reflect a subset of a domain specific health concerns, problems, and goals
 
 ###  External Value Set Guidance
+
+Servers SHALL use the following SDOH value sets when a code exists that describes the concept.  The value sets are maintained in the [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/).  Each of the elements supported by the
