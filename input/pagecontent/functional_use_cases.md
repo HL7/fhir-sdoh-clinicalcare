@@ -6,11 +6,11 @@ Note: SDOH IG related Patient Stories are available on the Gravity Project Confl
 
 Note: applies to Providers and Payers as the referral originator
 
-Patient is assessed by a caregiver and referred to CP.  CP refers to a CBO to deliver the service
+Patient is assessed by a practitioner and referred to CP.  CP refers to a CBO to deliver the service
 
 ##### Actors
 
-- Caregiver (includes licensed providers and others that interact with the patient to assess social risk, set goal, and determine/recommend referrals)
+- Practitioner (includes licensed providers and others that interact with the patient to assess social risk, set goal, and determine/recommend referrals)
 - Care Coordinator (coordinates the care and referral activities but normally does not make assessment, goal, or referral decisions)
 - Patient (consumer, client, etc.)
 - Coordination Platform (CP)
@@ -55,7 +55,7 @@ Patient assessed by provider and referred to CBO to deliver the service
 
 ##### Actors
 
-- Caregiver
+- Practitioner
 - Care Coordinator
 - Patient
 - Community Based Organization (CBO)
@@ -82,3 +82,90 @@ Patient assessed by provider and referred to CBO to deliver the service
 - Provider may not always have the relationship with the CBO
 - CBO may not accept the referral or be unable to perform the requested service
 - Closing the loop via patient reported outcome (no electronic referral)
+
+
+
+### Direct Referral Light
+
+Note: same as Direct Referral with the following exceptions 
+
+##### Actors
+
+- Community Based Organization (CBO) has an application that can interact with a FHIR API and does not have a FHIR server
+
+##### Provider Workflow (payer and CP workflow may be similar) (same)
+
+##### Provider – CBO workflow (payer and CP workflow are the same)
+
+1. CBO application queries Provider or Care Coordinator API for new or updated referrals.
+2. CBO finds new task and  accepts referral
+3. CBO completes the evaluation and enrollment, updates the status of the referral to completed, and includes information on what was completed 
+4. Provider determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately
+
+##### Considerations 
+
+- Will not always have contracted CBO and therefore not a BA
+- Provider may not always have the relationship with the CBO
+- CBO may not accept the referral or be unable to perform the requested service
+- Closing the loop via patient reported outcome (no electronic referral)
+
+
+
+### Closing the loop with the patient
+
+Note: applies to Providers, Payers and CPs as the referral originator
+
+Patient assessed by provider and referred to CBO to deliver the service 
+
+Assumes patient is using a personal application (e.g., Smart Phone application) that has already been registered and authenticated with the provider's EHR API and he CBO system API.
+
+##### Actors
+
+- Practitioner
+- Care Coordinator
+- Patient
+- Community Based Organization (CBO)
+
+##### Provider Workflow (payer and CP workflow may be similar)
+
+1. Provider establishes a Patient task that allows the patient to take and return a standardized assessment tool to identify risks via their application
+2. The assessment tool identifies Health concerns of Food Insecurity and Transportation Insecurity
+3. Patient and provider "meet" physically or virtually
+4. Provider and patient determine that it is most important to address the Food Insecurity first – provider promotes the health concern to the problem list
+5. Provider and patient add a goal related to this problem to pursue enrollment in a SNAP program
+6. Provider and patient agree that a referral to a contracted or non-contracted CBO is an appropriate next step
+7. Patient consents to be referred to the CBO and consents to have the information that will be provided sent to the CBO 
+8. Patient does not want the CBO to call or send email -- patient will contact the CBO directly
+9. Provider establishes Patient task that can be retrieved by the patient's application -- task includes contact information for the CBO
+
+##### Provider – CBO workflow (payer and CP workflow are the same)
+
+1. Provider or Care Coordinator creates and sends an electronic referral CBO -- referral instructs CBO to not contact patient
+2. CBO receives and accepts referral
+3. CBO establishes a task/questionnaire for patient to collect needed information
+
+##### Patient - CBO workflow
+
+1. Patient application retrieves CBO questionnaire
+2. Patient completes and return questionnaire
+3. Patient uses contact information to contact the CBO
+4. CBO, based on the questionnaire response and patient call arranges enrolment in a SNAP program and provides the details to the patient
+
+##### CBO - provider workflow
+
+1. CBO updates the status of the referral to completed, and includes information on what was completed
+
+##### Patient - CBO workflow
+
+1. Provider establishes a completion questionnaire for patient to determine if referral was successful
+2. Patient application retrieves provider questionnaire
+3. Patient completes and return questionnaire
+4. Provider receives the questionnaire and determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately
+
+##### Considerations 
+
+- Will not always have contracted CBO and therefore not a BA
+- Provider may not always have the relationship with the CBO
+- CBO may not accept the referral or be unable to perform the requested service
+- Patient may not have an appropriate application or completed process to register and authenticate with the API(s)
+- Patient may not be willing or able to respond to the questionnaires
