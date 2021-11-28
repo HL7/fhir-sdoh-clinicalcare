@@ -20,4 +20,28 @@ In this IG, the exchange of the following activities are supported with specific
 
 ###  External Value Set Guidance
 
-Servers SHALL use the following SDOH value sets when a code exists that describes the concept.  The value sets are maintained in the [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/).  Each of the elements supported by the
+Servers  **SHOULD** use the following SDOH value sets when a code exists that describes the concept.  The value sets are maintained in the [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/).  The following group value sets are for health conditions, goals, service requests and procedures respectively.
+
+·    [Social Determinants of Health Conditions Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion)
+
+·    [Social Determinants of Health Goals Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion)
+
+·    [Social Determinants of Health Service Requests Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion)
+
+·    [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion)
+
+The Figure below illustrates how the SDOH group value set is structured for the  Condition Profile. When recording SDOH data servers **SHOULD** use the SDOH value sets 
+
+ **Example of VSAC SDOH Group Value Set for Condition.Code**
+
+<table><tr><td><img src="VSACValueSet.jpg" /></td></tr></table>
+
+The following SDOH profile elements  **SHOULD** use values from the associated VSAC group value set for the specific SDOH domain when a relevant value is defined.
+
+| SDOH Profile                                                 | Element             | Base Value Set                                               | VSAC Group Value Set                                         |
+| ------------------------------------------------------------ | ------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| =================                                            | ===============     | ==================                                           | +................................................................................................................+ |
+| [SDOHCCCondition](StructureDefinition-SDOHCC-Condition.html) | Condition.code      | [US Core Condition Code](http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code) | [Social Determinants of Health Conditions Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion) |
+| [SDOHCCGoal](StructureDefinition-SDOHCC-Goal.html)           | Goal.description    | [US Core Goal Codes](http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description) | [Social Determinants of Health Goals Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion) |
+| [SDOHCCServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) | ServiceRequest.code | [US Core Procedure Codes](http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code) | [Social Determinants of Health Service Requests Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion) |
+| [SDOHCCProcedure](StructureDefinition-SDOHCC-Procedure.html) | Procedure.code      | [US Core Procedure Codes](http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code) | [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion) |
