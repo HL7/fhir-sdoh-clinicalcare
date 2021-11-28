@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/TBD/211LACountyTaxonomy",
+  "code" : "PH-2950.8500-850"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "The code system 'http://example.org/TBD/211LACountyTaxonomy' is not known (encountered paired with code = 'PH-2950.8500-850'); The code provided (http://example.org/TBD/211LACountyTaxonomy#PH-2950.8500-850) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)",
+  "class" : "CODESYSTEM_UNSUPPORTED"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://example.org/TBD/211LACountyTaxonomy",
+      "concept" : [{
+        "code" : "PH-2950.8500-850",
+        "display" : "Thanksgiving Baskets"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://example.org/TBD/211LACountyTaxonomy"
+}
+-------------------------------------------------------------------------------------

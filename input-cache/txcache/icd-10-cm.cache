@@ -17,8 +17,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:5ce88914-6139-4148-85ea-749b51c739af",
-    "timestamp" : "2021-11-14T22:47:21.332Z",
+    "identifier" : "urn:uuid:384d3ea7-0fbe-4ae6-8bea-ca55ad46e8fe",
+    "timestamp" : "2021-11-28T21:05:40.658Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -29,7 +29,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://hl7.org/fhir/sid/icd-10-cm|2021"
+      "valueUri" : "http://hl7.org/fhir/sid/icd-10-cm|2021"
     }],
     "contains" : [{
       "system" : "http://hl7.org/fhir/sid/icd-10-cm",

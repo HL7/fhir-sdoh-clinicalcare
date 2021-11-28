@@ -35,6 +35,51 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "160245001"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "404684003"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "243796009"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "272379006"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-9-cm"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: The code system definition for http://hl7.org/fhir/sid/icd-9-cm is a fragment, so this expansion is not permitted unless the expansion parameter \"incomplete-ok\" has a value of \"true\""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
       "system" : "http://www.ama-assn.org/go/cpt"
     },
     {
@@ -60,7 +105,7 @@ v: {
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
+  "error" : "Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt"
 }
 -------------------------------------------------------------------------------------
 {"code" : {

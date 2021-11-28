@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Sun, Nov 14, 2021 00:58+0000 for FHIR v4.6.0 
+  Generated on Thu, Nov 25, 2021 20:02+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -1262,6 +1262,14 @@
           <xs:documentation xml:lang="fr">RéponseRendezVous</xs:documentation>
           <xs:documentation xml:lang="es">CitaRespuesta</xs:documentation>
           <xs:documentation xml:lang="zh">预约响应</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ArtifactAssessment">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">ArtifactAssessment</xs:documentation>
+          <xs:documentation xml:lang="en">ArtifactAssessment</xs:documentation>
+          <xs:documentation xml:lang="it">ArtefattoValutazione</xs:documentation>
+          <xs:documentation xml:lang="es">ArtefactoEvaluacion</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="AuditEvent">
@@ -2932,6 +2940,7 @@
       <xs:element ref="AllergyIntolerance"/>
       <xs:element ref="Appointment"/>
       <xs:element ref="AppointmentResponse"/>
+      <xs:element ref="ArtifactAssessment"/>
       <xs:element ref="AuditEvent"/>
       <xs:element ref="Basic"/>
       <xs:element ref="Binary"/>
@@ -8315,6 +8324,281 @@ The duration (usually in minutes) could also be provided to indicate the length 
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:element name="ArtifactAssessment" type="ArtifactAssessment">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">This Resource provides one or more comments, classifiers or ratings about a Resource and supports attribution and rights management metadata for the added content.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="ArtifactAssessment">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">This Resource provides one or more comments, classifiers or ratings about a Resource and supports attribution and rights management metadata for the added content.</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="MetadataResource">
+        <xs:sequence>
+          <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A formal identifier that is used to identify this artifact assessment when it is represented in other formats, or referenced in a specification, model, design or an instance.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:choice minOccurs="0" maxOccurs="1" >
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Display of or reference to the bibliographic citation of the comment, classifier, or rating.</xs:documentation>
+            </xs:annotation>
+            <xs:element name="citeAsReference" type="Reference"/>
+            <xs:element name="citeAsMarkdown" type="markdown"/>
+          </xs:choice>
+          <xs:element name="date" minOccurs="0" maxOccurs="1" type="dateTime">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The date  (and optionally time) when the artifact assessment was published. The date must change when the disposition changes and it must change if the workflow status code changes. In addition, it should change when the substantive content of the artifact assessment changes.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="copyright" minOccurs="0" maxOccurs="1" type="markdown">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A copyright statement relating to the artifact assessment and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the artifact assessment.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="approvalDate" minOccurs="0" maxOccurs="1" type="date">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="lastReviewDate" minOccurs="0" maxOccurs="1" type="date">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:choice minOccurs="1" maxOccurs="1" >
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A reference to a resource, canonical resource, or non-FHIR resource which the comment or assessment is about.</xs:documentation>
+            </xs:annotation>
+            <xs:element name="artifactReference" type="Reference"/>
+            <xs:element name="artifactCanonical" type="canonical"/>
+            <xs:element name="artifactUri" type="uri"/>
+          </xs:choice>
+          <xs:element name="content" type="ArtifactAssessment.Content" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A component comment, classifier, or rating of the artifact.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="workflowStatus" minOccurs="0" maxOccurs="1" type="ArtifactAssessmentWorkflowStatus">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates the workflow status of the comment or change request.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="disposition" minOccurs="0" maxOccurs="1" type="ArtifactAssessmentDisposition">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates the disposition of the responsible party to the comment or change request.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArtifactAssessment.Content">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">This Resource provides one or more comments, classifiers or ratings about a Resource and supports attribution and rights management metadata for the added content.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="informationType" minOccurs="0" maxOccurs="1" type="ArtifactAssessmentInformationType">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The type of information this component of the content represents.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="summary" minOccurs="0" maxOccurs="1" type="markdown">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A brief summary of the content of this component.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates what type of content this component represents.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="classifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Represents a rating, classifier, or assessment of the artifact.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:choice minOccurs="0" maxOccurs="1" >
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates who or what authored the content.</xs:documentation>
+            </xs:annotation>
+            <xs:element name="authorReference" type="Reference"/>
+            <xs:element name="authorString" type="string"/>
+          </xs:choice>
+          <xs:element name="path" minOccurs="0" maxOccurs="unbounded" type="uri">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A URI that points to what the comment is about, such as a line of text in the CQL, or a specific element in a resource.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="relatedArtifact" minOccurs="0" maxOccurs="unbounded" type="RelatedArtifact">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Additional related artifacts that provide supporting documentation, additional evidence, or further information related to the content.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="freeToShare" minOccurs="0" maxOccurs="1" type="boolean">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Acceptable to publicly share the comment, classifier or rating.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="component" type="ArtifactAssessment.Content" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">If the informationType is container, the components of the content.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="ArtifactAssessmentInformationTypeEnum">
+    <xs:restriction base="code-primitive">
+      <xs:enumeration value="comment">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Comment</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="classifier">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Classifier</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="rating">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Rating</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="container">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Container</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="response">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Response</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="change-request">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Change Request</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArtifactAssessmentInformationType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="ArtifactAssessmentInformationTypeEnum" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="ArtifactAssessmentDispositionEnum">
+    <xs:restriction base="code-primitive">
+      <xs:enumeration value="unresolved">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Unresolved</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="not-persuasive">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Not Persuasive</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="persuasive">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Persuasive</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="persuasive-with-modification">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Persuasive with Modification</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="not-persuasive-with-modification">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Not Persuasive with Modification</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArtifactAssessmentDisposition">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="ArtifactAssessmentDispositionEnum" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="ArtifactAssessmentWorkflowStatusEnum">
+    <xs:restriction base="code-primitive">
+      <xs:enumeration value="submitted">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Submitted</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="triaged">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Triaged</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="waiting-for-input">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Waiting for Input</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="resolved-no-change">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Resolved - No Change</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="resolved-change-required">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Resolved - Change Required</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="deferred">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Deferred</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="duplicate">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Duplicate</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="applied">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Applied</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="published">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Published</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArtifactAssessmentWorkflowStatus">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="ArtifactAssessmentWorkflowStatusEnum" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:element name="AuditEvent" type="AuditEvent">
     <xs:annotation>
       <xs:documentation xml:lang="en">A record of an event relevant for purposes such as operations, privacy, security, maintenance, and performance analysis.</xs:documentation>
@@ -8982,9 +9266,14 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">The anatomical location or region of the specimen, lesion, or body structure.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="locationQualifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+          <xs:element name="includedStructure" type="BodyStructure.IncludedStructure" minOccurs="1" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Qualifier to refine the anatomical location.  These include qualifiers for laterality, relative location, directionality, number, and plane.</xs:documentation>
+              <xs:documentation xml:lang="en">The anatomical location(s) or region(s) of the specimen, lesion, or body structure.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="excludedStructure" type="BodyStructure.ExcludedStructure" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The anatomical location(s) or region(s) not occupied or represented by the specimen, lesion, or body structure.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
@@ -9000,6 +9289,58 @@ into another (possibly the same) biological entity.</xs:documentation>
           <xs:element name="patient" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The person to which the body site belongs.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="BodyStructure.IncludedStructure">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="structure" minOccurs="1" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Code that represents the included structure.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="laterality" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Code that represents the included structure laterality.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="qualifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Code that represents the included structure qualifier.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="BodyStructure.ExcludedStructure">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="structure" minOccurs="1" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Code that represents the excluded structure.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="laterality" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Code that represents the excluded structure laterality.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="qualifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Code that represents the excluded structure qualifier.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -11971,7 +12312,7 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">An effective date or period for a status of the citation.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="relatesTo" minOccurs="0" maxOccurs="unbounded" type="RelatedArtifact">
+          <xs:element name="relatedArtifact" minOccurs="0" maxOccurs="unbounded" type="RelatedArtifact">
             <xs:annotation>
               <xs:documentation xml:lang="en">Artifact related to the Citation Resource.</xs:documentation>
            </xs:annotation>
@@ -12450,7 +12791,7 @@ into another (possibly the same) biological entity.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="classifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Code the reason for different URLs, e.g. abstract and full-text.</xs:documentation>
            </xs:annotation>
@@ -15911,7 +16252,7 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">Identifies the organization or group who is responsible for ongoing maintenance of and access to the composition/document information.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="relatesTo" type="Composition.RelatesTo" minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="relatesTo" minOccurs="0" maxOccurs="unbounded" type="RelatedArtifact">
             <xs:annotation>
               <xs:documentation xml:lang="en">Relationships that this composition has with other compositions or documents that already exist.</xs:documentation>
            </xs:annotation>
@@ -15937,7 +16278,7 @@ into another (possibly the same) biological entity.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="mode" minOccurs="1" maxOccurs="1" type="CompositionAttestationMode">
+          <xs:element name="mode" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The type of attestation the authenticator offers.</xs:documentation>
            </xs:annotation>
@@ -15952,29 +16293,6 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">Who attested the composition in the specified way.</xs:documentation>
            </xs:annotation>
           </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="Composition.RelatesTo">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type=document, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.).</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="code" minOccurs="1" maxOccurs="1" type="DocumentRelationshipType">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The type of relationship that this composition has with anther composition or document.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:choice minOccurs="1" maxOccurs="1" >
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The target composition/document of this relationship.</xs:documentation>
-            </xs:annotation>
-            <xs:element name="targetIdentifier" type="Identifier"/>
-            <xs:element name="targetReference" type="Reference"/>
-          </xs:choice>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -16101,41 +16419,6 @@ into another (possibly the same) biological entity.</xs:documentation>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="DocumentRelationshipTypeEnum">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="replaces">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Replaces</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="transforms">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Transforms</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="signs">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Signs</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="appends">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Appends</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="DocumentRelationshipType">
-    <xs:annotation>
-      <xs:documentation xml:lang="en"></xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="DocumentRelationshipTypeEnum" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:simpleType name="ConfidentialityEnum">
     <xs:restriction base="code-primitive">
       <xs:enumeration value="L">
@@ -16178,41 +16461,6 @@ into another (possibly the same) biological entity.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="Element">
         <xs:attribute name="value" type="ConfidentialityEnum" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="CompositionAttestationModeEnum">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="personal">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Personal</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="professional">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Professional</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="legal">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Legal</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="official">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Official</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="CompositionAttestationMode">
-    <xs:annotation>
-      <xs:documentation xml:lang="en"></xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="CompositionAttestationModeEnum" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -19892,7 +20140,7 @@ into another (possibly the same) biological entity.</xs:documentation>
           <xs:element name="type" minOccurs="1" maxOccurs="1" type="DeviceNameType">
             <xs:annotation>
               <xs:documentation xml:lang="en">The type of deviceName. Note that ManufactureDeviceName means that the name is the name as given by the manufacturer, not the name of the manufacturer.
-UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | ModelName.</xs:documentation>
+RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -20048,9 +20296,9 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:simpleType name="DeviceNameTypeEnum">
     <xs:restriction base="code-primitive">
-      <xs:enumeration value="udi-label-name">
+      <xs:enumeration value="registered-name">
         <xs:annotation>
-          <xs:documentation xml:lang="en">UDI Label name</xs:documentation>
+          <xs:documentation xml:lang="en">Registered name</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="user-friendly-name">
@@ -20061,21 +20309,6 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
       <xs:enumeration value="patient-reported-name">
         <xs:annotation>
           <xs:documentation xml:lang="en">Patient Reported name</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="manufacturer-name">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Manufacturer name</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="model-name">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Model name</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="other">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">other</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
@@ -20337,7 +20570,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           <xs:element name="type" minOccurs="1" maxOccurs="1" type="DeviceNameType">
             <xs:annotation>
               <xs:documentation xml:lang="en">The type of deviceName.
-UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | ModelName.</xs:documentation>
+RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -21567,7 +21800,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           </xs:element>
           <xs:element name="media" type="DiagnosticReport.Media" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).</xs:documentation>
+              <xs:documentation xml:lang="en">A list of key images or data associated with this report. The images or data are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="composition" minOccurs="0" maxOccurs="1" type="Reference">
@@ -21603,12 +21836,12 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
         <xs:sequence>
           <xs:element name="comment" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A comment about the image. Typically, this is used to provide an explanation for why the image is included, or to draw the viewer's attention to important features.</xs:documentation>
+              <xs:documentation xml:lang="en">A comment about the image or data. Typically, this is used to provide an explanation for why the image or data is included, or to draw the viewer's attention to important features.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="link" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Reference to the image source.</xs:documentation>
+              <xs:documentation xml:lang="en">Reference to the image or data source.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -21938,7 +22171,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="code" minOccurs="1" maxOccurs="1" type="DocumentRelationshipType">
+          <xs:element name="code" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The type of relationship that this document has with anther document.</xs:documentation>
            </xs:annotation>
@@ -23007,12 +23240,12 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:element name="Evidence" type="Evidence">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:complexType name="Evidence">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -23151,7 +23384,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="Evidence.VariableDefinition">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -23192,7 +23425,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="Evidence.Statistic">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -23209,7 +23442,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           </xs:element>
           <xs:element name="statisticType" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Type of statistic, eg relative risk.</xs:documentation>
+              <xs:documentation xml:lang="en">Type of statistic, e.g., relative risk.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="category" minOccurs="0" maxOccurs="1" type="CodeableConcept">
@@ -23253,7 +23486,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="Evidence.SampleSize">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -23289,7 +23522,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="Evidence.AttributeEstimate">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -23306,7 +23539,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           </xs:element>
           <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The type of attribute estimate, eg confidence interval or p value.</xs:documentation>
+              <xs:documentation xml:lang="en">The type of attribute estimate, e.g., confidence interval or p value.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="Quantity">
@@ -23335,7 +23568,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="Evidence.ModelCharacteristic">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -23366,7 +23599,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="Evidence.Variable">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -23402,7 +23635,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="Evidence.Certainty">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -27159,12 +27392,12 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:element name="ImagingSelection" type="ImagingSelection">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A selection of DICOM SOP instances and/or frames within a single Study and Series. which might or might not include additional specifics such as region or other DICOM UIDs, for example, ObservationUID, TrackingUID or SegmentationUID, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.</xs:documentation>
+      <xs:documentation xml:lang="en">A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:complexType name="ImagingSelection">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A selection of DICOM SOP instances and/or frames within a single Study and Series. which might or might not include additional specifics such as region or other DICOM UIDs, for example, ObservationUID, TrackingUID or SegmentationUID, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.</xs:documentation>
+      <xs:documentation xml:lang="en">A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -27200,7 +27433,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
               <xs:documentation xml:lang="en">Describes the imaging selection.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="studyUid" minOccurs="1" maxOccurs="1" type="oid">
+          <xs:element name="studyUid" minOccurs="0" maxOccurs="1" type="oid">
             <xs:annotation>
               <xs:documentation xml:lang="en">The Study Instance UID for the DICOM Study from which the images were selected.</xs:documentation>
            </xs:annotation>
@@ -27215,7 +27448,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
               <xs:documentation xml:lang="en">The network service providing retrieval access to the selected images, frames, etc. See implementation notes for information about using DICOM endpoints.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="seriesUid" minOccurs="1" maxOccurs="1" type="oid">
+          <xs:element name="seriesUid" minOccurs="0" maxOccurs="1" type="oid">
             <xs:annotation>
               <xs:documentation xml:lang="en">The Series Instance UID for the DICOM Series from which the images were selected.</xs:documentation>
            </xs:annotation>
@@ -27246,7 +27479,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="ImagingSelection.Performer">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A selection of DICOM SOP instances and/or frames within a single Study and Series. which might or might not include additional specifics such as region or other DICOM UIDs, for example, ObservationUID, TrackingUID or SegmentationUID, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.</xs:documentation>
+      <xs:documentation xml:lang="en">A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -27267,7 +27500,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="ImagingSelection.Instance">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A selection of DICOM SOP instances and/or frames within a single Study and Series. which might or might not include additional specifics such as region or other DICOM UIDs, for example, ObservationUID, TrackingUID or SegmentationUID, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.</xs:documentation>
+      <xs:documentation xml:lang="en">A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -27289,12 +27522,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           </xs:element>
           <xs:element name="observationUid" minOccurs="0" maxOccurs="unbounded" type="oid">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The set of Observations within a Structured Report instance that are included in the imaging selection.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="trackingUid" minOccurs="0" maxOccurs="unbounded" type="oid">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The set of measurements within a Structured Report instance that are included in the imaging selection.</xs:documentation>
+              <xs:documentation xml:lang="en">The unique identifier for the observation Content Item (and its subsidiary Content Items, if any) that are included in the imaging selection.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="segmentList" minOccurs="0" maxOccurs="1" type="string">
@@ -27313,7 +27541,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="ImagingSelection.ImageRegion">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A selection of DICOM SOP instances and/or frames within a single Study and Series. which might or might not include additional specifics such as region or other DICOM UIDs, for example, ObservationUID, TrackingUID or SegmentationUID, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.</xs:documentation>
+      <xs:documentation xml:lang="en">A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -27480,7 +27708,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
               <xs:documentation xml:lang="en">Number of SOP Instances in Study. This value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="procedure" type="ImagingStudy.Procedure" minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="procedure" minOccurs="0" maxOccurs="unbounded" type="CodeableReference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The procedure or code from which this ImagingStudy was part of.</xs:documentation>
            </xs:annotation>
@@ -27510,24 +27738,6 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
               <xs:documentation xml:lang="en">Each study has one or more series of images or other content.</xs:documentation>
            </xs:annotation>
           </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="ImagingStudy.Procedure">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:choice minOccurs="1" maxOccurs="1" >
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The procedure which this ImagingStudy was part of.</xs:documentation>
-            </xs:annotation>
-            <xs:element name="valueReference" type="Reference"/>
-            <xs:element name="valueCodeableConcept" type="CodeableConcept"/>
-          </xs:choice>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -32942,6 +33152,14 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           <xs:documentation xml:lang="fr">RéponseRendezVous</xs:documentation>
           <xs:documentation xml:lang="es">CitaRespuesta</xs:documentation>
           <xs:documentation xml:lang="zh">预约响应</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ArtifactAssessment">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">ArtifactAssessment</xs:documentation>
+          <xs:documentation xml:lang="en">ArtifactAssessment</xs:documentation>
+          <xs:documentation xml:lang="it">ArtefattoValutazione</xs:documentation>
+          <xs:documentation xml:lang="es">ArtefactoEvaluacion</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="AuditEvent">
@@ -45568,6 +45786,11 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
               <xs:documentation xml:lang="en">A coded value specifying the technique that is used to perform the procedure.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="procedure" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The procedure event during which the specimen was collected (e.g. the surgery leading to the collection of a pathology sample).</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="bodySite" minOccurs="0" maxOccurs="1" type="CodeableReference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Anatomical location from which the specimen was collected (if subject is a patient). This is the target site.  This element is not used for environmental specimens.</xs:documentation>
@@ -45596,9 +45819,9 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
               <xs:documentation xml:lang="en">Textual description of procedure.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="procedure" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="method" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A coded value specifying the procedure used to process the specimen.</xs:documentation>
+              <xs:documentation xml:lang="en">A coded value specifying the method used to process the specimen.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="additive" minOccurs="0" maxOccurs="unbounded" type="Reference">
@@ -51879,6 +52102,14 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           <xs:documentation xml:lang="fr">RéponseRendezVous</xs:documentation>
           <xs:documentation xml:lang="es">CitaRespuesta</xs:documentation>
           <xs:documentation xml:lang="zh">预约响应</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ArtifactAssessment">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">ArtifactAssessment</xs:documentation>
+          <xs:documentation xml:lang="en">ArtifactAssessment</xs:documentation>
+          <xs:documentation xml:lang="it">ArtefattoValutazione</xs:documentation>
+          <xs:documentation xml:lang="es">ArtefactoEvaluacion</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="AuditEvent">
