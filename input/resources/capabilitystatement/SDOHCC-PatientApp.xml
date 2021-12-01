@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../input-cache/schemas/R4/fhir-single.xsd">
+  <id value="SDOHCC-PatientApp"/>
+  <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOHCC-PatientApp"/>
+  <name value="SDOHCC_PatientApp"/>
+  <title value="SDOHCC Patient Application"/>
+  <status value="draft"/>
+  <date value="2021-06"/>
+  <description value="This resource describes the required and desired behavior of systems acting as apps for patients and care-givers who need to monitor progress on SDOH referrals and may need to take actions such as filling out forms, booking appointments, etc."/>
+  <purpose value="These systems will not expose their own FHIR interfaces, but will monitor information available from other FHIR servers - be it [[CapabilityStatement-SDOHCC-ReferralSource.html|referral sources]], [[CapabilityStatement-SDOHCC-CoordinationPlatform.html|coordination platforms]] or [[CapabilityStatement-SDOHCC-ReferralRecipient.html|referral recipients]].  They will primarily monitor and update Task resources as well as the resources referenced by those Tasks."/>
+  <kind value="requirements"/>
+  <fhirVersion value="4.0.1"/>
+  <format value="xml"/>
+  <format value="json"/>
+  <rest>
+    <mode value="client"/>
+    <documentation value="Patient apps query for data relevant to the current patient, post updates as appropriate and occasionally create new resources, such as QuestionnaireResponses"/>
+    <security>
+      <service>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/restful-security-service"/>
+          <code value="SMART-on-FHIR"/>
+        </coding>
+      </service>
+      <description value="Implementations must meet the general privacy &amp; security requirements documented in [[privacy_and_security.html|this implementation guide]]."/>
+    </security>
+    <resource>
+      <type value="CareTeam"/>
+      <supportedProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"/>
+      <documentation value="For referral sources that receive referrals from upstream systems, used to access information about the intended performer of a ServiceRequest when the performer is a specific team of people.  Note: Conformance expectations for this resource are lower because CareTeam performers are expected to be uncommon in most SDOH uses"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows the system to retrieve a CareTeam that is the intended performer of a ServiceRequest."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows the monitoring of previously-retrieved CareTeams that are the intended performer of ServiceRequests."/>
+      </interaction>
+      <referencePolicy value="literal"/>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving known CareTeam records - and more specifically, retrieving more than one in a single call to poll for updates"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for only records that have changed since last query"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Condition"/>
+      <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+      <documentation value="For referral sources that receive referrals from upstream systems, used to access information about a patient's SDOH-related conditions, particularly those that are the reason for a referral"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows the system to retrieve a Condition that is the requester or performer of a ServiceRequest."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows the monitoring of previously-retrieved Conditions that are referenced by ServiceRequests."/>
+      </interaction>
+      <referencePolicy value="literal"/>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving known Condition records - and more specifically, retrieving more than one in a single call to poll for updates"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for only records that have changed since last query"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="category"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Condition-category"/>
+        <type value="token"/>
+        <documentation value="Allows filtering to only SDOH-related conditions"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="clinical-status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Condition-clinical-status"/>
+        <type value="token"/>
+        <documentation value="Allows filtering to only active conditions"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
+        <type value="token"/>
+        <documentation value="Allows filtering to only specific SDOH conditions or sets of conditions"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+        <type value="reference"/>
+        <documentation value="Allows filtering to only conditions associated with a specific patient.  Some systems will require that searches be patient-specific"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="verification-status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Condition-verification-status"/>
+        <type value="token"/>
+        <documentation value="Allows filtering to exclude refuted or entered-in-error conditions"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Consent"/>
+      <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent"/>
+      <documentation value="Used to access the consent that authorizes disclosure of ServiceRequest information to non-HIPAA-covered entities"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows the system to retrieve a Consent referenced as a 'supportingInformation' item of a ServiceRequest."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows the monitoring of previously-retrieved Consents related to ServiceRequests of interest."/>
+      </interaction>
+      <referencePolicy value="literal"/>
+      <searchInclude value="Consent:source-reference:DocumentReference">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+      </searchInclude>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving known consent records - and more specifically, retrieving more than one in a single call to poll for updates"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for only records that have changed since last query"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="source-reference"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Consent-source-reference"/>
+        <type value="reference"/>
+        <documentation value="Allows including the document that contains the PDF or similar representation of a paper consent"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Device"/>
+      <supportedProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+      <documentation value="Used to retrieve the requester or intended performer of an SDOH ServiceRequest.  Note: Conformance expectations for this resource are lower because Device requesters and performers are expected to be uncommon in most SDOH uses"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows the system to retrieve a Device that is the requester or intended performer of a ServiceRequest."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows the monitoring of previously-retrieved Devices that are the requester or intended performer of ServiceRequests."/>
+      </interaction>
+      <referencePolicy value="literal"/>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving known Device records - and more specifically, retrieving more than one in a single call to poll for updates"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for only records that have changed since last query"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="DocumentReference"/>
+      <supportedProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"/>
+      <documentation value="Used to retrieve a scanned or other form of document representing the text of a consent.  Also used for PDF forms."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+        <documentation value="Allows the app to record a new PDF (e.g. a completed form)"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="update"/>
+        <documentation value="Allows the system to revise a previously stored PDF"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows the system to retrieve a PDF or similar content referenced by a Consent or Task."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows the monitoring of previously-retrieved DocumentReferences in the event the image/document is amended/corrected/updated."/>
+      </interaction>
+      <referencePolicy value="literal"/>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving known DocumentReference records - and more specifically, retrieving more than one in a single call to poll for updates"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for only records that have changed since last query"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Goal"/>
+      <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal"/>
+      <documentation value="Used to access goals related to an SDOH referral"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows the system to retrieve a goal referenced by a ServiceRequest."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows the monitoring of previously-retrieved Goals in the event they are updated."/>
+      </interaction>
+      <referencePolicy value="literal"/>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving known Goal records - and more specifically, retrieving more than one in a single call to poll for updates"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for only records that have changed since last query"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="achievement-status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Goal-achievement-status"/>
+        <type value="token"/>
+        <documentation value="Allows filtering to only include unmet goals"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="category"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Goal-category"/>
+        <type value="token"/>
+        <documentation value="Allows filtering to only include SDOH-related goals"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="lifecycle-status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Goal-lifecycle-status"/>
+        <type value="token"/>
+        <documentation value="Allows filtering to only include active goals"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+        <type value="reference"/>
+        <documentation value="Allows filtering to only include goals for a particular patient.  Some systems will require searches to be patient-specific"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="target-date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Goal-target-date"/>
+        <type value="date"/>
+        <documentation value="Allows filtering based on when a particular goal is desired to be achieved"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="HealthcareService"/>
+      <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService"/>
+      <documentation value="Allows patient apps to retrieve information about who should be contacted (to book an appointment or for other reasons)"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows the system to retrieve a HealthcareService referenced by a Task."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows the monitoring of previously-retrieved HealthcareServices."/>
+      </interaction>
+      <referencePolicy value="literal"/>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving known HealthcareService records - and more specifically, retrieving more than one in a single call to poll for updates"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for only records that have changed since last query"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="location"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-location"/>
+        <type value="reference"/>
+        <documentation value="Allows retrieval of the phyical site(s) associated with a HealthService"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Location"/>
+      <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Location"/>
+      <documentation value="Used to access information about the potential sites at which a requested service might be performed.  Allows a patient to evaluate the suitability of a proposed activity or service."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows the system to retrieve a Location that is an available location for a service."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows the monitoring of previously-retrieved Locations that are the intended locations for services."/>
+      </interaction>
+      <referencePolicy value="literal"/>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving known Location records - and more specifically, retrieving more than one in a single call to poll for updates"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for only records that have changed since last query"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Practitioner"/>
+      <supportedProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+      <documentation value="Used to access information about an Practitioner that is the requester or intended performer of a ServiceRequest"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows the system to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows the monitoring of previously-retrieved Practitioners that are the requester or intended performer of ServiceRequests."/>
+      </interaction>
+      <referencePolicy value="literal"/>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving known Practitioner records - and more specifically, retrieving more than one in a single call to poll for updates"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for only records that have changed since last query"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="PractitionerRole"/>
+      <supportedProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+      <documentation value="Used to access information about an PractitionerRole that is the requester or intended performer of a ServiceRequest"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows the system to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows the monitoring of previously-retrieved PractitionerRoles that are the requester or intended performer of ServiceRequests."/>
+      </interaction>
+      <referencePolicy value="literal"/>
+      <searchInclude value="PractitionerRole:organization">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+      </searchInclude>
+      <searchInclude value="PractitionerRole:practitioner">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+      </searchInclude>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving known PractitionerRole records - and more specifically, retrieving more than one in a single call to poll for updates"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for only records that have changed since last query"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="organization"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-organization"/>
+        <type value="reference"/>
+        <documentation value="Allows doing an _include on Organization when retrieving the PractitionerRole"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="practitioner"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner"/>
+        <type value="reference"/>
+        <documentation value="Allows doing an _include on Practitioner when retrieving the PractitionerRole"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Questionnaire"/>
+      <supportedProfile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract"/>
+      <documentation value="Used to retrieve SDOH-related Questionnaires to be filled out by a patient or representative.  Also allows retrieving Questionnaires associated with existing QuestionnaireResponses for editing by SMART-on-FHIR apps."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows the referral source to search for questionnaires relevant to a patient context."/>
+      </interaction>
+      <referencePolicy value="literal"/>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="url"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Questionnaire-url"/>
+        <type value="uri"/>
+        <documentation value="Allows retrieving Questionnaires based on its canonical URL"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="version"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Questionnaire-version"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving a specific version of a Questionnaire"/>
+      </searchParam>
+      <operation>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <name value="populate"/>
+        <definition value="http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-populate"/>
+        <documentation value="Allows SMART on FHIR or other systems to pre-populate a questionnaire response with existing information either available locally or queried from elsewhere"/>
+      </operation>
+    </resource>
+    <resource>
+      <type value="QuestionnaireResponse"/>
+      <supportedProfile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"/>
+      <documentation value="Used to allow QuestionnaireResponses to be created and updated by a patient or caregiver and work-in-progress responses to be retrieved"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+        <documentation value="Allows the creation of QuestionnaireResponses in response to Tasks."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="update"/>
+        <documentation value="Allows the revision of 'in progress' QuestionnaireResponses."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows the retrieval of QuestionnaireResponses linked to a pointed to as supporting information by a ServiceRequest or as outputs of a Task."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows checking for updates in previously retrieved QuestionnaireResponses."/>
+      </interaction>
+      <referencePolicy value="literal"/>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving known QuestionnaireResponse records - and more specifically, retrieving more than one in a single call to poll for updates"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for only records that have changed since last query"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="author"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-author"/>
+        <type value="reference"/>
+        <documentation value="Allows filtering QuestionnaireResponses previously created/edited by a particular individual"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="authored"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-authored"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for QuestionnaireResponses by when they were created/last edited"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-patient"/>
+        <type value="reference"/>
+        <documentation value="Allows retrieving QuestionnaireResponses associated with a particular patient.  Some systems may only permit searches that are patient-specific"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="questionnaire"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-questionnaire"/>
+        <type value="reference"/>
+        <documentation value="Allows retrieving QuestionnaireResponses that have been completed against a specified form"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-status"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving QuestionnaireResponses that are complete (or incomplete)"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="RelatedPerson"/>
+      <supportedProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+      <documentation value="Used to access information about the requester or intended performer of a ServiceRequest or Task when they are someone with a personal relationship to the Patient.  Note: Conformance expectations for this resource are lower because CareTeam performers are expected to be uncommon in most SDOH uses"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows the system to retrieve a RelatedPerson that is the requester or intended performer of a ServiceRequest."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows the monitoring of previously-retrieved RelatedPersons that are the requester or intended performer of ServiceRequests."/>
+      </interaction>
+      <referencePolicy value="literal"/>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving known RelatedPerson records - and more specifically, retrieving more than one in a single call to poll for updates"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for only records that have changed since last query"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="ServiceRequest"/>
+      <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
+      <documentation value="For referral sources that receive referrals from upstream systems, used to retrieve an order for SDOH-related services"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows client systems to retrieve the ServiceRequest pointed to by a Task."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling."/>
+      </interaction>
+      <referencePolicy value="literal"/>
+      <searchInclude value="HealthCareService:location">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </searchInclude>
+      <searchInclude value="ServiceRequest:supporting-info">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+      </searchInclude>
+      <searchInclude value="ServiceRequest:pertains-to-goal">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+      </searchInclude>
+      <searchInclude value="ServiceRequest:patient">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+      </searchInclude>
+      <searchInclude value="ServiceRequest:requester">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+      </searchInclude>
+      <searchInclude value="ServiceRequest:performer">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+      </searchInclude>
+      <searchInclude value="PractitionerRole:practitioner">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+      </searchInclude>
+      <searchInclude value="PractitionerRole:organization">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+      </searchInclude>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving known ServiceRequests records - and more specifically, retrieving more than one in a single call to poll for updates"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for only records that have changed since last query"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="category"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ServiceRequest-category"/>
+        <type value="token"/>
+        <documentation value="Allows filtering to only retrieve ServiceRequests that are SDOH-related"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
+        <type value="token"/>
+        <documentation value="Allows filtering to retrieve ServiceRequests for specific types of services"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="intent"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ServiceRequest-intent"/>
+        <type value="token"/>
+        <documentation value="Allows filtering to retrieve only 'order' ServiceRequests and not plans, proposals, etc."/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="occurrence"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ServiceRequest-occurrence"/>
+        <type value="date"/>
+        <documentation value="Allows filtering to retrieve ServiceRequests based on the timeframe in which the service needs to be provided"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+        <type value="reference"/>
+        <documentation value="Allows filtering to retrieve only ServiceRequests associated with a particular patient.  Note that some systems may mandate that searches are always patient-specific"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="performer"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ServiceRequest-performer"/>
+        <type value="reference"/>
+        <documentation value="Allows filtering to retrieve only ServiceRequests that designate a specific performer"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="requester"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ServiceRequest-requester"/>
+        <type value="reference"/>
+        <documentation value="Allows filtering to retrieve only ServiceRequests created by a specific practitioner"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/ServiceRequest-status"/>
+        <type value="token"/>
+        <documentation value="Allows filtering to retrieve only active ServiceRequests"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="supporting-info"/>
+        <definition value="http://hl7.org/fhir/us/sdoh-clinicalcare/SearchParameter/ServiceRequest-supporting-info"/>
+        <type value="reference"/>
+        <documentation value="Allows _include to retrieve supporting information for a ServiceRequest - particularly Consent"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Task"/>
+      <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"/>
+      <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"/>
+      <documentation value="Allows the patient or caregiver to monitor and update for Task assigned by referral sources or coordination platforms.  Also allows the update and monitoring of tasks assigned to patients and caregivers."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="update"/>
+        <documentation value="Allows modification of an assigned patient existing Task (e.g. to cancel it) or modificiation of a Task assigned to the referral recipient (to accept or reject it or add output links to performed procedures)."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows retrieval of a Task that was previously accessed."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows the other systems to poll multiple tasks simultaneously, as well as to retrieve referenced resources as part of a single query."/>
+      </interaction>
+      <versioning value="versioned-update"/>
+      <conditionalRead value="modified-since"/>
+      <referencePolicy value="literal"/>
+      <searchInclude value="Task:output"/>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving known Task records - and more specifically, retrieving more than one in a single call to poll for updates"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for only records that have changed since last query"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Task-code"/>
+        <type value="token"/>
+        <documentation value="Allows filtering for 'fulfill' tasks as opposed to others.  Some systems may require code to be included as a filter criteria as different Task codes may correspond to different internal database tables."/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="owner"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Task-owner"/>
+        <type value="reference"/>
+        <documentation value="Allows filtering only for tasks that are assigned to a particular owner (or alternatively, tasks that have not yet been assigned)"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Task-patient"/>
+        <type value="reference"/>
+        <documentation value="Allows monitoring of tasks associated with a particular patient.  (Some systems may require that all queries be done in the context of a single patient.)"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="requester"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Task-requester"/>
+        <type value="reference"/>
+        <documentation value="Allows retrieving all tasks that have been requested by a particular organization or individual.  This will commonly be used to monitor the tasks initiated by a particular system"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Task-status"/>
+        <type value="token"/>
+        <documentation value="Allows filtering to only active or completed tasks"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="focus"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Task-focus"/>
+        <type value="reference"/>
+        <documentation value="Allows retrieving the task(s) seeking fulfillment of a particular ServiceRequest"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="output"/>
+        <definition value="http://hl7.org/fhir/us/sdoh-clinicalcare/SearchParameter/Task-output-reference"/>
+        <type value="reference"/>
+        <documentation value="Allows for the 'output' of a Task to be included when retrieving a Task"/>
+      </searchParam>
+    </resource>
+    <interaction>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHOULD"/>
+      </extension>
+      <code value="batch"/>
+      <documentation value="Allows polling for changes to multiple resource types simultaneously"/>
+    </interaction>
+  </rest>
+</CapabilityStatement>
