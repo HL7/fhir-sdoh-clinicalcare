@@ -885,6 +885,16 @@
         </resource>
         <resource>
             <reference>
+                <reference value="CapabilityStatement/SDOHCC-PatientApp"/>
+                <display value="SDOHCC Patient App"/>
+            </reference>
+            <name value="SDOHCC Patient App Capability Statement"/>
+            <description value="This resource describes the required and desired behavior of systems acting as apps for patients and care-givers who need to monitor progress on SDOH referrals and may need to take actions such as filling out forms, booking appointments, etc."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group8"/>
+        </resource>
+        <resource>
+            <reference>
                 <reference value="SearchParameter/ServiceRequest-supporting-info"/>
                 <display value="ServiceRequestSupportingInfo"/>
             </reference>
