@@ -2,11 +2,11 @@
 
 The following depicts the general workflow anticipated by this Implementation guide.  General process is to:
 
-1) Assess the patient to determine social risk -- this may be done by using an assessment tool or having a conversation with the patient or both.  As part of the assessment, the patient and caregiver agree on the specific risk items that are to be labeled as verified health concerns or problems.
+1) Assess the patient to determine social risk -- this may be done by using an assessment tool or having a conversation with the patient or both.  As part of the assessment, the patient and practitioner agree on the specific risk items that are to be labeled as verified health concerns or problems.
 
-2) The patient and caregiver may establish specific goals regarding the identified social risk.
+2) The patient and practitioner may establish specific goals regarding the identified social risk.
 
-3) The patient and caregiver agree on specific referrals/interventions that should be undertaken to address the problems and goals.  The patient's consent is obtained to share their specific information with the entity that will performing the services.  The caregiver then sends a task to the performing entity to initiate the electronic referral.
+3) The patient and practitioner agree on specific referrals/interventions that should be undertaken to address the problems and goals.  The patient's consent is obtained to share their specific information with the entity that will performing the services.  The practitioner then sends a task to the performing entity to initiate the electronic referral.
 
 <table><tr><td><img src="GeneralWorkflow3.jpg" /></td></tr></table>
 
@@ -16,15 +16,15 @@ The Gravity Project recognizes the need to appropriately manage privacy and cons
 
 The following diagram depicts one example of an exchange workflow supported by this version of the IG.
 
-1. The patient interacts with the caregiver and takes a risk survey that creates the specific health concerns defined by the survey and the patient's responses.
-2. The caregiver and patient determine which of the health concerns are valid, and "promote" the most important ones to the "problem list" to be addressed.  The patient and caregiver may establish goals and agree on the specific referrals/interventions/exchanges (not depicted in this diagram).  The patient provides consent to share information with the relevant organizations.
+1. The patient interacts with the practitioner and takes a risk survey that creates the specific health concerns defined by the survey and the patient's responses.
+2. The practitioner and patient determine which of the health concerns are valid, and "promote" the most important ones to the "problem list" to be addressed.  The patient and practitioner may establish goals and agree on the specific referrals/interventions/exchanges (not depicted in this diagram).  The patient provides consent to share information with the relevant organizations.
 3. The Provider's System provides (via a FHIR API) the ability to share information with:
    *  Community Based Organization (CBO) -- share Task and ServiceRequest and allow the CBO to respond by updating the Task status and providing feedback on the service(s) performed (Procedure(s)).
    *  Coordination Platform (CP) -- share Task and ServiceRequest and allow the CP to respond by updating the Task status and providing feedback on the service(s) performed (Procedure(s)).
       	Note: Typically, the CP interacts with the Patient and CBOs to perform the requested referrals/services using a variety of methods.
    *  Responsible Payer -- with the patient's consent, provides access to health concerns (Problems) and Interventions to facilitate shared care planning for the covered member.
 
-<table><tr><td><img src="SDOHInteractionsDrawingConsentV4.jpg" /></td></tr></table>
+<table><tr><td><img src="SDOHInteractionsDrawingConsentV5.jpg" /></td></tr></table>
 
 ### Closed Loop Referral
 
@@ -32,7 +32,7 @@ The following diagram depicts one example of an exchange workflow supported by t
 
 Referral Source / Referring Entity (RE)  -- this can be any of the following:
 
-		1) a provider or other caregiver
+		1) a provider or other practitioner
 	
 		2) a payer as part of care management, risk assessment, or via programs that assess and intervene regarding social risk
 	
