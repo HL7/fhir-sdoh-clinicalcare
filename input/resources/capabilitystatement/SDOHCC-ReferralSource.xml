@@ -6,6 +6,5191 @@
     <lastUpdated value="2021-11-06T02:32:36.071+00:00"/>
     <source value="#OfUPe8S9I0iAEUFC"/>
   </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>SDOHCC Referral Source</h2>
+      <p>(Requirements Definition Capability Statement)</p>
+      <p>Canonical URL: http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOHCC-ReferralSource Published: 2021-06 (draft)</p>
+      <p>This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral sources'.  These are typically EHR or Payer systems that initiate the process of identifying patients with SDOH needs and requesting appropriate services.</p>
+      <h2>General</h2>
+      <div class="table-wrapper">
+        <table class="grid">
+          <tbody>
+            <tr>
+              <th>FHIR Version:</th>
+              <td>4.0.1</td>
+            </tr>
+            <tr>
+              <th>Supported formats:</th>
+              <td>xml, json</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>REST client behavior</h2>
+      <p>The referral source needs to receive information about procedures done in response to referrals.  They SHOULD also be able to receive information from upstream systems in cases where they are referred to themselves.</p>
+      <p>
+        <b>Security:</b>
+      </p>SMART-on-FHIR<br/>
+      <p>Implementations must meet the general privacy &amp; security requirements documented in <a href="privacy_and_security.html">this implementation guide</a>.</p>
+      <h3>Resource summary</h3>
+      <div class="table-wrapper">
+        <table class="grid">
+          <thead>
+            <tr>
+              <th>Resource</th>
+              <th>Search</th>
+              <th>Read</th>
+              <th>Read Version</th>
+              <th>Instance History</th>
+              <th>Resource History</th>
+              <th>Create</th>
+              <th>Update</th>
+              <th>Delete</th>
+              <th>Operations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>CareTeam</th>
+              <td>
+                <a title="Allows the monitoring of previously-retrieved CareTeams that are the intended performer of ServiceRequests." href="#CareTeam-search-type">MAY</a>
+              </td>
+              <td>
+                <a title="Allows the system to retrieve a CareTeam that is the intended performer of a ServiceRequest." href="#CareTeam-read">MAY</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Condition</th>
+              <td>
+                <a title="Allows the monitoring of previously-retrieved Conditions that are referenced by ServiceRequests." href="#Condition-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows the system to retrieve a Condition that is the reason for a ServiceRequest." href="#Condition-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Consent</th>
+              <td>
+                <a title="Allows the monitoring of previously-retrieved Consents related to ServiceRequests of interest." href="#Consent-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows the system to retrieve a Consent referenced as a 'supportingInformation' item of a ServiceRequest." href="#Consent-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Device</th>
+              <td>
+                <a title="Allows the monitoring of previously-retrieved Devices that are the requester or intended performer of ServiceRequests." href="#Device-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows the system to retrieve a Device that is the requester or intended performer of a ServiceRequest." href="#Device-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>DocumentReference</th>
+              <td>
+                <a title="Allows the monitoring of previously-retrieved DocumentReferences in the event the image/document is amended/corrected/updated." href="#DocumentReference-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows the system to retrieve a PDF or similar content referenced by a Consent or Task." href="#DocumentReference-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Goal</th>
+              <td>
+                <a title="Allows the monitoring of previously-retrieved Goals in the event they are updated." href="#Goal-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows the system to retrieve a goal referenced by a ServiceRequest." href="#Goal-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>HealthcareService</th>
+              <td>
+                <a title="Allows the monitoring of previously-retrieved HealthcareServices that are the intended performer of ServiceRequests." href="#HealthcareService-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows the system to retrieve a HealthcareService that is the intended performer of a ServiceRequest." href="#HealthcareService-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Location</th>
+              <td>
+                <a title="Allows the monitoring of previously-retrieved Locations that are the intended locations for services." href="#Location-search-type">MAY</a>
+              </td>
+              <td>
+                <a title="Allows the system to retrieve a Location that is an available location for a service." href="#Location-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Observation</th>
+              <td>
+                <a title="Allows the monitoring of previously-retrieved Observations for updates/corrections." href="#Observation-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows the system to retrieve an Observation referenced by a ServiceRequest." href="#Observation-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Organization</th>
+              <td>
+                <a title="Allows the monitoring of previously-retrieved Organizations that are the requester or intended performer of ServiceRequests." href="#Organization-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows the system to retrieve an Organization that is the requester or intended performer of a ServiceRequest." href="#Organization-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Patient</th>
+              <td>
+                <a title="Allows the monitoring of previously-retrieved Patients." href="#Patient-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows the system to retrieve the Patient that is the subject of a ServiceRequest." href="#Patient-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Practitioner</th>
+              <td>
+                <a title="Allows the monitoring of previously-retrieved Practitioners that are the requester or intended performer of ServiceRequests." href="#Practitioner-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows the system to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest." href="#Practitioner-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>PractitionerRole</th>
+              <td>
+                <a title="Allows the monitoring of previously-retrieved PractitionerRoles that are the requester or intended performer of ServiceRequests." href="#PractitionerRole-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows the system to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest." href="#PractitionerRole-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Procedure</th>
+              <td>
+                <a title="Allows the referral source to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to the Tasks that initiated the work." href="#Procedure-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows the referral source to retrieve procedures referenced by Tasks from more sophisticated 'delivery' systems that store their data on their own system rather than using the referral source as a persistence layer." href="#Procedure-read">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td>
+                <a title="Allows the system to write records of procedures done in response to a referral on the system that asked for the referral." href="#Procedure-create">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows the system to update records of procedures done in response to a referral on the system that asked for the referral." href="#Procedure-update">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Questionnaire</th>
+              <td>
+                <a title="Allows the referral source to search for questionnaires relevant to a patient context." href="#Questionnaire-search-type">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td>$populate: <a title="Allows SMART on FHIR or other systems to pre-populate a questionnaire response with existing information either available locally or queried from elsewhere" href="#Questionnaire-populate">MAY</a>
+              </td>
+            </tr>
+            <tr>
+              <th>QuestionnaireResponse</th>
+              <td>
+                <a title="Allows checking for updates in previously retrieved QuestionnaireResponses." href="#QuestionnaireResponse-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows the retrieval of QuestionnaireResponses pointed to as supporting information by a ServiceRequest or as output of a Task." href="#QuestionnaireResponse-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>RelatedPerson</th>
+              <td>
+                <a title="Allows the monitoring of previously-retrieved RelatedPersons that are the requester or intended performer of ServiceRequests." href="#RelatedPerson-search-type">MAY</a>
+              </td>
+              <td>
+                <a title="Allows the system to retrieve a RelatedPerson that is the requester or intended performer of a ServiceRequest." href="#RelatedPerson-read">MAY</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>ServiceRequest</th>
+              <td>
+                <a title="Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling." href="#ServiceRequest-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows client systems to retrieve the ServiceRequest pointed to by a Task." href="#ServiceRequest-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Subscription</th>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td>
+                <a title="Necessary if using subscriptions to monitor updates to the Task" href="#Subscription-create">SHOULD</a>
+              </td>
+              <td>
+                <a title="Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id) typically to cancel a request for fulfillment" href="#Subscription-update">MAY</a>
+              </td>
+              <td/>
+              <td>$status: <a title="Necessary for systems supporting subscriptions to ensure that the subscription is functioning properly and to check for errors" href="#Subscription-status">SHOULD</a>
+                <br/>$topic-list: <a title="Allows discovery of what subscription topics the systems supports - needed for systems that aren't pre-configured to be aware of what topics are available for use." href="#Subscription-topic-list">MAY</a>
+              </td>
+            </tr>
+            <tr>
+              <th>Task</th>
+              <td>
+                <a title="Allows the referral source to poll multiple tasks simultaneously, as well as to retrieve referenced resources as part of a single query." href="#Task-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows the referral source to poll a single Task for changes." href="#Task-read">SHALL</a>
+                <br/>(conditional read:<br/>modified-since)</td>
+              <td/>
+              <td/>
+              <td/>
+              <td>
+                <a title="Allows the referral source to create tasks on a delivery system (or downstream coordination system)." href="#Task-create">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows the referral source to modify the status of previously created tasks - e.g. to cancel them." href="#Task-update">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>General interactions</h3>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Capability Statement</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="-batch"> </a>
+                <span>batch</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows polling for changes to multiple resource types simultaneously</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}careteam.html">CareTeam</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam">http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="CareTeam-read"> </a>
+                <span>read</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows the system to retrieve a CareTeam that is the intended performer of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="CareTeam-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows the monitoring of previously-retrieved CareTeams that are the intended performer of ServiceRequests.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known CareTeam records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}condition.html">Condition</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Condition-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the system to retrieve a Condition that is the reason for a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Condition-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the monitoring of previously-retrieved Conditions that are referenced by ServiceRequests.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Condition records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>category</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to only SDOH-related conditions</p>
+              </td>
+            </tr>
+            <tr>
+              <th>clinical-status</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to only active conditions</p>
+              </td>
+            </tr>
+            <tr>
+              <th>code</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to only specific SDOH conditions or sets of conditions</p>
+              </td>
+            </tr>
+            <tr>
+              <th>patient</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering to only conditions associated with a specific patient.  Some systems will require that searches be patient-specific</p>
+              </td>
+            </tr>
+            <tr>
+              <th>verification-status</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to exclude refuted or entered-in-error conditions</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}consent.html">Consent</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Consent-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the system to retrieve a Consent referenced as a 'supportingInformation' item of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Consent-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the monitoring of previously-retrieved Consents related to ServiceRequests of interest.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <p>Supported Includes: Consent:source-reference:DocumentReference</p>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known consent records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>source-reference</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows including the document that contains the PDF or similar representation of a paper consent</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}device.html">Device</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/StructureDefinition/Device">http://hl7.org/fhir/StructureDefinition/Device</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Device-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the system to retrieve a Device that is the requester or intended performer of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Device-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the monitoring of previously-retrieved Devices that are the requester or intended performer of ServiceRequests.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Device records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}documentreference.html">DocumentReference</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference">http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="DocumentReference-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the system to retrieve a PDF or similar content referenced by a Consent or Task.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="DocumentReference-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the monitoring of previously-retrieved DocumentReferences in the event the image/document is amended/corrected/updated.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known DocumentReference records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}goal.html">Goal</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Goal-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the system to retrieve a goal referenced by a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Goal-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the monitoring of previously-retrieved Goals in the event they are updated.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Goal records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>achievement-status</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to only include unmet goals</p>
+              </td>
+            </tr>
+            <tr>
+              <th>category</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to only include SDOH-related goals</p>
+              </td>
+            </tr>
+            <tr>
+              <th>lifecycle-status</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to only include active goals</p>
+              </td>
+            </tr>
+            <tr>
+              <th>patient</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering to only include goals for a particular patient.  Some systems will require searches to be patient-specific</p>
+              </td>
+            </tr>
+            <tr>
+              <th>target-date</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering based on when a particular goal is desired to be achieved</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}healthcareservice.html">HealthcareService</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="HealthcareService-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the system to retrieve a HealthcareService that is the intended performer of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="HealthcareService-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the monitoring of previously-retrieved HealthcareServices that are the intended performer of ServiceRequests.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known HealthcareService records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>location</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows retrieval of the phyical site(s) associated with a HealthService</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}location.html">Location</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Location">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Location</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Location-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the system to retrieve a Location that is an available location for a service.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Location-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows the monitoring of previously-retrieved Locations that are the intended locations for services.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Location records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}observation.html">Observation</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment</a>
+        </li>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse</a>
+        </li>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicity">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicity</a>
+        </li>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRace">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRace</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Observation-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the system to retrieve an Observation referenced by a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Observation-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the monitoring of previously-retrieved Observations for updates/corrections.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Observation records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>category</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for only SDOH-related observations</p>
+              </td>
+            </tr>
+            <tr>
+              <th>code</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for specific types of observations</p>
+              </td>
+            </tr>
+            <tr>
+              <th>code-value-concept</th>
+              <td>MAY</td>
+              <td>composite</td>
+              <td>
+                <p>Allows filtering for observations that have a specific coded value answer for a specified observation type</p>
+              </td>
+            </tr>
+            <tr>
+              <th>date</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for observations that held in a particular time period</p>
+              </td>
+            </tr>
+            <tr>
+              <th>derived-from</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering for observations derived from a particular QuestionnaireResponse</p>
+              </td>
+            </tr>
+            <tr>
+              <th>patient</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering for observations specific to a particular patient.  Some systems will require that all queries be patient-specific</p>
+              </td>
+            </tr>
+            <tr>
+              <th>status</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for observations that are completed or revised (i.e. not in-progress or entered-in-error)</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}organization.html">Organization</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization">http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Organization-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the system to retrieve an Organization that is the requester or intended performer of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Organization-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the monitoring of previously-retrieved Organizations that are the requester or intended performer of ServiceRequests.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Organization records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}patient.html">Patient</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient">http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Patient-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the system to retrieve the Patient that is the subject of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Patient-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the monitoring of previously-retrieved Patients.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Patient records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}practitioner.html">Practitioner</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner">http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Practitioner-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the system to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Practitioner-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the monitoring of previously-retrieved Practitioners that are the requester or intended performer of ServiceRequests.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Practitioner records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}practitionerrole.html">PractitionerRole</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole">http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="PractitionerRole-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the system to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="PractitionerRole-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the monitoring of previously-retrieved PractitionerRoles that are the requester or intended performer of ServiceRequests.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <p>Supported Includes: PractitionerRole:organization PractitionerRole:practitioner</p>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known PractitionerRole records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>organization</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows doing an _include on Organization when retrieving the PractitionerRole</p>
+              </td>
+            </tr>
+            <tr>
+              <th>practitioner</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows doing an _include on Practitioner when retrieving the PractitionerRole</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}procedure.html">Procedure</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Versioning support: versioned-update</p>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Procedure-create"> </a>
+                <span>create</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows the system to write records of procedures done in response to a referral on the system that asked for the referral.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Procedure-update"> </a>
+                <span>update</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows the system to update records of procedures done in response to a referral on the system that asked for the referral.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Procedure-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows the referral source to retrieve procedures referenced by Tasks from more sophisticated 'delivery' systems that store their data on their own system rather than using the referral source as a persistence layer.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Procedure-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the referral source to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to the Tasks that initiated the work.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known PractitionerRole records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>based-on</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering for procedures resulting from a particular service request</p>
+              </td>
+            </tr>
+            <tr>
+              <th>category</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for procedures that are SDOH-related</p>
+              </td>
+            </tr>
+            <tr>
+              <th>code</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for procedures based on the specific service delivered</p>
+              </td>
+            </tr>
+            <tr>
+              <th>date</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for procedures based on when they were delivered</p>
+              </td>
+            </tr>
+            <tr>
+              <th>patient</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering for procedures based on who they were delivered to.  Some systems may require that all searches be patient-specific.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>performer</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering for procedures based on who delivered the procedure.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>status</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for procedures that are complete or in progress</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}questionnaire.html">Questionnaire</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract">http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Questionnaire-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the referral source to search for questionnaires relevant to a patient context.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Questionnaire-populate"> </a>
+                <span>$populate</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows SMART on FHIR or other systems to pre-populate a questionnaire response with existing information either available locally or queried from elsewhere</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>code</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for questionnaires associated with particular LOINC or similar codes</p>
+              </td>
+            </tr>
+            <tr>
+              <th>context-type-value</th>
+              <td>SHOULD</td>
+              <td>composite</td>
+              <td>
+                <p>Allows filtering for procedures that are SDOH-related</p>
+              </td>
+            </tr>
+            <tr>
+              <th>identifier</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving Questionnaires with a known identifier</p>
+              </td>
+            </tr>
+            <tr>
+              <th>publisher</th>
+              <td>SHOULD</td>
+              <td>string</td>
+              <td>
+                <p>Allows retrieving Questionnaires based on who is responsible for them</p>
+              </td>
+            </tr>
+            <tr>
+              <th>status</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving Questionnaires that are active (and not draft or required)</p>
+              </td>
+            </tr>
+            <tr>
+              <th>subject-type</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving Questionnaires that are intended to be completed about patients - as opposed to practitioner, organizations, etc.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>title</th>
+              <td>SHOULD</td>
+              <td>string</td>
+              <td>
+                <p>Allows retrieving Questionnaires based on the name of the form</p>
+              </td>
+            </tr>
+            <tr>
+              <th>url</th>
+              <td>SHALL</td>
+              <td>uri</td>
+              <td>
+                <p>Allows retrieving Questionnaires based on its canonical URL</p>
+              </td>
+            </tr>
+            <tr>
+              <th>version</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving a specific version of a Questionnaire</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}questionnaireresponse.html">QuestionnaireResponse</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse">http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="QuestionnaireResponse-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the retrieval of QuestionnaireResponses pointed to as supporting information by a ServiceRequest or as output of a Task.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="QuestionnaireResponse-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows checking for updates in previously retrieved QuestionnaireResponses.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known QuestionnaireResponse records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>author</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering QuestionnaireResponses previously created/edited by a particular individual</p>
+              </td>
+            </tr>
+            <tr>
+              <th>authored</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for QuestionnaireResponses by when they were created/last edited</p>
+              </td>
+            </tr>
+            <tr>
+              <th>patient</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows retrieving QuestionnaireResponses associated with a particular patient.  Some systems may only permit searches that are patient-specific</p>
+              </td>
+            </tr>
+            <tr>
+              <th>questionnaire</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows retrieving QuestionnaireResponses that have been completed against a specified form</p>
+              </td>
+            </tr>
+            <tr>
+              <th>status</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving QuestionnaireResponses that are complete (or incomplete)</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}relatedperson.html">RelatedPerson</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/StructureDefinition/RelatedPerson">http://hl7.org/fhir/StructureDefinition/RelatedPerson</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="RelatedPerson-read"> </a>
+                <span>read</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows the system to retrieve a RelatedPerson that is the requester or intended performer of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="RelatedPerson-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows the monitoring of previously-retrieved RelatedPersons that are the requester or intended performer of ServiceRequests.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known RelatedPerson records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}servicerequest.html">ServiceRequest</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="ServiceRequest-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows client systems to retrieve the ServiceRequest pointed to by a Task.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="ServiceRequest-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <p>Supported Includes: HealthCareService:location ServiceRequest:supporting-info ServiceRequest:pertains-to-goal ServiceRequest:patient ServiceRequest:requester ServiceRequest:performer PractitionerRole:practitioner PractitionerRole:organization</p>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known ServiceRequests records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>category</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to only retrieve ServiceRequests that are SDOH-related</p>
+              </td>
+            </tr>
+            <tr>
+              <th>code</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to retrieve ServiceRequests for specific types of services</p>
+              </td>
+            </tr>
+            <tr>
+              <th>intent</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to retrieve only 'order' ServiceRequests and not plans, proposals, etc.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>occurrence</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering to retrieve ServiceRequests based on the timeframe in which the service needs to be provided</p>
+              </td>
+            </tr>
+            <tr>
+              <th>patient</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering to retrieve only ServiceRequests associated with a particular patient.  Note that some systems may mandate that searches are always patient-specific</p>
+              </td>
+            </tr>
+            <tr>
+              <th>performer</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering to retrieve only ServiceRequests that designate a specific performer</p>
+              </td>
+            </tr>
+            <tr>
+              <th>requester</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering to retrieve only ServiceRequests created by a specific practitioner</p>
+              </td>
+            </tr>
+            <tr>
+              <th>status</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to retrieve only active ServiceRequests</p>
+              </td>
+            </tr>
+            <tr>
+              <th>supporting-info</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows _include to retrieve supporting information for a ServiceRequest - particularly Consent</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}subscription.html">Subscription</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure</a>
+        </li>
+      </ul>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Subscription-create"> </a>
+                <span>create</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Necessary if using subscriptions to monitor updates to the Task</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Subscription-update"> </a>
+                <span>update</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id) typically to cancel a request for fulfillment</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Subscription-status"> </a>
+                <span>$status</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Necessary for systems supporting subscriptions to ensure that the subscription is functioning properly and to check for errors</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Subscription-topic-list"> </a>
+                <span>$topic-list</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows discovery of what subscription topics the systems supports - needed for systems that aren't pre-configured to be aware of what topics are available for use.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}task.html">Task</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient</a>
+        </li>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Versioning support: versioned-update</p>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Task-create"> </a>
+                <span>create</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows the referral source to create tasks on a delivery system (or downstream coordination system).</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Task-update"> </a>
+                <span>update</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows the referral source to modify the status of previously created tasks - e.g. to cancel them.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Task-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows the referral source to poll a single Task for changes.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Task-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the referral source to poll multiple tasks simultaneously, as well as to retrieve referenced resources as part of a single query.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <p>Supported Includes: Task:focus Task:output HealthCareService:location ServiceRequest:supporting-info ServiceRequest:pertains-to-goal ServiceRequest:patient ServiceRequest:requester ServiceRequest:performer PractitionerRole:practitioner PractitionerRole:organization</p>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Task records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>code</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for 'fulfill' tasks as opposed to others.  Some systems may require code to be included as a filter criteria as different Task codes may correspond to different internal database tables.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>owner</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering only for tasks that are assigned to a particular owner (or alternatively, tasks that have not yet been assigned)</p>
+              </td>
+            </tr>
+            <tr>
+              <th>patient</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows monitoring of tasks associated with a particular patient.  (Some systems may require that all queries be done in the context of a single patient.)</p>
+              </td>
+            </tr>
+            <tr>
+              <th>requester</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows retrieving all tasks that have been requested by a particular organization or individual.  This will commonly be used to monitor the tasks initiated by a particular system</p>
+              </td>
+            </tr>
+            <tr>
+              <th>status</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to only active or completed tasks</p>
+              </td>
+            </tr>
+            <tr>
+              <th>focus</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows retrieving the task(s) seeking fulfillment of a particular ServiceRequest</p>
+              </td>
+            </tr>
+            <tr>
+              <th>output</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows for the 'output' of a Task to be included when retrieving a Task</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>REST server behavior</h2>
+      <p>Referral sources must make both the referral and all information referenced by it available to downstream <a href="CapabilityStatement-SDOHCC-CoordinationPlatform.html">coordination platforms</a> and <a href="CapabilityStatement-SDOHCC-ReferralRecipient.html">referral recipient</a> systems and - depending on the capabilities of the receivers - may also need to make the Tasks themselves available for query and support writing of procedures in situations where the recipient is a <a href="CapabilityStatement-SDOHCC-ReferralRecipient.html">'light' referral recipient</a> that doesn't have local persistence or FHIR server capabilities.</p>
+      <p>
+        <b>Security:</b>
+      </p>SMART-on-FHIR<br/>
+      <p>Implementations must meet the general privacy &amp; security requirements documented in <a href="privacy_and_security.html">this implementation guide</a>.</p>
+      <h3>Resource summary</h3>
+      <div class="table-wrapper">
+        <table class="grid">
+          <thead>
+            <tr>
+              <th>Resource</th>
+              <th>Search</th>
+              <th>Read</th>
+              <th>Read Version</th>
+              <th>Instance History</th>
+              <th>Resource History</th>
+              <th>Create</th>
+              <th>Update</th>
+              <th>Delete</th>
+              <th>Operations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>CareTeam</th>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved CareTeams that are the intended performer of ServiceRequests." href="#CareTeam-search-type">MAY</a>
+              </td>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a CareTeam that is the intended performer of a ServiceRequest." href="#CareTeam-read">MAY</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Condition</th>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Conditions that are referenced by ServiceRequests." href="#Condition-search-type">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a Condition that is the requester or performer of a ServiceRequest." href="#Condition-read">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td>
+                <a title="Allows records to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface." href="#Condition-create">MAY</a>
+              </td>
+              <td>
+                <a title="Allows records to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface." href="#Condition-update">MAY</a>
+              </td>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Consent</th>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Consents related to ServiceRequests of interest." href="#Consent-search-type">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a Consent referenced as a 'supportingInformation' item of a ServiceRequest." href="#Consent-read">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td>
+                <a title="Allows records to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface." href="#Consent-create">MAY</a>
+              </td>
+              <td>
+                <a title="Allows records to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface." href="#Consent-update">MAY</a>
+              </td>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Device</th>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Devices that are the requester or intended performer of ServiceRequests." href="#Device-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a Device that is the requester or intended performer of a ServiceRequest." href="#Device-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>DocumentReference</th>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved DocumentReferences in the event the image/document is amended/corrected/updated." href="#DocumentReference-search-type">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a PDF or similar content referenced by a Consent or Task." href="#DocumentReference-read">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td>
+                <a title="Allows the app to record a new PDF (e.g. a completed form)" href="#DocumentReference-create">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows the system to revise a previously stored PDF" href="#DocumentReference-update">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Goal</th>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Goals in the event they are updated." href="#Goal-search-type">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a goal referenced by a ServiceRequest." href="#Goal-read">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td>
+                <a title="Allows records to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface." href="#Goal-create">MAY</a>
+              </td>
+              <td>
+                <a title="Allows records to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface." href="#Goal-update">MAY</a>
+              </td>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Group</th>
+              <td>
+                <a title="Allows a payer or oversight agency to search for groups of interest to allow monitoring of what patients are under care/management for SDOH issues." href="#Group-search-type">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows a payer or other oversight agency to a Group whose identity is already known (e.g. for polling)." href="#Group-read">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>HealthcareService</th>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved HealthcareServices that are the intended performer of ServiceRequests." href="#HealthcareService-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a HealthcareService that is the intended performer of a ServiceRequest." href="#HealthcareService-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Location</th>
+              <td>
+                <a title="Allows the monitoring of previously-retrieved Locations that are the intended locations for services." href="#Location-search-type">MAY</a>
+              </td>
+              <td>
+                <a title="Allows other systems to retrieve a Location that is an available location for a service." href="#Location-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Observation</th>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Observations for updates/corrections." href="#Observation-search-type">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve an Observation referenced by a ServiceRequest." href="#Observation-read">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td>
+                <a title="Allows records to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface." href="#Observation-create">MAY</a>
+              </td>
+              <td>
+                <a title="Allows records to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface." href="#Observation-update">MAY</a>
+              </td>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Organization</th>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Organizations that are the requester or intended performer of ServiceRequests." href="#Organization-search-type">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve an Organization that is the requester or intended performer of a ServiceRequest." href="#Organization-read">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Patient</th>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Patients." href="#Patient-search-type">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve the Patient that is the subject of a ServiceRequest." href="#Patient-read">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Practitioner</th>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Practitioners that are the requester or intended performer of ServiceRequests." href="#Practitioner-search-type">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest." href="#Practitioner-read">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>PractitionerRole</th>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved PractitionerRoles that are the requester or intended performer of ServiceRequests." href="#PractitionerRole-search-type">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest." href="#PractitionerRole-read">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Procedure</th>
+              <td>
+                <a title="Allows upstream systems to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to the Tasks that initiated the work." href="#Procedure-search-type">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows upstream systems to retrieve procedures referenced by Tasks." href="#Procedure-read">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td>
+                <a title="Allows downstream coordination platforms and referral recipients to write records of procedures done in response to a referral in situations where they can't store the procedure on their own local system." href="#Procedure-create">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows downstream coordination platforms and referral recipients to update records of procedures done - e.g. changing status, adding notes." href="#Procedure-update">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Questionnaire</th>
+              <td>
+                <a title="Allows SMART apps or downstream systems to search for questionnaires relevant to a patient context." href="#Questionnaire-search-type">MAY</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td>$populate: <a title="Allows SMART on FHIR or other systems to pre-populate a questionnaire response with existing information either available locally or queried from elsewhere" href="#Questionnaire-populate">MAY</a>
+              </td>
+            </tr>
+            <tr>
+              <th>QuestionnaireResponse</th>
+              <td>
+                <a title="Allows checking for updates in previously retrieved QuestionnaireResponses." href="#QuestionnaireResponse-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows the retrieval of QuestionnaireResponses to use as a starting point for new responses or to continue editing." href="#QuestionnaireResponse-read">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td>
+                <a title="Allows questionnaire responses to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface." href="#QuestionnaireResponse-create">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows questionnaire responses to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface." href="#QuestionnaireResponse-update">SHOULD</a>
+              </td>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>RelatedPerson</th>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to monitor previously-retrieved RelatedPersons that are the requester or intended performer of ServiceRequests." href="#RelatedPerson-search-type">MAY</a>
+              </td>
+              <td>
+                <a title="Allows downstream coordination platforms or referral recipients to retrieve a RelatedPerson that is the requester or intended performer of a ServiceRequest." href="#RelatedPerson-read">MAY</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>ServiceRequest</th>
+              <td>
+                <a title="Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling." href="#ServiceRequest-search-type">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows client systems to retrieve the ServiceRequest pointed to by a Task." href="#ServiceRequest-read">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td>
+                <a title="Allows records to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface." href="#ServiceRequest-create">MAY</a>
+              </td>
+              <td>
+                <a title="Allows records to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface." href="#ServiceRequest-update">MAY</a>
+              </td>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <th>Subscription</th>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td>
+                <a title="Allows upstream systems to initiate a subscription to monitor updates to Tasks (and theoretically other things)" href="#Subscription-create">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows upstream systems to revise existing subscriptions - to adjust delivery target, to add additional tasks to monitor (if subscribing by id), etc." href="#Subscription-update">MAY</a>
+              </td>
+              <td/>
+              <td>$status: <a title="Allows upstream systems to verify their subscription is functioning properly and to check for errors" href="#Subscription-status">SHOULD</a>
+                <br/>$topic-list: <a title="Allows upstream systems to discover of what subscription topics this system supports - needed for systems that aren't pre-configured to be aware of what topics are available for use." href="#Subscription-topic-list">MAY</a>
+              </td>
+            </tr>
+            <tr>
+              <th>Task</th>
+              <td>
+                <a title="Allows the other systems to poll multiple tasks simultaneously, as well as to retrieve referenced resources as part of a single query." href="#Task-search-type">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows retrieval of a Task that was referenced in a subscription notification or per-Task polling for change." href="#Task-read">SHALL</a>
+                <br/>(conditional read:<br/>modified-since)</td>
+              <td/>
+              <td/>
+              <td/>
+              <td>
+                <a title="Allows upstream coordination platforms and referral sources system to create tasks on this system seeking fulfillment of a ServiceRequest or an action to be performed by a patient or caregiver." href="#Task-create">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows modification of an existing Task by upstream systems (e.g. to cancel it) or by downstream systems (to accept or reject it or add output links to performed procedures)." href="#Task-update">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>General interactions</h3>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Capability Statement</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="-batch"> </a>
+                <span>batch</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows other systems to poll for changes to multiple resource types simultaneously</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}careteam.html">CareTeam</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam">http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="CareTeam-read"> </a>
+                <span>read</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a CareTeam that is the intended performer of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="CareTeam-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved CareTeams that are the intended performer of ServiceRequests.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known CareTeam records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}condition.html">Condition</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Versioning support: versioned-update</p>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Condition-create"> </a>
+                <span>create</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows records to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Condition-update"> </a>
+                <span>update</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows records to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Condition-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a Condition that is the requester or performer of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Condition-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Conditions that are referenced by ServiceRequests.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Condition records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>category</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to only SDOH-related conditions</p>
+              </td>
+            </tr>
+            <tr>
+              <th>clinical-status</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to only active conditions</p>
+              </td>
+            </tr>
+            <tr>
+              <th>code</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to only specific SDOH conditions or sets of conditions</p>
+              </td>
+            </tr>
+            <tr>
+              <th>patient</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering to only conditions associated with a specific patient.  Some systems will require that searches be patient-specific</p>
+              </td>
+            </tr>
+            <tr>
+              <th>verification-status</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to exclude refuted or entered-in-error conditions</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}consent.html">Consent</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Versioning support: versioned-update</p>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Consent-create"> </a>
+                <span>create</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows records to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Consent-update"> </a>
+                <span>update</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows records to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Consent-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a Consent referenced as a 'supportingInformation' item of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Consent-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Consents related to ServiceRequests of interest.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <p>Supported Includes: Consent:source-reference:DocumentReference</p>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known consent records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>source-reference</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows including the document that contains the PDF or similar representation of a paper consent</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}device.html">Device</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/StructureDefinition/Device">http://hl7.org/fhir/StructureDefinition/Device</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Device-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a Device that is the requester or intended performer of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Device-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Devices that are the requester or intended performer of ServiceRequests.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Device records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}documentreference.html">DocumentReference</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference">http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="DocumentReference-create"> </a>
+                <span>create</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows the app to record a new PDF (e.g. a completed form)</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="DocumentReference-update"> </a>
+                <span>update</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the system to revise a previously stored PDF</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="DocumentReference-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a PDF or similar content referenced by a Consent or Task.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="DocumentReference-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved DocumentReferences in the event the image/document is amended/corrected/updated.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known DocumentReference records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}goal.html">Goal</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Versioning support: versioned-update</p>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Goal-create"> </a>
+                <span>create</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows records to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Goal-update"> </a>
+                <span>update</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows records to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Goal-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a goal referenced by a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Goal-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Goals in the event they are updated.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Goal records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>achievement-status</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to only include unmet goals</p>
+              </td>
+            </tr>
+            <tr>
+              <th>category</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to only include SDOH-related goals</p>
+              </td>
+            </tr>
+            <tr>
+              <th>lifecycle-status</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to only include active goals</p>
+              </td>
+            </tr>
+            <tr>
+              <th>patient</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering to only include goals for a particular patient.  Some systems will require searches to be patient-specific</p>
+              </td>
+            </tr>
+            <tr>
+              <th>target-date</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering based on when a particular goal is desired to be achieved</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}group.html">Group</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Group">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Group</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Group-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows a payer or other oversight agency to a Group whose identity is already known (e.g. for polling).</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Group-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows a payer or oversight agency to search for groups of interest to allow monitoring of what patients are under care/management for SDOH issues.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <p>Supported Includes: Group:member</p>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Group records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>characteristic-value</th>
+              <td>SHOULD</td>
+              <td>composite</td>
+              <td>
+                <p>Allows filtering based on the insurer or plan associated with the group</p>
+              </td>
+            </tr>
+            <tr>
+              <th>code</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering based on the type of group</p>
+              </td>
+            </tr>
+            <tr>
+              <th>managing-entity</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering based on who is maintaining the group</p>
+              </td>
+            </tr>
+            <tr>
+              <th>member</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows performing an _include to retrieve the members of the group</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}healthcareservice.html">HealthcareService</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="HealthcareService-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a HealthcareService that is the intended performer of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="HealthcareService-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved HealthcareServices that are the intended performer of ServiceRequests.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known HealthcareService records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>location</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows retrieval of the phyical site(s) associated with a HealthService</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}location.html">Location</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Location">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Location</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Location-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows other systems to retrieve a Location that is an available location for a service.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Location-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows the monitoring of previously-retrieved Locations that are the intended locations for services.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Location records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}observation.html">Observation</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment</a>
+        </li>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Versioning support: versioned-update</p>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Observation-create"> </a>
+                <span>create</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows records to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Observation-update"> </a>
+                <span>update</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows records to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Observation-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve an Observation referenced by a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Observation-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Observations for updates/corrections.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Observation records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>category</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for only SDOH-related observations</p>
+              </td>
+            </tr>
+            <tr>
+              <th>code</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for specific types of observations</p>
+              </td>
+            </tr>
+            <tr>
+              <th>code-value-concept</th>
+              <td>MAY</td>
+              <td>composite</td>
+              <td>
+                <p>Allows filtering for observations that have a specific coded value answer for a specified observation type</p>
+              </td>
+            </tr>
+            <tr>
+              <th>date</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for observations that held in a particular time period</p>
+              </td>
+            </tr>
+            <tr>
+              <th>derived-from</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering for observations derived from a particular QuestionnaireResponse</p>
+              </td>
+            </tr>
+            <tr>
+              <th>patient</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering for observations specific to a particular patient.  Some systems will require that all queries be patient-specific</p>
+              </td>
+            </tr>
+            <tr>
+              <th>status</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for observations that are completed or revised (i.e. not in-progress or entered-in-error)</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}organization.html">Organization</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization">http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Organization-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve an Organization that is the requester or intended performer of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Organization-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Organizations that are the requester or intended performer of ServiceRequests.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Organization records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}patient.html">Patient</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient">http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Patient-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve the Patient that is the subject of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Patient-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Patients.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Patient records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}practitioner.html">Practitioner</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner">http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Practitioner-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Practitioner-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved Practitioners that are the requester or intended performer of ServiceRequests.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Practitioner records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}practitionerrole.html">PractitionerRole</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole">http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="PractitionerRole-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="PractitionerRole-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved PractitionerRoles that are the requester or intended performer of ServiceRequests.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <p>Supported Includes: PractitionerRole:organization PractitionerRole:practitioner</p>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known PractitionerRole records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>organization</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows doing an _include on Organization when retrieving the PractitionerRole</p>
+              </td>
+            </tr>
+            <tr>
+              <th>practitioner</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows doing an _include on Practitioner when retrieving the PractitionerRole</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}procedure.html">Procedure</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Versioning support: versioned-update</p>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Procedure-create"> </a>
+                <span>create</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms and referral recipients to write records of procedures done in response to a referral in situations where they can't store the procedure on their own local system.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Procedure-update"> </a>
+                <span>update</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows downstream coordination platforms and referral recipients to update records of procedures done - e.g. changing status, adding notes.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Procedure-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows upstream systems to retrieve procedures referenced by Tasks.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Procedure-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows upstream systems to check for updates on Procedures after they've already been received or to look for procedures that haven't yet been linked as outputs to the Tasks that initiated the work.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known PractitionerRole records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>based-on</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering for procedures resulting from a particular service request</p>
+              </td>
+            </tr>
+            <tr>
+              <th>category</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for procedures that are SDOH-related</p>
+              </td>
+            </tr>
+            <tr>
+              <th>code</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for procedures based on the specific service delivered</p>
+              </td>
+            </tr>
+            <tr>
+              <th>date</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for procedures based on when they were delivered</p>
+              </td>
+            </tr>
+            <tr>
+              <th>patient</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering for procedures based on who they were delivered to.  Some systems may require that all searches be patient-specific.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>performer</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering for procedures based on who delivered the procedure.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>status</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for procedures that are complete or in progress</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}questionnaire.html">Questionnaire</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract">http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Questionnaire-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows SMART apps or downstream systems to search for questionnaires relevant to a patient context.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Questionnaire-populate"> </a>
+                <span>$populate</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows SMART on FHIR or other systems to pre-populate a questionnaire response with existing information either available locally or queried from elsewhere</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>code</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for questionnaires associated with particular LOINC or similar codes</p>
+              </td>
+            </tr>
+            <tr>
+              <th>context-type-value</th>
+              <td>SHOULD</td>
+              <td>composite</td>
+              <td>
+                <p>Allows filtering for procedures that are SDOH-related</p>
+              </td>
+            </tr>
+            <tr>
+              <th>identifier</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving Questionnaires with a known identifier</p>
+              </td>
+            </tr>
+            <tr>
+              <th>publisher</th>
+              <td>SHOULD</td>
+              <td>string</td>
+              <td>
+                <p>Allows retrieving Questionnaires based on who is responsible for them</p>
+              </td>
+            </tr>
+            <tr>
+              <th>status</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving Questionnaires that are active (and not draft or required)</p>
+              </td>
+            </tr>
+            <tr>
+              <th>subject-type</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving Questionnaires that are intended to be completed about patients - as opposed to practitioner, organizations, etc.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>title</th>
+              <td>SHOULD</td>
+              <td>string</td>
+              <td>
+                <p>Allows retrieving Questionnaires based on the name of the form</p>
+              </td>
+            </tr>
+            <tr>
+              <th>url</th>
+              <td>SHALL</td>
+              <td>uri</td>
+              <td>
+                <p>Allows retrieving Questionnaires based on its canonical URL</p>
+              </td>
+            </tr>
+            <tr>
+              <th>version</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving a specific version of a Questionnaire</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}questionnaireresponse.html">QuestionnaireResponse</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse">http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Versioning support: versioned-update</p>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="QuestionnaireResponse-create"> </a>
+                <span>create</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows questionnaire responses to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="QuestionnaireResponse-update"> </a>
+                <span>update</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows questionnaire responses to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="QuestionnaireResponse-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the retrieval of QuestionnaireResponses to use as a starting point for new responses or to continue editing.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="QuestionnaireResponse-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows checking for updates in previously retrieved QuestionnaireResponses.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known QuestionnaireResponse records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>author</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering QuestionnaireResponses previously created/edited by a particular individual</p>
+              </td>
+            </tr>
+            <tr>
+              <th>authored</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for QuestionnaireResponses by when they were created/last edited</p>
+              </td>
+            </tr>
+            <tr>
+              <th>patient</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows retrieving QuestionnaireResponses associated with a particular patient.  Some systems may only permit searches that are patient-specific</p>
+              </td>
+            </tr>
+            <tr>
+              <th>questionnaire</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows retrieving QuestionnaireResponses that have been completed against a specified form</p>
+              </td>
+            </tr>
+            <tr>
+              <th>status</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving QuestionnaireResponses that are complete (or incomplete)</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}relatedperson.html">RelatedPerson</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/StructureDefinition/RelatedPerson">http://hl7.org/fhir/StructureDefinition/RelatedPerson</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="RelatedPerson-read"> </a>
+                <span>read</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to retrieve a RelatedPerson that is the requester or intended performer of a ServiceRequest.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="RelatedPerson-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows downstream coordination platforms or referral recipients to monitor previously-retrieved RelatedPersons that are the requester or intended performer of ServiceRequests.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known RelatedPerson records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}servicerequest.html">ServiceRequest</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Versioning support: versioned-update</p>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="ServiceRequest-create"> </a>
+                <span>create</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows records to be authored by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="ServiceRequest-update"> </a>
+                <span>update</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows records to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="ServiceRequest-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows client systems to retrieve the ServiceRequest pointed to by a Task.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="ServiceRequest-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <p>Supported Includes: HealthCareService:location ServiceRequest:supporting-info ServiceRequest:pertains-to-goal ServiceRequest:patient ServiceRequest:requester ServiceRequest:performer PractitionerRole:practitioner PractitionerRole:organization</p>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known ServiceRequests records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>category</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to only retrieve ServiceRequests that are SDOH-related</p>
+              </td>
+            </tr>
+            <tr>
+              <th>code</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to retrieve ServiceRequests for specific types of services</p>
+              </td>
+            </tr>
+            <tr>
+              <th>intent</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to retrieve only 'order' ServiceRequests and not plans, proposals, etc.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>occurrence</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering to retrieve ServiceRequests based on the timeframe in which the service needs to be provided</p>
+              </td>
+            </tr>
+            <tr>
+              <th>patient</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering to retrieve only ServiceRequests associated with a particular patient.  Note that some systems may mandate that searches are always patient-specific</p>
+              </td>
+            </tr>
+            <tr>
+              <th>performer</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering to retrieve only ServiceRequests that designate a specific performer</p>
+              </td>
+            </tr>
+            <tr>
+              <th>requester</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering to retrieve only ServiceRequests created by a specific practitioner</p>
+              </td>
+            </tr>
+            <tr>
+              <th>status</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to retrieve only active ServiceRequests</p>
+              </td>
+            </tr>
+            <tr>
+              <th>supporting-info</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows _include to retrieve supporting information for a ServiceRequest - particularly Consent</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}subscription.html">Subscription</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure</a>
+        </li>
+      </ul>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Subscription-create"> </a>
+                <span>create</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows upstream systems to initiate a subscription to monitor updates to Tasks (and theoretically other things)</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Subscription-update"> </a>
+                <span>update</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows upstream systems to revise existing subscriptions - to adjust delivery target, to add additional tasks to monitor (if subscribing by id), etc.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Subscription-status"> </a>
+                <span>$status</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows upstream systems to verify their subscription is functioning properly and to check for errors</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Subscription-topic-list"> </a>
+                <span>$topic-list</span>
+              </th>
+              <td>MAY</td>
+              <td>
+                <p>Allows upstream systems to discover of what subscription topics this system supports - needed for systems that aren't pre-configured to be aware of what topics are available for use.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3>
+        <a href="{{site.data.fhir.path}}task.html">Task</a>
+      </h3>
+      <p>Supported Profile(s):</p>
+      <ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient</a>
+        </li>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement</a>
+        </li>
+      </ul>
+      <h4>Behavior</h4>
+      <p>Versioning support: versioned-update</p>
+      <p>Reference policy: literal</p>
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Task-create"> </a>
+                <span>create</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows upstream coordination platforms and referral sources system to create tasks on this system seeking fulfillment of a ServiceRequest or an action to be performed by a patient or caregiver.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Task-update"> </a>
+                <span>update</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows modification of an existing Task by upstream systems (e.g. to cancel it) or by downstream systems (to accept or reject it or add output links to performed procedures).</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Task-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows retrieval of a Task that was referenced in a subscription notification or per-Task polling for change.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Task-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows the other systems to poll multiple tasks simultaneously, as well as to retrieve referenced resources as part of a single query.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Search</h4>
+      <p>Supported Includes: Task:focus Task:output HealthCareService:location ServiceRequest:supporting-info ServiceRequest:pertains-to-goal ServiceRequest:patient ServiceRequest:requester ServiceRequest:performer PractitionerRole:practitioner PractitionerRole:organization</p>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Task records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>code</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for 'fulfill' tasks as opposed to others.  Some systems may require code to be included as a filter criteria as different Task codes may correspond to different internal database tables.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>owner</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering only for tasks that are assigned to a particular owner (or alternatively, tasks that have not yet been assigned)</p>
+              </td>
+            </tr>
+            <tr>
+              <th>patient</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows monitoring of tasks associated with a particular patient.  (Some systems may require that all queries be done in the context of a single patient.)</p>
+              </td>
+            </tr>
+            <tr>
+              <th>requester</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows retrieving all tasks that have been requested by a particular organization or individual.  This will commonly be used to monitor the tasks initiated by a particular system</p>
+              </td>
+            </tr>
+            <tr>
+              <th>status</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering to only active or completed tasks</p>
+              </td>
+            </tr>
+            <tr>
+              <th>focus</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows retrieving the task(s) seeking fulfillment of a particular ServiceRequest</p>
+              </td>
+            </tr>
+            <tr>
+              <th>output</th>
+              <td>SHOULD</td>
+              <td>reference</td>
+              <td>
+                <p>Allows for the 'output' of a Task to be included when retrieving a Task</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </text>
   <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOHCC-ReferralSource"/>
   <name value="SDOHCC_ReferralSource"/>
   <title value="SDOHCC Referral Source"/>
