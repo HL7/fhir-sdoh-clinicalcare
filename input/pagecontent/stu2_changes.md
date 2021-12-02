@@ -133,7 +133,7 @@ Added CapabilityStatement
 
 #### Documentation
 
-* [Home Page](#home_page.html) – added reference to new content
+* [Home Page](index.html) – added reference to new content
 
 * [STU2 Changes](stu2_changes.html) – this page
 
