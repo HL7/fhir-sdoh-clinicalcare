@@ -26,25 +26,25 @@ Removed values sets (no longer required)
 
 Added Value Sets for Race/Ethnicity Observation Profile
 
-* [SDOHCC ValueSet Observation DataAbsentReason](https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/sdoh-clinicalcare/ValueSet-SDOHCC-ValueSetObservationDataAbsentReason.html)
+* [SDOHCC ValueSet Observation DataAbsentReason](ValueSet-SDOHCC-ValueSetObservationDataAbsentReason.html)
 
-* [SDOHCC ValueSet Observation Method](https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/sdoh-clinicalcare/ValueSet-SDOHCC-ValueSetObservationMethod.html)
+* [SDOHCC ValueSet Observation Method](ValueSet-SDOHCC-ValueSetObservationMethod.html)
 
 Added Value Sets for Patient Task
 
-* [SDOHCC ValueSet SDOH Questionnaire Category](https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/sdoh-clinicalcare/ValueSet-SDOHCC-ValueSetSDOHQuestionnaireCategory.html)
+* [SDOHCC ValueSet SDOH Questionnaire Category](ValueSet-SDOHCC-ValueSetSDOHQuestionnaireCategory.html)
 
-* [SDOHCC ValueSet Task Code](https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/sdoh-clinicalcare/ValueSet-SDOHCC-ValueSetTaskCode.html)
+* [SDOHCC ValueSet Task Code](ValueSet-SDOHCC-ValueSetTaskCode.html)
 
-* SDOHCC ValueSet Task Priority](https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/sdoh-clinicalcare/ValueSet-SDOHCC-ValueSetTaskPriority.html)
+* SDOHCC ValueSet Task Priority](ValueSet-SDOHCC-ValueSetTaskPriority.html)
 
-* [SDOHCC ValueSet Task Status](https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/sdoh-clinicalcare/ValueSet-SDOHCC-ValueSetTaskStatus.html)
+* [SDOHCC ValueSet Task Status](ValueSet-SDOHCC-ValueSetTaskStatus.html)
 
 Added values and notes to 
 
-* [SDOHCC ValueSet Observation Status](https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/sdoh-clinicalcare/ValueSet-SDOHCC-ValueSetObservationStatus.html)
+* [SDOHCC ValueSet Observation Status](ValueSet-SDOHCC-ValueSetObservationStatus.html)
 
-* [SDOHCC ValueSet SDOH Category](https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/sdoh-clinicalcare/ValueSet-SDOHCC-ValueSetSDOHCategory.html)
+* [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html)
 
 #### StructureDefinitions
 
@@ -54,13 +54,13 @@ US Core
 
 Updated Profiles
 
-* [SDOHCC Condition](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/RCD/StructureDefinition-SDOHCC-Condition.html)
+* [SDOHCC Condition](StructureDefinition-SDOHCC-Condition.html)
 
 - - Changed Condition.code value set to use US Core Condition value set.
 
 Added guidance on use of SDOH value sets
 
-* [SDOHCC Goal](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/RCD/StructureDefinition-SDOHCC-Goal.html)
+* [SDOHCC Goal](StructureDefinition-SDOHCC-Goal.html)
 
 * * Changed Goal.description value set to use US Core Condition value set.
 
@@ -68,15 +68,18 @@ Added guidance on use of SDOH value sets
 
 - - Make Value due date MS
 
+    
 
-* [SDOHCC Procedure](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/RCD/StructureDefinition-SDOHCC-Procedure.html)
+
+* [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html)
 
 - - Procedure.code and added reference to US Core Procedure value set
 
 - - Procedure.code.coding Added slice for example of social services taxonomy (e.g. 211 LA) as Must Support
-- 
 
-* [SDOHCC ServiceRequest](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/RCD/StructureDefinition-SDOHCC-ServiceRequest.html)
+  
+
+* [SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html)
 
 * * ServiceRequest.status – updated guidance
 
@@ -86,23 +89,27 @@ Added guidance on use of SDOH value sets
 
 * * ServiceRequest.reasonReference – added guidance
 
-
-* [SDOHCC Healthcare Service](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/RCD/StructureDefinition-SDOHCC-HealthcareService.html)
-
-* * Extension: [SDOHCC Extension HealthcareService Telecom Appointment](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/RCD/StructureDefinition-SDOHCC-ExtensionHealthcareServiceTelecomAppointment.html)
+    
 
 
-* [SDOHCC Location](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/RCD/StructureDefinition-SDOHCC-Location.html)
+* [SDOHCC Healthcare Service](StructureDefinition-SDOHCC-HealthcareService.html)
 
-* [SDOHCC Task For Patient](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/RCD/StructureDefinition-SDOHCC-TaskForPatient.html)
+* * Extension: [SDOHCC Extension HealthcareService Telecom Appointment](StructureDefinition-SDOHCC-ExtensionHealthcareServiceTelecomAppointment.html)
 
-* [SDOHCC Task For Referral Management](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/RCD/StructureDefinition-SDOHCC-TaskForReferralManagement.html)
+    
+
+
+* [SDOHCC Location](StructureDefinition-SDOHCC-Location.html)
+
+* [SDOHCC Task For Patient](StructureDefinition-SDOHCC-TaskForPatient.html)
+
+* [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html)
 
 New Draft Observation Profiles for Race and Ethnicity
 
-* [SDOHCC Observation Ethnicity](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/RCD/StructureDefinition-SDOHCC-ObservationEthnicity.html)
+* [SDOHCC Observation Ethnicity](StructureDefinition-SDOHCC-ObservationEthnicity.html)
 
-* [SDOHCC Observation Race](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/RCD/StructureDefinition-SDOHCC-ObservationRace.html)
+* [SDOHCC Observation Race](StructureDefinition-SDOHCC-ObservationRace.html)
 
 Removed
 
@@ -112,35 +119,35 @@ Removed
 
 Changed name and updated content
 
-* From [SDOH Clinical Care Coordination Platform](https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/sdoh-clinicalcare/CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html) to [SDOHCC Coordination Platform Capability Statement](https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/sdoh-clinicalcare/CapabilityStatement-SDOHCC-CoordinationPlatform.html)
+* From [SDOH Clinical Care Coordination Platform](http://hl7.org/fhir/us/sdoh-clinicalcare/STU1/CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html) to [SDOHCC Coordination Platform Capability Statement](CapabilityStatement-SDOHCC-CoordinationPlatform.html)
 
-* From [SDOH Clinical Care Referral Recipient - Light](https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/sdoh-clinicalcare/CapabilityStatement-SDOH-ClinicalCareReferralRecipientLight.html) to [SDOHCC Referral Recipient - Light](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/RCD/CapabilityStatement-SDOHCC-ReferralRecipientLight.html)
+* From [SDOH Clinical Care Referral Recipient - Light](http://hl7.org/fhir/us/sdoh-clinicalcare/STU1/CapabilityStatement-SDOH-ClinicalCareReferralRecipientLight.html) to [SDOHCC Referral Recipient - Light](CapabilityStatement-SDOHCC-ReferralRecipientLight.html)
 
-* From [SDOH Clinical Care Referral Recipient](https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/sdoh-clinicalcare/CapabilityStatement-SDOH-ClinicalCareReferralRecipient.html) to [SDOHCC Referral Recipient](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/RCD/CapabilityStatement-SDOHCC-ReferralRecipient.html)
+* From [SDOH Clinical Care Referral Recipient](http://hl7.org/fhir/us/sdoh-clinicalcare/STU1/CapabilityStatement-SDOH-ClinicalCareReferralRecipient.html) to [SDOHCC Referral Recipient](CapabilityStatement-SDOHCC-ReferralRecipient.html)
 
-* From [SDOH Clinical Care Referral Source](https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/sdoh-clinicalcare/CapabilityStatement-SDOH-ClinicalCareReferralSource.html) to  [SDOHCC Referral Source](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/RCD/CapabilityStatement-SDOHCC-ReferralSource.html)
+* From [SDOH Clinical Care Referral Source](http://hl7.org/fhir/us/sdoh-clinicalcare/STU1/CapabilityStatement-SDOH-ClinicalCareReferralSource.html) to  [SDOHCC Referral Source](CapabilityStatement-SDOHCC-ReferralSource.html)
 
 Added CapabilityStatement
 
-* [SDOHCC Patient Application](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/RCD/CapabilityStatement-SDOHCC-PatientApp.html)
+* [SDOHCC Patient Application](CapabilityStatement-SDOHCC-PatientApp.html)
 
 #### Documentation
 
-* [Home Page](Home – added reference to new content
+* [Home Page](#home_page.html) – added reference to new content
 
-* [STU2 Changes] – this page
+* [STU2 Changes](stu2_changes.html) – this page
 
 * [Functional Use Cases](functional_use_cases.html) – added 
 
-* [Support for Multiple Domains] – added support for VSAC group value sets
+* [Support for Multiple Domains](support_for_multiple_domains.html) – added support for VSAC group value sets
 
-* [Exchange Workflow] – added new workflow for Patient/client and CBO applications
+* [Exchange Workflow](exchange_workflow.html) – added new workflow for Patient/client and CBO applications
 
-* [Synchronizing Applications with API Data Sources] -- new
+* [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html) -- new
 
-* [FHIR Artifacts Overview] – updated to refer to new or changed artifacts
+* [FHIR Artifacts Overview](fhir_artifacts_overview.html) – updated to refer to new or changed artifacts
 
-* [Draft Specifications for Race and Ethnicity] -- new
+* [Draft Specifications for Race and Ethnicity](draft_specifications_for_race_and_ethnicity.html)-- new
 
 #### Examples
 
