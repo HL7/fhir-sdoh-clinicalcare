@@ -16,7 +16,7 @@
 			"sequence": "STU 2",
 			"fhirversion": "4.0.1",
 			"path": "http://hl7.org/fhir/us/sdoh-clinicalcare/2022Jan",
-			"date": "2021-12-10",
+			"date": "2021-12-10"
 		},
 		{
 			"version": "1.0.0",
