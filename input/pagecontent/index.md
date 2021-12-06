@@ -1,6 +1,7 @@
 ### Overview
 
 Social Determinants of Health (SDOH) are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange SDOH content defined by the Gravity Project using the Fast Healthcare Interoperability Resources (FHIR) standard. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. This IG addresses the need to gather SDOH information in multiple settings, share that information between stakeholders, and exchange referrals between organizations to address specific social risk needs, all with appropriate patient consent.  In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. The guide supports the following use cases:
+
 * 	Document SDOH data in conjunction with the patient encounters with providers, payers, and community services
 * 	Document and track SDOH related interventions to completion
 * 	Identify cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer)
@@ -13,8 +14,9 @@ This implementation guide was developed by the Gravity Project, which specifical
 The implementation guide is organized into the following sections:
 
 * Background: Includes [Gravity Background](gravity_background.html), [SDOH Clinical Care Scope](sdoh_clinical_care_scope.html), [Functional Use Cases](functional_use_cases.html), and [Technical Background](technical_background.html), that describe the environment in which this implementation guide establishes standards for information exchange
-* Context: Describes the [Survey Instrument Support](survey_instrument_support.html),[ QuestionnaireResponse Mapping Instructions](mapping_instructions.html), [Support for Multiple Domains](support_for_multiple_domains.html), and [Exchange Workflow diagram](exchange_workflow.html) that describes a high-level overview of expected process flow
-* Specifications: Provides a overview of the [FHIR Artifacts](fhir_artifacts_overview.html) defined and used in this IG, description of [Privacy and Security](privacy_and_security.html) issues, and explains [MustSupport and Missing Data](mustsupport_and_missing_data.html) concepts 
+* [STU2 Changes](stu2_changes.html) describes the changes included in the STU 2 ballot version of the IG
+* Context: Describes the [Survey Instrument Support](survey_instrument_support.html),[ QuestionnaireResponse Mapping Instructions](mapping_instructions.html), [Support for Multiple Domains](support_for_multiple_domains.html), [Exchange Workflow](exchange_workflow.html) and [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html) that details a high-level overview of expected process flow
+* Specifications: Provides an overview of the [FHIR Artifacts](fhir_artifacts_overview.html) defined and used in this IG, [Checking Task Status](checking_task_status.html) to describe managing task status, [Privacy and Security](privacy_and_security.html) issues,  [MustSupport and Missing Data](mustsupport_and_missing_data.html) concepts and [Draft Specifications for Race and Ethnicity](draft_specifications_for_race_and_ethnicity.html)  
 * [Downloads](downloads.html): Provides for the download of various IG related artifacts
 * [Credits](credits.html): Identifies the individuals and organizations involved in developing this implementation guide
 * [Artifacts Index](artifacts.html):  Introduces and provides links to the FHIR R4 profiles, examples and other FHIR artifacts used in this implementation guide
@@ -27,14 +29,19 @@ Implementers should pay specific attention to the following sections:
 * [Survey Instrument Support](survey_instrument_support.html), and [ QuestionnaireResponse Mapping Instructions](mapping_instructions.html) if implementing support for structured assessment instruments
 * [Support for Multiple Domains](support_for_multiple_domains.html) to understand this IG's approach to domain specific value sets
 * [Exchange Workflow diagram](exchange_workflow.html) to understand the exchange workflows
+* [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html) that describes the suggested method for synchronizing patient/client or Community Based Organization applications with referral systems FHIR APIs
 * [FHIR Artifacts](fhir_artifacts_overview.html) to understand the individual FHIR artifacts described in this IG
 * [Privacy and Security](privacy_and_security.html) for implementers that are concerned with privacy and security aspects related to implementing the information exchanges defined in this IG
 * [MustSupport and Missing Data](mustsupport_and_missing_data.html) to understand the interpretation of the MustSupport flags and the treatment of Missing Data used in this IG 
-* [Artifacts Index](artifacts.html) all implementers need to understand the FHIR R4 profiles, examples and other FHIR artifacts defined in this implementation guide and linked from this section
+* [Draft Specifications for Race and Ethnicity](draft_specifications_for_race_and_ethnicity.html) for an introduction to draft observation profiles to exchange race and ethnicity data, that includes the source and method of acquisition
+* [Artifacts Index](artifacts.html) all implementers need to understand the FHIR R4 profiles, examples and other FHIR artifacts defined in this implementation guide and linked from this section -- this section also includes the details for the declared capability statements for the respective servers and clients
 * [Downloads](downloads.html) links to allow implementers to download the IG and various artifacts
 
-New updates
-Includes all changes as of 12/1/2021 5:47 AM CT
+Notes: 
+
+1) This IG points to the SDC specification that is in reconciliation and all links will resolve when the draft is published.
+
+2) The IG profiles for [ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) and [Procedure](StructureDefinition-SDOHCC-Procedure.html) define the use of an external taxonomy [211 LA Taxonomy (Copyright © 2004-2021 Information and Referral Federation of Los Angeles doing business as 211 LA County. All rights reserved. Version 5.8.5)] This taxonomy is in the process of being formally incorporated as an HL7 external code system.
 
 
 
