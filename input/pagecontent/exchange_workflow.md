@@ -2,13 +2,24 @@
 
 The following depicts the general workflow anticipated by this Implementation guide.  General process is to:
 
-1) Assess the patient to determine social risk -- this may be done by using an assessment tool or having a conversation with the patient or both.  As part of the assessment, the patient and practitioner agree on the specific risk items that are to be labeled as verified health concerns or problems.
+1) Assess the patient to determine social risk -- this may be done by using an assessment tool or having a conversation with the patient, or both.  As part of the assessment, the patient and practitioner agree on the specific risk items that are to be labeled as verified health concerns or problems.
 
 2) The patient and practitioner may establish specific goals regarding the identified social risk.
 
-3) The patient and practitioner agree on specific referrals/interventions that should be undertaken to address the problems and goals.  The patient's consent is obtained to share their specific information with the entity that will performing the services.  The practitioner then sends a task to the performing entity to initiate the electronic referral.
+3) The patient and practitioner agree on specific referrals/interventions that should be undertaken to address the problems and goals.  The patient's consent is obtained to share their specific information with the entity that will be performing the services.  The practitioner then sends a task to the performing entity to initiate the electronic referral.
 
 <table><tr><td><img src="GeneralWorkflow3.jpg" /></td></tr></table>
+
+There are a number of system to system interactions supported by this implementation guide.  This includes: 
+
+1. referrals via an intermediary (or indirect referrals) that may include interactions with multiple service performers,
+2. direct and direct light (where the interaction is with an application) referrals,
+3. interactions with a patient to complete a questionnaire or "form", and
+4. interactions with a patient to cancel a service or indicate the outcome of the service
+
+<table><tr><td><img src="OverallInteractions.jpg" /></td></tr></table>
+
+
 
 ### Workflow and Managing Consent
 
@@ -64,7 +75,7 @@ The referral occurs between the Referral Source and the Referral Receiver.  The 
 
 #### Direct Referral Light
 
-The referral occurs between the Referral Source and the Referral Receiver where the Referral Receiver does not have a FHRI API (FHIR Server or FHIR Façade).  The Referral Receiver may be the Referral Performer or an Intermediary.  The exchange with the Referral Receiver is initiated via an email with a secure link to the Referral Source API that can be used by an application available to the Referral Receiver to communicate with the Referral Source using RESTful exchanges that read, create, update resources via the Referral Source API.
+The referral occurs between the Referral Source and the Referral Receiver where the Referral Receiver does not have a FHRI API (FHIR Server or FHIR Façade).  The Referral Receiver may be the Referral Performer or an Intermediary.  The exchange with the Referral Receiver is initiated via an email with a secure link to the Referral Source API that can be used by an application available to the Referral Receiver to communicate with the Referral Source using RESTful exchanges that read, create, and update resources via the Referral Source API.
 
 <table><tr><td><img src="DirectReferralLightSF.jpg" /></td></tr></table>
 
@@ -72,7 +83,7 @@ The referral occurs between the Referral Source and the Referral Receiver where 
 
 #### Indirect Referral
 
-The referral occurs in two separate interactions. The first is between the Referral Source and the Intermediary and the second is between the Intermediary and the Referral Performer
+The referral occurs in two separate interactions. The first is between the Referral Source and the Intermediary and the second is between the Intermediary and the Referral Performer.
 
 This IG assumes that, in an Indirect Referral, the Referral Performer does not have the ability to communicate directly with the Referral Source.  Therefore, the intermediary SHALL support the following.
 
@@ -86,8 +97,27 @@ This IG assumes that, in an Indirect Referral, the Referral Performer does not h
 #### Notes on Direct and Indirect Referral
 1. Parties SHOULD use polling if one or both of the parties is unable to support the subscription model (see notes on the [Checking Task Status](checking_task_status.html) page).
 2. The receiving party for the referral SHOULD use the batch query process to request periodic updates of reference resources. 
-3. The above system flows do not define the handling of all possible scenarios. Exchange scenarios may include refusing the referral, canceling the referral by either party, and error conditions that may occur when using RESTful exchanges.  It is up to each party to follow current best practice in managing the state of the referral.
+3. The above system flows do not define the handling of all possible scenarios. Exchange scenarios may include refusing the referral, canceling the referral by either party, and error conditions that may occur when using RESTful exchanges.  It is up to each party to follow current the best practice in managing the state of the referral.
 4. The Referral Source SHOULD set the Task.status to "requested" until it receives a valid HTTPS response indicating that the Task was received at which point it SHOULD set the Task.status to "received".
+
+#### Patient Interactions
+
+This implementation guide supports additional interactions with a patient/client application (on a smartphone or portal).  These interactions include providing the patient/client with:
+
+1. a copy of the service request sent to the service performer
+2. contact information for the service performer (where the patient/client does not want the service performer to initiate contact)
+3. the ability to cancel the service and indicate the reason via a short questionnaire
+4. the ability to complete a questionnaire or "form" to collect information regarding
+   - social risks (risk survey)
+   - service qualification or application
+5. information regarding available services (usually as a PDF)
+6. closing the loop on services delivered (e.g., providing patient outcomes)
+
+<table><tr><td><img src="PatientClientExchange.jpg" /></td></tr></table>
+
+<table><tr><td><img src="PatientQuestionnaire.jpg" /></td></tr></table>
+
+
 
 ### Support for API Access to SDOH Information
 
