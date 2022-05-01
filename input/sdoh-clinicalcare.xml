@@ -464,17 +464,6 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ServiceRequest/SDOHCC-ServiceRequestCompletedFoodPantryApplicationAssistExample"/>
-                <display value="SDOHCC ServiceRequest Completed Food Pantry Application Assist Example"/>
-            </reference>
-            <name value="SDOHCC ServiceRequest Completed Food Pantry Application Assist Example"/>
-            <description value="An example of a completed ServiceRequest for assistance with applying to a food pantry that references as its reason a food insecurity Condition."/>
-            <exampleBoolean value="false"/>
-            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
-            <groupingId value="new-group2"/>
-        </resource>
-        <resource>
-            <reference>
                 <reference value="ServiceRequest/SDOHCC-ServiceRequestSubreferralGardenProgramExample"/>
                 <display value="SDOHCC ServiceRequest Subreferral Garden Program Example"/>
             </reference>
