@@ -40,7 +40,7 @@
     <dependsOn id="sdohsdc">
         <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc"/>
         <packageId value="hl7.fhir.uv.sdc"/>
-        <version value="2.7.0"/>
+        <version value="3.0.0"/>
     </dependsOn>
     <dependsOn id="sdohsub">
         <uri value="http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"/>
