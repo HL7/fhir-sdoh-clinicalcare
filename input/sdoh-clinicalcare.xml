@@ -153,26 +153,6 @@
         </resource>
         <resource>
             <reference>
-                <reference value="StructureDefinition/SDOHCC-ObservationEthnicity"/>
-                <display value="SDOHCC Observation Ethnicity"/>
-            </reference>
-            <name value="SDOHCC Observation Ethnicity"/>
-            <description value="Profile for observations about ethnicity using Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on 11/18/2021 - Jira ticket 34245."/>
-            <exampleBoolean value="false"/>
-            <groupingId value="new-group10"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="StructureDefinition/SDOHCC-ObservationRace"/>
-                <display value="SDOHCC Observation Race"/>
-            </reference>
-            <name value="SDOHCC Observation Race"/>
-            <description value="Profile for observations about race using Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on 11/18/2021 - Jira ticket 34245."/>
-            <exampleBoolean value="false"/>
-            <groupingId value="new-group10"/>
-        </resource>
-        <resource>
-            <reference>
                 <reference value="StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
                 <display value="SDOHCC Observation Screening Response"/>
             </reference>
@@ -329,39 +309,6 @@
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"/>
             <groupingId value="new-group2"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="Observation/SDOHCC-ObservationEthnicityExample"/>
-                <display value="SDOHCC Observation Ethnicity Example"/>
-            </reference>
-            <name value="SDOHCC Observation Ethnicity Example"/>
-            <description value="An example of a patient ethnicity Observation where the ethnicity is Hispanic or Latino (detailed as part Cuban, and part Puerto Rican)."/>
-            <exampleBoolean value="false"/>
-            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicity"/>
-            <groupingId value="new-group10"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="Observation/SDOHCC-ObservationRaceExample"/>
-                <display value="SDOHCC Observation Race Example"/>
-            </reference>
-            <name value="SDOHCC Observation Race Example"/>
-            <description value="An example of a patient race Observation highlighting all elements and repetitions where possible."/>
-            <exampleBoolean value="false"/>
-            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRace"/>
-            <groupingId value="new-group10"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="Observation/SDOHCC-ObservationRacePractitionerExample"/>
-                <display value="SDOHCC Observation Race Practitioner Example"/>
-            </reference>
-            <name value="SDOHCC Observation Race Practitioner Example"/>
-            <description value="An example of a practitioner race Observation that uses an extension to allow an observation to be about a practitioner."/>
-            <exampleBoolean value="false"/>
-            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRace"/>
-            <groupingId value="new-group10"/>
         </resource>
         <resource>
             <reference>
@@ -746,26 +693,6 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/SDOHCC-ValueSetObservationDataAbsentReason"/>
-                <display value="SDOHCC ValueSet Observation DataAbsentReason"/>
-            </reference>
-            <name value="SDOHCC ValueSet Observation DataAbsentReason"/>
-            <description value="Codes for the reason an observation does not have a value."/>
-            <exampleBoolean value="false"/>
-            <groupingId value="new-group10"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="ValueSet/SDOHCC-ValueSetObservationMethod"/>
-                <display value="SDOHCC ValueSet Observation Method"/>
-            </reference>
-            <name value="SDOHCC ValueSet Observation Method"/>
-            <description value="Codes that represent specific methods by which an individual's race or ethnicity information can be elicited."/>
-            <exampleBoolean value="false"/>
-            <groupingId value="new-group10"/>
-        </resource>
-        <resource>
-            <reference>
                 <reference value="ValueSet/SDOHCC-ValueSetObservationStatus"/>
                 <display value="SDOHCC ValueSet Observation Status"/>
             </reference>
@@ -836,6 +763,13 @@
         </resource>
         <resource>
             <reference>
+                <reference value="Parameters/terminology-settings"/></reference>
+            <name value="terminology settings"/>
+            <description value="Terminology settings to point to the US version of SNOMED"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
                 <reference value="CapabilityStatement/SDOHCC-CoordinationPlatform"/>
                 <display value="SDOHCC Coordination Platform Capability Statement"/>
             </reference>
@@ -903,6 +837,300 @@
             <description value="The value of any outputs of type 'Reference'"/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group11"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-ObservationPersonalCharacteristic"/>
+                <display value="SDOHCC Observation Personal Characteristic"/>
+            </reference>
+            <name value="SDOHCC Observation Personal Characteristic"/>
+            <description value="Defines constraints that represent the minimum requirement for personal characteristic observations which are observations that are usually self-attested but may be attested to on behalf of the subject and are generally only verifiable by the source of attestation (e.g., race, ethnicity, sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex). This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on XX/XX/2022 - Jira ticket XXXXX."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-ObservationPersonalPronouns"/>
+                <display value="SDOHCC Observation Personal Pronouns"/>
+            </reference>
+            <name value="SDOHCC Observation Personal Pronouns"/>
+            <description value="Profile for observations about the pronouns and possessive adjectives a person wishes to be addressed by. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on XXXXX - Jira ticket XXXXX."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-ObservationEthnicityOMB"/>
+                <display value="SDOHCC Observation Ethnicity OMB"/>
+            </reference>
+            <name value="SDOHCC Observation Ethnicity OMB"/>
+            <description value="Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on 11/18/2021 - Jira ticket 34245."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-ObservationRaceOMB"/>
+                <display value="SDOHCC Observation Race OMB"/>
+            </reference>
+            <name value="SDOHCC Observation Race OMB"/>
+            <description value="Profile for race observations that use Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on 11/18/2021 - Jira ticket 34245."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-ObservationRecordedSexGender"/>
+                <display value="SDOHCC Observation Recorded Sex Gender"/>
+            </reference>
+            <name value="SDOHCC Observation Recorded Sex Gender"/>
+            <description value="Profile for observations about &quot;recorded sex and gender&quot; which, in the past, were often used interchangeably. In this context, sex is a biological construct and pertains to a person’s genetics, hormones, and anatomy. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on XXXXX - Jira ticket XXXXX."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-ObservationSexualOrientation"/>
+                <display value="SDOHCC Observation Sexual Orientation"/>
+            </reference>
+            <name value="SDOHCC Observation Sexual Orientation"/>
+            <description value="Profile for observations about the sexual orientation of an individual. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on XXXXX - Jira ticket XXXXX."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-ObservationGenderIdentity"/>
+                <display value="SDOHCC Observation Gender Identity"/>
+            </reference>
+            <name value="SDOHCC Observation Gender Identity"/>
+            <description value="Profile for gender identity observations which are based on a person’s inner sense of being a girl/woman/female/feminine, boy/man/male/masculine, nonbinary, something else, or having no gender. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on XXXXX - Jira ticket XXXXX."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-ObservationEthnicity"/>
+                <display value="SDOHCC Observation Ethnicity"/>
+            </reference>
+            <name value="SDOHCC Observation Ethnicity"/>
+            <description value="Profile for observations about ethnicity using Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on 11/18/2021 - Jira ticket 34245."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-ObservationRace"/>
+                <display value="SDOHCC Observation Race"/>
+            </reference>
+            <name value="SDOHCC Observation Race"/>
+            <description value="Profile for observations about race using Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on 11/18/2021 - Jira ticket 34245."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/SDOHCC-ValueSetObservationDataAbsentReason"/>
+                <display value="SDOHCC ValueSet Observation DataAbsentReason"/>
+            </reference>
+            <name value="SDOHCC ValueSet Observation DataAbsentReason"/>
+            <description value="Codes for the reason an observation does not have a value."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/SDOHCC-ValueSetPronounsValue"/>
+                <display value="SDOHCC ValueSet Pronouns Value"/>
+            </reference>
+            <name value="SDOHCC ValueSet Pronouns Value"/>
+            <description value="Codes for the personal pronouns of an individual."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/SDOHCC-ValueSetObservationMethod"/>
+                <display value="SDOHCC ValueSet Observation Method"/>
+            </reference>
+            <name value="SDOHCC ValueSet Observation Method"/>
+            <description value="Codes that represent specific methods by which an individual's race or ethnicity information can be elicited."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/SDOHCC-ValueSetObservationDerivedFromIdType"/>
+                <display value="SDOHCC ValueSet Observation DerivedFrom IdType"/>
+            </reference>
+            <name value="SDOHCC ValueSet Observation DerivedFrom IdType"/>
+            <description value="Codes for identifiers of target resources from which recorded sex or gender information can be derived."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/SDOHCC-ExtensionConditionAsserter"/>
+                <display value="SDOHCC Extension Condition Asserter"/>
+            </reference>
+            <name value="SDOHCC Extension Condition Asserter"/>
+            <description value="Extension for allowing the asserter of a condition to be Device (that was used to perform an operation to arrive at the condition)."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group9"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationRaceExample"/>
+                <display value="SDOHCC Observation Race Example"/>
+            </reference>
+            <name value="SDOHCC Observation Race Example"/>
+            <description value="An example of a race Observation where the subject self-reports as more than one race with detailed race information that highlights elements and repetitions. NOTE: This example is based on the earlier SDOHCC Observation Race profile which is being replaced by the SDOHCC Observation Race OMB profile."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRace"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationEthnicityExample"/>
+                <display value="SDOHCC Observation Ethnicity Example"/>
+            </reference>
+            <name value="SDOHCC Observation Ethnicity Example"/>
+            <description value="An example of an ethnicity Observation where the subject self-reports as Hispanic or Latino with detailed ethnicity information that highlights elements and repetitions. NOTE: This example is based on the earlier SDOHCC Observation Ethnicity profile which is being replaced by the SDOHCC Observation Ethnicity OMB profile."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicity"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationGenderIdentityExample"/>
+                <display value="SDOHCC Observation Gender Identity Example"/>
+            </reference>
+            <name value="SDOHCC Observation Gender Identity Example"/>
+            <description value="An example of a gender identity Observation where the subject self-reports their gender identity as male."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationGenderIdentity"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationSexualOrientationExample"/>
+                <display value="SDOHCC Observation Sexual Orientation Example"/>
+            </reference>
+            <name value="SDOHCC Observation Sexual Orientation Example"/>
+            <description value="An example of a sexual orientation Observation where the subject self-reports as homosexual."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationSexualOrientation"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationRecordedSexGenderExample"/>
+                <display value="SDOHCC Observation Recorded Sex Gender Example"/>
+            </reference>
+            <name value="SDOHCC Observation Recorded Sex Gender Example"/>
+            <description value="An example of a recorded sex or gender Observation where a clinic has derived the designation M (male) from the subject’s driver’s license."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRecordedSexGender"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationPersonalPronounsExample"/>
+                <display value="SDOHCC Observation Personal Pronouns Example"/>
+            </reference>
+            <name value="SDOHCC Observation Personal Pronouns Example"/>
+            <description value="An example of a personal pronoun Observation where the subject self-reports their pronoun preference."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationPersonalPronouns"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationRaceOMBExample"/>
+                <display value="SDOHCC Observation Race OMB Example"/>
+            </reference>
+            <name value="SDOHCC Observation Race OMB Example"/>
+            <description value="An example of a race Observation where the subject self-reports as more than one race with detailed race information that highlights elements and repetitions."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationEthnicityOMBExample"/>
+                <display value="SDOHCC Observation Ethnicity OMB Example"/>
+            </reference>
+            <name value="SDOHCC Observation Ethnicity OMB Example"/>
+            <description value="An example of an ethnicity Observation where the subject self-reports as Hispanic or Latino with detailed ethnicity information that highlights elements and repetitions."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicityOMB"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationRaceOMBPractitionerExample"/>
+                <display value="SDOHCC Observation Race OMB Practitioner Example"/>
+            </reference>
+            <name value="SDOHCC Observation Race OMB Practitioner Example"/>
+            <description value="An example of a race Observation that uses a FHIR extension on Observation.subject to make an Observation about the practitioner’s race."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="RelatedPerson/SDOHCC-RelatedPersonMother"/>
+                <display value="SDOHCC Related Person Mother"/>
+            </reference>
+            <name value="SDOHCC Related Person Mother"/>
+            <description value="An example of a Related Person who is the mother of the subject/patient (Colin Abbas)."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/SDOHCC-ObservationRaceOMBMotherExample"/>
+                <display value="SDOHCC-Observation Race OMB Mother Example"/>
+            </reference>
+            <name value="SDOHCC-Observation Race OMB Mother Example"/>
+            <description value="An example of a race Observation that uses Observation.focus to make an Observation about the race of the subject’s mother (who is his caretaker)."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="RelatedPerson/SDOHCC-RelatedPersonMotherExample"/>
+                <display value="SDOHCC-Related Person Mother Example"/>
+            </reference>
+            <name value="SDOHCC-Related Person Mother Example"/>
+            <description value="An example of a Related Person who is the mother of the subject/patient (Colin Abbas)."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+            <groupingId value="new-group10"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Device/SDOHCC-DeviceSoftwareExample"/>
+                <display value="SDOHCC Device Software Example"/>
+            </reference>
+            <name value="SDOHCC Device Software Example"/>
+            <description value="An example of a software device. This example is used as the referenced device in other SDOHCC examples."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Device"/>
+            <groupingId value="new-group5"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Condition/SDOHCC-ConditionAsserterDeviceExample"/>
+                <display value="SDOHCC Condition Asserter Device Example"/>
+            </reference>
+            <name value="SDOHCC Condition Asserter Device Example"/>
+            <description value="An example of a food insecurity Condition that references, as evidence, Observations derived from the LOINC Hunger Vital Sign [HVS] questionnaire (88121-9) and uses an extension on Condition.asserter to reference the software device that uses the answers to HVS questions 1 and 2 to derive the answer to HVS question 3 (at risk for food insecurity)."/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            <groupingId value="new-group5"/>
         </resource>
         <page>
             <nameUrl value="index.html"/>
