@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Procedure"/>
     <meta>
-        <versionId value="11"/>
-        <lastUpdated value="2021-11-23T16:22:03.519+00:00"/>
-        <source value="#xgt5xcnnKFRko11B"/>
+        <versionId value="14"/>
+        <lastUpdated value="2022-04-14T15:37:40.887+00:00"/>
+        <source value="#elMMu7CCdf9b0jBI"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
     <version value="0.1.0"/>
@@ -76,22 +76,6 @@
                 <rules value="open"/>
             </slicing>
             <min value="0"/>
-        </element>
-        <element id="Procedure.extension:CategorySDOH">
-            <path value="Procedure.extension"/>
-            <sliceName value="CategorySDOH"/>
-            <requirements value="This extension can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a procedure. It is recommended that SDOH category codes be used to facilitate searching for procedures that address SDOH conditions. observations, or goals."/>
-            <min value="0"/>
-            <type>
-                <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Procedure.category"/>
-            </type>
-            <condition value="SDOH-Pro-1"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Procedure.extension:CategorySDOH.url">
-            <path value="Procedure.extension.url"/>
-            <fixedUri value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Procedure.category"/>
         </element>
         <element id="Procedure.extension:pertainsToGoal">
             <path value="Procedure.extension"/>

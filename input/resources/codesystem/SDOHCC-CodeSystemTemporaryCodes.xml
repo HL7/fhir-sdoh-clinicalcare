@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-CodeSystemTemporaryCodes"/>
     <meta>
-        <versionId value="15"/>
-        <lastUpdated value="2021-11-23T23:33:36.866+00:00"/>
-        <source value="#m8i9sOhJ9wuFpi03"/>
+        <versionId value="17"/>
+        <lastUpdated value="2022-04-06T17:05:46.961+00:00"/>
+        <source value="#DZuLVdGckxykCt20"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
     <version value="0.1.0"/>
@@ -104,6 +104,11 @@
         <definition value="Category for Social Determinant of Health artifacts that pertain to Intimate Partner Violence (IPV) (which is defined as: Physical violence, sexual violence, or psychological harm by a current or former partner or spouse. Often including a pattern of methods and tactics to gain and maintain power and control over the other person.) This SDOH category covers records relevant to circumstances that range from being a victim of IPV to not being a victim of IPV."/>
     </concept>
     <concept>
+        <code value="elder-abuse"/>
+        <display value="Elder Abuse"/>
+        <definition value="Category for Social Determinant of Health artifacts that pertain to Elder Abuse (which is defined as: An intentional act or failure to act by a caregiver or another person in a relationship involving an expectation of trust that causes or creates a risk of harm to an older adult and can be in the form of physical abuse, psychological abuse, sexual abuse, financial abuse, and/or neglect by someone in a caregiving role.) This SDOH category covers records relevant to circumstances that range from being a victim of elder abuse to not being a victim of elder abuse."/>
+    </concept>
+    <concept>
         <code value="resulting-activity"/>
         <display value="Resulting Activity"/>
         <definition value="Code used for Task.output.type to represent the activity/action that is the result of a fulfilled task."/>
@@ -119,9 +124,9 @@
         <definition value="Code used for Group.characteristic to identify Group members currently covered by a specific payer organization."/>
     </concept>
     <concept>
-        <code value="adhoc"/>
-        <display value="Adhoc"/>
-        <definition value="Designates that further information with respect to an action to be performed 1) will be captured by another profile element in text form and 2) has no computable expectation."/>
+        <code value="general-information"/>
+        <display value="General Information"/>
+        <definition value="Designates that information with respect to an action to be performed 1) will be captured in Task.description in text form AND 2) has no computable expectation AND 3) any resulting response will be captured in Task.Output.GeneralInformationResponse.value as markdown."/>
     </concept>
     <concept>
         <code value="make-contact"/>
@@ -159,9 +164,9 @@
         <definition value="Identifies an entity (e.g., a practitioner, organization, or service) that needs to be contacted."/>
     </concept>
     <concept>
-        <code value="adhoc-response"/>
-        <display value="Adhoc Response"/>
-        <definition value="When Task.code is 'adhoc', 'adhoc-response' for Task.output.type indicates that a free text response can be provided."/>
+        <code value="general-information-response"/>
+        <display value="General Information Response"/>
+        <definition value="When Task.code is 'general-information', 'general-information-response' for Task.output.type indicates that a free text response can be provided."/>
     </concept>
     <concept>
         <code value="questionnaire-category"/>
@@ -191,36 +196,41 @@
     <concept>
         <code value="self-reported"/>
         <display value="Self Reported"/>
-        <definition value="Identifies that the subject reported the information about the subject."/>
+        <definition value="The subject reported the information about the subject."/>
     </concept>
     <concept>
         <code value="reported-by-related-person"/>
         <display value="Reported By Related Person"/>
-        <definition value="Identifies that someone related to the subject reported the information about the subject."/>
+        <definition value="Someone related to the subject reported the information about the subject."/>
     </concept>
     <concept>
         <code value="observed"/>
         <display value="Observed"/>
-        <definition value="Identifies that direct observation was used to obtain information about the subject."/>
+        <definition value="Direct observation of the subject was used to obtain information about the subject."/>
     </concept>
     <concept>
         <code value="administrative"/>
         <display value="Administrative"/>
-        <definition value="Identifies that the information about the subject was collected by an organization for administrative reasons not directly related to obtaining healthcare or health insurance."/>
+        <definition value="The information about the subject was abstracted from an administrative record that is not directly related to obtaining healthcare or health insurance."/>
     </concept>
     <concept>
         <code value="derived-specify"/>
         <display value="Derived Specify"/>
-        <definition value="Identifies that the information about the subject was derived from information or methods other than directly reported by an individual. Text should be used to further specify the method."/>
+        <definition value="The information about the subject was derived from information or methods other than directly reported by an individual. Text should be used to further specify the method."/>
     </concept>
     <concept>
         <code value="other-specify"/>
         <display value="Other Specify"/>
-        <definition value="Identifies that the information about the subject was obtained by a method other than 'self-reported', 'reported-by-related-person', 'observed', 'derived-specify' or 'administrative'. Text should be used to further specify the method."/>
+        <definition value="The actual value is not a member of the set of permitted data values in the constrained value domain of a variable. Text should be used to further specify the value."/>
     </concept>
     <concept>
-        <code value="unknown"/>
-        <display value="Unknown"/>
-        <definition value="Identifies that the method used to obtain information about the subject is unknown."/>
+        <code value="personal-characteristic"/>
+        <display value="Personal Characteristic"/>
+        <definition value="Category for artifacts that pertain to a personal characteristic (characteristics that are usually self-attested but may be attested to on behalf of the subject and are generally only verifiable by the source of attestation (e.g., sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex))."/>
+    </concept>
+    <concept>
+        <code value="chosen-contact"/>
+        <display value="Chosen Contact"/>
+        <definition value="Identifies the entity (e.g., a practitioner, organization, or service) that was contacted."/>
     </concept>
 </CodeSystem>

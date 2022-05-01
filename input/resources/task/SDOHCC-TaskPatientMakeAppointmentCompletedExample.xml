@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-TaskPatientMakeAppointmentCompletedExample"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2021-11-15T20:50:16.158+00:00"/>
-        <source value="#XdPoDPZ7xooYOcWY"/>
+        <versionId value="4"/>
+        <lastUpdated value="2022-04-13T17:35:32.937+00:00"/>
+        <source value="#AgFfi8RxNItzkrVa"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"/>
     </meta>
     <status value="completed"/>
@@ -18,6 +18,7 @@
             <display value="Make Contact"/>
         </coding>
     </code>
+    <description value="Please contact the clinic to schedule your appointment"/>
     <for>
         <reference value="Patient/pat-53234"/>
         <display value="COLIN ABBAS"/>

@@ -3,10 +3,10 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-QuestionnaireResponsePRAPAREExample"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-06-03T00:48:30.721+00:00"/>
-        <source value="#lELuFd3L32Xc9mgx"/>
-        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"/>
+        <versionId value="2"/>
+        <lastUpdated value="2022-04-26T15:19:58.281+00:00"/>
+        <source value="#qcqGLjBmwpmuPEIL"/>
+        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"/>
     </meta>
     <questionnaire value="http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-QuestionnairePRAPARE">
         <extension url="http://hl7.org/fhir/StructureDefinition/display">

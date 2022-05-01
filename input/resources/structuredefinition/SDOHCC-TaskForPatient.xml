@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-TaskForPatient"/>
     <meta>
-        <versionId value="12"/>
-        <lastUpdated value="2021-11-30T15:56:23.796+00:00"/>
-        <source value="#UbRFt8BTovH5bT1c"/>
+        <versionId value="20"/>
+        <lastUpdated value="2022-04-25T18:27:06.483+00:00"/>
+        <source value="#JvasAoTXgu6lYa5M"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"/>
     <name value="SDOHCCTaskForPatient"/>
@@ -53,8 +53,8 @@
             <constraint>
                 <key value="SDOH-Task-2"/>
                 <severity value="error"/>
-                <human value="If Task.code is “adhoc”, then Task.description is required and either Task.output is absent or Task.output must be “adhoc-response”"/>
-                <expression value="code.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='adhoc').exists() implies (description.exists() and (output.empty() or output.type.coding.all(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='adhoc-response').exists()))"/>
+                <human value="If Task.code is “general-information”, then Task.description is required and either Task.output is absent or Task.output must be “general-information-response”."/>
+                <expression value="code.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='general-information').exists() implies (description.exists() and (output.empty() or output.type.coding.all(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='general-information-response').exists()))"/>
                 <xpath value="true()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"/>
             </constraint>
@@ -93,8 +93,8 @@
             <constraint>
                 <key value="SDOH-Task-7"/>
                 <severity value="error"/>
-                <human value="If Task.code is &quot;adhoc&quot;, then Task.output, if present, must be &quot;adhoc-response&quot;."/>
-                <expression value="code.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='adhoc').exists() implies(output.type.coding.where(system='http://hl7.org/fhir/uv/sdc/CodeSystem/temp' and code='adhoc-response').exists() or output.empty())"/>
+                <human value="If Task.code is “make-contact”, then Task.description is required and either Task.output is absent or Task.output must be “chosen-contact”."/>
+                <expression value="code.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='make-contact').exists() implies (description.exists() and (output.empty() or output.type.coding.all(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='chosen-contact').exists()))"/>
                 <xpath value="true()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"/>
             </constraint>
@@ -121,8 +121,8 @@
         </element>
         <element id="Task.status">
             <path value="Task.status"/>
-            <short value="ready | cancelled | completed | in progress"/>
-            <requirements value="These states enable coordination of task status with off-the-shelf workflow solutions that support automation of tasks. The values are constrained to ready | cancelled | completed because the task come to the patient in the ready status and the patient can cancel it or complete it."/>
+            <short value="ready | cancelled | completed | in progress | on hold"/>
+            <requirements value="These states enable coordination of task status with off-the-shelf workflow solutions that support automation of tasks. The values are constrained to ready | cancelled | completed | in progress | on hold. The task comes to the patient in the ready status and the patient can update status as appropriate."/>
             <mustSupport value="true"/>
             <binding>
                 <strength value="required"/>
@@ -176,6 +176,7 @@
             <path value="Task.description"/>
             <comment value="If Task.code is &quot;adhoc&quot;, Task.description should be displayed to the user with no other computable expectation other than allowing the patient to update the Task.status and optionally capture a free text response for Task.output."/>
             <condition value="SDOH-Task-2"/>
+            <condition value="SDOH-Task-7"/>
             <mustSupport value="true"/>
         </element>
         <element id="Task.focus">
@@ -251,7 +252,7 @@
             <path value="Task.input.value[x]"/>
             <type>
                 <code value="canonical"/>
-                <targetProfile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract|2.7"/>
+                <targetProfile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"/>
             </type>
         </element>
         <element id="Task.input:QuestionnairePDF">
@@ -413,23 +414,46 @@
                 <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"/>
             </type>
         </element>
-        <element id="Task.output:AdhocResponse">
+        <element id="Task.output:GeneralInformationResponse">
             <path value="Task.output"/>
-            <sliceName value="AdhocResponse"/>
+            <sliceName value="GeneralInformationResponse"/>
             <condition value="SDOH-Task-2"/>
             <condition value="SDOH-Task-7"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Task.output:AdhocResponse.type">
+        <element id="Task.output:GeneralInformationResponse.type">
             <path value="Task.output.type"/>
             <patternCodeableConcept>
                 <coding>
                     <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
-                    <code value="adhoc-response"/>
+                    <code value="general-information-response"/>
                 </coding>
             </patternCodeableConcept>
         </element>
-        <element id="Task.output:AdhocResponse.value[x]">
+        <element id="Task.output:GeneralInformationResponse.value[x]">
+            <path value="Task.output.value[x]"/>
+            <type>
+                <code value="markdown"/>
+            </type>
+        </element>
+        <element id="Task.output:ChosenContact">
+            <path value="Task.output"/>
+            <sliceName value="ChosenContact"/>
+            <comment value="If Task.code is &quot;make-contact&quot; and multiple Task.inputs are provided, the intent is that the task owner selects only one to contact and can indicate the &quot;chosen-contact&quot;."/>
+            <max value="1"/>
+            <condition value="SDOH-Task-7"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.output:ChosenContact.type">
+            <path value="Task.output.type"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                    <code value="chosen-contact"/>
+                </coding>
+            </patternCodeableConcept>
+        </element>
+        <element id="Task.output:ChosenContact.value[x]">
             <path value="Task.output.value[x]"/>
             <type>
                 <code value="markdown"/>
