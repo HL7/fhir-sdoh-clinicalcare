@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-PractitionerRoleDrJanWaterExample"/>
     <meta>
-        <versionId value="5"/>
-        <lastUpdated value="2021-11-16T15:52:03.949+00:00"/>
-        <source value="#T4wpE5GReCGgeyeF"/>
+        <versionId value="6"/>
+        <lastUpdated value="2022-04-06T20:56:13.866+00:00"/>
+        <source value="#BjmS65cneLYxVyRU"/>
         <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
     </meta>
     <identifier>
@@ -17,6 +17,10 @@
         <reference value="Practitioner/SDOHCC-PractitionerDrJanWaterExample"/>
         <display value="Dr Jan Water"/>
     </practitioner>
+    <organization>
+        <reference value="Organization/SDOHCC-OrganizationClinicExample"/>
+        <display value="Better Health Clinic"/>
+    </organization>
     <code>
         <coding>
             <system value="http://nucc.org/provider-taxonomy"/>

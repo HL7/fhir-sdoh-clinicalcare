@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ValueSetObservationMethod"/>
     <meta>
-        <versionId value="6"/>
-        <lastUpdated value="2021-11-17T19:56:25.597+00:00"/>
-        <source value="#KSQdMJPR4882LweF"/>
+        <versionId value="7"/>
+        <lastUpdated value="2022-04-05T17:00:04.587+00:00"/>
+        <source value="#TWaGDFPRmjJXymzR"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetObservationMethod"/>
     <version value="0.1.0"/>
@@ -55,9 +55,12 @@
                 <code value="observed"/>
                 <display value="Observed"/>
             </concept>
+        </include>
+        <include>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
             <concept>
-                <code value="unknown"/>
-                <display value="Unknown"/>
+                <code value="UNK"/>
+                <display value="unknown"/>
             </concept>
         </include>
     </compose>

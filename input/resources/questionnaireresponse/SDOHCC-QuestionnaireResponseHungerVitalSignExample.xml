@@ -3,10 +3,10 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-QuestionnaireResponseHungerVitalSignExample"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-06-03T00:48:30.720+00:00"/>
-        <source value="#CdR89nNx7kqdTOs4"/>
-        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"/>
+        <versionId value="2"/>
+        <lastUpdated value="2022-04-26T15:19:58.281+00:00"/>
+        <source value="#kDPcb791ZinzUvXA"/>
+        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"/>
     </meta>
     <questionnaire value="http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-QuestionnaireHungerVitalSign">
         <extension url="http://hl7.org/fhir/StructureDefinition/display">

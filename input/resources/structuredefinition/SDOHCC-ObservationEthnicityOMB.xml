@@ -1,91 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition
     xmlns="http://hl7.org/fhir">
-    <id value="SDOHCC-ObservationEthnicity"/>
+    <id value="SDOHCC-ObservationEthnicityOMB"/>
     <meta>
-        <versionId value="14"/>
-        <lastUpdated value="2022-04-06T16:57:40.761+00:00"/>
-        <source value="#T9b4saaJM3jQUPBM"/>
+        <versionId value="5"/>
+        <lastUpdated value="2022-04-14T19:52:21.615+00:00"/>
+        <source value="#MOsjrBoCazUyIeXY"/>
     </meta>
-    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicity"/>
-    <name value="SDOHCCObservationEthnicity"/>
-    <title value="SDOHCC Observation Ethnicity"/>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicityOMB"/>
+    <name value="SDOHCCObservationEthnicityOMB"/>
+    <title value="SDOHCC Observation Ethnicity OMB"/>
     <status value="draft"/>
-    <description value="Profile for observations about ethnicity using Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on 11/18/2021 - Jira ticket 34245."/>
+    <description value="Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on 11/18/2021 - Jira ticket 34245."/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="Observation"/>
-    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <baseDefinition value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationPersonalCharacteristic"/>
     <derivation value="constraint"/>
     <differential>
         <element id="Observation">
             <path value="Observation"/>
             <short value="Ethnicity observation"/>
-            <definition value="For observations about the ethnicity of an individual."/>
+            <definition value="For ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes."/>
+            <comment value="Used for observations about the ethnicity of an individual."/>
             <constraint>
-                <key value="SDOH-Obs-1"/>
+                <key value="SDOH-Ethnicity-1"/>
                 <severity value="error"/>
                 <human value="Must have either a dataAbsentReason or at least one of the defined ethnicity components but not both"/>
                 <expression value="dataAbsentReason.exists() xor component.where(code.coding.where(system='http://loinc.org' and code='69490-1')).exists()"/>
                 <xpath value="true()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicityOMB"/>
             </constraint>
-            <constraint>
-                <key value="SDOH-Obs-2"/>
-                <severity value="error"/>
-                <human value="Must have either performer or derivedFrom."/>
-                <expression value="performer.exists() or derivedFrom.exists()"/>
-                <xpath value="true()"/>
-            </constraint>
-            <constraint>
-                <key value="SDOH-Obs-3"/>
-                <severity value="error"/>
-                <human value="Either subject or extension-Observation.subject must exist but not both."/>
-                <expression value="subject.exists() xor extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.subject').exists()"/>
-                <xpath value="true()"/>
-            </constraint>
-            <constraint>
-                <key value="SDOH-Obs-4"/>
-                <severity value="error"/>
-                <human value="Focus is only allowed if subject is present."/>
-                <expression value="focus.exists() implies subject.exists()"/>
-                <xpath value="true()"/>
-            </constraint>
-        </element>
-        <element id="Observation.extension">
-            <path value="Observation.extension"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="url"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <min value="0"/>
-        </element>
-        <element id="Observation.extension:OtherSubject">
-            <path value="Observation.extension"/>
-            <sliceName value="OtherSubject"/>
-            <min value="0"/>
-            <max value="1"/>
-            <type>
-                <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.subject"/>
-            </type>
-            <condition value="SDOH-Obs-3"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Observation.extension:OtherSubject.value[x]">
-            <path value="Observation.extension.value[x]"/>
-            <min value="1"/>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
-            </type>
-        </element>
-        <element id="Observation.status">
-            <path value="Observation.status"/>
-            <mustSupport value="true"/>
         </element>
         <element id="Observation.code">
             <path value="Observation.code"/>
@@ -95,32 +41,6 @@
                     <code value="69490-1"/>
                 </coding>
             </patternCodeableConcept>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Observation.subject">
-            <path value="Observation.subject"/>
-            <min value="1"/>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
-            </type>
-            <condition value="SDOH-Obs-3"/>
-            <condition value="SDOH-Obs-4"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Observation.focus">
-            <path value="Observation.focus"/>
-            <max value="1"/>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-            </type>
-            <condition value="SDOH-Obs-4"/>
-        </element>
-        <element id="Observation.performer">
-            <path value="Observation.performer"/>
-            <condition value="SDOH-Obs-2"/>
-            <mustSupport value="true"/>
         </element>
         <element id="Observation.value[x]">
             <path value="Observation.value[x]"/>
@@ -128,21 +48,7 @@
         </element>
         <element id="Observation.dataAbsentReason">
             <path value="Observation.dataAbsentReason"/>
-            <comment value="Null or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  &#xA;&#xA;The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values."/>
-            <condition value="SDOH-Obs-1"/>
-            <mustSupport value="true"/>
-            <binding>
-                <strength value="required"/>
-                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetObservationDataAbsentReason"/>
-            </binding>
-        </element>
-        <element id="Observation.interpretation">
-            <path value="Observation.interpretation"/>
-            <max value="0"/>
-        </element>
-        <element id="Observation.bodySite">
-            <path value="Observation.bodySite"/>
-            <max value="0"/>
+            <condition value="SDOH-Ethnicity-1"/>
         </element>
         <element id="Observation.method">
             <path value="Observation.method"/>
@@ -150,27 +56,9 @@
             <mustSupport value="true"/>
             <binding>
                 <strength value="extensible"/>
+                <description value="Methods for personal characteristic observations."/>
                 <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetObservationMethod"/>
             </binding>
-        </element>
-        <element id="Observation.specimen">
-            <path value="Observation.specimen"/>
-            <max value="0"/>
-        </element>
-        <element id="Observation.referenceRange">
-            <path value="Observation.referenceRange"/>
-            <max value="0"/>
-        </element>
-        <element id="Observation.derivedFrom">
-            <path value="Observation.derivedFrom"/>
-            <type>
-                <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
-                <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"/>
-                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
-            </type>
-            <condition value="SDOH-Obs-2"/>
-            <mustSupport value="true"/>
         </element>
         <element id="Observation.component">
             <path value="Observation.component"/>
@@ -191,7 +79,7 @@
             </slicing>
             <definition value="Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes."/>
             <requirements value="Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable)."/>
-            <condition value="SDOH-Obs-1"/>
+            <condition value="SDOH-Ethnicity-1"/>
         </element>
         <element id="Observation.component:EthnicityDescription">
             <path value="Observation.component"/>

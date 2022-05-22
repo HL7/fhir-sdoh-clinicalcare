@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ObservationRecordedSexGender"/>
+    <meta>
+        <versionId value="8"/>
+        <lastUpdated value="2022-04-29T15:17:45.934+00:00"/>
+        <source value="#XOXNNLEc2Nt66pCK"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRecordedSexGender"/>
+    <name value="SDOHCCObservationRecordedSexGender"/>
+    <title value="SDOHCC Observation Recorded Sex Gender"/>
+    <status value="draft"/>
+    <description value="Profile for observations about &quot;recorded sex and gender&quot; which, in the past, were often used interchangeably. In this context, sex is a biological construct and pertains to a person’s genetics, hormones, and anatomy. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on XXXXX - Jira ticket XXXXX."/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Observation"/>
+    <baseDefinition value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationPersonalCharacteristic"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Observation">
+            <path value="Observation"/>
+            <short value="Observation about an individual's recorded sex or gender"/>
+            <definition value="For observations about &quot;recorded sex and gender&quot; which, in the past, have often been used interchangeably. In this context, sex is a biological construct and pertains to a person’s genetics, hormones, and anatomy."/>
+            <comment value="For observations about the recorded sex and gender of an individual."/>
+        </element>
+        <element id="Observation.code">
+            <path value="Observation.code"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="99502-7"/>
+                </coding>
+            </patternCodeableConcept>
+        </element>
+        <element id="Observation.value[x]">
+            <path value="Observation.value[x]"/>
+            <min value="1"/>
+            <binding>
+                <strength value="preferred"/>
+                <description value="Codes for recorded sex and gender"/>
+                <valueSet value="http://loinc.org/vs/LL6134-2"/>
+            </binding>
+        </element>
+        <element id="Observation.value[x].extension">
+            <path value="Observation.value[x].extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <min value="0"/>
+        </element>
+        <element id="Observation.value[x].extension:DataAbsentReasonMasked">
+            <path value="Observation.value[x].extension"/>
+            <sliceName value="DataAbsentReasonMasked"/>
+            <requirements value="“Masked” is never used for data capture, but &quot;masked&quot; is used to suppress information when data is exchanged. For this reason, other flavors of null are included in the value set for Observation.value, but “masked” can be captured here."/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/data-absent-reason"/>
+            </type>
+            <isModifier value="false"/>
+        </element>
+        <element id="Observation.value[x].extension:DataAbsentReasonMasked.value[x]">
+            <path value="Observation.value[x].extension.value[x]"/>
+            <definition value="The information is not available due to security, privacy or related reasons."/>
+            <fixedCode value="masked"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Observation.value[x].coding">
+            <path value="Observation.value[x].coding"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Observation.dataAbsentReason">
+            <path value="Observation.dataAbsentReason"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.method">
+            <path value="Observation.method"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="example"/>
+                <description value="Methods for personal characteristic observations."/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetObservationMethod"/>
+            </binding>
+        </element>
+        <element id="Observation.derivedFrom">
+            <path value="Observation.derivedFrom"/>
+            <requirements value="DocumentReference can be used to indicate the type of recorded sex or gender. For example, a birth certificate could indicate that this is &quot;birth sex&quot;."/>
+            <min value="1"/>
+            <max value="1"/>
+            <condition value="SDOH-Obs-4"/>
+        </element>
+        <element id="Observation.derivedFrom.identifier">
+            <path value="Observation.derivedFrom.identifier"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Observation.derivedFrom.identifier.type">
+            <path value="Observation.derivedFrom.identifier.type"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="extensible"/>
+                <description value="Codes for the type of record from which recorded sex or gender information is derived."/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetObservationDerivedFromIdType"/>
+            </binding>
+        </element>
+        <element id="Observation.derivedFrom.identifier.type.coding">
+            <path value="Observation.derivedFrom.identifier.type.coding"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Observation.derivedFrom.identifier.type.text">
+            <path value="Observation.derivedFrom.identifier.type.text"/>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

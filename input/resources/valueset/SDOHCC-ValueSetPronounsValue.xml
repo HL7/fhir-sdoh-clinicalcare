@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ValueSetPronounsValue"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2022-04-05T17:01:23.251+00:00"/>
+        <source value="#G1ZbT49Me5gfECaz"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetPronounsValue"/>
+    <version value="0.1.0"/>
+    <name value="SDOHCCValueSetPronounsValue"/>
+    <title value="SDOHCC ValueSet Pronouns Value"/>
+    <status value="draft"/>
+    <description value="Codes for the personal pronouns of an individual."/>
+    <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc."/>
+    <compose>
+        <include>
+            <system value="http://loinc.org"/>
+            <concept>
+                <code value="LA29518-0"/>
+                <display value="he/him/his/his/himself"/>
+            </concept>
+            <concept>
+                <code value="LA29519-8"/>
+                <display value="she/her/her/hers/herself"/>
+            </concept>
+            <concept>
+                <code value="LA29520-6"/>
+                <display value="they/them/their/theirs/themselves"/>
+            </concept>
+        </include>
+        <include>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+            <concept>
+                <code value="OTH"/>
+                <display value="other"/>
+            </concept>
+            <concept>
+                <code value="UNK"/>
+                <display value="unknown"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Goal"/>
     <meta>
-        <versionId value="8"/>
-        <lastUpdated value="2021-11-16T18:03:33.695+00:00"/>
-        <source value="#ADARUMaAXCj3WJjT"/>
+        <versionId value="9"/>
+        <lastUpdated value="2022-04-07T00:03:49.911+00:00"/>
+        <source value="#fhWeCPC0H2OKcIKZ"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal"/>
     <version value="0.1.0"/>
@@ -55,7 +55,6 @@
         </element>
         <element id="Goal.achievementStatus">
             <path value="Goal.achievementStatus"/>
-            <min value="1"/>
             <mustSupport value="true"/>
         </element>
         <element id="Goal.category">
