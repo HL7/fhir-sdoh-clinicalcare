@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationPersonalCharacteristic"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2022-04-07T00:03:49.782+00:00"/>
-        <source value="#YXDvUJZa6rjw4ok9"/>
+        <versionId value="8"/>
+        <lastUpdated value="2022-05-17T21:22:56.087+00:00"/>
+        <source value="#hle78n7Dn8Ei7vTJ"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationPersonalCharacteristic"/>
     <name value="SDOHCCObservationPersonalCharacteristic"/>
     <title value="SDOHCC Observation Personal Characteristic"/>
     <status value="draft"/>
-    <description value="Defines constraints that represent the minimum requirement for personal characteristic observations which are observations that are usually self-attested but may be attested to on behalf of the subject and are generally only verifiable by the source of attestation (e.g., race, ethnicity, sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex). This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on XX/XX/2022 - Jira ticket XXXXX."/>
+    <description value="Defines constraints that represent the minimum requirement for personal characteristic observations which are observations that are usually self-attested but may be attested to on behalf of the subject and are generally only verifiable by the source of attestation (e.g., race, ethnicity, sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex). This profile is intended for draft use only. The Cross-Group Projects work group granted a variant to US Core on XX/XX/2022 - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="true"/>
@@ -63,6 +63,7 @@
         <element id="Observation.extension:OtherSubject">
             <path value="Observation.extension"/>
             <sliceName value="OtherSubject"/>
+            <requirements value="This extension is adding only US Core Practitioner as an option for Observation.subject."/>
             <min value="0"/>
             <max value="1"/>
             <type>
@@ -141,6 +142,7 @@
         </element>
         <element id="Observation.effective[x]">
             <path value="Observation.effective[x]"/>
+            <comment value="At least a date should be present unless this observation is a historical report.  For recording imprecise or &quot;fuzzy&quot; times (For example, a blood glucose measurement taken &quot;after breakfast&quot;) use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.&#xD;&#xA;NOTE: dateTime is Must Support, but currently tooling does not support this."/>
             <type>
                 <code value="dateTime"/>
             </type>

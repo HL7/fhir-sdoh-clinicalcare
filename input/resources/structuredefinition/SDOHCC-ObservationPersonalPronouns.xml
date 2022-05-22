@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationPersonalPronouns"/>
     <meta>
-        <versionId value="6"/>
-        <lastUpdated value="2022-04-26T14:03:57.620+00:00"/>
-        <source value="#jVIvCFOZnvuDXuQ9"/>
+        <versionId value="8"/>
+        <lastUpdated value="2022-05-17T21:22:56.053+00:00"/>
+        <source value="#bOilpRvwRGd5kc7p"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationPersonalPronouns"/>
     <name value="SDOHCCObservationPersonalPronouns"/>
     <title value="SDOHCC Observation Personal Pronouns"/>
     <status value="draft"/>
-    <description value="Profile for observations about the pronouns and possessive adjectives a person wishes to be addressed by. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on XXXXX - Jira ticket XXXXX."/>
+    <description value="Profile for observations about the pronouns and possessive adjectives a person wishes to be addressed by. This profile is intended for draft use only. The Cross-Group Projects work group granted a variant to US Core on XXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>

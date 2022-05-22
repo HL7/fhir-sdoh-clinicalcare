@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ValueSetSDOHCategory"/>
     <meta>
-        <versionId value="7"/>
-        <lastUpdated value="2021-10-22T19:59:41.951+00:00"/>
-        <source value="#APpOdfwYAK1TYTVG"/>
+        <versionId value="8"/>
+        <lastUpdated value="2022-05-17T21:08:37.271+00:00"/>
+        <source value="#M07aqKHxzDsgkIld"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory"/>
     <version value="0.1.0"/>
@@ -86,6 +86,22 @@
             <concept>
                 <code value="intimate-partner-violence"/>
                 <display value="Intimate Partner Violence"/>
+            </concept>
+            <concept>
+                <code value="elder-abuse"/>
+                <display value="Elder Abuse"/>
+            </concept>
+            <concept>
+                <code value="personal-health-literacy"/>
+                <display value="Personal Health Literacy"/>
+            </concept>
+            <concept>
+                <code value="health-insurance-coverage-status"/>
+                <display value="Health Insurance Coverage Status"/>
+            </concept>
+            <concept>
+                <code value="medical-cost-burden"/>
+                <display value="Medical Cost Burden"/>
             </concept>
         </include>
     </compose>

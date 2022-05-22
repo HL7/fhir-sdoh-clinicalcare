@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationRaceOMB"/>
     <meta>
-        <versionId value="5"/>
-        <lastUpdated value="2022-04-14T19:52:21.615+00:00"/>
-        <source value="#gVpS3LhRhJR9391m"/>
+        <versionId value="9"/>
+        <lastUpdated value="2022-05-17T21:22:56.128+00:00"/>
+        <source value="#fNXn3WXwlrl3Dy6g"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB"/>
     <name value="SDOHCCObservationRaceOMB"/>
     <title value="SDOHCC Observation Race OMB"/>
     <status value="draft"/>
-    <description value="Profile for race observations that use Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on 11/18/2021 - Jira ticket 34245."/>
+    <description value="Profile for race observations that use Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only. The Cross-Group Projects work group granted a variant to US Core on XXXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>
@@ -49,6 +49,11 @@
         <element id="Observation.dataAbsentReason">
             <path value="Observation.dataAbsentReason"/>
             <condition value="SDOH-Race-1"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetObservationDataAbsentReason"/>
+            </binding>
         </element>
         <element id="Observation.method">
             <path value="Observation.method"/>

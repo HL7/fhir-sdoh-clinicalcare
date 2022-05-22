@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationEthnicityOMB"/>
     <meta>
-        <versionId value="5"/>
-        <lastUpdated value="2022-04-14T19:52:21.615+00:00"/>
-        <source value="#MOsjrBoCazUyIeXY"/>
+        <versionId value="8"/>
+        <lastUpdated value="2022-05-20T17:55:32.307+00:00"/>
+        <source value="#b8EYjXm9dmguYyoi"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicityOMB"/>
     <name value="SDOHCCObservationEthnicityOMB"/>
     <title value="SDOHCC Observation Ethnicity OMB"/>
     <status value="draft"/>
-    <description value="Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on 11/18/2021 - Jira ticket 34245."/>
+    <description value="Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. The Cross-Group Projects work group granted a variant to US Core on XXXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>
@@ -148,7 +148,7 @@
             <binding>
                 <strength value="required"/>
                 <description value="Codes for the two OMB ethnicity categories"/>
-                <valueSet value="http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity-category"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetOMBEthnicityCategories"/>
             </binding>
         </element>
         <element id="Observation.component:Ethnicity.dataAbsentReason">

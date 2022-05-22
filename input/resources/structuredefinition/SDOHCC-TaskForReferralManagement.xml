@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-TaskForReferralManagement"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2021-11-05T18:28:33.509+00:00"/>
-        <source value="#osczH2MaHvHnL9UC"/>
+        <versionId value="5"/>
+        <lastUpdated value="2022-05-10T15:07:12.720+00:00"/>
+        <source value="#tgdzTypVvy7mfvm3"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"/>
     <version value="0.1.0"/>
@@ -74,6 +74,7 @@
         </element>
         <element id="Task.status">
             <path value="Task.status"/>
+            <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size. For further details on Task.status see [Checking Task Status](checking_task_status.html)."/>
             <mustSupport value="true"/>
         </element>
         <element id="Task.statusReason">

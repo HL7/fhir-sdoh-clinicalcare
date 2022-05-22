@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ServiceRequest"/>
     <meta>
-        <versionId value="21"/>
-        <lastUpdated value="2022-04-15T15:21:36.534+00:00"/>
-        <source value="#njgeVCfVcQ8PeHO7"/>
+        <versionId value="22"/>
+        <lastUpdated value="2022-05-20T17:55:32.315+00:00"/>
+        <source value="#R3Ht5MsvHh0VOzvM"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
     <version value="0.1.0"/>
@@ -226,6 +226,7 @@
         </element>
         <element id="ServiceRequest.occurrence[x]">
             <path value="ServiceRequest.occurrence[x]"/>
+            <requirements value="NOTE: dateTime should be Must Support, but currenlty tooling does not support this."/>
             <mustSupport value="true"/>
         </element>
         <element id="ServiceRequest.authoredOn">

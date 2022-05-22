@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Procedure"/>
     <meta>
-        <versionId value="14"/>
-        <lastUpdated value="2022-04-14T15:37:40.887+00:00"/>
-        <source value="#elMMu7CCdf9b0jBI"/>
+        <versionId value="16"/>
+        <lastUpdated value="2022-05-05T18:52:08.608+00:00"/>
+        <source value="#VYJVej1FahautBDe"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
     <version value="0.1.0"/>
@@ -160,6 +160,10 @@
                 <description value="211 LA County codes"/>
                 <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet211LACounty"/>
             </binding>
+        </element>
+        <element id="Procedure.performed[x]">
+            <path value="Procedure.performed[x]"/>
+            <requirements value="NOTE: dateTime should be Must Support, but currenlty tooling does not support this."/>
         </element>
         <element id="Procedure.reasonCode">
             <path value="Procedure.reasonCode"/>

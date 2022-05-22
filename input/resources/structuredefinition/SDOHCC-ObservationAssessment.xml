@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationAssessment"/>
     <meta>
-        <versionId value="12"/>
-        <lastUpdated value="2021-11-08T15:57:11.701+00:00"/>
-        <source value="#cTNf1ZiS2P06jILy"/>
+        <versionId value="13"/>
+        <lastUpdated value="2022-05-17T21:22:56.126+00:00"/>
+        <source value="#7205cspBkRVo2A9y"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"/>
     <name value="SDOHCCObservationAssessment"/>
     <title value="SDOHCC Observation Assessment"/>
     <status value="draft"/>
-    <description value="Profile for Social Determinants of Health (SDOH) observations that involve assessment (e.g., by a provider, payer, etc.) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation). The Cross-Group Projects work group granted an exception to US Core on 06/10/2021 - Jira ticket 32892."/>
+    <description value="Profile for Social Determinants of Health (SDOH) observations that involve assessment (e.g., by a provider, payer, etc.) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation). The Cross-Group Projects work group granted a variant to US Core on 06/10/2021 - Jira ticket 32892."/>
     <fhirVersion value="4.0.1"/>
     <mapping>
         <identity value="workflow"/>
@@ -116,8 +116,13 @@
             </type>
             <mustSupport value="true"/>
         </element>
+        <element id="Observation.effective[x]">
+            <path value="Observation.effective[x]"/>
+            <comment value="At least a date should be present unless this observation is a historical report.  For recording imprecise or &quot;fuzzy&quot; times (For example, a blood glucose measurement taken &quot;after breakfast&quot;) use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events. NOTE: dateTime is Must Support, but currently tooling does not support this."/>
+        </element>
         <element id="Observation.performer">
             <path value="Observation.performer"/>
+            <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository. NOTE: US Core Practitioner is Must Support, but currently tooling does not support this."/>
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>

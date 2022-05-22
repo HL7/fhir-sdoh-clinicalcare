@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ValueSetOMBEthnicityCategories"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2022-05-20T17:55:32.419+00:00"/>
+        <source value="#y3hPhJviZV7P51KW"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetOMBEthnicityCategories"/>
+    <version value="0.1.0"/>
+    <name value="SDOHCCValueSetOMBEthnicityCategories"/>
+    <title value="SDOHCC ValueSet OMB Ethnicity Categories"/>
+    <status value="draft"/>
+    <description value="Codes for the ethnicity categories - 'Hispanic or Latino' and 'Not Hispanic or Latino' - as defined by the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf). This value set was created (as opposed to using the US Core OMB Ethnicity Categories value set) to deliberately prevent inclusion of null flavors."/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.6.238"/>
+            <concept>
+                <code value="2135-2"/>
+                <display value="Hispanic or Latino"/>
+            </concept>
+            <concept>
+                <code value="2186-5"/>
+                <display value="Not Hispanic or Latino"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

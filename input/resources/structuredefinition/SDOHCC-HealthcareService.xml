@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-HealthcareService"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2021-10-29T18:13:46.805+00:00"/>
-        <source value="#PxdXZ4jOlS2EGPn0"/>
+        <versionId value="4"/>
+        <lastUpdated value="2022-05-17T18:54:32.194+00:00"/>
+        <source value="#7xZKBP02rT8YjgtW"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService"/>
     <name value="SDOHCCHealthcareService"/>
@@ -31,7 +31,9 @@
     <differential>
         <element id="HealthcareService.active">
             <path value="HealthcareService.active"/>
+            <min value="1"/>
             <fixedBoolean value="true"/>
+            <mustSupport value="true"/>
         </element>
         <element id="HealthcareService.location">
             <path value="HealthcareService.location"/>

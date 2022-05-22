@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-TaskForPatient"/>
     <meta>
-        <versionId value="20"/>
-        <lastUpdated value="2022-04-25T18:27:06.483+00:00"/>
-        <source value="#JvasAoTXgu6lYa5M"/>
+        <versionId value="21"/>
+        <lastUpdated value="2022-05-10T15:07:12.720+00:00"/>
+        <source value="#9GLjyyfJ3jZjWzDj"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"/>
     <name value="SDOHCCTaskForPatient"/>
@@ -122,6 +122,7 @@
         <element id="Task.status">
             <path value="Task.status"/>
             <short value="ready | cancelled | completed | in progress | on hold"/>
+            <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size. For further details on Task.status see [Checking Task Status](checking_task_status.html)."/>
             <requirements value="These states enable coordination of task status with off-the-shelf workflow solutions that support automation of tasks. The values are constrained to ready | cancelled | completed | in progress | on hold. The task comes to the patient in the ready status and the patient can update status as appropriate."/>
             <mustSupport value="true"/>
             <binding>

@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationRecordedSexGender"/>
     <meta>
-        <versionId value="8"/>
-        <lastUpdated value="2022-04-29T15:17:45.934+00:00"/>
-        <source value="#XOXNNLEc2Nt66pCK"/>
+        <versionId value="10"/>
+        <lastUpdated value="2022-05-17T21:22:56.078+00:00"/>
+        <source value="#edw4YUHGJ53alBd2"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRecordedSexGender"/>
     <name value="SDOHCCObservationRecordedSexGender"/>
     <title value="SDOHCC Observation Recorded Sex Gender"/>
     <status value="draft"/>
-    <description value="Profile for observations about &quot;recorded sex and gender&quot; which, in the past, were often used interchangeably. In this context, sex is a biological construct and pertains to a person’s genetics, hormones, and anatomy. This profile is intended for draft use only. The Cross-Group Projects work group granted an exception to US Core on XXXXX - Jira ticket XXXXX."/>
+    <description value="Profile for observations about &quot;recorded sex and gender&quot; which, in the past, were often used interchangeably. In this context, sex is a biological construct and pertains to a person’s genetics, hormones, and anatomy. This profile is intended for draft use only. The Cross-Group Projects work group granted a variant to US Core on XXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>

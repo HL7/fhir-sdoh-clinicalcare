@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-CodeSystemTemporaryCodes"/>
     <meta>
-        <versionId value="17"/>
-        <lastUpdated value="2022-04-06T17:05:46.961+00:00"/>
-        <source value="#DZuLVdGckxykCt20"/>
+        <versionId value="18"/>
+        <lastUpdated value="2022-05-17T20:53:23.704+00:00"/>
+        <source value="#LuE6F2XY62NTEDCf"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
     <version value="0.1.0"/>
@@ -109,6 +109,21 @@
         <definition value="Category for Social Determinant of Health artifacts that pertain to Elder Abuse (which is defined as: An intentional act or failure to act by a caregiver or another person in a relationship involving an expectation of trust that causes or creates a risk of harm to an older adult and can be in the form of physical abuse, psychological abuse, sexual abuse, financial abuse, and/or neglect by someone in a caregiving role.) This SDOH category covers records relevant to circumstances that range from being a victim of elder abuse to not being a victim of elder abuse."/>
     </concept>
     <concept>
+        <code value="personal-health-literacy"/>
+        <display value="Personal Health Literacy"/>
+        <definition value="Category for Social Determinant of Health artifacts that pertain to Personal Health Literacy (which is defined by Healthy People 2030 as: The degree to which individuals have the ability to find, understand, and use information and services to inform health-related decisions and actions for themselves and others.) This SDOH category covers records relevant to circumstances that range from personal health literacy problems/diagnoses to positive findings/goals related to personal health literacy."/>
+    </concept>
+    <concept>
+        <code value="health-insurance-coverage-status"/>
+        <display value="Health Insurance Coverage Status"/>
+        <definition value="Category for Social Determinant of Health artifacts that pertain to health insurance coverage (which is defined by whether one has, or does not have, healthcare coverage or insurance.) This SDOH category covers records relevant to circumstances that range from 'no health insurance coverage' to 'health insurance coverage'."/>
+    </concept>
+    <concept>
+        <code value="medical-cost-burden"/>
+        <display value="Medical Cost Burden"/>
+        <definition value="Category for Social Determinant of Health artifacts that pertain to medical cost burden (which is defined as: A measure of financial pressure resulting from health spending stemming from inadequate resources to meet medical cost needs.) This SDOH category covers records relevant to circumstances that range from 'financial insecurity due to medical cost burden' to 'no burdensome medical costs/debt'."/>
+    </concept>
+    <concept>
         <code value="resulting-activity"/>
         <display value="Resulting Activity"/>
         <definition value="Code used for Task.output.type to represent the activity/action that is the result of a fulfilled task."/>
@@ -154,9 +169,14 @@
         <definition value="A type of questionnaire that obtains information required on an application (e.g., for a social service program, insurance, benefits, etc.)."/>
     </concept>
     <concept>
+        <code value="personal-characteristics-questionnaire"/>
+        <display value="Personal Characteristics Questionnaire"/>
+        <definition value="A type of questionnaire that obtains information about an individual's personal characteristics (e.g., sexual orientation, gender identity, etc.)."/>
+    </concept>
+    <concept>
         <code value="other-questionnaire"/>
         <display value="Other Questionnaire"/>
-        <definition value="A questionnaire of a type other than a 'risk-questionnaire','feedback-questionnaire', or 'application-questionnaire'."/>
+        <definition value="A questionnaire of a type that is not defined in the value set'."/>
     </concept>
     <concept>
         <code value="contact-entity"/>
@@ -216,7 +236,7 @@
     <concept>
         <code value="derived-specify"/>
         <display value="Derived Specify"/>
-        <definition value="The information about the subject was derived from information or methods other than directly reported by an individual. Text should be used to further specify the method."/>
+        <definition value="The information about the subject was derived from information or methods other than directly reported by an individual. Text or derivedFrom should be used to further specify the method."/>
     </concept>
     <concept>
         <code value="other-specify"/>
