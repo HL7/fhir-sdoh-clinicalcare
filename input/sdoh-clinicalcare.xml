@@ -35,7 +35,7 @@
     <dependsOn id="sdohcore">
         <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
         <packageId value="hl7.fhir.us.core"/>
-        <version value="4.0.0"/>
+        <version value="3.1.1"/>
     </dependsOn>
     <dependsOn id="sdohsdc">
         <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc"/>
