@@ -2,7 +2,7 @@
 
 Collection of personal characteristics data (e.g., Race and Ethnicity (R/E), gender identity, sexual orientation, recorded sex and gender, and personal pronouns) is important to achieving the goal of health equity. For example, the recent [Cross-Industry Coalition Health Equity Pledge to Address Disparities](https://www.businesswire.com/news/home/20211026005241/en/Cross-Industry-Coalition-of-Health-Care-Organizations-Sign-Health-Equity-Pledge-to-Address-Disparities), and the proposed new [Health Equity Accreditation from NCQA](https://www.ncqa.org/wp-content/uploads/2021/11/Overview-Memo-Health-Equity-Accreditation-Plus.pdf?utm_medium=email&utm_campaign=publiccomment&utm_source=sf&utm_term=20211109) (see page 3, HE 2) both include a focus on the collection of Race and Ethnicity (R/E) data.  
 
-However, there are standards-based challenges for collection and exchange of personal characteristics data.  For example, in some states, R/E data is considered sensitive data and laws vary on the extent to which it can be disclosed.  In addition, some state insurance codes require payers and/or providers to include R/E in reporting. Also, some states may require capturing the source (i.e., performer) and collection method for R/E data.
+However, there are standards-based challenges for collection and exchange of personal characteristics data.  For example, in some states, R/E data is considered sensitive data and laws vary on the extent to which it can be disclosed.  In addition, some state insurance policies require payers and/or providers to include R/E in reporting. Also, some states may require capturing the source (i.e., performer) and collection method for R/E data.
 
 ### Draft Specifications
 
