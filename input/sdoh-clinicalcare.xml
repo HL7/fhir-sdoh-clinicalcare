@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="sdoh-clinicalcare"/>
     <meta>
-        <versionId value="1086"/>
-        <lastUpdated value="2022-05-22T20:22:39.832+00:00"/>
-        <source value="#0RFZblLMoSHRhU8j"/>
+        <versionId value="1092"/>
+        <lastUpdated value="2022-05-27T18:50:51.951+00:00"/>
+        <source value="#zmSKXzxBPMCg5skW"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/sdoh-clinicalcare"/>
     <version value="1.1.0"/>
@@ -763,13 +763,6 @@
         </resource>
         <resource>
             <reference>
-                <reference value="Parameters/terminology-settings"/></reference>
-            <name value="terminology settings"/>
-            <description value="Terminology settings to point to the US version of SNOMED"/>
-            <exampleBoolean value="false"/>
-        </resource>
-        <resource>
-            <reference>
                 <reference value="CapabilityStatement/SDOHCC-CoordinationPlatform"/>
                 <display value="SDOHCC Coordination Platform Capability Statement"/>
             </reference>
@@ -844,7 +837,7 @@
                 <display value="SDOHCC Observation Personal Characteristic"/>
             </reference>
             <name value="SDOHCC Observation Personal Characteristic"/>
-            <description value="Defines constraints that represent the minimum requirement for personal characteristic observations which are observations that are usually self-attested but may be attested to on behalf of the subject and are generally only verifiable by the source of attestation (e.g., race, ethnicity, sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex). This profile is intended for draft use only. The Cross-Group Projects work group granted a variant to US Core on XX/XX/2022 - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
+            <description value="Defines constraints that represent the minimum requirement for personal characteristic observations which are observations that are usually self-attested but may be attested to on behalf of the subject and are generally only verifiable by the source of attestation (e.g., race, ethnicity, sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex). This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on XX/XX/2022 - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group10"/>
         </resource>
@@ -854,7 +847,7 @@
                 <display value="SDOHCC Observation Personal Pronouns"/>
             </reference>
             <name value="SDOHCC Observation Personal Pronouns"/>
-            <description value="Profile for observations about the pronouns and possessive adjectives a person wishes to be addressed by. This profile is intended for draft use only. The Cross-Group Projects work group granted a variant to US Core on XXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
+            <description value="Profile for observations about the pronouns and possessive adjectives a person wishes to be addressed by. This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on XXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group10"/>
         </resource>
@@ -864,7 +857,7 @@
                 <display value="SDOHCC Observation Ethnicity OMB"/>
             </reference>
             <name value="SDOHCC Observation Ethnicity OMB"/>
-            <description value="Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. The Cross-Group Projects work group granted a variant to US Core on XXXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
+            <description value="Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on XXXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group10"/>
         </resource>
@@ -874,7 +867,7 @@
                 <display value="SDOHCC Observation Race OMB"/>
             </reference>
             <name value="SDOHCC Observation Race OMB"/>
-            <description value="Profile for race observations that use Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only. The Cross-Group Projects work group granted a variant to US Core on XXXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
+            <description value="Profile for race observations that use Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on XXXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group10"/>
         </resource>
@@ -884,7 +877,7 @@
                 <display value="SDOHCC Observation Recorded Sex Gender"/>
             </reference>
             <name value="SDOHCC Observation Recorded Sex Gender"/>
-            <description value="Profile for observations about &quot;recorded sex and gender&quot; which, in the past, were often used interchangeably. In this context, sex is a biological construct and pertains to a person’s genetics, hormones, and anatomy. This profile is intended for draft use only. The Cross-Group Projects work group granted a variant to US Core on XXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
+            <description value="Profile for observations about &quot;recorded sex and gender&quot; which, in the past, were often used interchangeably. In this context, sex is a biological construct and pertains to a person’s genetics, hormones, and anatomy. This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on XXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group10"/>
         </resource>
@@ -894,7 +887,7 @@
                 <display value="SDOHCC Observation Sexual Orientation"/>
             </reference>
             <name value="SDOHCC Observation Sexual Orientation"/>
-            <description value="Profile for observations about the sexual orientation of an individual. This profile is intended for draft use only. The Cross-Group Projects work group granted a variant to US Core on XXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
+            <description value="Profile for observations about the sexual orientation of an individual. This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on XXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group10"/>
         </resource>
@@ -904,7 +897,7 @@
                 <display value="SDOHCC Observation Gender Identity"/>
             </reference>
             <name value="SDOHCC Observation Gender Identity"/>
-            <description value="Profile for gender identity observations which are based on a person’s inner sense of being a girl/woman/female/feminine, boy/man/male/masculine, nonbinary, something else, or having no gender. This profile is intended for draft use only. The Cross-Group Projects work group granted a variant to US Core on XXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
+            <description value="Profile for gender identity observations which are based on a person’s inner sense of being a girl/woman/female/feminine, boy/man/male/masculine, nonbinary, something else, or having no gender. This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on XXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group10"/>
         </resource>
@@ -1068,17 +1061,6 @@
         </resource>
         <resource>
             <reference>
-                <reference value="RelatedPerson/SDOHCC-RelatedPersonMother"/>
-                <display value="SDOHCC Related Person Mother"/>
-            </reference>
-            <name value="SDOHCC Related Person Mother"/>
-            <description value="An example of a Related Person who is the mother of the subject/patient (Colin Abbas)."/>
-            <exampleBoolean value="false"/>
-            <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-            <groupingId value="new-group10"/>
-        </resource>
-        <resource>
-            <reference>
                 <reference value="RelatedPerson/SDOHCC-RelatedPersonMotherExample"/>
                 <display value="SDOHCC Related Person Mother Example"/>
             </reference>
@@ -1186,7 +1168,7 @@
             </page>
             <page>
                 <nameUrl value="draft_specifications_for_personal_characteristics.html"/>
-                <title value="Draft Specification for Personal Characteristics"/>
+                <title value="Draft Specifications for Personal Characteristics"/>
                 <generation value="markdown"/>
             </page>
             <page>
@@ -1206,7 +1188,7 @@
         </parameter>
         <parameter>
             <code value="path-expansion-params"/>
-            <value value="resources/parameters/terminology-settings.json"/>
+            <value value="terminology-settings.xml"/>
         </parameter>
         <parameter>
             <code value="copyrightyear"/>
