@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationSexualOrientation"/>
     <meta>
-        <versionId value="7"/>
-        <lastUpdated value="2022-05-17T21:22:56.053+00:00"/>
-        <source value="#TGSvQTyqOhHO4LE3"/>
+        <versionId value="8"/>
+        <lastUpdated value="2022-05-27T18:30:18.596+00:00"/>
+        <source value="#2hq4Rxw5k7ob9cLR"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationSexualOrientation"/>
     <name value="SDOHCCObservationSexualOrientation"/>
     <title value="SDOHCC Observation Sexual Orientation"/>
     <status value="draft"/>
-    <description value="Profile for observations about the sexual orientation of an individual. This profile is intended for draft use only. The Cross-Group Projects work group granted a variant to US Core on XXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
+    <description value="Profile for observations about the sexual orientation of an individual. This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on XXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>
