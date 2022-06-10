@@ -1,4 +1,4 @@
-#### Jira Tickets – all applied -- see changes below
+### Jira Tickets – all applied -- see changes below
 
 1. FHIR-34237 -- Replace Task with a Task for Referrals and one for the Patient, and add documentation 
    - Patient task should support surveys, documentation, and contact information
@@ -18,7 +18,7 @@ This ballot is focused on a number of additions and corrections based on feedbac
 
 
 
-#### CodeSystems 
+### CodeSystems 
 
 Added values and notes (FHIR-34237) (FHIR-34238) (FHIR-34246)
 
@@ -26,7 +26,7 @@ Added values and notes (FHIR-34237) (FHIR-34238) (FHIR-34246)
 
 
 
-#### Value Sets
+### Value Sets
 
 Adopted US Core Value Sets(FHIR-34233) ( FHIR-34243)
 
@@ -67,7 +67,7 @@ Added values and notes (FHIR-34236)
 
 
 
-#### StructureDefinitions
+### StructureDefinitions
 
 US Core (FHIR-34236)
 
@@ -143,7 +143,7 @@ Removed
 
 
 
-#### CapabilityStatements
+### CapabilityStatements
 
 Changed name and updated content
 
@@ -160,7 +160,7 @@ Added CapabilityStatement
 
 
 
-#### Documentation
+### Documentation
 
 * [Home Page](index.html) – added reference to new content
 * [STU2 Changes](stu2_changes.html) – this page
@@ -173,6 +173,6 @@ Added CapabilityStatement
 
 
 
-#### Examples 
+### Examples 
 
 * Many of the examples have been renamed, updated, or added to appropriately provide examples of the changes noted above (FHIR-34257)
