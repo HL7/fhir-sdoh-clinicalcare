@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationPersonalCharacteristic"/>
     <meta>
-        <versionId value="9"/>
-        <lastUpdated value="2022-05-27T18:30:18.593+00:00"/>
-        <source value="#oDKD4qvPH5RtsOxh"/>
+        <versionId value="10"/>
+        <lastUpdated value="2022-06-03T15:39:47.739+00:00"/>
+        <source value="#Bsl2Skxm5ABgrHkf"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationPersonalCharacteristic"/>
     <name value="SDOHCCObservationPersonalCharacteristic"/>
@@ -119,7 +119,11 @@
         </element>
         <element id="Observation.code">
             <path value="Observation.code"/>
+            <comment value="*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation. NOTE: In LOINC, System Patient is used in the modeling of codes referenced by the Personal Characteristics profiles (e.g., 72826-1 Race OMB.1997, 69490-1 Ethnicity OMB.1997, 76691-5 Gender identity, 76690-7 Sexual orientation, 90778-2 Personal pronouns – Reported, and 99502-7 Recorded sex or gender). If the draft profiles are adopted, new LOINC codes without System Patient would be needed since these profiles can also be used to capture characteristics of a provider (using an extension) or a related person (using focus)."/>
             <mustSupport value="true"/>
+            <binding>
+                <strength value="preferred"/>
+            </binding>
         </element>
         <element id="Observation.subject">
             <path value="Observation.subject"/>

@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationEthnicityOMB"/>
     <meta>
-        <versionId value="9"/>
-        <lastUpdated value="2022-05-27T18:30:18.589+00:00"/>
-        <source value="#r3NfdsEeiQyOXeNh"/>
+        <versionId value="12"/>
+        <lastUpdated value="2022-06-03T21:31:11.530+00:00"/>
+        <source value="#aIYSmLsTFtVYWGIq"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicityOMB"/>
     <name value="SDOHCCObservationEthnicityOMB"/>
@@ -78,6 +78,7 @@
                 <rules value="open"/>
             </slicing>
             <definition value="Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes."/>
+            <comment value="For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below. NOTE: The same LOINC code is used for all three components of this draft profile. If the profile is adopted as part of the US Core standard, new LOINC codes (possibly a panel) will be needed to represent the components (e.g., a new LOINC code for detailed ethnicity and for text description of ethnicity)."/>
             <requirements value="Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable)."/>
             <condition value="SDOH-Ethnicity-1"/>
         </element>
