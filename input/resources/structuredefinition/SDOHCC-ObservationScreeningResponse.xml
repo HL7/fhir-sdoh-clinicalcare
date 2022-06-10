@@ -3,16 +3,16 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationScreeningResponse"/>
     <meta>
-        <versionId value="39"/>
-        <lastUpdated value="2022-05-17T21:22:56.078+00:00"/>
-        <source value="#dbmWn12fZho6RpKs"/>
+        <versionId value="40"/>
+        <lastUpdated value="2022-06-08T17:41:20.389+00:00"/>
+        <source value="#wzOcjuqg7nMxm3Qh"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
     <version value="0.1.0"/>
     <name value="SDOHCCObservationScreeningResponse"/>
     <title value="SDOHCC Observation Screening Response"/>
     <status value="draft"/>
-    <description value="Profile for observations that represent question and answer pairs from Social Determinants of Health (SDOH) screening instruments that are represented in LOINC. The Cross-Group Projects work group granted a variant to US Core on 12/03/2020 - Jira ticket 29795."/>
+    <description value="Profile for observations that represent question and answer pairs from Social Determinants of Health (SDOH) screening instruments that are represented in LOINC. The Cross-Group Projects work group granted a variance to US Core on 12/03/2020 - Jira ticket 29795."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>

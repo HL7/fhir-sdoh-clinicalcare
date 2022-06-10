@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-QuestionnaireHungerVitalSign"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2022-04-26T15:19:58.282+00:00"/>
-        <source value="#vBAY3gRrqcmqj2Qb"/>
+        <versionId value="4"/>
+        <lastUpdated value="2022-06-08T21:03:16.526+00:00"/>
+        <source value="#BbCECBhzK5Wcmwgy"/>
         <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"/>
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/variable">
@@ -200,7 +200,7 @@
         <code>
             <system value="http://loinc.org"/>
             <code value="88124-3"/>
-            <display value="Food insecurity risk"/>
+            <display value="Food insecurity risk [HVS]"/>
         </code>
         <text value="Food insecurity risk"/>
         <type value="choice"/>
