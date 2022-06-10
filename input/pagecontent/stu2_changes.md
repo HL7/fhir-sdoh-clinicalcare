@@ -132,8 +132,8 @@ Added new profiles
 
 New Draft Observation Profiles for Race and Ethnicity
 
-* [SDOHCC Observation Ethnicity](StructureDefinition-SDOHCC-ObservationEthnicity.html) (FHIR-34238) (FHIR-34339)
-* [SDOHCC Observation Race](StructureDefinition-SDOHCC-ObservationRace.html) (FHIR-34238) (FHIR-34339)
+* [SDOHCC Observation Ethnicity OMB](StructureDefinition-SDOHCC-ObservationEthnicityOMB.html) (FHIR-34238) (FHIR-34339)
+* [SDOHCC Observation Race OMB](StructureDefinition-SDOHCC-ObservationRaceOMB.html) (FHIR-34238) (FHIR-34339)
 
 
 
@@ -169,7 +169,7 @@ Added CapabilityStatement
 * [Exchange Workflow](exchange_workflow.html) – added new workflow for Patient/Client and CBO applications (FHIR-34255) (FHIR-34256)
 * [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html) -- new (FHIR-34255)
 * [FHIR Artifacts Overview](fhir_artifacts_overview.html) – updated to refer to new or changed artifacts
-* [Draft Specifications for Race and Ethnicity](draft_specifications_for_race_and_ethnicity.html)-- new (FHIR-34339)
+* [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)-- new (FHIR-34339)
 
 
 
