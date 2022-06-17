@@ -2,6 +2,7 @@
 {"hierarchical" : false, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
+    "inactive" : true,
     "include" : [{
       "system" : "http://snomed.info/sct",
       "filter" : [{
@@ -26,8 +27,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:85fce95a-8152-4168-9e37-33d8ad455818",
-    "timestamp" : "2021-11-28T21:05:32.330Z",
+    "identifier" : "urn:uuid:e3638f14-cf31-459e-9ab3-4d14cebbaead",
+    "timestamp" : "2022-06-17T21:06:17.926Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -38,7 +39,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20210901"
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20220301"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
@@ -1268,7 +1269,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "1271009",
-      "display" : "Knuckle pads, deafness AND leukonychia syndrome"
+      "display" : "Bart-Pumphrey syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1987,11 +1988,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "1961000",
-      "display" : "Chronic polyarticular juvenile rheumatoid arthritis"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "1963002",
       "display" : "Paroxysmal nocturnal hemoglobinuria"
     },
@@ -2704,11 +2700,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "2622007",
       "display" : "Infected ulcer of skin"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "2624008",
-      "display" : "Prepubertal periodontitis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4728,7 +4719,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "4522001",
-      "display" : "Dental plaque"
+      "display" : "Dental plaque on tooth (disorder)"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4819,11 +4810,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "4602007",
       "display" : "Robin sequence"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "4619009",
-      "display" : "Generalized-onset seizures"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5039,6 +5025,21 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "4846001",
       "display" : "Anicteric viral hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4851007",
+      "display" : "Chronic endocarditis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4853005",
+      "display" : "Dry coitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4854004",
+      "display" : "Acquired hemolytic anemia"
     }]
   }
 },
@@ -5048,6 +5049,7 @@ e: {
 {"hierarchical" : false, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
+    "inactive" : true,
     "include" : [{
       "system" : "http://snomed.info/sct",
       "concept" : [{
@@ -5063,8 +5065,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:77d5fec3-b694-48de-97b6-cdb860239ca5",
-    "timestamp" : "2021-11-28T21:05:35.049Z",
+    "identifier" : "urn:uuid:b6b159fb-3c25-4591-987b-1276a33b0d7d",
+    "timestamp" : "2022-06-17T21:06:18.207Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5075,7 +5077,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20210901"
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20220301"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
@@ -5090,6 +5092,7 @@ e: {
 {"hierarchical" : false, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
+    "inactive" : true,
     "include" : [{
       "system" : "http://snomed.info/sct",
       "filter" : [{
@@ -5114,8 +5117,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:8448a04a-2db4-4180-b2a9-1146e5cef15b",
-    "timestamp" : "2021-11-28T21:05:44.752Z",
+    "identifier" : "urn:uuid:830f4802-7ea0-47cc-87b2-4eacff76b6d7",
+    "timestamp" : "2022-06-17T21:06:20.957Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5126,7 +5129,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20210901"
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20220301"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
@@ -5780,11 +5783,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "1043007",
-      "display" : "Doppler color flow velocity mapping"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "1044001",
       "display" : "Diagnostic ultrasound of abdomen and retroperitoneum"
     },
@@ -5846,7 +5844,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "1133007",
-      "display" : "Removal of intact mammary implant, bilateral"
+      "display" : "Removal of intact bilateral mammary implants"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6156,7 +6154,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "1614003",
-      "display" : "Bilateral repair of inguinal hernia, direct"
+      "display" : "Repair of both direct inguinal hernias"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6386,7 +6384,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "1866009",
-      "display" : "Bilateral nephrectomy"
+      "display" : "Bilateral total nephrectomy"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8111,7 +8109,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "4321009",
-      "display" : "Angiography of lower extremity arteries, bilateral"
+      "display" : "Bilateral leg arteriogram"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8861,7 +8859,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "5270002",
-      "display" : "Bilateral destruction of fallopian tubes"
+      "display" : "Destruction of both fallopian tubes"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9785,11 +9783,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "6470007",
-      "display" : "Laparoamnioscopy"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "6473009",
       "display" : "Suture of old obstetrical laceration of uterus"
     },
@@ -9995,11 +9988,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "6719004",
-      "display" : "Incision of bone of femur"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "6722002",
       "display" : "Nephrolithotomy for removal of calculus"
     },
@@ -10127,6 +10115,21 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "6862005",
       "display" : "Preoperative education"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "6872008",
+      "display" : "Perfusion chemotherapy for malignant neoplasm"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "6880001",
+      "display" : "C3e receptor measurement"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "6889000",
+      "display" : "Shortening of sclera by scleral buckling"
     }]
   }
 },
@@ -10136,6 +10139,7 @@ e: {
 {"hierarchical" : false, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
+    "inactive" : true,
     "include" : [{
       "system" : "http://snomed.info/sct"
     }]
@@ -10151,8 +10155,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:2c148b83-8638-4203-941a-91b4cf48c4f7",
-    "timestamp" : "2021-11-28T21:05:53.440Z",
+    "identifier" : "urn:uuid:14f6f87b-631b-47f4-93a0-4f7175b5f663",
+    "timestamp" : "2022-06-17T14:19:25.427Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true

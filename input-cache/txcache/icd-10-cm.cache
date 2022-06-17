@@ -2,6 +2,7 @@
 {"hierarchical" : false, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
+    "inactive" : true,
     "include" : [{
       "system" : "http://hl7.org/fhir/sid/icd-10-cm"
     }]
@@ -17,8 +18,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:384d3ea7-0fbe-4ae6-8bea-ca55ad46e8fe",
-    "timestamp" : "2021-11-28T21:05:40.658Z",
+    "identifier" : "urn:uuid:aa8acb53-7544-4c87-af4b-e26db06b3f01",
+    "timestamp" : "2022-06-17T21:06:19.317Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5039,65 +5040,7 @@ e: {
 {"code" : {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "code" : "Z59.4"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Lack of adequate food and safe drinking water",
-  "code" : "Z59.4",
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.4",
-  "display" : "Lack of adequate food and safe drinking water"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://snomed.info/sct",
-      "concept" : [{
-        "code" : "160245001"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "is-a",
-        "value" : "404684003"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "is-a",
-        "value" : "243796009"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "is-a",
-        "value" : "272379006"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm"
-    },
-    {
-      "system" : "http://hl7.org/fhir/sid/icd-9-cm"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--3", "version": "3.1.1", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Lack of adequate food and safe drinking water",
   "code" : "Z59.4",
@@ -5117,65 +5060,7 @@ v: {
 {"code" : {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "code" : "Z56.0"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Unemployment, unspecified",
-  "code" : "Z56.0",
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z56.0",
-  "display" : "Unemployment, unspecified"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://snomed.info/sct",
-      "concept" : [{
-        "code" : "160245001"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "is-a",
-        "value" : "404684003"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "is-a",
-        "value" : "243796009"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "is-a",
-        "value" : "272379006"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm"
-    },
-    {
-      "system" : "http://hl7.org/fhir/sid/icd-9-cm"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--3", "version": "3.1.1", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Unemployment, unspecified",
   "code" : "Z56.0",
@@ -5195,65 +5080,7 @@ v: {
 {"code" : {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "code" : "Z59.0"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Homelessness",
-  "code" : "Z59.0",
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.0",
-  "display" : "Homelessness"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://snomed.info/sct",
-      "concept" : [{
-        "code" : "160245001"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "is-a",
-        "value" : "404684003"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "is-a",
-        "value" : "243796009"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "is-a",
-        "value" : "272379006"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm"
-    },
-    {
-      "system" : "http://hl7.org/fhir/sid/icd-9-cm"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--3", "version": "3.1.1", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Homelessness",
   "code" : "Z59.0",

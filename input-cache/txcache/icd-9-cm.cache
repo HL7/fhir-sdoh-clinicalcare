@@ -2,6 +2,7 @@
 {"hierarchical" : false, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
+    "inactive" : true,
     "include" : [{
       "system" : "http://hl7.org/fhir/sid/icd-9-cm"
     }]

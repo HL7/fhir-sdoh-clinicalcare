@@ -1,23 +1,143 @@
 -------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://unitsofmeasure.org",
-  "code" : "{#}",
-  "display" : "{#}"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "{#}",
-  "code" : "{#}",
-  "system" : "http://unitsofmeasure.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://unitsofmeasure.org",
-  "code" : "/a",
-  "display" : "/a"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "/a",
-  "code" : "/a",
-  "system" : "http://unitsofmeasure.org"
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "%",
+        "display" : "percent"
+      },
+      {
+        "code" : "cm",
+        "display" : "centimeter"
+      },
+      {
+        "code" : "[in_i]",
+        "display" : "inch (international)"
+      },
+      {
+        "code" : "kg",
+        "display" : "kilogram"
+      },
+      {
+        "code" : "g",
+        "display" : "gram"
+      },
+      {
+        "code" : "[lb_av]",
+        "display" : "pound (US and British)"
+      },
+      {
+        "code" : "Cel",
+        "display" : "degree Celsius"
+      },
+      {
+        "code" : "[degF]",
+        "display" : "degree Fahrenheit"
+      },
+      {
+        "code" : "mm[Hg]",
+        "display" : "millimeter of mercury"
+      },
+      {
+        "code" : "/min",
+        "display" : "per minute"
+      },
+      {
+        "code" : "kg/m2",
+        "display" : "kilogram / (meter ^ 2)"
+      },
+      {
+        "code" : "m2",
+        "display" : "square meter"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:19715239-cd67-4c2d-8de4-631b7d203010",
+    "timestamp" : "2022-06-17T21:05:57.895Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://unitsofmeasure.org|2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "code" : "%",
+      "display" : "percent"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "cm",
+      "display" : "centimeter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[in_i]",
+      "display" : "inch (international)"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "kg",
+      "display" : "kilogram"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g",
+      "display" : "gram"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[lb_av]",
+      "display" : "pound (US and British)"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "Cel",
+      "display" : "degree Celsius"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[degF]",
+      "display" : "degree Fahrenheit"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mm[Hg]",
+      "display" : "millimeter of mercury"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "/min",
+      "display" : "per minute"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "kg/m2",
+      "display" : "kilogram / (meter ^ 2)"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "m2",
+      "display" : "square meter"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
