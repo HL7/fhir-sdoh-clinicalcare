@@ -59,6 +59,14 @@ In situations where an individual (e.g., a parent, guardian, caregiver, etc.) ha
 
 Please test the draft personal characteristic profiles and provide feedback on any changes that are necessary to support the exchange of this data. Please pay specific attention to the value sets for the characteristics (via Observation.value and Observation.component.value), the value set for collection method (via Observation.method), and the approach for specifying the data’s source (via Observation.performer [Reference](https://www.hl7.org/fhir/references.html#Reference)).
 
+*Note: the draft specifications for personal characteristics should not be cited in regulations without further testing and balloting as part of a specific IG or as an update to US Core.*
+
 ### US Core Intent
 
 If draft specification testing establishes that they are appropriate for exchanging personal characteristics data, the intent is that the profiles will be presented to [Cross Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm) with the request that they be included in the next version of the [US Core Specification](http://hl7.org/fhir/us/core/).
+
+Below are three potential outcomes (there may be more) from the review of the approaches to handline personal characteristics:
+
+1. Some or all of the personal characteristics continue to be represented as extensions to Patient, Practitioner, and RelatedPerson. The extensions may or may not be expanded to include source and method and allow multiple instances (e.g., cardinality of the extension expanded from 0..1 to 0..*)
+2. Some or all of the personal characteristics may be represented as observations as tested in this IGs Draft profiles for personal characteristics
+3. A combination of both extensions and observations may be supported based on the specific use case.

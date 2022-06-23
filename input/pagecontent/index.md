@@ -1,6 +1,6 @@
 ### Overview
 
-Last change 6/10/2022 9:00 AM CT
+Last change 6/23/2022 9:00 AM CT
 
 Social Determinants of Health (SDOH) are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange SDOH content defined by the Gravity Project using the Fast Healthcare Interoperability Resources (FHIR) standard. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. This IG addresses the need to gather SDOH information in multiple settings, share that information between stakeholders, and exchange referrals between organizations to address specific social risk needs, all with appropriate patient consent.  In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. The guide supports the following use cases:
 
@@ -41,9 +41,9 @@ Implementers should pay specific attention to the following sections:
 
 Notes: 
 
-1) This IG points to the SDC specification that is in reconciliation and all links will resolve when the draft is published.
+The draft Personal Characteristic profiles are included in this IG for testing purposes only and are not intended for citing in regulations without additional testing and balloting. More details are available on the  [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html) page.
 
-2) The IG profiles for [ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) and [Procedure](StructureDefinition-SDOHCC-Procedure.html) define the use of an external taxonomy [211 LA Taxonomy (Copyright © 2004-2021 Information and Referral Federation of Los Angeles doing business as 211 LA County. All rights reserved. Version 5.8.5)] This taxonomy is in the process of being formally incorporated as an HL7 external code system.
+The IG profiles for [ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) and [Procedure](StructureDefinition-SDOHCC-Procedure.html) define the use of an external taxonomy [211 LA Taxonomy (Copyright © 2004-2021 Information and Referral Federation of Los Angeles doing business as 211 LA County. All rights reserved. Version 5.8.5)] This taxonomy is in the process of being formally incorporated as an HL7 external code system.
 
 
 
