@@ -10,7 +10,7 @@ Complying with this implementation guide means complying with a number of resour
 
 The FHIR resources and profiles used by the SDOH ClinicalCare IG are hyperlinked from this section to the base resource, US Core profile (if used), the specific profiles defined in this implementation guide (if used), and the purpose of use.
 
-| [Resource (R4)  ](http://hl7.org/fhir/)                      | [US Core Profile  ](http://hl7.org/fhir/us/core/STU4/index.html) | [SDOH  Profile](artifacts.html)                              | Used to exchange                                             |
+| [Resource (R4)  ](http://hl7.org/fhir/)                      | [US Core Profile  ]({{site.data.fhir.ver.uscore}}/index.html) | [SDOH  Profile](artifacts.html)                              | Used to exchange                                             |
 | ------------------- | ------------------- | ----------------- | ------------------------------------------------------------------------- |
 | =========== | =========== | ========== | +.................................................................................................................................+ |
 | [Consent]( http://hl7.org/fhir/consent.html)                 | No                                                           | [Yes](StructureDefinition-SDOHCC-Consent.html)               | patient consent to share information                         |

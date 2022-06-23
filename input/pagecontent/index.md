@@ -41,9 +41,7 @@ Implementers should pay specific attention to the following sections:
 
 Notes: 
 
-1) This IG points to the SDC specification that is in reconciliation and all links will resolve when the draft is published.
-
-2) The IG profiles for [ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) and [Procedure](StructureDefinition-SDOHCC-Procedure.html) define the use of an external taxonomy [211 LA Taxonomy (Copyright © 2004-2021 Information and Referral Federation of Los Angeles doing business as 211 LA County. All rights reserved. Version 5.8.5)] This taxonomy is in the process of being formally incorporated as an HL7 external code system.
+The IG profiles for [ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) and [Procedure](StructureDefinition-SDOHCC-Procedure.html) define the use of an external taxonomy [211 LA Taxonomy (Copyright © 2004-2021 Information and Referral Federation of Los Angeles doing business as 211 LA County. All rights reserved. Version 5.8.5)] This taxonomy is in the process of being formally incorporated as an HL7 external code system.
 
 
 
