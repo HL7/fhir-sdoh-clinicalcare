@@ -6,7 +6,7 @@ Each profile element that defines specific SDOH coded concepts will reference th
 
 The Gravity Project plans to work with the HL7 Vocabulary WG to determine how best to represent the domain specific value sets in each of the relevant resources and to establish appropriate methods to validate the consistent use of the correct domain specific codes. Future versions of this IG will include the logic to select specific value sets based on the SDOH domain.
 
-In this IG, the exchange of the following activities are supported with specific SDOH profiles on either the base resources or on the respective [US Core Profile ](http://hl7.org/fhir/us/core/STU4/index.html). A complete listing of the resources used is contained in the [FHIR Artifacts Overview](fhir_artifacts_overview.html) page.  The following is a brief summary focused on the specific activities:
+In this IG, the exchange of the following activities are supported with specific SDOH profiles on either the base resources or on the respective [US Core Profile ](http://{{site.data.fhir.ver.uscore}}/index.html). A complete listing of the resources used is contained in the [FHIR Artifacts Overview](fhir_artifacts_overview.html) page.  The following is a brief summary focused on the specific activities:
 
 * Assessments
   * [Observation](StructureDefinition-SDOHCC-ObservationScreeningResponse.html) profile based on the [Survey process](survey_instrument_support.html) defined in this IG uses [LOINC](https://loinc.org/) codes.  Each of the supported survey instruments are defined as [Survey Panels](https://loinc.org/panels/category/survey-instruments/) in the LOINC database. 
