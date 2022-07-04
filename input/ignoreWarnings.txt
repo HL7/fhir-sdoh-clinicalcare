@@ -51,9 +51,19 @@ INFORMATION: Observation/SDOHCC-ObservationRaceOMBPractitionerExample: Observati
 INFORMATION: Observation/SDOHCC-ObservationRaceOMBMotherExample: Observation.component[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB
 WARNING: Observation/SDOHCC-ObservationGenderIdentityExample: Observation.value.ofType(CodeableConcept): ValueSet https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1021.32/expansion not found by validator
 
-# The following issues are addressed by an exception granted by the Cross-Group Projects work group (Jira ticket 29795).
+# The following issues are addressed by an exception granted by the Cross-Group Projects work group (Jira ticket FHIR-29795).
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+
+# The following issues are addressed by an exception granted by the Cross-Group Projects work group (Jira ticket FHIR-37582
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationPersonalCharacteristic').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationPersonalPronouns').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRecordedSexGender').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicityOMB').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationGenderIdentity').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+# The following issue is addressed by an exception granted by the Cross-Group Projects work group (Jira ticket FHIR-37583
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationSexualOrientation').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 
 # The following issues have been reviewed and are because this IG has a dependency on US Core 3.1.1 where the referenced artifacts did not exist.
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest').baseDefinition: US FHIR Usage rules require that all profiles on ServiceRequest derive from the core US profile

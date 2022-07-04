@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationPersonalCharacteristic"/>
     <meta>
-        <versionId value="10"/>
-        <lastUpdated value="2022-06-03T15:39:47.739+00:00"/>
-        <source value="#Bsl2Skxm5ABgrHkf"/>
+        <versionId value="11"/>
+        <lastUpdated value="2022-06-28T15:21:43.618+00:00"/>
+        <source value="#udsJzZtK5mnUAf6F"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationPersonalCharacteristic"/>
     <name value="SDOHCCObservationPersonalCharacteristic"/>
     <title value="SDOHCC Observation Personal Characteristic"/>
     <status value="draft"/>
-    <description value="Defines constraints that represent the minimum requirement for personal characteristic observations which are observations that are usually self-attested but may be attested to on behalf of the subject and are generally only verifiable by the source of attestation (e.g., race, ethnicity, sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex). This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on XX/XX/2022 - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
+    <description value="Defines constraints that represent the minimum requirement for personal characteristic observations which are observations that are usually self-attested but may be attested to on behalf of the subject and are generally only verifiable by the source of attestation (e.g., race, ethnicity, sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex). This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on 06/23/2022 - Jira ticket FHIR-37582. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="true"/>

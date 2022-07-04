@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationRaceOMB"/>
     <meta>
-        <versionId value="13"/>
-        <lastUpdated value="2022-06-03T21:31:11.531+00:00"/>
-        <source value="#mQiSIr7z04mJHXLR"/>
+        <versionId value="14"/>
+        <lastUpdated value="2022-06-28T15:21:43.618+00:00"/>
+        <source value="#0xBEIgKK1aPIVAwk"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB"/>
     <name value="SDOHCCObservationRaceOMB"/>
     <title value="SDOHCC Observation Race OMB"/>
     <status value="draft"/>
-    <description value="Profile for race observations that use Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on XXXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
+    <description value="Profile for race observations that use Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on 06/23/2022 - Jira ticket FHIR-37582. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>
@@ -97,7 +97,6 @@
         </element>
         <element id="Observation.component:RaceDescription.code">
             <path value="Observation.component.code"/>
-            <requirements value="Knowing what kind of observation is being made is essential to understanding the observation."/>
             <patternCodeableConcept>
                 <coding>
                     <system value="http://loinc.org"/>

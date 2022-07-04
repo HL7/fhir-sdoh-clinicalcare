@@ -30,9 +30,9 @@ Added values and notes (FHIR-34237) (FHIR-34238) (FHIR-34246)
 
 Adopted US Core Value Sets(FHIR-34233) ( FHIR-34243)
 
-* Condition: from [Condition/Problem/Diagnosis Codes](http://hl7.org/fhir/R4/valueset-condition-code.html) to [US Core Condition Code](http://hl7.org/fhir/us/core/STU4/ValueSet-us-core-condition-code.html)
-* ServiceRequest: from [Procedure Codes (SNOMED CT)](http://hl7.org/fhir/R4/valueset-procedure-code.html) to [US Core Procedure Codes](http://hl7.org/fhir/us/core/STU4/ValueSet-us-core-procedure-code.html)
-* Procedure: from SDOHCC ValueSet SNOMEDCT CPT LOINC HCPCSII to [US Core Procedure Codes](http://hl7.org/fhir/us/core/STU4/ValueSet-us-core-procedure-code.html)
+* Condition: from [Condition/Problem/Diagnosis Codes](http://hl7.org/fhir/R4/valueset-condition-code.html) to [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html)
+* ServiceRequest: from [Procedure Codes (SNOMED CT)](http://hl7.org/fhir/R4/valueset-procedure-code.html) to [US Core Procedure Codes](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-procedure-code.html)
+* Procedure: from SDOHCC ValueSet SNOMEDCT CPT LOINC HCPCSII to [US Core Procedure Codes](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-procedure-code.html)
 
 
 
@@ -79,7 +79,7 @@ Updated Profiles (FHIR-34236)
 
 * [SDOHCC Condition](StructureDefinition-SDOHCC-Condition.html) (FHIR-34243)
 
-- - Changed Condition.code value set to use [US Core Condition Code](http://hl7.org/fhir/us/core/STU4/ValueSet-us-core-condition-code.html) value set.
+- - Changed Condition.code value set to use [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html) value set.
 
 - - Added guidance on use of SDOH value sets
 
@@ -96,7 +96,7 @@ Updated Profiles (FHIR-34236)
 
 * [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html) (FHIR-34233) (FHIR-34242)
 
-- - Procedure.code -- added reference to [US Core Condition Code](http://hl7.org/fhir/us/core/STU4/ValueSet-us-core-procedure-code.html) value set (FHIR-34233)
+- - Procedure.code -- added reference to [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-procedure-code.html) value set (FHIR-34233)
 
 - - Procedure.code.coding -- added slice for example of social services taxonomy (e.g. 211 LA) as Must Support
 

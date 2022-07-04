@@ -59,7 +59,7 @@ In situations where an individual (e.g., a parent, guardian, caregiver, etc.) ha
 
 Please test the draft personal characteristic profiles and provide feedback on any changes that are necessary to support the exchange of this data. Please pay specific attention to the value sets for the characteristics (via Observation.value and Observation.component.value), the value set for collection method (via Observation.method), and the approach for specifying the data’s source (via Observation.performer [Reference](https://www.hl7.org/fhir/references.html#Reference)).
 
-*Note: the draft specifications for personal characteristics should not be cited in regulations without further testing and balloting as part of a specific IG or as an update to US Core.*
+*Note: The draft specifications for personal characteristics should not be cited in regulations without further testing and balloting as part of a specific IG or as an update to US Core.*
 
 ### US Core Intent
 
