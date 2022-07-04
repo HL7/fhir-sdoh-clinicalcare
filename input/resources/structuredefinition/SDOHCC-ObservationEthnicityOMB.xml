@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationEthnicityOMB"/>
     <meta>
-        <versionId value="13"/>
-        <lastUpdated value="2022-06-17T14:18:28.365+00:00"/>
-        <source value="#qrY9JjKWBvLd8ukM"/>
+        <versionId value="15"/>
+        <lastUpdated value="2022-07-01T14:30:13.161+00:00"/>
+        <source value="#zd7iFXE4ECvJS9Yd"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicityOMB"/>
     <name value="SDOHCCObservationEthnicityOMB"/>
     <title value="SDOHCC Observation Ethnicity OMB"/>
     <status value="draft"/>
-    <description value="Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on XXXXXX - Jira ticket XXXXX. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
+    <description value="Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on 06/23/2022 - Jira ticket FHIR-37582. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>
@@ -49,6 +49,10 @@
         <element id="Observation.dataAbsentReason">
             <path value="Observation.dataAbsentReason"/>
             <condition value="SDOH-Ethnicity-1"/>
+            <binding>
+                <strength value="required"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetObservationDataAbsentReason"/>
+            </binding>
         </element>
         <element id="Observation.method">
             <path value="Observation.method"/>
