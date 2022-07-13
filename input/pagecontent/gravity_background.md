@@ -52,6 +52,7 @@ The systematic documentation and aggregation of SDOH data in EHRs and related sy
 1.	Limited understanding by the health system of the value and use of such data for clinical care and population health management; 
 2.	Capture of SDOH data in unstructured and non-standardized formats, which inhibits the ability to normalize, exchange, and aggregate the data regardless of the data source; and 
 3.	Gaps in and overlap between existing terminologies and codes available to represent SDOH-related activities undertaken in clinical delivery settings.
+4.	SDOH data is sensitive personal information with significant privacy and security considerations. As with all personal data, regulatory and policy considerations related to consent and exchange of this data should be understood.
 
 Based on the growing collection of social risk data in health care systems, an immediate opportunity exists to support data collection, data aggregation, data sharing, quality measurement, benchmarking, and risk adjustment.   Many assessment tools are currently in use, but the concepts addressed vary, and some tools merit further validation and testing across a variety of settings and clinical workflows.  Health IT can play a critical, untapped role in enabling the seamless electronic exchange and use of this data.  However, standardization and harmonization of SDOH concepts, regardless of the social risk assessment tool used, requires a consensus-based approach to maximize buy-in, consistency of implementation, and usefulness of data collected.
 
