@@ -2,7 +2,9 @@
 
 Collection of personal characteristics data (e.g., Race and Ethnicity (R/E), gender identity, sexual orientation, recorded sex and gender, and personal pronouns) is important to achieving the goal of health equity. For example, the recent [Cross-Industry Coalition Health Equity Pledge to Address Disparities](https://www.businesswire.com/news/home/20211026005241/en/Cross-Industry-Coalition-of-Health-Care-Organizations-Sign-Health-Equity-Pledge-to-Address-Disparities), and the proposed new [Health Equity Accreditation from NCQA](https://www.ncqa.org/wp-content/uploads/2021/11/Overview-Memo-Health-Equity-Accreditation-Plus.pdf?utm_medium=email&utm_campaign=publiccomment&utm_source=sf&utm_term=20211109) (see page 3, HE 2) both include a focus on the collection of Race and Ethnicity (R/E) data.  
 
-However, there are standards-based challenges for collection and exchange of personal characteristics data.  For example, in some states, R/E data is considered sensitive data and laws vary on the extent to which it can be disclosed.  In addition, some state insurance policies require payers and/or providers to include R/E in reporting. Also, some states may require capturing the source (i.e., performer) and collection method for R/E data.  For example, the [Oregon Health Authority, Office of Equity and Inclusion Division 70, Race, Ethnicity, Language and Disability Demographic Data Collection Standards]( https://www.oregon.gov/oha/OEI/Policies/Race-Ethnicity-Language-Disability-Data-Collection-Standards.pdf) has rules and policy related to collection of R/E data including the source and performer.
+However, there are standards-based challenges for collection and exchange of personal characteristics data.  For example, some state insurance policies may require payers and/or providers to include R/E data in reporting and some states may require capturing the source (i.e., performer) and collection method for R/E data (e.g., the [Oregon Health Authority, Office of Equity and Inclusion Division 70, Race, Ethnicity, Language and Disability Demographic Data Collection Standards]( https://www.oregon.gov/oha/OEI/Policies/Race-Ethnicity-Language-Disability-Data-Collection-Standards.pdf) has rules and policy related to collection of R/E data.) 
+
+In general, personal characteristics data is sensitive personal information with significant privacy and security considerations. Laws vary on the extent to which this data can be disclosed.  Before exchanging personal characteristics data, regulatory and policy considerations related to consent and exchange of this data should be understood. Guidance as to the necessary privacy, security, and consent requirements related to the exchange of this data is beyond the scope of this implementation guide. Implementers should understand and abide by their local requirements.
 
 ### Draft Specifications
 
@@ -34,23 +36,31 @@ The personal characteristic profiles adhere to the following consistent structur
 
 * Sexual Orientation, Gender Identity, Recorded Sex and Gender, Personal Pronouns - These profiles allow only one Observation.value. Therefore, null value concepts are allowed in the value set for Observation.value.
 
-The value sets for Observation.method may also change as feedback is solicited and/or according to policy (e.g., at the organizational, state, or federal level). For further detail on method, see Recommendations for Collection and Reporting of Personal Characteristics.
+The value set for Observation.method may also change as feedback is solicited and/or according to policy (e.g., at the organizational, state, or federal level). For further detail on method, see Recommendations for Collection and Reporting of Personal Characteristics.
 
-#### Guidance for Personal Characteristics of the Patient, Related Person, or Practitioner
+#### Guidance for Personal Characteristics of a Related Person or Practitioner
+
+The personal characteristic observations can be used to document not only personal characteristics of the patient but also of other actors (i.e., a practitioner or a related person such as a caretaker) who interact with the patient. Collection and use of personal characteristics data for a practitioner or related person should be treated with the same safeguards as for the patient.
+
+#### Guidance for Personal Characteristics (e.g., R/E) that are also included as extensions on [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient)
 
 If there are one or more race observations, each with one or more races expressed, and the referenced [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient) uses the [race extension ](http://hl7.org/fhir/us/core/StructureDefinition-us-core-race.html) to express one or more races, then the [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient) race value(s) SHALL match the race value(s) of at least one of the race observations.  
 
-If there are one or more ethnicity observations, and the referenced [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient) uses the [ethnicity extension](http://hl7.org/fhir/us/core/StructureDefinition-us-core-ethnicity.html), then the [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient) ethnicity SHALL match the ethnicity of at least one of the ethnicity observations
+If there are one or more ethnicity observations, and the referenced [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient) uses the [ethnicity extension](http://hl7.org/fhir/us/core/StructureDefinition-us-core-ethnicity.html), then the [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient) ethnicity SHALL match the ethnicity of at least one of the ethnicity observations.
+
+Similar guidance may be required as additional personal characteristic extensions are added to [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient).
 
 ### Recommendations for Collection and Reporting of Personal Characteristics
 
-The value sets for method as well as the allowed references for performer may change as feedback is solicited and/or according to policy (e.g., at the organizational, state, or federal level).
+The value set for method as well as the allowed references for performer may change as feedback is solicited and/or according to policy (e.g., at the organizational, state, or federal level).
+
+With respect to the values for method, the general recommendation is that personal characteristics should be determined by attestation of the subject. In the event that the subject is a minor or incapable of attesting, there may be situations where a related person may report on their behalf, and this might be captured as “reported-by-related-person”. Additionally, “reported-by-related-person” may apply when an individual is a subscriber to an insurance plan and supplies the plan with information (e.g., recorded sex) of other members/related persons included on the policy. However, when a competent adult is relaying their information to a “related-person”, who is merely filling out a form or sharing that information on their behalf, the general recommendation of this implementation guide is to use “self-reported” as opposed to “reported-by-related-person”.
 
 **R/E Example**:
 
 Since 1997, self-reported collection of R/E in a two question format has been the standard of the Office of Management and Budget (OMB) ([Revisions to the Standards for the Classification of Federal Data on Race and Ethnicity]( https://obamawhitehouse.archives.gov/omb/fedreg_1997standards)). 
 
-Currently, federal policy allows visual observation of R/E in some situations but prohibits it in others (e.g., USDA Food and Nutrition Service policy [Collection of Race and Ethnicity Data by Visual Observation](https://www.fns.usda.gov/cn/Race-and-Ethnicity-Data-Policy-Rescission)). Although the IG value set provides “observed” as a collection method for the R/E profiles, there are concerns over the lack of reliability of “visual observation” of R/E. Therefore, the general recommendation is that R/E should be determined by attestation of the subject (or a related person in the event the subject is a minor or incapable of attesting) and the use of visual observation (i.e., “observed”) to determine R/E is generally discouraged. If future federal law or regulation completely prohibits visual observation of R/E, “observed” will be removed from the IG value set
+Currently, federal policy allows visual observation of R/E in some situations but prohibits it in others (e.g., USDA Food and Nutrition Service policy [Collection of Race and Ethnicity Data by Visual Observation](https://www.fns.usda.gov/cn/Race-and-Ethnicity-Data-Policy-Rescission)). Although the IG value set provides “observed” as a collection method for the R/E profiles, there are concerns over the lack of reliability of “visual observation” of R/E. Therefore, the general recommendation is that R/E should be determined by attestation of the subject (or a related person in the event the subject is a minor or incapable of attesting) and the use of visual observation (i.e., “observed”) to determine R/E is generally discouraged. If future federal law or regulation completely prohibits visual observation of R/E, “observed” will be removed from the IG value set.
 
 In situations where an individual (e.g., a parent, guardian, caregiver, etc.) has legal authority on behalf of a subject, the complexity of whether R/E is “self-reported” versus “observed” versus “reported by related person” may need to be determined by policy at the local, state or federal level (e.g., [Department of Education](https://www.govinfo.gov/content/pkg/FR-2007-10-19/html/E7-20613.htm) pg. 59268, Section II C- Identification of Racial and Ethnic Categories and Missing Data).
 
@@ -65,7 +75,7 @@ Please test the draft personal characteristic profiles and provide feedback on a
 
 If draft specification testing establishes that they are appropriate for exchanging personal characteristics data, the intent is that the profiles will be presented to [Cross Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm) with the request that they be included in the next version of the [US Core Specification](http://hl7.org/fhir/us/core/).
 
-Below are three potential outcomes (there may be more) from the review of the approaches to handline personal characteristics:
+Three potential outcomes from the review of the approaches to handling personal characteristics include, but are not limited to:
 
 1. Some or all of the personal characteristics continue to be represented as extensions to Patient, Practitioner, and RelatedPerson. The extensions may or may not be expanded to include source and method and allow multiple instances (e.g., cardinality of the extension expanded from 0..1 to 0..*)
 2. Some or all of the personal characteristics may be represented as observations as tested in this IGs Draft profiles for personal characteristics

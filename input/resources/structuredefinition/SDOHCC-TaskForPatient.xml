@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-TaskForPatient"/>
     <meta>
-        <versionId value="23"/>
-        <lastUpdated value="2022-07-01T15:48:25.987+00:00"/>
-        <source value="#DTf83T5xbYq4vuBQ"/>
+        <versionId value="25"/>
+        <lastUpdated value="2022-07-12T13:19:11.898+00:00"/>
+        <source value="#by29kGIgG5vNrqtQ"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"/>
     <name value="SDOHCCTaskForPatient"/>
@@ -251,9 +251,10 @@
         </element>
         <element id="Task.input:Questionnaire.value[x]">
             <path value="Task.input.value[x]"/>
+            <comment value="This references the SDC Base Questionnaire profile to allow the use of questionnaires (e.g. a patient satisfaction questionnaire) that are not SDOH screening questionnaires. However, for questionnaires that are intended to produce FHIR resources (e.g., Observations or Conditions), the SDC Extractable Questionnaire - StructureMap should be used."/>
             <type>
                 <code value="canonical"/>
-                <targetProfile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"/>
+                <targetProfile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"/>
             </type>
         </element>
         <element id="Task.input:QuestionnairePDF">

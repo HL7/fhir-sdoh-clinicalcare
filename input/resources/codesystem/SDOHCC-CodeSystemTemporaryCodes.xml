@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-CodeSystemTemporaryCodes"/>
     <meta>
-        <versionId value="18"/>
-        <lastUpdated value="2022-05-17T20:53:23.704+00:00"/>
-        <source value="#LuE6F2XY62NTEDCf"/>
+        <versionId value="19"/>
+        <lastUpdated value="2022-07-08T15:47:19.855+00:00"/>
+        <source value="#ZUFvaQg7MrJnrjdr"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
     <version value="0.1.0"/>
@@ -231,7 +231,7 @@
     <concept>
         <code value="administrative"/>
         <display value="Administrative"/>
-        <definition value="The information about the subject was abstracted from an administrative record that is not directly related to obtaining healthcare or health insurance."/>
+        <definition value="The information about the subject was collected by an organization for administrative reasons not necessarily directly related to obtaining healthcare or health insurance."/>
     </concept>
     <concept>
         <code value="derived-specify"/>

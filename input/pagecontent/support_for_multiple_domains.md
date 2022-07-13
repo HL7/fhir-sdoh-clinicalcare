@@ -16,7 +16,7 @@ In this IG, the exchange of the following activities are supported with specific
 * Goals
   *  [Goal](StructureDefinition-SDOHCC-Goal.html) profile that uses both [LOINC](https://loinc.org/)  and [SNOMED CT](http://www.snomed.org/) codes for patient goals, and domain specific Goals.
 * Interventions/Referrals 
-  * [Service Request](StructureDefinition-SDOHCC-ServiceRequest.html) profile and [Procedure](StructureDefinition-SDOHCC-Procedure.html) profile use a combination of terminologies ([SNOMED CT Procedure Codes](http://www.snomed.org/), [HCPCS II](https://terminology.hl7.org/2.1.0/CodeSystem-HCPCS-all-codes.html), [CPT](http://terminology.hl7.org/2.1.0/CodeSystem-v3-cpt-4.html), and occasionally [LOINC](https://loinc.org/)  ) to define specific referrals and interventions that may be domain specific, cross domains or reflect a subset of a domain specific health concerns, problems, and goals
+  * [Service Request](StructureDefinition-SDOHCC-ServiceRequest.html) profile and [Procedure](StructureDefinition-SDOHCC-Procedure.html) profile use a combination of terminologies ([SNOMED CT Procedure Codes](http://www.snomed.org/), [HCPCS II](https://terminology.hl7.org/2.1.0/CodeSystem-HCPCS-all-codes.html), [CPT](http://{{site.data.fhir.ver.hl7tx}}/CodeSystem-v3-cpt-r.html), and occasionally [LOINC](https://loinc.org/)  ) to define specific referrals and interventions that may be domain specific, cross domains or reflect a subset of a domain specific health concerns, problems, and goals
 
 ###  External Value Set Guidance
 
