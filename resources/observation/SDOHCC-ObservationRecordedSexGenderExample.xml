@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ObservationRecordedSexGenderExample"/>
+    <meta>
+        <versionId value="9"/>
+        <lastUpdated value="2022-04-29T15:44:50.588+00:00"/>
+        <source value="#tapABrXtcF4JyHFC"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRecordedSexGender"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="personal-characteristic"/>
+            <display value="Personal Characteristic"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="99502-7"/>
+            <display value="Recorded sex or gender"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <effectiveDateTime value="2022-04-10T23:56:54.671Z"/>
+    <performer>
+        <reference value="Organization/SDOHCC-OrganizationClinicExample"/>
+        <display value="Better Health Clinic"/>
+    </performer>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA15170-6"/>
+            <display value="M"/>
+        </coding>
+    </valueCodeableConcept>
+    <method>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="derived-specify"/>
+            <display value="Derived Specify"/>
+        </coding>
+    </method>
+    <derivedFrom>
+        <identifier>
+            <type>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                    <code value="DL"/>
+                    <display value="Driver's license number"/>
+                </coding>
+            </type>
+        </identifier>
+        <display value="Driver's license"/>
+    </derivedFrom>
+</Observation>

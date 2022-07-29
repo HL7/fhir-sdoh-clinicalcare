@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2021-06-03T01:20:13.913+00:00"/>
+        <source value="#mWPUJT4c0JmAN0BM"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="survey"/>
+            <display value="Survey"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="employment-status"/>
+            <display value="Employment Status"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="67875-5"/>
+            <display value="Employment status - current"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <effectiveDateTime value="2021-04-26T13:56:33.747Z"/>
+    <issued value="2021-04-26T13:56:33.747Z"/>
+    <performer>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </performer>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA17956-6"/>
+            <display value="Unemployed"/>
+        </coding>
+    </valueCodeableConcept>
+    <derivedFrom>
+        <reference value="QuestionnaireResponse/SDOHCC-QuestionnaireResponsePRAPAREExample"/>
+    </derivedFrom>
+</Observation>

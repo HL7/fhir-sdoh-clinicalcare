@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ValueSet211LACounty"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2021-11-09T23:03:45.913+00:00"/>
+        <source value="#Dt6xu7zD1OTrfqvS"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet211LACounty"/>
+    <name value="SDOHCCValueSet211LACounty"/>
+    <title value="SDOHCC ValueSet 211 LA County"/>
+    <status value="draft"/>
+    <description value="This value set includes codes from the 211 LA County Taxonomy."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <copyright value="Copyright © 2004-2021 Information and Referral Federation of Los Angeles County, doing business as 211 LA County. All rights reserved. Version 5.8.5."/>
+    <compose>
+        <include>
+            <system value="http://example.org/TBD/211LACountyTaxonomy"/>
+            <concept>
+                <code value="PH-2950.8500-850"/>
+                <display value="Thanksgiving Baskets"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

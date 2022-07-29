@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Task
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-TaskReferralManagementOrderFulfillmentAcceptedExample"/>
+    <meta>
+        <versionId value="6"/>
+        <lastUpdated value="2022-04-22T14:37:03.283+00:00"/>
+        <source value="#C2AE4q3wrTUNjyOs"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"/>
+    </meta>
+    <status value="accepted"/>
+    <intent value="order"/>
+    <code>
+        <coding>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+            <code value="fulfill"/>
+            <display value="Fulfill the focal request"/>
+        </coding>
+    </code>
+    <focus>
+        <reference value="ServiceRequest/SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample"/>
+    </focus>
+    <for>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </for>
+    <authoredOn value="2020-09-11T21:56:54.671Z"/>
+    <requester>
+        <reference value="PractitionerRole/SDOHCC-PractitionerRoleDrJanWaterExample"/>
+        <display value="Dr Jan Water Family Medicine Physician"/>
+    </requester>
+    <owner>
+        <reference value="Organization/SDOHCC-OrganizationCoordinationPlatformExample"/>
+        <display value="ABC Coordination Platform"/>
+    </owner>
+</Task>

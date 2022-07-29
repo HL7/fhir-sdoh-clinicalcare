@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ValueSetObservationStatus"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2021-10-27T17:29:53.685+00:00"/>
+        <source value="#EIv5ZMXV2znVY38Z"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetObservationStatus"/>
+    <version value="0.1.0"/>
+    <name value="SDOHCCValueSetObservationStatus"/>
+    <title value="SDOHCC ValueSet Observation Status"/>
+    <status value="draft"/>
+    <description value="Codes for the status of a screening response observation."/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/observation-status"/>
+            <concept>
+                <code value="final"/>
+                <display value="Final"/>
+            </concept>
+            <concept>
+                <code value="corrected"/>
+                <display value="Corrected"/>
+            </concept>
+            <concept>
+                <code value="entered-in-error"/>
+                <display value="Entered in Error"/>
+            </concept>
+            <concept>
+                <code value="unknown"/>
+                <display value="Unknown"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

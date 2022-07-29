@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ValueSetTaskPriority"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2021-10-27T17:14:29.323+00:00"/>
+        <source value="#kiXXLgWu2oE5XTC6"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetTaskPriority"/>
+    <version value="0.1.0"/>
+    <name value="SDOHCCValueSetTaskPriority"/>
+    <title value="SDOHCC ValueSet Task Priority"/>
+    <status value="draft"/>
+    <description value="Codes for the priority of a task for a patient."/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/request-priority"/>
+            <concept>
+                <code value="routine"/>
+                <display value="Routine"/>
+            </concept>
+            <concept>
+                <code value="urgent"/>
+                <display value="Urgent"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

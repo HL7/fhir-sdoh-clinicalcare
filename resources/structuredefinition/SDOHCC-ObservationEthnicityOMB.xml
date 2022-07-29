@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ObservationEthnicityOMB"/>
+    <meta>
+        <versionId value="17"/>
+        <lastUpdated value="2022-07-28T21:31:04.675+00:00"/>
+        <source value="#xqoFz4mWDo9dbh0d"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicityOMB"/>
+    <name value="SDOHCCObservationEthnicityOMB"/>
+    <title value="SDOHCC Observation Ethnicity OMB"/>
+    <status value="draft"/>
+    <description value="Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on 06/23/2022 - Jira ticket FHIR-37582. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Observation"/>
+    <baseDefinition value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationPersonalCharacteristic"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Observation">
+            <path value="Observation"/>
+            <short value="Ethnicity observation"/>
+            <definition value="For ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes."/>
+            <comment value="Used for observations about the ethnicity of an individual."/>
+            <constraint>
+                <key value="SDOH-Ethnicity-1"/>
+                <severity value="error"/>
+                <human value="Must have either a dataAbsentReason or at least one of the defined ethnicity components but not both"/>
+                <expression value="dataAbsentReason.exists() xor component.where(code.coding.where(system='http://loinc.org' and code='69490-1')).exists()"/>
+                <xpath value="true()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicityOMB"/>
+            </constraint>
+        </element>
+        <element id="Observation.code">
+            <path value="Observation.code"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="69490-1"/>
+                </coding>
+            </patternCodeableConcept>
+        </element>
+        <element id="Observation.value[x]">
+            <path value="Observation.value[x]"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.dataAbsentReason">
+            <path value="Observation.dataAbsentReason"/>
+            <condition value="SDOH-Ethnicity-1"/>
+            <binding>
+                <strength value="required"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetObservationDataAbsentReason"/>
+            </binding>
+        </element>
+        <element id="Observation.method">
+            <path value="Observation.method"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="extensible"/>
+                <description value="Methods for personal characteristic observations."/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetObservationMethod"/>
+            </binding>
+        </element>
+        <element id="Observation.component">
+            <path value="Observation.component"/>
+            <slicing>
+                <discriminator>
+                    <type value="pattern"/>
+                    <path value="code"/>
+                </discriminator>
+                <discriminator>
+                    <type value="type"/>
+                    <path value="value"/>
+                </discriminator>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="value"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <definition value="Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes."/>
+            <comment value="For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below. NOTE: The same LOINC code is used for all three components of this draft profile. If the profile is adopted as part of the US Core standard, new LOINC codes (possibly a panel) will be needed to represent the components (e.g., a new LOINC code for detailed ethnicity and for text description of ethnicity)."/>
+            <requirements value="Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable)."/>
+            <condition value="SDOH-Ethnicity-1"/>
+        </element>
+        <element id="Observation.component:EthnicityDescription">
+            <path value="Observation.component"/>
+            <sliceName value="EthnicityDescription"/>
+            <definition value="Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes."/>
+            <requirements value="Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable)."/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Observation.component:EthnicityDescription.code">
+            <path value="Observation.component.code"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="69490-1"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Observation.component:EthnicityDescription.value[x]">
+            <path value="Observation.component.value[x]"/>
+            <min value="1"/>
+            <type>
+                <code value="string"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Observation.component:EthnicityDescription.dataAbsentReason">
+            <path value="Observation.component.dataAbsentReason"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.component:EthnicityDescription.interpretation">
+            <path value="Observation.component.interpretation"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.component:EthnicityDescription.referenceRange">
+            <path value="Observation.component.referenceRange"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.component:Ethnicity">
+            <path value="Observation.component"/>
+            <sliceName value="Ethnicity"/>
+            <definition value="Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes."/>
+            <requirements value="Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable)."/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Observation.component:Ethnicity.code">
+            <path value="Observation.component.code"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="69490-1"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Observation.component:Ethnicity.value[x]">
+            <path value="Observation.component.value[x]"/>
+            <short value="Hispanic or Latino | Non Hispanic or Latino"/>
+            <requirements value="An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations. Note: The binding to [SDOHCC-ValueSetOMBEthnicityCategories](ValueSet-SDOHCC-ValueSetOMBEthnicityCategories.html) is used in lieu of [US Core OMB Ethnicity Categories](http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity-category) because, in versions of US Core beyond 3.1.1, the US Core value set include nulls flavors while the SDOH CC value set does not."/>
+            <min value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <description value="Codes for the two OMB ethnicity categories"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetOMBEthnicityCategories"/>
+            </binding>
+        </element>
+        <element id="Observation.component:Ethnicity.dataAbsentReason">
+            <path value="Observation.component.dataAbsentReason"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.component:Ethnicity.interpretation">
+            <path value="Observation.component.interpretation"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.component:Ethnicity.referenceRange">
+            <path value="Observation.component.referenceRange"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.component:DetailedEthnicity">
+            <path value="Observation.component"/>
+            <sliceName value="DetailedEthnicity"/>
+            <definition value="Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes."/>
+            <requirements value="Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable)."/>
+        </element>
+        <element id="Observation.component:DetailedEthnicity.code">
+            <path value="Observation.component.code"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="69490-1"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Observation.component:DetailedEthnicity.value[x]">
+            <path value="Observation.component.value[x]"/>
+            <min value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <description value="CDC ethnicity codes that further specify the 2 OMB ethnicity category codes"/>
+                <valueSet value="http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity"/>
+            </binding>
+        </element>
+        <element id="Observation.component:DetailedEthnicity.dataAbsentReason">
+            <path value="Observation.component.dataAbsentReason"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.component:DetailedEthnicity.interpretation">
+            <path value="Observation.component.interpretation"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.component:DetailedEthnicity.referenceRange">
+            <path value="Observation.component.referenceRange"/>
+            <max value="0"/>
+        </element>
+    </differential>
+</StructureDefinition>

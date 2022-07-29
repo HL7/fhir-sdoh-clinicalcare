@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ObservationAssessmentTransportTooExpensiveExample"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2021-06-11T17:29:56.907+00:00"/>
+        <source value="#8WraELAZ2D0HBC1l"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="transportation-insecurity"/>
+            <display value="Transportation Insecurity"/>
+        </coding>
+        <coding>
+            <system value="http://example.org/CodeSystem/other-code-system"/>
+            <code value="transportation-insecurity-financial"/>
+            <display value="Transportation Insecurity Financial"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="160695008"/>
+            <display value="Transport too expensive"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <effectiveDateTime value="2021-05-10T21:56:54.671Z"/>
+    <valueBoolean value="true"/>
+</Observation>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ObservationGenderIdentityExample"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2022-04-11T15:43:24.894+00:00"/>
+        <source value="#BNAbjPsgHZ0ylsnZ"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationGenderIdentity"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="personal-characteristic"/>
+            <display value="Personal Characteristic"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="76691-5"/>
+            <display value="Gender identity"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <effectiveDateTime value="2022-04-10T23:56:54.671Z"/>
+    <performer>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </performer>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="446151000124109"/>
+            <display value="Identifies as male gender"/>
+        </coding>
+    </valueCodeableConcept>
+    <method>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="self-reported"/>
+            <display value="Self Reported"/>
+        </coding>
+    </method>
+</Observation>
