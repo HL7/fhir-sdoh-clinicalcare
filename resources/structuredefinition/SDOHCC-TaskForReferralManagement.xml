@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-TaskForReferralManagement"/>
+    <meta>
+        <versionId value="5"/>
+        <lastUpdated value="2022-05-10T15:07:12.720+00:00"/>
+        <source value="#tgdzTypVvy7mfvm3"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"/>
+    <version value="0.1.0"/>
+    <name value="SDOHCCTaskForReferralManagement"/>
+    <title value="SDOHCC Task For Referral Management"/>
+    <status value="draft"/>
+    <date value="2020-12-14T04:01:34+00:00"/>
+    <description value="Profile for tasks requesting fulfillment of an SDOHCC ServiceRequest (i.e. referral for service) and subsequently tracking and managing the fulfillment of that referral."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <mapping>
+        <identity value="workflow"/>
+        <uri value="http://hl7.org/fhir/workflow"/>
+        <name value="Workflow Pattern"/>
+    </mapping>
+    <mapping>
+        <identity value="rim"/>
+        <uri value="http://hl7.org/v3"/>
+        <name value="RIM Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="w5"/>
+        <uri value="http://hl7.org/fhir/fivews"/>
+        <name value="FiveWs Pattern Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="v2"/>
+        <uri value="http://hl7.org/v2"/>
+        <name value="HL7 v2 Mapping"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Task"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Task"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Task">
+            <path value="Task"/>
+            <short value="A request to fulfill an SDOH service request"/>
+            <comment value="For Tasks used in requesting fulfillment of an SDOHCC ServiceRequest (i.e. referral for service) and subsequently tracking and managing the fulfillment of that referral."/>
+        </element>
+        <element id="Task.partOf">
+            <path value="Task.partOf"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Task.partOf:SupportedPartOf">
+            <path value="Task.partOf"/>
+            <sliceName value="SupportedPartOf"/>
+            <requirements value="Allows an organization (e.g., a Coordination Platform) to create a Task, based on an SDOHCC Task from a referral source, to pass on to another organization (e.g., a  Community Based Organization)."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.status">
+            <path value="Task.status"/>
+            <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size. For further details on Task.status see [Checking Task Status](checking_task_status.html)."/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.statusReason">
+            <path value="Task.statusReason"/>
+            <comment value="This applies to the current status.  Look at the history of the task to see reasons for past statuses. If the Task.status is rejected, cancelled, on-hold, or failed, then Task.statusReason.text should be included."/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.statusReason.text">
+            <path value="Task.statusReason.text"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.intent">
+            <path value="Task.intent"/>
+            <short value="order"/>
+            <definition value="Indicates the &quot;level&quot; of actionability associated with the Task."/>
+            <comment value="A request to fulfill task is always an order."/>
+            <fixedCode value="order"/>
+        </element>
+        <element id="Task.priority">
+            <path value="Task.priority"/>
+            <comment value="Task.priority should be used to distinguish urgent tasks (e.g., needs shelter immediately) from routine tasks."/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.code">
+            <path value="Task.code"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+                    <code value="fulfill"/>
+                </coding>
+            </patternCodeableConcept>
+        </element>
+        <element id="Task.focus">
+            <path value="Task.focus"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.for">
+            <path value="Task.for"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.authoredOn">
+            <path value="Task.authoredOn"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.requester">
+            <path value="Task.requester"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.owner">
+            <path value="Task.owner"/>
+            <requirements value="This element is Must Support. However, it is not mandatory in order to allow a task to be created without an owner so that one of a potential group of performers can elect to &quot;own&quot; the task (e.g., an 'open' request for fulfillment is set and anyone capable of filling the order can claim it.)"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.output">
+            <path value="Task.output"/>
+            <slicing>
+                <discriminator>
+                    <type value="pattern"/>
+                    <path value="type"/>
+                </discriminator>
+                <discriminator>
+                    <type value="type"/>
+                    <path value="value"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Task.output:PerformedActivityReference">
+            <path value="Task.output"/>
+            <sliceName value="PerformedActivityReference"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.output:PerformedActivityReference.type">
+            <path value="Task.output.type"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                    <code value="resulting-activity"/>
+                </coding>
+            </patternCodeableConcept>
+        </element>
+        <element id="Task.output:PerformedActivityReference.value[x]">
+            <path value="Task.output.value[x]"/>
+            <type>
+                <code value="Reference"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.output:PerformedActivityCode">
+            <path value="Task.output"/>
+            <sliceName value="PerformedActivityCode"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Task.output:PerformedActivityCode.type">
+            <path value="Task.output.type"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                    <code value="resulting-activity"/>
+                </coding>
+            </patternCodeableConcept>
+        </element>
+        <element id="Task.output:PerformedActivityCode.value[x]">
+            <path value="Task.output.value[x]"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

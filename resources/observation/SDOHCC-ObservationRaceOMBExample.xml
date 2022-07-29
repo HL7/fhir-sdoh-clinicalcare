@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ObservationRaceOMBExample"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2022-04-13T18:45:36.499+00:00"/>
+        <source value="#ZVaDNdCL24yRTD4q"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="personal-characteristic"/>
+            <display value="Personal Characteristic"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="72826-1"/>
+            <display value="Race OMB.1997"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <effectiveDateTime value="2022-04-10T23:56:54.671Z"/>
+    <performer>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </performer>
+    <method>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="self-reported"/>
+            <display value="Self Reported"/>
+        </coding>
+    </method>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="72826-1"/>
+                <display value="Race OMB.1997"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                <code value="1002-5"/>
+                <display value="American Indian or Alaska Native"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="72826-1"/>
+                <display value="Race OMB.1997"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                <code value="2106-3"/>
+                <display value="White"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="72826-1"/>
+                <display value="Race OMB.1997"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                <code value="1102-3"/>
+                <display value="Cheyenne"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="72826-1"/>
+                <display value="Race OMB.1997"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                <code value="1088-4"/>
+                <display value="Cherokee"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="72826-1"/>
+                <display value="Race OMB.1997"/>
+            </coding>
+        </code>
+        <valueString value="White on my dad's side, Cherokee and Cheyenne on my mom's side"/>
+    </component>
+</Observation>

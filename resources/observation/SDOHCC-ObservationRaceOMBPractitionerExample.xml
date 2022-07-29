@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ObservationRaceOMBPractitionerExample"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2022-04-15T15:50:14.303+00:00"/>
+        <source value="#AnhcopcG6lpzIzuJ"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.subject">
+        <valueReference>
+            <reference value="Practitioner/SDOHCC-PractitionerDrJanWaterExample"/>
+            <display value="Dr Jan Water"/>
+        </valueReference>
+    </extension>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="personal-characteristic"/>
+            <display value="Personal Characteristic"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="72826-1"/>
+            <display value="Race OMB.1997"/>
+        </coding>
+    </code>
+    <effectiveDateTime value="2022-04-10T23:56:54.671Z"/>
+    <performer>
+        <reference value="Practitioner/SDOHCC-PractitionerDrJanWaterExample"/>
+        <display value="Dr Jan Water"/>
+    </performer>
+    <method>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="self-reported"/>
+            <display value="Self Reported"/>
+        </coding>
+    </method>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="72826-1"/>
+                <display value="Race OMB.1997"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                <code value="2106-3"/>
+                <display value="White"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+</Observation>

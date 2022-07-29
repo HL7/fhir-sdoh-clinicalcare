@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-Consent"/>
+    <meta>
+        <versionId value="17"/>
+        <lastUpdated value="2021-10-27T17:12:16.709+00:00"/>
+        <source value="#c8MwzPSxegU4R8sO"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent"/>
+    <name value="SDOHCCConsent"/>
+    <title value="SDOHCC Consent"/>
+    <status value="draft"/>
+    <description value="Profile for consent related to the release of Social Determinants of Health (SDOH) information to non-HIPAA covered organizations."/>
+    <fhirVersion value="4.0.1"/>
+    <mapping>
+        <identity value="workflow"/>
+        <uri value="http://hl7.org/fhir/workflow"/>
+        <name value="Workflow Pattern"/>
+    </mapping>
+    <mapping>
+        <identity value="v2"/>
+        <uri value="http://hl7.org/v2"/>
+        <name value="HL7 v2 Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="rim"/>
+        <uri value="http://hl7.org/v3"/>
+        <name value="RIM Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="w5"/>
+        <uri value="http://hl7.org/fhir/fivews"/>
+        <name value="FiveWs Pattern Mapping"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Consent"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Consent"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Consent">
+            <path value="Consent"/>
+            <definition value="A record of a healthcare consumer’s choices related to the release of SDOH information to non-HIPAA covered organizations."/>
+            <comment value="Providers should consider including standard language to inform the patient that disclosure of their information to entities which are not HIPAA covered entities are no longer protected under the HIPAA Privacy Rule but may be protected by FTC Consumer Protection rules."/>
+        </element>
+        <element id="Consent.status">
+            <path value="Consent.status"/>
+            <comment value="This element is labeled as a modifier because the status contains the codes rejected and entered-in-error that mark the Consent as not currently valid. &#xD;&#xA;&#xD;&#xA;In general, when being exchanged with a community-based organization, Consent.status should reference the value “active”."/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Consent.scope">
+            <path value="Consent.scope"/>
+            <comment value="The primary use for this element in the context of this implementation guide will be &quot;patient-privacy&quot; (Privacy Consent)."/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Consent.category">
+            <path value="Consent.category"/>
+            <slicing>
+                <discriminator>
+                    <type value="pattern"/>
+                    <path value="$this"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Consent.category:IDSCL">
+            <path value="Consent.category"/>
+            <sliceName value="IDSCL"/>
+            <requirements value="The base resource requires category. For consent related to SDOH, ISCDL was the best choice of the required options."/>
+            <min value="1"/>
+            <max value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+                    <code value="IDSCL"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Consent.patient">
+            <path value="Consent.patient"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Consent.dateTime">
+            <path value="Consent.dateTime"/>
+            <requirements value="This is Must Support to allow a recipient to determine the &quot;order&quot; of multiple consents."/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Consent.performer">
+            <path value="Consent.performer"/>
+            <requirements value="This element is not mandatory . There is not a use case that Performer be computable since it will normally be present in the consent &quot;form&quot;."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+            </type>
+        </element>
+        <element id="Consent.organization">
+            <path value="Consent.organization"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Consent.source[x]">
+            <path value="Consent.source[x]"/>
+            <min value="1"/>
+            <type>
+                <code value="Attachment"/>
+            </type>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Consent"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Contract"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

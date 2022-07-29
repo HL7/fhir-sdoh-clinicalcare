@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Condition
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ConditionAsserterDeviceExample"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2022-04-19T15:44:52.738+00:00"/>
+        <source value="#1fvCWxaSDNAhkaA4"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ExtensionConditionAsserter">
+        <valueReference>
+            <reference value="Device/SDOHCC-DeviceSoftwareExample"/>
+            <display value="Application program software"/>
+        </valueReference>
+    </extension>
+    <clinicalStatus>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+        </coding>
+    </clinicalStatus>
+    <verificationStatus>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="unconfirmed"/>
+            <display value="Unconfirmed"/>
+        </coding>
+    </verificationStatus>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/us/core/CodeSystem/condition-category"/>
+            <code value="health-concern"/>
+            <display value="Health Concern"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="food-insecurity"/>
+            <display value="Food Insecurity"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="733423003"/>
+            <display value="Food insecurity"/>
+        </coding>
+        <coding>
+            <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+            <code value="Z59.4"/>
+            <display value="Lack of adequate food and safe drinking water"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <onsetPeriod>
+        <start value="2019-08-18T12:31:35.123Z"/>
+    </onsetPeriod>
+    <evidence>
+        <detail>
+            <reference value="Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion3Example"/>
+        </detail>
+    </evidence>
+</Condition>

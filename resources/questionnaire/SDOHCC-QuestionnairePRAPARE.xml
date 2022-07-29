@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-QuestionnairePRAPARE"/>
+    <meta>
+        <versionId value="4"/>
+        <lastUpdated value="2022-04-26T15:33:50.724+00:00"/>
+        <source value="#dCh2D2FSZuROQzUP"/>
+        <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
+        <valueCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE"/>
+    </extension>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-QuestionnairePRAPARE"/>
+    <name value="SDOHCCQuestionnairePRAPARE"/>
+    <title value="SDOHCC Questionnaire PRAPARE"/>
+    <status value="draft"/>
+    <subjectType value="Patient"/>
+    <date value="2021-04-01T04:01:34+00:00"/>
+    <publisher value="HL7 International - Patient Care WG"/>
+    <contact>
+        <name value="HL7 International - Patient Care"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/patientcare"/>
+        </telecom>
+    </contact>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <item>
+        <linkId value="/93025-5"/>
+        <code>
+            <system value="http://loinc.org"/>
+            <code value="93025-5"/>
+            <display value="Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]"/>
+        </code>
+        <text value="Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <linkId value="/93043-8"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="93043-8"/>
+                <display value="Personal characteristics"/>
+            </code>
+            <text value="Personal characteristics"/>
+            <type value="group"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93043-8/56051-6"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="56051-6"/>
+                    <display value="Do you consider yourself Hispanic/Latino?"/>
+                </code>
+                <text value="Do you consider yourself Hispanic/Latino?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA33-6"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA32-8"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30122-8"/>
+                        <display value="I choose not to answer this question"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93043-8/32624-9"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="32624-9"/>
+                    <display value="Race"/>
+                </code>
+                <text value="Race"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <repeats value="true"/>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA6156-9"/>
+                        <display value="Asian"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA14045-1"/>
+                        <display value="Native Hawaiian"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30187-1"/>
+                        <display value="Pacific Islander"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA14042-8"/>
+                        <display value="Black/African American"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA4457-3"/>
+                        <display value="White"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA4-4"/>
+                        <display value="American Indian/Alaskan Native"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA46-8"/>
+                        <display value="Other"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30122-8"/>
+                        <display value="I choose not to answer this question"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93043-8/93035-4"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="93035-4"/>
+                    <display value="At any point in the past 2 years, has season or migrant farm work been your or your family's main source of income?"/>
+                </code>
+                <text value="At any point in the past 2 years, has season or migrant farm work been your or your family's main source of income?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA33-6"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA32-8"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30122-8"/>
+                        <display value="I choose not to answer this question"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93043-8/93034-7"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="93034-7"/>
+                    <display value="Have you been discharged from the armed forces of the United States?"/>
+                </code>
+                <text value="Have you been discharged from the armed forces of the United States?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA33-6"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA32-8"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30122-8"/>
+                        <display value="I choose not to answer this question"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93043-8/54899-0"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="54899-0"/>
+                    <display value="Preferred language"/>
+                </code>
+                <text value="Preferred language"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA43-5"/>
+                        <display value="English"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30188-9"/>
+                        <display value="Language other than English"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30122-8"/>
+                        <display value="I choose not to answer this question"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+        </item>
+        <item>
+            <linkId value="/93042-0"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="93042-0"/>
+                <display value="Family and home"/>
+            </code>
+            <text value="Family and home"/>
+            <type value="group"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unit">
+                    <valueCoding>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="{#}"/>
+                        <display value="{#}"/>
+                    </valueCoding>
+                </extension>
+                <linkId value="/93042-0/63512-8"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="63512-8"/>
+                    <display value="How many people are living or staying at this address?"/>
+                </code>
+                <text value="How many people are living or staying at this address?"/>
+                <type value="integer"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93042-0/71802-3"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="71802-3"/>
+                    <display value="Housing status"/>
+                </code>
+                <text value="Housing status"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30189-7"/>
+                        <display value="I have housing"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30190-5"/>
+                        <display value="I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30122-8"/>
+                        <display value="I choose not to answer this question"/>
+                    </valueCoding>
+                </answerOption>
+                <item>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                                <code value="help"/>
+                                <display value="Help-Button"/>
+                            </coding>
+                            <text value="Help-Button"/>
+                        </valueCodeableConcept>
+                    </extension>
+                    <linkId value="/93042-0/71802-3-help"/>
+                    <text value="Describes patients living arrangement"/>
+                    <type value="display"/>
+                </item>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93042-0/93033-9"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="93033-9"/>
+                    <display value="Are you worried about losing your housing?"/>
+                </code>
+                <text value="Are you worried about losing your housing?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA33-6"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA32-8"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30122-8"/>
+                        <display value="I choose not to answer this question"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <linkId value="/93042-0/56799-0"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="56799-0"/>
+                    <display value="Address"/>
+                </code>
+                <text value="Address"/>
+                <type value="string"/>
+                <required value="false"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="/93041-2"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="93041-2"/>
+                <display value="Money and resources"/>
+            </code>
+            <text value="Money and resources"/>
+            <type value="group"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93041-2/82589-3"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="82589-3"/>
+                    <display value="Highest level of educ"/>
+                </code>
+                <text value="Highest level of educ"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30191-3"/>
+                        <display value="Less than high school degree"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30192-1"/>
+                        <display value="High school diploma or GED"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30193-9"/>
+                        <display value="More than high school"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30122-8"/>
+                        <display value="I choose not to answer this question"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93041-2/67875-5"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="67875-5"/>
+                    <display value="Employment status current"/>
+                </code>
+                <text value="Employment status current"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA17956-6"/>
+                        <display value="Unemployed"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30138-4"/>
+                        <display value="Part-time or temporary work"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30136-8"/>
+                        <display value="Full-time work"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30137-6"/>
+                        <display value="Otherwise unemployed but not seeking work (ex: student, retired, disabled, unpaid primary care giver)"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30122-8"/>
+                        <display value="I choose not to answer this question"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93041-2/76437-3"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="76437-3"/>
+                    <display value="Primary insurance"/>
+                </code>
+                <text value="Primary insurance"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30194-7"/>
+                        <display value="None/uninsured"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA17849-3"/>
+                        <display value="Medicaid"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30195-4"/>
+                        <display value="CHIP Medicaid"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA15652-3"/>
+                        <display value="Medicare"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30196-2"/>
+                        <display value="Other public insurance (not CHIP)"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30197-0"/>
+                        <display value="Other public insurance (CHIP)"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA6350-8"/>
+                        <display value="Private insurance"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unit">
+                    <valueCoding>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="/a"/>
+                        <display value="/a"/>
+                    </valueCoding>
+                </extension>
+                <linkId value="/93041-2/63586-2"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="63586-2"/>
+                    <display value="What was your best estimate of the total income of all family members from all sources, before taxes, in last year?"/>
+                </code>
+                <text value="What was your best estimate of the total income of all family members from all sources, before taxes, in last year?"/>
+                <type value="decimal"/>
+                <required value="false"/>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93041-2/93031-3"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="93031-3"/>
+                    <display value="In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?"/>
+                </code>
+                <text value="In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <repeats value="true"/>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30125-1"/>
+                        <display value="Food"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30126-9"/>
+                        <display value="Clothing"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30124-4"/>
+                        <display value="Utilities"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30127-7"/>
+                        <display value="Child care"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30128-5"/>
+                        <display value="Medicine or Any Health Care (Medical, Dental, Mental Health, Vision)"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30129-3"/>
+                        <display value="Phone"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA46-8"/>
+                        <display value="Other"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30122-8"/>
+                        <display value="I choose not to answer this question"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93041-2/93030-5"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="93030-5"/>
+                    <display value="Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?"/>
+                </code>
+                <text value="Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix">
+                        <valueString value="A"/>
+                    </extension>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30133-5"/>
+                        <display value="Yes, it has kept me from medical appointments or from getting my medications"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix">
+                        <valueString value="B"/>
+                    </extension>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30134-3"/>
+                        <display value="Yes, it has kept me from non-medical meetings, appointments, work, or from getting things that I need"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix">
+                        <valueString value="C"/>
+                    </extension>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA32-8"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix">
+                        <valueString value="X"/>
+                    </extension>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30257-2"/>
+                        <display value="Patient unable to respond"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+        </item>
+        <item>
+            <linkId value="/93040-4"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="93040-4"/>
+                <display value="Social and emotional health"/>
+            </code>
+            <text value="Social and emotional health"/>
+            <type value="group"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93040-4/93029-7"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="93029-7"/>
+                    <display value="How often do you see or talk to people that you care about and feel close to (For example: talking to friends on the phone, visiting friends or family, going to church or club meetings)?"/>
+                </code>
+                <text value="How often do you see or talk to people that you care about and feel close to (For example: talking to friends on the phone, visiting friends or family, going to church or club meetings)?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA27722-0"/>
+                        <display value="Less than once a week"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30130-1"/>
+                        <display value="1 or 2 times a week"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30131-9"/>
+                        <display value="3 to 5 times a week"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30132-7"/>
+                        <display value="5 or more times a week"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30122-8"/>
+                        <display value="I choose not to answer this question"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93040-4/93038-8"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="93038-8"/>
+                    <display value="Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?"/>
+                </code>
+                <text value="Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA6568-5"/>
+                        <display value="Not at all"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA13863-8"/>
+                        <display value="A little bit"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA13909-9"/>
+                        <display value="Somewhat"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA13902-4"/>
+                        <display value="Quite a bit"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA13914-9"/>
+                        <display value="Very much"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30122-8"/>
+                        <display value="I choose not to answer this question"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+        </item>
+        <item>
+            <linkId value="/93039-6"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="93039-6"/>
+                <display value="Optional additional questions"/>
+            </code>
+            <text value="Optional additional questions"/>
+            <type value="group"/>
+            <required value="false"/>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93039-6/93028-9"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="93028-9"/>
+                    <display value="In the past year, have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility?"/>
+                </code>
+                <text value="In the past year, have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA33-6"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA32-8"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30122-8"/>
+                        <display value="I choose not to answer this question"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93039-6/93027-1"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="93027-1"/>
+                    <display value="Are you a refugee?"/>
+                </code>
+                <text value="Are you a refugee?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA33-6"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA32-8"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30122-8"/>
+                        <display value="I choose not to answer this question"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93039-6/93026-3"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="93026-3"/>
+                    <display value="Do you feel physically and emotionally safe where you currently live?"/>
+                </code>
+                <text value="Do you feel physically and emotionally safe where you currently live?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA33-6"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA32-8"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA14072-5"/>
+                        <display value="Unsure"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30122-8"/>
+                        <display value="I choose not to answer this question"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+            <item>
+                <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+                            <code value="drop-down"/>
+                            <display value="Drop down"/>
+                        </coding>
+                        <text value="Drop down"/>
+                    </valueCodeableConcept>
+                </extension>
+                <linkId value="/93039-6/76501-6"/>
+                <code>
+                    <system value="http://loinc.org"/>
+                    <code value="76501-6"/>
+                    <display value="Within the last year, have you been afraid of your partner or ex-partner?"/>
+                </code>
+                <text value="Within the last year, have you been afraid of your partner or ex-partner?"/>
+                <type value="choice"/>
+                <required value="false"/>
+                <answerOption>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix">
+                        <valueString value="1"/>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+                        <valueDecimal value="1"/>
+                    </extension>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA33-6"/>
+                        <display value="Yes"/>
+                    </valueCoding>
+                </answerOption>
+                <answerOption>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix">
+                        <valueString value="0"/>
+                    </extension>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+                        <valueDecimal value="0"/>
+                    </extension>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA32-8"/>
+                        <display value="No"/>
+                    </valueCoding>
+                </answerOption>
+            </item>
+        </item>
+    </item>
+</Questionnaire>

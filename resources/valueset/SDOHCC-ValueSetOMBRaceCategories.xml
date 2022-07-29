@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ValueSetOMBRaceCategories"/>
+    <meta>
+        <versionId value="4"/>
+        <lastUpdated value="2022-05-20T17:55:32.270+00:00"/>
+        <source value="#kQIjMh2NtLQfRxHg"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetOMBRaceCategories"/>
+    <version value="0.1.0"/>
+    <name value="SDOHCCValueSetOMBRaceCategories"/>
+    <title value="SDOHCC ValueSet OMB Race Categories"/>
+    <status value="draft"/>
+    <description value="Codes for the five race categories - 'American Indian' or 'Alaska Native','Asian', 'Black or African American', 'Native Hawaiian or Other Pacific Islander', and 'White' - as defined by the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf). This value set was created (as opposed to using the US Core OMB Race Categories value set) to deliberately prevent inclusion of null flavors."/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.6.238"/>
+            <concept>
+                <code value="1002-5"/>
+                <display value="American Indian or Alaska Native"/>
+            </concept>
+            <concept>
+                <code value="2028-9"/>
+                <display value="Asian"/>
+            </concept>
+            <concept>
+                <code value="2054-5"/>
+                <display value="Black or African American"/>
+            </concept>
+            <concept>
+                <code value="2076-8"/>
+                <display value="Native Hawaiian or Other Pacific Islander"/>
+            </concept>
+            <concept>
+                <code value="2106-3"/>
+                <display value="White"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

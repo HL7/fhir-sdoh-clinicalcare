@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ObservationResponsePRAPAREHousingStatusExample"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2021-06-07T20:38:38.576+00:00"/>
+        <source value="#4XH9yJYjK6ZjlBLQ"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="survey"/>
+            <display value="Survey"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="homelessness"/>
+            <display value="Homelessness"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="71802-3"/>
+            <display value="Housing status"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <effectiveDateTime value="2021-04-26T13:56:33.747Z"/>
+    <issued value="2021-04-26T13:56:33.747Z"/>
+    <performer>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </performer>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA30190-5"/>
+            <display value="I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)"/>
+        </coding>
+    </valueCodeableConcept>
+    <derivedFrom>
+        <reference value="QuestionnaireResponse/SDOHCC-QuestionnaireResponsePRAPAREExample"/>
+    </derivedFrom>
+</Observation>

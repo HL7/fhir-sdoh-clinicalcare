@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-Group"/>
+    <meta>
+        <versionId value="17"/>
+        <lastUpdated value="2021-10-27T17:12:16.882+00:00"/>
+        <source value="#9yJkEPfgcxpqCyWR"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Group"/>
+    <name value="SDOHCCGroup"/>
+    <title value="SDOHCC Group"/>
+    <status value="draft"/>
+    <description value="Profile for identifying groups of patients who have a Social Determinants of Health (SDOH) condition and are members of a specific payer organization."/>
+    <fhirVersion value="4.0.1"/>
+    <mapping>
+        <identity value="rim"/>
+        <uri value="http://hl7.org/v3"/>
+        <name value="RIM Mapping"/>
+    </mapping>
+    <mapping>
+        <identity value="w5"/>
+        <uri value="http://hl7.org/fhir/fivews"/>
+        <name value="FiveWs Pattern Mapping"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="true"/>
+    <type value="Group"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Group"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Group">
+            <path value="Group"/>
+            <short value="Group of SDOH patients for a payer"/>
+            <definition value="For aggregation of individuals with a common set of characteristics (i.e., the same payer and and any condition in the specified SDOH categories) to enable organizations with the appropriate permissions to easily retrieve information related to the cohort of individuals for which they have a common responsibility."/>
+        </element>
+        <element id="Group.active">
+            <path value="Group.active"/>
+            <min value="1"/>
+            <fixedBoolean value="true"/>
+        </element>
+        <element id="Group.type">
+            <path value="Group.type"/>
+            <short value="person"/>
+            <definition value="Identifies that this is a group of persons."/>
+            <requirements value="For this IG use case, this will only be used for a group of persons."/>
+            <fixedCode value="person"/>
+        </element>
+        <element id="Group.actual">
+            <path value="Group.actual"/>
+            <requirements value="Refers only to a specific group of real individuals."/>
+            <fixedBoolean value="true"/>
+        </element>
+        <element id="Group.characteristic">
+            <path value="Group.characteristic"/>
+            <slicing>
+                <discriminator>
+                    <type value="pattern"/>
+                    <path value="code"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <min value="2"/>
+        </element>
+        <element id="Group.characteristic:HasSDOHCondition">
+            <path value="Group.characteristic"/>
+            <sliceName value="HasSDOHCondition"/>
+            <requirements value="To identify members who have an active instance of a condition with any Condition.category in the value set reference by Group.characteristic.value[x] (i.e., SDOH conditions)."/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Group.characteristic:HasSDOHCondition.code">
+            <path value="Group.characteristic.code"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                    <code value="sdoh-condition-category"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Group.characteristic:HasSDOHCondition.value[x]">
+            <path value="Group.characteristic.value[x]"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/ValueSet"/>
+            </type>
+            <fixedReference>
+                <reference value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory"/>
+            </fixedReference>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Group.characteristic:HasSDOHCondition.exclude">
+            <path value="Group.characteristic.exclude"/>
+            <fixedBoolean value="false"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Group.characteristic:HasSDOHCondition.period">
+            <path value="Group.characteristic.period"/>
+            <max value="0"/>
+        </element>
+        <element id="Group.characteristic:HasPayer">
+            <path value="Group.characteristic"/>
+            <sliceName value="HasPayer"/>
+            <definition value="Identifies traits whose presence or absence is shared by members of the group."/>
+            <requirements value="To identify members who are covered by a payer referenced by Group.characteristic.value[x]."/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Group.characteristic:HasPayer.code">
+            <path value="Group.characteristic.code"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                    <code value="payer-coverage"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Group.characteristic:HasPayer.value[x]">
+            <path value="Group.characteristic.value[x]"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Group.characteristic:HasPayer.exclude">
+            <path value="Group.characteristic.exclude"/>
+            <fixedBoolean value="false"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Group.characteristic:HasPayer.period">
+            <path value="Group.characteristic.period"/>
+            <max value="0"/>
+        </element>
+        <element id="Group.member">
+            <path value="Group.member"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Group.member.entity">
+            <path value="Group.member.entity"/>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

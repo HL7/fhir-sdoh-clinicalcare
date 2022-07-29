@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceRequest
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample"/>
+    <meta>
+        <versionId value="5"/>
+        <lastUpdated value="2022-07-18T14:03:27.489+00:00"/>
+        <source value="#leaEyZrSH5P84RO6"/>
+        <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
+    </meta>
+    <basedOn>
+        <reference value="ServiceRequest/SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample"/>
+    </basedOn>
+    <status value="completed"/>
+    <intent value="original-order"/>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="410606002"/>
+            <display value="Social service procedure"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <code value="food-insecurity"/>
+            <display value="Food Insecurity"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="467681000124101"/>
+            <display value="Assistance with application for Summer Food Service Program"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/pat-53234"/>
+        <display value="COLIN ABBAS"/>
+    </subject>
+    <reasonReference>
+        <reference value="Condition/SDOHCC-ConditionFoodInsecurityExample"/>
+    </reasonReference>
+</ServiceRequest>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PractitionerRole
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-PractitionerRoleDrJanWaterExample"/>
+    <meta>
+        <versionId value="6"/>
+        <lastUpdated value="2022-04-06T20:56:13.866+00:00"/>
+        <source value="#BjmS65cneLYxVyRU"/>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+    </meta>
+    <identifier>
+        <system value="http://www.deerland.org/practitioners"/>
+        <value value="2424"/>
+    </identifier>
+    <active value="true"/>
+    <practitioner>
+        <reference value="Practitioner/SDOHCC-PractitionerDrJanWaterExample"/>
+        <display value="Dr Jan Water"/>
+    </practitioner>
+    <organization>
+        <reference value="Organization/SDOHCC-OrganizationClinicExample"/>
+        <display value="Better Health Clinic"/>
+    </organization>
+    <code>
+        <coding>
+            <system value="http://nucc.org/provider-taxonomy"/>
+            <code value="207Q00000X"/>
+            <display value="Family Medicine Physician"/>
+        </coding>
+    </code>
+    <telecom>
+        <system value="phone"/>
+        <value value="639 442 6719"/>
+        <use value="work"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="jan.water@deerland.org"/>
+        <use value="work"/>
+    </telecom>
+</PractitionerRole>

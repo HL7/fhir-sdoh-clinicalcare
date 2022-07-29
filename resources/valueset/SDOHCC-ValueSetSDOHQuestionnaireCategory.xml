@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ValueSetSDOHQuestionnaireCategory"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2021-10-22T18:55:45.111+00:00"/>
+        <source value="#Eq1iO5hH4QMt9f4B"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHQuestionnaireCategory"/>
+    <version value="0.1.0"/>
+    <name value="SDOHCCValueSetSDOHQuestionnaireCategory"/>
+    <title value="SDOHCC ValueSet SDOH Questionnaire Category"/>
+    <status value="draft"/>
+    <description value="Codes that represent categories of Social Determinants of Health (SDOH) questionnaires."/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            <concept>
+                <code value="risk-questionnaire"/>
+                <display value="Risk Questionnaire"/>
+            </concept>
+            <concept>
+                <code value="feedback-questionnaire"/>
+                <display value="Feedback Questionnaire"/>
+            </concept>
+            <concept>
+                <code value="application-questionnaire"/>
+                <display value="Application Questionnaire"/>
+            </concept>
+            <concept>
+                <code value="other-questionnaire"/>
+                <display value="Other Questionnaire"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

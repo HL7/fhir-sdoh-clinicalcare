@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ValueSetTaskStatus"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2022-04-06T20:49:02.471+00:00"/>
+        <source value="#FyIiJKsmmP9wpwTR"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetTaskStatus"/>
+    <version value="0.1.0"/>
+    <name value="SDOHCCValueSetTaskStatus"/>
+    <title value="SDOHCC ValueSet Task Status"/>
+    <status value="draft"/>
+    <description value="Codes for the status of a task for a patient."/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/task-status"/>
+            <concept>
+                <code value="ready"/>
+                <display value="Ready"/>
+            </concept>
+            <concept>
+                <code value="in-progress"/>
+                <display value="In Progress"/>
+            </concept>
+            <concept>
+                <code value="completed"/>
+                <display value="Completed"/>
+            </concept>
+            <concept>
+                <code value="cancelled"/>
+                <display value="Cancelled"/>
+            </concept>
+            <concept>
+                <code value="on-hold"/>
+                <display value="On Hold"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="SDOHCC-ExtensionHealthcareServiceTelecomAppointment"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2021-10-27T17:12:16.602+00:00"/>
+        <source value="#M1539zXBbBxt0iUs"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ExtensionHealthcareServiceTelecomAppointment"/>
+    <name value="SDOHCCExtensionHealthcareServiceTelecomAppointment"/>
+    <title value="SDOHCC Extension HealthcareService Telecom Appointment"/>
+    <status value="draft"/>
+    <description value="Extension for flagging a HealthcareService.telecom as one the patient can use to make an appointment."/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="complex-type"/>
+    <abstract value="false"/>
+    <context>
+        <type value="element"/>
+        <expression value="HealthcareService.telecom"/>
+    </context>
+    <type value="Extension"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Extension">
+            <path value="Extension"/>
+            <short value="Telecom is for making appointments"/>
+            <definition value="For flagging a HealthcareService.telecom as one the patient can use to make an appointment."/>
+            <max value="1"/>
+        </element>
+        <element id="Extension.url">
+            <path value="Extension.url"/>
+            <fixedUri value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ExtensionHealthcareServiceTelecomAppointment"/>
+        </element>
+        <element id="Extension.value[x]">
+            <path value="Extension.value[x]"/>
+            <min value="1"/>
+            <type>
+                <code value="boolean"/>
+            </type>
+            <fixedBoolean value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>
