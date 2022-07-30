@@ -30,3 +30,26 @@ v: {
   "system" : "http://nucc.org/provider-taxonomy"
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://nucc.org/provider-taxonomy",
+      "filter" : [{
+        "property" : "abstract",
+        "op" : "=",
+        "value" : "false"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: The filter \"abstract = false\" from the value set was not understood in the context of http://nucc.org/provider-taxonomy"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-provider-specialty", "version": "3.1.1"}####
+e: {
+  "error" : "Error from server: The filter \"abstract = false\" from the value set http://hl7.org/fhir/us/core/ValueSet/us-core-provider-specialty was not understood in the context of http://nucc.org/provider-taxonomy"
+}
+-------------------------------------------------------------------------------------
