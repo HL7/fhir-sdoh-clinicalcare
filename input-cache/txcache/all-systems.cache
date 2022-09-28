@@ -299,3 +299,13 @@ v: {
   "system" : "urn:iso:std:iso:3166"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "410606002",
+  "display" : "Social service procedure"
+}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#410606002) is not valid in the value set 'SDOHCCValueSetSDOHCategory' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
