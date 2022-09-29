@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationPersonalCharacteristic"/>
     <meta>
-        <versionId value="11"/>
-        <lastUpdated value="2022-06-28T15:21:43.618+00:00"/>
-        <source value="#udsJzZtK5mnUAf6F"/>
+        <versionId value="12"/>
+        <lastUpdated value="2022-07-18T18:33:38.098+00:00"/>
+        <source value="#jmPoTGA7edGgsews"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationPersonalCharacteristic"/>
     <name value="SDOHCCObservationPersonalCharacteristic"/>
@@ -63,7 +63,7 @@
         <element id="Observation.extension:OtherSubject">
             <path value="Observation.extension"/>
             <sliceName value="OtherSubject"/>
-            <requirements value="This extension is adding only US Core Practitioner as an option for Observation.subject."/>
+            <requirements value="This extension is adding only US Core Practitioner as an option for Observation.subject. When the subject is Practitioner, personal characteristics should be based on the attestation and consent of the practitioner."/>
             <min value="0"/>
             <max value="1"/>
             <type>

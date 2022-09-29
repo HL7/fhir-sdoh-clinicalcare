@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ServiceRequestSubreferralGardenProgramExample"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2021-11-02T18:27:46.693+00:00"/>
-        <source value="#oUYMOs7BqbNAXvms"/>
+        <versionId value="4"/>
+        <lastUpdated value="2022-07-18T14:03:27.489+00:00"/>
+        <source value="#4qJbx9r4sj8rHAyH"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
     </meta>
     <basedOn>
@@ -13,6 +13,13 @@
     </basedOn>
     <status value="completed"/>
     <intent value="original-order"/>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="410606002"/>
+            <display value="Social service procedure"/>
+        </coding>
+    </category>
     <category>
         <coding>
             <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>

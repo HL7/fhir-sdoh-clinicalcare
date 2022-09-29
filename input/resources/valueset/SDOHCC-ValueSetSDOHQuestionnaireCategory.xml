@@ -3,15 +3,16 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ValueSetSDOHQuestionnaireCategory"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-10-22T18:55:45.111+00:00"/>
-        <source value="#Eq1iO5hH4QMt9f4B"/>
+        <versionId value="2"/>
+        <lastUpdated value="2022-09-20T21:39:15.924+00:00"/>
+        <source value="#6TPOLWe12QxmYerB"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHQuestionnaireCategory"/>
     <version value="0.1.0"/>
     <name value="SDOHCCValueSetSDOHQuestionnaireCategory"/>
     <title value="SDOHCC ValueSet SDOH Questionnaire Category"/>
     <status value="draft"/>
+    <experimental value="false"/>
     <description value="Codes that represent categories of Social Determinants of Health (SDOH) questionnaires."/>
     <compose>
         <include>
@@ -27,6 +28,10 @@
             <concept>
                 <code value="application-questionnaire"/>
                 <display value="Application Questionnaire"/>
+            </concept>
+            <concept>
+                <code value="personal-characteristics-questionnaire"/>
+                <display value="Personal Characteristics Questionnaire"/>
             </concept>
             <concept>
                 <code value="other-questionnaire"/>

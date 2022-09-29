@@ -3,15 +3,16 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ValueSetObservationMethod"/>
     <meta>
-        <versionId value="7"/>
-        <lastUpdated value="2022-04-05T17:00:04.587+00:00"/>
-        <source value="#TWaGDFPRmjJXymzR"/>
+        <versionId value="8"/>
+        <lastUpdated value="2022-09-20T21:39:16.172+00:00"/>
+        <source value="#GHHPJj6u06Hz9eDh"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetObservationMethod"/>
     <version value="0.1.0"/>
     <name value="SDOHCCValueSetObservationMethod"/>
     <title value="SDOHCC ValueSet Observation Method"/>
     <status value="draft"/>
+    <experimental value="false"/>
     <date value="2020-12-14T04:01:34+00:00"/>
     <publisher value="HL7 International - Patient Care WG"/>
     <contact>
@@ -33,7 +34,7 @@
             <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
             <concept>
                 <code value="self-reported"/>
-                <display value="Self reported"/>
+                <display value="Self Reported"/>
             </concept>
             <concept>
                 <code value="reported-by-related-person"/>

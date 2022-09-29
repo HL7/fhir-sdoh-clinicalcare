@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationEthnicityOMB"/>
     <meta>
-        <versionId value="15"/>
-        <lastUpdated value="2022-07-01T14:30:13.161+00:00"/>
-        <source value="#zd7iFXE4ECvJS9Yd"/>
+        <versionId value="17"/>
+        <lastUpdated value="2022-07-28T21:31:04.675+00:00"/>
+        <source value="#xqoFz4mWDo9dbh0d"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicityOMB"/>
     <name value="SDOHCCObservationEthnicityOMB"/>
@@ -145,6 +145,7 @@
         <element id="Observation.component:Ethnicity.value[x]">
             <path value="Observation.component.value[x]"/>
             <short value="Hispanic or Latino | Non Hispanic or Latino"/>
+            <requirements value="An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations. Note: The binding to [SDOHCC-ValueSetOMBEthnicityCategories](ValueSet-SDOHCC-ValueSetOMBEthnicityCategories.html) is used in lieu of [US Core OMB Ethnicity Categories](http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity-category) because, in versions of US Core beyond 3.1.1, the US Core value set include nulls flavors while the SDOH CC value set does not."/>
             <min value="1"/>
             <type>
                 <code value="CodeableConcept"/>
@@ -153,7 +154,7 @@
             <binding>
                 <strength value="required"/>
                 <description value="Codes for the two OMB ethnicity categories"/>
-                <valueSet value="http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity-category"/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetOMBEthnicityCategories"/>
             </binding>
         </element>
         <element id="Observation.component:Ethnicity.dataAbsentReason">

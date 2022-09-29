@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2021-11-02T18:27:46.693+00:00"/>
-        <source value="#RSd0kLyVDpMcX6Op"/>
+        <versionId value="5"/>
+        <lastUpdated value="2022-07-18T14:03:27.489+00:00"/>
+        <source value="#leaEyZrSH5P84RO6"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
     </meta>
     <basedOn>
@@ -13,6 +13,13 @@
     </basedOn>
     <status value="completed"/>
     <intent value="original-order"/>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="410606002"/>
+            <display value="Social service procedure"/>
+        </coding>
+    </category>
     <category>
         <coding>
             <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>

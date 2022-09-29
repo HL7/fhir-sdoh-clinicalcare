@@ -3,13 +3,18 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ProcedureProvisionOfFoodExample"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2021-11-15T20:50:16.070+00:00"/>
-        <source value="#Ia3NJ2vidJMGkBfN"/>
+        <versionId value="4"/>
+        <lastUpdated value="2022-07-18T12:58:36.628+00:00"/>
+        <source value="#VLXRthS2DXXrXwxB"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
     </meta>
     <status value="completed"/>
     <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="410606002"/>
+            <display value="Social service procedure"/>
+        </coding>
         <coding>
             <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
             <code value="food-insecurity"/>

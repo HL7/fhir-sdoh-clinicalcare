@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ServiceRequest"/>
     <meta>
-        <versionId value="25"/>
-        <lastUpdated value="2022-05-27T18:04:26.617+00:00"/>
-        <source value="#30LcOZcROYv5bXiL"/>
+        <versionId value="27"/>
+        <lastUpdated value="2022-09-16T14:23:06.589+00:00"/>
+        <source value="#SdcnaT1nvgvY2DIE"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
     <version value="0.1.0"/>
@@ -140,8 +140,8 @@
             <path value="ServiceRequest.category"/>
             <sliceName value="SDOH"/>
             <short value="e.g., food-insecurity | transportation-insecurity"/>
-            <definition value="A SDOH category assigned to the requested service."/>
-            <requirements value="Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a service request. It is recommended that SDOH category codes be used to facilitate searching for service requests that address SDOH conditions. observations, or goals."/>
+            <definition value="An SDOH category assigned to the requested service."/>
+            <requirements value="Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a service request. It is recommended that SDOH category codes be used to facilitate searching for service requests that address SDOH conditions, observations, or goals."/>
             <mustSupport value="true"/>
             <binding>
                 <strength value="required"/>
@@ -206,12 +206,12 @@
             <sliceName value="SubjectContactDetail"/>
             <requirements value="Allows flagging of a service request where the subject of the request explictly designates that they do not want to be contacted (e.g., in domestic violence cases where contact may place subject at risk)."/>
             <max value="1"/>
-            <fixedCodeableConcept>
+            <patternCodeableConcept>
                 <coding>
                     <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
                     <code value="contacting-subject-prohibited"/>
                 </coding>
-            </fixedCodeableConcept>
+            </patternCodeableConcept>
             <mustSupport value="true"/>
         </element>
         <element id="ServiceRequest.subject">

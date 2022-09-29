@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Procedure"/>
     <meta>
-        <versionId value="16"/>
-        <lastUpdated value="2022-05-05T18:52:08.608+00:00"/>
-        <source value="#VYJVej1FahautBDe"/>
+        <versionId value="18"/>
+        <lastUpdated value="2022-07-18T12:33:07.990+00:00"/>
+        <source value="#AY0ktCtZIR35vMKd"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
     <version value="0.1.0"/>
@@ -57,14 +57,6 @@
             <short value="An action that addresses an SDOH condition, observation, or goal."/>
             <definition value="For procedures that address SDOH conditions, SDOH observations, or SDOH goals."/>
             <comment value="Many of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."/>
-            <constraint>
-                <key value="SDOH-Pro-1"/>
-                <severity value="warning"/>
-                <human value="An SDOH category SHOULD appear either in the .category element or in the category extension"/>
-                <expression value="extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-Procedure.category').where(value.memberOf('http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory')).exists() or category.where($this.memberOf ('http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory')).exists()"/>
-                <xpath value="true()"/>
-                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
-            </constraint>
         </element>
         <element id="Procedure.extension">
             <path value="Procedure.extension"/>
@@ -126,7 +118,31 @@
         <element id="Procedure.category">
             <path value="Procedure.category"/>
             <definition value="A code that classifies the procedure for searching, sorting and display purposes (e.g. &quot;Social service procedure&quot;)."/>
-            <condition value="SDOH-Pro-1"/>
+        </element>
+        <element id="Procedure.category.coding">
+            <path value="Procedure.category.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="$this"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Procedure.category.coding:SDOH">
+            <path value="Procedure.category.coding"/>
+            <sliceName value="SDOH"/>
+            <short value="e.g., food-insecurity | transportation-insecurity"/>
+            <definition value="An SDOH category assigned to the procedure."/>
+            <requirements value="Allows for alternative encodings within a code system, and translations to other code systems.  &#xD;&#xA;Codes from this value set can be used to assign an SDOH category (e.g., food-insecurity, transportation-insecurity, etc.) to a procedure. It is recommended that SDOH category codes be used to facilitate searching for SDOH procedures that address SDOH conditions, observations, service requests, or goals."/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <description value="Codes for high-level SDOH categories."/>
+                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory"/>
+            </binding>
         </element>
         <element id="Procedure.code">
             <path value="Procedure.code"/>
