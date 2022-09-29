@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationScreeningResponse"/>
     <meta>
-        <versionId value="41"/>
-        <lastUpdated value="2022-06-28T15:29:34.855+00:00"/>
-        <source value="#Q2yT9b8rW2G53vd9"/>
+        <versionId value="42"/>
+        <lastUpdated value="2022-07-15T15:56:06.628+00:00"/>
+        <source value="#QRz7uLOXJauimrhH"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
     <version value="0.1.0"/>
@@ -117,7 +117,7 @@
             <path value="Observation.category"/>
             <sliceName value="SDOH"/>
             <short value="e.g., food-insecurity | transportation-insecurity"/>
-            <definition value="A code that classifies the general type of SDOH observation being made."/>
+            <definition value="An SDOH category assigned to the observation."/>
             <requirements value="Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to an observation. It is recommended that SDOH category codes be used to facilitate searching for SDOH observations."/>
             <mustSupport value="true"/>
             <binding>

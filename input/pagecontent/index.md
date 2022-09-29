@@ -1,22 +1,24 @@
 ### Overview
 
-Last change 7/28/2022
+2022-09-28 includes numerous updates from ballot ticket dispositions incl updated scope graphic
 
-Social Determinants of Health (SDOH) are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange SDOH content defined by the Gravity Project using the Fast Healthcare Interoperability Resources (FHIR) standard. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. This IG addresses the need to gather SDOH information in multiple settings, share that information between stakeholders, and exchange referrals between organizations to address specific social risk needs, all with appropriate patient consent.  In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. The guide supports the following use cases:
+Social Determinants of Health (SDOH) are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange SDOH content defined by the [Gravity Project]( https://confluence.hl7.org/display/GRAV/The+Gravity+Project) using the HL7 FHIR standard. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. This IG addresses the need to gather SDOH information in multiple settings, share that information between stakeholders, and exchange referrals between organizations to address specific social risk needs, all with appropriate patient consent.  In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. The guide supports the following use cases:
 
 * 	Document SDOH data in conjunction with the patient encounters with providers, payers, and community services
-* 	Document and track SDOH related interventions to completion
+* 	Document and track SDOH-related interventions to completion
 * 	Identify cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer)
 
 
-This implementation guide was developed by the Gravity Project, which specifically focuses on using HL7 FHIR to define standards for the exchange of SDOH-related information.  Both the project and this implementation guide are focused on the U.S. environment.  This implementation guide leverages content from the US Core implementation guide and binds to US-specific terminology.  However, the basic constructs and interaction patterns may well be applicable outside the U.S.
+This implementation guide was developed by the Gravity Project, which specifically focuses on using HL7 FHIR to define standards for the exchange of SDOH-related information.  Both the project and this implementation guide are focused on the U.S. environment.  This implementation guide leverages content from the [US Core Implementation Guide](https://www.hl7.org/fhir/us/core/) and binds to US-specific terminology.  However, the basic constructs and interaction patterns may well be applicable outside the U.S.
+
+Addiitonal information regarding the background and use of this IG can be found on the [Gravity Confluence Technology Pages](https://confluence.hl7.org/display/GRAV/Technical+Workstream+Dashboard)
 
 ### Content and organization
 
 The implementation guide is organized into the following sections:
 
-* Background: Includes [Gravity Background](gravity_background.html), [SDOH Clinical Care Scope](sdoh_clinical_care_scope.html), [Functional Use Cases](functional_use_cases.html), and [Technical Background](technical_background.html), that describe the environment in which this implementation guide establishes standards for information exchange
-* [STU2 Changes](stu2_changes.html) describes the changes included in the STU 2 ballot version of the IG
+* Background: Includes [Gravity Background](gravity_background.html), [SDOH Clinical Care Background](sdoh_clinical_care_background.html), [Functional Use Cases](functional_use_cases.html), and [Technical Background](technical_background.html), that describe the environment in which this implementation guide establishes standards for information exchange
+* [Change History](stu2_ballot_changes.html) describes the changes included in the STU 2 ballot version of the IG
 * Context: Describes the [Survey Instrument Support](survey_instrument_support.html),[ QuestionnaireResponse Mapping Instructions](mapping_instructions.html), [Support for Multiple Domains](support_for_multiple_domains.html), [Exchange Workflow](exchange_workflow.html) and [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html) that details a high-level overview of expected process flow
 * Specifications: Provides an overview of the [FHIR Artifacts](fhir_artifacts_overview.html) defined and used in this IG, [Checking Task Status](checking_task_status.html) to describe managing task status, [Privacy and Security](privacy_and_security.html) issues,  [MustSupport and Missing Data](mustsupport_and_missing_data.html) concepts and [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)  
 * [Downloads](downloads.html): Provides for the download of various IG related artifacts
@@ -36,12 +38,10 @@ Implementers should pay specific attention to the following sections:
 * [Privacy and Security](privacy_and_security.html) for implementers that are concerned with privacy and security aspects related to implementing the information exchanges defined in this IG
 * [MustSupport and Missing Data](mustsupport_and_missing_data.html) to understand the interpretation of the MustSupport flags and the treatment of Missing Data used in this IG 
 * [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html) for an introduction to draft observation profiles to exchange personal characterisitcs data, that includes the source and method of acquisition
-* [Artifacts Index](artifacts.html) all implementers need to understand the FHIR R4 profiles, examples and other FHIR artifacts defined in this implementation guide and linked from this section -- this section also includes the details for the declared capability statements for the respective servers and clients
+* [Artifacts Index](artifacts.html) provides easy access for all implementers the FHIR R4 profiles, examples and other FHIR artifacts defined in this implementation guide and linked from this section -- this section also includes the details for the declared capability statements for the respective servers and clients
 * [Downloads](downloads.html) links to allow implementers to download the IG and various artifacts
 
 Notes: 
-
-The draft Personal Characteristic profiles are included in this IG for testing purposes only and are not intended for citing in regulations without additional testing and balloting. More details are available on the  [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html) page.
 
 The IG profiles for [ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) and [Procedure](StructureDefinition-SDOHCC-Procedure.html) define the use of an external taxonomy [211 LA Taxonomy (Copyright © 2004-2021 Information and Referral Federation of Los Angeles doing business as 211 LA County. All rights reserved. Version 5.8.5)] This taxonomy is in the process of being formally incorporated as an HL7 external code system.
 

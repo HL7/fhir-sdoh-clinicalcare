@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ProcedureFoodPantryApplicationAssistanceExample"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2021-11-15T20:50:16.069+00:00"/>
-        <source value="#WwLuBNwLBAitxeOW"/>
+        <versionId value="5"/>
+        <lastUpdated value="2022-07-18T13:21:18.888+00:00"/>
+        <source value="#PwUIS3pNZsEzvClw"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
     </meta>
     <basedOn>
@@ -13,6 +13,11 @@
     </basedOn>
     <status value="completed"/>
     <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="410606002"/>
+            <display value="Social service procedure"/>
+        </coding>
         <coding>
             <system value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
             <code value="food-insecurity"/>

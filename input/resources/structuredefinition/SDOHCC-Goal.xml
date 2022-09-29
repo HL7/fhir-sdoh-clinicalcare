@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Goal"/>
     <meta>
-        <versionId value="9"/>
-        <lastUpdated value="2022-04-07T00:03:49.911+00:00"/>
-        <source value="#fhWeCPC0H2OKcIKZ"/>
+        <versionId value="10"/>
+        <lastUpdated value="2022-07-15T15:56:06.624+00:00"/>
+        <source value="#q51JsnZHYKCe1D8O"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal"/>
     <version value="0.1.0"/>
@@ -71,7 +71,7 @@
             <path value="Goal.category"/>
             <sliceName value="SDOH"/>
             <short value="e.g., food-insecurity | transportation-insecurity"/>
-            <definition value="A SDOH category assigned to the goal."/>
+            <definition value="An SDOH category assigned to the goal."/>
             <requirements value="Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a goal. It is recommended that SDOH category codes be used to facilitate searching for SDOH-related goals."/>
             <mustSupport value="true"/>
             <binding>

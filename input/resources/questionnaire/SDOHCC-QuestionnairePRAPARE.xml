@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-QuestionnairePRAPARE"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2022-04-26T15:33:50.724+00:00"/>
-        <source value="#dCh2D2FSZuROQzUP"/>
+        <versionId value="5"/>
+        <lastUpdated value="2022-09-14T20:05:52.007+00:00"/>
+        <source value="#triqDuazdqHqt7bE"/>
         <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"/>
     </meta>
     <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
@@ -738,6 +738,7 @@
                 <text value="Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?"/>
                 <type value="choice"/>
                 <required value="false"/>
+                <repeats value="true"/>
                 <answerOption>
                     <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix">
                         <valueString value="A"/>

@@ -3,15 +3,12 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-StructureMapPRAPARE"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2021-06-28T17:12:24.937+00:00"/>
-        <source value="#FLTN6h4LHljBb9Hk"/>
+        <versionId value="4"/>
+        <lastUpdated value="2022-09-14T18:01:11.177+00:00"/>
+        <source value="#npKlQo5pMXzKDtk8"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE"/>
     <name value="SDOHCCStructureMapPRAPARE"/>
-    <title value="SDOHCC StructureMap PRAPARE"/>
-    <status value="draft"/>
-    <experimental value="false"/>
     <structure>
         <url value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"/>
         <mode value="source"/>
@@ -31,7 +28,7 @@
         <alias value="sdohccCondition"/>
     </structure>
     <structure>
-        <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"/>
+        <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
         <mode value="target"/>
         <alias value="sdohccObservation"/>
     </structure>
@@ -49,7 +46,7 @@
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-1"/>
+            <name value="bundle-id"/>
             <source>
                 <context value="src"/>
             </source>
@@ -64,7 +61,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-2"/>
+            <name value="bundle-type"/>
             <source>
                 <context value="src"/>
             </source>
@@ -79,7 +76,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-3"/>
+            <name value="item"/>
             <source>
                 <context value="src"/>
                 <element value="item"/>
@@ -93,13 +90,25 @@
             </target>
             <dependent>
                 <name value="rootContent"/>
-                <variable value="src"/>
-                <variable value="rootItem"/>
-                <variable value="bundle"/>
+                <variable value="src">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="rootItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="bundle">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-4"/>
+            <name value="bundle-group-obsn"/>
             <source>
                 <context value="src"/>
             </source>
@@ -121,10 +130,26 @@
             </target>
             <dependent>
                 <name value="TransformGroupObservation"/>
-                <variable value="src"/>
-                <variable value="bundle"/>
-                <variable value="groupObservation"/>
-                <variable value="entry"/>
+                <variable value="src">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="bundle">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="groupObservation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="entry">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
     </group>
@@ -138,16 +163,14 @@
         </input>
         <input>
             <name value="rootItem"/>
-            <type value="Any"/>
             <mode value="source"/>
         </input>
         <input>
             <name value="bundle"/>
-            <type value="Any"/>
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-5"/>
+            <name value="item"/>
             <source>
                 <context value="rootItem"/>
                 <element value="item"/>
@@ -161,9 +184,21 @@
             </target>
             <dependent>
                 <name value="groupContent"/>
-                <variable value="qResponse"/>
-                <variable value="groupItem"/>
-                <variable value="bundle"/>
+                <variable value="qResponse">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="groupItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="bundle">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
     </group>
@@ -177,20 +212,66 @@
         </input>
         <input>
             <name value="groupItem"/>
-            <type value="Any"/>
             <mode value="source"/>
         </input>
         <input>
             <name value="bundle"/>
-            <type value="Any"/>
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-6"/>
+            <name value="item"/>
             <source>
                 <context value="groupItem"/>
                 <element value="item"/>
-                <variable value="questionItem"/>
+                <variable value="answerItem"/>
+            </source>
+            <target>
+                <context value="bundle"/>
+                <contextType value="variable"/>
+                <element value="entry"/>
+                <variable value="entry"/>
+            </target>
+            <dependent>
+                <name value="itemContent"/>
+                <variable value="qResponse">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="bundle">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+            </dependent>
+        </rule>
+    </group>
+    <group>
+        <name value="itemContent"/>
+        <typeMode value="none"/>
+        <input>
+            <name value="qResponse"/>
+            <type value="questionnaireResponse"/>
+            <mode value="source"/>
+        </input>
+        <input>
+            <name value="answerItem"/>
+            <mode value="source"/>
+        </input>
+        <input>
+            <name value="bundle"/>
+            <mode value="target"/>
+        </input>
+        <rule>
+            <name value="obsn"/>
+            <source>
+                <context value="answerItem"/>
+                <condition value="(answerItem.linkId != '/93043-8/32624-9') and (answerItem.linkId != '/93041-2/93031-3') and (answerItem.linkId != '/93041-2/93030-5')"/>
             </source>
             <target>
                 <context value="bundle"/>
@@ -210,13 +291,154 @@
             </target>
             <dependent>
                 <name value="TransformObservation"/>
-                <variable value="qResponse"/>
-                <variable value="questionItem"/>
-                <variable value="bundle"/>
-                <variable value="observation"/>
-                <variable value="entry"/>
-                <variable value="bundle"/>
+                <variable value="qResponse">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="bundle">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="entry">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="bundle">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
+        </rule>
+        <rule>
+            <name value="answer"/>
+            <source>
+                <context value="answerItem"/>
+                <element value="answer"/>
+                <variable value="answer"/>
+                <condition value="(answerItem.linkId = '/93043-8/32624-9') or (answerItem.linkId = '/93041-2/93031-3') or (answerItem.linkId = '/93041-2/93030-5')"/>
+            </source>
+            <target>
+                <context value="bundle"/>
+                <contextType value="variable"/>
+                <element value="entry"/>
+                <variable value="entry"/>
+            </target>
+            <target>
+                <context value="entry"/>
+                <contextType value="variable"/>
+                <element value="resource"/>
+                <variable value="observation"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="sdohccObservation"/>
+                </parameter>
+            </target>
+            <dependent>
+                <name value="TransformObservation"/>
+                <variable value="qResponse">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="bundle">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="entry">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="bundle">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+            </dependent>
+            <dependent>
+                <name value="SetValueCodeableConceptFromAnswer"/>
+                <variable value="answer">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+            </dependent>
+        </rule>
+    </group>
+    <group>
+        <name value="SetValueCodeableConceptFromAnswer"/>
+        <typeMode value="none"/>
+        <input>
+            <name value="answer"/>
+            <mode value="source"/>
+        </input>
+        <input>
+            <name value="observation"/>
+            <mode value="target"/>
+        </input>
+        <rule>
+            <name value="obsn-value"/>
+            <source>
+                <context value="answer"/>
+            </source>
+            <target>
+                <context value="observation"/>
+                <contextType value="variable"/>
+                <element value="value"/>
+                <variable value="newCC"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="CodeableConcept"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="valueCoding"/>
+                <source>
+                    <context value="answer"/>
+                    <element value="valueCoding"/>
+                    <variable value="coding"/>
+                </source>
+                <target>
+                    <context value="newCC"/>
+                    <contextType value="variable"/>
+                    <element value="coding"/>
+                    <variable value="newCoding"/>
+                    <transform value="copy"/>
+                    <parameter>
+                        <valueId value="coding"/>
+                    </parameter>
+                </target>
+            </rule>
         </rule>
     </group>
     <group>
@@ -229,12 +451,10 @@
         </input>
         <input>
             <name value="answerItem"/>
-            <type value="Any"/>
             <mode value="source"/>
         </input>
         <input>
             <name value="bundle"/>
-            <type value="Any"/>
             <mode value="source"/>
         </input>
         <input>
@@ -244,16 +464,14 @@
         </input>
         <input>
             <name value="entry"/>
-            <type value="Any"/>
             <mode value="target"/>
         </input>
         <input>
             <name value="bundle"/>
-            <type value="Any"/>
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-7"/>
+            <name value="obsn-full-url"/>
             <source>
                 <context value="src"/>
             </source>
@@ -265,12 +483,20 @@
             </target>
             <dependent>
                 <name value="SetObservationFullUrl"/>
-                <variable value="observation"/>
-                <variable value="entry"/>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="entry">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-8"/>
+            <name value="obsn-status"/>
             <source>
                 <context value="src"/>
             </source>
@@ -285,7 +511,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-9"/>
+            <name value="obsn-cat-social-history"/>
             <source>
                 <context value="src"/>
             </source>
@@ -306,7 +532,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-10"/>
+            <name value="obsn-cat-survey"/>
             <source>
                 <context value="src"/>
             </source>
@@ -327,7 +553,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-11"/>
+            <name value="obsn-meta"/>
             <source>
                 <context value="src"/>
             </source>
@@ -342,7 +568,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-12"/>
+                <name value="obsn-meta-profile"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -358,7 +584,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-13"/>
+            <name value="authored"/>
             <source>
                 <context value="src"/>
                 <element value="authored"/>
@@ -384,7 +610,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-14"/>
+            <name value="subject"/>
             <source>
                 <context value="src"/>
                 <element value="subject"/>
@@ -401,7 +627,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-15"/>
+                <name value="reference"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="reference"/>
@@ -418,7 +644,7 @@
                 </target>
             </rule>
             <rule>
-                <name value="rule-16"/>
+                <name value="display"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="display"/>
@@ -436,7 +662,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-17"/>
+            <name value="subject"/>
             <source>
                 <context value="src"/>
                 <element value="subject"/>
@@ -453,7 +679,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-18"/>
+                <name value="reference"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="reference"/>
@@ -470,7 +696,7 @@
                 </target>
             </rule>
             <rule>
-                <name value="rule-19"/>
+                <name value="display"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="display"/>
@@ -488,7 +714,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-20"/>
+            <name value="obsn-derived-from"/>
             <source>
                 <context value="src"/>
                 <element value="id"/>
@@ -505,7 +731,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-21"/>
+                <name value="obsn-derived-from-reference"/>
                 <source>
                     <context value="id"/>
                 </source>
@@ -524,7 +750,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-22"/>
+            <name value="obsn-code-ethnicity"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/56051-6'"/>
@@ -544,12 +770,98 @@
             </target>
             <dependent>
                 <name value="SetValueCodeableConcept"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-23"/>
+            <name value="obsn-cat"/>
+            <source>
+                <context value="answerItem"/>
+                <condition value="linkId = '/93043-8/56051-6'"/>
+            </source>
+            <target>
+                <context value="observation"/>
+                <contextType value="variable"/>
+                <element value="category"/>
+                <variable value="newCC"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="CodeableConcept"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="obsn-cat-coding"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="newCC"/>
+                    <contextType value="variable"/>
+                    <element value="coding"/>
+                    <variable value="newCoding"/>
+                    <transform value="create"/>
+                    <parameter>
+                        <valueString value="Coding"/>
+                    </parameter>
+                </target>
+                <rule>
+                    <name value="obsn-cat-coding-system"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="system"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="obsn-cat-coding-code"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="code"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="sdoh-category-unspecified"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="obsn-cat-coding-display"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="display"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="SDOH Category Unspecified"/>
+                        </parameter>
+                    </target>
+                </rule>
+            </rule>
+        </rule>
+        <rule>
+            <name value="obs-code-race"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/32624-9'"/>
@@ -567,15 +879,87 @@
                     <valueString value="32624-9"/>
                 </parameter>
             </target>
-            <dependent>
-                <name value="SetValuesToComponents"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
-                <variable value="observation"/>
-            </dependent>
         </rule>
         <rule>
-            <name value="rule-24"/>
+            <name value="obsn-cat"/>
+            <source>
+                <context value="answerItem"/>
+                <condition value="linkId = '/93043-8/32624-9'"/>
+            </source>
+            <target>
+                <context value="observation"/>
+                <contextType value="variable"/>
+                <element value="category"/>
+                <variable value="newCC"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="CodeableConcept"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="obsn-cat-coding"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="newCC"/>
+                    <contextType value="variable"/>
+                    <element value="coding"/>
+                    <variable value="newCoding"/>
+                    <transform value="create"/>
+                    <parameter>
+                        <valueString value="Coding"/>
+                    </parameter>
+                </target>
+                <rule>
+                    <name value="obsn-cat-coding-system"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="system"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="obsn-cat-coding-code"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="code"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="sdoh-category-unspecified"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="obsn-cat-coding-display"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="display"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="SDOH Category Unspecified"/>
+                        </parameter>
+                    </target>
+                </rule>
+            </rule>
+        </rule>
+        <rule>
+            <name value="obsn-code-farm-worker-status"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/93035-4'"/>
@@ -595,12 +979,20 @@
             </target>
             <dependent>
                 <name value="SetValueCodeableConcept"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-25"/>
+            <name value="obsn-cat"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/93035-4'"/>
@@ -616,7 +1008,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-26"/>
+                <name value="obsn-cat-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -631,7 +1023,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-27"/>
+                    <name value="obsn-cat-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -646,7 +1038,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-28"/>
+                    <name value="obsn-cat-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -661,7 +1053,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-29"/>
+                    <name value="obsn-cat-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -678,7 +1070,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-30"/>
+            <name value="obsn-code-vet-status"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/93034-7'"/>
@@ -698,12 +1090,20 @@
             </target>
             <dependent>
                 <name value="SetValueCodeableConcept"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-31"/>
+            <name value="obsn-cat"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/93034-7'"/>
@@ -719,7 +1119,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-32"/>
+                <name value="obsn-cat-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -734,7 +1134,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-33"/>
+                    <name value="obsn-cat-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -749,7 +1149,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-34"/>
+                    <name value="obsn-cat-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -764,7 +1164,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-35"/>
+                    <name value="obsn-cat-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -781,7 +1181,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-36"/>
+            <name value="obsn-code-eng-prof"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93043-8/54899-0'"/>
@@ -801,12 +1201,98 @@
             </target>
             <dependent>
                 <name value="SetValueCodeableConcept"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-37"/>
+            <name value="obsn-cat"/>
+            <source>
+                <context value="answerItem"/>
+                <condition value="linkId = '/93043-8/54899-0'"/>
+            </source>
+            <target>
+                <context value="observation"/>
+                <contextType value="variable"/>
+                <element value="category"/>
+                <variable value="newCC"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="CodeableConcept"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="obsn-cat-coding"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="newCC"/>
+                    <contextType value="variable"/>
+                    <element value="coding"/>
+                    <variable value="newCoding"/>
+                    <transform value="create"/>
+                    <parameter>
+                        <valueString value="Coding"/>
+                    </parameter>
+                </target>
+                <rule>
+                    <name value="obsn-cat-coding-system"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="system"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="obsn-cat-coding-code"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="code"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="sdoh-category-unspecified"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="obsn-cat-coding-display"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="display"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="SDOH Category Unspecified"/>
+                        </parameter>
+                    </target>
+                </rule>
+            </rule>
+        </rule>
+        <rule>
+            <name value="obsn-code-household-size"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93042-0/63512-8'"/>
@@ -825,7 +1311,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-38"/>
+                <name value="obsn-value"/>
                 <source>
                     <context value="answerItem"/>
                     <element value="answer"/>
@@ -842,7 +1328,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-39"/>
+                    <name value="obsn-qty-value"/>
                     <source>
                         <context value="answer"/>
                         <element value="value"/>
@@ -859,7 +1345,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-40"/>
+                    <name value="obsn-qty-unit"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -874,7 +1360,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-41"/>
+                    <name value="obsn-qty-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -889,7 +1375,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-42"/>
+                    <name value="obsn-qty-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -906,7 +1392,85 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-43"/>
+            <name value="obsn-cat"/>
+            <source>
+                <context value="answerItem"/>
+                <condition value="linkId = '/93042-0/63512-8'"/>
+            </source>
+            <target>
+                <context value="observation"/>
+                <contextType value="variable"/>
+                <element value="category"/>
+                <variable value="newCC"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="CodeableConcept"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="obsn-cat-coding"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="newCC"/>
+                    <contextType value="variable"/>
+                    <element value="coding"/>
+                    <variable value="newCoding"/>
+                    <transform value="create"/>
+                    <parameter>
+                        <valueString value="Coding"/>
+                    </parameter>
+                </target>
+                <rule>
+                    <name value="obsn-cat-coding-system"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="system"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="obsn-cat-coding-code"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="code"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="sdoh-category-unspecified"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="obsn-cat-coding-display"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="display"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="SDOH Category Unspecified"/>
+                        </parameter>
+                    </target>
+                </rule>
+            </rule>
+        </rule>
+        <rule>
+            <name value="obsn-code-housing"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93042-0/71802-3'"/>
@@ -926,12 +1490,20 @@
             </target>
             <dependent>
                 <name value="SetValueCodeableConcept"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-44"/>
+            <name value="obsn-cat"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93042-0/71802-3'"/>
@@ -947,7 +1519,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-45"/>
+                <name value="obsn-cat-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -962,7 +1534,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-46"/>
+                    <name value="obsn-cat-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -977,7 +1549,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-47"/>
+                    <name value="obsn-cat-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -992,7 +1564,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-48"/>
+                    <name value="obsn-cat-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1009,7 +1581,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-49"/>
+            <name value="obsn-code-housing-status"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93042-0/93033-9'"/>
@@ -1029,12 +1601,20 @@
             </target>
             <dependent>
                 <name value="SetValueCodeableConcept"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-50"/>
+            <name value="obsn-cat"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93042-0/93033-9'"/>
@@ -1050,7 +1630,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-51"/>
+                <name value="obsn-cat-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1065,7 +1645,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-52"/>
+                    <name value="obsn-cat-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1080,7 +1660,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-53"/>
+                    <name value="obsn-cat-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1095,7 +1675,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-54"/>
+                    <name value="obsn-cat-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1112,7 +1692,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-55"/>
+            <name value="obsn-code-neighborhood"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93042-0/56799-0'"/>
@@ -1132,12 +1712,98 @@
             </target>
             <dependent>
                 <name value="SetValue"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-56"/>
+            <name value="obsn-cat"/>
+            <source>
+                <context value="answerItem"/>
+                <condition value="linkId = '/93042-0/56799-0'"/>
+            </source>
+            <target>
+                <context value="observation"/>
+                <contextType value="variable"/>
+                <element value="category"/>
+                <variable value="newCC"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="CodeableConcept"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="obsn-cat-coding"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="newCC"/>
+                    <contextType value="variable"/>
+                    <element value="coding"/>
+                    <variable value="newCoding"/>
+                    <transform value="create"/>
+                    <parameter>
+                        <valueString value="Coding"/>
+                    </parameter>
+                </target>
+                <rule>
+                    <name value="obsn-cat-coding-system"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="system"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="obsn-cat-coding-code"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="code"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="sdoh-category-unspecified"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="obsn-cat-coding-display"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="display"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="SDOH Category Unspecified"/>
+                        </parameter>
+                    </target>
+                </rule>
+            </rule>
+        </rule>
+        <rule>
+            <name value="obsn-code-education"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/82589-3'"/>
@@ -1157,12 +1823,20 @@
             </target>
             <dependent>
                 <name value="SetValueCodeableConcept"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-57"/>
+            <name value="obsn-cat"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/82589-3'"/>
@@ -1178,7 +1852,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-58"/>
+                <name value="obsn-cat-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1193,7 +1867,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-59"/>
+                    <name value="obsn-cat-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1208,7 +1882,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-60"/>
+                    <name value="obsn-cat-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1223,7 +1897,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-61"/>
+                    <name value="obsn-cat-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1240,7 +1914,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-62"/>
+            <name value="obsn-code-employment"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/67875-5'"/>
@@ -1260,12 +1934,20 @@
             </target>
             <dependent>
                 <name value="SetValueCodeableConcept"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-63"/>
+            <name value="obsn-cat"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/67875-5'"/>
@@ -1281,7 +1963,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-64"/>
+                <name value="obsn-cat-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1296,7 +1978,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-65"/>
+                    <name value="obsn-cat-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1311,7 +1993,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-66"/>
+                    <name value="obsn-cat-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1326,7 +2008,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-67"/>
+                    <name value="obsn-cat-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1343,7 +2025,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-68"/>
+            <name value="obsn-code-insurance"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/76437-3'"/>
@@ -1363,12 +2045,98 @@
             </target>
             <dependent>
                 <name value="SetValueCodeableConcept"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-69"/>
+            <name value="obsn-cat"/>
+            <source>
+                <context value="answerItem"/>
+                <condition value="linkId = '/93041-2/76437-3'"/>
+            </source>
+            <target>
+                <context value="observation"/>
+                <contextType value="variable"/>
+                <element value="category"/>
+                <variable value="newCC"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="CodeableConcept"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="obsn-cat-coding"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="newCC"/>
+                    <contextType value="variable"/>
+                    <element value="coding"/>
+                    <variable value="newCoding"/>
+                    <transform value="create"/>
+                    <parameter>
+                        <valueString value="Coding"/>
+                    </parameter>
+                </target>
+                <rule>
+                    <name value="obsn-cat-coding-system"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="system"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="obsn-cat-coding-code"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="code"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="health-insurance-coverage-status"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="obsn-cat-coding-display"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="display"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="Health Insurance Coverage Status"/>
+                        </parameter>
+                    </target>
+                </rule>
+            </rule>
+        </rule>
+        <rule>
+            <name value="obsn-code-household-income"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/63586-2'"/>
@@ -1387,7 +2155,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-70"/>
+                <name value="obsn-value"/>
                 <source>
                     <context value="answerItem"/>
                     <element value="answer"/>
@@ -1404,7 +2172,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-71"/>
+                    <name value="obsn-qty-value"/>
                     <source>
                         <context value="answer"/>
                         <element value="value"/>
@@ -1421,7 +2189,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-72"/>
+                    <name value="obsn-qty-unit"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1436,7 +2204,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-73"/>
+                    <name value="obsn-qty-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1451,7 +2219,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-74"/>
+                    <name value="obsn-qty-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1468,7 +2236,85 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-75"/>
+            <name value="obsn-cat"/>
+            <source>
+                <context value="answerItem"/>
+                <condition value="linkId = '/93041-2/63586-2'"/>
+            </source>
+            <target>
+                <context value="observation"/>
+                <contextType value="variable"/>
+                <element value="category"/>
+                <variable value="newCC"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="CodeableConcept"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="obsn-cat-coding"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="newCC"/>
+                    <contextType value="variable"/>
+                    <element value="coding"/>
+                    <variable value="newCoding"/>
+                    <transform value="create"/>
+                    <parameter>
+                        <valueString value="Coding"/>
+                    </parameter>
+                </target>
+                <rule>
+                    <name value="obsn-cat-coding-system"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="system"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="obsn-cat-coding-code"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="code"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="sdoh-category-unspecified"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="obsn-cat-coding-display"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="display"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="SDOH Category Unspecified"/>
+                        </parameter>
+                    </target>
+                </rule>
+            </rule>
+        </rule>
+        <rule>
+            <name value="obsn-code-material-security"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/93031-3'"/>
@@ -1486,15 +2332,9 @@
                     <valueString value="93031-3"/>
                 </parameter>
             </target>
-            <dependent>
-                <name value="SetValuesToComponents"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
-                <variable value="observation"/>
-            </dependent>
         </rule>
         <rule>
-            <name value="rule-76"/>
+            <name value="obsn-cat"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/93031-3'"/>
@@ -1510,7 +2350,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-77"/>
+                <name value="obsn-cat-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1525,7 +2365,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-78"/>
+                    <name value="obsn-cat-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1540,7 +2380,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-79"/>
+                    <name value="obsn-cat-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1550,12 +2390,12 @@
                         <element value="code"/>
                         <transform value="copy"/>
                         <parameter>
-                            <valueString value="sdoh-category-unspecified"/>
+                            <valueString value="material-hardship"/>
                         </parameter>
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-80"/>
+                    <name value="obsn-cat-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1565,14 +2405,14 @@
                         <element value="display"/>
                         <transform value="copy"/>
                         <parameter>
-                            <valueString value="SDOH Category Unspecified"/>
+                            <valueString value="Material Hardship"/>
                         </parameter>
                     </target>
                 </rule>
             </rule>
         </rule>
         <rule>
-            <name value="rule-81"/>
+            <name value="obsn-code-transportation"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/93030-5'"/>
@@ -1590,14 +2430,9 @@
                     <valueString value="93030-5"/>
                 </parameter>
             </target>
-            <dependent>
-                <name value="SetValueCodeableConcept"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
-            </dependent>
         </rule>
         <rule>
-            <name value="rule-82"/>
+            <name value="obsn-cat"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93041-2/93030-5'"/>
@@ -1613,7 +2448,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-83"/>
+                <name value="obsn-cat-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1628,7 +2463,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-84"/>
+                    <name value="obsn-cat-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1643,7 +2478,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-85"/>
+                    <name value="obsn-cat-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1658,7 +2493,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-86"/>
+                    <name value="obsn-cat-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1675,7 +2510,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-87"/>
+            <name value="obsn-code-soc-integ"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93040-4/93029-7'"/>
@@ -1695,12 +2530,20 @@
             </target>
             <dependent>
                 <name value="SetValueCodeableConcept"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-88"/>
+            <name value="obsn-cat"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93040-4/93029-7'"/>
@@ -1716,7 +2559,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-89"/>
+                <name value="obsn-cat-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1731,7 +2574,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-90"/>
+                    <name value="obsn-cat-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1746,7 +2589,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-91"/>
+                    <name value="obsn-cat-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1756,12 +2599,12 @@
                         <element value="code"/>
                         <transform value="copy"/>
                         <parameter>
-                            <valueString value="sdoh-category-unspecified"/>
+                            <valueString value="social-connection"/>
                         </parameter>
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-92"/>
+                    <name value="obsn-cat-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1771,14 +2614,14 @@
                         <element value="display"/>
                         <transform value="copy"/>
                         <parameter>
-                            <valueString value="SDOH Category Unspecified"/>
+                            <valueString value="Social Connection"/>
                         </parameter>
                     </target>
                 </rule>
             </rule>
         </rule>
         <rule>
-            <name value="rule-93"/>
+            <name value="obsn-code-stress"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93040-4/93038-8'"/>
@@ -1798,12 +2641,20 @@
             </target>
             <dependent>
                 <name value="SetValueCodeableConcept"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-94"/>
+            <name value="obsn-cat"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93040-4/93038-8'"/>
@@ -1819,7 +2670,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-95"/>
+                <name value="obsn-cat-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1834,7 +2685,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-96"/>
+                    <name value="obsn-cat-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1849,7 +2700,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-97"/>
+                    <name value="obsn-cat-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1864,7 +2715,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-98"/>
+                    <name value="obsn-cat-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1881,7 +2732,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-99"/>
+            <name value="obsn-code-incarceration"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93039-6/93028-9'"/>
@@ -1901,12 +2752,20 @@
             </target>
             <dependent>
                 <name value="SetValueCodeableConcept"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-100"/>
+            <name value="obsn-cat"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93039-6/93028-9'"/>
@@ -1922,7 +2781,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-101"/>
+                <name value="obsn-cat-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -1937,7 +2796,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-102"/>
+                    <name value="obsn-cat-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1952,7 +2811,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-103"/>
+                    <name value="obsn-cat-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1967,7 +2826,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-104"/>
+                    <name value="obsn-cat-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -1984,7 +2843,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-105"/>
+            <name value="obsn-code-refugee"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93039-6/93027-1'"/>
@@ -2004,12 +2863,20 @@
             </target>
             <dependent>
                 <name value="SetValueCodeableConcept"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-106"/>
+            <name value="obsn-cat"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93039-6/93027-1'"/>
@@ -2025,7 +2892,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-107"/>
+                <name value="obsn-cat-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -2040,7 +2907,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-108"/>
+                    <name value="obsn-cat-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2055,7 +2922,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-109"/>
+                    <name value="obsn-cat-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2070,7 +2937,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-110"/>
+                    <name value="obsn-cat-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2087,7 +2954,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-111"/>
+            <name value="obsn-code-safety"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93039-6/93026-3'"/>
@@ -2107,12 +2974,98 @@
             </target>
             <dependent>
                 <name value="SetValueCodeableConcept"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-112"/>
+            <name value="obsn-cat"/>
+            <source>
+                <context value="answerItem"/>
+                <condition value="linkId = '/93039-6/93026-3'"/>
+            </source>
+            <target>
+                <context value="observation"/>
+                <contextType value="variable"/>
+                <element value="category"/>
+                <variable value="newCC"/>
+                <transform value="create"/>
+                <parameter>
+                    <valueString value="CodeableConcept"/>
+                </parameter>
+            </target>
+            <rule>
+                <name value="obsn-cat-coding"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="newCC"/>
+                    <contextType value="variable"/>
+                    <element value="coding"/>
+                    <variable value="newCoding"/>
+                    <transform value="create"/>
+                    <parameter>
+                        <valueString value="Coding"/>
+                    </parameter>
+                </target>
+                <rule>
+                    <name value="obsn-cat-coding-system"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="system"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="obsn-cat-coding-code"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="code"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="sdoh-category-unspecified"/>
+                        </parameter>
+                    </target>
+                </rule>
+                <rule>
+                    <name value="obsn-cat-coding-display"/>
+                    <source>
+                        <context value="src"/>
+                    </source>
+                    <target>
+                        <context value="newCoding"/>
+                        <contextType value="variable"/>
+                        <element value="display"/>
+                        <transform value="copy"/>
+                        <parameter>
+                            <valueString value="SDOH Category Unspecified"/>
+                        </parameter>
+                    </target>
+                </rule>
+            </rule>
+        </rule>
+        <rule>
+            <name value="obsn-code-dom-violence"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93039-6/76501-6'"/>
@@ -2132,12 +3085,20 @@
             </target>
             <dependent>
                 <name value="SetValueCodeableConcept"/>
-                <variable value="answerItem"/>
-                <variable value="observation"/>
+                <variable value="answerItem">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="observation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-113"/>
+            <name value="obsn-cat"/>
             <source>
                 <context value="answerItem"/>
                 <condition value="linkId = '/93039-6/76501-6'"/>
@@ -2153,7 +3114,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-114"/>
+                <name value="obsn-cat-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -2168,7 +3129,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-115"/>
+                    <name value="obsn-cat-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2183,7 +3144,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-116"/>
+                    <name value="obsn-cat-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2193,12 +3154,12 @@
                         <element value="code"/>
                         <transform value="copy"/>
                         <parameter>
-                            <valueString value="sdoh-category-unspecified"/>
+                            <valueString value="intimate-partner-violence"/>
                         </parameter>
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-117"/>
+                    <name value="obsn-cat-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2208,17 +3169,17 @@
                         <element value="display"/>
                         <transform value="copy"/>
                         <parameter>
-                            <valueString value="SDOH Category Unspecified"/>
+                            <valueString value="Intimate Partner Violence"/>
                         </parameter>
                     </target>
                 </rule>
             </rule>
         </rule>
         <rule>
-            <name value="rule-118"/>
+            <name value="condition-homeless"/>
             <source>
                 <context value="answerItem"/>
-                <condition value="linkId = '/93042-0/71802-3' and answer.valueCoding.code ='LA30190-5'"/>
+                <condition value="(linkId = '/93042-0/71802-3') and (answer.valueCoding.code = 'LA30190-5')"/>
             </source>
             <target>
                 <context value="bundle"/>
@@ -2238,23 +3199,51 @@
             </target>
             <dependent>
                 <name value="TransformCondition"/>
-                <variable value="src"/>
-                <variable value="bundle"/>
-                <variable value="condition"/>
-                <variable value="entry"/>
+                <variable value="src">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="bundle">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="condition">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="entry">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
             <dependent>
                 <name value="SetConditionCodeAndEvidence1"/>
-                <variable value="src"/>
-                <variable value="bundle"/>
-                <variable value="condition"/>
+                <variable value="src">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="bundle">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="condition">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-119"/>
+            <name value="condition-unemployed"/>
             <source>
                 <context value="answerItem"/>
-                <condition value="linkId = '/93041-2/67875-5' and answer.valueCoding.code ='LA17956-6'"/>
+                <condition value="(linkId = '/93041-2/67875-5') and (answer.valueCoding.code = 'LA17956-6')"/>
             </source>
             <target>
                 <context value="bundle"/>
@@ -2274,17 +3263,87 @@
             </target>
             <dependent>
                 <name value="TransformCondition"/>
-                <variable value="src"/>
-                <variable value="bundle"/>
-                <variable value="condition"/>
-                <variable value="entry"/>
+                <variable value="src">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="bundle">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="condition">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="entry">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
             <dependent>
                 <name value="SetConditionCodeAndEvidence2"/>
-                <variable value="src"/>
-                <variable value="bundle"/>
-                <variable value="condition"/>
+                <variable value="src">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="bundle">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="condition">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
+        </rule>
+        <rule>
+            <name value="obsn-entry-request"/>
+            <source>
+                <context value="src"/>
+            </source>
+            <target>
+                <context value="entry"/>
+                <contextType value="variable"/>
+                <element value="request"/>
+                <variable value="request"/>
+            </target>
+            <rule>
+                <name value="obsn-request-method"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="request"/>
+                    <contextType value="variable"/>
+                    <element value="method"/>
+                    <transform value="copy"/>
+                    <parameter>
+                        <valueString value="POST"/>
+                    </parameter>
+                </target>
+            </rule>
+            <rule>
+                <name value="obsn-request-url"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="request"/>
+                    <contextType value="variable"/>
+                    <element value="url"/>
+                    <transform value="copy"/>
+                    <parameter>
+                        <valueString value="Observation"/>
+                    </parameter>
+                </target>
+            </rule>
         </rule>
     </group>
     <group>
@@ -2292,16 +3351,14 @@
         <typeMode value="none"/>
         <input>
             <name value="answerItem"/>
-            <type value="Any"/>
             <mode value="source"/>
         </input>
         <input>
             <name value="observation"/>
-            <type value="Any"/>
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-120"/>
+            <name value="answer"/>
             <source>
                 <context value="answerItem"/>
                 <element value="answer"/>
@@ -2314,7 +3371,7 @@
                 <variable value="id"/>
             </target>
             <rule>
-                <name value="rule-121"/>
+                <name value="value"/>
                 <source>
                     <context value="answer"/>
                     <element value="value"/>
@@ -2337,16 +3394,14 @@
         <typeMode value="none"/>
         <input>
             <name value="src"/>
-            <type value="Any"/>
             <mode value="source"/>
         </input>
         <input>
             <name value="observation"/>
-            <type value="Any"/>
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-122"/>
+            <name value="answer"/>
             <source>
                 <context value="src"/>
                 <element value="answer"/>
@@ -2363,7 +3418,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-123"/>
+                <name value="valueCoding"/>
                 <source>
                     <context value="answer"/>
                     <element value="valueCoding"/>
@@ -2387,21 +3442,18 @@
         <typeMode value="none"/>
         <input>
             <name value="answerItem"/>
-            <type value="Any"/>
             <mode value="source"/>
         </input>
         <input>
             <name value="srcObservation"/>
-            <type value="Any"/>
             <mode value="source"/>
         </input>
         <input>
             <name value="observation"/>
-            <type value="Any"/>
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-124"/>
+            <name value="answer"/>
             <source>
                 <context value="answerItem"/>
                 <element value="answer"/>
@@ -2424,7 +3476,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-125"/>
+                <name value="valueCoding"/>
                 <source>
                     <context value="answer"/>
                     <element value="valueCoding"/>
@@ -2442,7 +3494,7 @@
                 </target>
             </rule>
             <rule>
-                <name value="rule-126"/>
+                <name value="code"/>
                 <source>
                     <context value="srcObservation"/>
                     <element value="code"/>
@@ -2470,11 +3522,10 @@
         </input>
         <input>
             <name value="entry"/>
-            <type value="Any"/>
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-127"/>
+            <name value="id"/>
             <source>
                 <context value="observation"/>
                 <element value="id"/>
@@ -2504,7 +3555,6 @@
         </input>
         <input>
             <name value="bundle"/>
-            <type value="Any"/>
             <mode value="source"/>
         </input>
         <input>
@@ -2514,11 +3564,10 @@
         </input>
         <input>
             <name value="entry"/>
-            <type value="Any"/>
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-128"/>
+            <name value="condition-full-url"/>
             <source>
                 <context value="src"/>
             </source>
@@ -2530,29 +3579,20 @@
             </target>
             <dependent>
                 <name value="SetConditionFullUrl"/>
-                <variable value="condition"/>
-                <variable value="entry"/>
+                <variable value="condition">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="entry">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-129"/>
-            <source>
-                <context value="src"/>
-            </source>
-            <target>
-                <context value="condition"/>
-                <contextType value="variable"/>
-                <element value="id"/>
-                <transform value="uuid"/>
-            </target>
-            <dependent>
-                <name value="SetConditionFullUrl"/>
-                <variable value="condition"/>
-                <variable value="entry"/>
-            </dependent>
-        </rule>
-        <rule>
-            <name value="rule-130"/>
+            <name value="conditionMeta"/>
             <source>
                 <context value="src"/>
             </source>
@@ -2567,7 +3607,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-131"/>
+                <name value="condition-meta-profile"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -2583,7 +3623,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-132"/>
+            <name value="condition-clinical-status"/>
             <source>
                 <context value="src"/>
             </source>
@@ -2604,7 +3644,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-133"/>
+            <name value="condition-verification-status"/>
             <source>
                 <context value="src"/>
             </source>
@@ -2625,7 +3665,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-134"/>
+            <name value="condition-cat"/>
             <source>
                 <context value="src"/>
             </source>
@@ -2640,7 +3680,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-135"/>
+                <name value="condition-cat-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -2655,7 +3695,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-136"/>
+                    <name value="condition-cat-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2670,7 +3710,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-137"/>
+                    <name value="condition-cat-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2685,7 +3725,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-138"/>
+                    <name value="condition-cat-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2702,7 +3742,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-139"/>
+            <name value="condition-onset"/>
             <source>
                 <context value="src"/>
                 <element value="authored"/>
@@ -2729,7 +3769,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-140"/>
+            <name value="subject"/>
             <source>
                 <context value="src"/>
                 <element value="subject"/>
@@ -2746,7 +3786,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-141"/>
+                <name value="reference"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="reference"/>
@@ -2763,7 +3803,7 @@
                 </target>
             </rule>
             <rule>
-                <name value="rule-142"/>
+                <name value="display"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="display"/>
@@ -2781,7 +3821,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-143"/>
+            <name value="subject"/>
             <source>
                 <context value="src"/>
                 <element value="subject"/>
@@ -2798,7 +3838,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-144"/>
+                <name value="reference"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="reference"/>
@@ -2815,7 +3855,7 @@
                 </target>
             </rule>
             <rule>
-                <name value="rule-145"/>
+                <name value="display"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="display"/>
@@ -2832,6 +3872,48 @@
                 </target>
             </rule>
         </rule>
+        <rule>
+            <name value="condition-entry-request"/>
+            <source>
+                <context value="src"/>
+            </source>
+            <target>
+                <context value="entry"/>
+                <contextType value="variable"/>
+                <element value="request"/>
+                <variable value="request"/>
+            </target>
+            <rule>
+                <name value="condition-request-method"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="request"/>
+                    <contextType value="variable"/>
+                    <element value="method"/>
+                    <transform value="copy"/>
+                    <parameter>
+                        <valueString value="POST"/>
+                    </parameter>
+                </target>
+            </rule>
+            <rule>
+                <name value="condition-request-url"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="request"/>
+                    <contextType value="variable"/>
+                    <element value="url"/>
+                    <transform value="copy"/>
+                    <parameter>
+                        <valueString value="Condition"/>
+                    </parameter>
+                </target>
+            </rule>
+        </rule>
     </group>
     <group>
         <name value="SetConditionFullUrl"/>
@@ -2843,11 +3925,10 @@
         </input>
         <input>
             <name value="entry"/>
-            <type value="Any"/>
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-146"/>
+            <name value="id"/>
             <source>
                 <context value="condition"/>
                 <element value="id"/>
@@ -2877,16 +3958,14 @@
         </input>
         <input>
             <name value="bundle"/>
-            <type value="Any"/>
             <mode value="source"/>
         </input>
         <input>
             <name value="condition"/>
-            <type value="Any"/>
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-147"/>
+            <name value="condition-code"/>
             <source>
                 <context value="src"/>
             </source>
@@ -2901,7 +3980,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-148"/>
+                <name value="condition-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -2916,7 +3995,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-149"/>
+                    <name value="condition-code-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2931,7 +4010,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-150"/>
+                    <name value="condition-code-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2946,7 +4025,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-151"/>
+                    <name value="condition-code-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2962,7 +4041,7 @@
                 </rule>
             </rule>
             <rule>
-                <name value="rule-152"/>
+                <name value="condition-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -2977,7 +4056,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-153"/>
+                    <name value="condition-code-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -2992,7 +4071,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-154"/>
+                    <name value="condition-code-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -3007,7 +4086,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-155"/>
+                    <name value="condition-code-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -3024,7 +4103,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-156"/>
+            <name value="condition-cat"/>
             <source>
                 <context value="src"/>
             </source>
@@ -3039,7 +4118,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-157"/>
+                <name value="condition-cat-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -3054,7 +4133,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-158"/>
+                    <name value="condition-cat-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -3069,7 +4148,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-159"/>
+                    <name value="condition-cat-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -3084,7 +4163,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-160"/>
+                    <name value="condition-cat-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -3101,7 +4180,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-161"/>
+            <name value="entry"/>
             <source>
                 <context value="bundle"/>
                 <element value="entry"/>
@@ -3124,7 +4203,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-162"/>
+                <name value="condition-evidence"/>
                 <source>
                     <context value="entries"/>
                     <element value="resource"/>
@@ -3153,16 +4232,14 @@
         </input>
         <input>
             <name value="bundle"/>
-            <type value="Any"/>
             <mode value="source"/>
         </input>
         <input>
             <name value="condition"/>
-            <type value="Any"/>
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-163"/>
+            <name value="condition-code"/>
             <source>
                 <context value="src"/>
             </source>
@@ -3177,7 +4254,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-164"/>
+                <name value="condition-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -3192,7 +4269,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-165"/>
+                    <name value="condition-code-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -3207,7 +4284,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-166"/>
+                    <name value="condition-code-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -3222,7 +4299,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-167"/>
+                    <name value="condition-code-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -3238,7 +4315,7 @@
                 </rule>
             </rule>
             <rule>
-                <name value="rule-168"/>
+                <name value="condition-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -3253,7 +4330,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-169"/>
+                    <name value="condition-code-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -3268,7 +4345,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-170"/>
+                    <name value="condition-code-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -3283,7 +4360,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-171"/>
+                    <name value="condition-code-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -3300,7 +4377,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-172"/>
+            <name value="condition-cat"/>
             <source>
                 <context value="src"/>
             </source>
@@ -3315,7 +4392,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-173"/>
+                <name value="condition-cat-coding"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -3330,7 +4407,7 @@
                     </parameter>
                 </target>
                 <rule>
-                    <name value="rule-174"/>
+                    <name value="condition-cat-coding-system"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -3345,7 +4422,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-175"/>
+                    <name value="condition-cat-coding-code"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -3360,7 +4437,7 @@
                     </target>
                 </rule>
                 <rule>
-                    <name value="rule-176"/>
+                    <name value="condition-cat-coding-display"/>
                     <source>
                         <context value="src"/>
                     </source>
@@ -3377,7 +4454,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-177"/>
+            <name value="entry"/>
             <source>
                 <context value="bundle"/>
                 <element value="entry"/>
@@ -3400,7 +4477,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-178"/>
+                <name value="condition-evidence"/>
                 <source>
                     <context value="entries"/>
                     <element value="resource"/>
@@ -3439,11 +4516,10 @@
         </input>
         <input>
             <name value="entry"/>
-            <type value="Any"/>
             <mode value="target"/>
         </input>
         <rule>
-            <name value="rule-179"/>
+            <name value="grp-obsnFullUrl"/>
             <source>
                 <context value="src"/>
             </source>
@@ -3455,12 +4531,20 @@
             </target>
             <dependent>
                 <name value="SetObservationFullUrl"/>
-                <variable value="groupObservation"/>
-                <variable value="entry"/>
+                <variable value="groupObservation">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
+                <variable value="entry">
+                    <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+                        <valueUrl value="id"/>
+                    </extension>
+                </variable>
             </dependent>
         </rule>
         <rule>
-            <name value="rule-180"/>
+            <name value="grp-obsn-status"/>
             <source>
                 <context value="src"/>
             </source>
@@ -3475,7 +4559,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-181"/>
+            <name value="grp-obsn-cat-social-history"/>
             <source>
                 <context value="src"/>
             </source>
@@ -3496,7 +4580,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-182"/>
+            <name value="grp-obsn-cat-survey"/>
             <source>
                 <context value="src"/>
             </source>
@@ -3517,7 +4601,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-183"/>
+            <name value="grpObsMeta"/>
             <source>
                 <context value="src"/>
             </source>
@@ -3532,7 +4616,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-184"/>
+                <name value="grp-obsn-meta-profile"/>
                 <source>
                     <context value="src"/>
                 </source>
@@ -3548,7 +4632,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-185"/>
+            <name value="authored"/>
             <source>
                 <context value="src"/>
                 <element value="authored"/>
@@ -3565,7 +4649,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-186"/>
+            <name value="grp-obsn-subject"/>
             <source>
                 <context value="src"/>
                 <element value="subject"/>
@@ -3582,7 +4666,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-187"/>
+                <name value="grp-obsn-subj-ref"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="reference"/>
@@ -3599,7 +4683,7 @@
                 </target>
             </rule>
             <rule>
-                <name value="rule-188"/>
+                <name value="grp-obsn-subj-display"/>
                 <source>
                     <context value="qSubject"/>
                     <element value="display"/>
@@ -3617,7 +4701,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-189"/>
+            <name value="grp-obsn-code"/>
             <source>
                 <context value="src"/>
             </source>
@@ -3635,7 +4719,7 @@
             </target>
         </rule>
         <rule>
-            <name value="rule-190"/>
+            <name value="grp-obsn-has-member"/>
             <source>
                 <context value="bundle"/>
                 <element value="entry"/>
@@ -3652,7 +4736,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-191"/>
+                <name value="grp-obsn-has-member-reference"/>
                 <source>
                     <context value="entries"/>
                     <element value="resource"/>
@@ -3671,7 +4755,7 @@
             </rule>
         </rule>
         <rule>
-            <name value="rule-192"/>
+            <name value="grp-obsn-derived-from"/>
             <source>
                 <context value="src"/>
                 <element value="id"/>
@@ -3688,7 +4772,7 @@
                 </parameter>
             </target>
             <rule>
-                <name value="rule-193"/>
+                <name value="grp-obsn-derived-from-reference"/>
                 <source>
                     <context value="id"/>
                 </source>
@@ -3702,6 +4786,48 @@
                     </parameter>
                     <parameter>
                         <valueId value="id"/>
+                    </parameter>
+                </target>
+            </rule>
+        </rule>
+        <rule>
+            <name value="obsn-entry-request"/>
+            <source>
+                <context value="src"/>
+            </source>
+            <target>
+                <context value="entry"/>
+                <contextType value="variable"/>
+                <element value="request"/>
+                <variable value="request"/>
+            </target>
+            <rule>
+                <name value="obsn-request-method"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="request"/>
+                    <contextType value="variable"/>
+                    <element value="method"/>
+                    <transform value="copy"/>
+                    <parameter>
+                        <valueString value="POST"/>
+                    </parameter>
+                </target>
+            </rule>
+            <rule>
+                <name value="obsn-request-url"/>
+                <source>
+                    <context value="src"/>
+                </source>
+                <target>
+                    <context value="request"/>
+                    <contextType value="variable"/>
+                    <element value="url"/>
+                    <transform value="copy"/>
+                    <parameter>
+                        <valueString value="Observation"/>
                     </parameter>
                 </target>
             </rule>

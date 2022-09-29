@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationRaceOMB"/>
     <meta>
-        <versionId value="14"/>
-        <lastUpdated value="2022-06-28T15:21:43.618+00:00"/>
-        <source value="#0xBEIgKK1aPIVAwk"/>
+        <versionId value="16"/>
+        <lastUpdated value="2022-07-22T17:48:33.877+00:00"/>
+        <source value="#GREZoFoSWb9xb20X"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB"/>
     <name value="SDOHCCObservationRaceOMB"/>
@@ -147,6 +147,7 @@
             <path value="Observation.component.value[x]"/>
             <short value="Race category codes"/>
             <definition value="Office of Management and Budget (OMB) codes for race categories."/>
+            <requirements value="An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations. Note: The binding to [Race Category Excluding Nulls](https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113883.3.2074.1.1.3) is used in lieu of [US Core OMB Race Categories](http://hl7.org/fhir/us/core/ValueSet/omb-race-category) because the US Core value set includes null flavors."/>
             <min value="1"/>
             <type>
                 <code value="CodeableConcept"/>

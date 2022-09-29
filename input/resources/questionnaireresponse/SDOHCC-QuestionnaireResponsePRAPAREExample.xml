@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-QuestionnaireResponsePRAPAREExample"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2022-04-26T15:19:58.281+00:00"/>
-        <source value="#qcqGLjBmwpmuPEIL"/>
+        <versionId value="3"/>
+        <lastUpdated value="2022-09-14T19:18:58.305+00:00"/>
+        <source value="#3nQhq9rJHhkLXP7K"/>
         <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"/>
     </meta>
     <questionnaire value="http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-QuestionnairePRAPARE">
@@ -197,6 +197,13 @@
                         <system value="http://loinc.org"/>
                         <code value="LA30134-3"/>
                         <display value="Yes, it has kept me from non-medical meetings, appointments, work, or from getting things that I need"/>
+                    </valueCoding>
+                </answer>
+                <answer>
+                    <valueCoding>
+                        <system value="http://loinc.org"/>
+                        <code value="LA30133-5"/>
+                        <display value="Yes, it has kept me from medical appointments or from getting my medications"/>
                     </valueCoding>
                 </answer>
             </item>

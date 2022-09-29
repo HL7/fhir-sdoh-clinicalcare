@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Condition"/>
     <meta>
-        <versionId value="20"/>
-        <lastUpdated value="2022-04-07T00:03:49.786+00:00"/>
-        <source value="#3LRcAAgctJmznKbC"/>
+        <versionId value="23"/>
+        <lastUpdated value="2022-08-30T13:43:44.568+00:00"/>
+        <source value="#w2NX9ggeoO7TtL08"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
     <version value="0.1.0"/>
@@ -73,7 +73,6 @@
                 <human value="Can only have a max of one asserter."/>
                 <expression value="extension('http://hl7.org/fhir/us/sdoh-clinicalcare/extension-Condition.asserter').count()+asserter.count()&lt;=1"/>
                 <xpath value="true()"/>
-                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
             </constraint>
         </element>
         <element id="Condition.extension">
@@ -126,7 +125,7 @@
             <path value="Condition.category"/>
             <sliceName value="SDOH"/>
             <short value="e.g., food-insecurity | transportation-insecurity"/>
-            <definition value="A SDOH category assigned to the condition."/>
+            <definition value="An SDOH category assigned to the condition."/>
             <requirements value="Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a condition. It is recommended that SDOH category codes be used to facilitate searching for SDOH conditions."/>
             <binding>
                 <strength value="required"/>

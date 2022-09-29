@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ObservationAssessment"/>
     <meta>
-        <versionId value="16"/>
-        <lastUpdated value="2022-06-28T15:57:52.138+00:00"/>
-        <source value="#BmkdiInfIL3tZVFO"/>
+        <versionId value="17"/>
+        <lastUpdated value="2022-07-15T15:56:06.623+00:00"/>
+        <source value="#fTdeyjCrP270BOlu"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"/>
     <name value="SDOHCCObservationAssessment"/>
@@ -84,11 +84,11 @@
             </patternCodeableConcept>
             <mustSupport value="true"/>
         </element>
-        <element id="Observation.category:SDOHDomain">
+        <element id="Observation.category:SDOH">
             <path value="Observation.category"/>
-            <sliceName value="SDOHDomain"/>
+            <sliceName value="SDOH"/>
             <short value="e.g., food-insecurity | transportation-insecurity"/>
-            <definition value="A SDOH category assigned to the assigned to the assessent observation."/>
+            <definition value="An SDOH category assigned to the observation."/>
             <requirements value="Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to an observation. It is recommended that SDOH category codes be used to facilitate searching for SDOH observations."/>
             <mustSupport value="true"/>
             <binding>
