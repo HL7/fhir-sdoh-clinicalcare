@@ -75,7 +75,7 @@ The referral occurs between the Referral Source and the Referral Receiver.  The 
 
 #### Direct Referral Light
 
-The referral occurs between the Referral Source and the Referral Receiver where the Referral Receiver does not have a FHRI API (FHIR Server or FHIR Façade).  The Referral Receiver may be the Referral Performer or an Intermediary.  The exchange with the Referral Receiver is initiated via an email with a secure link to the Referral Source API that can be used by an application available to the Referral Receiver to communicate with the Referral Source using RESTful exchanges that read, create, and update resources via the Referral Source API.
+The referral occurs between the Referral Source and the Referral Receiver where the Referral Receiver does not have a FHIR API (FHIR Server or FHIR Façade).  The Referral Receiver may be the Referral Performer or an Intermediary.  The exchange with the Referral Receiver is initiated via an email with a secure link to the Referral Source API that can be used by an application available to the Referral Receiver to communicate with the Referral Source using RESTful exchanges that read, create, and update resources via the Referral Source API.
 
 <table><tr><td><img src="DirectReferralLightSF.jpg" /></td></tr></table>
 

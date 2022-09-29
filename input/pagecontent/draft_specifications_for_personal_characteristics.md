@@ -1,6 +1,6 @@
 ### Background
 
-Collection of personal characteristics data (e.g., Race and Ethnicity (R/E), gender identity, sexual orientation, recorded sex and gender, and personal pronouns) is important to achieving the goal of health equity. For example, the recent [Cross-Industry Coalition Health Equity Pledge to Address Disparities](https://www.businesswire.com/news/home/20211026005241/en/Cross-Industry-Coalition-of-Health-Care-Organizations-Sign-Health-Equity-Pledge-to-Address-Disparities), and the proposed new [Health Equity Accreditation from NCQA](https://www.ncqa.org/wp-content/uploads/2021/11/Overview-Memo-Health-Equity-Accreditation-Plus.pdf?utm_medium=email&utm_campaign=publiccomment&utm_source=sf&utm_term=20211109) (see page 3, HE 2) both include a focus on the collection of Race and Ethnicity (R/E) data.  
+Collection of personal characteristics data (e.g., Race and Ethnicity (R/E), gender identity, sexual orientation, recorded sex and gender, and personal pronouns) is important to achieving the goal of health equity. For example, the recent [Cross-Industry Coalition Health Equity Pledge to Address Disparities](https://www.businesswire.com/news/home/20211026005241/en/Cross-Industry-Coalition-of-Health-Care-Organizations-Sign-Health-Equity-Pledge-to-Address-Disparities), and the proposed NCQA race/ethnicity stratification approach "Episode 9, from June 22, 2021,  [Future of HEDIS presentation](https://www.ncqa.org/wp-content/uploads/2021/11/Overview-Memo-Health-Equity-Accreditation-Plus.pdf?utm_medium=email&utm_campaign=publiccomment&utm_source=sf&utm_term=20211109) (see slides 15-25) both include a focus on the collection of Race & Ethnicity (R/E) data.
 
 However, there are standards-based challenges for collection and exchange of personal characteristics data.  For example, some state insurance policies may require payers and/or providers to include R/E data in reporting and some states may require capturing the source (i.e., performer) and collection method for R/E data (e.g., the [Oregon Health Authority, Office of Equity and Inclusion Division 70, Race, Ethnicity, Language and Disability Demographic Data Collection Standards]( https://www.oregon.gov/oha/OEI/Policies/Race-Ethnicity-Language-Disability-Data-Collection-Standards.pdf) has rules and policy related to collection of R/E data.) 
 
@@ -63,6 +63,16 @@ Since 1997, self-reported collection of R/E in a two question format has been th
 Currently, federal policy allows visual observation of R/E in some situations but prohibits it in others (e.g., USDA Food and Nutrition Service policy [Collection of Race and Ethnicity Data by Visual Observation](https://www.fns.usda.gov/cn/Race-and-Ethnicity-Data-Policy-Rescission)). Although the IG value set provides “observed” as a collection method for the R/E profiles, there are concerns over the lack of reliability of “visual observation” of R/E. Therefore, the general recommendation is that R/E should be determined by attestation of the subject (or a related person in the event the subject is a minor or incapable of attesting) and the use of visual observation (i.e., “observed”) to determine R/E is generally discouraged. If future federal law or regulation completely prohibits visual observation of R/E, “observed” will be removed from the IG value set.
 
 In situations where an individual (e.g., a parent, guardian, caregiver, etc.) has legal authority on behalf of a subject, the complexity of whether R/E is “self-reported” versus “observed” versus “reported by related person” may need to be determined by policy at the local, state or federal level (e.g., [Department of Education](https://www.govinfo.gov/content/pkg/FR-2007-10-19/html/E7-20613.htm) pg. 59268, Section II C- Identification of Racial and Ethnic Categories and Missing Data).
+
+#### Guidance for use of Provenance with Race and Ethnicity Personal Characteristics
+
+There is a possibility that either or both the US Core Patient profile and Personal Characteristics observation profiles for race and ethnicity may have have provenance associated with them.  Since the Provenance resource only points to the resource instance that it is supporting (target), there is no way to determine which elements (if any) have been changed.  We suggest that provenance should be used in conjunction with this IG to determine one of the following:
+
+​	the author organization responsible for the information, and 
+
+​	the transmitter (e.g. provider, payer, etc.) that provided the informaton.  
+
+Additional guidance is provided in the [US Core 3.1.1 Basic Provenance Guidance](http://hl7.org/fhir/us/core/STU3.1.1/basic-provenance.html). 
 
 
 ### Testing Draft Specifications

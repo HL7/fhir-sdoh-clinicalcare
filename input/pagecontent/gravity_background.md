@@ -1,25 +1,26 @@
+### Why Social Determinants of Health Matter
+
 The influence of social determinants on health outcomes is increasingly recognized in emerging payment reform programs, federal and state-based policies, and information technology initiatives.  Social determinants of health (SDOH) are defined by the [World Health Organization](https://www.who.int/) as the conditions in which people are born, live, work, and age.  
 
 The growing awareness around SDOH has contributed to efforts to address actionable socioeconomic risk factors through the health care delivery system.  Recommendations from national groups, including the [American Academy of Pediatrics](https://www.aap.org/), [American Academy of Family Physicians](https://www.aafp.org/), [Agency for Healthcare Research and Quality](https://www.ahrq.gov/), [National Quality Forum (NQF)](https://www.qualityforum.org/), and [Institute for Health Care Improvement](http://www.ihi.org/) underscore the various roles the health care system could play in helping to identify and reduce patients social risk factors. 
 
 <table><tr><td><img src="Whatgoesintoyourhealth.jpg" /></td></tr></table>
-*Source: Institute for Clinical Systems Improvement, Going Beyond Clinical Walls: Solving Complex Problems (October 2014) Adapted from The Bridgespan Group*
+*Source: Institute for Clinical Systems Improvement, Going Beyond Clinical Walls: Solving Complex Problems (October 2014) Adapted from [The Bridgespan Group The Community Cure for Health Care](https://ssir.org/articles/entry/the_community_cure_for_health_care)*
 
-*Link: https://www.bridgespan.org/insights/library/public-health/the-community-cure-for-health-care-(1)*
-
-There is a growing awareness that SDOH information improves whole person care and lowers costs and unmet social needs negatively impact health outcomes. For example:
-* Food insecurity correlates to higher levels of diabetes, hypertension, and heart failure
+There is growing awareness that SDOH information improves whole person care, lowers costs, and that unmet social needs negatively impact health outcomes. For example:
+* Food insecurity correlates with higher levels of diabetes, hypertension, and heart failure
 * Housing instability factors into lower treatment adherence
 * Transportation barriers result in missed appointments, delayed care, and lower medication compliance
 
-Addressing SDOH is a primary approach to achieve health equity.
-* Link: https://www.cdc.gov/nchhstp/socialdeterminants/faq.html
+Addressing SDOH is a primary approach to achieve health equity. See National Center for HIV, Viral Hepatitis, STD, and TB Prevention (NCHHSTP) Social Determinants of Health, [Frequently Asked Questions](https://www.cdc.gov/nchhstp/socialdeterminants/faq.html) 
 
 These national calls to action for health care systems have spurred innovations, including a wide range of social risk screening tools and practice-based interventions.   Some of these innovations have helped to reduce social risks, improve health outcomes, and lower costs.   The experimentation in this area has been bolstered by new value-based payment models and accountable care organizations (ACOs), which together offer financial incentives to advance coordinated care between medical and social service organizations and other organizations directly connected to patients. 
 
+### Standardizing SDOH Exchange
+
 Many of the recent innovations in this area begin with the strategic collection of SDOH data.  As examples, the Centers for Medicare & Medicaid Services Innovation Center ([CMS Innovation Center](https://innovation.cms.gov/)) [Comprehensive Primary Care Plus Model](https://innovation.cms.gov/innovation-models/comprehensive-primary-care-plus) requires providers to assess patients' social risks, and the CMS Innovation Centers [Accountable Health Communities Model](https://innovation.cms.gov/innovation-models/ahcm) developed a social risk assessment tool to help identify and address social risks across clinical and community-based settings. 
 
-These emerging initiatives to collect SDOH data in health care settings present new challenges for national goals to standardize patient data recorded in electronic health records (EHRs).   Two Health Information Technology for Economic and Clinical Health Act ([HITECH](https://www.hhs.gov/hipaa/for-professionals/special-topics/hitech-act-enforcement-interim-final-rule/index.html)) programs require providers to use health IT systems that capture specific patient data in standardized formats to enable interoperable data exchange with other systems. 
+These emerging initiatives to collect SDOH data in health care settings present new challenges for national goals to standardize patient data recorded in electronic health records (EHRs).  Two Health Information Technology for Economic and Clinical Health Act ([HITECH](https://www.hhs.gov/hipaa/for-professionals/special-topics/hitech-act-enforcement-interim-final-rule/index.html)) programs require providers to use health IT systems that capture specific patient data in standardized formats to enable interoperable data exchange with other systems. 
 
 These programs require that EHRs use the United States Core Data for Interoperability [(USCDI)](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi) data classes and elements, including specific medical clinical terminologies codes, to represent concepts such as race, ethnicity, and preferred language, but they include limited requirements to represent social risk assessments and related social care interventions. As an example, the Office of the National Coordinator [(ONC) 2015 Edition](https://www.healthit.gov/topic/certification-ehrs/2015-edition) includes requirements for LOINC coding for financial resource strain, education, social connection and isolation, and exposure to violence (intimate partner violence). However, not all social risk factors are included in the [ONC 2015 Edition final rule](https://www.healthit.gov/topic/certification-ehrs/2015-edition). While much of the information needed to describe SDOH issues and interventions may be structured and coded, any standard designed to capture and exchange such data must include the ability to capture and exchange textual information.
 
@@ -28,9 +29,6 @@ The capture and exchange of interoperable data allows providers to share specifi
 Many payers have recently focused on collaborating with providers and local service agencies to stand up community programs that help individuals more easily navigate complex health care systems, provide more revenue to communities from both public and private sources, and support closed-loop referrals.  Programs to address SDOH have been launched during the past few years by [Kaiser Permanente](https://healthy.kaiserpermanente.org/), [UnitedHealthcare](https://www.uhc.com/) in partnership with the [American Medical Association](https://www.ama-assn.org/), [Anthem](https://www.anthem.com/), [Humana](https://www.humana.com/), [University of Pittsburgh Medical Center (UPMC) Health Plan](https://www.upmchealthplan.com/), [CareSource](https://www.caresource.com/), [Health Net](https://www.healthnet.com/), [Harvard, Pilgrim](https://www.harvardpilgrim.org/), [Blue Cross Blue Shield](https://www.bcbs.com/), [WellCare Health Plans](https://www.wellcare.com/), and others. 
 
 While there are significant benefits from capturing and exchanging SDOH information to improve health outcomes, it is important to be aware of the potential harms, limitations, or unknowns associated with such data collection and exchange, including the creation or worsening of inequities.  Implementers should consider strategies to mitigate these potential misuses wherever possible.  There are a number of articles that review these concerns and should be considered as part of any implementation efforts.  These articles include, as an example 1) [Integrating Social and Medical Care: Could it Worsen Health and Increase Inequity? by Laura M. Gottlieb, MD, MPH and Hugh Alderwick](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6342587/) and 2) [Uses and Misuses of Patient- and Neighborhood-level Social Determinants of Health Data by Laura M Gottlieb, MD, MPH, Damon E Francis, MD, and Andrew F Beck, MD](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6141653/).
-
-
-<br>
 
 ### Gravity Project Overview
 
@@ -44,7 +42,6 @@ The [HL7 FHIR Accelerator Program](http://www.hl7.org/about/fhir-accelerator/) i
 
 To join the [Gravity Project](http://www.hl7.org/gravity/) and contribute to the secure exchange of SDOH information signup on the [Gravity Project Confluence Site](https://confluence.hl7.org/display/GRAV/Join+the+Gravity+Project).
 
-<br>
 ### Gravity Project Challenge Statement
 
 The systematic documentation and aggregation of SDOH data in EHRs and related systems is limited due to the following: 
@@ -55,8 +52,3 @@ The systematic documentation and aggregation of SDOH data in EHRs and related sy
 4.	SDOH data is sensitive personal information with significant privacy and security considerations. As with all personal data, regulatory and policy considerations related to consent and exchange of this data should be adhered to.
 
 Based on the growing collection of social risk data in health care systems, an immediate opportunity exists to support data collection, data aggregation, data sharing, quality measurement, benchmarking, and risk adjustment.   Many assessment tools are currently in use, but the concepts addressed vary, and some tools merit further validation and testing across a variety of settings and clinical workflows.  Health IT can play a critical, untapped role in enabling the seamless electronic exchange and use of this data.  However, standardization and harmonization of SDOH concepts, regardless of the social risk assessment tool used, requires a consensus-based approach to maximize buy-in, consistency of implementation, and usefulness of data collected.
-
-
-### [USCDI V2.0](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi)
-
-The Gravity Project submitted a [request](https://www.healthit.gov/isa/uscdi-data/social-determinants-health#level-2) to ONC for the addition of SDOH activities and associated code systems to [USCDI V2.0](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#blocktabs-uscdi_data_class_element_list-2).   The request was reviewed and assigned a Level 2 (the highest level) for inclusion, but was not included in the draft version USCDI V2.0. Subsequent review by the assigned task force recommended the inclusion of the Gravity submission in the final USCDI V2.0.  At the time of the submission for this IG for publication, ONC has not announced the final content for USCDI V2.0

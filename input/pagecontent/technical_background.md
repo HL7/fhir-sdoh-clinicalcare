@@ -12,7 +12,7 @@ This implementation guide uses terminology, notations and design principles that
 * 	How to read [resource](http://www.hl7.org/fhir/resourcelist.html) & [profile](http://www.hl7.org/fhir/profiling.html) definitions
 * 	[Base resource](http://www.hl7.org/fhir/STU3/resource.html)
 
-Implementers should also be familiar with the following implementation guides utilized by this specification:
+Implementers should also be familiar with the following implementation guides used by this specification:
 
 * [US Core Profiles]({{site.data.fhir.ver.uscore}}/index.html)
 * [Structured Data Capture](http://hl7.org/fhir/us/sdc/) 

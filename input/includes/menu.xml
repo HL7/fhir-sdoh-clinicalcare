@@ -1,15 +1,13 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">IG Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
-  <li><a href="stu2_changes.html">STU2 Changes</a></li>
-
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
       <li><a href="gravity_background.html">Gravity Background</a></li>
-      <li><a href="sdoh_clinical_care_scope.html">SDOH Clinical Care Scope</a></li>
+      <li><a href="sdoh_clinical_care_background.html">SDOH Clinical Care Background</a></li>
       <li><a href="functional_use_cases.html">Functional Use Cases</a></li>
       <li><a href="technical_background.html">Technical Background</a></li>    </ul>
   </li>
@@ -38,5 +36,13 @@
   <li><a href="downloads.html">Downloads</a></li>
 
   <li><a href="credits.html">Credits</a></li>
-  <li><a href="artifacts.html">Artifact Index</a></li>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Change History<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="stu2_ballot_changes.html">STU2 Ballot Changes</a></li>
+      <li><a href="stu2_publication_changes.html">STU2 Publication Changes</a></li>    </ul>
+  </li>  <li><a href="artifacts.html">Artifact Index</a></li>
 </ul>
