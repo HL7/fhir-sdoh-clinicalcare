@@ -1,0 +1,500 @@
+/// name = "SDOHCC-PRAPARE-Map"
+/// status = draft
+
+map "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE" = "SDOHCCStructureMapPRAPARE"
+
+uses "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse" alias questionnaireResponse as source
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
+uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
+uses "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition" alias sdohccCondition as target
+uses "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse" alias sdohccObservation as target
+
+group sdohMapping(source src : questionnaireResponse, target bundle : Bundle) {
+  //temporarily set id to human-readable id as example
+  //src -> bundle.id = uuid();
+  src -> bundle.id = 'SDOHCC-BundlePRAPAREExample' "bundle-id";
+  src -> bundle.type = 'transaction' "bundle-type";
+    
+  //for each answer item in the questionnareResponse, create an Observation and add it to the groupObservation
+  src.item as rootItem -> bundle.entry as entry then 
+    rootContent(src, rootItem, bundle);
+
+  //create group observation containing all observations as hasMember
+  src -> bundle.entry as entry, entry.resource = create('sdohccObservation') as groupObservation then 
+    TransformGroupObservation(src, bundle, groupObservation, entry) "bundle-group-obsn";  
+}
+
+group rootContent(source qResponse: questionnaireResponse, source rootItem, target bundle) {
+  rootItem.item as groupItem -> bundle.entry as entry then 
+    groupContent(qResponse, groupItem, bundle);
+}
+
+group groupContent(source qResponse: questionnaireResponse, source groupItem, target bundle) {
+  groupItem.item as answerItem -> bundle.entry as entry then
+    itemContent(qResponse, answerItem, bundle);
+}
+
+group itemContent(source qResponse: questionnaireResponse, source answerItem, target bundle) {
+  //create a single Observation for questions that can only have one answer
+  answerItem where answerItem.linkId != '/93043-8/32624-9' and answerItem.linkId != '/93041-2/93031-3' and answerItem.linkId != '/93041-2/93030-5'-> bundle.entry as entry, entry.resource = create('sdohccObservation') as observation then 
+    TransformObservation(qResponse, answerItem, bundle, observation, entry, bundle) "obsn";
+
+  //create multiple Observations for each answer on questions that can have multiple answers (Question 2, 14 and 15)
+  answerItem.answer as answer where answerItem.linkId = '/93043-8/32624-9' or answerItem.linkId = '/93041-2/93031-3' or answerItem.linkId = '/93041-2/93030-5' -> bundle.entry as entry, entry.resource = create('sdohccObservation') as observation then 
+    TransformObservation(qResponse, answerItem, bundle, observation, entry, bundle),
+    SetValueCodeableConceptFromAnswer(answer, observation);
+}
+
+group SetValueCodeableConceptFromAnswer(source answer, target observation) {
+  answer -> observation.value = create('CodeableConcept') as newCC then {
+    answer.valueCoding as coding -> newCC.coding = coding as newCoding;
+  } "obsn-value";
+}
+
+group TransformObservation(source src: questionnaireResponse, source answerItem, source bundle, target observation: sdohccObservation, target entry, target bundle)
+{
+  src -> observation.id = uuid() then
+  	SetObservationFullUrl(observation, entry) "obsn-full-url";
+  src -> observation.status = 'final' "obsn-status";
+  src -> observation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'social-history', 'Social History') "obsn-cat-social-history";
+  src -> observation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'survey', 'Survey') "obsn-cat-survey";
+ 
+  src -> observation.meta = create('Meta') as newMeta then {
+    src -> newMeta.profile = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse' "obsn-meta-profile";
+  } "obsn-meta";
+
+  //set dates
+  src.authored as authored -> observation.issued = authored, observation.effective = authored;
+  
+  src.subject as qSubject -> observation.subject = create('Reference') as newReference then {
+    qSubject.reference as qReference -> newReference.reference = qReference;
+    qSubject.display as qDisplay -> newReference.display = qDisplay;
+  };
+  src.subject as qSubject -> observation.performer = create('Reference') as newReference then {
+    qSubject.reference as qReference -> newReference.reference = qReference;
+    qSubject.display as qDisplay -> newReference.display = qDisplay;
+  };  
+
+  src.id as id -> observation.derivedFrom = create('Reference') as newReference then {
+    id -> newReference.reference = append('QuestionnaireResponse/', id) "obsn-derived-from-reference";
+  } "obsn-derived-from";
+
+  //answerItem.answer as answer -> observation.id = uuid() then
+  //	SetValue(answer, observation);
+
+  //Set observation.code mapping for each corresponding answer
+
+  // 1. Ethnicity
+  answerItem where linkId = '/93043-8/56051-6' -> observation.code = cc('http://loinc.org', '56051-6') as code then 
+    SetValueCodeableConcept(answerItem, observation) "obsn-code-ethnicity";
+  answerItem where linkId = '/93043-8/56051-6' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'sdoh-category-unspecified' "obsn-cat-coding-code";
+      src -> newCoding.display = 'SDOH Category Unspecified' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 2. Race
+  //TBD: How to handle "Others" text?
+  answerItem where linkId = '/93043-8/32624-9' -> observation.code = cc('http://loinc.org', '32624-9') as code "obs-code-race";
+  answerItem where linkId = '/93043-8/32624-9' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'sdoh-category-unspecified' "obsn-cat-coding-code";
+      src -> newCoding.display = 'SDOH Category Unspecified' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 3. Farm Worker Status
+  answerItem where linkId = '/93043-8/93035-4' -> observation.code = cc('http://loinc.org', '93035-4') as code then
+    SetValueCodeableConcept(answerItem, observation) "obsn-code-farm-worker-status";
+  answerItem where linkId = '/93043-8/93035-4' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'sdoh-category-unspecified' "obsn-cat-coding-code";
+      src -> newCoding.display = 'SDOH Category Unspecified' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 4. Veteran Status
+  answerItem where linkId = '/93043-8/93034-7' -> observation.code = cc('http://loinc.org', '93034-7') as code then
+    SetValueCodeableConcept(answerItem, observation) "obsn-code-vet-status";
+  answerItem where linkId = '/93043-8/93034-7' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'veteran-status' "obsn-cat-coding-code";
+      src -> newCoding.display = 'Veteran Status' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";  
+  
+  // 5. English Proficiency
+  answerItem where linkId = '/93043-8/54899-0' -> observation.code = cc('http://loinc.org', '54899-0') as code then
+    SetValueCodeableConcept(answerItem, observation) "obsn-code-eng-prof";
+  answerItem where linkId = '/93043-8/54899-0' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'sdoh-category-unspecified' "obsn-cat-coding-code";
+      src -> newCoding.display = 'SDOH Category Unspecified' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 6. Household Size
+  answerItem where linkId = '/93042-0/63512-8' -> observation.code = cc('http://loinc.org', '63512-8') as code then {
+    answerItem.answer as answer -> observation.value = create('Quantity') as newQty then {
+      answer.value as vs -> newQty.value = vs "obsn-qty-value";
+      src -> newQty.unit = '{#}' "obsn-qty-unit";
+      src -> newQty.system = 'http://unitsofmeasure.org' "obsn-qty-system";
+      src -> newQty.code = '{#}' "obsn-qty-code";
+    } "obsn-value";
+  } "obsn-code-household-size";
+  answerItem where linkId = '/93042-0/63512-8' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'sdoh-category-unspecified' "obsn-cat-coding-code";
+      src -> newCoding.display = 'SDOH Category Unspecified' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 7. Housing
+  answerItem where linkId = '/93042-0/71802-3' -> observation.code = cc('http://loinc.org', '71802-3') as code then
+    SetValueCodeableConcept(answerItem, observation) "obsn-code-housing";
+  answerItem where linkId = '/93042-0/71802-3' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'homelessness' "obsn-cat-coding-code";
+      src -> newCoding.display = 'Homelessness' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 8. Housing Status
+  answerItem where linkId = '/93042-0/93033-9' -> observation.code = cc('http://loinc.org', '93033-9') as code then
+    SetValueCodeableConcept(answerItem, observation) "obsn-code-housing-status";
+  answerItem where linkId = '/93042-0/93033-9' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'housing-instability' "obsn-cat-coding-code";
+      src -> newCoding.display = 'Housing Instability' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 9. Neighborhood
+  answerItem where linkId = '/93042-0/56799-0' -> observation.code = cc('http://loinc.org', '56799-0') as code then
+    SetValue(answerItem, observation) "obsn-code-neighborhood";
+  answerItem where linkId = '/93042-0/56799-0' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'sdoh-category-unspecified' "obsn-cat-coding-code";
+      src -> newCoding.display = 'SDOH Category Unspecified' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 10. Education
+  answerItem where linkId = '/93041-2/82589-3' -> observation.code = cc('http://loinc.org', '82589-3') as code then
+    SetValueCodeableConcept(answerItem, observation) "obsn-code-education";
+  answerItem where linkId = '/93041-2/82589-3' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'educational-attainment' "obsn-cat-coding-code";
+      src -> newCoding.display = 'Educational Attainment' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 11. Employment
+  answerItem where linkId = '/93041-2/67875-5' -> observation.code = cc('http://loinc.org', '67875-5') as code then
+    SetValueCodeableConcept(answerItem, observation) "obsn-code-employment";
+  answerItem where linkId = '/93041-2/67875-5' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'employment-status' "obsn-cat-coding-code";
+      src -> newCoding.display = 'Employment Status' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 12. Insurance
+  answerItem where linkId = '/93041-2/76437-3' -> observation.code = cc('http://loinc.org', '76437-3') as code then
+    SetValueCodeableConcept(answerItem, observation) "obsn-code-insurance";
+  answerItem where linkId = '/93041-2/76437-3' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'health-insurance-coverage-status' "obsn-cat-coding-code";
+      src -> newCoding.display = 'Health Insurance Coverage Status' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 13. Household Income
+  answerItem where linkId = '/93041-2/63586-2' -> observation.code = cc('http://loinc.org', '63586-2') as code then {
+    answerItem.answer as answer -> observation.value = create('Quantity') as newQty then {
+      answer.value as vs -> newQty.value = vs "obsn-qty-value";
+      src -> newQty.unit = '/a' "obsn-qty-unit";
+      src -> newQty.system = 'http://unitsofmeasure.org' "obsn-qty-system";
+      src -> newQty.code = '/a' "obsn-qty-code";
+    } "obsn-value";
+  } "obsn-code-household-income";
+  answerItem where linkId = '/93041-2/63586-2' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'sdoh-category-unspecified' "obsn-cat-coding-code";
+      src -> newCoding.display = 'SDOH Category Unspecified' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";  
+
+  // 14. Material Security
+  answerItem where linkId = '/93041-2/93031-3' -> observation.code = cc('http://loinc.org', '93031-3') as code "obsn-code-material-security";
+  // answer: Food
+  answerItem where linkId = '/93041-2/93031-3' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'material-hardship' "obsn-cat-coding-code";
+      src -> newCoding.display = 'Material Hardship' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+  
+  // 15. Transportation
+  answerItem where linkId = '/93041-2/93030-5' -> observation.code = cc('http://loinc.org', '93030-5') as code "obsn-code-transportation";
+  answerItem where linkId = '/93041-2/93030-5' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'transportation-insecurity' "obsn-cat-coding-code";
+      src -> newCoding.display = 'Transportation Insecurity' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 16. Social Integration
+  answerItem where linkId = '/93040-4/93029-7' -> observation.code = cc('http://loinc.org', '93029-7') as code then
+    SetValueCodeableConcept(answerItem, observation) "obsn-code-soc-integ";
+  answerItem where linkId = '/93040-4/93029-7' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'social-connection' "obsn-cat-coding-code";
+      src -> newCoding.display = 'Social Connection' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 17. Stress
+  answerItem where linkId = '/93040-4/93038-8' -> observation.code = cc('http://loinc.org', '93038-8') as code then
+    SetValueCodeableConcept(answerItem, observation) "obsn-code-stress";
+  answerItem where linkId = '/93040-4/93038-8' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'stress' "obsn-cat-coding-code";
+      src -> newCoding.display = 'Stress' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 18. Incarceration
+  answerItem where linkId = '/93039-6/93028-9' -> observation.code = cc('http://loinc.org', '93028-9') as code then
+    SetValueCodeableConcept(answerItem, observation) "obsn-code-incarceration";
+  answerItem where linkId = '/93039-6/93028-9' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'sdoh-category-unspecified' "obsn-cat-coding-code";
+      src -> newCoding.display = 'SDOH Category Unspecified' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 19. Refugee
+  answerItem where linkId = '/93039-6/93027-1' -> observation.code = cc('http://loinc.org', '93027-1') as code then
+    SetValueCodeableConcept(answerItem, observation) "obsn-code-refugee";
+  answerItem where linkId = '/93039-6/93027-1' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'sdoh-category-unspecified' "obsn-cat-coding-code";
+      src -> newCoding.display = 'SDOH Category Unspecified' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 20. Safety
+  answerItem where linkId = '/93039-6/93026-3' -> observation.code = cc('http://loinc.org', '93026-3') as code then
+    SetValueCodeableConcept(answerItem, observation) "obsn-code-safety";
+  answerItem where linkId = '/93039-6/93026-3' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'sdoh-category-unspecified' "obsn-cat-coding-code";
+      src -> newCoding.display = 'SDOH Category Unspecified' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  // 21. Domestic Violence
+  answerItem where linkId = '/93039-6/76501-6' -> observation.code = cc('http://loinc.org', '76501-6') as code then
+    SetValueCodeableConcept(answerItem, observation) "obsn-code-dom-violence";
+  answerItem where linkId = '/93039-6/76501-6' -> observation.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsn-cat-coding-system";
+      src -> newCoding.code = 'intimate-partner-violence' "obsn-cat-coding-code";
+      src -> newCoding.display = 'Intimate Partner Violence' "obsn-cat-coding-display";
+    } "obsn-cat-coding";
+  } "obsn-cat";
+
+  //create a Condition if homeless
+  answerItem where linkId = '/93042-0/71802-3' and answer.valueCoding.code ='LA30190-5' -> bundle.entry as entry, entry.resource = create('sdohccCondition') as condition then
+    TransformCondition(src, bundle, condition, entry), SetConditionCodeAndEvidence1(src, bundle, condition) "condition-homeless";
+
+  //create a Condition if unemployed
+  answerItem where linkId = '/93041-2/67875-5' and answer.valueCoding.code ='LA17956-6' -> bundle.entry as entry, entry.resource = create('sdohccCondition') as condition then
+    TransformCondition(src, bundle, condition, entry), SetConditionCodeAndEvidence2(src, bundle, condition) "condition-unemployed";
+
+  src -> entry.request as request then {
+    src -> request.method = 'POST' "obsn-request-method";
+    src -> request.url = 'Observation' "obsn-request-url";
+  } "obsn-entry-request";    
+}
+
+group SetValue(source answerItem, target observation) {
+  answerItem.answer as answer -> observation.id as id then {
+    answer.value as vs -> observation.value = vs;
+  };
+}
+
+group SetValueCodeableConcept(source src, target observation) {
+  src.answer as answer -> observation.value = create('CodeableConcept') as newCC then {
+    answer.valueCoding as coding -> newCC.coding = coding as newCoding;
+  };
+}
+
+group SetValuesToComponents(source answerItem, source srcObservation, target observation) {
+  answerItem.answer as answer -> observation.component as newComponent, newComponent.value = create('CodeableConcept') as newCC then {
+    answer.valueCoding as coding -> newCC.coding = coding as newCoding;
+    srcObservation.code as code ->  newComponent.code = code;
+  };
+}
+
+group SetObservationFullUrl(source observation: Observation, target entry)
+{
+  observation.id as id -> entry.fullUrl = append('http://hl7.org/fhir/us/sdoh-clinicalcare/Observation/', id);
+}
+
+group TransformCondition(source src: questionnaireResponse, source bundle, target condition: sdohccCondition, target entry)
+{
+  src -> condition.id = uuid() then
+    SetConditionFullUrl(condition, entry) "condition-full-url";
+
+  src -> condition.meta = create('Meta') as newMeta then {
+    src -> newMeta.profile = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition' "condition-meta-profile";
+  } "conditionMeta";
+
+  src -> condition.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical', 'active', 'Active') "condition-clinical-status";
+  src -> condition.verificationStatus = cc('http://terminology.hl7.org/CodeSystem/condition-ver-status', 'unconfirmed', 'Unconfirmed') "condition-verification-status";
+
+  src -> condition.category = create('CodeableConcept') as newCC then {
+    src -> newCC.coding = create('Coding') as newCoding then {
+      src -> newCoding.system = 'http://hl7.org/fhir/us/core/CodeSystem/condition-category' "condition-cat-coding-system";
+      src -> newCoding.code = 'health-concern' "condition-cat-coding-code";
+      src -> newCoding.display = 'Health Concern' "condition-cat-coding-display";
+    } "condition-cat-coding";
+  } "condition-cat";
+    
+  src.authored as authored -> condition.onset = create('Period') as period,
+    period.start = authored "condition-onset";
+
+  src.subject as qSubject -> condition.subject = create('Reference') as newReference then {
+    qSubject.reference as qReference -> newReference.reference = qReference;
+    qSubject.display as qDisplay -> newReference.display = qDisplay;
+  };
+
+  src.subject as qSubject -> condition.asserter = create('Reference') as newReference then {
+    qSubject.reference as qReference -> newReference.reference = qReference;
+    qSubject.display as qDisplay -> newReference.display = qDisplay;
+  };
+
+  src -> entry.request as request then {
+    src -> request.method = 'POST' "condition-request-method";
+    src -> request.url = 'Condition' "condition-request-url";
+  } "condition-entry-request";    
+}
+
+group SetConditionFullUrl(source condition: sdohccCondition, target entry)
+{
+  condition.id as id -> entry.fullUrl = append('http://hl7.org/fhir/us/sdoh-clinicalcare/Condition/', id);
+}
+
+group SetConditionCodeAndEvidence1(source src: questionnaireResponse, source bundle, target condition)
+{
+  src -> condition.code = create('CodeableConcept') as newCodeCC then {
+      src -> newCodeCC.coding = create('Coding') as newCoding then {
+        src -> newCoding.system = 'http://snomed.info/sct' "condition-code-coding-system";
+        src -> newCoding.code = '32911000' "condition-code-coding-code";
+        src -> newCoding.display = 'Homeless' "condition-code-coding-display";
+    } "condition-coding";
+    src -> newCodeCC.coding = create('Coding') as newCoding2 then {
+        src -> newCoding2.system = 'http://hl7.org/fhir/sid/icd-10-cm' "condition-code-coding-system";
+        src -> newCoding2.code = 'Z59.0' "condition-code-coding-code";
+        src -> newCoding2.display = 'Homelessness' "condition-code-coding-display";
+    } "condition-coding";
+  } "condition-code"; 
+  
+  //Add sdoh category
+  src -> condition.category = create('CodeableConcept') as newCC then {
+      src -> newCC.coding = create('Coding') as newCoding then {
+        src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "condition-cat-coding-system";
+        src -> newCoding.code = 'homelessness' "condition-cat-coding-code";
+        src -> newCoding.display = 'Homelessness' "condition-cat-coding-display";
+    } "condition-cat-coding";
+  } "condition-cat";  
+
+  bundle.entry as entries -> condition.evidence as evidence, evidence.detail = create('Reference') as detailReference then {
+  	entries.resource as obs where code.coding.code = '71802-3'-> detailReference.reference = reference(obs) "condition-evidence"; 
+  };
+}
+
+group SetConditionCodeAndEvidence2(source src: questionnaireResponse, source bundle, target condition)
+{
+  src -> condition.code = create('CodeableConcept') as newCodeCC then {
+      src -> newCodeCC.coding = create('Coding') as newCoding then {
+        src -> newCoding.system = 'http://snomed.info/sct' "condition-code-coding-system";
+        src -> newCoding.code = '73438004' "condition-code-coding-code";
+        src -> newCoding.display = 'Unemployed' "condition-code-coding-display";
+    } "condition-coding";
+    src -> newCodeCC.coding = create('Coding') as newCoding2 then {
+        src -> newCoding2.system = 'http://hl7.org/fhir/sid/icd-10-cm' "condition-code-coding-system";
+        src -> newCoding2.code = 'Z56.0' "condition-code-coding-code";
+        src -> newCoding2.display = 'Unemployment, unspecified' "condition-code-coding-display";
+    } "condition-coding";
+  } "condition-code"; 
+  //Add sdoh category
+  src -> condition.category = create('CodeableConcept') as newCC then {
+      src -> newCC.coding = create('Coding') as newCoding then {
+        src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "condition-cat-coding-system";
+        src -> newCoding.code = 'employment-status' "condition-cat-coding-code";
+        src -> newCoding.display = 'Employment Status' "condition-cat-coding-display";
+    } "condition-cat-coding";
+  }"condition-cat";  
+  bundle.entry as entries -> condition.evidence as evidence, evidence.detail = create('Reference') as detailReference then {
+  	entries.resource as obs where code.coding.code = '67875-5'-> detailReference.reference = reference(obs)  "condition-evidence"; 
+  };
+}
+
+group TransformGroupObservation(source src: questionnaireResponse, source bundle:Bundle, target groupObservation: Observation, target entry)
+{
+  src -> groupObservation.id = uuid() then
+    SetObservationFullUrl(groupObservation, entry) "grp-obsnFullUrl"; 
+  src -> groupObservation.status = 'final' "grp-obsn-status"; 
+  src -> groupObservation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'social-history', 'Social History') "grp-obsn-cat-social-history";
+  src -> groupObservation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'survey', 'Survey') "grp-obsn-cat-survey";
+
+  src -> groupObservation.meta = create('Meta') as newMeta then {
+    src -> newMeta.profile = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse' "grp-obsn-meta-profile";
+  } "grpObsMeta"; 
+
+  src.authored as authored -> groupObservation.effective = authored;
+  src.subject as qSubject -> groupObservation.subject = create('Reference') as newReference then {
+    qSubject.reference as qReference -> newReference.reference = qReference "grp-obsn-subj-ref";
+    qSubject.display as qDisplay -> newReference.display = qDisplay "grp-obsn-subj-display";
+  } "grp-obsn-subject";  
+
+  src -> groupObservation.code = cc('http://loinc.org', '93025-5') "grp-obsn-code";   
+
+  //only add observations that are derived from the answers
+  bundle.entry as entries -> groupObservation.hasMember = create('Reference') as df then {
+    entries.resource as obs where status.exists() and hasMember.exists().not() -> df.reference = reference(obs) "grp-obsn-has-member-reference"; 
+  } "grp-obsn-has-member";
+
+  src.id as id -> groupObservation.derivedFrom = create('Reference') as newReference then {
+    id -> newReference.reference = append('QuestionnaireResponse/', id) "grp-obsn-derived-from-reference";
+  } "grp-obsn-derived-from";
+
+  src -> entry.request as request then {
+    src -> request.method = 'POST' "obsn-request-method";
+    src -> request.url = 'Observation' "obsn-request-url";
+  } "obsn-entry-request";    
+}
