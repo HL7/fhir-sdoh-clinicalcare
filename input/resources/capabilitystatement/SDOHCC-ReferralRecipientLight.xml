@@ -253,6 +253,26 @@
               <td/>
             </tr>
             <tr>
+              <th>Procedure</th>
+              <td>
+                <a title="Allows the referral recipient to check if others have updated (e.g. added comments) to procedures previously posted and/or to find previously submitted procedures so they can be rendered to a user." href="#Procedure-search-type">SHOULD</a>
+              </td>
+              <td>
+                <a title="Allows the referral recipient to retrieve procedures referenced by Tasks previously posted." href="#Procedure-read">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+              <td/>
+              <td>
+                <a title="Allows the system to write records of procedures done in response to a referral on the system that asked for the referral." href="#Procedure-create">SHALL</a>
+              </td>
+              <td>
+                <a title="Allows the system to update records of procedures done in response to a referral on the system that asked for the referral." href="#Procedure-update">SHALL</a>
+              </td>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
               <th>RelatedPerson</th>
               <td>
                 <a title="Allows the monitoring of previously-retrieved RelatedPersons that are the requester or intended performer of ServiceRequests." href="#RelatedPerson-search-type">MAY</a>
@@ -1382,6 +1402,148 @@
               <td>reference</td>
               <td>
                 <p>Allows doing an _include on Practitioner when retrieving the PractitionerRole</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div><br/><br/><h3>
+        <a href="{{site.data.fhir.path}}procedure.html">Procedure</a>
+      </h3><p>Supported Profile(s):</p><ul>
+        <li>
+          <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure</a> SHALL</li>
+      </ul><h4>Behavior</h4><p>Versioning support: versioned-update</p><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Conformance</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <a name="Procedure-create"> </a>
+                <span>create</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows the system to write records of procedures done in response to a referral on the system that asked for the referral.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Procedure-update"> </a>
+                <span>update</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows the system to update records of procedures done in response to a referral on the system that asked for the referral.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Procedure-read"> </a>
+                <span>read</span>
+              </th>
+              <td>SHALL</td>
+              <td>
+                <p>Allows the referral recipient to retrieve procedures referenced by Tasks previously posted.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a name="Procedure-search-type"> </a>
+                <span>search-type</span>
+              </th>
+              <td>SHOULD</td>
+              <td>
+                <p>Allows the referral recipient to check if others have updated (e.g. added comments) to procedures previously posted and/or to find previously submitted procedures so they can be rendered to a user.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div><h4>Search</h4><div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Conformance</th>
+              <th>Type</th>
+              <th>Definition &amp; Chaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>_id</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows retrieving known Procedure records - and more specifically, retrieving more than one in a single call to poll for updates</p>
+              </td>
+            </tr>
+            <tr>
+              <th>_lastUpdated</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for only records that have changed since last query</p>
+              </td>
+            </tr>
+            <tr>
+              <th>based-on</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering for procedures resulting from a particular service request</p>
+              </td>
+            </tr>
+            <tr>
+              <th>category</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for procedures that are SDOH-related</p>
+              </td>
+            </tr>
+            <tr>
+              <th>code</th>
+              <td>SHOULD</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for procedures based on the specific service delivered</p>
+              </td>
+            </tr>
+            <tr>
+              <th>date</th>
+              <td>SHOULD</td>
+              <td>date</td>
+              <td>
+                <p>Allows filtering for procedures based on when they were delivered</p>
+              </td>
+            </tr>
+            <tr>
+              <th>patient</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering for procedures based on who they were delivered to.  Some systems may require that all searches be patient-specific.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>performer</th>
+              <td>SHALL</td>
+              <td>reference</td>
+              <td>
+                <p>Allows filtering for procedures based on who delivered the procedure.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>status</th>
+              <td>SHALL</td>
+              <td>token</td>
+              <td>
+                <p>Allows filtering for procedures that are complete or in progress</p>
               </td>
             </tr>
           </tbody>
@@ -2604,6 +2766,126 @@
         <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner"/>
         <type value="reference"/>
         <documentation value="Allows doing an _include on Practitioner when retrieving the PractitionerRole"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Procedure"/>
+      <supportedProfile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+      </supportedProfile>
+      <documentation value="Used to record information about actions that have been performed as a result of a referral"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+        <documentation value="Allows the system to write records of procedures done in response to a referral on the system that asked for the referral."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="update"/>
+        <documentation value="Allows the system to update records of procedures done in response to a referral on the system that asked for the referral."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows the referral recipient to retrieve procedures referenced by Tasks previously posted."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows the referral recipient to check if others have updated (e.g. added comments) to procedures previously posted and/or to find previously submitted procedures so they can be rendered to a user."/>
+      </interaction>
+      <versioning value="versioned-update"/>
+      <referencePolicy value="literal"/>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Allows retrieving known Procedure records - and more specifically, retrieving more than one in a single call to poll for updates"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for only records that have changed since last query"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="based-on"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Procedure-based-on"/>
+        <type value="reference"/>
+        <documentation value="Allows filtering for procedures resulting from a particular service request"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="category"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Procedure-category"/>
+        <type value="token"/>
+        <documentation value="Allows filtering for procedures that are SDOH-related"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
+        <type value="token"/>
+        <documentation value="Allows filtering for procedures based on the specific service delivered"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
+        <type value="date"/>
+        <documentation value="Allows filtering for procedures based on when they were delivered"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+        <type value="reference"/>
+        <documentation value="Allows filtering for procedures based on who they were delivered to.  Some systems may require that all searches be patient-specific."/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="performer"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Procedure-performer"/>
+        <type value="reference"/>
+        <documentation value="Allows filtering for procedures based on who delivered the procedure."/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Procedure-status"/>
+        <type value="token"/>
+        <documentation value="Allows filtering for procedures that are complete or in progress"/>
       </searchParam>
     </resource>
     <resource>

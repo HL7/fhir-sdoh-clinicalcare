@@ -263,12 +263,8 @@
               <td/>
               <td/>
               <td/>
-              <td>
-                <a title="Allows the system to write records of procedures done in response to a referral on the system that asked for the referral." href="#Procedure-create">SHALL</a>
-              </td>
-              <td>
-                <a title="Allows the system to update records of procedures done in response to a referral on the system that asked for the referral." href="#Procedure-update">SHALL</a>
-              </td>
+              <td/>
+              <td/>
               <td/>
               <td/>
             </tr>
@@ -1451,26 +1447,6 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th>
-                <a name="Procedure-create"> </a>
-                <span>create</span>
-              </th>
-              <td>SHALL</td>
-              <td>
-                <p>Allows the system to write records of procedures done in response to a referral on the system that asked for the referral.</p>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a name="Procedure-update"> </a>
-                <span>update</span>
-              </th>
-              <td>SHALL</td>
-              <td>
-                <p>Allows the system to update records of procedures done in response to a referral on the system that asked for the referral.</p>
-              </td>
-            </tr>
             <tr>
               <th>
                 <a name="Procedure-read"> </a>
@@ -5488,20 +5464,6 @@
         </extension>
       </supportedProfile>
       <documentation value="Used to access information from downstream systems about actions that have been performed as a result of a referral"/>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="create"/>
-        <documentation value="Allows the system to write records of procedures done in response to a referral on the system that asked for the referral."/>
-      </interaction>
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
-        </extension>
-        <code value="update"/>
-        <documentation value="Allows the system to update records of procedures done in response to a referral on the system that asked for the referral."/>
-      </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL"/>
