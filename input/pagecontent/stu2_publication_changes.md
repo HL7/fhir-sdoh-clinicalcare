@@ -163,8 +163,8 @@ Added CapabilityStatement
 ### Documentation
 
 * [Home Page](index.html) – added reference to new content
-* [STU2 Changes](stu2_changes.html) – this page
-* [Functional Use Cases](functional_use_cases.html) – added Patient/Client use case (FHIR-34255) (FHIR-34255)
+* [STU2 Changes](stu2_ballot_changes.html) – this page
+* [Functional Use Cases](functional_use_cases.html) – added Patient/Client use case (FHIR-34255) (https://jira.hl7.org/browse/FHIR-34255)
 * [Support for Multiple Domains](support_for_multiple_domains.html) – added support for VSAC group value sets (FHIR-34236)
 * [Exchange Workflow](exchange_workflow.html) – added new workflow for Patient/Client and CBO applications (FHIR-34255) (FHIR-34256)
 * [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html) -- new (FHIR-34255)

@@ -159,17 +159,17 @@ Changed name and updated content
 
 Added CapabilityStatement
 
-* [SDOHCC Patient Application](CapabilityStatement-SDOHCC-PatientApp.html) [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255)
+* [SDOHCC Patient Application](CapabilityStatement-SDOHCC-PatientApp.html) [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255)  
 
 
 
 ### Documentation
 
 * [Home Page](index.html) – added reference to new content
-* [STU2 Ballot Changes](stu2 ballot_changes.html) – this page
-* [Functional Use Cases](functional_use_cases.html) – added Patient/Client use case [FHIR-34255](FHIR-34255)(https://jira.hl7.org/browse/FHIR-34255)
+* [STU2 Ballot Changes](stu2_ballot_changes.html) – this page
+* [Functional Use Cases](functional_use_cases.html) – added Patient/Client use case [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255)
 * [Support for Multiple Domains](support_for_multiple_domains.html) – added support for VSAC group value sets [FHIR-34236](https://jira.hl7.org/browse/FHIR-34236)
-* [Exchange Workflow](exchange_workflow.html) – added new workflow for Patient/Client and CBO applications [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255), [FHIR-34256](https://jira.hl7.org/browse/FHIR-34256)
+* [Exchange Workflow](exchange_workflow.html) – added new workflow for Patient/Client and CBO applications [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255), [FHIR-34256](https://jira.hl7.org/browse/FHIR-34256) 
 * [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html) -- new [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255)
 * [FHIR Artifacts Overview](fhir_artifacts_overview.html) – updated to refer to new or changed artifacts
 * [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)-- new [FHIR-34339](https://jira.hl7.org/browse/FHIR-34239)
