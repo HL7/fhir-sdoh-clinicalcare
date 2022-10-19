@@ -1,18 +1,47 @@
+### Use of Task Status
+
+Task.status enables the exchange of information related to the request for and progress related to addressing a ServiceRequest. The value sets for the Referral Task status and the Patient Task status are different due to the purpose of the exchange between the requesting entity and the intermediary or performing entity (Referral Task) vs the exchange with the patient (Patient Task).
+
+#### Referral Task Status
+
+The [referral task status](http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement) utilizes the full set of values defined by the base resource as enumerated in the table below:
+
+<table><tr><td><img src="ReferralTaskStatus.jpg" /></td></tr></table>
+
+The status values allow for a complete flow of the task in both the requesting and performing systems.
+
+The allowed state transitions are defined graphically in the state diagram below.
+
+<table><tr><td><img src="ReferralTaskStateDiagram.jpg" /></td></tr></table>
+
+#### Patient Task Status
+
+The [patient task status](http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient) utilizes a subset of the values defined by the base resource as enumerated in the table below:
+
+<table><tr><td><img src="PatientTaskStatus.jpg" /></td></tr></table>
+
+The status values constrain the task to specific states that are required to support communication with a patient application.
+
+The allowed state transitions are defined graphically in the state diagram below.
+
+<table><tr><td><img src="PatientTaskStateDiagram.jpg" /></td></tr></table>
+
+In addition to a limited set of status values, the patient application is only permitted to modify a specific set of elements in responding to the task request.  These elements include: .Status, .StatusReason, and .Output.  All other elements are outside of the scope of this IG. The patient application cannot modify the status of the referral task, that can only be done by the requester and the performing or intermediary entity.
+
 ### Checking Task Status
-The Gravity workflow around referrals involves all parties involved being aware of when relevant Tasks and associated ServiceRequests have been created and/or updated.
-In most cases, the Tasks will reside within the EHR system of the initiating practitioner.  In this case, the EHR will always be aware when the Task is updated, so
-the challenge of monitoring Tasks will fall solely on the service delivery organization.  However, the Gravity workflow also supports Tasks being posted to an
-intermediary organization that is responsible for managing the referral fulfillment process.  In these circumstances, both EHR and service delivery organizations will
-need to monitor for changes to Tasks.
+
+The Gravity workflow around referrals involves all parties being aware of when relevant Tasks and associated ServiceRequests have been created and/or updated. In most cases, the Tasks will reside within the EHR system of the initiating practitioner.  In this case, the EHR will always be aware when the Task is updated, so the challenge of monitoring Tasks will fall solely on the service delivery organization.  However, the Gravity workflow also supports Tasks being posted to an intermediary organization that is responsible for managing the referral fulfillment process.  In these circumstances, both EHR and service delivery organizations will need to monitor for changes to Tasks.
 
 The specific types of events to be monitored for include:
 **Service Delivery Organizations**
+
 * A new Task has been assigned to the organization
 * A new Task that is unassigned - but which is seeking action within the organization's purview has been created
 * A ServiceRequest associated with a Task assigned to the organization has been modified
 * A ServiceRequest associated with a Task assigned to the organization has been cancelled
 
 **EHR systems**
+
 * An assigned Task has been accepted or rejected
 * An unassigned Task has now been assigned
 * Outputs have been added to a Task
@@ -22,10 +51,8 @@ The specific types of events to be monitored for include:
 There are two mechanisms for detecting the above changes - polling and subscriptions.
 
 #### Polling
-In this mode, the system needing information (the 'client') occasionally queries the system maintaining the relevant Tasks and/or ServiceRequests to see if there is
-anything 'new'.  Clients may need to perform queries against multiple clients if not all relevant Tasks and ServiceRequests will be maintained on the same server.
-To poll, the client will perform a [search]({{site.data.fhir.path}}search.html) for Tasks that are filtered to those either owned by or requested by the searching organization.
-The search would also filter to only include those Tasks that had been created or changed since the server last looked.
+
+In this mode, the system needing information (the 'client') occasionally queries the system maintaining the relevant Tasks and/or ServiceRequests to see if there is anything 'new'.  Clients may need to perform queries against multiple clients if not all relevant Tasks and ServiceRequests will be maintained on the same server. To poll, the client will perform a [search]({{site.data.fhir.path}}search.html) for Tasks that are filtered to those either owned by or requested by the searching organization. The search would also filter to only include those Tasks that had been created or changed since the server last looked.
 E.g.
 
 ```[base]/Task?owner=Organization/123&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
@@ -37,15 +64,11 @@ The time-stamp specified would be the search result returned from the last searc
 OPEN ISSUE: Are the organizations in question going to have RESTful ids on the server that holds the tasks or do we need to change this to:
 ```[base]/Task?owner:identifier=http%3A%2F%2Fsomeorganization%2Fsome%2Fidentifier%2Fsystem|123&_lastupdated=2021-05-03T17:23:18.1732-04:00```
 
-If unassigned Tasks are possible - i.e. where the organization to perform the service isn't pre-identified and is open to whoever wishes to claim the Task and perform it -
-organizations interested in examining Tasks available to claim would poll as follows:
+If unassigned Tasks are possible - i.e. where the organization to perform the service isn't pre-identified and is open to whoever wishes to claim the Task and perform it - organizations interested in examining Tasks available to claim would poll as follows:
 
 ```[base]/Task?owner:missing=true&status=requested&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
 
-The frequency of polling needs to be often enough to allow for timely response to changes, while not imposing too high a requirement on system performance.
-For Gravity, systems that use polling SHALL check for new/updated information at least once per business day and SHOULD check for information at least once per hour during
-normal hours of operation.  Systems SHOULD NOT query more often than every 15 minutes unless there is an urgent change they are monitoring for.
-
+The frequency of polling needs to be often enough to allow for timely response to changes, while not imposing too high a requirement on system performance. For Gravity, systems that use polling SHALL check for new/updated information at least once per business day and SHOULD check for information at least once per hour during normal hours of operation.  Systems SHOULD NOT query more often than every 15 minutes unless there is an urgent change they are monitoring for.
 #### Subscription
 In the subscription mechanism, instead of the client system regularly querying the server to see if there are new Tasks or changes to existing Tasks, the client creates a
 Subscription instance on the server that indicates that it wants to be notified about changes to Tasks and, in the Subscription, provides filters that describe what

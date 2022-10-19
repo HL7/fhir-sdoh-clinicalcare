@@ -50,7 +50,6 @@ The FHIR Value Sets defined by the SDOH ClinicalCare IG are hyperlinked from thi
 | [SDOHCC ValueSet Task Code]( ValueSet-SDOHCC-ValueSetTaskCode.html) | specific codes from [SDOHCC CodeSystem Temporary Codes ](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html) and [SDC TaskCode]( http://hl7.org/fhir/uv/sdc/CodeSystem/temp) code system | [ SDOHCC Task For Patient](StructureDefinition-SDOHCC-TaskForPatient.html) |
 | [SDOHCC ValueSet SDOH Questionnaire Category]( ValueSet-SDOHCC-ValueSetSDOHQuestionnaireCategory.html) | specific codes from [SDOHCC CodeSystem Temporary Codes ](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html) | [ SDOHCC Task For Patient](StructureDefinition-SDOHCC-TaskForPatient.html) |
 | [SDOHCC ValueSet Observation DataAbsentReason]( ValueSet-SDOHCC-ValueSetObservationDataAbsentReason.html) | specific codes from the [HL7 DataAbsentReason](http://hl7.org/fhir/R4/codesystem-data-absent-reason.html) value set | [ SDOHCC Observation Ethnicity OMB](StructureDefinition-SDOHCC-ObservationEthnicityOMB.html) and [ SDOHCC Observation Race OMB](StructureDefinition-SDOHCC-ObservationRaceOMB.html) |
-| [SDOHCC ValueSet 211 LA County]( ValueSet-SDOHCC-ValueSet211LACounty.html) | specific codes from the 211 LA County Taxonomy| [SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html), and [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html) |
 
 
 
