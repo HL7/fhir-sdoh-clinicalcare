@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ServiceRequest"/>
     <meta>
-        <versionId value="27"/>
-        <lastUpdated value="2022-09-16T14:23:06.589+00:00"/>
-        <source value="#SdcnaT1nvgvY2DIE"/>
+        <versionId value="28"/>
+        <lastUpdated value="2022-10-19T17:02:29.639+00:00"/>
+        <source value="#xW9slociYJaAOJCX"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"/>
     <version value="0.1.0"/>
@@ -164,31 +164,6 @@
                 <strength value="required"/>
                 <description value="Codes for tests or services that can be carried out by a designated individual, organization or healthcare service."/>
                 <valueSet value="http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code"/>
-            </binding>
-        </element>
-        <element id="ServiceRequest.code.coding">
-            <path value="ServiceRequest.code.coding"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="$this"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.&#xD;&#xA;&#xD;&#xA;Where more than one coding is used, the codings should have overlapping meaning. For example, a code related to providing meal vouchers and a code related to home delivered meals may be appropriate. However, a code related to providing meal vouchers and a code related to providing transportation vouchers would not be appropriate."/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="ServiceRequest.code.coding:211LA">
-            <path value="ServiceRequest.code.coding"/>
-            <sliceName value="211LA"/>
-            <short value="Code defined by 211 LA County Taxonomy"/>
-            <definition value="A reference to a code defined by 211 LA County Taxonomy."/>
-            <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.&#xD;&#xA;&#xD;&#xA;Where more than one coding is used, the codings should have overlapping meaning. For example, a code related to providing meal vouchers and a code related to home delivered meals may be appropriate. However, a code related to providing meal vouchers and a code related to providing transportation vouchers would not be appropriate."/>
-            <mustSupport value="true"/>
-            <binding>
-                <strength value="required"/>
-                <description value="211 LA County codes"/>
-                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet211LACounty"/>
             </binding>
         </element>
         <element id="ServiceRequest.orderDetail">

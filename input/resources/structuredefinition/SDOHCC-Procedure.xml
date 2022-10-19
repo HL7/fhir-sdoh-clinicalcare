@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-Procedure"/>
     <meta>
-        <versionId value="18"/>
-        <lastUpdated value="2022-07-18T12:33:07.990+00:00"/>
-        <source value="#AY0ktCtZIR35vMKd"/>
+        <versionId value="19"/>
+        <lastUpdated value="2022-10-19T17:02:29.639+00:00"/>
+        <source value="#Z7191TbvZLv65Z6X"/>
     </meta>
     <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
     <version value="0.1.0"/>
@@ -150,31 +150,6 @@
             <comment value="As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories. For further guidance on external value sets vetted by the Gravity Project see: [SDOH terminology guidance](support_for_multiple_domains.html#external-value-set-guidance)"/>
             <binding>
                 <strength value="required"/>
-            </binding>
-        </element>
-        <element id="Procedure.code.coding">
-            <path value="Procedure.code.coding"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="$this"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.&#xD;&#xA;&#xD;&#xA;Where more than one coding is used, the codings should have overlapping meaning. For example, a code related to providing meal vouchers and a code related to home delivered meals may be appropriate. However, a code related to providing meal vouchers and a code related to providing transportation vouchers would not be appropriate."/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Procedure.code.coding:211LA">
-            <path value="Procedure.code.coding"/>
-            <sliceName value="211LA"/>
-            <short value="Code defined by 211 LA County Taxonomy"/>
-            <definition value="A reference to a code defined by 211 LA County Taxonomy."/>
-            <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.&#xD;&#xA;&#xD;&#xA;Where more than one coding is used, the codings should have overlapping meaning. For example, a code related to providing meal vouchers and a code related to home delivered meals may be appropriate. However, a code related to providing meal vouchers and a code related to providing transportation vouchers would not be appropriate."/>
-            <mustSupport value="true"/>
-            <binding>
-                <strength value="required"/>
-                <description value="211 LA County codes"/>
-                <valueSet value="http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSet211LACounty"/>
             </binding>
         </element>
         <element id="Procedure.performed[x]">
