@@ -1,5 +1,14 @@
 ### General Workflow
 
+Link to [Functional Use Case Direct Referral](functional_use_cases.html#direct-referral-light)
+
+Link to [Functional Use Case Direct Referral Light](functional_use_cases.html#direct-referral-light)
+
+Link to [Functional Use Case Indirect Referral / Direct](functional_use_cases.html#indirect-referral-with-direct-cbo)
+
+Link to [Functional Use Case Indirect Referral / Direct Light](functional_use_cases.html#indirect-referral-with-direct-light-cbo)
+
+
 The following depicts the general workflow anticipated by this Implementation guide.  General process is to:
 
 1) Assess the patient to determine social risk -- this may be done by using an assessment tool or having a conversation with the patient, or both.  As part of the assessment, the patient and practitioner agree on the specific risk items that are to be labeled as verified health concerns or problems.

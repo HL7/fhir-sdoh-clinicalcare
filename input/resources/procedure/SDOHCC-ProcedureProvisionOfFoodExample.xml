@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="SDOHCC-ProcedureProvisionOfFoodExample"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2022-07-18T12:58:36.628+00:00"/>
-        <source value="#VLXRthS2DXXrXwxB"/>
+        <versionId value="5"/>
+        <lastUpdated value="2022-10-19T17:03:08.729+00:00"/>
+        <source value="#qMLMmYy7VfCEW10D"/>
         <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"/>
     </meta>
     <status value="completed"/>
@@ -26,11 +26,6 @@
             <system value="http://snomed.info/sct"/>
             <code value="710925007"/>
             <display value="Provision of food"/>
-        </coding>
-        <coding>
-            <system value="http://example.org/TBD/211LACountyTaxonomy"/>
-            <code value="PH-2950.8500-850"/>
-            <display value="Thanksgiving Baskets"/>
         </coding>
     </code>
     <subject>
