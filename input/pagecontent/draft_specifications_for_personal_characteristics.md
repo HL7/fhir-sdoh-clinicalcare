@@ -70,7 +70,7 @@ There is a possibility that either or both the US Core Patient profile and Perso
 
 ​	the author organization responsible for the information, and 
 
-​	the transmitter (e.g. provider, payer, etc.) that provided the informaton.  
+​	the transmitter (e.g. provider, payer, etc.) that provided the information.  
 
 Additional guidance is provided in the [US Core 3.1.1 Basic Provenance Guidance](http://hl7.org/fhir/us/core/STU3.1.1/basic-provenance.html). 
 

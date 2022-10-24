@@ -1,6 +1,6 @@
 ### Overview
 
-2022-10-19 fix functional use case names
+2022-10-23 all fixes except fro General workflow and stu2 history
 
 Social Determinants of Health (SDOH) are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange SDOH content defined by the [Gravity Project]( https://confluence.hl7.org/display/GRAV/The+Gravity+Project) using the HL7 FHIR standard. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. This IG addresses the need to gather SDOH information in multiple settings, share that information between stakeholders, and exchange referrals between organizations to address specific social risk needs, all with appropriate patient consent.  In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. The guide supports the following use cases:
 
@@ -41,9 +41,45 @@ Implementers should pay specific attention to the following sections:
 * [Artifacts Index](artifacts.html) provides easy access for all implementers the FHIR R4 profiles, examples and other FHIR artifacts defined in this implementation guide and linked from this section -- this section also includes the details for the declared capability statements for the respective servers and clients
 * [Downloads](downloads.html) links to allow implementers to download the IG and various artifacts
 
-Notes: 
+### Support for external terminologies for ServiceRequest and Procedure
 
-Include description of using alternative code systems and value sets for ServiceRequest and Procedure
+If implementers of this IG wish to use terminologies that are not part of the required value sets for specific elements that have a type of CodableConcept (such as ServiceRequest.code and Procedure.code) they may include a specific Coding the specifies a system (URL that is defined and supported by the terminology author) as well as the specific code (define in the terminology) as long as the meaning of the code is a concept that is logically the same as, or contained in the concept, of the required code.
+
+The following is an example for a ServiceRequest or Procedure where the external terminology
+
+URL is  : http://terminologysystem and the code is : SummerProgram
+
+		"code" : {
+  	  "coding" : [
+   	   {
+ 	       "system" : "http://snomed.info/sct",
+	        "code" : "467681000124101",
+	        "display" : "Assistance with application for Summer Food Service Program"
+	      }
+	      ]
+	    },
+	    {
+	      "coding" : [
+	        {
+	          "system" : "http://terminologysystem",
+	          "code" : "SummerProgram",
+	          "display" : "Summer Food Service Program"
+	        }
+	      ]
+	    }
+	  ],
+
+### Intellectual Property
+{% include ip-statements.xhtml %}
+
+### Cross Version Analysis
+{% include cross-version-analysis.xhtml %}
+
+### Dependencies
+{% include dependency-table.xhtml %}
+
+### Globals
+{% include globals-table.xhtml %}
 
 
 

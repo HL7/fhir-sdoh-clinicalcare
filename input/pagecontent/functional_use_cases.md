@@ -1,6 +1,13 @@
 Note: SDOH IG related Patient Stories are available on the Gravity Project Confluence site [here](https://confluence.hl7.org/display/GRAV/Patient+Stories)
 
-These use cases are represented by workflow diagrams on the [Exchange Worflow Page](exchange_workflow.html)
+These use cases are represented by workflow diagrams on the [Exchange Workflow Page](exchange_workflow.html)
+
+The following numbering is use throughout this section where N is an integer number:
+
+- N (e.g. 1-14) are steps common to all functional use cases
+- IN (e.g. I1-I12) are additional steps used only by Indirect use cases
+- INa (e.g. I8,I9) are steps used by the Indirect use case when communicating with a FHIR API enabled CBO
+- INb (e.g. I8b, I9b) are steps used by the Indirect use case when communicating with a FHIR application enabled CBO
 
 ### Overview
 
@@ -8,8 +15,8 @@ The functional use cases defined below are based on specific exchanges of inform
 
 - A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges
 - A "light" version of the direct referral where the performing entity uses a application that can access the referring entities API (but does not have FHIR API capability)
-- An indirect referral, where the communication between the referring entity and the performing entity is though an intermediary (such as a Coordination Platform as defined below) that has FHIR API capability.
-- Finally, a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange with the pateach entity that has a FHIR API capability, may optionally communicate with a patient application that is able to connect to the does not have a FHIR API Care Coordinator (coordinates the care and referral activities but normally does not make assessment, goal, or referral decisions)
+- An indirect referral, where the communication between the referring entity and the performing entity is through an intermediary (such as a Coordination Platform as defined below) that has FHIR API capability
+- Finally, a patient application may optionally communicate directly with any of the entities that support a FHIR API and provides a mechanism for secure exchange
 
 ### Actors
 
@@ -102,7 +109,7 @@ Note: Community Based Organization (CBO) has an application that can interact wi
 
 #### Provider Actions (same as Direct Referral)
 
-1.  through 7.
+- steps 1. through 7.
 
 #### CBO - Provider Actions (changed based on CBO application vs FHIR API)
 
@@ -118,7 +125,7 @@ Note: Community Based Organization (CBO) has an application that can interact wi
 
 #### Provider Actions (same as Direct Referral)
 
-12. through 14. 
+- steps 12. through 14. 
 
 #### Considerations (same as Direct Referral)
 
@@ -147,7 +154,7 @@ Patient is assessed by a practitioner and referred to a Coordination Platform (C
 
 #### Provider Actions (same as Direct Referral)
 
-1. through 7.
+- steps 1. through 7.
 
 #### Provider – CP – CBO workflow 
 
@@ -167,7 +174,7 @@ I7. CP updates status of the initial referral
 
 I8a. Optional: CBO communicates with patient via their application to schedule appointments, collect additional information, etc.
 
-11. CBO completes the evaluation and enrollment
+- step 11. CBO completes the evaluation and enrollment
 
 I9a. CBO updates the status of the referral to completed, and includes information on what was completed
 
@@ -179,9 +186,9 @@ I12. Provider receives the updated status
 
 #### Provider Actions (same as Direct Referral)
 
-13. and 14. 
+- steps 13. and 14. 
 
-#### Considerations in addition to Direct
+#### Considerations in addition to Direct Referral
 
 - CPs may not be a BA of the covered entity and therefore not bound by HIPAA's privacy and security requirements
 - CP may not always have a formal relationship with a CBO
@@ -214,7 +221,7 @@ Patient is assessed by a practitioner and referred to a Coordination Platform (C
 
 #### Provider Actions (same as Direct Referral)
 
-1. through 7.
+- steps 1. through 7.
 
 #### Provider – CP – CBO workflow (note: steps with a "b" suffix are specific to this referral)
 
@@ -234,7 +241,7 @@ I7. CP updates status of the initial referral
 
 I8b. Optional exchange with Patient does not occur electronically (no app to app exchange)
 
-11. CBO completes the evaluation and enrollment
+- step 11. CBO completes the evaluation and enrollment
 
 I9b. CBO updates the status of the referral to completed, and includes information on what was completed
 
@@ -246,9 +253,9 @@ I12. Provider receives the updated status
 
 #### Provider Actions (same as Direct Referral)
 
-13. and 14. 
+- steps 13. and 14.
 
-#### Considerations (same as Indirect / Direct)
+#### Considerations (same as Indirect Referral with Direct CBO)
 
 <table><tr><td><img src="FunctionalUseCaseFlowIndirectDirectLightReferral3.jpg" /></td></tr></table>
 
@@ -267,9 +274,10 @@ Assumes patient is using a personal application (e.g., Smart Phone application) 
 
 #### Patient Workflow (from above functional use cases)
 
-​	Note: all exchanges are optional
+	Note: all exchanges are optional
 
 - Provider - Patient
+
   7. Provider makes information regarding the referral available to the patient's application
 
 - CP - Patient
