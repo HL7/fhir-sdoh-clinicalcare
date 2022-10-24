@@ -20,7 +20,7 @@ The intent of this section is to standardize the interactions between FHIR APIs 
 
 4) API URL and the tokens are stored in the application 
 
-5) When the patient/client authenticates to the application, on a timed schedule,**** or on demand
+5) When the patient/client authenticates to the application, on a timed schedule or on demand
 
 - Application uses the URL and refresh token to obtain an access token 
 - Application follows the Referral Source Light workflow process 
