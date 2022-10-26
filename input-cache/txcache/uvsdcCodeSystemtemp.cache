@@ -1,0 +1,48 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/uv/sdc/CodeSystem/temp",
+      "concept" : [{
+        "code" : "complete-questionnaire",
+        "display" : "Complete Questionnaire"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:2c0a2a94-be7b-4134-bf65-e1d2e370b29c",
+    "timestamp" : "2022-10-25T13:45:14.593Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/temp|3.0.0"
+    }],
+    "contains" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Code indicating a request to complete the a questionnaire - e.g. by Task or ServiceRequest"
+      }],
+      "system" : "http://hl7.org/fhir/uv/sdc/CodeSystem/temp",
+      "code" : "complete-questionnaire",
+      "display" : "Complete Questionnaire"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

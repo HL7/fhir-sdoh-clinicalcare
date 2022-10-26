@@ -1,0 +1,553 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "concept" : [{
+        "code" : "sdoh-category-unspecified",
+        "display" : "SDOH Category Unspecified"
+      },
+      {
+        "code" : "food-insecurity",
+        "display" : "Food Insecurity"
+      },
+      {
+        "code" : "housing-instability",
+        "display" : "Housing Instability"
+      },
+      {
+        "code" : "homelessness",
+        "display" : "Homelessness"
+      },
+      {
+        "code" : "inadequate-housing",
+        "display" : "Inadequate Housing"
+      },
+      {
+        "code" : "transportation-insecurity",
+        "display" : "Transportation Insecurity"
+      },
+      {
+        "code" : "financial-insecurity",
+        "display" : "Financial Insecurity"
+      },
+      {
+        "code" : "material-hardship",
+        "display" : "Material Hardship"
+      },
+      {
+        "code" : "educational-attainment",
+        "display" : "Educational Attainment"
+      },
+      {
+        "code" : "employment-status",
+        "display" : "Employment Status"
+      },
+      {
+        "code" : "veteran-status",
+        "display" : "Veteran Status"
+      },
+      {
+        "code" : "stress",
+        "display" : "Stress"
+      },
+      {
+        "code" : "social-connection",
+        "display" : "Social Connection"
+      },
+      {
+        "code" : "intimate-partner-violence",
+        "display" : "Intimate Partner Violence"
+      },
+      {
+        "code" : "elder-abuse",
+        "display" : "Elder Abuse"
+      },
+      {
+        "code" : "personal-health-literacy",
+        "display" : "Personal Health Literacy"
+      },
+      {
+        "code" : "health-insurance-coverage-status",
+        "display" : "Health Insurance Coverage Status"
+      },
+      {
+        "code" : "medical-cost-burden",
+        "display" : "Medical Cost Burden"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:f26a308a-8636-40a5-9e34-86ebd958553d",
+    "timestamp" : "2022-10-26T18:43:13.591Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|1.1.0"
+    }],
+    "contains" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that are not further specified with respect to category."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "sdoh-category-unspecified",
+      "display" : "SDOH Category Unspecified"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to Food Insecurity (which is defined as: Uncertain, limited, or unstable access to food that is: adequate in quantity and in nutritional quality; culturally acceptable; safe and acquired in socially acceptable ways.) This SDOH category covers records relevant to circumstances that range from Food Insecurity to Food Security."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "food-insecurity",
+      "display" : "Food Insecurity"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to Housing Instability (which is defined as: Currently consistently housed, but experiencing any of the following circumstances in the past 12 months: being behind on rent or mortgage, multiple moves, or housing cost burden.) This SDOH category covers records relevant to circumstances that range from Housing Instability to Stably Housed."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "housing-instability",
+      "display" : "Housing Instability"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to Homelessness (which is defined as including: 1) Sheltered Homelessness: because of economic difficulties, currently living in a shelter, motel, temporary or transitional living situation, scattered-site housing, or not having a consistent place to sleep at night; and 2) Unsheltered Homelessness: residing in a place not meant for human habitation, such as cars, parks, sidewalks, abandoned buildings, on the street.) This SDOH category covers records relevant to circumstances that range Homelessness to Housed."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "homelessness",
+      "display" : "Homelessness"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to Inadequate Housing (which is defined as: Housing does not meet habitability standards.) This SDOH category covers records relevant to circumstances that range from Inadequate Housing to Adequate Housing."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "inadequate-housing",
+      "display" : "Inadequate Housing"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to Transportation Insecurity (which is defined as: Uncertain, limited, or no access to safe, reliable, accessible, affordable, and socially acceptable transportation infrastructure and modalities necessary for maintaining one’s health, well-being, or livelihood.) This SDOH category covers records relevant to circumstances that range from Transportation Insecurity to Transportation Security."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "transportation-insecurity",
+      "display" : "Transportation Insecurity"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to Financial Insecurity (which is defined as: A state of being wherein a person has difficulty fully meeting current and/or ongoing financial obligations and/or does not feel secure in their financial future.) This SDOH category covers records relevant to circumstances that range from Financial Insecurity to Financial Security."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "financial-insecurity",
+      "display" : "Financial Insecurity"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to Material Hardship (which is defined as: The lack of specific socially perceived basic physical necessities.) This SDOH category covers records relevant to circumstances that range from 'Unable to obtain physical necessity X' to 'Able to obtain physical necessity X'."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "material-hardship",
+      "display" : "Material Hardship"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to the level of education attained (which, in this context, is defined by whether one has or has not met academic criteria for high school diploma or equivalent.) This SDOH category covers records relevant to circumstances that range from 'Lacks a high school diploma/certificate' to 'Has a high school diploma/certificate'."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "educational-attainment",
+      "display" : "Educational Attainment"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to the status of one's employment (which, in this context, is defined by whether one has or does not have a job and is looking for and available for work). This SDOH category covers records relevant to circumstances that range from 'In labor force' (Unemployed to Employed), or 'Not in labor force'."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "employment-status",
+      "display" : "Employment Status"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to veteran status (which, in this context, is defined by whether one has or has not served as active military with honorable release or discharge.) This SDOH category covers records relevant to circumstances that range from 'History of military service' to 'No history of military service'."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "veteran-status",
+      "display" : "Veteran Status"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to Stress (which is defined as: When a person perceives the demands of environmental stimuli to be greater than their ability to meet, mitigate, or alter those demands.) This SDOH category covers records relevant to circumstances that range from Stress to 'No stress'."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "stress",
+      "display" : "Stress"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to Social Connection (which is defined as: An umbrella term that encompasses the structural, functional, and quality aspects of how individuals connect to each other.) This SDOH category covers records relevant to circumstances that range from inadequate social connections to adequate/satisfying social connections."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "social-connection",
+      "display" : "Social Connection"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to Intimate Partner Violence (IPV) (which is defined as: Physical violence, sexual violence, or psychological harm by a current or former partner or spouse. Often including a pattern of methods and tactics to gain and maintain power and control over the other person.) This SDOH category covers records relevant to circumstances that range from being a victim of IPV to not being a victim of IPV."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "intimate-partner-violence",
+      "display" : "Intimate Partner Violence"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to Elder Abuse (which is defined as: An intentional act or failure to act by a caregiver or another person in a relationship involving an expectation of trust that causes or creates a risk of harm to an older adult and can be in the form of physical abuse, psychological abuse, sexual abuse, financial abuse, and/or neglect by someone in a caregiving role.) This SDOH category covers records relevant to circumstances that range from being a victim of elder abuse to not being a victim of elder abuse."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "elder-abuse",
+      "display" : "Elder Abuse"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to Personal Health Literacy (which is defined by Healthy People 2030 as: The degree to which individuals have the ability to find, understand, and use information and services to inform health-related decisions and actions for themselves and others.) This SDOH category covers records relevant to circumstances that range from personal health literacy problems/diagnoses to positive findings/goals related to personal health literacy."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "personal-health-literacy",
+      "display" : "Personal Health Literacy"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to health insurance coverage (which is defined by whether one has, or does not have, healthcare coverage or insurance.) This SDOH category covers records relevant to circumstances that range from 'no health insurance coverage' to 'health insurance coverage'."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "health-insurance-coverage-status",
+      "display" : "Health Insurance Coverage Status"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Category for Social Determinant of Health artifacts that pertain to medical cost burden (which is defined as: A measure of financial pressure resulting from health spending stemming from inadequate resources to meet medical cost needs.) This SDOH category covers records relevant to circumstances that range from 'financial insecurity due to medical cost burden' to 'no burdensome medical costs/debt'."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "medical-cost-burden",
+      "display" : "Medical Cost Burden"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "concept" : [{
+        "code" : "risk-questionnaire",
+        "display" : "Risk Questionnaire"
+      },
+      {
+        "code" : "feedback-questionnaire",
+        "display" : "Feedback Questionnaire"
+      },
+      {
+        "code" : "application-questionnaire",
+        "display" : "Application Questionnaire"
+      },
+      {
+        "code" : "personal-characteristics-questionnaire",
+        "display" : "Personal Characteristics Questionnaire"
+      },
+      {
+        "code" : "other-questionnaire",
+        "display" : "Other Questionnaire"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:4af3b62a-8119-4b13-97a0-0ceec58e7305",
+    "timestamp" : "2022-10-26T18:43:14.529Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|1.1.0"
+    }],
+    "contains" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "A type of questionnaire that evaluates SDOH-related risk(s)."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "risk-questionnaire",
+      "display" : "Risk Questionnaire"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "A type of questionnaire that obtains feedback on a service that was offered or received."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "feedback-questionnaire",
+      "display" : "Feedback Questionnaire"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "A type of questionnaire that obtains information required on an application (e.g., for a social service program, insurance, benefits, etc.)."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "application-questionnaire",
+      "display" : "Application Questionnaire"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "A type of questionnaire that obtains information about an individual's personal characteristics (e.g., sexual orientation, gender identity, etc.)."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "personal-characteristics-questionnaire",
+      "display" : "Personal Characteristics Questionnaire"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "A questionnaire of a type that is not defined in the value set'."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "other-questionnaire",
+      "display" : "Other Questionnaire"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "concept" : [{
+        "code" : "make-contact",
+        "display" : "Make Contact"
+      },
+      {
+        "code" : "review-material",
+        "display" : "Review Material"
+      },
+      {
+        "code" : "general-information",
+        "display" : "General Information"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:62f437fb-375c-4812-b5fb-d89511b63ae0",
+    "timestamp" : "2022-10-26T18:43:15.560Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|1.1.0"
+    }],
+    "contains" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Designates that the action performed is to make contact (e.g., schedule an appointment, call for results, etc.) with a designated entity (e.g., a healthcare provider, social program, etc.). Details about the the reason for the contact may captured elsewhere"
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "make-contact",
+      "display" : "Make Contact"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Designates that the action performed is to review material (e.g., attached instructions). Details about the type of material to be reviewed, the reason for reviewing the material, etc. may captured elsewhere."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "review-material",
+      "display" : "Review Material"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Designates that information with respect to an action to be performed 1) will be captured in Task.description in text form AND 2) has no computable expectation AND 3) any resulting response will be captured in Task.Output.GeneralInformationResponse.value as markdown."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "general-information",
+      "display" : "General Information"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "concept" : [{
+        "code" : "self-reported",
+        "display" : "Self Reported"
+      },
+      {
+        "code" : "reported-by-related-person",
+        "display" : "Reported By Related Person"
+      },
+      {
+        "code" : "administrative",
+        "display" : "Administrative"
+      },
+      {
+        "code" : "derived-specify",
+        "display" : "Derived Specify"
+      },
+      {
+        "code" : "other-specify",
+        "display" : "Other Specify"
+      },
+      {
+        "code" : "observed",
+        "display" : "Observed"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:1a1bb090-7e54-4465-b5cb-50b907390bc1",
+    "timestamp" : "2022-10-26T14:52:18.438Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|1.1.0"
+    }],
+    "contains" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The subject reported the information about the subject."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "self-reported",
+      "display" : "Self Reported"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Someone related to the subject reported the information about the subject."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "reported-by-related-person",
+      "display" : "Reported By Related Person"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The information about the subject was collected by an organization for administrative reasons not necessarily directly related to obtaining healthcare or health insurance."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "administrative",
+      "display" : "Administrative"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The information about the subject was derived from information or methods other than directly reported by an individual. Text or derivedFrom should be used to further specify the method."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "derived-specify",
+      "display" : "Derived Specify"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The actual value is not a member of the set of permitted data values in the constrained value domain of a variable. Text should be used to further specify the value."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "other-specify",
+      "display" : "Other Specify"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Direct observation of the subject was used to obtain information about the subject."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "observed",
+      "display" : "Observed"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

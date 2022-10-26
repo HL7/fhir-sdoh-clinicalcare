@@ -346,7 +346,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}careteam.html">CareTeam</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam">http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam</a> SHALL</li>
       </ul><h4>Behavior</h4><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
@@ -412,7 +412,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}condition.html">Condition</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition</a> SHALL</li>
       </ul><h4>Behavior</h4><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
@@ -518,7 +518,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}consent.html">Consent</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent</a> SHALL</li>
       </ul><h4>Behavior</h4><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
@@ -592,7 +592,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}device.html">Device</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/StructureDefinition/Device">http://hl7.org/fhir/StructureDefinition/Device</a> SHALL</li>
       </ul><h4>Behavior</h4><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
@@ -658,7 +658,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}documentreference.html">DocumentReference</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference">http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference</a> SHALL</li>
       </ul><h4>Behavior</h4><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
@@ -724,7 +724,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}goal.html">Goal</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal</a> SHALL</li>
       </ul><h4>Behavior</h4><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
@@ -830,7 +830,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}healthcareservice.html">HealthcareService</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService</a> SHALL</li>
       </ul><h4>Behavior</h4><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
@@ -904,7 +904,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}location.html">Location</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Location">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Location</a> SHALL</li>
       </ul><h4>Behavior</h4><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
@@ -970,7 +970,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}observation.html">Observation</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment</a> SHALL</li>
         <li>
@@ -1108,7 +1108,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}organization.html">Organization</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization">http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization</a> SHALL</li>
       </ul><h4>Behavior</h4><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
@@ -1174,7 +1174,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}patient.html">Patient</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient">http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</a> SHALL</li>
       </ul><h4>Behavior</h4><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
@@ -1240,7 +1240,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}practitioner.html">Practitioner</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner">http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner</a> SHALL</li>
       </ul><h4>Behavior</h4><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
@@ -1306,7 +1306,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}practitionerrole.html">PractitionerRole</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole">http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole</a> SHALL</li>
       </ul><h4>Behavior</h4><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
@@ -1388,7 +1388,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}procedure.html">Procedure</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure</a> SHALL</li>
       </ul><h4>Behavior</h4><p>Versioning support: versioned-update</p><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
@@ -1530,7 +1530,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}relatedperson.html">RelatedPerson</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/StructureDefinition/RelatedPerson">http://hl7.org/fhir/StructureDefinition/RelatedPerson</a> SHALL</li>
       </ul><h4>Behavior</h4><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
@@ -1596,7 +1596,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}servicerequest.html">ServiceRequest</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest</a> SHALL</li>
       </ul><h4>Behavior</h4><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
@@ -1734,7 +1734,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}subscription.html">Subscription</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription">http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription</a> SHALL</li>
       </ul><h4>Interactions</h4><div class="table-wrapper">
@@ -1890,7 +1890,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}documentreference.html">DocumentReference</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference">http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference</a> SHALL</li>
       </ul><h4>Behavior</h4><p>Reference policy: literal</p><h4>Interactions</h4><div class="table-wrapper">
@@ -1976,7 +1976,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}subscription.html">Subscription</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription">http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription</a> SHALL</li>
       </ul><h4>Interactions</h4><div class="table-wrapper">
@@ -2033,7 +2033,7 @@
         </table>
       </div><br/><br/><h3>
         <a href="{{site.data.fhir.path}}task.html">Task</a>
-      </h3><p>Supported Profile(s):</p><ul>
+      </h3><p>Supported Profile(s) - if resource is supported:</p><ul>
         <li>
           <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient">http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient</a> SHALL</li>
         <li>
@@ -2183,14 +2183,14 @@
   <status value="draft"/>
   <date value="2021-06"/>
   <description value="This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral recipients'.  These are typically community-based organizations that can provide services such as food bank access, housing remediation, etc."/>
-  <purpose value="In some cases, a referral recipient might actually further refer the patient to a downstream service provider through non-FHIR means.  In such cases, the system is still treated as a 'referral recipient' rather than a [[CapabilityStatement-SDOHCC-CoordinationPlatform.html|Coordination Platform]] because, from a FHIR interface perspective, the referral process 'stops' with that system.  Referral recipients must be able to receive or monitor for Tasks issued by [[CapabilityStatement-SDOHCC-ReferralSource.html|Referral Sources]] and [[CapabilityStatement-SDOHCC-CoordinationPlatform.html|Coordination Platforms]].  They must also be able to respond to access the ServiceRequest representing the referral pointed to by the Task and any relevant information referenced by the referral, update the Task with their acceptance or rejection of the referral, and finally provide information about what interventions were actually performed using the Procedure resource.\n\n There are actually two types of referral recipients defined in this implementation guide.  This CapabilityStatement describes the expected behavior of more sophisticated service delivery systems that are capable of exposing a FHIR service and persisting Tasks and Procedures in their own environment.  A separate set of interface expectations is defined for [[CapabilityStatement-SDOHCC-ReferralRecipientLight.html|'Light' Referral Recipients]] that are not capable of exposing an endpoint and where the Task and any resulting Procedures must be stored in the requesting system's database."/>
+  <purpose value="In some cases, a referral recipient might actually further refer the patient to a downstream service provider through non-FHIR means.  In such cases, the system is still treated as a 'referral recipient' rather than a [Coordination Platform](CapabilityStatement-SDOHCC-CoordinationPlatform.html) because, from a FHIR interface perspective, the referral process 'stops' with that system.  Referral recipients must be able to receive or monitor for Tasks issued by [Referral Sources](CapabilityStatement-SDOHCC-ReferralSource.html) and [Coordination Platforms](CapabilityStatement-SDOHCC-CoordinationPlatform.html).  They must also be able to respond to access the ServiceRequest representing the referral pointed to by the Task and any relevant information referenced by the referral, update the Task with their acceptance or rejection of the referral, and finally provide information about what interventions were actually performed using the Procedure resource.\n\n There are actually two types of referral recipients defined in this implementation guide.  This CapabilityStatement describes the expected behavior of more sophisticated service delivery systems that are capable of exposing a FHIR service and persisting Tasks and Procedures in their own environment.  A separate set of interface expectations is defined for ['Light' Referral Recipients](CapabilityStatement-SDOHCC-ReferralRecipientLight.html) that are not capable of exposing an endpoint and where the Task and any resulting Procedures must be stored in the requesting system's database."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="xml"/>
   <format value="json"/>
   <rest>
     <mode value="client"/>
-    <documentation value="The clinical care referral recipient needs to access information from and update information in SDOH clinical care [[CapabilityStatement-SDOHCC-ReferralSource.html|referral sources]] and/or [[CapabilityStatement-SDOHCC-CoordinationPlatform.html|coordination platforms]] that have solicited the filling of SDOH-related referrals by this system"/>
+    <documentation value="The clinical care referral recipient needs to access information from and update information in SDOH clinical care [referral sources](CapabilityStatement-SDOHCC-ReferralSource.html) and/or [coordination platforms](CapabilityStatement-SDOHCC-CoordinationPlatform.html) that have solicited the filling of SDOH-related referrals by this system"/>
     <security>
       <service>
         <coding>
@@ -2198,7 +2198,7 @@
           <code value="SMART-on-FHIR"/>
         </coding>
       </service>
-      <description value="Implementations must meet the general privacy &amp; security requirements documented in [[privacy_and_security.html|this implementation guide]]."/>
+      <description value="Implementations must meet the general privacy &amp; security requirements documented in [this implementation guide](privacy_and_security.html)."/>
     </security>
     <resource>
       <type value="CareTeam"/>
@@ -3364,7 +3364,7 @@
   </rest>
   <rest>
     <mode value="server"/>
-    <documentation value="The clinical care referral recipient needs to allow SDOH clinical care [[CapabilityStatement-SDOHCC-ReferralSource.html|referral sources]] and [[CapabilityStatement-SDOHCC-CoordinationPlatform.html|coordination platforms]] to  have solicited the filling of SDOH-related referrals by this system and also to access Procedures that describe interventions taken by the users of this system."/>
+    <documentation value="The clinical care referral recipient needs to allow SDOH clinical care [referral sources](CapabilityStatement-SDOHCC-ReferralSource.html) and [coordination platforms](CapabilityStatement-SDOHCC-CoordinationPlatform.html) to  have solicited the filling of SDOH-related referrals by this system and also to access Procedures that describe interventions taken by the users of this system."/>
     <security>
       <service>
         <coding>
@@ -3372,7 +3372,7 @@
           <code value="SMART-on-FHIR"/>
         </coding>
       </service>
-      <description value="Implementations must meet the general privacy &amp; security requirements documented in [[privacy_and_security.html|this implementation guide]]."/>
+      <description value="Implementations must meet the general privacy &amp; security requirements documented in [this implementation guide](privacy_and_security.html)."/>
     </security>
     <resource>
       <type value="DocumentReference"/>

@@ -1,0 +1,100 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/task-status",
+      "concept" : [{
+        "code" : "ready",
+        "display" : "Ready"
+      },
+      {
+        "code" : "in-progress",
+        "display" : "In Progress"
+      },
+      {
+        "code" : "completed",
+        "display" : "Completed"
+      },
+      {
+        "code" : "cancelled",
+        "display" : "Cancelled"
+      },
+      {
+        "code" : "on-hold",
+        "display" : "On Hold"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:73e177c1-ba72-4e84-8ff0-7bafe0692dad",
+    "timestamp" : "2022-10-25T13:45:15.608Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/task-status|4.0.1"
+    }],
+    "contains" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The task is ready to be performed, but no action has yet been taken.  Used in place of requested/received/accepted/rejected when request assignment and acceptance is a given."
+      }],
+      "system" : "http://hl7.org/fhir/task-status",
+      "code" : "ready",
+      "display" : "Ready"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The task has been started but is not yet complete."
+      }],
+      "system" : "http://hl7.org/fhir/task-status",
+      "code" : "in-progress",
+      "display" : "In Progress"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The task has been completed."
+      }],
+      "system" : "http://hl7.org/fhir/task-status",
+      "code" : "completed",
+      "display" : "Completed"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The task was not completed."
+      }],
+      "system" : "http://hl7.org/fhir/task-status",
+      "code" : "cancelled",
+      "display" : "Cancelled"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The task has been started but work has been paused."
+      }],
+      "system" : "http://hl7.org/fhir/task-status",
+      "code" : "on-hold",
+      "display" : "On Hold"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

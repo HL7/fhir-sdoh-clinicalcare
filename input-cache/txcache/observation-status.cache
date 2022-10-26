@@ -1,0 +1,87 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/observation-status",
+      "concept" : [{
+        "code" : "final",
+        "display" : "Final"
+      },
+      {
+        "code" : "corrected",
+        "display" : "Corrected"
+      },
+      {
+        "code" : "entered-in-error",
+        "display" : "Entered in Error"
+      },
+      {
+        "code" : "unknown",
+        "display" : "Unknown"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:29e587bb-76d4-4eec-89d7-8c1eea839787",
+    "timestamp" : "2022-10-25T13:45:12.718Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/observation-status|4.0.1"
+    }],
+    "contains" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The observation is complete and there are no further actions needed. Additional information such \"released\", \"signed\", etc would be represented using [Provenance](provenance.html) which provides not only the act but also the actors and dates and other related data. These act states would be associated with an observation status of `preliminary` until they are all completed and then a status of `final` would be applied."
+      }],
+      "system" : "http://hl7.org/fhir/observation-status",
+      "code" : "final",
+      "display" : "Final"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Subsequent to being Final, the observation has been modified to correct an error in the test result."
+      }],
+      "system" : "http://hl7.org/fhir/observation-status",
+      "code" : "corrected",
+      "display" : "Corrected"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The observation has been withdrawn following previous final release.  This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be \"cancelled\" rather than \"entered-in-error\".)."
+      }],
+      "system" : "http://hl7.org/fhir/observation-status",
+      "code" : "entered-in-error",
+      "display" : "Entered in Error"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The authoring/source system does not know which of the status values currently applies for this observation. Note: This concept is not to be used for \"other\" - one of the listed statuses is presumed to apply, but the authoring/source system does not know which."
+      }],
+      "system" : "http://hl7.org/fhir/observation-status",
+      "code" : "unknown",
+      "display" : "Unknown"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

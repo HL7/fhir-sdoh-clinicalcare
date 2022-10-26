@@ -13,6 +13,7 @@
 <artifact id="Patient/pat-53234" key="Patient-pat-53234" name="Patient Colin Abbas Example"/>
 <artifact id="CodeSystem/SDOHCC-CodeSystemTemporaryCodes" key="CodeSystem-sdohcc-temporary-codes" name="SDOHCC CodeSystem Temporary Codes"/>
 <artifact id="StructureDefinition/SDOHCC-Condition" key="StructureDefinition-SDOHCC-Condition" name="SDOHCC Condition"/>
+<artifact id="Condition/SDOHCC-ConditionAsserterDeviceExample" key="Condition-SDOHCC-ConditionAsserterDeviceExample" name="SDOHCC Condition Asserter Device Example"/>
 <artifact deprecated="true" id="StructureDefinition/SDOHCC-Condition-Base-1" key="StructureDefinition-SDOHCC-Condition-Base-1" name="SDOHCC Condition Base 1"/>
 <artifact id="Condition/SDOHCC-ConditionFoodInsecurityExample" key="Condition-SDOHCC-ConditionFoodInsecurityExample" name="SDOHCC Condition Food Insecurity Example"/>
 <artifact id="Condition/SDOHCC-ConditionHomelessExample" key="Condition-SDOHCC-ConditionHomelessExample" name="SDOHCC Condition Homeless Example"/>
@@ -22,6 +23,8 @@
 <artifact deprecated="true" id="Consent/consent-to-share-example" key="Consent-consent-to-share-example" name="SDOHCC Consent Example"/>
 <artifact id="Consent/SDOHCC-ConsentInformationDisclosureExample" key="Consent-SDOHCC-ConsentInformationDisclosureExample" name="SDOHCC Consent Information Disclosure Example"/>
 <artifact id="CapabilityStatement/SDOHCC-CoordinationPlatform" key="CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform" name="SDOHCC Coordination Platform Capability Statement"/>
+<artifact id="Device/SDOHCC-DeviceSoftwareExample" key="Device-SDOHCC-DeviceSoftwareExample" name="SDOHCC Device Software Example"/>
+<artifact id="StructureDefinition/SDOHCC-ExtensionConditionAsserter" key="StructureDefinition-SDOHCC-ExtensionConditionAsserter" name="SDOHCC Extension Condition Asserter"/>
 <artifact id="StructureDefinition/SDOHCC-ExtensionHealthcareServiceTelecomAppointment" key="StructureDefinition-SDOHCC-ExtensionHealthcareServiceTelecomAppointment" name="SDOHCC Extension HealthcareService Telecom Appointment"/>
 <artifact id="StructureDefinition/SDOHCC-Goal" key="StructureDefinition-SDOHCC-Goal" name="SDOHCC Goal"/>
 <artifact deprecated="true" id="StructureDefinition/SDOHCC-Goal-Base-1" key="StructureDefinition-SDOHCC-Goal-Base-1" name="SDOHCC Goal Base 1"/>
@@ -37,24 +40,35 @@
 <artifact id="Observation/SDOHCC-ObservationAssessmentInadequateFoodIntakeExample" key="Observation-SDOHCC-ObservationAssessmentInadequateFoodIntakeExample" name="SDOHCC Observation Assessment Inadequate Food Intake Example"/>
 <artifact id="Observation/SDOHCC-ObservationAssessmentSocialIsolationExample" key="Observation-SDOHCC-ObservationAssessmentSocialIsolationExample" name="SDOHCC Observation Assessment Social Isolation Example"/>
 <artifact id="Observation/SDOHCC-ObservationAssessmentTransportTooExpensiveExample" key="Observation-SDOHCC-ObservationAssessmentTransportTooExpensiveExample" name="SDOHCC Observation Assessment Transport Too Expensive Example"/>
-<artifact id="StructureDefinition/SDOHCC-ObservationEthnicity" key="StructureDefinition-SDOHCC-ObservationEthnicity" name="SDOHCC Observation Ethnicity"/>
-<artifact id="Observation/SDOHCC-ObservationEthnicityExample" key="Observation-SDOHCC-ObservationEthnicityExample" name="SDOHCC Observation Ethnicity Example"/>
+<artifact id="StructureDefinition/SDOHCC-ObservationEthnicityOMB" key="StructureDefinition-SDOHCC-ObservationEthnicity" name="SDOHCC Observation Ethnicity OMB"/>
+<artifact id="Observation/SDOHCC-ObservationEthnicityOMBExample" key="Observation-SDOHCC-ObservationEthnicityExample" name="SDOHCC Observation Ethnicity OMB Example"/>
+<artifact id="StructureDefinition/SDOHCC-ObservationGenderIdentity" key="StructureDefinition-SDOHCC-ObservationGenderIdentity" name="SDOHCC Observation Gender Identity"/>
+<artifact id="Observation/SDOHCC-ObservationGenderIdentityExample" key="Observation-SDOHCC-ObservationGenderIdentityExample" name="SDOHCC Observation Gender Identity Example"/>
+<artifact id="StructureDefinition/SDOHCC-ObservationPersonalCharacteristic" key="StructureDefinition-SDOHCC-ObservationPersonalCharacteristic" name="SDOHCC Observation Personal Characteristic"/>
+<artifact id="StructureDefinition/SDOHCC-ObservationPersonalPronouns" key="StructureDefinition-SDOHCC-ObservationPersonalPronouns" name="SDOHCC Observation Personal Pronouns"/>
+<artifact id="Observation/SDOHCC-ObservationPersonalPronounsExample" key="Observation-SDOHCC-ObservationPersonalPronounsExample" name="SDOHCC Observation Personal Pronouns Example"/>
 <artifact deprecated="true" id="Observation/SDOHCC-Observation-HungerVitalSign-Example-1" key="Observation-SDOHCC-Observation-HungerVitalSign-Example-1" name="SDOHCC Observation HungerVitalSign Example 1"/>
 <artifact deprecated="true" id="Observation/SDOHCC-Observation-HungerVitalSign-Example-2" key="Observation-SDOHCC-Observation-HungerVitalSign-Example-2" name="SDOHCC Observation HungerVitalSign Example 2"/>
 <artifact deprecated="true" id="Observation/SDOHCC-Observation-HungerVitalSign-Example-3" key="Observation-SDOHCC-Observation-HungerVitalSign-Example-3" name="SDOHCC Observation HungerVitalSign Example 3"/>
 <artifact deprecated="true" id="Observation/SDOHCC-Observation-HungerVitalSignGroup-1" key="Observation-SDOHCC-Observation-HungerVitalSignGroup-1" name="SDOHCC Observation HungerVitalSignGroup 1"/>
-<artifact id="StructureDefinition/SDOHCC-ObservationRace" key="StructureDefinition-SDOHCC-ObservationRace" name="SDOHCC Observation Race"/>
-<artifact id="Observation/SDOHCC-ObservationRaceExample" key="Observation-SDOHCC-ObservationRaceExample" name="SDOHCC Observation Race Example"/>
-<artifact id="Observation/SDOHCC-ObservationRacePractitionerExample" key="Observation-SDOHCC-ObservationRacePractitionerExample" name="SDOHCC Observation Race Practitioner Example"/>
+<artifact id="StructureDefinition/SDOHCC-ObservationRaceOMB" key="StructureDefinition-SDOHCC-ObservationRace" name="SDOHCC Observation Race OMB"/>
+<artifact id="Observation/SDOHCC-ObservationRaceOMBExample" key="Observation-SDOHCC-ObservationRaceExample" name="SDOHCC Observation Race OMB Example"/>
+<artifact id="Observation/SDOHCC-ObservationRaceOMBPractitionerExample" key="Observation-SDOHCC-ObservationRacePractitionerExample" name="SDOHCC Observation Race OMB Practitioner Example"/>
+<artifact id="StructureDefinition/SDOHCC-ObservationRecordedSexGender" key="StructureDefinition-SDOHCC-ObservationRecordedSexGender" name="SDOHCC Observation Recorded Sex Gender"/>
+<artifact id="Observation/SDOHCC-ObservationRecordedSexGenderExample" key="Observation-SDOHCC-ObservationRecordedSexGenderExample" name="SDOHCC Observation Recorded Sex Gender Example"/>
 <artifact id="Observation/SDOHCC-ObservationResponseHungerVitalSignGroupingExample" key="Observation-SDOHCC-ObservationResponseHungerVitalSignGroupingExample" name="SDOHCC Observation Response Hunger Vital Sign Grouping Example"/>
 <artifact id="Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion1Example" key="Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion1Example" name="SDOHCC Observation Response Hunger Vital Sign Question 1 Example"/>
 <artifact id="Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion2Example" key="Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion2Example" name="SDOHCC Observation Response Hunger Vital Sign Question 2 Example"/>
 <artifact id="Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion3Example" key="Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example" name="SDOHCC Observation Response Hunger Vital Sign Question 3 Example"/>
+<artifact id="Observation/SDOHCC-ObservationResponsePRAPAREChildCareNeedExample" key="Observation-SDOHCC-ObservationResponsePRAPAREChildCareNeedExample" name="SDOHCC Observation Response PRAPARE Child Care Need Example"/>
+<artifact id="Observation/SDOHCC-ObservationResponsePRAPAREClothingNeedExample" key="Observation-SDOHCC-ObservationResponsePRAPAREClothingNeedExample" name="SDOHCC Observation Response PRAPARE Clothing Need Example"/>
 <artifact id="Observation/SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample" key="Observation-SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample" name="SDOHCC Observation Response PRAPARE Employment Status Example"/>
 <artifact id="Observation/SDOHCC-ObservationResponsePRAPAREHousingStatusExample" key="Observation-SDOHCC-ObservationResponsePRAPAREHousingStatusExample" name="SDOHCC Observation Response PRAPARE Housing Status Example"/>
-<artifact id="Observation/SDOHCC-ObservationResponsePRAPAREUnmetNeedsMultiselectExample" key="Observation-SDOHCC-ObservationResponsePRAPAREUnmetNeedsMultiselectExample" name="SDOHCC Observation Response PRAPARE Unmet Needs Multiselect Example"/>
+<artifact deprecated="true" id="Observation/SDOHCC-ObservationResponsePRAPAREUnmetNeedsMultiselectExample" key="Observation-SDOHCC-ObservationResponsePRAPAREUnmetNeedsMultiselectExample" name="SDOHCC Observation Response PRAPARE Unmet Needs Multiselect Example"/>
 <artifact id="StructureDefinition/SDOHCC-ObservationScreeningResponse" key="StructureDefinition-SDOHCC-ObservationScreeningResponse" name="SDOHCC Observation Screening Response"/>
 <artifact deprecated="true" id="StructureDefinition/SDOHCC-Observation-ScreeningResponseBase-1" key="StructureDefinition-SDOHCC-Observation-ScreeningResponseBase-1" name="SDOHCC Observation ScreeningResponseBase 1"/>
+<artifact id="StructureDefinition/SDOHCC-ObservationSexualOrientation" key="StructureDefinition-SDOHCC-ObservationSexualOrientation" name="SDOHCC Observation Sexual Orientation"/>
+<artifact id="Observation/SDOHCC-ObservationSexualOrientationExample" key="Observation-SDOHCC-ObservationSexualOrientationExample" name="SDOHCC Observation Sexual Orientation Example"/>
 <artifact id="Organization/SDOHCC-OrganizationClinicExample" key="Organization-SDOHCC-OrganizationClinicExample" name="SDOHCC Organization Clinic Example"/>
 <artifact id="Organization/SDOHCC-OrganizationCoordinationPlatformExample" key="Organization-SDOHCC-OrganizationCoordinationPlatformExample" name="SDOHCC Organization Coordination Platform Example"/>
 <artifact id="Organization/SDOHCC-OrganizationPayerExample" key="Organization-SDOHCC-OrganizationPayerExample" name="SDOHCC Organization Payer Example"/>
@@ -76,12 +90,13 @@
 <artifact id="CapabilityStatement/SDOHCC-ReferralRecipientLight" key="CapabilityStatement-SDOH-ClinicalCareReferralRecipientLight" name="SDOHCC Referral Recipient - Light Capability Statement"/>
 <artifact id="CapabilityStatement/SDOHCC-ReferralRecipient" key="CapabilityStatement-SDOH-ClinicalCareReferralRecipient" name="SDOHCC Referral Recipient Capability Statement"/>
 <artifact id="CapabilityStatement/SDOHCC-ReferralSource" key="CapabilityStatement-SDOH-ClinicalCareReferralSource" name="SDOHCC Referral Source Capability Statement"/>
+<artifact id="RelatedPerson/SDOHCC-RelatedPersonMotherExample" key="RelatedPerson-SDOHCC-RelatedPersonMotherExample" name="SDOHCC Related Person Mother Example"/>
 <artifact deprecated="true" id="ServiceRequest/SDOHCC-ServiceRequestActiveBasedOnAnotherServiceRequestExample" key="ServiceRequest-SDOHCC-ServiceRequestActiveBasedOnAnotherServiceRequestExample" name="SDOHCC Service Request Active Based On Another Service Request Example"/>
 <artifact id="StructureDefinition/SDOHCC-ServiceRequest" key="StructureDefinition-SDOHCC-ServiceRequest" name="SDOHCC ServiceRequest"/>
 <artifact id="ServiceRequest/SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample" key="ServiceRequest-SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample" name="SDOHCC ServiceRequest Active Food Pantry Application Assist Example"/>
 <artifact deprecated="true" id="StructureDefinition/SDOHCC-ServiceRequest-Base-1" key="StructureDefinition-SDOHCC-ServiceRequest-Base-1" name="SDOHCC ServiceRequest Base 1"/>
 <artifact deprecated="true" id="ServiceRequest/SDOHCC-ServiceRequestBasedOnAnotherServiceRequestExample" key="ServiceRequest-SDOHCC-ServiceRequestBasedOnAnotherServiceRequestExample" name="SDOHCC ServiceRequest Based On Another Service Request Example"/>
-<artifact id="ServiceRequest/SDOHCC-ServiceRequestCompletedFoodPantryApplicationAssistExample" key="ServiceRequest-SDOHCC-ServiceRequestCompletedFoodPantryApplicationAssistExample" name="SDOHCC ServiceRequest Completed Food Pantry Application Assist Example"/>
+<artifact deprecated="true" id="ServiceRequest/SDOHCC-ServiceRequestCompletedFoodPantryApplicationAssistExample" key="ServiceRequest-SDOHCC-ServiceRequestCompletedFoodPantryApplicationAssistExample" name="SDOHCC ServiceRequest Completed Food Pantry Application Assist Example"/>
 <artifact deprecated="true" id="ServiceRequest/SDOHCC-ServiceRequestFoodPantryApplicationAssistanceExample" key="ServiceRequest-SDOHCC-ServiceRequestFoodPantryApplicationAssistanceExample" name="SDOHCC ServiceRequest Food Pantry Application Assistance Example"/>
 <artifact deprecated="true" id="ServiceRequest/SDOHCC-ServiceRequest-HungerVitalSign-Example-1" key="ServiceRequest-SDOHCC-ServiceRequest-HungerVitalSign-Example-1" name="SDOHCC ServiceRequest HungerVitalSign Example 1"/>
 <artifact id="ServiceRequest/SDOHCC-ServiceRequestSubreferralGardenProgramExample" key="ServiceRequest-SDOHCC-ServiceRequestSubreferralGardenProgramExample" name="SDOHCC ServiceRequest Subreferral Garden Program Example"/>
@@ -99,14 +114,18 @@
 <artifact id="Task/SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample" key="Task-SDOHCC-TaskOrderFulfillmentCompletedExample" name="SDOHCC Task Referral Management Order Fulfillment Completed Example"/>
 <artifact id="Task/SDOHCC-TaskReferralManagementOrderSubtaskAcceptedExample" key="Task-SDOHCC-TaskOrderAcceptedPartOfAnotherTaskExample" name="SDOHCC Task Referral Management Order Subtask Accepted Example"/>
 <artifact id="Task/SDOHCC-TaskReferralManagementOrderSubtaskCompletedExample" key="Task-SDOHCC-TaskOrderCompletedPartOfAnotherTaskExample" name="SDOHCC Task Referral Management Order Subtask Completed Example"/>
-<artifact id="ValueSet/SDOHCC-ValueSet211LACounty" key="ValueSet-SDOHCC-ValueSet211LACounty" name="SDOHCC ValueSet 211 LA County"/>
+<artifact deprecated="true" id="ValueSet/SDOHCC-ValueSet211LACounty" key="ValueSet-SDOHCC-ValueSet211LACounty" name="SDOHCC ValueSet 211 LA County"/>
 <artifact deprecated="true" id="ValueSet/SDOHCC-ValueSetHCPCSII" key="ValueSet-SDOHCC-ValueSetHCPCSII" name="SDOHCC ValueSet HCPCSII"/>
 <artifact deprecated="true" id="ValueSet/SDOHCC-ValueSet-HCPCSII-1" key="ValueSet-SDOHCC-ValueSet-HCPCSII-1" name="SDOHCC ValueSet HCPCSII 1"/>
 <artifact deprecated="true" id="ValueSet/SDOHCC-ValueSetICD10CM" key="ValueSet-SDOHCC-ValueSetICD10CM" name="SDOHCC ValueSet ICD10CM"/>
 <artifact id="ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT" key="ValueSet-SDOHCC-ValueSetLOINCSNOMEDCT" name="SDOHCC ValueSet LOINC SNOMEDCT"/>
+<artifact id="ValueSet/SDOHCC-ValueSetOMBEthnicityCategories" key="ValueSet-SDOHCC-ValueSetOMBEthnicityCategories" name="SDOHCC ValueSet OMB Ethnicity Categories"/>
+<artifact id="ValueSet/SDOHCC-ValueSetOMBRaceCategories" key="ValueSet-SDOHCC-ValueSetOMBRaceCategories" name="SDOHCC ValueSet OMB Race Categories"/>
 <artifact id="ValueSet/SDOHCC-ValueSetObservationDataAbsentReason" key="ValueSet-SDOHCC-ValueSetObservationDataAbsentReason" name="SDOHCC ValueSet Observation DataAbsentReason"/>
+<artifact id="ValueSet/SDOHCC-ValueSetObservationDerivedFromIdType" key="ValueSet-SDOHCC-ValueSetObservationDerivedFromIdType" name="SDOHCC ValueSet Observation DerivedFrom IdType"/>
 <artifact id="ValueSet/SDOHCC-ValueSetObservationMethod" key="ValueSet-SDOHCC-ValueSetObservationMethod" name="SDOHCC ValueSet Observation Method"/>
 <artifact id="ValueSet/SDOHCC-ValueSetObservationStatus" key="ValueSet-SDOHCC-ValueSetObservationStatus" name="SDOHCC ValueSet Observation Status"/>
+<artifact id="ValueSet/SDOHCC-ValueSetPronounsValue" key="ValueSet-SDOHCC-ValueSetPronounsValue" name="SDOHCC ValueSet Pronouns Value"/>
 <artifact id="ValueSet/SDOHCC-ValueSetSDOHCategory" key="ValueSet-SDOHCC-ValueSetSDOHCategory" name="SDOHCC ValueSet SDOH Category"/>
 <artifact id="ValueSet/SDOHCC-ValueSetSDOHQuestionnaireCategory" key="ValueSet-SDOHCC-ValueSetSDOHQuestionnaireCategory" name="SDOHCC ValueSet SDOH Questionnaire Category"/>
 <artifact deprecated="true" id="ValueSet/SDOHCC-ValueSet-SDOHDomain-1" key="ValueSet-SDOHCC-ValueSet-SDOHDomain-1" name="SDOHCC ValueSet SDOHDomain 1"/>
@@ -114,6 +133,7 @@
 <artifact id="ValueSet/SDOHCC-ValueSetTaskCode" key="ValueSet-SDOHCC-ValueSetTaskCode" name="SDOHCC ValueSet Task Code"/>
 <artifact id="ValueSet/SDOHCC-ValueSetTaskPriority" key="ValueSet-SDOHCC-ValueSetTaskPriority" name="SDOHCC ValueSet Task Priority"/>
 <artifact id="ValueSet/SDOHCC-ValueSetTaskStatus" key="ValueSet-SDOHCC-ValueSetTaskStatus" name="SDOHCC ValueSet Task Status"/>
+<artifact id="Observation/SDOHCC-ObservationRaceOMBMotherExample" key="Observation-SDOHCC-ObservationRaceOMBMotherExample" name="SDOHCC-Observation Race OMB Mother Example"/>
 <artifact id="SearchParameter/ServiceRequest-supporting-info" key="SearchParameter-ServiceRequest-supporting-info" name="ServiceRequestSupportingInfo"/>
 <artifact id="SearchParameter/Task-output-reference" key="SearchParameter-Task-output-reference" name="TaskOutputReference"/>
 <page key="NA" name="(NA)"/>
@@ -123,7 +143,7 @@
 <page key="checking_task_status" name="Checking Task Status"/>
 <page key="credits" name="Credits"/>
 <page key="downloads" name="Downloads"/>
-<page key="draft_specifications_for_race_and_ethnicity" name="Draft Specifications for Race and Ethnicity"/>
+<page key="draft_specifications_for_race_and_ethnicity" name="Draft Specifications for Personal Characteristics"/>
 <page key="exchange_workflow" name="Exchange Workflow"/>
 <page key="fhir_artifacts_overview" name="FHIR Artifacts Overview"/>
 <page key="functional_use_cases" name="Functional Use Cases"/>
@@ -135,8 +155,9 @@
 <page deprecated="true" key="patient_story_1_personas" name="Patient Story 1 Personas"/>
 <page deprecated="true" key="personas_and_patient_stories" name="Personas and Patient Stories"/>
 <page key="privacy_and_security" name="Privacy and Security"/>
-<page key="sdoh_clinical_care_scope" name="SDOH Clinical Care Scope"/>
-<page key="stu2_changes" name="STU2 Changes"/>
+<page key="sdoh_clinical_care_scope" name="SDOH Clinical Care Background"/>
+<page key="stu2_ballot_changes" name="STU2 Ballot Changes"/>
+<page key="stu2_changes" name="STU2 Publication Changes"/>
 <page key="support_for_multiple_domains" name="Support for Multiple Domains"/>
 <page key="survey_instrument_support" name="Survey Instrument Support"/>
 <page key="synchronizing_applications_with_api_data_sources" name="Synchronizing Applications with API Data Sources"/>
