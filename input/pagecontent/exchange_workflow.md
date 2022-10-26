@@ -1,9 +1,9 @@
 ### General Workflow
 
 
-The following depicts the general workflow anticipated by this Implementation guide.  General process is to:
+The following depicts the general workflow anticipated by this Implementation guide.  The general process is to:
 
-1) Assess the patient to determine social risk -- this may be done by using an assessment tool or having a conversation with the patient, or both.  As part of the assessment, the patient and provider agree on the specific risk items that are to be labeled as verified health concerns or problems.
+1) Assess the patient to determine social risk -- this may be done by using an assessment tool or via a conversation with the patient, or both.  As part of the assessment, the patient and provider agree on the specific risk items that are to be labeled as verified health concerns or problems.
 
 2) The patient and provider may establish specific goals regarding the identified social risk.
 
@@ -11,7 +11,7 @@ The following depicts the general workflow anticipated by this Implementation gu
 
 <table><tr><td><img src="GeneralWorkflow3.jpg" /></td></tr></table>
 
-There are a number of system to system interactions supported by this implementation guide.  This includes: 
+There are a number of system to system interactions supported by this implementation guide.  These include: 
 
 1. referrals via an intermediary (or indirect referrals) that may include interactions with multiple service performers,
 2. direct and direct light (where the interaction is with an application) referrals,
@@ -34,9 +34,11 @@ The following diagram depicts one example of an exchange workflow supported by t
    *  Community Based Organization (CBO) -- share Task and ServiceRequest and allow the CBO to respond by updating the Task status and providing feedback on the service(s) performed (Procedure(s)).
    *  Coordination Platform (CP) -- share Task and ServiceRequest and allow the CP to respond by updating the Task status and providing feedback on the service(s) performed (Procedure(s)).
       	Note: Typically, the CP interacts with the Patient and CBOs to perform the requested referrals/services using a variety of methods.
-   *  Responsible Payer -- with the patient's consent, provides access to health concerns (Problems) and Interventions to facilitate shared care planning for the covered member.
+   *  Responsible Payer -- Provides access to health concerns (Problems) and Interventions to facilitate shared care planning for the covered member.
 
 <table><tr><td><img src="SDOHInteractionsDrawingConsentV5.jpg" /></td></tr></table>
+
+Each of the workflow diagrams below defines the resources that are exchanged and/or updated for the supported use cases.
 
 ### Closed Loop Referral
 
@@ -76,11 +78,11 @@ The referral occurs between the Provider / Requester and the CBO / Performer whe
 
 [Link the Direct Referral functional use case](functional_use_cases.html#direct-referral-light)
 
-#### Interaction Diagram
+##### Interaction Diagram
 
 <table><tr><td><img src="SDOHInteractionsDirectExchange.jpg" /></td></tr></table>
 
-#### Workflow Diagram
+##### Workflow Diagram
 
 <table><tr><td><img src="DirectReferralSF.jpg" /></td></tr></table>
 
@@ -92,11 +94,11 @@ The referral occurs between the Provider / Requester and the CBO / Performer whe
 
 [Link to the Direct Referral Light functional use case](functional_use_cases.html#direct-referral-light)
 
-#### Interaction Diagram
+##### Interaction Diagram
 
 <table><tr><td><img src="SDOHInteractionsDirectExchangeLight.jpg" /></td></tr></table>
 
-#### Workflow Diagram
+##### Workflow Diagram
 
 <table><tr><td><img src="DirectReferralLightSF.jpg" /></td></tr></table>
 
@@ -120,24 +122,24 @@ This IG assumes that, in an Indirect Referral, the Referral Performer does not h
 
 [Link to the Indirect Referral with a Direct Light CBO functional use case](functional_use_cases.html#indirect-referral-with-direct-light-cbo)
 
-#### Interaction Diagram
+##### Interaction Diagram
 
 <table><tr><td><img src="SDOHInteractionsIndirectExchange.jpg" /></td></tr></table>
 
-#### Workflow Diagram
+##### Workflow Diagram
 
 <table><tr><td><img src="IndirectReferralSF.jpg" /></td></tr></table>
 
 
 
-### Notes on Direct and Indirect Referrals
+#### Notes on Direct and Indirect Referrals
 
 1. Parties SHOULD use polling if one or both of the parties is unable to support the subscription model (see notes on the [Checking Task Status](checking_task_status.html) page).
 2. The receiving party for the referral SHOULD use the batch query process to request periodic updates of reference resources. 
-3. The above system flows do not define the handling of all possible scenarios. Exchange scenarios may include refusing the referral, canceling the referral by either party, and error conditions that may occur when using RESTful exchanges.  It is up to each party to follow current the best practice in managing the state of the referral.
+3. The above system flows do not define the handling of all possible scenarios. Exchange scenarios may include refusing the referral, canceling the referral by either party, and error conditions that may occur when using RESTful exchanges.  It is up to each party to follow the current best practice in managing the state of the referral.
 4. The Provider / Requester SHOULD set the Task.status to "requested" until it receives a valid HTTPS response indicating that the Task was received at which point it SHOULD set the Task.status to "received".
 
-### Patient Interactions
+#### Patient Interactions
 
 This implementation guide supports additional interactions with a patient/client application (on a smartphone or portal).  These interactions include providing the patient/client with:
 
@@ -151,10 +153,20 @@ This implementation guide supports additional interactions with a patient/client
 6. information regarding available services (usually as a PDF)
 7. closing the loop on services delivered (e.g., providing patient outcomes)
 
+##### Overall Workflow
+
 <table><tr><td><img src="PatientClientExchange.jpg" /></td></tr></table>
 
-<table><tr><td><img src="PatientQuestionnaire.jpg" /></td></tr></table>
+The above patient / client interaction diagram indicates the high level exchanges between the Requester and the Patient / Client:
 
+1. providing referral information (service requested, contact information, instructions) to the patient's application
+2. enable a patient to use their application to cancel the service
+3. questionnaire retrieved by the patient's application from the referring entity, completed and returned,  to determine the status of a service that may take an extended amount of time (e.g., prior to the patient meeting with the referring provider)
+4. questionnaire retrieved by the patient's application from the referring entity, completed and returned, to close the loop with the patient on completion of the service to determine the patient's view their interaction with the CBO / performer and the ability of the service provided to meet their needs
+
+##### Detailed workflow for a single questionnaire 
+
+<table><tr><td><img src="PatientQuestionnaire.jpg" /></td></tr></table>
 
 
 ### Support for API Access to SDOH Information
