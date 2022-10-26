@@ -159,10 +159,10 @@ This implementation guide supports additional interactions with a patient/client
 
 The above patient / client interaction diagram indicates the high level exchanges between the Requester and the Patient / Client:
 
-1) providing referral information (service requested, contact information, instructions) to the patient's application
-2) enable a patient to use their application to cancel the service
-3) questionnaire retrieved by the patient's application from the referring entity, completed and returned,  to determine the status of a service that may take an extended amount of time (e.g., prior to the patient meeting with the referring provider)
-4) questionnaire retrieved by the patient's application from the referring entity, completed and returned, to close the loop with the patient on completion of the service to determine the patient's view their interaction with the CBO / performer and the ability of the service provided to meet their needs
+1. providing referral information (service requested, contact information, instructions) to the patient's application
+2. enable a patient to use their application to cancel the service
+3. questionnaire retrieved by the patient's application from the referring entity, completed and returned,  to determine the status of a service that may take an extended amount of time (e.g., prior to the patient meeting with the referring provider)
+4. questionnaire retrieved by the patient's application from the referring entity, completed and returned, to close the loop with the patient on completion of the service to determine the patient's view their interaction with the CBO / performer and the ability of the service provided to meet their needs
 
 ##### Detailed workflow for a single questionnaire 
 
