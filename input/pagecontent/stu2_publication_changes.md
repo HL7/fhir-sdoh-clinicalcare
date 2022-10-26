@@ -15,7 +15,7 @@
 #### Mapping		
 
 - [FHIR-38082](https://jira.hl7.org/browse/FHIR-38082)	Beef up the mapping instructions page
-- [FHIR-38081](https://jira.hl7.org/browse/FHIR-38081)	Mapping page shouldn't have the mapping language content
+- [FHIR-38081](https://jira.hl7.org/browse/FHIR-38081)	Mapping page should not have the mapping language content
   - updated [mapping instructions](mapping_instructions.html)
 
 #### Task Instructions		
@@ -33,7 +33,7 @@
 
 - [FHIR-34876](https://jira.hl7.org/browse/FHIR-34876)	Need specificity in requirements, e.g., state statutes.
 - [FHIR-34863](https://jira.hl7.org/browse/FHIR-34863)	References from Race Profile to Spec Requirements
-- [FHIR-34862](https://jira.hl7.org/browse/FHIR-34862)	References from Ethnicty Profile to Spec Requirements
+- [FHIR-34862](https://jira.hl7.org/browse/FHIR-34862)	References from Ethnicity Profile to Spec Requirements
 - [FHIR-34860](https://jira.hl7.org/browse/FHIR-34860)	State Requirements Unclear
 - [FHIR-34858](https://jira.hl7.org/browse/FHIR-34858)	Race and Ethnicity Text
 - [FHIR-35679](https://jira.hl7.org/browse/FHIR-35679)	Illustrate that laws vary around sharing of race and ethnicity data
@@ -44,8 +44,8 @@
 - [FHIR-34999](https://jira.hl7.org/browse/FHIR-34999)	Adding R/E Observations to the Structured Definitions without indicating they are draft will cause implementation confusion
 - [FHIR-35691](https://jira.hl7.org/browse/FHIR-35691)	"Unknown" is not appropriate as an observation method
 - [FHIR-34878](https://jira.hl7.org/browse/FHIR-34878)	Need to consider Provenance when R/E Extensions and Observation Resource is used for R/E
-- [FHIR-35327](https://jira.hl7.org/browse/FHIR-35327)	For Observation.method value set, add guidance related to use of "observed".
-- [FHIR-35325](https://jira.hl7.org/browse/FHIR-35325)	For Observation.method value set, clarify definition for "reported-by-related-person" and add guidance related to use of "self-reported" and "reported-by-related-person".
+- [FHIR-35327](https://jira.hl7.org/browse/FHIR-35327)	For Observation.method value set, add guidance related to use of "observed"
+- [FHIR-35325](https://jira.hl7.org/browse/FHIR-35325)	For Observation.method value set, clarify the definition of "reported-by-related-person" and add guidance related to use of "self-reported" and "reported-by-related-person"
 - [FHIR-35206](https://jira.hl7.org/browse/FHIR-35206)	Patient Application Client CapabilityStatement does not include Observation therefore patients will not be able to Read nor search for R/E Observation Profiles
 - [FHIR-35715](https://jira.hl7.org/browse/FHIR-35715)	Unclear what adhoc and adhocresponse are - please clarify
 - [FHIR-35370](https://jira.hl7.org/browse/FHIR-35370)	For Observation.method value set, add guidance related to use of "observed".
@@ -56,7 +56,7 @@
 
 - [FHIR-36591](https://jira.hl7.org/browse/FHIR-36591)	Add on-hold to the value set for .status to support patient inability to perform task for a period of time
   - Added on-hold to the [value set for the personal task status](artifacts.html#artifacts-summary)
- 
+
 
 #### Functional Use Cases		
 
@@ -64,7 +64,7 @@
 - [FHIR-35639](https://jira.hl7.org/browse/FHIR-35639)	The patient should be given an opportunity to weigh in on whether the referral was successful and goals have been accomplished (or progress made)
 - [FHIR-35633](https://jira.hl7.org/browse/FHIR-35633)	Clarifications related to Closing the Loop
 - [FHIR-35623](https://jira.hl7.org/browse/FHIR-35623)	Clarify: what happens when the CP shares that info with the CBO or other agency assisting with the Food Insecurity?
-- [FHIR-35621](https://jira.hl7.org/browse/FHIR-35621)	what is the CP doing on behalf of the provider organization that renders it a business associate?
+- [FHIR-35621](https://jira.hl7.org/browse/FHIR-35621)	What is the CP doing on behalf of the provider organization that renders it a business associate?
 - [FHIR-35377](https://jira.hl7.org/browse/FHIR-35377)	Additional info about what a CP is might be helpful here
 - [FHIR-34881](https://jira.hl7.org/browse/FHIR-34881)	Referral workflow steps need to be aligned
   - Applied the above ticket dispositions to the [Functional Use Cases](functional_use_cases.html) page
@@ -72,7 +72,7 @@
 #### Structure Definitions		
 
 - [FHIR-34891](https://jira.hl7.org/browse/FHIR-34891)	Please relax Goal.Achievement cardinality to 0..1 to align with goals that are proposed or planned
-  - changed goal.achievement cardinaligy to 0..1
+  - changed goal.achievement cardinality to 0..1
 - [FHIR-35369](https://jira.hl7.org/browse/FHIR-35369)	Streamline representation of SDOH screening instruments
   - based on US Core decision, change grouping observation to have individual observations for multiple selection questions
 
@@ -80,7 +80,7 @@
 
 - [FHIR-35733](https://jira.hl7.org/browse/FHIR-35733)	Patient interaction diagrams need more clarity
 - [FHIR-35721](https://jira.hl7.org/browse/FHIR-35721)	Recommend better definition and consistence with diagram and rest of 9
-- [FHIR-35717](https://jira.hl7.org/browse/FHIR-35717)	Move this section up so that its easier to find
+- [FHIR-35717](https://jira.hl7.org/browse/FHIR-35717)	Move this section up so that it is easier to find
 - [FHIR-35637](https://jira.hl7.org/browse/FHIR-35637)	Workflow and Managing Consent diagram should be expanded to include API Resources
   - Applied the above ticket dispositions to the [Exchange Workflow](exchange_workflow.html) page
 
