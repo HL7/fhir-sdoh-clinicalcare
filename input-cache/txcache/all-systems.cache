@@ -309,3 +309,14 @@ v: {
   "error" : "The code provided (http://snomed.info/sct#410606002) is not valid in the value set 'SDOHCCValueSetSDOHCategory' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "446151000124109",
+  "display" : "Identifies as male gender"
+}, "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.32", "version": "20220316", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Identifies as male gender (finding)",
+  "code" : "446151000124109",
+  "system" : "http://snomed.info/sct"
+}
+-------------------------------------------------------------------------------------

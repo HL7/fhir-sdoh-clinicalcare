@@ -47,6 +47,11 @@
         <packageId value="hl7.fhir.uv.subscriptions-backport"/>
         <version value="0.1.0"/>
     </dependsOn>
+    <dependsOn id="vsac">
+        <uri value="http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"/>
+        <packageId value="us.nlm.vsac"/>
+        <version value="0.9.0"/>
+    </dependsOn>
     <definition>
         <grouping id="new-group8">
             <name value="Capability Statements"/>

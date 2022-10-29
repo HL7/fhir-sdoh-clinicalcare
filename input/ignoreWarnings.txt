@@ -37,13 +37,6 @@ INFORMATION: Questionnaire/SDOHCC-QuestionnaireHungerVitalSign: Questionnaire.it
 INFORMATION: Questionnaire/SDOHCC-QuestionnaireHungerVitalSign: Questionnaire.item[2].extension[4]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap
 INFORMATION: Questionnaire/SDOHCC-QuestionnaireHungerVitalSign: Questionnaire.item[2].extension[5]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap
 
-# The following issues are related to a known issue with access to VSAC value sets which is being addressed by HL7 (see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Validation.20Issue.20-.20Using.20VSAC.20ValueSet) 
-INFORMATION: Observation/SDOHCC-ObservationRaceOMBExample: Observation.component[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB
-INFORMATION: Observation/SDOHCC-ObservationRaceOMBExample: Observation.component[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB
-INFORMATION: Observation/SDOHCC-ObservationRaceOMBPractitionerExample: Observation.component[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB
-INFORMATION: Observation/SDOHCC-ObservationRaceOMBMotherExample: Observation.component[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB
-WARNING: Observation/SDOHCC-ObservationGenderIdentityExample: Observation.value.ofType(CodeableConcept): ValueSet https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1021.32/expansion not found by validator
-
 # The following issues are addressed by an exception granted by the Cross-Group Projects work group (Jira ticket FHIR-29795).
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
@@ -61,6 +54,3 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalca
 # The following issues have been reviewed and are because this IG has a dependency on US Core 3.1.1 where the referenced artifacts did not exist.
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest').baseDefinition: US FHIR Usage rules require that all profiles on ServiceRequest derive from the core US profile
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition').baseDefinition: US FHIR Usage rules require that all profiles on Condition derive from one of the base US profiles
-
-# The following issue has been reviewed and is because the IG Publisher does not like pattern on reference.
-WARNING: StructureDefinition/SDOHCC-Group: StructureDefinition.snapshot.element[30].fixed.ofType(Reference): For the complex type Reference, consider using a pattern rather than a fixed value to avoid over-constraining the instance
