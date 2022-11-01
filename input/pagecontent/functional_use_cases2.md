@@ -1,6 +1,3 @@
-Note: SDOH IG related Patient Stories are available on the Gravity Project Confluence site [here](https://confluence.hl7.org/display/GRAV/Patient+Stories)
-
-These use cases are represented by workflow diagrams on the [Exchange Workflow Page](exchange_workflow.html)
 
 The following numbering is use throughout this section where N is an integer number:
 
@@ -8,8 +5,13 @@ The following numbering is use throughout this section where N is an integer num
 - IN (e.g. I1-I12) are additional steps used only by Indirect use cases
 - INa (e.g. I8,I9) are steps used by the Indirect use case when communicating with a FHIR API enabled CBO
 - INb (e.g. I8b, I9b) are steps used by the Indirect use case when communicating with a FHIR application enabled CBO
+- 
+### Driving real-world use cases from which the workflow is based
+SDOH IG related Patient Stories are available on the Gravity Project Confluence site here
+These use cases are represented by workflow diagrams on the [Exchange Workflow Page](exchange_workflow.html)
 
 ### Overview
+The basis of the exchange interactions described below is to attempt to ‘close the loop’ between provider, or other healthcare actor, who makes a request (referral, in FHIR provide as a combination (SDOHCC Task For Referral Management)[]/SDOHCC ServiceRequest()[]) for SDOH services and the request recipient (referral recipient, with various FHIR enabled capabilities and configurations as described below). The workflow detailed below provides a vision of how the IG is implemented (including all FHIR Artifacts, e.g Capability Statements, SDOH ServiceRequest, SDOH Task) to enable back and forth communication. 
 
 The functional use cases defined below are based on specific exchanges of information between the relevant actors.  These use cases include:
 
@@ -67,6 +69,7 @@ Patient assessed by provider and referred to CBO to deliver the service
 #### Provider – CBO Actions 
 
 8a. Provider or Care Coordinator creates and sends an electronic referral to the C
+	For direct light, the Provider or Care Coordinator creates and sends an electronic referral to CBO with secure link to Referral Source FHIR server containing the (FHIR SDOHCC Task For Referral Management)[]/(SDOHCC ServiceRequest)[] referencing additional supporting FHIR Resources (such as FHIR Observations, FHIR Conditions, etc…).
 
 9a. CBO receives and accepts referral
 
@@ -114,15 +117,20 @@ Note: Community Based Organization (CBO) has an application that can interact wi
 #### CBO - Provider Actions (changed based on CBO application vs FHIR API)
 
 8b. CBO application queries Provider or Care Coordinator API for new or updated referrals.
-
+	The CBO (Referral Recipient) system queries the Referral Source FHIR server using the FHIR API (using the FHIR (Task id)[]  and (SDOHCC ServiceRequest Resource instance id)[]). Every instance of a FHIR Resource or Profile has a FHIR Server specific unique id. Using the HTTPS GET method with the Resource type and id, one can directly retrieve the specific instance.
+	
 9b. CBO finds new referral and  accepts the referral
+	CBO updates the status of the referral to indicate acceptance of the referral, by updating the (status)[] of the FHIR (SDOHCC Task For Referral Management)[] specific to the referral indicated above from (requested)[] to ‘accepted.’ FHIR SDOHCC Task For Referral Management status is updated using the FHIR API to ‘in progress’ when work commences.
+
+	There is the possibility that a further referral was made by the CBO to a separate CBO. With a CBO without a FHIR server this can be communicated by sending (i.e. CREATE method of the FHIR API) a FHIR SDOHCC Task For Referral Management instance that references the initial (SDOHCC Task For Referral Management[)]/(SDOHCC ServiceRequest)[] through partOf:SupportedPartOf and basedOn:SupportedBasedOn respectively, to the Referral Source FHIR server. The new Task instance is a child Task. We would appreciate feedback on any use of this paradigm.
 
 #### CBO Actions (changed step 10 does not occur)
 
 10b. Optional exchange with Patient does not occur electronically (no app to app exchange)
 
 11. CBO completes the evaluation and enrollment, updates the status of the referral to completed, and includes information on what was completed 
-
+	To indicate completion via the FHIR API, the following are performed by the CBO: Any procedures performed by the CBO are indicated by using the POST method of the FHIR API (i.e. CREATE through the FHIR API) and referencing the FHIR SDOHCC ServiceRequest instance using the data element in a FHIR SDOHCC Procedure Profile instance. Also, the relevant Task should be referenced to the SDOHCC Procedure through the relevant output field. The FHIR SDOHCC Task For Referral Management status is updated using the FHIR API to completed.’ 
+	
 #### Provider Actions (same as Direct Referral)
 
 - steps 12. through 14. 
