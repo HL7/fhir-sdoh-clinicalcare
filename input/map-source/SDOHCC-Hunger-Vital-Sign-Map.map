@@ -30,7 +30,7 @@ group sdohMapping(source src : questionnaireResponse, target bundle : Bundle) {
 	  TransformGroupObservation(src, bundle, groupObservation, entry) "group-obsn";
 
   //create condition if answer to third question is "At Risk"
-  src.item where linkId = '/88124-3' and answer.valueCoding.code ='LA19952-3' -> bundle.entry as entry, entry.resource = create('sdohccCondition') as condition then
+  src.item where linkId = '/88124-3' and answer.value.code ='LA19952-3' -> bundle.entry as entry, entry.resource = create('sdohccCondition') as condition then
     TransformCondition(src, bundle, condition, entry);
 }
 
@@ -60,7 +60,7 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
   src.authored as authored -> observation.issued = authored, observation.effective = authored;
 
   answerItem.answer as answer -> observation.value = create('CodeableConcept') as newCC then {
-    answer.valueCoding as coding -> newCC.coding = coding as newCoding;
+    answer.value as coding -> newCC.coding = coding as newCoding;
   };
 
   src.subject as qSubject -> observation.subject = create('Reference') as newReference then {

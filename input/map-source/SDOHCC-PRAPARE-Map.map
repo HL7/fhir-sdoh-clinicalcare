@@ -47,7 +47,7 @@ group itemContent(source qResponse: questionnaireResponse, source answerItem, ta
 
 group SetValueCodeableConceptFromAnswer(source answer, target observation) {
   answer -> observation.value = create('CodeableConcept') as newCC then {
-    answer.valueCoding as coding -> newCC.coding = coding as newCoding;
+    answer.value as coding -> newCC.coding = coding as newCoding;
   } "obsn-value";
 }
 
@@ -327,11 +327,11 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
   } "obsn-cat";
 
   //create a Condition if homeless
-  answerItem where linkId = '/93042-0/71802-3' and answer.valueCoding.code ='LA30190-5' -> bundle.entry as entry, entry.resource = create('sdohccCondition') as condition then
+  answerItem where linkId = '/93042-0/71802-3' and answer.value.code ='LA30190-5' -> bundle.entry as entry, entry.resource = create('sdohccCondition') as condition then
     TransformCondition(src, bundle, condition, entry), SetConditionCodeAndEvidence1(src, bundle, condition) "condition-homeless";
 
   //create a Condition if unemployed
-  answerItem where linkId = '/93041-2/67875-5' and answer.valueCoding.code ='LA17956-6' -> bundle.entry as entry, entry.resource = create('sdohccCondition') as condition then
+  answerItem where linkId = '/93041-2/67875-5' and answer.value.code ='LA17956-6' -> bundle.entry as entry, entry.resource = create('sdohccCondition') as condition then
     TransformCondition(src, bundle, condition, entry), SetConditionCodeAndEvidence2(src, bundle, condition) "condition-unemployed";
 
   src -> entry.request as request then {
@@ -348,13 +348,13 @@ group SetValue(source answerItem, target observation) {
 
 group SetValueCodeableConcept(source src, target observation) {
   src.answer as answer -> observation.value = create('CodeableConcept') as newCC then {
-    answer.valueCoding as coding -> newCC.coding = coding as newCoding;
+    answer.value as coding -> newCC.coding = coding as newCoding;
   };
 }
 
 group SetValuesToComponents(source answerItem, source srcObservation, target observation) {
   answerItem.answer as answer -> observation.component as newComponent, newComponent.value = create('CodeableConcept') as newCC then {
-    answer.valueCoding as coding -> newCC.coding = coding as newCoding;
+    answer.value as coding -> newCC.coding = coding as newCoding;
     srcObservation.code as code ->  newComponent.code = code;
   };
 }
