@@ -1118,6 +1118,11 @@
                 <generation value="markdown"/>
             </page>
             <page>
+                <nameUrl value="functional_use_cases2.html"/>
+                <title value="Functional Use Cases 2"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
                 <nameUrl value="survey_instrument_support.html"/>
                 <title value="Survey Instrument Support"/>
                 <generation value="markdown"/>
