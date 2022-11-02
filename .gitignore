@@ -2,3 +2,10 @@
 temp
 template
 output
+_updatePublisher.sh
+_gencontinuous.bat
+_gencontinuous.sh
+_genonce.bat
+_genonce.sh
+_updatePublisher.bat
+_updatePublisher.sh
