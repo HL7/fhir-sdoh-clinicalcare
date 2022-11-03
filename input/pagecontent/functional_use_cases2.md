@@ -15,7 +15,7 @@ SDOH IG related Patient Stories are available on the Gravity Project Confluence 
 These use cases are represented by workflow diagrams on the [Exchange Workflow Page](exchange_workflow.html)
 
 ### Overview
-The basis of the exchange interactions described below is to attempt to ‘close the loop’ between a provider, or other healthcare actor, who makes a request (referral), in FHIR provided as a combination of [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html)/[SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html), for SDOH services and the request recipient (referral recipient, with various FHIR enabled capabilities and configurations as described below). The workflow detailed below provides a vision of how the IG is implemented (including all FHIR Artifacts, such as Capability Statements, Resource profiles, and valuesets) to enable back and forth communication. 
+The basis of the exchange interactions described below is to attempt to ‘close the loop’ between a provider, or other healthcare actor, who makes a request (referral), in FHIR provided as a combination of [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html)/[SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html), for SDOH services and the request recipient (referral recipient, with various FHIR enabled capabilities and configurations as described below). The workflow detailed below provides a vision of how the IG is implemented (including all FHIR Artifacts, such as Capability Statements, Resource profiles, and value sets) to enable back and forth communication. 
 
 The functional use cases defined below are based on specific exchanges of information between the relevant actors.  These use cases include:
 
@@ -241,7 +241,7 @@ Applies to Providers and Payers as the referral requester, and patient is assess
 
 #### Provider Actions (same as Direct Referral)
 
-- steps 1. through 7.
+- steps 1 through 7
 
 #### Provider – CP – CBO workflow (note: steps with a "b" suffix are specific to this referral)
 
@@ -292,7 +292,7 @@ The following applies to Providers, Payers, CPs and CPOs and assumes patient is 
 
 #### Patient Workflow (from above functional use cases)
 
-	All exchanges are optional
+All exchanges are optional
 
 - Provider - Patient
 
