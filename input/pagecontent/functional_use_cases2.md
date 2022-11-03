@@ -1,3 +1,6 @@
+The following acronyms are used:
+- Community Based Organization (CBO) -- organizations that deliver social requested services (e.g. food pantry)
+- Coordination Platform (CP) -- an intermediary that receives referrals, assesses patient needs, and works with one or more CBOs to deliver the services
 
 The following numbering is use throughout this section where N is an integer number:
 
@@ -6,37 +9,36 @@ The following numbering is use throughout this section where N is an integer num
 - INa (e.g. I8,I9) are steps used by the Indirect use case when communicating with a FHIR API enabled CBO
 - INb (e.g. I8b, I9b) are steps used by the Indirect use case when communicating with a FHIR application enabled CBO
 
-### Driving real-world use cases from which the workflow is based
+### Patient Stories and Workflow
 SDOH IG related Patient Stories are available on the Gravity Project Confluence site [here](https://confluence.hl7.org/display/GRAV/Patient+Stories).
 
 These use cases are represented by workflow diagrams on the [Exchange Workflow Page](exchange_workflow.html)
 
 ### Overview
-The basis of the exchange interactions described below is to attempt to ‘close the loop’ between provider, or other healthcare actor, who makes a request (referral, in FHIR provide as a combination [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html)/[SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html)) for SDOH services and the request recipient (referral recipient, with various FHIR enabled capabilities and configurations as described below). The workflow detailed below provides a vision of how the IG is implemented (including all FHIR Artifacts, e.g Capability Statements, SDOH ServiceRequest, SDOH Task) to enable back and forth communication. 
+The basis of the exchange interactions described below is to attempt to ‘close the loop’ between a provider, or other healthcare actor, who makes a request (referral), in FHIR provided as a combination of [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html)/[SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html), for SDOH services and the request recipient (referral recipient, with various FHIR enabled capabilities and configurations as described below). The workflow detailed below provides a vision of how the IG is implemented (including all FHIR Artifacts, such as Capability Statements, Resource profiles, and valuesets) to enable back and forth communication. 
 
 The functional use cases defined below are based on specific exchanges of information between the relevant actors.  These use cases include:
 
 - A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges
-- A "light" version of the direct referral where the performing entity uses a application that can access the referring entities API (but does not have FHIR API capability)
+- A "light" version of the direct referral where the performing entity uses and application that can access the referring entities API (but does not have FHIR API capability)
 - An indirect referral, where the communication between the referring entity and the performing entity is through an intermediary (such as a Coordination Platform as defined below) that has FHIR API capability
-- Finally, a patient application may optionally communicate directly with any of the entities that support a FHIR API and provides a mechanism for secure exchange
+- Finally, a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange
 
 ### Actors
 
-- Provider (includes licensed providers and others that interact with the patient to assess social risk, set goal, and determine/recommend referrals)
-- Care Coordinator (coordinates the care and referral activities but normally does not make assessment, goal, or referral decisions)
-- Patient (consumer, client, etc.) --the subject of the assessment, goals, referrals and services delivered)
+- Provider -- includes licensed providers and others that interact with the patient to assess social risk, set goals, and determine/recommend referrals
+- Care Coordinator -- coordinates the care and referral activities but normally does not make assessment, goal, or referral decisions
+- Patient -- a consumer, or client, who is the subject of the assessment, goals, referrals and services delivered
 - Community Based Organization (CBO) -- organizations that deliver social requested services (e.g. food pantry)
 - Coordination Platform (CP) -- an intermediary that receives referrals, assesses patient needs, and works with one or more CBOs to deliver the services
 
 ### Business Associates
 
-- CBOs and CPs are not covered entities under HIPAA.  (Covered entities only includes Providers, Payers, and Clearing Houses)
+- CBOs and CPs are not covered entities under HIPAA.  (Covered entities only include Providers, Payers, and Clearing Houses)
 - However, a CBO and/or CP may be a Business Associate (BA) of a covered entity.  This requires a Business Associate Agreement (BAA) between the covered entity and the BA.
 - Entities covered under a BAA may be able to receive Protected Health Information (PHI) as part of the agreement without consent of the patient.  However, they are required to observe the same limitation as covered entities with regard the protection and disclosure of PHI.
-- Typically a BAA is required by a covered entity to avoid disclosure of PHI by non-covered entities and in particular in situations where clinical information is shared to help manage the needs of the patient  (e.g., if the patient is diabetic and therefore has specific dietary constraints)
-- For a covered entity or business associate to share PHI with an entity that is not a covered entity or does not have a BAA, consent of the patient is generally required (there are specific exception allowed by HIPAA)
-
+- Typically, a BAA is required by a covered entity to avoid disclosure of PHI by non-covered entities and, in particular, in situations where clinical information is shared to help manage the needs of the patient  (e.g., if the patient is diabetic and therefore has specific dietary constraints)
+- For a covered entity or business associate to share PHI with an entity that is not a covered entity or does not have a BAA, consent of the patient is generally required (there are specific exceptions allowed by HIPAA)
 
 
 ### Direct Referral
@@ -77,7 +79,7 @@ Patient assessed by provider and referred to CBO to deliver the service
 
 &nbsp;&nbsp;&nbsp;&nbsp;8a Provider or Care Coordinator creates and sends an electronic referral to the CBO
 
-&nbsp;&nbsp;&nbsp;&nbsp;For direct light, the Provider or Care Coordinator creates and sends an electronic referral to CBO with secure link to Referral Source FHIR server containing the [FHIR SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html)/[SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) referencing additional supporting FHIR Resources (such as FHIR Observations, FHIR Conditions, etc…).
+&nbsp;&nbsp;&nbsp;&nbsp;For direct light, the Provider or Care Coordinator creates and sends an electronic referral to CBO with secure link to Referral Source FHIR server containing the [FHIR SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html)/[SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) referencing additional supporting FHIR Resources (such as FHIR Observations, FHIR Conditions, etc.).
 
 &nbsp;&nbsp;&nbsp;&nbsp;9a CBO receives and accepts referral
 
@@ -100,18 +102,18 @@ Patient assessed by provider and referred to CBO to deliver the service
 - CBOs are typically not BAs of covered entities and therefore not bound by HIPAA's privacy and security requirements
 - Provider may not always have the relationship with the CBO
 - CBO may not accept the referral or be unable to perform the requested service
-- Closing the loop via patient reported outcome 
+- Closing the loop via patient reported outcomes 
 
 <table><tr><td><img src="FunctionalUseCaseFlowDirectReferral3-Msg DME w Int.jpg" /></td></tr></table>
 
 
 ### Direct Referral Light
 
-Note: same as Direct Referral with the following exceptions 
+Same as the Direct Referral workflow above with the following exceptions noted below: 
 
 #### Actors (same as Direct Referral)
 
-Note: Community Based Organization (CBO) has an application that can interact with a FHIR API and does not have a FHIR server
+Community Based Organization (CBO) has an application that can interact with a FHIR API but does not have a FHIR server
 
 #### Assumptions
 
@@ -133,15 +135,15 @@ Note: Community Based Organization (CBO) has an application that can interact wi
 
 &nbsp;&nbsp;&nbsp;&nbsp;The CBO updates the status of the referral to indicate acceptance of the referral, by updating the [status](StructureDefinition-SDOHCC-TaskForReferralManagement-definitions.html#Task.status) of the FHIR [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html) specific to the referral indicated above from [requested](https://hl7.org/fhir/R4/codesystem-task-status.html#task-status-requested) to ‘accepted.’ FHIR SDOHCC Task For Referral Management status is updated using the FHIR API to ‘in progress’ when work commences.
 
-&nbsp;&nbsp;&nbsp;&nbsp;There is the possibility that a further referral was made by the CBO to a separate CBO. With a CBO without a FHIR server this can be communicated by sending (i.e. CREATE method of the FHIR API) a FHIR [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html) instance that references the initial [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html)/[SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) through [partOf:SupportedPartOf](StructureDefinition-SDOHCC-TaskForReferralManagement-definitions.html#Task.partOf:SupportedPartOf) and [basedOn:SupportedBasedOn](StructureDefinition-SDOHCC-ServiceRequest-definitions.html#ServiceRequest.basedOn:SupportedBasedOn) respectively, to the Referral Source FHIR server. The new Task instance is a child Task. We would appreciate feedback on any use of this paradigm.
+&nbsp;&nbsp;&nbsp;&nbsp;There is the possibility that a further referral was made by the CBO to a separate CBO. For a CBO without a FHIR server, this can be communicated by sending (i.e. CREATE method of the FHIR API) a FHIR [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html) instance that references the initial [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html)/[SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) through [partOf:SupportedPartOf](StructureDefinition-SDOHCC-TaskForReferralManagement-definitions.html#Task.partOf:SupportedPartOf) and [basedOn:SupportedBasedOn](StructureDefinition-SDOHCC-ServiceRequest-definitions.html#ServiceRequest.basedOn:SupportedBasedOn) respectively, to the Referral Source FHIR server. The new Task instance is a child Task. We would appreciate feedback on any use of this paradigm.
 
 #### CBO Actions (changed step 10 might not occur electronically)
 
-&nbsp;&nbsp;&nbsp;&nbsp;10 Optional exchange with Patient might not occur electronically (no app to app exchange)
+&nbsp;&nbsp;&nbsp;&nbsp;10 Optional exchange with Patient might not occur electronically
 
 &nbsp;&nbsp;&nbsp;&nbsp;11 CBO completes the evaluation and enrollment, updates the status of the referral to completed, and includes information on what was completed 
 
-&nbsp;&nbsp;&nbsp;&nbsp;To indicate completion via the FHIR API, the following are performed by the CBO: Any procedures performed by the CBO are indicated by sending a [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html) to the referral source server using the POST method of the FHIR API (i.e. CREATE through the FHIR API).The procedure can be connected to the service request thru referencing the FHIR [SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) instance from the FHIR [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html) Profile instance. Also, the relevant [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html) should refer to the [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html) through the relevant [output](StructureDefinition-SDOHCC-TaskForReferralManagement-definitions.html#Task.output) field. The FHIR SDOHCC Task For Referral Management [status](StructureDefinition-SDOHCC-TaskForReferralManagement-definitions.html#key_Task.status) is updated using the FHIR API to [completed](https://hl7.org/fhir/R4/codesystem-task-status.html#task-status-completed). 
+&nbsp;&nbsp;&nbsp;&nbsp;To indicate completion via the FHIR API, the following are performed by the CBO: Any procedures performed by the CBO are indicated by sending a [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html) to the referral source server using the POST method of the FHIR API (i.e. CREATE through the FHIR API). The procedure can be connected to the service request thru referencing the FHIR [SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) instance from the FHIR [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html) Profile instance. Also, the relevant [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html) should refer to the [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html) through the relevant [Task.output](StructureDefinition-SDOHCC-TaskForReferralManagement-definitions.html#Task.output) field. The FHIR SDOHCC Task For Referral Management [Task.status](StructureDefinition-SDOHCC-TaskForReferralManagement-definitions.html#key_Task.status) is updated using the FHIR API to [completed](https://hl7.org/fhir/R4/codesystem-task-status.html#task-status-completed). 
 
 #### Provider Actions (same as Direct Referral)
 
@@ -154,7 +156,7 @@ Note: Community Based Organization (CBO) has an application that can interact wi
 
 ### Indirect Referral with Direct CBO
 
-Note: applies to Providers and Payers as the referral requester
+Applies to Providers and Payers as the referral requester
 
 Patient is assessed by a practitioner and referred to a Coordination Platform (CP). CP refers to a Community Based Organization (CBO) to deliver the service
 
@@ -220,9 +222,7 @@ Patient is assessed by a practitioner and referred to a Coordination Platform (C
 
 ### Indirect Referral with Direct Light CBO
 
-Note: applies to Providers and Payers as the referral requester
-
-Patient is assessed by a practitioner and referred to a Coordination Platform (CP).  CP refers to a Community Based Organization (CBO) to deliver the service
+Applies to Providers and Payers as the referral requester, and patient is assessed by a practitioner and referred to a Coordination Platform (CP).  CP refers to a Community Based Organization (CBO) to deliver the service
 
 #### Actors
 
@@ -281,9 +281,7 @@ Patient is assessed by a practitioner and referred to a Coordination Platform (C
 
 ### Closing the loop with the patient
 
-Note: applies to Providers, Payers, CPs and CPOs
-
-Assumes patient is using a personal application (e.g., Smart Phone application) that has already been registered and authenticated with the provider's EHR API, the CP API and the CBO API.
+The following applies to Providers, Payers, CPs and CPOs and assumes patient is using a personal application (e.g., Smart Phone application) that has already been registered and authenticated with the provider's EHR API, the CP API and the CBO API.
 
 #### Actors
 
@@ -294,7 +292,7 @@ Assumes patient is using a personal application (e.g., Smart Phone application) 
 
 #### Patient Workflow (from above functional use cases)
 
-	Note: all exchanges are optional
+	All exchanges are optional
 
 - Provider - Patient
 
