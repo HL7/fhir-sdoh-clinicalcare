@@ -6,7 +6,7 @@ The following numbering is use throughout this section where N is an integer num
 
 - N (e.g. 1-14) are steps common to all functional use cases
 - IN (e.g. I1-I12) are additional steps used only by Indirect use cases
-- INa (e.g. I8,I9) are steps used by the Indirect use case when communicating with a FHIR API enabled CBO
+- INa (e.g. I8a,I9a) are steps used by the Indirect use case when communicating with a FHIR API enabled CBO
 - INb (e.g. I8b, I9b) are steps used by the Indirect use case when communicating with a FHIR application enabled CBO
 
 ### Patient Stories and Workflow
