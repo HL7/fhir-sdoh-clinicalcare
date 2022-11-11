@@ -1,3 +1,8 @@
+### Rationale
+It is difficult to capture in the IG the full extent of the terminology inter-dependencies. Rather than build hundreds of profiles we have chosen to enumerate the relationships between value choice between dependent data elements. For example, in Observation when the SDOH category is ‘EducationalAttainment’ there is a specific subset of values  that can be used for the Observation.code. Within VSAC and our additional documentation we have tried to make these relationships clear.
+
+We expect implementers to review the terminology documents below and implement logic to validate or use the correct term pairings. Again, we chose to not create hundreds of FHIR profiles with the pairings, as the logic is straightforward (e.g. if SDOH category X then code uses values from set Y) and redundant. Our tables of dependencies can be used to create lookup tables for validation or profile creation. By choosing to not create hundreds of profiles we have sought to both simplify and free implementers to use their own means to implement the required logic.
+ 
 ###  Code Systems and Value Sets
 
 SDOH Clinical Care Implementation Guide is intended to support multiple SDOH domains and use domain specific value sets as they are created and approved by the Gravity Project.  The [Gravity Confluence Terminology Workstream](https://confluence.hl7.org/display/GRAV/Terminology+Workstream+Dashboard) describes the terminology identification and creation process.  To enable this, we are taking the following approach regarding terminologies and value sets related to profiles defined by this IG.
