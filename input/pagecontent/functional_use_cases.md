@@ -31,7 +31,7 @@ The functional use cases defined below are based on specific exchanges of inform
 - CBOs and CPs are not covered entities under HIPAA.  (Covered entities only includes Providers, Payers, and Clearing Houses)
 - However, a CBO and/or CP may be a Business Associate (BA) of a covered entity.  This requires a Business Associate Agreement (BAA) between the covered entity and the BA.
 - Entities covered under a BAA may be able to receive Protected Health Information (PHI) as part of the agreement without consent of the patient.  However, they are required to observe the same limitation as covered entities with regard the protection and disclosure of PHI.
-- Typically a BAA is required by a covered entity to avoid disclosure of PHI by non-covered entities and in particular in situations where clinical information is shared to help manage the needs of the patient  (e.g., if the patient is diabetic and therefore has specific dietary constraints)
+- Typically, a BAA is required by a covered entity to avoid disclosure of PHI by non-covered entities and in particular in situations where clinical information is shared to help manage the needs of the patient  (e.g., if the patient is diabetic and therefore has specific dietary constraints)
 - For a covered entity or business associate to share PHI with an entity that is not a covered entity or does not have a BAA, consent of the patient is generally required (there are specific exception allowed by HIPAA)
 
 
