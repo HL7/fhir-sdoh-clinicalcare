@@ -38,7 +38,7 @@ The following diagram depicts one example of an exchange workflow supported by t
 
 <table><tr><td><img src="SDOHInteractionsDrawingConsentV5.jpg" /></td></tr></table>
 
-Each of the workflow diagrams below defines the resources that are exchanged and/or updated for the supported use cases.
+Each of the workflow diagrams below defines the resources that are exchanged and/or updated for the supported use cases. There is additional guidance. For additional workflow details see [Functional Use Cases](functional_use_cases.html). For enabling access see [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html). 
 
 ### Closed Loop Referral
 
