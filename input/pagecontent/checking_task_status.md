@@ -153,10 +153,7 @@ This topic allows for monitoring for newly created tasks as well as updates to a
 </table>
 
 ##### ServiceRequest topic
-This topic allows for monitoring for changes to a ServiceRequest when an organization is involved in fulfilling that request.  (E.g. to be
-aware if the request is suspended, cancelled or otherwise modified.  The intent with this subscription is that the filter criteria will be
-updated regularly to refer to the specific ServiceRequest ids the organization is fulfilling.  Once fulfillment is complete, the ServiceRequest
-will no longer need to be monitored.
+This topic allows for monitoring for changes to a ServiceRequest when an organization is involved in fulfilling that request (e.g. to be aware if the request is suspended, cancelled or otherwise modified).  The intent with this subscription is that the filter criteria will be updated regularly to refer to the specific ServiceRequest ids the organization is fulfilling.  Once fulfillment is complete, the ServiceRequest will no longer need to be monitored.
 
 <table class="grid">
   <thead>

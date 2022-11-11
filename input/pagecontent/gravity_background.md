@@ -40,7 +40,7 @@ The [Gravity Project](http://www.hl7.org/gravity/) mission is to create and main
 
 The [HL7 FHIR Accelerator Program](http://www.hl7.org/about/fhir-accelerator/) is designed to assist implementers across the health care spectrum to create HL7 FHIR implementation guides and other products that can facilitate FHIR acceleration and adoption activities. Other projects within the Accelerator Program include [Argonaut](https://argonautwiki.hl7.org/Main_Page), [Da Vinci](http://www.hl7.org/about/davinci/), and [CARIN Alliance](http://www.hl7.org/carin/).
 
-To join the [Gravity Project](http://www.hl7.org/gravity/) and contribute to the secure exchange of SDOH information signup on the [Gravity Project Confluence Site](https://confluence.hl7.org/display/GRAV/Join+the+Gravity+Project).
+To join the [Gravity Project](http://www.hl7.org/gravity/) and contribute to the secure exchange of SDOH information, sign up on the [Gravity Project Confluence Site](https://confluence.hl7.org/display/GRAV/Join+the+Gravity+Project).
 
 ### Gravity Project Challenge Statement
 
