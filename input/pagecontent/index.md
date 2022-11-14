@@ -15,7 +15,7 @@ Additional information regarding the background and use of this IG can be found 
 
 The implementation guide is organized into the following sections:
 
-* Background: Includes [Gravity Background](gravity_background.html), [SDOH Clinical Care Background](sdoh_clinical_care_background.html), [Functional Use Cases](functional_use_cases.html), and [Technical Background](technical_background.html), thesedescribe the environment in which this implementation guide establishes standards for information exchange
+* Background: Includes [Gravity Background](gravity_background.html), [SDOH Clinical Care Background](sdoh_clinical_care_background.html), [Functional Use Cases](functional_use_cases.html), and [Technical Background](technical_background.html), these describe the environment in which this implementation guide establishes standards for information exchange
 * [Change History](stu2_ballot_changes.html) describes the changes included in the STU 2 ballot version of the IG and [Change History](stu2_publication_changes.html) describes the changes applied to the balloted version
 * Context: Describes the [Survey Instrument Support](survey_instrument_support.html),[ QuestionnaireResponse Mapping Instructions](mapping_instructions.html), [Support for Multiple Domains](support_for_multiple_domains.html), [Exchange Workflow](exchange_workflow.html) and [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html) that details a high-level overview of expected process flow
 * Specifications: Provides an overview of the [FHIR Artifacts](fhir_artifacts_overview.html) defined and used in this IG, [Checking Task Status](checking_task_status.html) to describe managing task status, [Privacy and Security](privacy_and_security.html) issues,  [MustSupport and Missing Data](mustsupport_and_missing_data.html) concepts and [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)  
@@ -36,7 +36,7 @@ Implementers should pay specific attention to the following sections:
 * [Privacy and Security](privacy_and_security.html) for implementers that are concerned with privacy and security aspects related to implementing the information exchanges defined in this IG
 * [MustSupport and Missing Data](mustsupport_and_missing_data.html) to understand the interpretation of the MustSupport flags and the treatment of Missing Data used in this IG 
 * [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html) for an introduction to draft observation profiles to exchange personal characteristics data, which includes the source and method of acquisition
-* [Artifacts Index](artifacts.html) provides easy access for all implementers the FHIR R4 profiles, examples and other FHIR artifacts defined in this implementation guide and linked from this section -- this section also includes details for the declared capability statements for espective servers and clients
+* [Artifacts Index](artifacts.html) provides easy access for all implementers the FHIR R4 profiles, examples and other FHIR artifacts defined in this implementation guide and linked from this section -- this section also includes details for the declared capability statements for respective servers and clients
 * [Downloads](downloads.html) links to allow implementers to download the IG and various artifacts
 
 ### Support for external terminologies for ServiceRequest and Procedure
