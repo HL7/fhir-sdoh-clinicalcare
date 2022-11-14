@@ -86,8 +86,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:5aaa9710-01ee-4490-8301-e6248c903761",
-    "timestamp" : "2022-11-01T02:30:32.891Z",
+    "identifier" : "urn:uuid:e8e26a42-6477-4392-a8f4-bc167655eb04",
+    "timestamp" : "2022-11-14T23:16:48.416Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -98,7 +98,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|1.1.0"
+      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|2.0.0"
     }],
     "contains" : [{
       "extension" : [{
@@ -302,8 +302,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:61d2f8f8-45d8-46f3-bce0-432431a49f2a",
-    "timestamp" : "2022-11-01T02:30:34.329Z",
+    "identifier" : "urn:uuid:ed3f8534-26c5-46cd-ad8d-b477b86214d8",
+    "timestamp" : "2022-11-11T07:47:32.564Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -314,7 +314,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|1.1.0"
+      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|2.0.0"
     }],
     "contains" : [{
       "extension" : [{
@@ -393,8 +393,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:d3d23436-7d4c-4a4b-9c23-8acf1f4a9b97",
-    "timestamp" : "2022-11-01T02:30:35.000Z",
+    "identifier" : "urn:uuid:1281f4a6-3642-4829-b585-01eccf684a1b",
+    "timestamp" : "2022-11-14T23:16:49.072Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -405,7 +405,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|1.1.0"
+      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|2.0.0"
     }],
     "contains" : [{
       "extension" : [{
@@ -478,8 +478,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:1a1bb090-7e54-4465-b5cb-50b907390bc1",
-    "timestamp" : "2022-10-26T14:52:18.438Z",
+    "identifier" : "urn:uuid:d443713b-19cd-4de7-bb55-2ed05a02c768",
+    "timestamp" : "2022-11-14T23:16:49.854Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -490,7 +490,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|1.1.0"
+      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|2.0.0"
     }],
     "contains" : [{
       "extension" : [{

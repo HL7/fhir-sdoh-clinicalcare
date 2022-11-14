@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/sdoh-clinicalcare/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare" defaultVersion="1.0.0" defaultWorkgroup="pc" gitUrl="https://github.com/HL7/fhir-sdoh-clinicalcare" url="http://hl7.org/fhir/us/sdoh-clinicalcare">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/sdoh-clinicalcare/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare" defaultVersion="2.0.0" defaultWorkgroup="pc" gitUrl="https://github.com/HL7/fhir-sdoh-clinicalcare" url="http://hl7.org/fhir/us/sdoh-clinicalcare">
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare"/>
+<version code="2.0.0" url="http://hl7.org/fhir/us/sdoh-clinicalcare/STU2"/>
 <version code="1.1.0" url="http://hl7.org/fhir/us/sdoh-clinicalcare/2022Jan"/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/sdoh-clinicalcare/STU1"/>
-<version code="0.1.0" deprecated="true" url="http://hl7.org/fhir/us/sdoh-clinicalcare/2021-Jan"/>
+<version code="0.1.0" deprecated="true" url="http://hl7.org/fhir/us/sdoh-clinicalcare/2021Jan"/>
 <version code="0.0.4" deprecated="true"/>
 <version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
@@ -44,13 +45,13 @@
 <artifact id="Observation/SDOHCC-ObservationEthnicityOMBExample" key="Observation-SDOHCC-ObservationEthnicityExample" name="SDOHCC Observation Ethnicity OMB Example"/>
 <artifact id="StructureDefinition/SDOHCC-ObservationGenderIdentity" key="StructureDefinition-SDOHCC-ObservationGenderIdentity" name="SDOHCC Observation Gender Identity"/>
 <artifact id="Observation/SDOHCC-ObservationGenderIdentityExample" key="Observation-SDOHCC-ObservationGenderIdentityExample" name="SDOHCC Observation Gender Identity Example"/>
-<artifact id="StructureDefinition/SDOHCC-ObservationPersonalCharacteristic" key="StructureDefinition-SDOHCC-ObservationPersonalCharacteristic" name="SDOHCC Observation Personal Characteristic"/>
-<artifact id="StructureDefinition/SDOHCC-ObservationPersonalPronouns" key="StructureDefinition-SDOHCC-ObservationPersonalPronouns" name="SDOHCC Observation Personal Pronouns"/>
-<artifact id="Observation/SDOHCC-ObservationPersonalPronounsExample" key="Observation-SDOHCC-ObservationPersonalPronounsExample" name="SDOHCC Observation Personal Pronouns Example"/>
 <artifact deprecated="true" id="Observation/SDOHCC-Observation-HungerVitalSign-Example-1" key="Observation-SDOHCC-Observation-HungerVitalSign-Example-1" name="SDOHCC Observation HungerVitalSign Example 1"/>
 <artifact deprecated="true" id="Observation/SDOHCC-Observation-HungerVitalSign-Example-2" key="Observation-SDOHCC-Observation-HungerVitalSign-Example-2" name="SDOHCC Observation HungerVitalSign Example 2"/>
 <artifact deprecated="true" id="Observation/SDOHCC-Observation-HungerVitalSign-Example-3" key="Observation-SDOHCC-Observation-HungerVitalSign-Example-3" name="SDOHCC Observation HungerVitalSign Example 3"/>
 <artifact deprecated="true" id="Observation/SDOHCC-Observation-HungerVitalSignGroup-1" key="Observation-SDOHCC-Observation-HungerVitalSignGroup-1" name="SDOHCC Observation HungerVitalSignGroup 1"/>
+<artifact id="StructureDefinition/SDOHCC-ObservationPersonalCharacteristic" key="StructureDefinition-SDOHCC-ObservationPersonalCharacteristic" name="SDOHCC Observation Personal Characteristic"/>
+<artifact id="StructureDefinition/SDOHCC-ObservationPersonalPronouns" key="StructureDefinition-SDOHCC-ObservationPersonalPronouns" name="SDOHCC Observation Personal Pronouns"/>
+<artifact id="Observation/SDOHCC-ObservationPersonalPronounsExample" key="Observation-SDOHCC-ObservationPersonalPronounsExample" name="SDOHCC Observation Personal Pronouns Example"/>
 <artifact id="StructureDefinition/SDOHCC-ObservationRaceOMB" key="StructureDefinition-SDOHCC-ObservationRace" name="SDOHCC Observation Race OMB"/>
 <artifact id="Observation/SDOHCC-ObservationRaceOMBExample" key="Observation-SDOHCC-ObservationRaceExample" name="SDOHCC Observation Race OMB Example"/>
 <artifact id="Observation/SDOHCC-ObservationRaceOMBPractitionerExample" key="Observation-SDOHCC-ObservationRacePractitionerExample" name="SDOHCC Observation Race OMB Practitioner Example"/>
