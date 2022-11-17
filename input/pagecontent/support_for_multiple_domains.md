@@ -35,7 +35,7 @@ Servers  **SHOULD** use the following SDOH value sets when a code exists that de
 
 ·    [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion)
 
-The Figure below illustrates how the SDOH group value set is structured for the  Condition Profile. When recording SDOH data servers **SHOULD** use the SDOH value sets 
+The Figure below illustrates how the SDOH group value set is structured for the  Condition Profile. When recording SDOH data, servers **SHOULD** use the SDOH value sets 
 
  **Example of VSAC SDOH Group Value Set for Condition.Code**
 
