@@ -327,7 +327,7 @@ Provider receives a subscription notification when the CP updates the Task on th
 
 Applies to Providers and Payers as the referral requester, and patient is assessed by a provider and referred to a CP. CP refers to a CBO to deliver the service.
 
-This section differs from the previous in that the interactions between the CP and CBO follow the Direct Light paradigm. The CBO will do a push to the CP. That is, CBOs without their own FHIR server will modify tasks directly on the CP FHIR server. 
+This section differs from the previous in that the interactions between the CP and CBO follow the Direct Light paradigm. The CBO will do a push to the CP. That is, CBOs without their own FHIR server will modify tasks directly on the CP's FHIR server. 
 
 #### Actors
 
@@ -373,7 +373,7 @@ Similar to 9b in the Direct Light above, but here the CBO is interacting with th
 &nbsp;&nbsp;&nbsp;&nbsp;I7 CP updates status of the initial referral (no change)
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
-As in the previous, the interactions between the CP and the Provider FHIR server are mediated through the Direct paradigm that is subscription notification driven. However, as the CBO has directly modified the referral on the CP FHIR server there may be no need for the CP to do anything more. In other words, if the CBO modifies the Task instance which the Provider placed on the CP's FHIR server, and to which the Provider subscribed, then the provider's system will receive a subscription notification when the CBO modifies the Task!
+As in the previous, the interactions between the CP and the provider's FHIR server are mediated through the Direct paradigm that is subscription notification driven. However, as the CBO has directly modified the referral on the CP FHIR server, there may be no need for the CP to do anything more. In other words, if the CBO modifies the Task instance which the Provider placed on the CP's FHIR server, and to which the Provider subscribed, then the provider's system will receive a subscription notification when the CBO modifies the Task!
 </p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;I8b Optional exchange with Patient does not occur electronically (no app to app exchange)
@@ -412,7 +412,7 @@ This step may benefit from the CBO directly modifying the Task provided by the C
 
 The following applies to Providers, Payers, CPs and CPOs and assumes patient is using a personal application (e.g., Smart Phone application) that has already been registered and authenticated with the provider's EHR API, the CP's API and the CBO's API.
 
-Of course, there other set-ups which are determined by business requirements. However, to standardize interactions, this IG uses the [SDOHCC Task For Patient](StructureDefinition-SDOHCC-TaskForPatient.html) for actions for the patient, and instructions for using [FHIR Questionnaires](survey_instrument_support.html). The questionnaires can be used for both process feedback and information accrual. For help with the FHIR Resources to use please see [exchange_workflow.html#patient-interactions](exchange_workflow.html#patient-interactions).
+Of course, there other set-ups which are determined by business requirements. However, to standardize interactions, this IG uses the [SDOHCC Task For Patient](StructureDefinition-SDOHCC-TaskForPatient.html) for actions for the patient, and instructions for using [FHIR Questionnaire](survey_instrument_support.html). The questionnaires can be used for both process feedback and information accrual. For help with the FHIR Resources to use please see [exchange_workflow.html#patient-interactions](exchange_workflow.html#patient-interactions).
 
 #### Actors
 
