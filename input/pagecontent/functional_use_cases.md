@@ -2,7 +2,7 @@ The following acronyms are used:
 - Community Based Organization (CBO) -- organizations that deliver requested social services (e.g. food pantry)
 - Coordination Platform (CP) -- an intermediary that receives referrals, assesses patient needs, and works with one or more CBOs to deliver the services
 
-The following numbering is use throughout this section where N is an integer number:
+The following numbering is used throughout this section where N is an integer number:
 
 - N (e.g. 1-14) are steps common to all functional use cases
 - IN (e.g. I1, I12) are additional steps used only by Indirect use cases
@@ -15,12 +15,12 @@ SDOH IG related Patient Stories are available on the Gravity Project Confluence 
 These use cases are represented by workflow diagrams on the [Exchange Workflow Page](exchange_workflow.html) with figures that refer to the FHIR Resources used. Implementers will also benefit from reviewing the [server capability](artifacts.html#capability-statements) statements for each specific workflow, and the [conformance artifacts](artifacts.html) generally.
 
 ### Overview
-The basis of the exchange interactions described below is to attempt to ‘close the loop’ between a provider, or other healthcare actor, who makes a request (referral), in FHIR provided as a combination of <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task For Referral Management</a>/<a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a>, for SDOH services and the request recipient (referral recipient, with various FHIR enabled capabilities and configurations as described below). Included below, is guidance on how the IG is implemented to enable back and forth communication. This does not replace reviewing the FHIR artifacts (such as Capability Statements, Resource profiles, and value sets) and narrative guidance found elsewhere in this guide.
+The exchange interactions below give guidance on the process to ‘close the loop’ between a provider, or other healthcare actor, who makes a request (referral) for SDOH services and the request recipient (referral recipient, with various FHIR enabled capabilities and configurations as described below). In FHIR the request (referral) is provided as a combination of <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task For Referral Management</a>/<a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a>.  Included below, is guidance on how the IG is implemented to enable back and forth communication. This does not replace reviewing the FHIR artifacts (such as Capability Statements, Resource profiles, and value sets) and narrative guidance found elsewhere in this guide.
 
 The functional use cases defined below are based on specific exchanges of information between the relevant actors. These use cases include:
 
 - A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges
-- A "light" version of the direct referral where the performing entity uses and application that can access the referring entities API (but does not have FHIR API capability)
+- A "light" version of the direct referral where the performing entity uses an application that can access the referring entities' API (but does not have FHIR API capability)
 - An indirect referral, where the communication between the referring entity and the performing entity is through an intermediary (such as a Coordination Platform as defined below) that has FHIR API capability
 - Finally, a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange
 
@@ -29,14 +29,14 @@ The functional use cases defined below are based on specific exchanges of inform
 - Provider -- includes licensed providers and others that interact with the patient to assess social risk, set goals, and determine/recommend referrals
 - Care Coordinator -- coordinates the care and referral activities but normally does not make assessment, goal, or referral decisions
 - Patient -- a consumer, or client, who is the subject of the assessment, goals, referrals and services delivered
-- Community Based Organization (CBO) -- organizations that deliver social requested services (e.g. food pantry)
+- Community Based Organization (CBO) -- organizations that deliver requested social services (e.g. food pantry)
 - Coordination Platform (CP) -- an intermediary that receives referrals, assesses patient needs, and works with one or more CBOs to deliver the services
 
 ### Business Associates
 
 - CBOs and CPs are not covered entities under HIPAA.  (Covered entities only include Providers, Payers, and Clearing Houses)
 - However, a CBO and/or CP may be a Business Associate (BA) of a covered entity.  This requires a Business Associate Agreement (BAA) between the covered entity and the BA.
-- Entities covered under a BAA may be able to receive Protected Health Information (PHI) as part of the agreement without consent of the patient.  However, they are required to observe the same limitation as covered entities with regard the protection and disclosure of PHI.
+- Entities covered under a BAA may be able to receive Protected Health Information (PHI) as part of the agreement without consent of the patient.  However, they are required to observe the same limitations as covered entities with regard the protection and disclosure of PHI.
 - Typically, a BAA is required by a covered entity to avoid disclosure of PHI by non-covered entities and, in particular, in situations where clinical information is shared to help manage the needs of the patient  (e.g., if the patient is diabetic and therefore has specific dietary constraints)
 - For a covered entity or business associate to share PHI with an entity that is not a covered entity or does not have a BAA, consent of the patient is generally required (there are specific exceptions allowed by HIPAA)
 
@@ -45,7 +45,7 @@ The functional use cases defined below are based on specific exchanges of inform
 
 Applies to Providers, Payers and CPs as the referral requester
 
-Patient assessed by provider and referred to CBO to deliver the service 
+Patient assessed by Provider and referred to CBO to deliver the service 
 
 #### Actors
 
@@ -69,20 +69,20 @@ See <a href="survey_instrument_support.html#survey-instrument-support">Survey In
 
 &nbsp;&nbsp;&nbsp;&nbsp;2 Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity
 
-&nbsp;&nbsp;&nbsp;&nbsp;3 Provider and patient determine that it is most important to address the Food Insecurity first – provider promotes the health concern to the problem list
+&nbsp;&nbsp;&nbsp;&nbsp;3 Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
-FHIR Condition Resource is used to capture the problem list. The SDOHCC profile is here: <a href="StructureDefinition-SDOHCC-Condition.html">SDOHCC Condition</a></p>
+FHIR Condition Resource is used to capture the problem list. The SDOHCC Condition profile is here: <a href="StructureDefinition-SDOHCC-Condition.html">SDOHCC Condition</a></p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;4 Provider and patient add a goal related to this problem to pursue enrollment in a SNAP program
+&nbsp;&nbsp;&nbsp;&nbsp;4 Provider and patient identify a goal to pursue enrollment in a SNAP program
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
-Communicated with <a href="StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal FHIR profile</a>
+Communicated with <a href="StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal</a>
 </p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;5 Provider and patient agree that a referral to a contracted or non-contracted CBO is an appropriate next step
 
-&nbsp;&nbsp;&nbsp;&nbsp;6 Patient consents to be referred to the CBO and consents to have the information that will be provided sent to the CBO
+&nbsp;&nbsp;&nbsp;&nbsp;6 Patient consents to be referred to the CBO, and to share appropriate information with the CBO
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
 <a href="StructureDefinition-SDOHCC-Consent.html">SDOHCC Consent</a> could be used as a record of the consent on the FHIR server
@@ -91,7 +91,7 @@ Communicated with <a href="StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal FHI
     margin: 0 0 10px 50px;
     width: 95%;
 ">
-Important: The Provider system creates a <a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a> and <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">FHIR SDOHCC Task For Referral Management</a>. The Task is associated with the SDOHCC ServiceRequest through the <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">Task.focus</a> data element
+Important: The provider's system creates a <a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a> and <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task For Referral Management</a>, which is associated with the SDOHCC ServiceRequest through the <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">Task.focus</a> data element
 </p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;7 Optional: Provider makes information regarding the referral available to the patient's application
@@ -101,17 +101,17 @@ Important: The Provider system creates a <a href="StructureDefinition-SDOHCC-Ser
 &nbsp;&nbsp;&nbsp;&nbsp;8a Provider or Care Coordinator creates and sends an electronic referral to the CBO
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
-See <a href="exchange_workflow.html#workflow-diagram">exchange workflow</a>. In the Direct Referral, after creating a <a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a> and <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task For Referral Management</a>, and posting them to the CBO's FHIR server, the Provider system also creates a Subscription on the CBO's FHIR server (see <a href="checking_task_status.html#subscription">checking_task_status.html#subscription</a> and especially <a href="checking_task_status.html#task-topic">Task topic</a>). The Task is associated with the SDOHCC ServiceRequest through the <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">Task.focus</a> data element. Importantly, the Task is the means to communicate from the CBO to the provider that work is being done or is done (once created by provider, it is modified by the CBO). The SDOHCC ServiceRequest is a receipt of service and can contain additional information for the CBO through its various fields such as the supporting document field. The Task is where the CBO communicates back to the provider. For example, the Task.input field is where the CBO can communicate information the CBO used to complete the task. Finally, the provider may also include a <a href="StructureDefinition-SDOHCC-TaskForPatient.html">SDOHCC Task For Patient</a> indicating actions for the patient to take or an assessment (questionnaire) to fill out
+See <a href="exchange_workflow.html#workflow-diagram">exchange workflow</a>. In the Direct Referral, after creating a <a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a> and <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task For Referral Management</a>, and posting them to the CBO's FHIR server, the provider's system also creates a Subscription on the CBO's FHIR server (see <a href="checking_task_status.html#subscription">checking_task_status.html#subscription</a> and especially <a href="checking_task_status.html#task-topic">Task topic</a>). Task is associated with the SDOHCC ServiceRequest through the <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">Task.focus</a> data element. Importantly, the Task is the means to communicate from the CBO to the provider that work is being done or is done (once created by provider, it is modified by the CBO). The SDOHCC ServiceRequest is a receipt of service and can contain additional information for the CBO through its various fields such as the supporting document field. The Task is where the CBO communicates back to the provider. For example, Task.input field is where the CBO can communicate information the CBO used to complete the task. Finally, the provider may also include a <a href="StructureDefinition-SDOHCC-TaskForPatient.html">SDOHCC Task For Patient</a> indicating actions for the patient to take or an assessment (questionnaire) to fill out
 </p> 
 
 &nbsp;&nbsp;&nbsp;&nbsp;9a CBO receives and accepts referral
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
-The subscription set-up in 8a means that the CBO can update the Task locally and a notification is sent to provider (See <a href="checking_task_status.html">checking task status</a> for details.). Locally, the CBO updates the status of the referral to indicate acceptance of the referral, by updating the <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">status</a> of the SDOHCC Task For Referral Management, specific to the referral indicated above, from <a href="https://hl7.org/fhir/R4/codesystem-task-status.html#task-status-requested">requested</a> to ‘accepted’. SDOHCC Task For Referral Management status is updated using the FHIR API to ‘in progress’ when work commences.
+The subscription set-up in 8a means that the CBO can update the Task locally and a notification is sent to provider (See <a href="checking_task_status.html">checking task status</a> for details.). Locally, the CBO updates the SDOHCC Task For Referral Management <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">status</a> from <a href="https://hl7.org/fhir/R4/codesystem-task-status.html#task-status-requested">requested</a> to ‘accepted’. When work commences, the SDOHCC Task For Referral Management status is updated using the FHIR API to ‘in progress’
 </p>
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
-There is the possibility that a further referral is made by the CBO to a separate CBO. This can be communicated by creating a <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task For Referral Management</a> instance that references the initial <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task For Referral Management</a>and the <a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a> through <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">partOf:SupportedPartOf</a> and <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">basedOn:SupportedBasedOn</a>, respectively. The new Task instance is a child Task. We would appreciate feedback on any use of this paradigm.
+There is the possibility that a further referral is made by the CBO to a separate CBO. This can be communicated by creating a new <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task For Referral Management</a> instance that references the initial <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task For Referral Management</a> and the <a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a> through <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">partOf:SupportedPartOf</a> and <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">basedOn:SupportedBasedOn</a>, respectively. The new Task instance is a child Task. We would appreciate feedback on any use of this paradigm.
 </p>
 
 #### CBO Actions
@@ -121,7 +121,7 @@ There is the possibility that a further referral is made by the CBO to a separat
 &nbsp;&nbsp;&nbsp;&nbsp;11 CBO completes the evaluation and enrollment, updates the status of the referral to completed, and includes information on what was completed
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
-To indicate completion, the following are performed by the CBO: Any procedures performed by the CBO are indicated by creating a <a href="StructureDefinition-SDOHCC-Procedure.html">SDOHCC Procedure</a> using the POST method of the FHIR API (i.e. CREATE through the FHIR API) on the CBO FHIR server. The procedure is connected to the service request thru referencing the <a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a> instance from the <a href="StructureDefinition-SDOHCC-Procedure.html">SDOHCC Procedure</a> Profile instance. Also, the relevant <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task For Referral Management</a> should refer to the <a href="StructureDefinition-SDOHCC-Procedure.html">SDOHCC Procedure</a> through the relevant <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">Task.output</a> field. The SDOHCC Task For Referral Management <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">Task.status</a> is updated to <a href="https://hl7.org/fhir/R4/codesystem-task-status.html#task-status-completed">completed</a>.
+To indicate completion, the following are performed by the CBO: Any procedures performed by the CBO are indicated by creating a <a href="StructureDefinition-SDOHCC-Procedure.html">SDOHCC Procedure</a> using the POST method of the FHIR API (i.e. CREATE through the FHIR API) on the CBO FHIR server. The procedure is connected to the service request thru referencing the <a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a> instance from the <a href="StructureDefinition-SDOHCC-Procedure.html">SDOHCC Procedure</a> instance. Also, the relevant <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task For Referral Management</a> should refer to the <a href="StructureDefinition-SDOHCC-Procedure.html">SDOHCC Procedure</a> through the relevant <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">Task.output</a> field. The SDOHCC Task For Referral Management <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">Task.status</a> is updated to <a href="https://hl7.org/fhir/R4/codesystem-task-status.html#task-status-completed">completed</a>.
 </p>
 
 #### Provider Actions
@@ -172,7 +172,7 @@ Community Based Organization (CBO) has an application that can interact with a F
 
 - steps 1 through 7
 <p style="margin: 0 0 10px 50px; width: 95%;">
-Note from 6: The Provider system creates a <a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a> and <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task For Referral Management</a>. The Task is associated with the SDOHCC ServiceRequest through the <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">Task.focus</a> data element.
+Note from 6: The provider's system creates a <a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a> and <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task For Referral Management</a>. The Task is associated with the SDOHCC ServiceRequest through the <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">Task.focus</a> data element.
 </p>
 
 #### CBO - Provider Actions (changed based on CBO application vs FHIR API)
@@ -184,7 +184,7 @@ See <a href="exchange_workflow.html#direct-referral-light">direct referral light
 </p>
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
-While polling can be efficient, if a provider sends a secure link with a specific FHIR Task and FHIR ServiceRequest to fulfill, the CBO (Referral Recipient) system can perform queries by id on the Provider's FHIR server using the FHIR API (using the FHIR <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">Task id</a> and <a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest Resource instance id</a>). Using the HTTPS GET method with the FHIR Resource type and id, one can directly find a specific instance, whether the id was provided directly by the Provider system or the id of the instance was previously pulled using polling. Additionally, a generic request for all the Resources of a type can be performed. Provider FHIR servers should have implemented the option to limit the returned Resource instances by date (see appropriate <a href="artifacts.html#capability-statements">CapabilityStatement</a>).
+While polling can be efficient, if a provider sends a secure link with a specific FHIR Task and FHIR ServiceRequest to fulfill, the CBO (Referral Recipient) system can perform queries by id on the Provider's FHIR server using the FHIR API (using the FHIR <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">Task id</a> and <a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest Resource instance id</a>). Using the HTTPS GET method with the FHIR Resource type and id, one can directly find a specific instance, whether the id was provided directly by the provider's system or the id of the instance was previously pulled using polling. Additionally, a generic request for all the Resources of a type can be performed. Provider FHIR servers should have implemented the option to limit the returned Resource instances by date (see appropriate <a href="artifacts.html#capability-statements">CapabilityStatement</a>).
 </p>
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
@@ -274,7 +274,7 @@ CP is replacing CBO in 9a
 &nbsp;&nbsp;&nbsp;&nbsp;I4a CP refers patient to a CBO, with which they have a relationship, to evaluate a patient’s eligibility and help the patient enroll in a SNAP program, if appropriate 
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
-Here we are describing Direct with CBO, so the flow is the same as for the Direct Referral but with the CP acting as a Provider system
+Here we are describing Direct with CBO, so the flow is the same as for the Direct Referral but with the CP acting as a provider system
 </p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;I5a CBO receives and accepts the referral
@@ -284,7 +284,7 @@ Here we are describing Direct with CBO, so the flow is the same as for the Direc
 &nbsp;&nbsp;&nbsp;&nbsp;I7 CP updates status of the initial referral
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
-CP updates the original Task. This should trigger a subscription notification to the Provider system
+CP updates the original Task. This should trigger a subscription notification to the provider's system
 </p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;I8a Optional: CBO communicates with patient via their application to schedule appointments, collect additional information, etc.
@@ -373,7 +373,7 @@ Similar to 9b in the Direct Light above, but here the CBO is interacting with th
 &nbsp;&nbsp;&nbsp;&nbsp;I7 CP updates status of the initial referral (no change)
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
-As in the previous, the interactions between the CP and the Provider FHIR server are mediated through the Direct paradigm that is subscription notification driven. However, as the CBO has directly modified the referral on the CP FHIR server there may be no need for the CP to do anything more. In other words, if the CBO modifies the Task instance which the Provider placed on the CP's FHIR server, and to which the Provider subscribed, then the provider system will receive a subscription notification when the CBO modifies the Task!
+As in the previous, the interactions between the CP and the Provider FHIR server are mediated through the Direct paradigm that is subscription notification driven. However, as the CBO has directly modified the referral on the CP FHIR server there may be no need for the CP to do anything more. In other words, if the CBO modifies the Task instance which the Provider placed on the CP's FHIR server, and to which the Provider subscribed, then the provider's system will receive a subscription notification when the CBO modifies the Task!
 </p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;I8b Optional exchange with Patient does not occur electronically (no app to app exchange)
