@@ -46,29 +46,29 @@ Each of the workflow diagrams below defines the resources that are exchanged and
 
 Provider / Requester  -- this can be any of the following:
 
-		1) a provider or other provider
-	
-		2) a payer as part of care management, risk assessment, or via programs that assess and intervene regarding social risk
-	
-		3) a Coordination Platform
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) a provider or other provider
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) a payer as part of care management, risk assessment, or via programs that assess and intervene regarding social risk
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3) a Coordination Platform
 
 Coordination Platform (CP) / Intermediary
 
-		1) This is a service that accepts referrals (it may also create them)
-	
-		2) May determine which Community Based Organization (CBO) is capable and available to provide the appropriate service
-	
-		3) Engages the CBO to perform the referral 
-	
-		4) Tracks the referral process to completion
-	
-		5) Reports status back to the Referring Entity
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) This is a service that accepts referrals (it may also create them)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) May determine which Community Based Organization (CBO) is capable and available to provide the appropriate service
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3) Engages the CBO to perform the referral 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4) Tracks the referral process to completion
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5) Reports status back to the Referring Entity
 
 Community Based Organization (CBO) / Performer
 
-		1) Provides one or more social risk services
-	
-		2) Interacts with the CP or RE to provide status of the referral
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) Provides one or more social risk services
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) Interacts with the CP or RE to provide status of the referral
 
 
 
