@@ -151,7 +151,7 @@ See <a href="StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal FHIR profile</a> 
 - CBO may not accept the referral or be unable to perform the requested service
 - Closing the loop via patient reported outcomes 
 
-<table><tr><td><img src="FunctionalUseCaseFlowDirectReferral3-Msg DME w Int.jpg" /></td></tr></table>
+<table><tr><td><img src="FunctionalUseCaseFlowDirectReferral3.jpg" /></td></tr></table>
 
 
 ### Direct Referral Light (Push by CBO to Provider, involving <a href="checking_task_status.html#polling">Polling</a>)
@@ -223,7 +223,7 @@ To indicate completion via the FHIR API, the following are performed by the CBO:
 - CBO may not accept the referral or be unable to perform the requested service
 - Closing the loop via patient reported outcomes 
 
-<table><tr><td><img src="FunctionalUseCaseFlowDirectLightReferral3-Msg DME w Int.jpg" /></td></tr></table>
+<table><tr><td><img src="FunctionalUseCaseFlowDirectLightReferral3.jpg" /></td></tr></table>
 
 
 ### Indirect Referral with Direct CBO
@@ -321,7 +321,7 @@ Provider receives a subscription notification when the CP updates the Task on th
 - CP may not accept the referral or be unable to perform the requested service
 - CP may need to split the request into multiple tasks to be performed by more than one CBO
 
-<table><tr><td><img src="FunctionalUseCaseFlowIndirectDirectReferral3-Msg DME w Int.jpg" /></td></tr></table>
+<table><tr><td><img src="FunctionalUseCaseFlowIndirectDirectReferral3.jpg" /></td></tr></table>
 
 ### Indirect Referral with Direct Light CBO
 
@@ -406,7 +406,7 @@ This step may benefit from the CBO directly modifying the Task provided by the C
 - CP may not accept the referral or be unable to perform the requested service
 - CP may need to split the request into multiple tasks to be performed by more than one CBO
 
-<table><tr><td><img src="FunctionalUseCaseFlowIndirectDirectLightReferral3-Msg DME w Int.jpg" /></td></tr></table>
+<table><tr><td><img src="FunctionalUseCaseFlowIndirectDirectLightReferral3.jpg" /></td></tr></table>
 
 ### Closing the loop with the patient
 
