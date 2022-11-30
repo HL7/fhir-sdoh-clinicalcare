@@ -10,7 +10,7 @@ The following diagram depicts the suggested approach to incorporating risk surve
 
 2. Establish calculation logic for the [SDC FHIR Questionnaire](http://hl7.org/fhir/us/sdc/sdc-questionnaire.html) (e.g., where two questions determine the answer to another "question").
 
-3. Conversion of the LOINC survey to an [SDC FHIR Questionnaire](http://hl7.org/fhir/us/sdc/sdc-questionnaire.html) using an appropriate conversion tool (Note: the reference implementation of this IG use the open source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms)).
+3. Conversion of the LOINC survey to an [SDC FHIR Questionnaire](http://hl7.org/fhir/us/sdc/sdc-questionnaire.html) using an appropriate conversion tool (Note: the reference implementation of this IG uses the open source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms)).
 
 4. Execute the [SDC FHIR Questionnaire](http://hl7.org/fhir/us/sdc/sdc-questionnaire.html) using an appropriate application (Note: the reference implementation of this IG uses the open source NLM [SDC Questionnaire App](https://lhcforms.nlm.nih.gov/sdc)) and create an [SDC QuestionnaireResponse](http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html).
 
