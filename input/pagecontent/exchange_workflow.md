@@ -76,7 +76,7 @@ Community Based Organization (CBO) / Performer
 
 The referral occurs between the Provider / Requester and the CBO / Performer where the CBO has a FHIR API.
 
-[Refer to the Direct Referral functional use case](functional_use_cases.html#direct-referral-light) to understand the numbers in the interaction diagram below.
+[Refer to the Direct Referral functional use case](functional_use_cases.html#direct-referral-light-push-by-cbo-to-provider-involving-polling) to understand the numbers in the interaction diagram below.
 
 ##### Interaction Diagram
 
@@ -92,7 +92,7 @@ The referral occurs between the Provider / Requester and the CBO / Performer whe
 
 The referral occurs between the Provider / Requester and the CBO / Performer where the CBO / Performer does not have a FHIR API (FHIR Server or FHIR Façade).   The exchange with the Performer is initiated via an email with a secure link to the Provider / Requester API that can be used by an application available to the CBO / Performer to communicate with the Provider / Requester using RESTful exchanges that read, create, and update resources via the Provider / Requester API.
 
-[Refer to the Direct Referral Light functional use case](functional_use_cases.html#direct-referral-light) to understand the numbers in the interaction diagram below.
+[Refer to the Direct Referral Light functional use case](functional_use_cases.html#direct-referral-light-push-by-cbo-to-provider-involving-polling) to understand the numbers in the interaction diagram below.
 
 ##### Interaction Diagram
 
