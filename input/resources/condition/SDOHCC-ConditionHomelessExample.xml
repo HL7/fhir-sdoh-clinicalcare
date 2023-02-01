@@ -44,8 +44,8 @@
         </coding>
         <coding>
             <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
-            <code value="Z59.0"/>
-            <display value="Homelessness"/>
+            <code value="Z59.41"/>
+            <display value="Food insecurity"/>
         </coding>
     </code>
     <subject>

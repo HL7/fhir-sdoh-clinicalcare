@@ -81,6 +81,7 @@
                 <expression value="category.coding.where(code = 'educational-attainment').exists().not() xor code.coding.where(code.memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.103')).exists()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
             </constraint>
+            <!--
             <constraint>
                 <key value="SDOH-Con-category-food-insecurity-code1"/>
                     <severity value="error"/>
@@ -94,12 +95,19 @@
                     <human value="If category is food-insecurity, then the code is from the VSAC - Less than high school education Diagnoses ValueSet"/>
                 <expression value="code.coding.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.17')).exists()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
-            </constraint>
+            </constraint>-->
             <constraint>
-                <key value="SDOH-Con-category-food-insecurity-code3"/>
+                <key value="SDOH-Con-category-food-insecurity-code"/>
                     <severity value="error"/>
                     <human value="If category is food-insecurity, then the code is from the VSAC - Less than high school education Diagnoses ValueSet"/>
-                <expression value="category.coding.where(code = 'food-insecurity').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.17')).exists()"/>
+                <expression value="category.where(coding.code = 'food-insecurity').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.17')).exists()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Con-category-homelessness-code"/>
+                    <severity value="error"/>
+                    <human value="If category is homelessness, then the code is from the VSAC - Less than high school education Diagnoses ValueSet"/>
+                <expression value="category.where(coding.code = 'homelessness').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.18')).exists()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
             </constraint>
         </element>
