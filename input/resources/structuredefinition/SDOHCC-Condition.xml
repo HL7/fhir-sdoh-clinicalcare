@@ -74,6 +74,34 @@
                 <expression value="extension('http://hl7.org/fhir/us/sdoh-clinicalcare/extension-Condition.asserter').count()+asserter.count()&lt;=1"/>
                 <xpath value="true()"/>
             </constraint>
+            <constraint>
+                <key value="SDOH-Con-category-educational-attainment-code"/>
+                    <severity value="error"/>
+                    <human value="If category is educational-attainment, then the code is from the VSAC - Less than high school education Diagnoses ValueSet"/>
+                <expression value="category.coding.where(code = 'educational-attainment').exists().not() xor code.coding.where(code.memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.103')).exists()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Con-category-food-insecurity-code1"/>
+                    <severity value="error"/>
+                    <human value="If category is food-insecurity, then the code is from the VSAC - Less than high school education Diagnoses ValueSet"/>
+                <expression value="code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.17')).exists()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Con-category-food-insecurity-code2"/>
+                    <severity value="error"/>
+                    <human value="If category is food-insecurity, then the code is from the VSAC - Less than high school education Diagnoses ValueSet"/>
+                <expression value="code.coding.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.17')).exists()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Con-category-food-insecurity-code3"/>
+                    <severity value="error"/>
+                    <human value="If category is food-insecurity, then the code is from the VSAC - Less than high school education Diagnoses ValueSet"/>
+                <expression value="category.coding.where(code = 'food-insecurity').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.17')).exists()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            </constraint>
         </element>
         <element id="Condition.extension">
             <path value="Condition.extension"/>
@@ -135,6 +163,7 @@
         </element>
         <element id="Condition.code">
             <path value="Condition.code"/>
+            <short value="Identification of the condition, problem or diagnosis (See Contextual Binding for category specific ValueSet requirement)"/>
             <comment value="As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories. For further guidance on external value sets vetted by the Gravity Project see: [SDOH terminology guidance](support_for_multiple_domains.html#external-value-set-guidance)"/>
             <requirements value="Code is required and must be selected from the bound value set."/>
             <binding>
