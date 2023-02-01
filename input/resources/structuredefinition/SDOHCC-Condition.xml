@@ -74,46 +74,123 @@
                 <expression value="extension('http://hl7.org/fhir/us/sdoh-clinicalcare/extension-Condition.asserter').count()+asserter.count()&lt;=1"/>
                 <xpath value="true()"/>
             </constraint>
-            <constraint>
-                <key value="SDOH-Con-category-educational-attainment-code"/>
+                        <constraint>
+                <key value="SDOH-Con-educational-attainment-code"/>
                     <severity value="error"/>
                     <human value="If category is educational-attainment, then the code is from the VSAC - Less than high school education Diagnoses ValueSet"/>
-                <expression value="category.coding.where(code = 'educational-attainment').exists().not() xor code.coding.where(code.memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.103')).exists()"/>
+                <expression value="category.where(coding.code = 'educational-attainment').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.103')).exists()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
             </constraint>
             <constraint>
-                <key value="SDOH-Con-category-food-insecurity-code0"/>
+                <key value="SDOH-Con-elder-abuse-code"/>
                     <severity value="error"/>
-                    <human value="If category is food-insecurity, then the code is from the VSAC - Less than high school education Diagnoses ValueSet"/>
-                <expression value="category.where(coding.code = 'food-insecurity').exists().not()"/>
+                    <human value="If category is elder-abuse, then the code is from the VSAC - Elder Abuse Diagnoses ValueSet"/>
+                <expression value="category.where(coding.code = 'elder-abuse').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.63')).exists()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
             </constraint>
             <constraint>
-                <key value="SDOH-Con-category-food-insecurity-code1"/>
+                <key value="SDOH-Con-employment-status-code"/>
                     <severity value="error"/>
-                    <human value="If category is food-insecurity, then the code is from the VSAC - Less than high school education Diagnoses ValueSet"/>
-                <expression value="code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.17')).exists()"/>
+                    <human value="If category is employment-status, then the code is from the VSAC - Unemployment Diagnoses ValueSet"/>
+                <expression value="category.where(coding.code = 'employment-status').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.42')).exists()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
             </constraint>
             <constraint>
-                <key value="SDOH-Con-category-food-insecurity-code2"/>
+                <key value="SDOH-Con-financial-insecurity-code"/>
                     <severity value="error"/>
-                    <human value="If category is food-insecurity, then the code is from the VSAC - Less than high school education Diagnoses ValueSet"/>
-                <expression value="code.coding.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.17')).exists()"/>
+                    <human value="If category is financial-insecurity, then the code is from the VSAC - Financial Insecurity Diagnoses ValueSet"/>
+                <expression value="category.where(coding.code = 'financial-insecurity').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.108')).exists()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
             </constraint>
             <constraint>
-                <key value="SDOH-Con-category-food-insecurity-code"/>
+                <key value="SDOH-Con-food-insecurity-code"/>
                     <severity value="error"/>
-                    <human value="If category is food-insecurity, then the code is from the VSAC - Less than high school education Diagnoses ValueSet"/>
+                    <human value="If category is food-insecurity, then the code is from the VSAC - Food Insecurity Diagnoses ValueSet"/>
                 <expression value="category.where(coding.code = 'food-insecurity').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.17')).exists()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
             </constraint>
             <constraint>
-                <key value="SDOH-Con-category-homelessness-code"/>
+                <key value="SDOH-Con-health-insurance-coverage-status-code"/>
+                    <severity value="error"/>
+                    <human value="If category is health-insurance-coverage-status, then the code is from the VSAC - Health Insurance Coverage Status Diagnoses ValueSet"/>
+                <expression value="category.where(coding.code = 'health-insurance-coverage-status').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.148')).exists()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Con-personal-health-literacy-code"/>
+                    <severity value="error"/>
+                    <human value="If category is personal-health-literacy, then the code is from the VSAC - Health Literacy Diagnoses ValueSet"/>
+                <expression value="category.where(coding.code = 'personal-health-literacy').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.116')).exists()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Con-homelessness-code"/>
                     <severity value="error"/>
                     <human value="If category is homelessness, then the code is from the VSAC - Homelessness Diagnoses ValueSet"/>
                 <expression value="category.where(coding.code = 'homelessness').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.18')).exists()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Con-housing-instability-code"/>
+                    <severity value="error"/>
+                    <human value="If category is housing-instability, then the code is from the VSAC - Housing Instability Diagnoses ValueSet"/>
+                <expression value="category.where(coding.code = 'housing-instability').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.24')).exists()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Con-inadequate-housing-code"/>
+                    <severity value="error"/>
+                    <human value="If category is inadequate-housing, then the code is from the VSAC - Inadequate Housing Diagnoses ValueSet"/>
+                <expression value="category.where(coding.code = 'inadequate-housing').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.48')).exists()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Con-intimate-partner-violence-code"/>
+                    <severity value="error"/>
+                    <human value="If category is intimate-partner-violence, then the code is from the VSAC - Intimate Partner Violence Diagnoses ValueSet"/>
+                <expression value="category.where(coding.code = 'intimate-partner-violence').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.84')).exists()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Con-material-hardship-code"/>
+                    <severity value="error"/>
+                    <human value="If category is material-hardship, then the code is from the VSAC - Material Hardship Diagnoses ValueSet"/>
+                <expression value="category.where(coding.code = 'material-hardship').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.35')).exists()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Con-medical-cost-burden-code"/>
+                    <severity value="error"/>
+                    <human value="If category is medical-cost-burden, then the code is from the VSAC - Medical Cost Burden Diagnoses ValueSet"/>
+                <expression value="category.where(coding.code = 'medical-cost-burden').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.153')).exists()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Con-social-connection-code"/>
+                    <severity value="error"/>
+                    <human value="If category is social-connection, then the code is from the VSAC - Social Connection Diagnoses ValueSet"/>
+                <expression value="category.where(coding.code = 'social-connection').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.81')).exists()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Con-stress-code"/>
+                    <severity value="error"/>
+                    <human value="If category is stress, then the code is from the VSAC - Stress Diagnoses ValueSet"/>
+                <expression value="category.where(coding.code = 'stress').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.75')).exists()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Con-transportation-insecurity-code"/>
+                    <severity value="error"/>
+                    <human value="If category is transportation-insecurity, then the code is from the VSAC - Transportation Insecurity Diagnoses ValueSet"/>
+                <expression value="category.where(coding.code = 'transportation-insecurity').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.26')).exists()"/>
+                <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+            </constraint>
+            <constraint>
+                <key value="SDOH-Con-veteran-status-code"/>
+                    <severity value="error"/>
+                    <human value="If category is veteran-status, then the code is from the VSAC - Veteran Status Diagnoses ValueSet"/>
+                <expression value="category.where(coding.code = 'veteran-status').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.78')).exists()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
             </constraint>
         </element>
