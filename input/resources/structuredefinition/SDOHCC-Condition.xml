@@ -106,7 +106,7 @@
             <constraint>
                 <key value="SDOH-Con-category-homelessness-code"/>
                     <severity value="error"/>
-                    <human value="If category is homelessness, then the code is from the VSAC - Less than high school education Diagnoses ValueSet"/>
+                    <human value="If category is homelessness, then the code is from the VSAC - Homelessness Diagnoses ValueSet"/>
                 <expression value="category.where(coding.code = 'homelessness').exists().not() xor code.where(memberOf('https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.18')).exists()"/>
                 <source value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
             </constraint>
