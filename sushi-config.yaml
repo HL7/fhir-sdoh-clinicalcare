@@ -1,0 +1,109 @@
+status: draft
+version: 2.0.0-update
+fhirVersion: 4.0.1
+copyrightYear: 2021+
+releaseLabel: ci-build
+canonical: http://hl7.org/fhir/us/sdoh-clinicalcare
+FSHOnly: false
+applyExtensionMetadataToRoot: false
+id: hl7.fhir.us.sdoh-clinicalcare
+name: Sdohclinicalcare
+dependencies:
+  hl7.fhir.us.core:
+    version: 3.1.1
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    id: sdohcore
+  hl7.fhir.uv.sdc:
+    version: 3.0.0
+    uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc#3.0.0
+    id: hl7fhiruvsdc
+  hl7.fhir.uv.subscriptions-backport:
+    version: 0.1.0
+    uri: http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport
+    id: sdohsub
+  us.nlm.vsac:
+    version: 0.9.0
+    uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
+    id: vsac
+  hl7.fhir.extensions.r5:
+    version: 4.0.1
+parameters:
+  show-inherited-invariants: false
+  jira-code: vrdr
+  path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
+
+license: CC0-1.0
+publisher:
+  name: HL7 International Patient Care WG
+  url: http://www.hl7.org/Special/committees/patientcare
+  email: pclist@lists.HL7.org
+jurisdiction: urn:iso:std:iso:3166#US "United States of America"
+description: This HL7 Implementation Guide (IG) defines how to exchange Social Determinants of Health (SDOH) content defined by the Gravity Project using the HL7 FHIR standard..
+pages:
+  index.md:
+    title: IG Home
+  gravity_background.md:
+    title: Gravity Background
+  sdoh_clinical_care_background.md:
+    title: SDOH Clinical Care Background
+  technical_background.md:
+    title: Technical Background
+  survey_instrument_support.md:
+    title: Survey Instrument Support
+  mapping_instructions.md:
+    title: Mapping Instructions
+  support_for_multiple_domains.md:
+    title: Support for Multiple Domains
+  exchange_workflow.md:
+    title: Exchange Workflow
+  functional_use_cases.md:
+    title: Functional Use Cases
+  synchronizing_applications_with_api_data_sources.md:
+    title: Synchronizing Applications With API Data Sources
+  fhir_artifacts_overview.md:
+    title: FHIR Artifacts Overview
+  checking_task_status.md:
+    title: Checking Task Status
+  privacy_and_security.md:
+    title: Privacy and Security
+  mustsupport_and_missing_data.md:
+    title: Must Support and Missing Data
+  draft_specifications_for_personal_characteristics.md:
+    title: Draft Specifications for Personal Characteristics
+  downloads.md:
+    title: Downloads
+  credits.md:
+    title: Credits
+  stu2_ballot_changes.md:
+    title: STU2 Ballot Changes
+  stu2_publication_changes.md:
+    title: STU2 Publication Changes
+  artifacts.html:
+    title: Artifacts Index
+
+menu:
+  Home: index.html
+  Table of Contents:  toc.html
+  Background:
+    Gravity Background: gravity_background.html
+    SDOH Clinical Care Background: sdoh_clinical_care_background.html
+    Technical Background : technical_background.html
+  Implementation Guidance:
+    Survey Instrument Support: survey_instrument_support.html
+    Mapping Instructions: mapping_instructions.html
+    Support for Multiple Domains: support_for_multiple_domains.html
+    Exchange Workflow:  exchange_workflow.html
+    Functional Use Cases:   functional_use_cases.html
+    Synchronizing Applications With API Data Sources: synchronizing_applications_with_api_data_sources.html
+  Specifications:
+    FHIR Artifacts Overview: fhir_artifacts_overview.html
+    Checking Task Status: checking_task_status.html
+    Privacy and Security: privacy_and_security.html
+    Must Support and Missing Data: mustsupport_and_missing_data.html
+    Draft Specifications for Personal Characteristics:   draft_specifications_for_personal_characteristics.html
+  Downloads: downloads.html
+  Credits: credits.html
+  Change History:
+    STU2 Ballot Changes:  stu2_ballot_changes.html
+    STU2 Publication Changes:  stu2_publication_changes.html
+  Artifact Index: artifacts.html
