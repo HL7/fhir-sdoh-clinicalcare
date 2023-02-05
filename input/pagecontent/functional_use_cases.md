@@ -184,7 +184,7 @@ See [direct referral light exchange workflow]. The query occurs after receiving 
 </p>
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
-While polling can be efficient, if a provider sends a secure link with a specific Task and ServiceRequest to fulfill, the CBO (Referral Recipient) system can perform queries by id on the provider's server using the FHIR API (using the FHIR <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">Task id</a> and <a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest Resource instance id</a>). Using the HTTPS GET method with the FHIR Resource type and id, one can directly find a specific instance, whether the id was provided directly by the provider's system or the id of the instance was previously pulled using polling. Additionally, a generic request for all the Resources of a type can be performed. Provider's server must implement the option to limit the returned Resource instances by date (see appropriate <a href="artifacts.html#behavioral-capability-statements">CapabilityStatement</a>).
+While polling can be efficient, if a provider sends a secure link with a specific Task and ServiceRequest to fulfill, the CBO (Referral Recipient) system can perform queries by id on the provider's server using the FHIR API (using the FHIR <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">Task id</a> and <a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest Resource instance id</a>). Using the HTTPS GET method with the FHIR Resource type and id, one can directly find a specific instance, whether the id was provided directly by the provider's system or the id of the instance was previously pulled using polling. Additionally, a generic request for all the Resources of a type can be performed. Provider's server must implement the option to limit the returned Resource instances by date (see appropriate <a href="artifacts.html#behavior-capability-statements">CapabilityStatement</a>).
 </p>
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
@@ -232,7 +232,7 @@ Applies to Providers and Payers as the referral requester
 
 Patient is assessed by a provider and referred to a CP. CP refers to a CBO to deliver the service.
 
-In the Indirect Referral with Direct CBO, each system has a FHIR server. Thus, the interactions will be highly similar to the Direct process described above. The Provider will use subscription on the CP's FHIR server, and the CP will use subscription on the CBO's FHIR server. See [capability statements](artifacts.html#behavioral-capability-statements) for server behavior requirements.
+In the Indirect Referral with Direct CBO, each system has a FHIR server. Thus, the interactions will be highly similar to the Direct process described above. The Provider will use subscription on the CP's FHIR server, and the CP will use subscription on the CBO's FHIR server. See [capability statements](artifacts.html#behavior-capability-statements) for server behavior requirements.
 
 See [exchange workflow](exchange_workflow.html#workflow-diagram-2)
 
