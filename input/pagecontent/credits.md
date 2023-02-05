@@ -25,6 +25,7 @@ We would like to thank [CyncHealth](https://cynchealth.org/), the [Agency for He
 | Rob Hausam         | [Hausam Consulting LLC](https://www.linkedin.com/in/robert-hausam-a273aa7/)        |
 | Cheng Liu          | [MaxMD](https://www.maxmddirect.com/)                                              |
 | Natasha Kreisle    | [MaxMD](https://www.maxmddirect.com/)                                              |
+| Corey Spears       | [MITRE](https://www.mitre.org/)                                                    |
 
 
 Our thanks to these and to the many others not explicitly listed who contributed their time, enthusiasm and expertise to this work.
