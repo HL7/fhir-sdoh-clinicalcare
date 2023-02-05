@@ -1,5 +1,5 @@
 Instance: SDOHCC-ObservationRacePractitionerExample
-InstanceOf: Observation
+InstanceOf: SDOHCC-ObservationRaceOMB
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-11-23T15:10:15.665+00:00"
