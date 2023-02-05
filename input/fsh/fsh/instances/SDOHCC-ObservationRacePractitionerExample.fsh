@@ -4,7 +4,7 @@ Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-11-23T15:10:15.665+00:00"
 * meta.source = "#JXTCkFUxYN94GcfS"
-* meta.profile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRace"
+* meta.profile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB"
 * status = #final
 * code = $loinc#72826-1 "Race OMB.1997"
 * subject = Reference(pat-53234) "COLIN ABBAS"
