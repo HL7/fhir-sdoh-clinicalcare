@@ -80,6 +80,8 @@ pages:
     title: STU2 Publication Changes
   artifacts.html:
     title: Artifacts Index
+  glossary.md:
+    title: Glossary
 
 menu:
   Home: index.html
@@ -88,6 +90,7 @@ menu:
     Gravity Background: gravity_background.html
     SDOH Clinical Care Background: sdoh_clinical_care_background.html
     Technical Background : technical_background.html
+    Glossary: glossary.html
   Implementation Guidance:
     Survey Instrument Support: survey_instrument_support.html
     Mapping Instructions: mapping_instructions.html
