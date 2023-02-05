@@ -20,7 +20,7 @@ We would like to thank [CyncHealth](https://cynchealth.org/), the [Agency for He
 | Donna Pertel       | [Academy of Nutrition and Dietetics](https://www.eatright.org/)                    |
 | Evelyn Gallego     | [EMI Advisors, LLC](https://www.emiadvisors.net/)                                  |
 | Linda Hyde         | [EMI Advisors, LLC](https://www.emiadvisors.net/)                                  |
-| Aaron Seib         | [SAFFRON Labs](newwave.io/saffron-labs/)                                           |
+| Aaron Seib         | [SAFFRON Labs](https://newwave.io/saffron-labs/)                                           |
 | Lynette Elliott    | [EMI Advisors, LLC](https://www.emiadvisors.net/)                                  |
 | Rob Hausam         | [Hausam Consulting LLC](https://www.linkedin.com/in/robert-hausam-a273aa7/)        |
 | Cheng Liu          | [MaxMD](https://www.maxmddirect.com/)                                              |

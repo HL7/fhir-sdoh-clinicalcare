@@ -1,24 +1,24 @@
 ### Jira Tickets – all applied -- see changes below
 
-#### Index 		
+#### Index
 
 - [FHIR-35753](https://jira.hl7.org/browse/FHIR-35753)	Home page should have compelling sale of problem and solution spec solves/offers
   - Provided link to gravity project on the home page
 
-#### General Changes		
+#### General Changes
 
 - [FHIR-38772](https://jira.hl7.org/browse/FHIR-38772)	Document change from US Core 4.0.0 to US Core 3.1.1
-  - Changed base reference to US Core to 3.1.1 and adjusted any structure definitions required 
+  - Changed base reference to US Core to 3.1.1 and adjusted any structure definitions required
 - [FHIR-34857](https://jira.hl7.org/browse/FHIR-34857)	Update reference to US Core MS and Missing Data
   - [Updated references to US Core MS and Missing Data](mustsupport_and_missing_data.html)
 
-#### Mapping		
+#### Mapping
 
 - [FHIR-38082](https://jira.hl7.org/browse/FHIR-38082)	Beef up the mapping instructions page
 - [FHIR-38081](https://jira.hl7.org/browse/FHIR-38081)	Mapping page should not have the mapping language content
   - updated [mapping instructions](mapping_instructions.html)
 
-#### Task Instructions		
+#### Task Instructions
 
 - [FHIR-37480](https://jira.hl7.org/browse/FHIR-37480)	Add Task.output slice to allow patient to indicate their "chosen-contact"
 - [FHIR-35750](https://jira.hl7.org/browse/FHIR-35750)	Suggest more robust requirements around using Task for patient Communications
@@ -29,7 +29,7 @@
 - [FHIR-35739](https://jira.hl7.org/browse/FHIR-35739)	Examples should show historical progression with statuses
   - Added the above changes to the [checking task status](checking_task_status.html) page
 
-#### Personal Characteristics		
+#### Personal Characteristics
 
 - [FHIR-34876](https://jira.hl7.org/browse/FHIR-34876)	Need specificity in requirements, e.g., state statutes.
 - [FHIR-34863](https://jira.hl7.org/browse/FHIR-34863)	References from Race Profile to Spec Requirements
@@ -50,15 +50,15 @@
 - [FHIR-35715](https://jira.hl7.org/browse/FHIR-35715)	Unclear what adhoc and adhocresponse are - please clarify
 - [FHIR-35370](https://jira.hl7.org/browse/FHIR-35370)	For Observation.method value set, add guidance related to use of "observed".
 - [FHIR-35375](https://jira.hl7.org/browse/FHIR-35375)	Add a challenge related to the sensitivity of SDOH data
-  - Updated the [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html) page and referenced artifacts 
+  - Updated the [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html) page and referenced artifacts
 
-#### Value set changes		
+#### Value set changes
 
 - [FHIR-36591](https://jira.hl7.org/browse/FHIR-36591)	Add on-hold to the value set for .status to support patient inability to perform task for a period of time
-  - Added on-hold to the [value set for the personal task status](artifacts.html#artifacts-summary)
+  - Added on-hold to the [value set for task status](ValueSet-SDOHCC-ValueSetTaskStatus.html)
 
 
-#### Functional Use Cases		
+#### Functional Use Cases
 
 - [FHIR-35718](https://jira.hl7.org/browse/FHIR-35718)	Restructure and add diagrams to make functional requirements of spec clear
 - [FHIR-35639](https://jira.hl7.org/browse/FHIR-35639)	The patient should be given an opportunity to weigh in on whether the referral was successful and goals have been accomplished (or progress made)
@@ -69,14 +69,14 @@
 - [FHIR-34881](https://jira.hl7.org/browse/FHIR-34881)	Referral workflow steps need to be aligned
   - Applied the above ticket dispositions to the [Functional Use Cases](functional_use_cases.html) page
 
-#### Structure Definitions		
+#### Structure Definitions
 
 - [FHIR-34891](https://jira.hl7.org/browse/FHIR-34891)	Please relax Goal.Achievement cardinality to 0..1 to align with goals that are proposed or planned
   - changed goal.achievement cardinality to 0..1
 - [FHIR-35369](https://jira.hl7.org/browse/FHIR-35369)	Streamline representation of SDOH screening instruments
   - based on US Core decision, change grouping observation to have individual observations for multiple selection questions
 
-#### Exchange Workflow		
+#### Exchange Workflow
 
 - [FHIR-35733](https://jira.hl7.org/browse/FHIR-35733)	Patient interaction diagrams need more clarity
 - [FHIR-35721](https://jira.hl7.org/browse/FHIR-35721)	Recommend better definition and consistence with diagram and rest of 9
@@ -84,14 +84,14 @@
 - [FHIR-35637](https://jira.hl7.org/browse/FHIR-35637)	Workflow and Managing Consent diagram should be expanded to include API Resources
   - Applied the above ticket dispositions to the [Exchange Workflow](exchange_workflow.html) page
 
-#### Capability Statements		
+#### Capability Statements
 
 - [FHIR-36045](https://jira.hl7.org/browse/FHIR-36045)	Procedure _id search parameter Definition & Chaining makes reference to PractitionerRole records
 - [FHIR-35960](https://jira.hl7.org/browse/FHIR-35960)	Subscription in the capability statements has SDOHCC-Procedure as the supported Profile
 - [FHIR-35076](https://jira.hl7.org/browse/FHIR-35076)	Capability Statements - Please provide specific conformance assertions with respect to the various supported profiles
-  - updated [capability statements](artifacts.html#artifacts-summary) page with the requested changes 
+  - updated [capability statements](artifacts.html#behavior-capability-statements) page with the requested changes
 
-#### Privacy and Security		
+#### Privacy and Security
 
 - [FHIR-35676](https://jira.hl7.org/browse/FHIR-35676)	Add language to clarify that not all legal requests are up to org policy - HIPAA has specific procedures that must be followed regarding these types of disclosures
   * added clarification to the [Privacy and Security](privacy_and_security.html) page
