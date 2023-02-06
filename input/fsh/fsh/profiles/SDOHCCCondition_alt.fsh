@@ -68,12 +68,15 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * code.coding[educational-attainment] from $educationalAttainmentConditionVS
 * code.coding[educational-attainment] ^short = "Educational Attainment"
 * code.coding[elder-abuse] from $elderAbuseConditionVS
-* code.coding[elder-abuse] ^short = "Educational Attainment"
+* code.coding[elder-abuse] ^short = "Elder Abuse"
 * code.coding[unemployment] from $unemploymentConditionVS
-* code.coding[educational-attainment] ^short = "Educational Attainment"
+* code.coding[unemployment] ^short = "Unemployment"
 * code.coding[financial-insecurity] from $financialInsecurityConditionVS
+* code.coding[financial-insecurity] ^short = "Financial Insecurity"
 * code.coding[food-insecurity] from $foodInsecurityConditionVS
+* code.coding[food-insecurity] ^short = "Food Insecurity"
 * code.coding[health-insurance-coverage] from $healthInsuranceCoverageStatusConditionVS
+* code.coding[health-insurance-coverage] ^short = "Health Insurance Coverage"
 
 
 * bodySite ..0
