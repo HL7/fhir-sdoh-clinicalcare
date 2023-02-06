@@ -8,8 +8,13 @@ RuleSet: CodeSlicing
   required 1..1
 
 Alias: $educationalAttainmentConditionVS = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.103
-Alias: $elderAbuseConditionVS = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.103
-Alias: $foodInsecurityConditionVS = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.103
+Alias: $elderAbuseConditionVS = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.63
+Alias: $unemploymentConditionVS = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.62
+
+Alias: $financialInsecurityConditionVS = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.108
+Alias: $foodInsecurityConditionVS = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.17
+Alias: $healthInsuranceCoverageStatusConditionVS = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1247.148
+
 
 Profile: SDOHCCConditionAlt
 Parent: USCoreCondition
@@ -55,11 +60,21 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * code.coding contains
   educational-attainment 0..1 and
   elder-abuse 0..1 and
-  food-insecurity 0..1
+  unemployment  0..1 and
+  financial-insecurity 0..1 and
+  food-insecurity 0..1 and
+  health-insurance-coverage 0..1
 
 * code.coding[educational-attainment] from $educationalAttainmentConditionVS
+* code.coding[educational-attainment] ^short = "Educational Attainment"
 * code.coding[elder-abuse] from $elderAbuseConditionVS
+* code.coding[elder-abuse] ^short = "Educational Attainment"
+* code.coding[unemployment] from $unemploymentConditionVS
+* code.coding[educational-attainment] ^short = "Educational Attainment"
+* code.coding[financial-insecurity] from $financialInsecurityConditionVS
 * code.coding[food-insecurity] from $foodInsecurityConditionVS
+* code.coding[health-insurance-coverage] from $healthInsuranceCoverageStatusConditionVS
+
 
 * bodySite ..0
 * subject ^definition = "Indicates the patient who the condition record is associated with."
