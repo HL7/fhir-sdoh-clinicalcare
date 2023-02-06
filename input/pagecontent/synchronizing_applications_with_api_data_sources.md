@@ -4,7 +4,7 @@ The below is for establishing connections to enable the exchange of information 
 
 ### Requirements
 
-The intent of this section is to further standardize the interactions between FHIR APIs and consumer or CBO applications.  To accomplish this, we are recommending that the following processes **SHOULD** be supported by all referral platforms and applications, to enable consistent processes to access data. The [capability statements](artifacts.html#behavioral-capability-statements) provide further specifications for servers.
+The intent of this section is to further standardize the interactions between FHIR APIs and consumer or CBO applications.  To accomplish this, we are recommending that the following processes **SHOULD** be supported by all referral platforms and applications, to enable consistent processes to access data. The [capability statements](artifacts.html#behavior-capability-statements) provide further specifications for servers.
 
 #### Patient/Client Applications
 
