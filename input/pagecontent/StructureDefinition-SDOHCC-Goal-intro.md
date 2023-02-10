@@ -6,7 +6,7 @@ For each category of SDOH goals, a specific value SHALL be used for Goal.categor
 
 | [`Goal.category`](ValueSet-SDOHCC-ValueSetSDOHGoal.html) | Domain | `ServiceRequest.code` ValueSet | ValueSet URL |
 | ------ | -------------------- | ------------------------- | ------------ |
-| educational-attainment  | Educational Attainment | [VSAC -  Educational Attainment Goals ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.55/expansion/Latest ) | https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.55/expansion/Latest |
+| educational-attainment  | Educational Attainment | [VSAC -  Less than high school education Goals ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.55/expansion/Latest ) | https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.55/expansion/Latest |
 | elder-abuse  | Elder Abuse | [VSAC -  Elder Abuse Goals ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.65/expansion/Latest ) | https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.65/expansion/Latest |
 | employment-status  | Employment Status | [VSAC -  Employment Status Goals ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.70/expansion/Latest ) | https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.70/expansion/Latest |
 | financial-insecurity  | Financial Insecurity | [VSAC -  Financial Insecurity Goals ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.30/expansion/Latest ) | https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.30/expansion/Latest |
