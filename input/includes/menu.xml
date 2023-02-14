@@ -21,6 +21,7 @@
       <li><a href="exchange_workflow.html">Exchange Workflow</a></li>
         <li><a href="functional_use_cases.html">Functional Use Cases</a></li>
       <li><a href="synchronizing_applications_with_api_data_sources.html">Synchronizing Applications with API Data Sources</a></li>    </ul>
+      <li><a href="glossary.html">Glossary</a></li>    </ul>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specifications<b class="caret">
@@ -44,5 +45,6 @@
     <ul class="dropdown-menu">
       <li><a href="stu2_ballot_changes.html">STU2 Ballot Changes</a></li>
       <li><a href="stu2_publication_changes.html">STU2 Publication Changes</a></li>    </ul>
+      <li><a href="stu2_1_update_changes.html">STU2.1 Update Changes</a></li>    </ul>
   </li>  <li><a href="artifacts.html">Artifact Index</a></li>
 </ul>
