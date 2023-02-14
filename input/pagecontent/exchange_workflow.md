@@ -38,7 +38,7 @@ The following diagram depicts one example of an exchange workflow supported by t
 
 <table><tr><td><img src="SDOHInteractionsDrawingConsentV5.jpg" /></td></tr></table>
 
-Each of the workflow diagrams below defines the resources that are exchanged and/or updated for the supported use cases.
+Each of the workflow diagrams below defines the resources that are exchanged and/or updated for the supported use cases. For additional workflow details see [Functional Use Cases](functional_use_cases.html). For enabling access see [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html). 
 
 ### Closed Loop Referral
 
@@ -46,29 +46,29 @@ Each of the workflow diagrams below defines the resources that are exchanged and
 
 Provider / Requester  -- this can be any of the following:
 
-		1) a provider or other provider
-	
-		2) a payer as part of care management, risk assessment, or via programs that assess and intervene regarding social risk
-	
-		3) a Coordination Platform
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) a provider or other provider
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) a payer as part of care management, risk assessment, or via programs that assess and intervene regarding social risk
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3) a Coordination Platform
 
 Coordination Platform (CP) / Intermediary
 
-		1) This is a service that accepts referrals (it may also create them)
-	
-		2) May determine which Community Based Organization (CBO) is capable and available to provide the appropriate service
-	
-		3) Engages the CBO to perform the referral 
-	
-		4) Tracks the referral process to completion
-	
-		5) Reports status back to the Referring Entity
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) This is a service that accepts referrals (it may also create them)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) May determine which Community Based Organization (CBO) is capable and available to provide the appropriate service
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3) Engages the CBO to perform the referral 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4) Tracks the referral process to completion
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5) Reports status back to the Referring Entity
 
 Community Based Organization (CBO) / Performer
 
-		1) Provides one or more social risk services
-	
-		2) Interacts with the CP or RE to provide status of the referral
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) Provides one or more social risk services
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) Interacts with the CP or RE to provide status of the referral
 
 
 
@@ -76,7 +76,7 @@ Community Based Organization (CBO) / Performer
 
 The referral occurs between the Provider / Requester and the CBO / Performer where the CBO has a FHIR API.
 
-[Link the Direct Referral functional use case](functional_use_cases.html#direct-referral-light)
+[Refer to the Direct Referral functional use case](functional_use_cases.html#direct-referral-light) to understand the numbers in the interaction diagram below.
 
 ##### Interaction Diagram
 
@@ -92,7 +92,7 @@ The referral occurs between the Provider / Requester and the CBO / Performer whe
 
 The referral occurs between the Provider / Requester and the CBO / Performer where the CBO / Performer does not have a FHIR API (FHIR Server or FHIR Façade).   The exchange with the Performer is initiated via an email with a secure link to the Provider / Requester API that can be used by an application available to the CBO / Performer to communicate with the Provider / Requester using RESTful exchanges that read, create, and update resources via the Provider / Requester API.
 
-[Link to the Direct Referral Light functional use case](functional_use_cases.html#direct-referral-light)
+[Refer to the Direct Referral Light functional use case](functional_use_cases.html#direct-referral-light) to understand the numbers in the interaction diagram below.
 
 ##### Interaction Diagram
 

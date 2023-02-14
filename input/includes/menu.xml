@@ -8,11 +8,10 @@
     <ul class="dropdown-menu">
       <li><a href="gravity_background.html">Gravity Background</a></li>
       <li><a href="sdoh_clinical_care_background.html">SDOH Clinical Care Background</a></li>
-      <li><a href="functional_use_cases.html">Functional Use Cases</a></li>
       <li><a href="technical_background.html">Technical Background</a></li>    </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Context<b class="caret">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation Guidance<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
@@ -20,6 +19,7 @@
       <li><a href="mapping_instructions.html">Mapping Instructions</a></li>
       <li><a href="support_for_multiple_domains.html">Support for Multiple Domains</a></li>
       <li><a href="exchange_workflow.html">Exchange Workflow</a></li>
+        <li><a href="functional_use_cases.html">Functional Use Cases</a></li>
       <li><a href="synchronizing_applications_with_api_data_sources.html">Synchronizing Applications with API Data Sources</a></li>    </ul>
   </li>
   <li class="dropdown">

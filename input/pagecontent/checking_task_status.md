@@ -1,10 +1,15 @@
 ### Use of Task Status
 
-Task.status enables the exchange of information related to the request for and progress related to addressing a ServiceRequest. The value sets for the Referral Task status and the Patient Task status are different due to the purpose of the exchange between the requesting entity and the intermediary or performing entity (Referral Task) vs the exchange with the patient (Patient Task).
+Task.status is the communication mechanism that indicates the status (e.g. requested, accepted, in progress or completed) of action(s) taken to fulfill a ServiceRequest.
+
+enables 
+the exchange of information related to the request for and progress related to addressing a ServiceRequest. The value sets for the Referral Task status and the Patient Task status are different due to the purpose of the exchange between the requesting entity and the intermediary or performing entity (Referral Task) vs the exchange with the patient (Patient Task). 
+
+The guidance on this page details important concepts for implementation. See [Functional Use Cases](functional_use_cases.html) and [Exchange Workflow](exchange_workflow.html) pages to learn how the concepts fit into the overarching guidance.
 
 #### Referral Task Status
 
-The [referral task status](http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement) utilizes the full set of values defined by the base resource as enumerated in the table below:
+The [referral task status](StructureDefinition-SDOHCC-TaskForReferralManagement.html) of the SDOHCC Task For Referral Management utilizes the full set of values defined by the base resource as enumerated in the table below:
 
 <table><tr><td><img src="ReferralTaskStatus.jpg" /></td></tr></table>
 
@@ -16,7 +21,7 @@ The allowed state transitions are defined graphically in the state diagram below
 
 #### Patient Task Status
 
-The [patient task status](http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient) utilizes a subset of the values defined by the base resource as enumerated in the table below:
+The [patient task status](StructureDefinition-SDOHCC-TaskForPatient.html) of the SDOHCC Task For Patient utilizes a subset of the values defined by the base resource as enumerated in the table below:
 
 <table><tr><td><img src="PatientTaskStatus.jpg" /></td></tr></table>
 
@@ -30,15 +35,15 @@ In addition to a limited set of status values, the patient application is only p
 
 ### Checking Task Status
 
-The Gravity workflow around referrals involves all parties being aware of when relevant Tasks and associated ServiceRequests have been created and/or updated. In most cases, the Tasks will reside within the EHR system of the initiating practitioner.  In this case, the EHR will always be aware when the Task is updated, so the challenge of monitoring Tasks will fall solely on the service delivery organization.  However, the Gravity workflow also supports Tasks being posted to an intermediary organization that is responsible for managing the referral fulfillment process.  In these circumstances, both EHR and service delivery organizations will need to monitor for changes to Tasks.
+The Gravity workflow around referrals involves all parties being aware of when relevant Tasks and associated ServiceRequests have been created and/or updated. In most cases, the Tasks will reside within the EHR system of the initiating practitioner.  In this case, the EHR will always be aware when the Task is updated, so the challenge of monitoring Tasks will fall solely on the service delivery organization.  However, the Gravity workflow also supports Tasks being posted to a CBO's FHIR server or an intermediary organization that is responsible for managing the referral fulfillment process.  In these circumstances, both EHR and service delivery organizations will need to monitor for changes to Tasks.
 
 The specific types of events to be monitored for include:
 **Service Delivery Organizations**
 
 * A new Task has been assigned to the organization
-* A new Task that is unassigned - but which is seeking action within the organization's purview has been created
+* A new Task that is unassigned, but which is seeking action within the organization's purview, has been created
 * A ServiceRequest associated with a Task assigned to the organization has been modified
-* A ServiceRequest associated with a Task assigned to the organization has been cancelled
+* A ServiceRequest associated with a Task assigned to the organization has been canceled
 
 **EHR systems**
 
@@ -52,7 +57,7 @@ There are two mechanisms for detecting the above changes - polling and subscript
 
 #### Polling
 
-In this mode, the system needing information (the 'client') occasionally queries the system maintaining the relevant Tasks and/or ServiceRequests to see if there is anything 'new'.  Clients may need to perform queries against multiple clients if not all relevant Tasks and ServiceRequests will be maintained on the same server. To poll, the client will perform a [search]({{site.data.fhir.path}}search.html) for Tasks that are filtered to those either owned by or requested by the searching organization. The search would also filter to only include those Tasks that had been created or changed since the server last looked.
+In this mode, the system needing information (the 'client') occasionally queries the system maintaining the relevant Tasks and/or ServiceRequests to see if there is anything 'new'.  Clients may need to perform queries against multiple clients if relevant Tasks and ServiceRequests will not be maintained on the same server. To poll, the client will perform a [search]({{site.data.fhir.path}}search.html) for Tasks that are filtered to those either owned or requested by the searching organization. The search would also filter to only include those Tasks that had been created or changed since the server last looked.
 E.g.
 
 ```[base]/Task?owner=Organization/123&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```

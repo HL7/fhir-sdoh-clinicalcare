@@ -1,21 +1,26 @@
+### Rationale
+It is difficult to capture in the IG the full extent of the terminology inter-dependencies. Rather than build hundreds of profiles we have chosen to enumerate the relationships between value choice between dependent data elements. For example, in Observation when the SDOH category is ‘EducationalAttainment’ there is a specific subset of values  that can be used for the Observation.code. Within VSAC and our additional documentation we have tried to make these relationships clear.
+
+We expect implementers to review the terminology documents below and implement logic to validate or use the correct term pairings. Again, we chose to not create hundreds of FHIR profiles with the pairings, as the logic is straightforward (e.g. if SDOH category X then code uses values from set Y) and redundant. Our tables of dependencies can be used to create lookup tables for validation or profile creation. By choosing to not create hundreds of profiles we have sought to both simplify and free implementers to use their own means to implement the required logic.
+
 ###  Code Systems and Value Sets
 
 SDOH Clinical Care Implementation Guide is intended to support multiple SDOH domains and use domain specific value sets as they are created and approved by the Gravity Project.  The [Gravity Confluence Terminology Workstream](https://confluence.hl7.org/display/GRAV/Terminology+Workstream+Dashboard) describes the terminology identification and creation process.  To enable this, we are taking the following approach regarding terminologies and value sets related to profiles defined by this IG.
 
-Each profile element that defines specific SDOH coded concepts will reference the entire code system or in some cases multiple codes systems from which the domain specific values (value set) will be defined.  It is our intent to define the specific value sets for each domain in the [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) database (as they are created and validated) and the survey instruments in LOINC.  The Gravity Project will publish guidance for each of the SDOH elements in a separate [supplemental guide](https://confluence.hl7.org/display/GRAV/Supplemental+Guide) and update the guide at least twice a year.  Use of the supplemental guide is optional, but highly recommended.  Consensus based values are indicated in the supplemental guide along with values that are more general or commonly used but may be deprecated as the Gravity Project terminology work progresses.  
+Each profile element that defines specific SDOH coded concepts will reference the entire code system or in some cases multiple codes systems from which the domain specific values (value set) will be defined.  It is our intent to define the specific value sets for each domain in the [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) database (as they are created and validated) and the survey instruments in LOINC.  The Gravity Project will publish guidance for each of the SDOH elements in a separate [supplemental guide](https://confluence.hl7.org/display/GRAV/Supplemental+Guide) and update the guide at least twice a year.  Use of the supplemental guide is optional, but highly recommended.  Consensus based values are indicated in the supplemental guide along with values that are more general or commonly used but may be deprecated as the Gravity Project terminology work progresses.
 
 The Gravity Project plans to work with the HL7 Vocabulary WG to determine how best to represent the domain specific value sets in each of the relevant resources and to establish appropriate methods to validate the consistent use of the correct domain specific codes. Future versions of this IG will include the logic to select specific value sets based on the SDOH domain.
 
 In this IG, the exchange of the following activities is supported with specific SDOH profiles on either the base resources or on the respective [US Core Profile ](http://{{site.data.fhir.ver.uscore}}/index.html). A complete listing of the resources used is contained in the [FHIR Artifacts Overview](fhir_artifacts_overview.html) page.  The following is a brief summary focused on the specific activities:
 
 * Assessments
-  * [Observation](StructureDefinition-SDOHCC-ObservationScreeningResponse.html) profile based on the [Survey process](survey_instrument_support.html) defined in this IG uses [LOINC](https://loinc.org/) codes.  Each of the supported survey instruments are defined as [Survey Panels](https://loinc.org/panels/category/survey-instruments/) in the LOINC database. 
+  * [Observation](StructureDefinition-SDOHCC-ObservationScreeningResponse.html) profile based on the [Survey process](survey_instrument_support.html) defined in this IG uses [LOINC](https://loinc.org/) codes.  Each of the supported survey instruments are defined as [Survey Panels](https://loinc.org/panels/category/survey-instruments/) in the LOINC database.
   * [Observation](StructureDefinition-SDOHCC-ObservationAssessment.html) profile based on an interaction between a caregiver and the patient uses both [LOINC](https://loinc.org/)  and [SNOMED CT](http://www.snomed.org/) codes to describe SDOH conditions.
-* Health Concerns / Problems 
+* Health Concerns / Problems
   * [Condition](StructureDefinition-SDOHCC-Condition.html) profile that uses both [SNOMED CT](http://www.snomed.org/) and ICD-10 codes generated by the Survey process defined in this IG.  The Gravity Project recommends defining the relevant codes in the mapping instructions for each Survey instrument utilizing the consensus values defined by the Gravity Project terminology workstream.
 * Goals
   *  [Goal](StructureDefinition-SDOHCC-Goal.html) profile that uses both [LOINC](https://loinc.org/)  and [SNOMED CT](http://www.snomed.org/) codes for patient goals, and domain specific goals.
-* Interventions/Referrals 
+* Interventions/Referrals
   * [Service Request](StructureDefinition-SDOHCC-ServiceRequest.html) profile and [Procedure](StructureDefinition-SDOHCC-Procedure.html) profile use a combination of terminologies ([SNOMED CT Procedure Codes](http://www.snomed.org/), [HCPCS II](https://terminology.hl7.org/2.1.0/CodeSystem-HCPCS-all-codes.html), [CPT](http://{{site.data.fhir.ver.hl7tx}}/CodeSystem-v3-cpt-r.html), and occasionally [LOINC](https://loinc.org/)  ) to define specific referrals and interventions that may be domain specific, cross domains or reflect a subset of a domain specific health concerns, problems, and goals.
 
 ###  External Value Set Guidance
@@ -30,7 +35,7 @@ Servers  **SHOULD** use the following SDOH value sets when a code exists that de
 
 ·    [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion)
 
-The Figure below illustrates how the SDOH group value set is structured for the  Condition Profile. When recording SDOH data servers **SHOULD** use the SDOH value sets.
+The Figure below illustrates how the SDOH group value set is structured for the  Condition Profile. When recording SDOH data, servers **SHOULD** use the SDOH value sets
 
  **Example of VSAC SDOH Group Value Set for Condition.Code**
 

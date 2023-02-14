@@ -25,14 +25,16 @@ The implementation guide is organized into the following sections:
 
 ### Note to Implementers
 
-Implementers should pay specific attention to the following sections:
+Implementers should pay specific attention to the following sections. They are listed in a suggested order:
 
 * [Technical Background](technical_background.html) if the implementer needs basic FHIR information references
 * [Survey Instrument Support](survey_instrument_support.html), and [ QuestionnaireResponse Mapping Instructions](mapping_instructions.html) if implementing support for structured assessment instruments
-* [Support for Multiple Domains](support_for_multiple_domains.html) to understand this IG's approach to domain specific value sets
-* [Exchange Workflow diagram](exchange_workflow.html) to understand the exchange workflows
-* [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html) that describes the suggested method for synchronizing patient/client or Community Based Organization applications with referral systems FHIR APIs
+* [Support for Multiple Domains](support_for_multiple_domains.html) to understand this IG's approach to domain specific value sets and terminology use
+* [Exchange Workflow diagram](exchange_workflow.html) to understand the exchange workflows. Along with the [Functional Use Cases](functional_use_cases.html),
+   *these provide step by step FHIR guidance, and are critical to review.*
+* [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html) describes the suggested method for synchronizing patient/client or Community Based Organization applications with referral systems FHIR APIs
 * [FHIR Artifacts](fhir_artifacts_overview.html) to understand the individual FHIR artifacts described in this IG
+* [Capability Statements](artifacts.html#capability-statements) contain important server requirements. It is expected that Providers have conformant FHIR servers.
 * [Privacy and Security](privacy_and_security.html) for implementers that are concerned with privacy and security aspects related to implementing the information exchanges defined in this IG
 * [MustSupport and Missing Data](mustsupport_and_missing_data.html) to understand the interpretation of the MustSupport flags and the treatment of Missing Data used in this IG 
 * [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html) for an introduction to draft observation profiles to exchange personal characteristics data, which includes the source and method of acquisition
