@@ -181,7 +181,7 @@ Note from 6: The provider's system creates a <a href="StructureDefinition-SDOHCC
 &nbsp;&nbsp;&nbsp;&nbsp;8b. CBO application queries Provider or Care Coordinator API for new or updated referrals
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
-See <a href="exchange_workflow.html#direct-referral-light">direct referral light exchange workflow</a>. The query occurs after receiving electronic communication that there is a referral. The CBO application queries the Provider or Care Coordinator FHIR API for new or updated referrals. Alternatively, in the absence of electronic notification, the CBO could monitor for new Tasks and ServiceRequests using polling (for guidance on polling see <a href="checking_task_status.html#polling">Polling</a>).
+See [Direct Referral Light] exchange workflow. The query occurs after receiving electronic communication that there is a referral. The CBO application queries the Provider or Care Coordinator FHIR API for new or updated referrals. Alternatively, in the absence of electronic notification, the CBO could monitor for new Tasks and ServiceRequests using polling (for guidance on polling see <a href="checking_task_status.html#polling">Polling</a>).
 </p>
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
