@@ -41,7 +41,7 @@ The functional use cases defined below are based on specific exchanges of inform
 - For a covered entity or business associate to share PHI with an entity that is not a covered entity or does not have a BAA, consent of the patient is generally required (there are specific exceptions allowed by HIPAA)
 
 
-### Direct Referral (Pull by Provider from CBO, involving [FHIR Subscription Resource](checking_task_status.html#subscription))
+###<a name="directreferral"> Direct Referral (Pull by Provider from CBO, involving [FHIR Subscription Resource](checking_task_status.html#subscription))
 
 Applies to Providers, Payers and CPs as the referral requester
 
@@ -154,7 +154,7 @@ See <a href="StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal FHIR profile</a> 
 <table><tr><td><img src="FunctionalUseCaseFlowDirectReferral3.jpg" /></td></tr></table>
 
 
-### Direct Referral Light (Push by CBO to Provider, involving <a href="checking_task_status.html#polling">Polling</a>)
+###<a name="directreferrallight">Direct Referral Light (Push by CBO to Provider, involving <a href="checking_task_status.html#polling">Polling</a>)
 
 Same as the Direct Referral workflow above with the following exceptions noted below:
 
@@ -226,7 +226,7 @@ To indicate completion via the FHIR API, the following are performed by the CBO:
 <table><tr><td><img src="FunctionalUseCaseFlowDirectLightReferral3.jpg" /></td></tr></table>
 
 
-### Indirect Referral with Direct CBO
+###<a name="indirectreferral"> Indirect Referral with Direct CBO
 
 Applies to Providers and Payers as the referral requester
 
@@ -323,7 +323,7 @@ Provider receives a subscription notification when the CP updates the Task on th
 
 <table><tr><td><img src="FunctionalUseCaseFlowIndirectDirectReferral3.jpg" /></td></tr></table>
 
-### Indirect Referral with Direct Light CBO
+###<a name="indirectreferrallight"> Indirect Referral with Direct Light CBO
 
 Applies to Providers and Payers as the referral requester, and patient is assessed by a provider and referred to a CP. CP refers to a CBO to deliver the service.
 
