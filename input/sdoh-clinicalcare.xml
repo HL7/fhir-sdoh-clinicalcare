@@ -1192,6 +1192,16 @@
                 <title value="STU2 Publication Changes"/>
                 <generation value="markdown"/>
             </page>
+            <page>
+                <nameUrl value="stu2_1_update_changes.html"/>
+                <title value="STU2.1 Update Changes"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="glossary.html"/>
+                <title value="Glossary"/>
+                <generation value="markdown"/>
+            </page>
         </page>
         <parameter>
             <code value="jira-code"/>
