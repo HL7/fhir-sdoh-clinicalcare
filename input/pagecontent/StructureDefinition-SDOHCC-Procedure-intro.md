@@ -4,7 +4,7 @@
 This profile is used to capture procedures for all 17 categories of SDOH information, using a contextual binding of valuesets.
 For each category of SDOH service request, a specific value SHALL be used for Procedure.category, and a specific valueset SHALL be used for the Proedure.code as shown in the table below.  In the current version of this IG, this contextual binding is not enforced by invariants.  In future updates of the IG, these invariants may be added.
 
-| [`Procedure.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | `Procedure.code` ValueSet | ValueSet URL |
+| [`Procedure.category`](ValueSet-SDOHCC-ValueSetSDOHProcedure.html) | Domain | `Procedure.code` ValueSet | ValueSet URL |
 | ------ | -------------------- | ------------------------- | ------------ |
 | educational-attainment  | Educational Attainment | [VSAC -  Less than high school education Procedures ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.56/expansion/Latest ) | https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.56/expansion/Latest |
 | elder-abuse  | Elder Abuse | [VSAC -  Elder Abuse Procedures ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.67/expansion/Latest ) | https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.67/expansion/Latest |

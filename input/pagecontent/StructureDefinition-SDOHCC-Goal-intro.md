@@ -4,7 +4,7 @@
 This profile is used to capture goals for all 17 categories of SDOH information, using a contextual binding of valuesets.
 For each category of SDOH goals, a specific value SHALL be used for Goal.category, and a specific valueset SHALL be used for the Goal.code as shown in the table below.  In the current version of this IG, this contextual binding is not enforced by invariants.  In future updates of the IG, these invariants may be added.
 
-| [`Goal.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | `ServiceRequest.code` ValueSet | ValueSet URL |
+| [`Goal.category`](ValueSet-SDOHCC-ValueSetSDOHGoal.html) | Domain | `ServiceRequest.code` ValueSet | ValueSet URL |
 | ------ | -------------------- | ------------------------- | ------------ |
 | educational-attainment  | Educational Attainment | [VSAC -  Less than high school education Goals ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.55/expansion/Latest ) | https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.55/expansion/Latest |
 | elder-abuse  | Elder Abuse | [VSAC -  Elder Abuse Goals ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.65/expansion/Latest ) | https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.65/expansion/Latest |
