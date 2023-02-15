@@ -3,6 +3,7 @@
 [Direct Referral]: functional_use_cases.html#directreferral
 [Direct Referral Light]: functional_use_cases.html#directreferrallight
 [HL7 Structured Data Capture IG]: http://hl7.org/fhir/uv/sdc/STU3/extraction.html#structuremap-based-extraction
+[Bulk Data exchange IG]: http://hl7.org/fhir/uv/bulkdata/
 [Survey Instrument Support]: survey_instrument_support.html
 [Observations]: {{site.data.fhir.path}}observation.html
 [Conditions]: {{site.data.fhir.path}}condition.html

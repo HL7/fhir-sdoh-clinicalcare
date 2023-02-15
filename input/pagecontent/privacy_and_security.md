@@ -28,7 +28,7 @@ When the identity of the requesting or receiving party is important, implementat
 * the [SMART on FHIR Framework](http://docs.smarthealthit.org/),
 * mutually authenticated TLS,
 * the ONC FHIR At Scale Taskforce (FAST) security tiger team recommended solutions, or
-* the OAuth Server to Server Authentication as defined in the [Bulk Data exchange IG](https://build.fhir.org/ig/HL7/us-bulk-data/).
+* the OAuth Server to Server Authentication as defined in the [Bulk Data exchange IG].
 Note: There is ongoing work to enhance the capabilities of the above specifications to ensure a more secure exchange that recognizes issues related to fine grain scopes.
 
 ### Additionally Protected Information
