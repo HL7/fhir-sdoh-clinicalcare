@@ -1,6 +1,9 @@
 
 
 ### Usage
+* Needs an intro that explains what the profile is for and point to the page(s) in the spec where its use in workflow is described.
+
+
 This profile is used to capture Diagnoses for all 17 categories of SDOH information, using a contextual binding of valuesets.
 For each category of SDOH condition, a specific value SHALL be used for Condition.category, and a specific valueset SHALL be used for the Condition.code as shown in the table below.  In the current version of this IG, this contextual binding is not enforced by invariants.  In future updates of the IG, these invariants may be added.
 

@@ -1,6 +1,9 @@
 
 
 ### Usage
+
+* Needs an intro that explains what the profile is for and point to the page(s) in the spec where its use in workflow is described.
+
 This profile is used to capture goals for all 17 categories of SDOH information, using a contextual binding of valuesets.
 For each category of SDOH goals, a specific value SHALL be used for Goal.category, and a specific valueset SHALL be used for the Goal.code as shown in the table below.  In the current version of this IG, this contextual binding is not enforced by invariants.  In future updates of the IG, these invariants may be added.
 
