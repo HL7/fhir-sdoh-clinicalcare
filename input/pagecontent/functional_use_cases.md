@@ -12,10 +12,10 @@ The following numbering is used throughout this section where N is an integer nu
 ### Patient Stories and Workflow
 SDOH IG related Patient Stories are available on the Gravity Project Confluence site [here](https://confluence.hl7.org/display/GRAV/Patient+Stories).
 
-These use cases are represented by workflow diagrams on the [Exchange Workflow Page](exchange_workflow.html) with figures that refer to the FHIR Resources used. Implementers will also benefit from reviewing the [server capability](artifacts.html#capability-statements) statements for each specific workflow, and the [conformance artifacts](artifacts.html) generally.
+These use cases are represented by workflow diagrams on the [Exchange Workflow] page with figures that refer to the FHIR Resources used. Implementers will also benefit from reviewing the [Capability Statements] for each specific workflow, and the [conformance artifacts](artifacts.html) generally.
 
 ### Overview
-The exchange interactions below give guidance on the process to ‘close the loop’ between a provider, or other healthcare actor, who makes a request (referral) for SDOH services and the request recipient (referral recipient, with various FHIR enabled capabilities and configurations as described below). In FHIR the request (referral) is provided as a combination of <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task For Referral Management</a>/<a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a>.  Included below, is guidance on how the IG is implemented to enable back and forth communication. This does not replace reviewing the FHIR artifacts (such as Capability Statements, Resource profiles, and value sets) and narrative guidance found elsewhere in this guide.
+The exchange interactions below give guidance on the process to ‘close the loop’ between a provider, or other healthcare actor, who makes a request (referral) for SDOH services and the request recipient (referral recipient, with various FHIR enabled capabilities and configurations as described below). In FHIR the request (referral) is provided as a combination of [SDOHCC Task For Referral Management] and [SDOHCC ServiceRequest].  Included below, is guidance on how the IG is implemented to enable back and forth communication. This does not replace reviewing the FHIR artifacts (such as Capability Statements, Resource profiles, and value sets) and narrative guidance found elsewhere in this guide.
 
 The functional use cases defined below are based on specific exchanges of information between the relevant actors. These use cases include:
 
@@ -450,3 +450,6 @@ All exchanges are optional. For additional workflow guidance the [Exchange Workf
 
 - Patient may not have an appropriate application or completed process to register and authenticate with the API(s)
 - Patient may not be willing or able to respond to the questionnaires
+
+
+{% include markdown-link-references.md %}
