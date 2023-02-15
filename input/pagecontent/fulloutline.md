@@ -124,6 +124,7 @@ The Gravity Project focus for this version of the IG is to standardize the excha
 
 
 ## 4.2 Actors
+
 | Actor    |  Abbreviation/Icon |  Description |
 | ---------- | -------------- | ------------------ |
 |  Provider|   Pr   | definition consistent with Glossary   |
@@ -133,8 +134,8 @@ The Gravity Project focus for this version of the IG is to standardize the excha
 |  Coordinating Platform        |    CP          | definition consistent with Glossary   |
 {:.grid}
 
-| Use Case |  Description | Actors | Exchange Workflow|
-|----------|--------------|--------|------------------|
+| Functional Use Case |  Description | Actors | Exchange Workflow|
+| ------------------- | ------------- | ------- | ---------------- |
 | [Direct Referral](#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO |   [Direct Referral Exchange Workflow] (#direct-referral-exchange)              |
 | [Direct Referral (light)](#directreferalllight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | Pr, CC, Pa, CBO | [Direct Referral (light) Exchange Workflow] (#direct-referral-light-exchange) |
 | [Indirect Referral](#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO, CP | [Indirect Referral Exchange Workflow](#indirect-referral-exchange)                   |
