@@ -44,7 +44,7 @@
         <name value="SNOMED CT Attribute Binding"/>
     </mapping>
     <kind value="resource"/>
-    <abstract value="true"/>
+    <abstract value="false"/>
     <type value="Observation"/>
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
     <derivation value="constraint"/>
