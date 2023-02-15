@@ -13,3 +13,6 @@
 [Capability Statements]: artifacts.html#capability-statements
 [SDOHCC Task For Referral Management]: StructureDefinition-SDOHCC-TaskForReferralManagement.html
 [SDOHCC ServiceRequest]: StructureDefinition-SDOHCC-ServiceRequest.html
+[Gravity Project]:  https://confluence.hl7.org/display/GRAV/The+Gravity+Project
+[US Core Implementation Guide]: https://www.hl7.org/fhir/us/core/
+[Gravity Confluence Technology Pages]: https://confluence.hl7.org/display/GRAV/Technical+Workstream+Dashboard
