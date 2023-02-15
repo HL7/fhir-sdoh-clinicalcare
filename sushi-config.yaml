@@ -31,6 +31,7 @@ parameters:
   show-inherited-invariants: false
   jira-code: vrdr
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
+  applyExtensionMetadataToRoot: false
 
 license: CC0-1.0
 publisher:
