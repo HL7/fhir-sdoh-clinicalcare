@@ -1202,6 +1202,11 @@
                 <title value="Glossary"/>
                 <generation value="markdown"/>
             </page>
+            <page>
+                <nameUrl value="fulloutine.html"/>
+                <title value="Outline of STU2.1"/>
+                <generation value="markdown"/>
+            </page>
         </page>
         <parameter>
             <code value="jira-code"/>
