@@ -65,6 +65,9 @@
         <grouping id="new-group7">
             <name value="Code Systems"/>
         </grouping>
+        <grouping id="new-group10">
+            <name value="Draft Artifacts for Personal Characteristic Observations"/>
+        </grouping>
         <grouping id="new-group2">
             <name value="Examples"/>
         </grouping>
@@ -74,6 +77,9 @@
         <grouping id="new-group6">
             <name value="PRAPARE Examples"/>
         </grouping>
+        <grouping id="new-group12">
+            <name value="Examples of Draft Profiles for Personal Characteristic Observations"/>
+        </grouping>
         <grouping id="new-group3">
             <name value="Images"/>
         </grouping>
@@ -82,9 +88,6 @@
         </grouping>
         <grouping id="new-group11">
             <name value="Search Parameters"/>
-        </grouping>
-        <grouping id="new-group10">
-            <name value="Draft Artifacts for Personal Characteristic Observations"/>
         </grouping>
         <resource>
             <reference>
@@ -976,7 +979,7 @@
             <description value="An example of an ethnicity Observation where the subject self-reports as Hispanic or Latino with detailed ethnicity information that highlights elements and repetitions."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicityOMB"/>
-            <groupingId value="new-group10"/>
+            <groupingId value="new-group12"/>
         </resource>
         <resource>
             <reference>
@@ -987,7 +990,7 @@
             <description value="An example of a gender identity Observation where the subject self-reports their gender identity as male."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationGenderIdentity"/>
-            <groupingId value="new-group10"/>
+            <groupingId value="new-group12"/>
         </resource>
         <resource>
             <reference>
@@ -998,7 +1001,7 @@
             <description value="An example of a personal pronoun Observation where the subject self-reports their pronoun preference."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationPersonalPronouns"/>
-            <groupingId value="new-group10"/>
+            <groupingId value="new-group12"/>
         </resource>
         <resource>
             <reference>
@@ -1009,7 +1012,7 @@
             <description value="An example of a race Observation that uses Observation.focus to make an Observation about the race of the subject’s mother (who is his caretaker)."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB"/>
-            <groupingId value="new-group10"/>
+            <groupingId value="new-group12"/>
         </resource>
         <resource>
             <reference>
@@ -1020,7 +1023,7 @@
             <description value="An example of a race Observation where the subject self-reports as more than one race with detailed race information that highlights elements and repetitions."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB"/>
-            <groupingId value="new-group10"/>
+            <groupingId value="new-group12"/>
         </resource>
         <resource>
             <reference>
@@ -1031,7 +1034,7 @@
             <description value="An example of a race Observation that uses a FHIR extension on Observation.subject to make an Observation about the practitioner’s race."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB"/>
-            <groupingId value="new-group10"/>
+            <groupingId value="new-group12"/>
         </resource>
         <resource>
             <reference>
@@ -1042,7 +1045,7 @@
             <description value="An example of a recorded sex or gender Observation where a clinic has derived the designation M (male) from the subject’s driver’s license."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRecordedSexGender"/>
-            <groupingId value="new-group10"/>
+            <groupingId value="new-group12"/>
         </resource>
         <resource>
             <reference>
@@ -1053,7 +1056,7 @@
             <description value="An example of a sexual orientation Observation where the subject self-reports as homosexual."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationSexualOrientation"/>
-            <groupingId value="new-group10"/>
+            <groupingId value="new-group12"/>
         </resource>
         <resource>
             <reference>
@@ -1064,7 +1067,7 @@
             <description value="An example of a Related Person who is the mother of the subject/patient (Colin Abbas)."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-            <groupingId value="new-group10"/>
+            <groupingId value="new-group12"/>
         </resource>
         <resource>
             <reference>
