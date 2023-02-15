@@ -27,7 +27,7 @@
       </b>
     </a>
     <ul class="dropdown-menu">
-      <li><a href="fhir_artifacts_overview.html">FHIR Artifacts Overview</a></li>
+      <li><a href="artifacts.html">Artifact Index</a></li>
       <li><a href="checking_task_status.html">Checking Task Status</a></li>
       <li><a href="privacy_and_security.html">Privacy and Security</a></li>
       <li><a href="mustsupport_and_missing_data.html">MustSupport and Missing Data</a></li>
@@ -44,5 +44,5 @@
     <ul class="dropdown-menu">
       <li><a href="stu2_ballot_changes.html">STU2 Ballot Changes</a></li>
       <li><a href="stu2_publication_changes.html">STU2 Publication Changes</a></li>    </ul>
-  </li>  <li><a href="artifacts.html">Artifact Index</a></li>
+  </li>
 </ul>
