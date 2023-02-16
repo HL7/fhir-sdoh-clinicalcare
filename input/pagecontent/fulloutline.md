@@ -191,10 +191,7 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
 - CBO may not accept the referral or be unable to perform the requested service
 - Closing the loop via patient reported outcome
 
-<p align-"center">
-<img src-"diagram5.png" width-"600">
-<figure-caption><strong>Figure 1. Functional Use Case -- Direct Referral. </figure-caption>
-</p>
+<table><tr><td><img src="FunctionalUseCaseFlowDirectReferral3.jpg" /></td></tr></table>
 
 <span style-"color:purple">*I would put this diagram at the top of the section, I would aslo add the caption* </span>
 
@@ -205,12 +202,13 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
 <figure-caption><strong>Figure 1. Functional Use Case -- Direct Light Referral. </figure-caption>
 </p>
 
-| Actor    |  Abbrev/Icon | Assumption |
+| Actor      |  Abbrev/Icon   | Assumption         |
 | ---------- | -------------- | ------------------ |
 |  Provider|   Pr   | Provider has a FHIR API   |
 |  Patient |   Pa   | Patient has a FHIR enabled personal application  |
 |  Community Based Organization        |  CBO            | CBO has a FHIR enabled application (must do a push to CP)   |
 {:.grid}
+
 ### 4.5.3 Provider Actions
 ### 4.5.4 CBO- Provider Actions
 ### 4.5.5 CBO Actions
@@ -238,10 +236,7 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
 
 ## 4.7 Indirect Referral with Direct Light CBO
 <a name="directreferrallight">
-<p align-"center">
-<img src-"diagram8.png" width-"600">
-<figure-caption><strong>Figure 1. Functional Use Case -- Indirect Referral with Direct CBO. </figure-caption>
-</p>
+<table><tr><td><img src="FunctionalUseCaseFlowIndirectDirectLightReferral3.jpg" /></td></tr></table>
 
 | Actor    |  Abbrev/Icon | Assumption |
 | ---------- | -------------- | ------------------ |
@@ -250,12 +245,14 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
 |  Coordinating Platform        |  CP            | CP has a FHIR API   |
 |  Community Based Organization        |  CBO            | CBO has a FHIR enabled application (must do a push to CP)   |
 {:.grid}
+
 ### 4.7.3 Provider Actions
 ### 4.7.4 Provider- CP- CBO workflow (note: steps with a “b” suffix are specific to this referral)
 ### 4.7.5 Provider Actions
 ### 4.7.6 Considerations same as Direct Referral
 
 ## 4.8 Closing the Loop with the Patient
+
 | Actor    |  Abbrev/Icon | Assumption |
 | ---------- | -------------- | ------------------ |
 |  Provider|   Pr   | Provider has a FHIR API   |
