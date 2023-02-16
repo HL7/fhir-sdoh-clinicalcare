@@ -131,8 +131,9 @@ Numbering scheme is described.
 #### CBO Actions
 #### Provider Actions
 #### Considerations
-#### Actors (same as Direct Referral)
-#### Assumptions
+### Direct Referral Light (Push by CBO to Provider, involving <a href="checking_task_status.html#polling">Polling</a>)
+[Functional Use Case Direct Referral Light][FunctionalUseCaseFlowDirectLightReferral3.jpg]
+#### Actors and Assumptions (same as Direct Referral)
 #### Provider Actions (same as Direct Referral)
 #### CBO - Provider Actions (changed based on CBO application vs FHIR API)
 #### CBO Actions
@@ -148,11 +149,11 @@ Numbering scheme is described.
 |  Coordinating Platform        |  CP            | CP has a FHIR API   |
 |  Community Based Organization        |  CBO            | CBO has a FHIR  API   |
 {:.grid}
-
 #### Provider Actions (same as Direct Referral)
 #### Provider – CP – CBO workflow
 #### Provider Actions (same as Direct Referral)
 #### Considerations in addition to Direct Referral
+
 #### Actors
 #### Assumptions
 #### Provider Actions (same as Direct Referral)
