@@ -6,19 +6,26 @@
   - Document SDOH data in conjunction with patient encounters with providers, payers, and community services
   - Document and track SDOH-related interventions to completion
   - Identify cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer)
+
 ## Content and Organization
 ## Notes to Implementers
 ## Support for External Terminologies for Service Request and Procedures
 * How to specify multiple codes .... --> move this elsewhere
+
 ## Intellectual Property
 * Move to Downloads page
+
 ## Cross Version Analysis
 * Move to Downloads page
+
 ## Dependencies
 * Move to Downloads page
+
 ## Globals
 * Move to Downloads page
+
 ## Authors
+
 # [Gravity Background](gravity_background.html)
 ## Why Social Determinants of Health Matter
 - Definition of SDOH
@@ -41,26 +48,15 @@
 - What is a challenge statement? # 3. SDOH Clinical Care Background
 
 ## SDOH Clinical Care Scope
-The Gravity Project focus for this version of the IG is to standardize the exchange of SDOH information related to the following activities:
 
-1) assessment of social risk,
-2) establishing coded health concerns/problems,
-3) creating patient driven goals, and
-4) defining a RESTful closed loop referral process to manage interventions.
 
-- Narrtative that describes the SDOH domains rather than the above diagram
-- Link to current list of domains [SDOH Domains ](https://confluence.hl7.org/display/GRAV/Terminology+Workstream+Dashboard)
-
-- The scope of interactions plan to cover all the interactions below..
-
+# [SDOH Clinical Care Background](sdoh_clinical_care_background.html)
+## Clinical Care Scope
 *There is no explanation to this diagram, it is a littler premature, still haven't been introduced to these actors what does scope of interactions mean?*
 
 [Scope of Interactions Figure](IGScope.jpg)
 
 [Expanded Scope of Interactions Figure](SDOHInteractionsDrawingexpandedV5.jpg)
-
-# [SDOH Clinical Care Background](sdoh_clinical_care_background.html)
-## Clinical Care Scope
 ### Out of Scope
 1. Guidance on frequency of taking assesment
 2. Standards for reporting quality measures
@@ -70,7 +66,6 @@ The Gravity Project focus for this version of the IG is to standardize the excha
 ## Conceptual Framework
 
 [Conceptual Framework figure](ConceptualFramework2.jpg)
-
 
 ## Data Modeling Framework
 *This could be a good example of one of the diagrams we link link the mCode diagram to the existing artifact*
