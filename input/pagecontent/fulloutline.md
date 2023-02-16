@@ -78,9 +78,11 @@
 * Why does this section refer to implementation technologies like subscription?
 * Isn't functional use cases more like A notifies B, or A queries B?
 ***
+
 ##### Patient Stories and Workflow
-- Link to Patient Stories [Patient Stories ](https://confluence.hl7.org/display/GRAV/Patient+Stories)
-- These use cases are represented by workflow diagrams on the Exchange Workflow Page [Exchange Worklows Page ](exchange_workflow.html)
+* Link to Patient Stories [Patient Stories ](https://confluence.hl7.org/display/GRAV/Patient+Stories)
+* These use cases are represented by workflow diagrams on the Exchange Workflow Page [Exchange Worklows Page ](exchange_workflow.html)
+
 ##### Overview
 Numbering scheme is described.
 ##### Actors
@@ -126,7 +128,7 @@ Numbering scheme is described.
 ###### Provider Actions
 ###### Considerations
 ##### Direct Referral Light (Push by CBO to Provider, involving <a href="checking_task_status.html#polling">Polling</a>)
-[Functional Use Case Direct Referral Light][FunctionalUseCaseFlowDirectLightReferral3.jpg]
+[Functional Use Case Direct Referral Light](FunctionalUseCaseFlowDirectLightReferral3.jpg)
 ###### Actors and Assumptions (same as Direct Referral)
 ###### Provider Actions (same as Direct Referral)
 ###### CBO - Provider Actions (changed based on CBO application vs FHIR API)
@@ -135,7 +137,7 @@ Numbering scheme is described.
 ###### Considerations (same as Direct Referral)
 ##### Indirect Referral with Direct CBO
 <a name="indirectreferral">
-[Functional Use Case Indirect Referral]()
+[Functional Use Case Indirect Referral](FunctionalUseCaseFlowIndirectReferral3.jpg)
 ###### Actors and Assumptions
 | Actor    |  Abbrev/Icon | Assumption |
 | ---------- | -------------- | ------------------ |
@@ -152,7 +154,7 @@ Numbering scheme is described.
 #####  Indirect Referral with Direct Light CBO
 <a name="directreferrallight">
 
-[Functional Use Case Indirect Direct Light](FunctionalUseCaseFlowIndirectDirectLightReferral3.jpg)
+[Functional Use Case Indirect Direct Light](FunctionalUseCaseFlowIndirectIndirectLightReferral3.jpg)
 
 ###### Actors and Assumptions
 
@@ -183,11 +185,11 @@ Numbering scheme is described.
 ###### Considerations
 ### [Survey Instrument Support](survey_instrument_support.html)
 #### Enabling Survey Instruments
-- The purpose of risk surveys
-    - Pros + Cons
-- Output - QuestionaireResponse --> Observation and Condition
 
-- Describes the approach to incorporate a risk survey into the information flow
+* The purpose of risk surveys
+  * Pros + Cons
+*  Output - QuestionaireResponse --> Observation and Condition
+* Describes the approach to incorporate a risk survey into the information flow
 
 [Risk Survey in Workflow](enablingsurveyinstruments.jpg)
 
