@@ -28,6 +28,7 @@
 
 ### [Gravity Background](gravity_background.html)
 #### Why Social Determinants of Health Matter
+
 - Definition of SDOH
 - Links to current efforts that address SDOH
 - [Figure What's in your health ](Whatgoesintoyourhealth.jpg)
@@ -35,18 +36,21 @@
 *(Make the image centered and change the width to make it look better )*
 
 #### Standardizing SDOH Exchange
+
 - Background of Standardizing SDOH data
 - Emerging Intitiative standardizing SDOH data
 - Opportunities
 - Risks
 
 #### Gravity Project Overview
+
 - Gravity Project Background
 - Mission
 - HL7 FHIR Accelerator Program
 - Link to Confluence Site
 
 #### Gravity Project Challenge Statement
+
 - What is a challenge statement? ### 3. SDOH Clinical Care Background
 
 #### SDOH Clinical Care Scope
@@ -60,6 +64,8 @@
 
 [Expanded Scope of Interactions Figure](SDOHInteractionsDrawingexpandedV5.jpg)
 ##### Out of Scope
+
+
 1. Guidance on frequency of taking assesment
 2. Standards for reporting quality measures
 3. Addressing Consent beyond sharing to HIPPA
@@ -110,6 +116,7 @@ Spacer
 
 
 ##### Business Associates
+
 - CBO and CP not covered entities
     - can be business associates (covered entity)
 - Information describing what a covered entity is *(Is this necessary doesn't seem relevant maybe a link to informaiton would be better)*
