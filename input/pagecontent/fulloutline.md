@@ -92,11 +92,11 @@ Numbering scheme is described.
 
 | Actor    |  Abbreviation/Icon |  Description |
 | ---------- | -------------- | ------------------ |
-|  Provider|   Pr   | definition consistent with Glossary   |
-|  Patient |   Pa   | definition consistent with Glossary   |
-|  Care Coordinator        |     CC         | definition consistent with Glossary   |
-|  Community Based Organization        |  CBO            | definition consistent with Glossary   |
-|  Coordinating Platform        |    CP          | definition consistent with Glossary   |
+|  Provider|   Pr<image src = "http://usa.flagpedia.net/data/flags/mini/tx.png" width="10px" height="10px"></image>   | definition consistent with Glossary   |
+|  Patient |   Pa<image src = "http://usa.flagpedia.net/data/flags/mini/tx.png" width="10px" height="10px"></image>   | definition consistent with Glossary   |
+|  Care Coordinator        |     CC<image src = "http://usa.flagpedia.net/data/flags/mini/tx.png" width="10px" height="10px"></image>         | definition consistent with Glossary   |
+|  Community Based Organization        |  CBO<image src = "http://usa.flagpedia.net/data/flags/mini/tx.png" width="10px" height="10px"></image>            | definition consistent with Glossary   |
+|  Coordinating Platform        |    CP<image src = "http://usa.flagpedia.net/data/flags/mini/tx.png" width="10px" height="10px"></image>          | definition consistent with Glossary   |
 {:.grid}
 
 | Functional Use Case |  Description | Actors | Exchange Workflow|
