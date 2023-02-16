@@ -82,7 +82,7 @@
         </element>
         <element id="Goal.description">
             <path value="Goal.description"/>
-            <comment value="If no code is available, use CodeableConcept.text.&#xD;&#xA;&#xD;&#xA;As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories. For further guidance on external value sets vetted by the Gravity Project see: [SDOH terminology guidance](support_for_multiple_domains.html#external-value-set-guidance)"/>
+            <comment value="If no code is available, use CodeableConcept.text.&#xD;&#xA;&#xD;&#xA;As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories."/>
             <binding>
                 <strength value="preferred"/>
                 <description value="Codes providing the details of a particular goal.  In many systems, only the text element will be used."/>
