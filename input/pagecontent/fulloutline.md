@@ -85,7 +85,7 @@ The Gravity Project focus for this version of the IG is to standardize the excha
 ***
 ### Patient Stories and Workflow
 - Link to Patient Stories [Patient Stories ](https://confluence.hl7.org/display/GRAV/Patient+Stories)
-- These use cases are represented by workflow diagrams on the Exchange Workflow Page [Exchange Worklows Page ](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/exchange_workflow.html)
+- These use cases are represented by workflow diagrams on the Exchange Workflow Page [Exchange Worklows Page ](exchange_workflow.html)
 ### Overview
 Numbering scheme is described.
 ### Actors
@@ -101,9 +101,9 @@ Numbering scheme is described.
 
 | Functional Use Case |  Description | Actors | Exchange Workflow|
 | ------------------- | ------------- | ------- | ---------------- |
-| [Direct Referral](#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO |   [Direct Referral Exchange Workflow](#direct-referral-exchange)              |
-| [Direct Referral (light)](#directreferalllight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | Pr, CC, Pa, CBO | [Direct Referral (light) Exchange Workflow](#direct-referral-light-exchange) |
-| [Indirect Referral](#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO, CP | [Indirect Referral Exchange Workflow](#indirect-referral-exchange)                   |
+| [Direct Referral](fulloutline.html#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO |   [Direct Referral Exchange Workflow](fulloutline.html#direct-referral-exchange)              |
+| [Direct Referral (light)](fulloutline.html#directreferalllight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | Pr, CC, Pa, CBO | [Direct Referral (light) Exchange Workflow](fulloutline.html#direct-referral-light-exchange) |
+| [Indirect Referral](fulloutline.html#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO, CP | [Indirect Referral Exchange Workflow](fulloutline.html#indirect-referral-exchange)                   |
 | Patient App (no section) | a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange | Pr, CC, Pa, CBO, CP | THere is no such section |
 {:.grid}
 
@@ -186,7 +186,7 @@ Numbering scheme is described.
 
 - Describes the approach to incorporate a risk survey into the information flow
 
-[Risk Survey in Workflow](fhir-sdoh-clinicalcare/enablingsurveyinstruments.jpg)
+[Risk Survey in Workflow](enablingsurveyinstruments.jpg)
 
 ###  [Hunger Vital Sign (HVS) Survey Example](https://loinc.org/88121-9/)
 
@@ -211,9 +211,9 @@ Numbering scheme is described.
 
 | Functional Use Case |  Description | Actors | Exchange Workflow|
 | ------------------- | ------------- | ------- | ---------------- |
-| [Direct Referral](#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO |   [Direct Referral Exchange Workflow](#direct-referral-exchange)              |
-| [Direct Referral (light)](#directreferalllight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | Pr, CC, Pa, CBO | [Direct Referral (light) Exchange Workflow](#direct-referral-light-exchange) |
-| [Indirect Referral](#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO, CP | [Indirect Referral Exchange Workflow](#indirect-referral-exchange)                   |
+| [Direct Referral](fulloutline.html#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO |   [Direct Referral Exchange Workflow](fulloutline.html#direct-referral-exchange)              |
+| [Direct Referral (light)](fulloutline.html#directreferalllight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | Pr, CC, Pa, CBO | [Direct Referral (light) Exchange Workflow](fulloutline.html#direct-referral-light-exchange) |
+| [Indirect Referral](fulloutline.html#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO, CP | [Indirect Referral Exchange Workflow](fulloutline.html#indirect-referral-exchange)                   |
 | Patient App (no section) | a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange | Pr, CC, Pa, CBO, CP | THere is no such section |
 ### General Workflow
 [General Workflow Figure](GeneralWorkflow3.jpg)
@@ -235,7 +235,7 @@ Numbering scheme is described.
 [Interaction Diagram](DirectReferralLightSF.jpg]
 #### Indirect Referral
 ##### Interaction Diagram
-[Iteraction Diagram](SDOHInteractionsIndirectExchange.jpg.jpg)
+[Iteraction Diagram](SDOHInteractionsIndirectExchange.jpg)
 ##### Workflow Diagram
 [Interaction Diagram](IndirectReferralSF.jpg]
 #### Notes on Direct and Indirect Referrals
