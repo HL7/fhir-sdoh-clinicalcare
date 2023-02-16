@@ -324,7 +324,7 @@ Provider receives a subscription notification when the CP updates the Task on th
 
 <table><tr><td><img src="FunctionalUseCaseFlowIndirectDirectReferral3.jpg" /></td></tr></table>
 
-###> Indirect Referral with Direct Light CBO
+### Indirect Referral with Direct Light CBO
 <a name="indirectreferrallight"
 Applies to Providers and Payers as the referral requester, and patient is assessed by a provider and referred to a CP. CP refers to a CBO to deliver the service.
 
