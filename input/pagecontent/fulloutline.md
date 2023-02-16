@@ -91,11 +91,11 @@ Numbering scheme is described.
 
 | Actor    |  Icon |  Description |
 | ---------- | -------------- | ------------------ |
-|  Provider|   <image src = "Provider.png" width="15px" height="15px"></image>   | definition consistent with Glossary   |
+|  Provider|   <image src = "Provider.png" width="15px" height="15px"></image>   | Includes licensed providers and others that interact with the patient to assess social risk, set goals, and determine/recommend referrals.   |
 |  Patient |   <image src = "Patient.png" width="15px" height="15px"></image>   | definition consistent with Glossary   |
-|  Care Coordinator (CC)       |     <image src = "CC.png" width="15px" height="15px"></image>         | definition consistent with Glossary   |
-|  Community Based Organization (CBO)       |  <image src = "CBO.png" width="15px" height="15px"></image>            | definition consistent with Glossary   |
-|  Coordination Platform (CP)       |    <image src = "CoordinationPlatform.png" width="15px" height="15px"></image>          | definition consistent with Glossary   |
+|  Care Coordinator (CC)       |     <image src = "CC.png" width="15px" height="15px"></image>         | A person who organizes various referral activities on behalf of the recipient and communicates information between all those involved in the care delivery.   |
+|  Community Based Organization (CBO)       |  <image src = "CBO.png" width="15px" height="15px"></image>            | Public or private not-for-profit resource hubs that provide specific services to the community or targeted population within the community.   |
+|  Coordination Platform (CP)       |    <image src = "CoordinationPlatform.png" width="15px" height="15px"></image>          | An intermediary that receives referrals, assesses patient needs, and works with one or more CBOs to deliver the services.   |
 {:.grid}
 
 Spacer
