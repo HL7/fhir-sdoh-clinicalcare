@@ -39,11 +39,13 @@
 - Emerging Intitiative standardizing SDOH data
 - Opportunities
 - Risks
+
 #### Gravity Project Overview
 - Gravity Project Background
 - Mission
 - HL7 FHIR Accelerator Program
 - Link to Confluence Site
+
 #### Gravity Project Challenge Statement
 - What is a challenge statement? ### 3. SDOH Clinical Care Background
 
@@ -87,21 +89,21 @@
 Numbering scheme is described.
 ##### Actors
 
-| Actor    |  Abbreviation/Icon |  Description |
+| Actor    |  Icon |  Description |
 | ---------- | -------------- | ------------------ |
-|  Provider|   Pr<image src = "http://usa.flagpedia.net/data/flags/mini/tx.png" width="10px" height="10px"></image>   | definition consistent with Glossary   |
-|  Patient |   Pa<image src = "http://usa.flagpedia.net/data/flags/mini/tx.png" width="10px" height="10px"></image>   | definition consistent with Glossary   |
-|  Care Coordinator        |     CC<image src = "http://usa.flagpedia.net/data/flags/mini/tx.png" width="10px" height="10px"></image>         | definition consistent with Glossary   |
-|  Community Based Organization        |  CBO<image src = "http://usa.flagpedia.net/data/flags/mini/tx.png" width="10px" height="10px"></image>            | definition consistent with Glossary   |
-|  Coordinating Platform        |    CP<image src = "http://usa.flagpedia.net/data/flags/mini/tx.png" width="10px" height="10px"></image>          | definition consistent with Glossary   |
+|  Provider|   <image src = "Provider.png" width="15px" height="15px"></image>   | definition consistent with Glossary   |
+|  Patient |   <image src = "Patient.png" width="15px" height="15px"></image>   | definition consistent with Glossary   |
+|  Care Coordinator (CC)       |     <image src = "CC.png" width="15px" height="15px"></image>         | definition consistent with Glossary   |
+|  Community Based Organization (CBO)       |  <image src = "CBO.png" width="15px" height="15px"></image>            | definition consistent with Glossary   |
+|  Coordination Platform (CP)       |    <image src = "CoordinationPlatform.png" width="15px" height="15px"></image>          | definition consistent with Glossary   |
 {:.grid}
 
 Spacer
 
 | Functional Use Case |  Description | Actors | Exchange Workflow|
 | ------------------- | ------------- | ------- | ---------------- |
-| [Direct Referral](fulloutline.html#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO |   [Direct Referral Exchange Workflow](fulloutline.html#direct-referral-exchange)              |
-| [Direct Referral (light)](fulloutline.html#directreferrallight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | Pr, CC, Pa, CBO | [Direct Referral (light) Exchange Workflow](fulloutline.html#direct-referral-light-exchange) |
+| [Direct Referral](fulloutline.html#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | <image src = "Provider.png" width="10px" height="10px"></image>, CC, Pa, CBO |   [Direct Referral Exchange Workflow](fulloutline.html#direct-referral-exchange)              |
+| [Direct Referral (light)](fulloutline.html#directreferrallight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | <image src = "Provider.png" width="15px" height="15px"></image>, <image src = "CC.png" width="15px" height="15px"></image>, <image src = "Patient.png" width="15px" height="15px"></image> , <image src = "CBO.png" width="15px" height="15px"></image> | [Direct Referral (light) Exchange Workflow](fulloutline.html#direct-referral-light-exchange) |
 | [Indirect Referral](fulloutline.html#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO, CP | [Indirect Referral Exchange Workflow](fulloutline.html#indirect-referral-exchange)                   |
 | Patient App (no section) | a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange | Pr, CC, Pa, CBO, CP | THere is no such section |
 {:.grid}
@@ -116,6 +118,7 @@ Spacer
 <a name="directreferral">
 
 ###### Actors and Assumptions
+
 | Actor    |  Abbrev/Icon | Assumption |
 | ---------- | -------------- | ------------------ |
 |  Provider|   Pr   | Provider has a FHIR API   |
@@ -123,7 +126,7 @@ Spacer
 |  Community Based Organization        |  CBO            | CBO has a FHIR API   |
 {:.grid}
 
-[Direct Referall FUnctional Use Case](FunctionalUseCaseFlowDirectReferral3.jpg)
+[Direct Referral FUnctional Use Case](FunctionalUseCaseFlowDirectReferral3.jpg)
 ###### Provider Actions
 ###### Provider – CBO Actions
 ###### CBO Actions
@@ -166,8 +169,8 @@ Spacer
 | ---------- | -------------- | ------------------ |
 |  Provider|   Pr   | Provider has a FHIR API   |
 |  Patient |   Pa   | Patient has a FHIR enabled personal application  |
-|  Coordinating Platform        |  CP            | CP has a FHIR API   |
-|  Community Based Organization        |  CBO            | CBO has a FHIR enabled application (must do a push to CP)   |
+|  Coordinating Platform        |  CP   | CP has a FHIR API   |
+|  Community Based Organization        |  CBO  | CBO has a FHIR enabled application (must do a push to CP)   |
 {:.grid}
 
 ###### Provider Actions (same as Direct Referral)
@@ -217,10 +220,13 @@ Spacer
 
 | Functional Use Case |  Description | Actors | Exchange Workflow|
 | ------------------- | ------------- | ------- | ---------------- |
-| [Direct Referral](fulloutline.html#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO |   [Direct Referral Exchange Workflow](fulloutline.html#direct-referral-exchange)              |
-| [Direct Referral (light)](fulloutline.html#directreferrallight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | Pr, CC, Pa, CBO | [Direct Referral (light) Exchange Workflow](fulloutline.html#direct-referral-light-exchange) |
-| [Indirect Referral](fulloutline.html#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO, CP | [Indirect Referral Exchange Workflow](fulloutline.html#indirect-referral-exchange)                   |
+| [Direct Referral](fulloutline.html#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO |   [Direct Referral Exchange Workflow](fulloutline.html#direct-referral-exchange)  |
+| [Direct Referral (light)](fulloutline.html#directreferrallight) | A light version of the direct referral where the performing entity uses an application that can access the referring entities API (but does not have FHIR API capability) | Pr, CC, Pa, CBO | [Direct Referral (light) Exchange Workflow](fulloutline.html#direct-referral-light-exchange) |
+| [Indirect Referral](fulloutline.html#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO, CP | [Indirect Referral Exchange Workflow](fulloutline.html#indirect-referral-exchange)         |
 | Patient App (no section) | a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange | Pr, CC, Pa, CBO, CP | THere is no such section |
+{:.grid}
+
+
 ##### General Workflow
 [General Workflow Figure](GeneralWorkflow3.jpg)
 [Interaction Diagram](OverallInteractions.jpg)
@@ -309,6 +315,6 @@ All implementations must follow [FHIR Security](http://hl7.org/fhir/R4/security.
 ##### Guidance for use of Proverance with Race and Ethnicity Personal Characteristics
 #### Testing Draft Specifications
 #### US Core Intent
-### 16 Downloads
+### Downloads
 ### Credits
 #### Acknowledgements
