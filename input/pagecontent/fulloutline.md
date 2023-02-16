@@ -28,7 +28,7 @@
 - Links to current efforts that address SDOH
 
 <p align-"center">
-<img src-"What-in-your-health.png" width-"600">
+<img src="What-in-your-health.png" width="600">
 </p>
 
 *(Make the image centered and change the width to make it look better )*
@@ -61,7 +61,7 @@ The Gravity Project focus for this version of the IG is to standardize the excha
                        *Insert Diagram #1*
 
 <p align-"center">
-<img src-"diagram1.png" width-"600">
+<img src="diagram1.png" width="600">
 </p>
 
 
@@ -75,7 +75,7 @@ The Gravity Project focus for this version of the IG is to standardize the excha
                             *Insert Diagram 2*
 
 <p align-"center">
-<img src-"diagram2.png" width-"600">
+<img src="diagram2.png" width="600">
 <figure-caption>Figure 2. The Scope of Interactions. </figure-caption>
 </p>
 
@@ -91,7 +91,7 @@ The Gravity Project focus for this version of the IG is to standardize the excha
                         *Insert Diagram 3*
 
 <p align-"center">
-<img src-"diagram3.png" width-"600">
+<img src="diagram3.png" width="600">
 </p>
 
 
@@ -100,7 +100,7 @@ The Gravity Project focus for this version of the IG is to standardize the excha
 *This could be a good example of one of the diagrams we link link the mCode diagram to the existing artifact*
 
 <p align-"center">
-<img src-"Diagram4.png" width-"600">
+<img src="Diagram4.png" width="600">
 </p>
 
 
@@ -198,7 +198,7 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
 ## 4.5 Direct Referral Light
 <a name="directreferrallight">
 <p align-"center">
-<img src-"diagram6.png" width-"600">
+<img src="diagram6.png" width="600">
 <figure-caption><strong>Figure 1. Functional Use Case -- Direct Light Referral. </figure-caption>
 </p>
 
@@ -218,7 +218,7 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
 ## 4.6 Indirect Referrral with Direct CBO
 <a name="indirectreferral">
 <p align-"center">
-<img src-"diagram7.png" width-"600">
+<img src="diagram7.png" width="600">
 <figure-caption><strong>Figure 1. Functional Use Case -- Indirect Referral. </figure-caption>
 </p>
 
@@ -271,7 +271,7 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
 - Describes the approach to incorporate a risk survey into the information flow
 
 <p align-"center">
-<img src-"diagram9.png" width-"600">
+<img src="diagram9.png" width="600">
 <figure-caption><strong>Figure 1. Risk Survey in Workflow </figure-caption>
 </p>
 
@@ -301,18 +301,8 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
 
 ## 7.2 External Value Set Guidance
 
-· [Social Determinants of Health Conditions Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion)
+*This Section is no longer needed because the value sets are clearly stated in the profiles*
 
-· [Social Determinants of Health Goals Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion)
-
-· [Social Determinants of Health Service Requests Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion)
-
-· [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion)
-
-<p align-"center">
-<img src-"diagram10.png" width-"600">
-<figure-caption><strong>Figure 1. Example of VSAC SDOH Group Value Set for Condition.Code </figure-caption>
-</p>
 # 8. Exchange Workflow (Audience = technical implementors?)
 
 ## 8.1 General Workflow
@@ -321,22 +311,15 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
     1. Asses Patient and Determine Risk
     2. Patient and Provider estabilsh goals
     3. Patient and Provider agree on referrals/interventions, consent, task sent to performing entitty
-<p align-"center">
-<img src-"diagram11.png" width-"600">
-<figure-caption><strong>Figure 1. General Workflow </figure-caption>
-</p>
+    [General Workflow Figure](GeneralWorkflow3.jpg)
 
     System/System Interactions Supported:
     1. referrals via an intermediary (or indirect referrals) that may include interactions with multiple service performers,
     2. direct and direct light (where the interaction is with an application) referrals,
     3. interactions with a patient to complete a questionnaire or “form”, and
     4. interactions with a patient to cancel a service or indicate the outcome of the service
+    [System Interactions Figure](OverallInteractions.jpg)
 
-
-<p align-"center">
-<img src-"diagram12.png" width-"600">
-<figure-caption><strong>Figure 2. Overall Interactions </figure-caption>
-</p>
 
 ## 8.2 Workflow and Managing Consent
 
@@ -349,10 +332,7 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
         - CBO
         - CP
         - Payer
-<p align-"center">
-<img src-"diagram13.png" width-"600">
-<figure-caption><strong>Figure 3. Exchange Workflow Managing Consent </figure-caption>
-</p>
+    [Managing Consent Figure](SDOHInteractionsDrawingConsentV5.jpg)
 
 ## 8.3 Closed Loop Referrral
 ### 8.3.1 Actors
@@ -377,7 +357,7 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
 #### 8.3.2.1 Interaction Diagram
 
 <p align-"center">
-<img src-"diagram14.png" width-"600">
+<img src="diagram14.png" width="600">
 <figure-caption><strong>Figure 4. Workflow Direct Referral </figure-caption>
 </p>
 
@@ -385,7 +365,7 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
 #### 8.3.2.2 Workflow Diagram
 
 <p align-"center">
-<img src-"diagram15.png" width-"600">
+<img src="diagram15.png" width="600">
 <figure-caption><strong>Figure 5. Workflow Direct Referral </figure-caption>
 </p>
 
@@ -393,14 +373,14 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
 #### 8.3.3.1 Interaction Diagram
 
 <p align-"center">
-<img src-"diagram16.png" width-"600">
+<img src="diagram16.png" width="600">
 <figure-caption><strong>Figure 6. Workflow Direct Referral Light </figure-caption>
 </p>
 
 #### 8.3.3.2 Workflow Diagram
 
 <p align-"center">
-<img src-"diagram17.png" width-"600">
+<img src="diagram17.png" width="600">
 <figure-caption><strong>Figure 7. Workflow Direct Referral </figure-caption>
 </p>
 
@@ -409,14 +389,14 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
 #### 8.3.4.1 Interaction Diagram
 
 <p align-"center">
-<img src-"diagram18.png" width-"600">
+<img src="diagram18.png" width="600">
 <figure-caption><strong>Figure 8. Workflow Indirect Referral </figure-caption>
 </p>
 
 #### 8.3.4.2 Workflow Diagram
 
 <p align-"center">
-<img src-"diagram19.png" width-"600">
+<img src="diagram19.png" width="600">
 <figure-caption><strong>Figure 9. Workflow Indirect Referral </figure-caption>
 </p>
 
@@ -427,7 +407,7 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
 #### 8.3.6.1 Overall Workflow
 
 <p align-"center">
-<img src-"diagram20.png" width-"600">
+<img src="diagram20.png" width="600">
 <figure-caption><strong>Figure 10. Patient Client Interaction </figure-caption>
 </p>
 
@@ -436,7 +416,7 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
 #### 8.3.6.2 Detailed Workflow for a Single Questionnaire
 
 <p align-"center">
-<img src-"diagram21.png" width-"600">
+<img src="diagram21.png" width="600">
 <figure-caption><strong>Figure 11. Patient Client Questionaire/ Form </figure-caption>
 </p>
 
@@ -501,24 +481,24 @@ Note: steps 3-5 are repeated for each referral source# 11. FHIR Artifacts Overvi
 [Referral Task Status](http://hl7.org/fhir/us/sdoh-clinicalcare/STU2/StructureDefinition-SDOHCC-TaskForReferralManagement.html)
 
 <p align-"center">
-<img src-"diagram23.png" width-"600">
+<img src="diagram23.png" width="600">
 </p>
 
 
 <p align-"center">
-<img src-"diagram22.png" width-"600">
+<img src="diagram22.png" width="600">
 <figure-caption><strong>Figure 1. Referral Task Status Diagram </figure-caption>
 </p>
 
 ### 12.1.2 Patient Task Status
 
 <p align-"center">
-<img src-"diagram24.png" width-"600">
+<img src="diagram24.png" width="600">
 
 </p>
 
 <p align-"center">
-<img src-"diagram25.png" width-"600">
+<img src="diagram25.png" width="600">
 
 </p>
 
