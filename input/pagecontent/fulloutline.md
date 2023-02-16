@@ -96,6 +96,8 @@ Numbering scheme is described.
 |  Coordinating Platform        |    CP<image src = "http://usa.flagpedia.net/data/flags/mini/tx.png" width="10px" height="10px"></image>          | definition consistent with Glossary   |
 {:.grid}
 
+Spacer
+
 | Functional Use Case |  Description | Actors | Exchange Workflow|
 | ------------------- | ------------- | ------- | ---------------- |
 | [Direct Referral](fulloutline.html#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO |   [Direct Referral Exchange Workflow](fulloutline.html#direct-referral-exchange)              |
@@ -208,6 +210,8 @@ Numbering scheme is described.
 *Deleted*
 
 ### [Exchange Workflow](exchange_workflow.html) (Audience = technical implementors?)
+
+Spacer
 
 | Functional Use Case |  Description | Actors | Exchange Workflow|
 | ------------------- | ------------- | ------- | ---------------- |
