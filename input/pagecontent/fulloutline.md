@@ -1,19 +1,19 @@
 # 1. Gravity Outline Home Page
 
 ## 1.1 Overview
-    - Definition of SDOH
-    - Description of Gravity Project
-    - Supported Use Cases
-        - Document SDOH data in conjunction with patient encounters with providers, payers, and community services
-        - Document and track SDOH-related interventions to completion
-        - Identify cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer)
+- Definition of SDOH
+- Description of Gravity Project
+- Supported Use Cases
+    - Document SDOH data in conjunction with patient encounters with providers, payers, and community services
+    - Document and track SDOH-related interventions to completion
+     - Identify cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer)
 ## 1.2 Content and Organization
-    - Background
-    - Change History
-    - Context
-    - Specifications
-    - Downloads
-    - Credits
+- Background
+- Change History
+- Context
+- Specifications
+- Downloads
+- Credits
 ## 1.3 Notes to Implementers
 ## 1.4 Support for External Terminologies for Service Request and Procedures
 - [Includes Code SNippet for Summer Food Program Code]
@@ -26,14 +26,10 @@
 ## 2.1 Why Social Determinants of Health Matter
 - Definition of SDOH
 - Links to current efforts that address SDOH
-
-<p align-"center">
-<img src="What-in-your-health.png" width="600">
-</p>
+- [Figure What's in your health ](Whatgoesintoyourhealth.jpg)
 
 *(Make the image centered and change the width to make it look better )*
 
-What Goes into Your Health Diagram
 ## 2.2 Standardizing SDOH Exchange
 - Background of Standardizing SDOH data
 - Emerging Intitiative standardizing SDOH data
@@ -51,19 +47,9 @@ What Goes into Your Health Diagram
 The Gravity Project focus for this version of the IG is to standardize the exchange of SDOH information related to the following activities:
 
 1) assessment of social risk,
-
 2) establishing coded health concerns/problems,
-
 3) creating patient driven goals, and
-
 4) defining a RESTful closed loop referral process to manage interventions.
-
-                       *Insert Diagram #1*
-
-<p align-"center">
-<img src="diagram1.png" width="600">
-</p>
-
 
 - Narrtative that describes the SDOH domains rather than the above diagram
 - Link to current list of domains [SDOH Domains ](https://confluence.hl7.org/display/GRAV/Terminology+Workstream+Dashboard)
@@ -73,35 +59,27 @@ The Gravity Project focus for this version of the IG is to standardize the excha
 *There is no explanation to this diagram, it is a littler premature, still haven't been introduced to these actors what does scope of interactions mean?*
 
                             *Insert Diagram 2*
+[Scope of Interactions Figure](IGScope.jpg)
 
-<p align-"center">
-<img src="diagram2.png" width="600">
-<figure-caption>Figure 2. The Scope of Interactions. </figure-caption>
-</p>
+[Expanded Scope of Interactions Figure](SDOHInteractionsDrawingexpandedV5.jpg)
 
 
 ### 3.1.1 Out of Scope
-    1. Guidance on frequency of taking assesment
-    2. Standards for reporting quality measures
-    3. Addressing Consent beyond sharing to HIPPA
+1. Guidance on frequency of taking assesment
+2. Standards for reporting quality measures
+3. Addressing Consent beyond sharing to HIPPA
 
 *Does this belong in background, is this out of scope for diagram2*
 ## 3.2 Conceptual Framework
 
-                        *Insert Diagram 3*
-
-<p align-"center">
-<img src="diagram3.png" width="600">
-</p>
+[Conceptual Framework figure](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/mediumChangesSTU2-sak/ConceptualFramework2.jpg)
 
 
 ## 3.3 Data Modeling Framework
-                        *Insert Diagram 4*
 *This could be a good example of one of the diagrams we link link the mCode diagram to the existing artifact*
+* Redo figure as an SVG with clickable access to all of the profiles directly *
 
-<p align-"center">
-<img src="Diagram4.png" width="600">
-</p>
+[Data Modeling Figure](FHIRModeling.jpg)
 
 
 # Functional Use Cases (Audience = non-technical?)
@@ -109,21 +87,12 @@ The Gravity Project focus for this version of the IG is to standardize the excha
 * Why does this section refer to implementation technologies like subscription?
 * Isn't functional use cases more like A notifies B, or A queries B?
 ***
-
+### Patient Stories and Workflow
 - Link to Patient Stories [Patient Stories ](https://confluence.hl7.org/display/GRAV/Patient+Stories)
 - These use cases are represented by workflow diagrams on the Exchange Workflow Page [Exchange Worklows Page ](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/exchange_workflow.html)
-
-- The following numbering is use throughout this section where  N is an integer number:
-
-    - **N (e.g. 1-14)** are steps common to all functional use cases
-    - **IN (e.g. I1-I12)** are additional steps used only by Indirect use cases
-    - **INa (e.g. I8,I9)** are steps used by the Indirect use case when communicating with a FHIR API enabled CBO
-    - **INb (e.g. I8b, I9b)** are steps used by the Indirect use case when communicating with a FHIR application enabled CBO
-
-## 4.1 Overview
-
-
-## 4.2 Actors
+### Overview
+Numbering scheme is described.
+### Actors
 
 | Actor    |  Abbreviation/Icon |  Description |
 | ---------- | -------------- | ------------------ |
@@ -136,11 +105,73 @@ The Gravity Project focus for this version of the IG is to standardize the excha
 
 | Functional Use Case |  Description | Actors | Exchange Workflow|
 | ------------------- | ------------- | ------- | ---------------- |
-| [Direct Referral](#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO |   [Direct Referral Exchange Workflow] (#direct-referral-exchange)              |
-| [Direct Referral (light)](#directreferalllight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | Pr, CC, Pa, CBO | [Direct Referral (light) Exchange Workflow] (#direct-referral-light-exchange) |
+| [Direct Referral](#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO |   [Direct Referral Exchange Workflow](#direct-referral-exchange)              |
+| [Direct Referral (light)](#directreferalllight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | Pr, CC, Pa, CBO | [Direct Referral (light) Exchange Workflow](#direct-referral-light-exchange) |
 | [Indirect Referral](#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO, CP | [Indirect Referral Exchange Workflow](#indirect-referral-exchange)                   |
 | Patient App (no section) | a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange | Pr, CC, Pa, CBO, CP | THere is no such section |
 {:.grid}
+
+### Business Associates
+- CBO and CP not covered entities
+    - can be business associates (covered entity)
+- Information describing what a covered entity is *(Is this necessary doesn't seem relevant maybe a link to informaiton would be better)*
+### Direct Referral (Pull by Provider from CBO, involving [FHIR Subscription Resource](checking_task_status.html#subscription))
+<a name="directreferral">
+
+#### Actors and Assumptions
+| Actor    |  Abbrev/Icon | Assumption |
+| ---------- | -------------- | ------------------ |
+|  Provider|   Pr   | Provider has a FHIR API   |
+|  Patient |   Pa   | Provider has a FHIR API  |
+|  Community Based Organization        |  CBO            | CBO has a FHIR API   |
+{:.grid}
+[Direct Referall FUnctional Use Case](FunctionalUseCaseFlowDirectReferral3.jpg)
+#### Provider Actions
+#### Provider – CBO Actions
+#### CBO Actions
+#### Provider Actions
+#### Considerations
+#### Actors (same as Direct Referral)
+#### Assumptions
+#### Provider Actions (same as Direct Referral)
+#### CBO - Provider Actions (changed based on CBO application vs FHIR API)
+#### CBO Actions
+#### Provider Actions (same as Direct Referral)
+#### Considerations (same as Direct Referral)
+### Indirect Referral with Direct CBO
+[Functional Use Case Indirect Referral]()
+#### Actors and Assumptions
+| Actor    |  Abbrev/Icon | Assumption |
+| ---------- | -------------- | ------------------ |
+|  Provider|   Pr   | Provider has a FHIR API   |
+|  Patient |   Pa   | Patient has a FHIR enabled personal application  |
+|  Coordinating Platform        |  CP            | CP has a FHIR API   |
+|  Community Based Organization        |  CBO            | CBO has a FHIR  API   |
+{:.grid}
+
+#### Provider Actions (same as Direct Referral)
+#### Provider – CP – CBO workflow
+#### Provider Actions (same as Direct Referral)
+#### Considerations in addition to Direct Referral
+#### Actors
+#### Assumptions
+#### Provider Actions (same as Direct Referral)
+#### Provider – CP – CBO workflow (note: steps with a "b" suffix are specific to this referral)
+#### Provider Actions (same as Direct Referral)
+#### Considerations (same as Indirect Referral with Direct CBO)
+### Closing the loop with the patient
+#### Actors
+#### Patient Workflow (from above functional use cases)
+#### Considerations
+
+## 4.1 Patient Stories and Workflow
+- Link to Patient Stories [Patient Stories ](https://confluence.hl7.org/display/GRAV/Patient+Stories)
+- These use cases are represented by workflow diagrams on the Exchange Workflow Page [Exchange Worklows Page ](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/exchange_workflow.html)
+## 4.1 Overview
+Numbering scheme is described.
+
+## 4.2 Actors
+
 
 
 ## 4.3 Business Associates
@@ -158,6 +189,7 @@ The Gravity Project focus for this version of the IG is to standardize the excha
 {:.grid}
 
 
+
 ### 4.4.3 Provider Actions
 1. Patient takes standardized assessment tool to identify risks
 2. Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity
@@ -169,15 +201,11 @@ The Gravity Project focus for this version of the IG is to standardize the excha
 
 ### 4.4.4 Provider- CBO Actions
 8a. Provider or Care Coordinator creates and sends an electronic referral to the C
-
 9a. CBO receives and accepts referral
-
-
  <span style-"color:purple">*What's the purpose of the 'a'?* </span>.
 
 ### 4.4.5 CBO Actions
 10a. Optional: CBO communicates with the patient via their application to schedule appointments, collect additional information, etc.
-
 CBO completes the evaluation and enrollment, updates the status of the referral to completed, and includes information on what was completed
 
 ### 4.4.6 Provider Actions
@@ -191,16 +219,10 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
 - CBO may not accept the referral or be unable to perform the requested service
 - Closing the loop via patient reported outcome
 
-<table><tr><td><img src="FunctionalUseCaseFlowDirectReferral3.jpg" /></td></tr></table>
 
-<span style-"color:purple">*I would put this diagram at the top of the section, I would aslo add the caption* </span>
 
 ## 4.5 Direct Referral Light
-<a name="directreferrallight">
-<p align-"center">
-<img src="diagram6.png" width="600">
-<figure-caption><strong>Figure 1. Functional Use Case -- Direct Light Referral. </figure-caption>
-</p>
+[Direct Referall Light Figure](FunctionalUseCaseFlowDirectLightReferral3.jpg)
 
 | Actor      |  Abbrev/Icon   | Assumption         |
 | ---------- | -------------- | ------------------ |
@@ -353,6 +375,7 @@ CBO completes the evaluation and enrollment, updates the status of the referral 
     2. interacts with the CP or RE to provide status of the referral
 
 ### 8.3.2 Direct Referral
+<a name="direct-referral-exchange">
 (*Link to the Direct Referral Functional Use Case Diagram*)
 #### 8.3.2.1 Interaction Diagram
 
