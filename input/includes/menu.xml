@@ -17,7 +17,6 @@
     <ul class="dropdown-menu">
       <li><a href="survey_instrument_support.html">Survey Instrument Support</a></li>
       <li><a href="mapping_instructions.html">Mapping Instructions</a></li>
-      <li><a href="support_for_multiple_domains.html">Support for Multiple Domains</a></li>
       <li><a href="exchange_workflow.html">Exchange Workflow</a></li>
         <li><a href="functional_use_cases.html">Functional Use Cases</a></li>
       <li><a href="synchronizing_applications_with_api_data_sources.html">Synchronizing Applications with API Data Sources</a></li>    </ul>
