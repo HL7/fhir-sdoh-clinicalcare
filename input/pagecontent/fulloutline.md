@@ -102,10 +102,12 @@ Numbering scheme is described.
 | Patient App (no section) | a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange | Pr, CC, Pa, CBO, CP | THere is no such section |
 {:.grid}
 
+
 ### Business Associates
 - CBO and CP not covered entities
     - can be business associates (covered entity)
 - Information describing what a covered entity is *(Is this necessary doesn't seem relevant maybe a link to informaiton would be better)*
+
 ### Direct Referral (Pull by Provider from CBO, involving [FHIR Subscription Resource](checking_task_status.html#subscription))
 <a name="directreferral">
 
@@ -116,6 +118,7 @@ Numbering scheme is described.
 |  Patient |   Pa   | Provider has a FHIR API  |
 |  Community Based Organization        |  CBO            | CBO has a FHIR API   |
 {:.grid}
+
 [Direct Referall FUnctional Use Case](FunctionalUseCaseFlowDirectReferral3.jpg)
 #### Provider Actions
 #### Provider – CBO Actions
@@ -140,6 +143,7 @@ Numbering scheme is described.
 |  Coordinating Platform        |  CP            | CP has a FHIR API   |
 |  Community Based Organization        |  CBO            | CBO has a FHIR  API   |
 {:.grid}
+
 #### Provider Actions (same as Direct Referral)
 #### Provider – CP – CBO workflow
 #### Provider Actions (same as Direct Referral)
@@ -157,6 +161,7 @@ Numbering scheme is described.
 |  Coordinating Platform        |  CP            | CP has a FHIR API   |
 |  Community Based Organization        |  CBO            | CBO has a FHIR enabled application (must do a push to CP)   |
 {:.grid}
+
 #### Provider Actions (same as Direct Referral)
 #### Provider – CP – CBO workflow (note: steps with a "b" suffix are specific to this referral)
 #### Provider Actions (same as Direct Referral)
@@ -171,6 +176,7 @@ Numbering scheme is described.
 |  Coordinating Platform        |  CP            | CP has a FHIR API   |
 |  Community Based Organization        |  CBO            | CBO has a FHIR enabled application (must do a push to CP)   |
 {:.grid}
+
 #### Patient Workflow (from above functional use cases)
 #### Considerations
 # [Survey Instrument Support](survey_instrument_support.html)
@@ -184,20 +190,15 @@ Numbering scheme is described.
 [Risk Survey in Workflow](enablingsurveyinstruments.jpg)
 
 ###  [Hunger Vital Sign (HVS) Survey Example](https://loinc.org/88121-9/)
-
-- Outlines vital sign survey example representation
-
 ### [Protocol for Responding to and Assessing Patients Assets, Risks, and Experience (PREPARE) Survey Example](https://loinc.org/93025-5/)
-
-- Outlines partial example of a PREPARE survey
  <span style-"color:purple">*Not much information on what these surveys are* </span>
 
 # [Mapping Instructions](mapping_instructions.html)
 
-- describes the mechanics of QuestionaireResponse --> condition and obervation
-    - Conversion using [StructureMaps](https://build.fhir.org/ig/HL7/sdc/extraction.html#structuremap-based-extraction)
-    - Structure Map language - [FHIR Mapping Language](http://hl7.org/fhir/R4/mapping-language.html)
-    - Describes the overall process for supporting this transformation process
+* describes the mechanics of QuestionaireResponse --> condition and obervation
+  * Conversion using [StructureMaps](https://build.fhir.org/ig/HL7/sdc/extraction.html#structuremap-based-extraction)
+  * Structure Map language - [FHIR Mapping Language](http://hl7.org/fhir/R4/mapping-language.html)
+  * Describes the overall process for supporting this transformation process
 
 # [Support for Multiple Domains](support_for_multiple_domains.html)
 *Deleted*
@@ -219,6 +220,7 @@ Numbering scheme is described.
 #### Actors
 #### Direct Referral
 <a name="direct-referral-exchange">
+
 ##### Interaction Diagram
 [Iteraction Diagram](SDOHInteractionsDirectExchange.jpg)
 ##### Workflow Diagram
