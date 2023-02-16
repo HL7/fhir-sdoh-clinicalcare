@@ -3,9 +3,14 @@
 ### Usage
 * Needs an intro that explains what the profile is for and point to the page(s) in the spec where its use in workflow is described.
 
+This profile supports all of the SDOH category defined in the IG.  Creating and maintaining a separate Condition profile for each SDOH category would at present be burdensome.
+Instead the table below defines the appropriate VSAC-hosted value set to use for each of the SDOH categories.
 
-This profile is used to capture Diagnoses for all 17 categories of SDOH information, using a contextual binding of valuesets.
-For each category of SDOH condition, a specific value SHALL be used for Condition.category, and a specific valueset SHALL be used for the Condition.code as shown in the table below.  In the current version of this IG, this contextual binding is not enforced by invariants.  In future updates of the IG, these invariants may be added.
+For each category of SDOH condition, a specific value SHALL be used for Condition.category, and a specific valueset SHALL be used for the Condition.code as shown in the table below.
+Implementations **SHOULD** use a value from the listed value sets when a code exists that describes the concept.  The value sets are maintained in the  [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) database.  The  [Social Determinants of Health Conditions Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion) contains the full set of values.
+
+The Gravity Project plans to work with the HL7 Vocabulary WG to determine how best to represent the domain specific value sets in each of the relevant resources and to establish appropriate methods to validate the consistent use of the correct domain specific codes. Future versions of this IG will include the logic to select specific value sets based on the SDOH domain.
+
 
 | [`Condition.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | `Condition.code` ValueSet | ValueSet URL |
 | ------ | -------------------- | ------------------------- | ------------ |

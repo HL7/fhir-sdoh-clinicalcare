@@ -1,13 +1,18 @@
 
 
 ### Usage
-
 * Needs an intro that explains what the profile is for and point to the page(s) in the spec where its use in workflow is described.
 
-This profile is used to capture goals for all 17 categories of SDOH information, using a contextual binding of valuesets.
-For each category of SDOH goals, a specific value SHALL be used for Goal.category, and a specific valueset SHALL be used for the Goal.code as shown in the table below.  In the current version of this IG, this contextual binding is not enforced by invariants.  In future updates of the IG, these invariants may be added.
+This profile supports all of the SDOH goal defined in the IG.  Creating and maintaining a separate Goal profile for each SDOH category would at present be burdensome.
+Instead the table below defines the appropriate VSAC-hosted value set to use for each of the SDOH categories.
 
-| [`Goal.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | `ServiceRequest.code` ValueSet | ValueSet URL |
+For each category of SDOH goal, a specific value SHALL be used for Goal.category, and a specific valueset SHALL be used for the Goal.code as shown in the table below.
+Implentations **SHOULD** use the following a value from the listed value sets when a code exists that describes the concept. The value sets are maintained in the  [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) database.  The  [Social Determinants of Health Goals Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion) contains the full set of values.
+
+The Gravity Project plans to work with the HL7 Vocabulary WG to determine how best to represent the domain specific value sets in each of the relevant resources and to establish appropriate methods to validate the consistent use of the correct domain specific codes. Future versions of this IG will include the logic to select specific value sets based on the SDOH domain.
+
+
+| [`Goal.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | `Goal.code` ValueSet | ValueSet URL |
 | ------ | -------------------- | ------------------------- | ------------ |
 | educational-attainment  | Educational Attainment | [VSAC -  Less than high school education Goals ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.55/expansion/Latest ) | https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.55/expansion/Latest |
 | elder-abuse  | Elder Abuse | [VSAC -  Elder Abuse Goals ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.65/expansion/Latest ) | https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.65/expansion/Latest |

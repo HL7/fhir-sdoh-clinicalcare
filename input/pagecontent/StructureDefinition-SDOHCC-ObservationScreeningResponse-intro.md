@@ -1,10 +1,15 @@
 
 ### Usage
-This profile is used to capture Observation Screening Responses for all 17 categories of SDOH information, using a contextual binding of valuesets.
-For each category of SDOH Screening Assessments, a specific value SHALL be used for Observation.category, and a specific valueset SHALL be used for the Goal.code as shown in the table below.  In the current version of this IG, this contextual binding is not enforced by invariants.  In future updates of the IG, these invariants may be added.
+* Needs an intro that explains what the profile is for and point to the page(s) in the spec where its use in workflow is described.
 
-The set of suported SDOH screening assessments is enumerated in the VSAC Social Determinants of Health Screening Assessments value set ([2.16.840.1.113762.1.4.1247.126](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.126/expansion/Latest)).
+This profile supports all of the SDOH Observation Screening Responses defined in the IG.  Creating and maintaining a separate Observation profile for each SDOH category would at present be burdensome.  Instead the table below defines the appropriate screening instruments for each categury with VSAC-hosted value set.
 
+For each category of SDOH Observation Screening Responses, a specific value SHALL be used for Goal.category.
+Implentations **SHOULD** use a screening instrument from the listed value sets when one exists.
+The value sets are maintained in the  [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) database.
+The [Social Determinants of Health Screening Assessments value set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.126/expansion/Latest) contains the full set of SDOH screening assessment.
+
+The Gravity Project plans to work with the HL7 Vocabulary WG to determine how best to represent the domain specific value sets in each of the relevant resources and to establish appropriate methods to validate the consistent use of the correct domain specific codes. Future versions of this IG will include the logic to select specific value sets based on the SDOH domain.
 
 | [`Observation.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | Screening Instruments |
 | ------ | -------------------- | ------------------------- | ------------ |
