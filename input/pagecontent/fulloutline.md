@@ -96,9 +96,9 @@ Numbering scheme is described.
 
 | Functional Use Case |  Description | Actors | Exchange Workflow|
 | ------------------- | ------------- | ------- | ---------------- |
-| [Direct Referral](fulloutline.html##directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO |   [Direct Referral Exchange Workflow](fulloutline.html##direct-referral-exchange)              |
-| [Direct Referral (light)](fulloutline.html##directreferalllight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | Pr, CC, Pa, CBO | [Direct Referral (light) Exchange Workflow](fulloutline.html##direct-referral-light-exchange) |
-| [Indirect Referral](fulloutline.html##indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO, CP | [Indirect Referral Exchange Workflow](fulloutline.html##indirect-referral-exchange)                   |
+| [Direct Referral](fulloutline.html#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO |   [Direct Referral Exchange Workflow](fulloutline.html#direct-referral-exchange)              |
+| [Direct Referral (light)](fulloutline.html#directreferalllight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | Pr, CC, Pa, CBO | [Direct Referral (light) Exchange Workflow](fulloutline.html#direct-referral-light-exchange) |
+| [Indirect Referral](fulloutline.html#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO, CP | [Indirect Referral Exchange Workflow](fulloutline.html#indirect-referral-exchange)                   |
 | Patient App (no section) | a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange | Pr, CC, Pa, CBO, CP | THere is no such section |
 {:.grid}
 
@@ -108,7 +108,7 @@ Numbering scheme is described.
     - can be business associates (covered entity)
 - Information describing what a covered entity is *(Is this necessary doesn't seem relevant maybe a link to informaiton would be better)*
 
-#### Direct Referral (Pull by Provider from CBO, involving [FHIR Subscription Resource](checking_task_status.html##subscription))
+#### Direct Referral (Pull by Provider from CBO, involving [FHIR Subscription Resource](checking_task_status.html#subscription))
 <a name="directreferral">
 
 ##### Actors and Assumptions
@@ -125,7 +125,7 @@ Numbering scheme is described.
 ##### CBO Actions
 ##### Provider Actions
 ##### Considerations
-#### Direct Referral Light (Push by CBO to Provider, involving <a href="checking_task_status.html##polling">Polling</a>)
+#### Direct Referral Light (Push by CBO to Provider, involving <a href="checking_task_status.html#polling">Polling</a>)
 [Functional Use Case Direct Referral Light][FunctionalUseCaseFlowDirectLightReferral3.jpg]
 ##### Actors and Assumptions (same as Direct Referral)
 ##### Provider Actions (same as Direct Referral)
@@ -197,7 +197,7 @@ Numbering scheme is described.
 ## [Mapping Instructions](mapping_instructions.html)
 
 * describes the mechanics of QuestionaireResponse --> condition and obervation
-  * Conversion using [StructureMaps](https://build.fhir.org/ig/HL7/sdc/extraction.html##structuremap-based-extraction)
+  * Conversion using [StructureMaps](https://build.fhir.org/ig/HL7/sdc/extraction.html#structuremap-based-extraction)
   * Structure Map language - [FHIR Mapping Language](http://hl7.org/fhir/R4/mapping-language.html)
   * Describes the overall process for supporting this transformation process
 
@@ -208,9 +208,9 @@ Numbering scheme is described.
 
 | Functional Use Case |  Description | Actors | Exchange Workflow|
 | ------------------- | ------------- | ------- | ---------------- |
-| [Direct Referral](fulloutline.html##directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO |   [Direct Referral Exchange Workflow](fulloutline.html##direct-referral-exchange)              |
-| [Direct Referral (light)](fulloutline.html##directreferallight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | Pr, CC, Pa, CBO | [Direct Referral (light) Exchange Workflow](fulloutline.html##direct-referral-light-exchange) |
-| [Indirect Referral](fulloutline.html##indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO, CP | [Indirect Referral Exchange Workflow](fulloutline.html##indirect-referral-exchange)                   |
+| [Direct Referral](fulloutline.html#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO |   [Direct Referral Exchange Workflow](fulloutline.html#direct-referral-exchange)              |
+| [Direct Referral (light)](fulloutline.html#directreferallight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | Pr, CC, Pa, CBO | [Direct Referral (light) Exchange Workflow](fulloutline.html#direct-referral-light-exchange) |
+| [Indirect Referral](fulloutline.html#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO, CP | [Indirect Referral Exchange Workflow](fulloutline.html#indirect-referral-exchange)                   |
 | Patient App (no section) | a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange | Pr, CC, Pa, CBO, CP | THere is no such section |
 #### General Workflow
 [General Workflow Figure](GeneralWorkflow3.jpg)
