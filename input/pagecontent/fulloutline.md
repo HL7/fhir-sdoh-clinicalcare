@@ -229,31 +229,41 @@ Spacer
 ###### Direct Referral
 <a name="direct-referral-exchange">
 
-######Interaction Diagram
+###### Interaction Diagram
 [Iteraction Diagram](SDOHInteractionsDirectExchange.jpg)
 ######Workflow Diagram
-[Interaction Diagram](DirectReferralSF.jpg
+[Interaction Diagram](DirectReferralSF.jpg)
+
 ###### Direct Referral Light
 <a name="direct-referral-light-exchange">
-######Interaction Diagram
+
+###### Interaction Diagram
 [Iteraction Diagram](SDOHInteractionsDirectExchangeLight.jpg)
+
 ######Workflow Diagram
-[Interaction Diagram](DirectReferralLightSF.jpg]
+[Interaction Diagram](DirectReferralLightSF.jpg)
+
 ###### Indirect Referral
 <a name="indirect-referral-exchange">
-######Interaction Diagram
+
+###### Interaction Diagram
 [Iteraction Diagram](SDOHInteractionsIndirectExchange.jpg)
+
 ######Workflow Diagram
-[Interaction Diagram](IndirectReferralSF.jpg]
+[Interaction Diagram](IndirectReferralSF.jpg)
+
 ###### Notes on Direct and Indirect Referrals
 ###### Patient Interactions
 <a name="patient-interactions-exchange">
-######Overall Workflow
+###### Overall Workflow
 [WOrkflow Diagram](PatientClientExchange.jpg)
-######Detailed workflow for a single questionnaire
+
+###### Detailed workflow for a single questionnaire
 [Detailed Workflow](PatientQuestionnaire.jpg)
+
 ##### Support for API Access to SDOH Information
 Link to [ONC 21st Century Cures Act Final Rule](https://www.healthit.gov/curesrule/)
+
 ### [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html)
 ##### Requirements
 ###### Patient/Client Applications
