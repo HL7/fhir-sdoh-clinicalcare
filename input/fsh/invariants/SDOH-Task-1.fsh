@@ -1,0 +1,5 @@
+Invariant: SDOH-Task-1
+Description: "If Task.code is “complete-questionnaire”, then exactly one Task.input of either \"questionnaire\", \"questionnaire-pdf\", or \"questionnaire-url\" is required and Task.input \"questionnaire-category\" is required."
+Severity: #error
+Expression: "code.coding.where(system='http://hl7.org/fhir/uv/sdc/CodeSystem/temp' and code='complete-questionnaire').exists() implies ((input.type.coding.where(system='http://hl7.org/fhir/uv/sdc/CodeSystem/temp' and code='questionnaire').exists() xor input.type.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='questionnaire-pdf').exists() xor input.type.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='questionnaire-url').exists()) and input.type.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='questionnaire-category').exists())"
+XPath: "true()"
