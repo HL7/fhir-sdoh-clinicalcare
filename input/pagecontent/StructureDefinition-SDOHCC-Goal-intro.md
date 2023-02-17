@@ -1,8 +1,8 @@
-
+### Purpose
+Goals are established by a patient and their provider and address an Observation or a Condition.
+The ServiceRequest used as part a referral can reference an SOH Goal.  See the [Data Modeling Framework] for more detail on the role of the Goal in the creation of health concerns, goal setting (patient-centered goals), and creation of referrals using service request and procedure/intervention.
 
 ### Usage
-* Needs an intro that explains what the profile is for and point to the page(s) in the spec where its use in workflow is described.
-
 This profile supports all of the SDOH goal defined in the IG.  Creating and maintaining a separate Goal profile for each SDOH category would at present be burdensome.
 Instead the table below defines the appropriate VSAC-hosted value set to use for each of the SDOH categories.
 

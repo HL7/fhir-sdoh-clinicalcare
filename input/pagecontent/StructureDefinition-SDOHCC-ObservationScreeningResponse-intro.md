@@ -1,6 +1,8 @@
 
+### Purpose
+Observation Screening Resonses are created from a Questionaire Response.  They can form the evidence for a Condition, the mitigation target for a Goal, or the reason for a Service Request. See the [Data Modeling Framework] for more detail on the role of the Observation Screening Response in the creation of health concerns, goal setting (patient-centered goals), and creation of referrals using service request and procedure/intervention.
+
 ### Usage
-* Needs an intro that explains what the profile is for and point to the page(s) in the spec where its use in workflow is described.
 
 This profile supports all of the SDOH Observation Screening Responses defined in the IG.  Creating and maintaining a separate Observation profile for each SDOH category would at present be burdensome.  Instead the table below defines the appropriate screening instruments for each categury with VSAC-hosted value set.
 

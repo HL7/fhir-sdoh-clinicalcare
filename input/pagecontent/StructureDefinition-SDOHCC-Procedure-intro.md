@@ -1,4 +1,7 @@
 
+### Purpose
+Procedures are interventions performed in response to a ServiceRequest as part of the referral process, and are referenced by the Task that is created to track execution of the ServiceRequest.
+See the [Data Modeling Framework] for more detail on the role of the Goal in the creation of health concerns, goal setting (patient-centered goals), and creation of referrals using service request and procedure/intervention.
 
 ### Usage
 * Needs an intro that explains what the profile is for and point to the page(s) in the spec where its use in workflow is described.
