@@ -141,13 +141,13 @@ Numbering scheme is described.
 | 12 | ![providericon] | Provider receives the updated status | [Checking Task Status] |
 | 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Survey Instrument Support] |
 | 14 | ![providericon] | determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately | [Goal]SDOHCC Goal[SDOHCC Goal] |
+{:.grid}
 
 Overview:
 
 This use case a provider works with a patient using a standardized assessment tool to identify and prioritize SDOH risks (steps 1-3), and then refers the patient to a CBO for help addressing those needs (steps4-9a) a CBO to help address those needs.  The CBO provides the requested support to the patient and the updated information is shared with the referring provider.
 
-
-
+![picon](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/outline/Patient.png){: height="15px" width="15px"}
 
 ###### Actors and Assumptions
 

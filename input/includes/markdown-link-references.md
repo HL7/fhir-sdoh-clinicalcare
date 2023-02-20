@@ -37,3 +37,6 @@
 
 [patienticon]: CoordinationPlatform.png
 {: height="15px" width="15px"}
+
+[picon]: http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/outline/Patient.png
+{: height="15px" width="15px"}
