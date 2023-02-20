@@ -25,11 +25,15 @@
 # Icons
 [patienticon]: Patient.png
 {: height="15px" width="15px"}
+
 [providericon]: Provider.png
 {: height="15px" width="15px"}
+
 [cboicon]: CBO.png
 {: height="15px" width="15px"}
+
 [ccicon]: CC.png
 {: height="15px" width="15px"}
+
 [patienticon]: CoordinationPlatform.png
 {: height="15px" width="15px"}
