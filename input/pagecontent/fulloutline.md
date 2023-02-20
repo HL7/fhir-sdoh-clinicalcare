@@ -127,16 +127,16 @@ Entities covered under a BAA may be able to receive Protected Health Information
 In this use case a provider works with a patient using a standardized assessment tool to identify and prioritize SDOH risks (steps 1-3), and then refers the patient to a CBO for help addressing those needs (steps4-9a) a CBO to help address those needs.  The CBO provides the requested support to the patient and the updated information is shared with the referring provider.
 
 ###### Actors and Assumptions
-<div align="center">
+
 
 | Actor    |  Abbrev/Icon | Assumption |
 | ---------- | -------------- | ------------------ |
 |  Provider|   Pr, ![providericon]   | Provider has a FHIR API   |
 |  Patient |   Pa, ![patienticon]   | Provider has a FHIR API  |
 |  Community Based Organization        |  CBO, ![cboicon]           | CBO has a FHIR API   |
-{:.grid}
+{:.grid .centered}
 
-</div>
+
 
 ![Direct Referral Functional Use Case](FunctionalUseCaseFlowDirectReferral3.jpg){:.centered}
 
@@ -168,16 +168,15 @@ In this use case a provider works with a patient using a standardized assessment
 
 Functionally, this use case is the same as the previous use case, except that the CBO has a FHIR-enabled application, but does not support a FHIR API.  As a result, the provider can't push information to the CBO, but rather tha CBO needs to pull information from the provider.    At the conclusion of the referral, the CBO POSTS needed information to the Provider FHIR server (e.g., Procedures) and updates the status and the linked resources of the Task.
 
-<div align="center">
 
 | Actor    |  Abbrev/Icon | Assumption |
 | ---------- | -------------- | ------------------ |
 |  Provider|   Pr, ![providericon]   | Provider has a FHIR API   |
 |  Patient |   Pa, ![patienticon]   | Patient has a FHIR-enabled application  |
 |  Community Based Organization        |  CBO, ![cboicon]           | CBO has a FHIR-enabled API   |
-{:.grid}
+{:.grid .centered}
 
-</div>
+
 
 ![Functional Use Case Direct Referral Light](FunctionalUseCaseFlowDirectLightReferral3.jpg){:.centered}
 
@@ -197,36 +196,45 @@ Functionally, this use case is the same as the previous use case, except that th
 | 12 | ![providericon] | Provider receives the updated status | [Checking Task Status] |
 | 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Survey Instrument Support] |
 | 14 | ![providericon] | determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately | [Goal][SDOHCC Goal] |
-{:.grid}
+{:.grid .centered }
 
 
 ##### Indirect Referral with Direct CBO
 <a name="indirectreferral">
+In this use case a provider works with a patient using a standardized assessment tool to identify and prioritize SDOH risks, and then refers the patient indirectly via a CP to a CBO for help addressing those needs.  The CP relays the referral to the CBO.  The CBO provides the requested support to the patient and the updated information is relayed back through the CP where it is shared with the referring provider.
 
-[Functional Use Case Indirect Referral](FunctionalUseCaseFlowIndirectDirectReferral3.jpg)
+Functionally, this indirect referral is essentially two direct referrals (Provider to CP, and CP to CBO) chained together.
+
 
 ###### Actors and Assumptions
 
-<div align="center">
 | Actor    |  Abbrev/Icon | Assumption |
 | ---------- | -------------- | ------------------ |
 |  Provider|   Pr   | Provider has a FHIR API   |
 |  Patient |   Pa   | Patient has a FHIR enabled personal application  |
 |  Coordinating Platform        |  CP            | CP has a FHIR API   |
 |  Community Based Organization        |  CBO            | CBO has a FHIR  API   |
-{:.grid}
-</div>
+{:.grid .centered}
+
+![Functional Use Case Indirect Referral](FunctionalUseCaseFlowIndirectDirectReferral3.jpg)
 
 ###### Provider Actions (same as Direct Referral)
 ###### Provider – CP – CBO workflow
 ###### Provider Actions (same as Direct Referral)
+
+
+
+
 ###### Considerations in addition to Direct Referral
+
+
 #####  Indirect Referral with Direct Light CBO
 <a name="directreferrallight">
 
 [Functional Use Case Indirect Direct Light](FunctionalUseCaseFlowIndirectDirectLightReferral3.jpg)
 
 ###### Actors and Assumptions
+<div align="center">
 
 | Actor    |  Abbrev/Icon | Assumption |
 | ---------- | -------------- | ------------------ |
@@ -235,6 +243,7 @@ Functionally, this use case is the same as the previous use case, except that th
 |  Coordinating Platform        |  CP   | CP has a FHIR API   |
 |  Community Based Organization        |  CBO  | CBO has a FHIR enabled application (must do a push to CP)   |
 {:.grid}
+</div>
 
 ###### Provider Actions (same as Direct Referral)
 ###### Provider – CP – CBO workflow (note: steps with a "b" suffix are specific to this referral)
