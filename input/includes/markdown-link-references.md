@@ -25,7 +25,7 @@
 [Patient Stories]: (https://confluence.hl7.org/display/GRAV/Patient+Stories)
 
 # Icons
-[patienticon]: Patient.png
+[patienticon]: ./Patient.png
 {: height="15px" width="15px"}
 
 [providericon]: Provider.png
