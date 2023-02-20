@@ -355,3 +355,5 @@ All implementations must follow [FHIR Security](http://hl7.org/fhir/R4/security.
 ### Downloads
 ### Credits
 #### Acknowledgements
+
+{% include markdown-link-references.md %}
