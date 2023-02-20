@@ -115,9 +115,11 @@ Since this is a functional description, technical details have been abstracted. 
 {:.grid}
 
 
-##### Business Associates
+##### Disclosure of Protected Health Information
 
-**Shouldn't this be in a separate section since it is generally applicable?**
+Sharing data with CBOs and CPs must be done in conformance with HIPAA requirements.  Although CBOs and CPs are not 'covered entities' under HIPAA,
+sharing with them can be facilitated by a Business Associate Agreement (BAA) between the covered entity (Providers, Payers and Clearing Houses) and the Business Associate.
+Entities covered under a BAA may be able to receive Protected Health Information (PHI) as part of the agreement without consent of the patient. However, they are required to observe the same limitations as covered entities with regard the protection and disclosure of PHI.  Patient consent would generally required for a provider to disclose a patient's PHI to a CBO or CP that is neither a covered entity nor covered by a BAA.
 
 ##### Direct Referral
 <a name="directreferral">
@@ -126,12 +128,14 @@ In this use case a provider works with a patient using a standardized assessment
 
 ###### Actors and Assumptions
 <div align="center">
+
 | Actor    |  Abbrev/Icon | Assumption |
 | ---------- | -------------- | ------------------ |
 |  Provider|   Pr, ![providericon]   | Provider has a FHIR API   |
 |  Patient |   Pa, ![patienticon]   | Provider has a FHIR API  |
 |  Community Based Organization        |  CBO, ![cboicon]           | CBO has a FHIR API   |
 {:.grid}
+
 </div>
 
 ![Direct Referral Functional Use Case](FunctionalUseCaseFlowDirectReferral3.jpg){:.centered}
@@ -156,7 +160,7 @@ In this use case a provider works with a patient using a standardized assessment
 
 ###### Considerations
 
-I don't understand the point of this section.
+** I don't understand the point of this section. **
 
 
 ##### Direct Referral Light
@@ -165,12 +169,14 @@ In this use case a provider works with a patient using a standardized assessment
 Functionally, this use case is the same as the previous use case, except that the CBO has a FHIR-enabled application, but does not support a FHIR API.  As a result, the provider can't push information to the CBO, but rather tha CBO needs to pull information from the provider.    At the conclusion of the referral, the CBO POSTS needed information to the Provider FHIR server (e.g., Procedures) and updates the status and the linked resources of the Task.
 
 <div align="center">
+
 | Actor    |  Abbrev/Icon | Assumption |
 | ---------- | -------------- | ------------------ |
 |  Provider|   Pr, ![providericon]   | Provider has a FHIR API   |
 |  Patient |   Pa, ![patienticon]   | Patient has a FHIR-enabled application  |
 |  Community Based Organization        |  CBO, ![cboicon]           | CBO has a FHIR-enabled API   |
 {:.grid}
+
 </div>
 
 ![Functional Use Case Direct Referral Light](FunctionalUseCaseFlowDirectLightReferral3.jpg){:.centered}
