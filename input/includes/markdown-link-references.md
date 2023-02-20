@@ -12,15 +12,17 @@
 [Exchange Workflow]: exchange_workflow.html
 [Capability Statements]: artifacts.html#capability-statements
 [SDOHCC Task For Referral Management]: StructureDefinition-SDOHCC-TaskForReferralManagement.html
-[SDOHCC ServiceRequest]: StructureDefinition-SDOHCC-ServiceRequest.html
+[SDOHCC Service Request]: StructureDefinition-SDOHCC-ServiceRequest.html
 [SDOHCC Goal]: StructureDefinition-SDOHCC-Goal.html
 [SDOHCC Procedure]: StructureDefinition-SDOHCC-Procedure.html
 [SDOHCC Condition]: StructureDefinition-SDOHCC-Condition.html
+[SDOHCC Consent]: StructureDefinition-SDOHCC-Consent.html
 [Gravity Project]:  https://confluence.hl7.org/display/GRAV/The+Gravity+Project
 [US Core Implementation Guide]: https://www.hl7.org/fhir/us/core/
 [Gravity Confluence Technology Pages]: https://confluence.hl7.org/display/GRAV/Technical+Workstream+Dashboard
 [Data Modeling Framework]: sdoh_clinical_care_background.html#data-modeling-framework
 [Checking Task Status]: checking_task_status.html
+[Patient Stories]: (https://confluence.hl7.org/display/GRAV/Patient+Stories)
 
 # Icons
 [patienticon]: Patient.png
@@ -38,5 +40,5 @@
 [patienticon]: CoordinationPlatform.png
 {: height="15px" width="15px"}
 
-[picon]: http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/outline/Patient.png
+[p]: http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/outline/Patient.png
 {: height="15px" width="15px"}

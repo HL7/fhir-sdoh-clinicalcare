@@ -82,16 +82,12 @@
 [Data Modeling Figure](FHIRModeling.jpg)
 
 ### Functional Use Cases (Audience = non-technical?)
-***
-* Why does this section refer to implementation technologies like subscription?
-* Isn't functional use cases more like A notifies B, or A queries B?
-***
 Purpose:  This section provides a functional description of the interactions between the actors in an SDOH referral, and with links to the profiles and sections of the IG where more detail is provided.  This should be read prior to the more detailed exchange workflow description.
 
-Since this is a functional description, technical details have been abstracted.   For example, the mechanism through which the referring provider is informed of the status of the referral could use FHIR Subscriptions or polling (see [Checking Task Status] for details).   Similarly, the relationships between the profiles referenced are not described (see [Data Modeling Framework]).  Management of task status is not described (see Checking Task Status).
+Since this is a functional description, technical details have been abstracted.   For example, the mechanism through which the referring provider is informed of the status of the referral could use FHIR Subscriptions or polling (see [Checking Task Status] for details).   Similarly, the relationships between the profiles referenced are not described (see [Data Modeling Framework] ).  Management of task status is not described (see Checking Task Status).
 
 ##### Patient Stories and Workflow
-* Link to Patient Stories [Patient Stories ](https://confluence.hl7.org/display/GRAV/Patient+Stories)
+* [Patient Stories]
 ##### Overview
 Numbering scheme is described.
 ##### Actors
@@ -124,12 +120,13 @@ Numbering scheme is described.
 
 ##### Direct Referral
 <a name="directreferral">
+![Direct Referral FUnctional Use Case](FunctionalUseCaseFlowDirectReferral3.jpg)
 
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
 | 1 | ![patienticon] | Patient takes standardized assessment tool to identify risks | [Survey Instrument Support] |
 | 2 | ![providericon]| Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity | &nbsp; |
-| 3 | ![providericon], ![patienticon]|  Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list | [Condition][SDOHCC Condition] |
+| 3 | ![providericon], ![patienticon]|  Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list | [Condition][SDOHCC Condition], [SDOHCC Condition] |
 | 4 | ![providericon], ![patienticon]|  Provider and patient identify a goal to pursue enrollment in a SNAP program | [Goal][SDOHCC Goal |
 | 5 | ![providericon], ![patienticon]|  Provider and patient agree that a referral to a contracted or non-contracted CBO is an appropriate next step| &nbsp; |
 | 6 | ![patienticon] | Patient consents to be referred to the CBO, and to share appropriate information with the CBO | [Consent][SDOHCC Consent], [Service Request][SDOHCC Service Request], [Task][SDOHCC Task For Referral Management] |
@@ -149,6 +146,8 @@ This use case a provider works with a patient using a standardized assessment to
 
 ![picon](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/outline/Patient.png){: height="15px" width="15px"}
 
+![p]
+
 ###### Actors and Assumptions
 
 | Actor    |  Abbrev/Icon | Assumption |
@@ -158,7 +157,7 @@ This use case a provider works with a patient using a standardized assessment to
 |  Community Based Organization        |  CBO, ![cboicon]           | CBO has a FHIR API   |
 {:.grid}
 
-[Direct Referral FUnctional Use Case](FunctionalUseCaseFlowDirectReferral3.jpg)
+
 ###### Provider Actions
 ###### Provider – CBO Actions
 ###### CBO Actions
@@ -252,7 +251,9 @@ This use case a provider works with a patient using a standardized assessment to
 
 ### [Exchange Workflow](exchange_workflow.html) (Audience = technical implementors?)
 
-Spacer
+<div class="well" style="padding: 0.5em;background-color: white;border: 1px solid #0088f9;">
+<strong>Note:</strong> patient and clinical data in the narrative example below are linked to the relevant FHIR examples using <a href="#"><code style="background-color: #f5f2f0; color: #000;">this styling</code></a>.
+</div>
 
 | Functional Use Case |  Description | Actors | Exchange Workflow|
 | ------------------- | ------------- | ------- | ---------------- |
