@@ -10,6 +10,7 @@
 [StructureMap]: {{site.data.fhir.path}}structuremap.html
 [FHIR Mapping Language]: {{site.data.fhir.path}}mapping-language.html
 [Exchange Workflow]: exchange_workflow.html
+[Functional Use Cases]: functional_use_cases.html
 [Capability Statements]: artifacts.html#capability-statements
 [SDOHCC Task For Referral Management]: StructureDefinition-SDOHCC-TaskForReferralManagement.html
 [SDOHCC Service Request]: StructureDefinition-SDOHCC-ServiceRequest.html
@@ -37,8 +38,5 @@
 [ccicon]: CC.png
 {: height="15px" width="15px"}
 
-[patienticon]: CoordinationPlatform.png
-{: height="15px" width="15px"}
-
-[p]: http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/outline/Patient.png
+[cpicon]: CoordinationPlatform.png
 {: height="15px" width="15px"}

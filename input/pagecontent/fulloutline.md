@@ -81,15 +81,18 @@
 
 [Data Modeling Figure](FHIRModeling.jpg)
 
-### Functional Use Cases (Audience = non-technical?)
+### [Functional Use Cases] (Audience = non-technical?)
 Purpose:  This section provides a functional description of the interactions between the actors in an SDOH referral, and with links to the profiles and sections of the IG where more detail is provided.  This should be read prior to the more detailed exchange workflow description.
 
-Since this is a functional description, technical details have been abstracted.   For example, the mechanism through which the referring provider is informed of the status of the referral could use FHIR Subscriptions or polling (see [Checking Task Status] for details).   Similarly, the relationships between the profiles referenced are not described (see [Data Modeling Framework] ).  Management of task status is not described (see Checking Task Status).
+Since this is a functional description, technical details have been abstracted.   For example, the mechanism through which the referring provider is informed of the status of the referral could use FHIR Subscriptions or polling (see [Checking Task Status] for details).   Similarly, the relationships between the profiles referenced are not described (see [Data Modeling Framework] ).  Management of task status is not described (see [Checking Task Status]).
 
 ##### Patient Stories and Workflow
+
 * [Patient Stories]
+
 ##### Overview
-Numbering scheme is described.
+** Numbering scheme is described.   I think the numbering scheme is confusing.  Each use case should have its own table describing the steps.  If they are the same as previous steps it can be noted.  Economizing on the steps and having to search for their description makes this hard to read.**
+
 ##### Actors
 
 | Actor    |  Icon |  Description |
@@ -107,46 +110,19 @@ Numbering scheme is described.
 | ------------------- | ------------- | ------- | ---------------- |
 | [Direct Referral](fulloutline.html#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | ![providericon], CC, Pa, CBO |   [Direct Referral Exchange Workflow](fulloutline.html#direct-referral-exchange)              |
 | [Direct Referral (light)](fulloutline.html#directreferrallight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | ![providericon]. ![ccicon], ![patienticon], ![ccicon], ![cboicon]  | [Direct Referral (light) Exchange Workflow](fulloutline.html#direct-referral-light-exchange) |
-| [Indirect Referral](fulloutline.html#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | Pr, CC, Pa, CBO, CP | [Indirect Referral Exchange Workflow](fulloutline.html#indirect-referral-exchange)                   |
-| Patient App (no section) | a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange | Pr, CC, Pa, CBO, CP | THere is no such section |
+| [Indirect Referral](fulloutline.html#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | ![providericon]. ![ccicon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] | [Indirect Referral Exchange Workflow](fulloutline.html#indirect-referral-exchange)                   |
+| Patient App (no section) | a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange | ![providericon]. ![ccicon], ![patienticon], ![ccicon], ![cboicon]  | THere is no such section |
 {:.grid}
 
 
 ##### Business Associates
 
-- CBO and CP not covered entities
-    - can be business associates (covered entity)
-- Information describing what a covered entity is *(Is this necessary doesn't seem relevant maybe a link to informaiton would be better)*
+**Shouldn't this be in a separate section since it is generally applicable?**
 
 ##### Direct Referral
 <a name="directreferral">
-![Direct Referral FUnctional Use Case](FunctionalUseCaseFlowDirectReferral3.jpg)
 
-| Step | Actors | Description| References|
-| -----| ------------- | ------- | ---------------- |
-| 1 | ![patienticon] | Patient takes standardized assessment tool to identify risks | [Survey Instrument Support] |
-| 2 | ![providericon]| Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity | &nbsp; |
-| 3 | ![providericon], ![patienticon]|  Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list | [Condition][SDOHCC Condition], [SDOHCC Condition] |
-| 4 | ![providericon], ![patienticon]|  Provider and patient identify a goal to pursue enrollment in a SNAP program | [Goal][SDOHCC Goal |
-| 5 | ![providericon], ![patienticon]|  Provider and patient agree that a referral to a contracted or non-contracted CBO is an appropriate next step| &nbsp; |
-| 6 | ![patienticon] | Patient consents to be referred to the CBO, and to share appropriate information with the CBO | [Consent][SDOHCC Consent], [Service Request][SDOHCC Service Request], [Task][SDOHCC Task For Referral Management] |
-| 7 (optional)| ![providericon] | Provider makes information regarding the referral available to the patient’s application | ??What info?? |
-| 8a | ![cboicon]| Provider or Care Coordinator creates and sends an electronic referral to the CBO | [Service Request][SDOHCC Service Request], [Task][SDOHCC Task For Referral Management]  |
-| 9a | ![cboicon] | CBO receives and accepts referral | [Task][SDOHCC Task For Referral Management]  |
-| 10 (optional) | ![cboicon], ![patienticon]| CBO communicates with the patient via their application to schedule appointments, collect additional information, etc. | ??what info/resources?? |
-| 11 | ![cboicon] | CBO completes the evaluation and enrollment, updates the status of the referral to completed, and includes information on what was completed | [Task][SDOHCC Task For Referral Management], [Procedure][SDOHCC Procedure] |
-| 12 | ![providericon] | Provider receives the updated status | [Checking Task Status] |
-| 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Survey Instrument Support] |
-| 14 | ![providericon] | determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately | [Goal]SDOHCC Goal[SDOHCC Goal] |
-{:.grid}
-
-Overview:
-
-This use case a provider works with a patient using a standardized assessment tool to identify and prioritize SDOH risks (steps 1-3), and then refers the patient to a CBO for help addressing those needs (steps4-9a) a CBO to help address those needs.  The CBO provides the requested support to the patient and the updated information is shared with the referring provider.
-
-![picon](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/outline/Patient.png){: height="15px" width="15px"}
-
-![p]
+In this use case a provider works with a patient using a standardized assessment tool to identify and prioritize SDOH risks (steps 1-3), and then refers the patient to a CBO for help addressing those needs (steps4-9a) a CBO to help address those needs.  The CBO provides the requested support to the patient and the updated information is shared with the referring provider.
 
 ###### Actors and Assumptions
 
@@ -158,13 +134,29 @@ This use case a provider works with a patient using a standardized assessment to
 {:.grid}
 
 
-###### Provider Actions
-###### Provider – CBO Actions
-###### CBO Actions
-###### Provider Actions
+![Direct Referral Functional Use Case](FunctionalUseCaseFlowDirectReferral3.jpg)
+
+| Step | Actors | Description| References|
+| -----| ------------- | ------- | ---------------- |
+| 1 | ![patienticon] | Patient takes standardized assessment tool to identify risks | [Survey Instrument Support] |
+| 2 | ![providericon]| Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity | &nbsp; |
+| 3 | ![providericon], ![patienticon]|  Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list | [Condition][SDOHCC Condition], [SDOHCC Condition] |
+| 4 | ![providericon], ![patienticon]|  Provider and patient identify a goal to pursue enrollment in a SNAP program | [Goal][SDOHCC Goal] |
+| 5 | ![providericon], ![patienticon]|  Provider and patient agree that a referral to a contracted or non-contracted CBO is an appropriate next step| &nbsp; |
+| 6 | ![patienticon] | Patient consents to be referred to the CBO, and to share appropriate information with the CBO | [Consent][SDOHCC Consent], [Service Request][SDOHCC Service Request], [Task][SDOHCC Task For Referral Management] |
+| 7 (optional)| ![providericon] | Provider makes information regarding the referral available to the patient’s application | ??What info?? |
+| 8a | ![cboicon]| Provider or Care Coordinator creates and sends an electronic referral to the CBO | [Service Request][SDOHCC Service Request], [Task][SDOHCC Task For Referral Management]  |
+| 9a | ![cboicon] | CBO receives and accepts referral | [Task][SDOHCC Task For Referral Management]  |
+| 10 (optional) | ![cboicon], ![patienticon]| CBO communicates with the patient via their application to schedule appointments, collect additional information, etc. | ??what info/resources?? |
+| 11 | ![cboicon] | CBO completes the evaluation and enrollment, updates the status of the referral to completed, and includes information on what was completed | [Task][SDOHCC Task For Referral Management], [Procedure][SDOHCC Procedure] |
+| 12 | ![providericon] | Provider receives the updated status | [Checking Task Status] |
+| 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Survey Instrument Support] |
+| 14 | ![providericon] | determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately | [Goal][SDOHCC Goal] |
+{:.grid}
+
 ###### Considerations
 
-
+I don't understand the point of this section.
 
 
 ##### Direct Referral Light (Push by CBO to Provider, involving <a href="checking_task_status.html#polling">Polling</a>)
