@@ -79,7 +79,7 @@
 *This could be a good example of one of the diagrams we link link the mCode diagram to the existing artifact*
 * Redo figure as an SVG with clickable access to all of the profiles directly *
 
-[Data Modeling Figure](FHIRModeling.jpg)
+[Data Modeling Figure](FHIRModeling.jpg){:.centered}
 
 ### [Functional Use Cases] (Audience = non-technical?)
 Purpose:  This section provides a functional description of the interactions between the actors in an SDOH referral, and with links to the profiles and sections of the IG where more detail is provided.  This should be read prior to the more detailed exchange workflow description.
@@ -134,7 +134,7 @@ In this use case a provider works with a patient using a standardized assessment
 {:.grid}
 
 
-![Direct Referral Functional Use Case](FunctionalUseCaseFlowDirectReferral3.jpg)
+![Direct Referral Functional Use Case](FunctionalUseCaseFlowDirectReferral3.jpg){:.centered}
 
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
