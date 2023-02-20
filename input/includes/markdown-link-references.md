@@ -13,3 +13,4 @@
 [Capability Statements]: artifacts.html#capability-statements
 [SDOHCC Task For Referral Management]: StructureDefinition-SDOHCC-TaskForReferralManagement.html
 [SDOHCC ServiceRequest]: StructureDefinition-SDOHCC-ServiceRequest.html
+[Data Modeling Framework]: sdoh_clinical_care_background.html#data-modeling-framework
