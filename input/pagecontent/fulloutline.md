@@ -94,16 +94,18 @@ Since this is a functional description, technical details have been abstracted. 
 ** Numbering scheme is described.   I think the numbering scheme is confusing.  Each use case should have its own table describing the steps.  If they are the same as previous steps it can be noted.  Economizing on the steps and having to search for their description makes this hard to read.**
 
 ##### Actors
+<div align="center">
 
-| Actor    |  Icon |  Description |
-| ---------- | -------------- | ------------------ |
-|  Provider|   ![providericon]   | Includes licensed providers and others that interact with the patient to assess social risk, set goals, and determine/recommend referrals.   |
-|  Patient |   ![patienticon]   | definition consistent with Glossary   |
-|  Care Coordinator (CC)       |     ![ccicon]         | A person who organizes various referral activities on behalf of the recipient and communicates information between all those involved in the care delivery.   |
-|  Community Based Organization (CBO)       |  ![cboicon]            | Public or private not-for-profit resource hubs that provide specific services to the community or targeted population within the community.   |
-|  Coordination Platform (CP)       |    ![cpicon]          | An intermediary that receives referrals, assesses patient needs, and works with one or more CBOs to deliver the services.   |
+| Actor    |  Description |
+| ----------  | ------------------ |
+|  Provider ![providericon]   | Includes licensed providers and others that interact with the patient to assess social risk, set goals, and determine/recommend referrals.   |
+|  Patient  ![patienticon]   | definition consistent with Glossary   |
+|  Care Coordinator (CC) ![ccicon]         | A person who organizes various referral activities on behalf of the recipient and communicates information between all those involved in the care delivery.   |
+|  Community Based Organization (CBO)  ![cboicon]  | Public or private not-for-profit resource hubs that provide specific services to the community or targeted population within the community.   |
+|  Coordination Platform (CP)  ![cpicon]          | An intermediary that receives referrals, assesses patient needs, and works with one or more CBOs to deliver the services.   |
 {:.grid}
 
+</div>
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 | Functional Use Case |  Description | Actors | Exchange Workflow|
