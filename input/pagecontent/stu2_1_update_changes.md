@@ -8,20 +8,17 @@ This update is focused on improving the readability of the IG narrative content.
 ### StructureDefinitions
 
 1. Included value set references in narrative for the multi-domain profiles (Condition, Goal, ServiceRequest, Procedure, and Observation)
+2. Improved narrative in all Profiles
+3. Abstract flag in [SDOHCCObservationAssessment] is now false
 
 
 ### CapabilityStatements
 
 1. Improved Rendering
 
-
-
-Added CapabilityStatement
-
-* [SDOHCC Patient Application](CapabilityStatement-SDOHCC-PatientApp.html) (FHIR-34255)
-
-
-
 ### Documentation
 
 * [Glossary](glossary.html) – Added glossary
+
+### FHIR Shorthand
+* The IG is now being maintained in FSH
