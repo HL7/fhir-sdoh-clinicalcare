@@ -32,6 +32,10 @@ The Gravity Project plans to work with the HL7 Vocabulary WG to determine how be
 | stress  | Stress | [Stress Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20220202%20Stress%20Screeners%20with%20Available%20Codes.xlsx?api=v2 ) |
 | transportation-insecurity  | Transportation Insecurity | [Transportation Insecurity Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20230201%20Transportation%20Insecurity%20Screeners%20with%20Available%20codes.xlsx.xlsx?api=v2 ) |
 | veteran-status  | Veteran Status | [Veteran Status Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20220907%20Veteran%20Status%20Screeners%20with%20Available%20Codes.xlsx?api=v2 ) |
+<<<<<<< HEAD
 {:.grid}
 
 {% include markdown-link-references.md %}
+=======
+{:.grid}
+>>>>>>> 24509a3 (merge profile changes into FSH_based master branch)
