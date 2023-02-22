@@ -16,3 +16,5 @@
 [Gravity Project]:  https://confluence.hl7.org/display/GRAV/The+Gravity+Project
 [US Core Implementation Guide]: https://www.hl7.org/fhir/us/core/
 [Gravity Confluence Technology Pages]: https://confluence.hl7.org/display/GRAV/Technical+Workstream+Dashboard
+
+[SDOHCCObservationAssessment]: StructureDefinition-SDOHCC-ObservationAssessment.html
