@@ -2,7 +2,7 @@ Profile: SDOHCCObservationAssessment
 Parent: Observation
 Id: SDOHCC-ObservationAssessment
 Title: "SDOHCC Observation Assessment"
-Description: "Profile for Social Determinants of Health (SDOH) observations that involve assessment (e.g., by a provider, payer, etc.) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation). The Cross-Group Projects work group granted a variance to US Core on 06/10/2021 - Jira ticket FHIR-32892."
+Description: "Profile for Social Determinants of Health (SDOH) observations that involve assessment (e.g., by a provider, payer, etc.) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation)."
 * ^meta.versionId = "17"
 * ^meta.lastUpdated = "2022-07-15T15:56:06.623+00:00"
 * ^meta.source = "#fTdeyjCrP270BOlu"

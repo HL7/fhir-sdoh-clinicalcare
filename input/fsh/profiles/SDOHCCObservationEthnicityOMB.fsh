@@ -2,7 +2,7 @@ Profile: SDOHCCObservationEthnicityOMB
 Parent: SDOHCCObservationPersonalCharacteristic
 Id: SDOHCC-ObservationEthnicityOMB
 Title: "SDOHCC Observation Ethnicity OMB"
-Description: "Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on 06/23/2022 - Jira ticket FHIR-37582. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+Description: "Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
 * ^meta.versionId = "17"
 * ^meta.lastUpdated = "2022-07-28T21:31:04.675+00:00"
 * ^meta.source = "#xqoFz4mWDo9dbh0d"

@@ -154,7 +154,7 @@ See <a href="StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal FHIR profile</a> 
 <table><tr><td><img src="FunctionalUseCaseFlowDirectReferral3.jpg" /></td></tr></table>
 
 
-### Direct Referral Light (Push by CBO to Provider, involving <a href="checking_task_status.html#polling">Polling</a>)
+###Direct Referral Light (Push by CBO to Provider, involving <a href="checking_task_status.html#polling">Polling</a>)
 <a name="directreferrallight">
 
 Same as the Direct Referral workflow above with the following exceptions noted below:
@@ -324,8 +324,8 @@ Provider receives a subscription notification when the CP updates the Task on th
 
 <table><tr><td><img src="FunctionalUseCaseFlowIndirectDirectReferral3.jpg" /></td></tr></table>
 
-### Indirect Referral with Direct Light CBO
-<a name="indirectreferrallight"
+###> Indirect Referral with Direct Light CBO
+<a name="indirectreferrallight">
 Applies to Providers and Payers as the referral requester, and patient is assessed by a provider and referred to a CP. CP refers to a CBO to deliver the service.
 
 This section differs from the previous in that the interactions between the CP and CBO follow the Direct Light paradigm. The CBO will do a push to the CP. That is, CBOs without their own FHIR server will modify tasks directly on the CP's FHIR server.

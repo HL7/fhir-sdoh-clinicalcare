@@ -2,7 +2,7 @@ Profile: SDOHCCObservationSexualOrientation
 Parent: SDOHCCObservationPersonalCharacteristic
 Id: SDOHCC-ObservationSexualOrientation
 Title: "SDOHCC Observation Sexual Orientation"
-Description: "Profile for observations about the sexual orientation of an individual. This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on 06/23/2022 - Jira ticket FHIR-37583. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+Description: "Profile for observations about the sexual orientation of an individual. This profile is intended for draft use only. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
 * ^meta.versionId = "9"
 * ^meta.lastUpdated = "2022-06-28T15:21:43.612+00:00"
 * ^meta.source = "#7xWIK4XucYCMlssy"

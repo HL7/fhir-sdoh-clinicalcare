@@ -2,10 +2,8 @@ Profile: SDOHCCObservationGenderIdentity
 Parent: SDOHCCObservationPersonalCharacteristic
 Id: SDOHCC-ObservationGenderIdentity
 Title: "SDOHCC Observation Gender Identity"
-Description: "Profile for gender identity observations which are based on a person’s inner sense of being a girl/woman/female/feminine, boy/man/male/masculine, nonbinary, something else, or having no gender. This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on 06/23/2022 - Jira ticket FHIR-37582. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+Description: "Profile for gender identity observations which are based on a person’s inner sense of being a girl/woman/female/feminine, boy/man/male/masculine, nonbinary, something else, or having no gender. This profile is intended for draft use only. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
 * ^meta.versionId = "8"
-* ^meta.lastUpdated = "2022-06-28T15:21:43.615+00:00"
-* ^meta.source = "#Uce7yaM1bCpfaBiL"
 * ^status = #draft
 * ^abstract = false
 * . ^short = "Profile for observations about gender identity."

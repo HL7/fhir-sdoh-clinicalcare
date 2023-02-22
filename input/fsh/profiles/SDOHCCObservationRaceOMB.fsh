@@ -2,7 +2,7 @@ Profile: SDOHCCObservationRaceOMB
 Parent: SDOHCCObservationPersonalCharacteristic
 Id: SDOHCC-ObservationRaceOMB
 Title: "SDOHCC Observation Race OMB"
-Description: "Profile for race observations that use Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only. The Cross-Group Projects work group granted a variance to US Core on 06/23/2022 - Jira ticket FHIR-37582. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+Description: "Profile for race observations that use Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only.  For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
 * ^meta.versionId = "16"
 * ^meta.lastUpdated = "2022-07-22T17:48:33.877+00:00"
 * ^meta.source = "#GREZoFoSWb9xb20X"
