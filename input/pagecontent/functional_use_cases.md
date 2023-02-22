@@ -12,10 +12,10 @@ The following numbering is used throughout this section where N is an integer nu
 ### Patient Stories and Workflow
 SDOH IG related Patient Stories are available on the Gravity Project Confluence site [here](https://confluence.hl7.org/display/GRAV/Patient+Stories).
 
-These use cases are represented by workflow diagrams on the [Exchange Workflow] page with figures that refer to the FHIR Resources used. Implementers will also benefit from reviewing the [Capability Statements] for each specific workflow, and the [conformance artifacts](artifacts.html) generally.
+These use cases are represented by workflow diagrams on the [Exchange Workflow Page](exchange_workflow.html) with figures that refer to the FHIR Resources used. Implementers will also benefit from reviewing the [server capability](artifacts.html#capability-statements) statements for each specific workflow, and the [conformance artifacts](artifacts.html) generally.
 
 ### Overview
-The exchange interactions below give guidance on the process to ‘close the loop’ between a provider, or other healthcare actor, who makes a request (referral) for SDOH services and the request recipient (referral recipient, with various FHIR enabled capabilities and configurations as described below). In FHIR the request (referral) is provided as a combination of [SDOHCC Task For Referral Management] and [SDOHCC ServiceRequest].  Included below, is guidance on how the IG is implemented to enable back and forth communication. This does not replace reviewing the FHIR artifacts (such as Capability Statements, Resource profiles, and value sets) and narrative guidance found elsewhere in this guide.
+The exchange interactions below give guidance on the process to ‘close the loop’ between a provider, or other healthcare actor, who makes a request (referral) for SDOH services and the request recipient (referral recipient, with various FHIR enabled capabilities and configurations as described below). In FHIR the request (referral) is provided as a combination of <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task For Referral Management</a>/<a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a>.  Included below, is guidance on how the IG is implemented to enable back and forth communication. This does not replace reviewing the FHIR artifacts (such as Capability Statements, Resource profiles, and value sets) and narrative guidance found elsewhere in this guide.
 
 The functional use cases defined below are based on specific exchanges of information between the relevant actors. These use cases include:
 
@@ -42,7 +42,7 @@ The functional use cases defined below are based on specific exchanges of inform
 
 
 ### Direct Referral (Pull by Provider from CBO, involving [FHIR Subscription Resource](checking_task_status.html#subscription))
-<a name="directreferral">
+
 Applies to Providers, Payers and CPs as the referral requester
 
 Patient assessed by Provider and referred to CBO to deliver the service
@@ -153,8 +153,7 @@ See <a href="StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal FHIR profile</a> 
 
 <table><tr><td><img src="FunctionalUseCaseFlowDirectReferral3.jpg" /></td></tr></table>
 
-
-###Direct Referral Light (Push by CBO to Provider, involving <a href="checking_task_status.html#polling">Polling</a>)
+### Direct Referral Light (Push by CBO to Provider, involving <a href="checking_task_status.html#polling">Polling</a>)
 <a name="directreferrallight">
 
 Same as the Direct Referral workflow above with the following exceptions noted below:
@@ -181,7 +180,7 @@ Note from 6: The provider's system creates a <a href="StructureDefinition-SDOHCC
 &nbsp;&nbsp;&nbsp;&nbsp;8b. CBO application queries Provider or Care Coordinator API for new or updated referrals
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
-See [Direct Referral Light] exchange workflow. The query occurs after receiving electronic communication that there is a referral. The CBO application queries the Provider or Care Coordinator FHIR API for new or updated referrals. Alternatively, in the absence of electronic notification, the CBO could monitor for new Tasks and ServiceRequests using polling (for guidance on polling see <a href="checking_task_status.html#polling">Polling</a>).
+See <a href="exchange_workflow.html#direct-referral-light">direct referral light exchange workflow</a>. The query occurs after receiving electronic communication that there is a referral. The CBO application queries the Provider or Care Coordinator FHIR API for new or updated referrals. Alternatively, in the absence of electronic notification, the CBO could monitor for new Tasks and ServiceRequests using polling (for guidance on polling see <a href="checking_task_status.html#polling">Polling</a>).
 </p>
 
 <p style="margin: 0 0 10px 50px; width: 95%;">
@@ -228,7 +227,7 @@ To indicate completion via the FHIR API, the following are performed by the CBO:
 
 
 ### Indirect Referral with Direct CBO
-<a name="indirectreferral">
+
 Applies to Providers and Payers as the referral requester
 
 Patient is assessed by a provider and referred to a CP. CP refers to a CBO to deliver the service.
@@ -324,8 +323,13 @@ Provider receives a subscription notification when the CP updates the Task on th
 
 <table><tr><td><img src="FunctionalUseCaseFlowIndirectDirectReferral3.jpg" /></td></tr></table>
 
+<<<<<<< HEAD
 ###> Indirect Referral with Direct Light CBO
 <a name="indirectreferrallight">
+=======
+### Indirect Referral with Direct Light CBO
+
+>>>>>>> 24509a3 (merge profile changes into FSH_based master branch)
 Applies to Providers and Payers as the referral requester, and patient is assessed by a provider and referred to a CP. CP refers to a CBO to deliver the service.
 
 This section differs from the previous in that the interactions between the CP and CBO follow the Direct Light paradigm. The CBO will do a push to the CP. That is, CBOs without their own FHIR server will modify tasks directly on the CP's FHIR server.
@@ -450,6 +454,3 @@ All exchanges are optional. For additional workflow guidance the [Exchange Workf
 
 - Patient may not have an appropriate application or completed process to register and authenticate with the API(s)
 - Patient may not be willing or able to respond to the questionnaires
-
-
-{% include markdown-link-references.md %}

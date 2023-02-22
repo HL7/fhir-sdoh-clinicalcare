@@ -11,7 +11,7 @@ The following depicts the general workflow anticipated by this Implementation gu
 
 <table><tr><td><img src="GeneralWorkflow3.jpg" /></td></tr></table>
 
-There are a number of system to system interactions supported by this implementation guide.  These include:
+There are a number of system to system interactions supported by this implementation guide.  These include: 
 
 1. referrals via an intermediary (or indirect referrals) that may include interactions with multiple service performers,
 2. direct and direct light (where the interaction is with an application) referrals,
@@ -38,7 +38,7 @@ The following diagram depicts one example of an exchange workflow supported by t
 
 <table><tr><td><img src="SDOHInteractionsDrawingConsentV5.jpg" /></td></tr></table>
 
-Each of the workflow diagrams below defines the resources that are exchanged and/or updated for the supported use cases. For additional workflow details see [Functional Use Cases](functional_use_cases.html). For enabling access see [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html).
+Each of the workflow diagrams below defines the resources that are exchanged and/or updated for the supported use cases. For additional workflow details see [Functional Use Cases](functional_use_cases.html). For enabling access see [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html). 
 
 ### Closed Loop Referral
 
@@ -58,7 +58,7 @@ Coordination Platform (CP) / Intermediary
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) May determine which Community Based Organization (CBO) is capable and available to provide the appropriate service
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3) Engages the CBO to perform the referral
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3) Engages the CBO to perform the referral 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4) Tracks the referral process to completion
 
@@ -76,7 +76,7 @@ Community Based Organization (CBO) / Performer
 
 The referral occurs between the Provider / Requester and the CBO / Performer where the CBO has a FHIR API.
 
-Refer to the [Direct Referral] functional use case to understand the numbers in the interaction diagram below.
+[Refer to the Direct Referral functional use case](functional_use_cases.html#direct-referral-light) to understand the numbers in the interaction diagram below.
 
 ##### Interaction Diagram
 
@@ -92,7 +92,7 @@ Refer to the [Direct Referral] functional use case to understand the numbers in 
 
 The referral occurs between the Provider / Requester and the CBO / Performer where the CBO / Performer does not have a FHIR API (FHIR Server or FHIR Façade).   The exchange with the Performer is initiated via an email with a secure link to the Provider / Requester API that can be used by an application available to the CBO / Performer to communicate with the Provider / Requester using RESTful exchanges that read, create, and update resources via the Provider / Requester API.
 
-Refer to the [Direct Referral Light] functional use case to understand the numbers in the interaction diagram below.
+[Refer to the Direct Referral Light functional use case](functional_use_cases.html#direct-referral-light) to understand the numbers in the interaction diagram below.
 
 ##### Interaction Diagram
 
@@ -114,10 +114,13 @@ This IG assumes that, in an Indirect Referral, the Referral Performer does not h
 2. Create a Task to be Posted to the Referral Performer that references the Referral Source Task via Task.partOf
 3. Create a ServiceRequest with ServiceRequest.intent value filler-order and ServiceRequest.basedOn references the original Referral Source ServiceRequest
 4. Since local copies of the referenced resources are maintained by the Intermediary, the intermediary must periodically query the Referral Source for updates to the referenced resources
-5. There are two version of the [Indirect Referral] -- one where the CBO / Performer has a FHIR API (e.g. [Direct Referral]) and one where the CBO / Performer uses a FHIR enabled application (e.g. [Direct Referral Light])
+5. There are two version of the Indirect Referral -- one where the CBO / Performer has a FHIR API (e.g. Direct Referral) and one where the CBO / Performer uses a FHIR enabled application (e.g. Direct Referral Light)
 
 
 
+[Link to the Indirect Referral with a Direct CBO functional use case](functional_use_cases.html#indirect-referral-with-direct-cbo)
+
+[Link to the Indirect Referral with a Direct Light CBO functional use case](functional_use_cases.html#indirect-referral-with-direct-light-cbo)
 
 ##### Interaction Diagram
 
@@ -132,7 +135,7 @@ This IG assumes that, in an Indirect Referral, the Referral Performer does not h
 #### Notes on Direct and Indirect Referrals
 
 1. Parties SHOULD use polling if one or both of the parties is unable to support the subscription model (see notes on the [Checking Task Status](checking_task_status.html) page).
-2. The receiving party for the referral SHOULD use the batch query process to request periodic updates of reference resources.
+2. The receiving party for the referral SHOULD use the batch query process to request periodic updates of reference resources. 
 3. The above system flows do not define the handling of all possible scenarios. Exchange scenarios may include refusing the referral, canceling the referral by either party, and error conditions that may occur when using RESTful exchanges.  It is up to each party to follow the current best practice in managing the state of the referral.
 4. The Provider / Requester SHOULD set the Task.status to "requested" until it receives a valid HTTPS response indicating that the Task was received at which point it SHOULD set the Task.status to "received".
 
@@ -161,7 +164,7 @@ The above patient / client interaction diagram indicates the high level exchange
 3. questionnaire retrieved by the patient's application from the referring entity, completed and returned,  to determine the status of a service that may take an extended amount of time (e.g., prior to the patient meeting with the referring provider)
 4. questionnaire retrieved by the patient's application from the referring entity, completed and returned, to close the loop with the patient on completion of the service to determine the patient's view their interaction with the CBO / performer and the ability of the service provided to meet their needs
 
-##### Detailed workflow for a single questionnaire
+##### Detailed workflow for a single questionnaire 
 
 <table><tr><td><img src="PatientQuestionnaire.jpg" /></td></tr></table>
 
@@ -169,5 +172,3 @@ The above patient / client interaction diagram indicates the high level exchange
 ### Support for API Access to SDOH Information
 
 The Provider / Requester, CP / Intermediary, and CBO / Performer SHOULD make SDOH information available to authenticated and authorized APIs and applications via a FHIR API conformant to the [ONC 21st Century Cures Act Final Rule](https://www.healthit.gov/curesrule/).  The API SHOULD allow for the exchange of all resources defined on the [FHIR Artifacts Overview](fhir_artifacts_overview.html) page with the patient’s consent where required or appropriate
-
-{% include markdown-link-references.md %}
