@@ -37,7 +37,7 @@ license: CC0-1.0
 publisher:
   name: HL7 International Patient Care WG
   url: http://www.hl7.org/Special/committees/patientcare
-  email: pclist@lists.HL7.org
+  email: patientcare@lists.hl7.org
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 description: This HL7 Implementation Guide (IG) defines how to exchange Social Determinants of Health (SDOH) content defined by the Gravity Project using the HL7 FHIR standard..
 pages:
@@ -79,35 +79,180 @@ pages:
     title: STU2 Ballot Changes
   stu2_publication_changes.md:
     title: STU2 Publication Changes
+  stu2_1_publication_changes.md:
+    title: STU2.1 Publication Changes
   artifacts.html:
     title: Artifacts Index
   glossary.md:
     title: Glossary
 
-menu:
-  Home: index.html
-  Table of Contents:  toc.html
-  Background:
-    Gravity Background: gravity_background.html
-    SDOH Clinical Care Background: sdoh_clinical_care_background.html
-    Technical Background : technical_background.html
-    Glossary: glossary.html
-  Implementation Guidance:
-    Survey Instrument Support: survey_instrument_support.html
-    Mapping Instructions: mapping_instructions.html
-    Support for Multiple Domains: support_for_multiple_domains.html
-    Exchange Workflow:  exchange_workflow.html
-    Functional Use Cases:   functional_use_cases.html
-    Synchronizing Applications With API Data Sources: synchronizing_applications_with_api_data_sources.html
-  Specifications:
-    FHIR Artifacts Overview: fhir_artifacts_overview.html
-    Checking Task Status: checking_task_status.html
-    Privacy and Security: privacy_and_security.html
-    Must Support and Missing Data: mustsupport_and_missing_data.html
-    Draft Specifications for Personal Characteristics:   draft_specifications_for_personal_characteristics.html
-  Downloads: downloads.html
-  Credits: credits.html
-  Change History:
-    STU2 Ballot Changes:  stu2_ballot_changes.html
-    STU2 Publication Changes:  stu2_publication_changes.html
-  Artifact Index: artifacts.html
+groups:
+  CapabilityStatements:
+    name: Capability Statements
+    description: Capability Statements
+    resources:
+      - SDOHCC-CoordinationPlatform
+      - SDOHCC-ReferralRecipientLight
+      - SDOHCC-ReferralRecipientLight
+      - SDOHCC-ReferralSource
+      - SDOHCC-PatientApp
+  Profiles:
+    name: Profiles
+    description: Profiles
+    resources:
+      - SDOHCCCondition
+      - SDOHCCConsent
+      - SDOHCCGoal
+      - SDOHCCGroup
+      - SDOHCCHealthcareService
+      - SDOHCCLocation
+      - SDOHCCObservationAssessment
+      - SDOHCCObservationScreeningResponse
+      - SDOHCCProcedure
+      - SDOHCCServiceRequest
+      - SDOHCCTaskForPatient
+      - SDOHCCTaskForReferralManagement
+  ValueSets:
+    name: Value Sets
+    description: Value Sets
+    resources:
+      - SDOHCCValueSetLOINCSNOMEDCT
+      - SDOHCCValueSetObservationDataAbsentReason
+      - SDOHCCValueSetObservationDerivedFromIdType
+      - SDOHCCValueSetObservationMethod
+      - SDOHCCValueSetObservationStatus
+      - SDOHCCValueSetSDOHCategory
+      - SDOHCCValueSetSDOHQuestionnaireCategory
+      - SDOHCCValueSetTaskCode
+      - SDOHCCValueSetTaskPriority
+      - SDOHCCValueSetTaskStatus
+  CodeSystems:
+    name: Code Systems
+    description: Code Systems
+    resources:
+      - SDOHCCCodeSystemTemporaryCodes
+  DraftArtifacts:
+    name: Draft Artifacts for Personal Characteristic Observations
+    description: Draft Artifacts for Personal Characteristic Observations
+    resources:
+      - SDOHCCObservationEthnicityOMB
+      - SDOHCCObservationGenderIdentity
+      - SDOHCCObservationPersonalCharacteristic
+      - SDOHCCObservationPersonalPronouns
+      - SDOHCCObservationRaceOMB
+      - SDOHCCObservationRecordedSexGender
+      - SDOHCCObservationSexualOrientation
+      - SDOHCCValueSetOMBEthnicityCategories
+      - SDOHCCValueSetOMBRaceCategories
+      - SDOHCCValueSetPronounsValue
+    Extensions:
+      name: Draft Artifacts for Personal Characteristic Observations
+      description: Draft Artifacts for Personal Characteristic Observations
+      resources:
+       - SDOHCCExtensionConditionAsserter
+       - SDOHCCExtensionHealthcareServiceTelecomAppointment
+    SearchParameters:
+      name: Draft Artifacts for Personal Characteristic Observations
+      description: Draft Artifacts for Personal Characteristic Observations
+      resources:
+       - ServiceRequest-supporting-info
+       - Task-output-reference
+    DraftArtifactsExamples:
+      name: Examples of Draft Artifacts for Personal Characteristic Observations
+      description: Examples of Draft Artifacts for Personal Characteristic Observations
+      resources:
+      - SDOHCCObservationEthnicityOMBExample
+      - SDOHCCObservationGenderIdentityExample
+      - SDOHCCObservationPersonalPronounsExample
+      - SDOHCCObservationRaceOMBExample
+      - SDOHCCObservationRecordedSexGenderExample
+      - SDOHCCObservationSexualOrientationExample
+      - SDOHCCValueSetOMBEthicityCategoriesExample
+      - SDOHCCValueSetOMBRaceCategoriesExample
+      - SDOHCCValueSetPronounsValueExample
+    Examples:
+      name: Examples
+      description: Examples
+      resources:
+      - SDOHCC-ConditionAsserterDeviceExample
+      - SDOHCC-ConditionFoodInsecurityExample
+      - SDOHCC-ConditionHomelessExample
+      - SDOHCC-ConditionUnemployedExample
+      - SDOHCC-ConsentInformationDisclosureExample
+      - SDOHCC-DeviceSoftwareExample
+      - SDOHCC-GoalFoodSecurityExample
+      - SDOHCC-GroupSDOHPatientsForPayerExample
+      - SDOHCC-HealthcareServiceTelecomAppointmentExample
+      - SDOHCC-LocationExample
+      - SDOHCC-ObservationAssessmentInadequateFoodIntakeExample
+      - SDOHCC-ObservationAssessmentSocialIsolationExample
+      - SDOHCC-ObservationAssessmentTransportTooExpensiveExample
+      - SDOHCC-ObservationSexualOrientationExample
+      - SDOHCC-OrganizationClinicExample
+      - SDOHCC-OrganizationCoordinationPlatformExample
+      - SDOHCC-OrganizationPayerExample
+      - SDOHCC-PractitionerDrJanWaterExample
+      - SDOHCC-PractitionerRoleDrJanWaterExample
+      - SDOHCC-ProcedureFoodPantryApplicationAssistanceExample
+      - SDOHCC-ProcedureProvisionOfFoodExample
+      - SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample
+      - SDOHCC-RelatedPersonMotherExample
+      - SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample
+      - SDOHCC-ServiceRequestSubreferralGardenProgramExample
+      - SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample
+      - SDOHCC-TaskPatientMakeAppointmentCompletedExample
+      - SDOHCC-TaskPatientRiskQuestionnaireCompletedExample
+      - SDOHCC-TaskReferralManagementOrderFulfillmentAcceptedExample
+      - SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample
+      - SDOHCC-TaskReferralManagementOrderSubtaskAcceptedExample
+      - SDOHCC-TaskReferralManagementOrderSubtaskCompletedExample
+    PRAPARE:
+      name: PRAPARE Examples
+      description: PRAPARE Examples
+      resources:
+      - SDOHCC-StructureMapPRAPARE
+      - SDOHCC-QuestionnairePRAPARE
+      - SDOHCC-QuestionnaireResponsePRAPAREExample
+      - SDOHCC-ObservationResponsePRAPAREChildCareNeedExample
+      - SDOHCC-ObservationResponsePRAPAREClothingNeedExample
+      - SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample
+      - SDOHCC-ObservationResponsePRAPAREHousingStatusExample
+      - SDOHCC-ObservationResponsePRAPAREUnmetNeedsMultiselectExample
+    HVS:
+      name: Hunger Vital Signs Examples
+      description: Hunger Vital Signs Examples
+      resources:
+      - SDOHCC-StructureMapHungerVitalSign
+      - SDOHCC-QuestionnaireHungerVitalSign
+      - SDOHCC-QuestionnaireResponseHungerVitalSignExample
+      - SDOHCC-ObservationResponseHungerVitalSignGroupingExample
+      - SDOHCC-ObservationResponseHungerVitalSignQuestion1Example
+      - SDOHCC-ObservationResponseHungerVitalSignQuestion2Example
+      - SDOHCC-ObservationResponseHungerVitalSignQuestion3Example
+  menu:
+    Home: index.html
+    Table of Contents:  toc.html
+    Background:
+      Gravity Background: gravity_background.html
+      SDOH Clinical Care Background: sdoh_clinical_care_background.html
+      Technical Background : technical_background.html
+      Glossary: glossary.html
+      Credits: credits.html
+    Implementation Guidance:
+      Survey Instrument Support: survey_instrument_support.html
+      Mapping Instructions: mapping_instructions.html
+      Exchange Workflow:  exchange_workflow.html
+      Functional Use Cases:   functional_use_cases.html
+      Synchronizing Applications With API Data Sources: synchronizing_applications_with_api_data_sources.html
+    Specifications:
+      FHIR Artifacts Overview: fhir_artifacts_overview.html
+      Checking Task Status: checking_task_status.html
+      Privacy and Security: privacy_and_security.html
+      Must Support and Missing Data: mustsupport_and_missing_data.html
+      Draft Specifications for Personal Characteristics:   draft_specifications_for_personal_characteristics.html
+    Downloads: downloads.html
+    Change History:
+      STU2 Ballot Changes:  stu2_ballot_changes.html
+      STU2 Publication Changes:  stu2_publication_changes.html
+      STU2.1 Update Changes: stu2_1_publication_changes.html
+    Artifact Index: artifacts.html
