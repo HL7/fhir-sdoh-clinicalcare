@@ -1,8 +1,6 @@
 
 ### Purpose
-SDOHCC Condition is generally intended to represent a health concern or problem related to a social risk or need. Condition may be the result of screening response Observations (i.e., [SDOHCC Observation Screening Response]) or other Observations made as part of an encounter assessment (i.e., [SDOHCC Observation Assessment]). Condition may be addressed by a Goal ([SDOHCC Goal]) or be the reason for a ServiceRequest ([SDOHCC Service Request]) or Procedure ([SDOHCC Procedure]).
-
-Conditions are created based on an Observation from a Survey or Assessment as part of the referral process, and can be referenced by a Goal or by a ServiceRequest created to request interventions to address the Condition.  See the [Data Modeling Framework] for more detail on the role of the Condition in the creation of health concerns, goal setting (patient-centered goals), and creation of referrals using service request and procedure/intervention.
+SDOHCC Condition is generally intended to represent a health concern or problem related to a social risk or need. Condition may be the result of screening response Observations (i.e., [SDOHCC Observation Screening Response]) or other Observations made as part of an encounter assessment (i.e., [SDOHCC Observation Assessment]). Condition may be addressed by a Goal ([SDOHCC Goal]) or be the reason for a ServiceRequest ([SDOHCC Service Request]) or Procedure ([SDOHCC Procedure]). See the [Data Modeling Framework] for more detail on the relationships between Condition and the other profiles in this IG.
 
 ### Usage
 
