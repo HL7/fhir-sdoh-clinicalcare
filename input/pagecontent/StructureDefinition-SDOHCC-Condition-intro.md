@@ -1,15 +1,16 @@
 
 ### Purpose
-Conditions are created based on an Observation from a Survey or Assessment as part of the referral process, and can be referenced by a Goal or by a ServiceRequest created to request interventions to address the Condition.  See the [Data Modeling Framework] for more detail on the role of the Goal in the creation of health concerns, goal setting (patient-centered goals), and creation of referrals using service request and procedure/intervention.
+SDOHCC Condition is generally intended to represent a health concern or problem related to a social risk or need. Condition may be the result of screening response Observations (i.e., [SDOHCC Observation Screening Response]) or other Observations made as part of an encounter assessment (i.e., [SDOHCC Observation Assessment]). Condition may be addressed by a Goal ([SDOHCC Goal]) or be the reason for a ServiceRequest ([SDOHCC Service Request]) or Procedure ([SDOHCC Procedure]).
+
+Conditions are created based on an Observation from a Survey or Assessment as part of the referral process, and can be referenced by a Goal or by a ServiceRequest created to request interventions to address the Condition.  See the [Data Modeling Framework] for more detail on the role of the Condition in the creation of health concerns, goal setting (patient-centered goals), and creation of referrals using service request and procedure/intervention.
 
 ### Usage
-This profile supports all of the SDOH category defined in the IG.  Creating and maintaining a separate Condition profile for each SDOH category would at present be burdensome.
-Instead the table below defines the appropriate VSAC-hosted value set to use for each of the SDOH categories.
 
-For each category of SDOH condition, a specific value SHALL be used for Condition.category, and a specific valueset SHALL be used for the Condition.code as shown in the table below.
-Implementations **SHOULD** use a value from the listed value sets when a code exists that describes the concept.  The value sets are maintained in the  [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) database.  The  [Social Determinants of Health Conditions Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion) contains the full set of values.
+Rather than creating a separate Condition profile for each SDOH category (domain) covered in this IG (e.g., food insecurity, transportation insecurity, etc), this profile can support any SDOH category. The optional Condition.category slice binds to a required value set of SDOH category codes (first column below). The code selected for Condition.category determines a preferred, category-specific value set for Condition.code as per the table below.
 
-The Gravity Project plans to work with the HL7 Vocabulary WG to determine how best to represent the domain specific value sets in each of the relevant resources and to establish appropriate methods to validate the consistent use of the correct domain specific codes. Future versions of this IG will include the logic to select specific value sets based on the SDOH domain.
+The preferred value sets for Condition.code are hosted in the [NIH Value Set Authority Center (VSAC)]. The [Social Determinants of Health Conditions Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion) in VSAC is a grouper value set containing all members of the VSAC Value Sets for Condition below.
+
+The Gravity Project plans to continue to work with the HL7 Vocabulary WG to determine how best to represent and validate the preferred, category-specific value sets for each of the relevant SDOH CC profiles.
 
 
 | [`Condition.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | `Condition.code` ValueSet | ValueSet OID |

@@ -11,6 +11,12 @@
 [FHIR Mapping Language]: {{site.data.fhir.path}}mapping-language.html
 [Exchange Workflow]: exchange_workflow.html
 [Capability Statements]: artifacts.html#capability-statements
+[Data Modeling Framework]: sdoh_clinical_care_background.html#data-modeling-framework
+
 [SDOHCC Task For Referral Management]: StructureDefinition-SDOHCC-TaskForReferralManagement.html
 [SDOHCC ServiceRequest]: StructureDefinition-SDOHCC-ServiceRequest.html
-[Data Modeling Framework]: sdoh_clinical_care_background.html#data-modeling-framework
+[SDOHCC Condition]: StructureDefinition-SDOHCC-Condition.html
+[SDOHCC Procedure]: StructureDefinition-SDOHCC-Procedure.html
+[SDOHCC Goal]: StructureDefinition-SDOHCC-Goal.html
+[SDOHCC Observation Assessment]: StructureDefinition-SDOHCC-ObservationAssessment.html
+SDOHCC Observation Screening Response]: StructureDefinition-SDOHCC-ObservationScreeningResponse.html
