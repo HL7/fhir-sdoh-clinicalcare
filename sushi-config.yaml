@@ -145,90 +145,90 @@ groups:
       - SDOHCCValueSetOMBEthnicityCategories
       - SDOHCCValueSetOMBRaceCategories
       - SDOHCCValueSetPronounsValue
-    Extensions:
-      name: Draft Artifacts for Personal Characteristic Observations
-      description: Draft Artifacts for Personal Characteristic Observations
-      resources:
-       - SDOHCCExtensionConditionAsserter
-       - SDOHCCExtensionHealthcareServiceTelecomAppointment
-    SearchParameters:
-      name: Draft Artifacts for Personal Characteristic Observations
-      description: Draft Artifacts for Personal Characteristic Observations
-      resources:
-       - ServiceRequest-supporting-info
-       - Task-output-reference
-    DraftArtifactsExamples:
-      name: Examples of Draft Artifacts for Personal Characteristic Observations
-      description: Examples of Draft Artifacts for Personal Characteristic Observations
-      resources:
-      - SDOHCCObservationEthnicityOMBExample
-      - SDOHCCObservationGenderIdentityExample
-      - SDOHCCObservationPersonalPronounsExample
-      - SDOHCCObservationRaceOMBExample
-      - SDOHCCObservationRecordedSexGenderExample
-      - SDOHCCObservationSexualOrientationExample
-      - SDOHCCValueSetOMBEthicityCategoriesExample
-      - SDOHCCValueSetOMBRaceCategoriesExample
-      - SDOHCCValueSetPronounsValueExample
-    Examples:
-      name: Examples
-      description: Examples
-      resources:
-      - SDOHCC-ConditionAsserterDeviceExample
-      - SDOHCC-ConditionFoodInsecurityExample
-      - SDOHCC-ConditionHomelessExample
-      - SDOHCC-ConditionUnemployedExample
-      - SDOHCC-ConsentInformationDisclosureExample
-      - SDOHCC-DeviceSoftwareExample
-      - SDOHCC-GoalFoodSecurityExample
-      - SDOHCC-GroupSDOHPatientsForPayerExample
-      - SDOHCC-HealthcareServiceTelecomAppointmentExample
-      - SDOHCC-LocationExample
-      - SDOHCC-ObservationAssessmentInadequateFoodIntakeExample
-      - SDOHCC-ObservationAssessmentSocialIsolationExample
-      - SDOHCC-ObservationAssessmentTransportTooExpensiveExample
-      - SDOHCC-ObservationSexualOrientationExample
-      - SDOHCC-OrganizationClinicExample
-      - SDOHCC-OrganizationCoordinationPlatformExample
-      - SDOHCC-OrganizationPayerExample
-      - SDOHCC-PractitionerDrJanWaterExample
-      - SDOHCC-PractitionerRoleDrJanWaterExample
-      - SDOHCC-ProcedureFoodPantryApplicationAssistanceExample
-      - SDOHCC-ProcedureProvisionOfFoodExample
-      - SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample
-      - SDOHCC-RelatedPersonMotherExample
-      - SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample
-      - SDOHCC-ServiceRequestSubreferralGardenProgramExample
-      - SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample
-      - SDOHCC-TaskPatientMakeAppointmentCompletedExample
-      - SDOHCC-TaskPatientRiskQuestionnaireCompletedExample
-      - SDOHCC-TaskReferralManagementOrderFulfillmentAcceptedExample
-      - SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample
-      - SDOHCC-TaskReferralManagementOrderSubtaskAcceptedExample
-      - SDOHCC-TaskReferralManagementOrderSubtaskCompletedExample
-    PRAPARE:
-      name: PRAPARE Examples
-      description: PRAPARE Examples
-      resources:
-      - SDOHCC-StructureMapPRAPARE
-      - SDOHCC-QuestionnairePRAPARE
-      - SDOHCC-QuestionnaireResponsePRAPAREExample
-      - SDOHCC-ObservationResponsePRAPAREChildCareNeedExample
-      - SDOHCC-ObservationResponsePRAPAREClothingNeedExample
-      - SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample
-      - SDOHCC-ObservationResponsePRAPAREHousingStatusExample
-      - SDOHCC-ObservationResponsePRAPAREUnmetNeedsMultiselectExample
-    HVS:
-      name: Hunger Vital Signs Examples
-      description: Hunger Vital Signs Examples
-      resources:
-      - SDOHCC-StructureMapHungerVitalSign
-      - SDOHCC-QuestionnaireHungerVitalSign
-      - SDOHCC-QuestionnaireResponseHungerVitalSignExample
-      - SDOHCC-ObservationResponseHungerVitalSignGroupingExample
-      - SDOHCC-ObservationResponseHungerVitalSignQuestion1Example
-      - SDOHCC-ObservationResponseHungerVitalSignQuestion2Example
-      - SDOHCC-ObservationResponseHungerVitalSignQuestion3Example
+  Extensions:
+    name: Draft Artifacts for Personal Characteristic Observations
+    description: Draft Artifacts for Personal Characteristic Observations
+    resources:
+      - SDOHCCExtensionConditionAsserter
+      - SDOHCCExtensionHealthcareServiceTelecomAppointment
+  SearchParameters:
+    name: Draft Artifacts for Personal Characteristic Observations
+    description: Draft Artifacts for Personal Characteristic Observations
+    resources:
+      - ServiceRequest-supporting-info
+      - Task-output-reference
+  DraftArtifactsExamples:
+    name: Examples of Draft Artifacts for Personal Characteristic Observations
+    description: Examples of Draft Artifacts for Personal Characteristic Observations
+    resources:
+    - SDOHCCObservationEthnicityOMBExample
+    - SDOHCCObservationGenderIdentityExample
+    - SDOHCCObservationPersonalPronounsExample
+    - SDOHCCObservationRaceOMBExample
+    - SDOHCCObservationRecordedSexGenderExample
+    - SDOHCCObservationSexualOrientationExample
+    - SDOHCCValueSetOMBEthicityCategoriesExample
+    - SDOHCCValueSetOMBRaceCategoriesExample
+    - SDOHCCValueSetPronounsValueExample
+  Examples:
+    name: Examples
+    description: Examples
+    resources:
+    - SDOHCC-ConditionAsserterDeviceExample
+    - SDOHCC-ConditionFoodInsecurityExample
+    - SDOHCC-ConditionHomelessExample
+    - SDOHCC-ConditionUnemployedExample
+    - SDOHCC-ConsentInformationDisclosureExample
+    - SDOHCC-DeviceSoftwareExample
+    - SDOHCC-GoalFoodSecurityExample
+    - SDOHCC-GroupSDOHPatientsForPayerExample
+    - SDOHCC-HealthcareServiceTelecomAppointmentExample
+    - SDOHCC-LocationExample
+    - SDOHCC-ObservationAssessmentInadequateFoodIntakeExample
+    - SDOHCC-ObservationAssessmentSocialIsolationExample
+    - SDOHCC-ObservationAssessmentTransportTooExpensiveExample
+    - SDOHCC-ObservationSexualOrientationExample
+    - SDOHCC-OrganizationClinicExample
+    - SDOHCC-OrganizationCoordinationPlatformExample
+    - SDOHCC-OrganizationPayerExample
+    - SDOHCC-PractitionerDrJanWaterExample
+    - SDOHCC-PractitionerRoleDrJanWaterExample
+    - SDOHCC-ProcedureFoodPantryApplicationAssistanceExample
+    - SDOHCC-ProcedureProvisionOfFoodExample
+    - SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample
+    - SDOHCC-RelatedPersonMotherExample
+    - SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample
+    - SDOHCC-ServiceRequestSubreferralGardenProgramExample
+    - SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample
+    - SDOHCC-TaskPatientMakeAppointmentCompletedExample
+    - SDOHCC-TaskPatientRiskQuestionnaireCompletedExample
+    - SDOHCC-TaskReferralManagementOrderFulfillmentAcceptedExample
+    - SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample
+    - SDOHCC-TaskReferralManagementOrderSubtaskAcceptedExample
+    - SDOHCC-TaskReferralManagementOrderSubtaskCompletedExample
+  PRAPARE:
+    name: PRAPARE Examples
+    description: PRAPARE Examples
+    resources:
+    - SDOHCC-StructureMapPRAPARE
+    - SDOHCC-QuestionnairePRAPARE
+    - SDOHCC-QuestionnaireResponsePRAPAREExample
+    - SDOHCC-ObservationResponsePRAPAREChildCareNeedExample
+    - SDOHCC-ObservationResponsePRAPAREClothingNeedExample
+    - SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample
+    - SDOHCC-ObservationResponsePRAPAREHousingStatusExample
+    - SDOHCC-ObservationResponsePRAPAREUnmetNeedsMultiselectExample
+  HVS:
+    name: Hunger Vital Signs Examples
+    description: Hunger Vital Signs Examples
+    resources:
+    - SDOHCC-StructureMapHungerVitalSign
+    - SDOHCC-QuestionnaireHungerVitalSign
+    - SDOHCC-QuestionnaireResponseHungerVitalSignExample
+    - SDOHCC-ObservationResponseHungerVitalSignGroupingExample
+    - SDOHCC-ObservationResponseHungerVitalSignQuestion1Example
+    - SDOHCC-ObservationResponseHungerVitalSignQuestion2Example
+    - SDOHCC-ObservationResponseHungerVitalSignQuestion3Example
 
 menu:
   Home: index.html
@@ -246,7 +246,7 @@ menu:
     Functional Use Cases:   functional_use_cases.html
     Synchronizing Applications With API Data Sources: synchronizing_applications_with_api_data_sources.html
   Specifications:
-    FHIR Artifacts Overview: fhir_artifacts_overview.html
+    FHIR Artifacts: artifacts.html
     Checking Task Status: checking_task_status.html
     Privacy and Security: privacy_and_security.html
     Must Support and Missing Data: mustsupport_and_missing_data.html
@@ -256,4 +256,3 @@ menu:
     STU2 Ballot Changes:  stu2_ballot_changes.html
     STU2 Publication Changes:  stu2_publication_changes.html
     STU2.1 Update Changes: stu2_1_update_changes.html
-  Artifact Index: artifacts.html
