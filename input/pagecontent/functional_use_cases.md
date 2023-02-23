@@ -7,8 +7,6 @@ The use cases here relate to the Gravity [Patient Stories].  Implementers will b
 ### Actors
 The actors in the workflows are described in the table below.   The graphical icons are used throughout the IG.   For each use case the assumptions regarding each type of actor will be described.
 
-<div align="center">
-
 | Actor    |  Description |
 | ----------  | ------------------ |
 |  Provider ![providericon]   | Includes licensed providers and others that interact with the patient to assess social risk, set goals, and determine/recommend referrals.   |
@@ -18,14 +16,14 @@ The actors in the workflows are described in the table below.   The graphical ic
 |  Coordination Platform (CP)  ![cpicon]          | An intermediary that receives referrals, assesses patient needs, and works with one or more CBOs to deliver the services.   |
 {:.grid}
 
-</div>
+
 ### Overview
 The functional use cases in the table below describe the referral process initiated by a provider, or other healthcare actor, and a request referral recipient, both directly and indirectly via an intermediary.   For each use case the capabilities or limitations of the actor are described.   The table links to the functional use case and the associated detailed technical exchange workflow.
 
 
-| Functional Use Case |  Description | Actors | Exchange Workflow|
-| ------------------- | ------------- | ------- | ---------------- |
-| [Direct Referral](functional_use_cases.html#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | ![providericon], CC, Pa, CBO |   [Direct Referral Exchange Workflow](exchange_workflow#direct-referral-exchange)              |
+| Functional Use Case |  Description           | Actors | Exchange Workflow|
+| ------------------- | ---------------------- | ------- | ---------------- |
+| [Direct Referral](functional_use_cases.html#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | ![providericon], ![ccicon], ![patienticon], ![cboicon] |   [Direct Referral Exchange Workflow](exchange_workflow#direct-referral-exchange)              |
 | [Direct Referral (light)](functional_use_cases.html#directreferrallight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | ![providericon]. ![ccicon], ![patienticon], ![ccicon], ![cboicon]  | [Direct Referral (light) Exchange Workflow](exchange_workflow.html#direct-referral-light-exchange) |
 | [Indirect Referral](functional_use_cases.html#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | ![providericon]. ![ccicon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] | [Indirect Referral Exchange Workflow](exchange_workflow.html#indirect-referral-exchange)                   |
 | [Patient Coordiation]| a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange | ![providericon]. ![ccicon], ![patienticon], ![ccicon], ![cboicon]  | [Patient Workflow Exchange](exchange_workflow.html#patient-exchange) |
@@ -48,8 +46,7 @@ The CBO may not accept the referral or be unable to perform the requested servic
 
 #### Actors and Assumptions
 
-<div align="center">
-&nbsp;
+
 
 | Actor    | Assumption |
 | ---------- | ------------------ |
@@ -58,7 +55,6 @@ The CBO may not accept the referral or be unable to perform the requested servic
 |  Community Based Organization (CBO)  ![cboicon] | CBO has a FHIR API   |
 {:.grid .center }
 
-</div>
 
 #### Annotated Flow Diagram
 ![Direct Referral Functional Use Case](FunctionalUseCaseFlowDirectReferral3.jpg){:.center }
@@ -87,9 +83,7 @@ In this use case a provider works with a patient using a standardized assessment
 Functionally, this use case is the same as the previous use case, except that the CBO has a FHIR-enabled application, but does not support a FHIR API.  As a result, the provider can't push information to the CBO, but rather tha CBO needs to pull information from the provider.    At the conclusion of the referral, the CBO POSTS needed information to the Provider FHIR server (e.g., Procedures) and updates the status and the linked resources of the Task.
 
 #### Actors and Assumptions
-<div align="center">
 
-&nbsp;
 | Actor    | Assumption |
 | -------- | ----------- |
 |  Provider ![providericon]   | Provider has a FHIR API   |
@@ -97,7 +91,7 @@ Functionally, this use case is the same as the previous use case, except that th
 |  Community Based Organization (CBO)  ![cboicon] | CBO has a FHIR-enabled API   |
 {:.grid .center }
 
-</div>
+
 
 #### Annotated Flow Diagram
 ![Functional Use Case Direct Referral Light](FunctionalUseCaseFlowDirectLightReferral3.jpg){:.center }
@@ -132,9 +126,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 
 #### Actors and Assumptions
 
-<div align="center">
 
-&nbsp;
 | Actor    |   Assumption |
 | ---------- | ------------------- |
 |  Provider ![providericon]  | Provider has a FHIR API   |
@@ -143,7 +135,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 |  Community Based Organization (CBO) ![cpicon] | CBO has a FHIR  API   |
 {:.grid .center }
 
-</div>
+
 
 #### Annotated Flow Diagram
 ![Functional Use Case Indirect Referral](FunctionalUseCaseFlowIndirectDirectReferral3.jpg){:.center }
@@ -185,9 +177,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 
 #### Actors and Assumptions
 
-<div align="center">
 
-&nbsp;
 | Actor    |  Assumption |
 | -------- | ---------- |
 |  Provider ![providericon]   | Provider has a FHIR API   |
@@ -196,7 +186,6 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 |  Community Based Organization (CBO) ![cboicon]  | CBO has a FHIR enabled application (must do a push to CP)   |
 {:.grid .center}
 
-</div>
 
 #### Annotated Flow Diagram
 [Functional Use Case Indirect Direct Light](FunctionalUseCaseFlowIndirectDirectLightReferral3.jpg){:.center }
@@ -230,9 +219,6 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 ### Closing the loop with the patient
 #### Actors and Assumptions
 
-<div align="center">
-
-&nbsp;
 | Actor    | Assumption |
 | ----------  | ------------------ |
 |  Provider! [providericon] | Provider has a FHIR API   |
@@ -241,7 +227,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 |  Community Based Organization (CBO) ![cboicon]  | CBO has a FHIR enabled application (must do a push to CP)   |
 {:.grid}
 
-</div>
+
 
 ### Patient Workflow
 <a name="patientworkflow">
