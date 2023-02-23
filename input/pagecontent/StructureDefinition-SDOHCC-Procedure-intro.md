@@ -1,18 +1,11 @@
 
 ### Purpose
-Procedures are interventions performed in response to a ServiceRequest as part of the referral process, and are referenced by the Task that is created to track execution of the ServiceRequest.
-See the [Data Modeling Framework] for more detail on the role of the Goal in the creation of health concerns, goal setting (patient-centered goals), and creation of referrals using service request and procedure/intervention.
+[SDOHCC Procedure] is generally intended to represent a procedure performed to address an identified social risk or need (i.e., [SDOHCC Condition], [SDOHCC Observation Screening Response], [SDOHCC Observation Assessment]). SDOHCC Procedure can be based on an [SDOHCC ServiceRequest] and pertain to an [SDOHCC Goal]. See the [Data Modeling Framework] for more detail on the relationships between SDOHCC Procedure and the other profiles in this IG.
 
 ### Usage
-* Needs an intro that explains what the profile is for and point to the page(s) in the spec where its use in workflow is described.
-
-This profile supports all of the SDOH procedure defined in the IG.  Creating and maintaining a separate Procedure profile for each SDOH category would at present be burdensome.
-Instead the table below defines the appropriate VSAC-hosted value set to use for each of the SDOH categories.
-
-For each category of SDOH procedure, a specific value SHALL be used for Goal.category, and a specific valueset SHALL be used for the Procedure.code as shown in the table below.
-Implentations **SHOULD** use the following a value from the listed value sets when a code exists that describes the concept. The value sets are maintained in the  [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) database. The [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion) contains the full set of values.
-
-The Gravity Project plans to work with the HL7 Vocabulary WG to determine how best to represent the domain specific value sets in each of the relevant resources and to establish appropriate methods to validate the consistent use of the correct domain specific codes. Future versions of this IG will include the logic to select specific value sets based on the SDOH domain.
+Rather than creating a separate Procedure profile for each SDOH category (domain) covered in this IG (e.g., food insecurity, transportation insecurity, etc.), this profile can support any SDOH category. The optional Procedure.category slice binds to a required value set of SDOH category codes (first column below). The code selected for Procedure.category determines a preferred, category-specific value set for Procedure.code as per the table below.
+The preferred value sets for Procedure.code are hosted in the [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) (VSAC). [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion) in VSAC is a grouper value set containing all members of the VSAC Value Sets for Procedure below.
+The Gravity Project plans to continue to work with the HL7 Vocabulary WG to determine how best to represent and validate the preferred, category-specific value sets for each of the relevant SDOH CC profiles.
 
 
 | [`Procedure.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | `Procedure.code` ValueSet | ValueSet OID |

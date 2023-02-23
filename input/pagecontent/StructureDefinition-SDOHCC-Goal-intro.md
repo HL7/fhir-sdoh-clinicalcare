@@ -1,18 +1,13 @@
 ### Purpose
-Goals are established by a patient and their provider and address an Observation or a Condition.
-The ServiceRequest used as part a referral can reference an SOH Goal.  See the [Data Modeling Framework] for more detail on the role of the Goal in the creation of health concerns, goal setting (patient-centered goals), and creation of referrals using service request and procedure/intervention.
+[SDOHCC Goal] is generally intended to represent a goal established to address an identified social risk or need (i.e., [SDOHCC Condition], [SDOHCC Observation Screening Response], [SDOHCC Observation Assessment]). An [SDOHCC ServiceRequest] and [SDOHCC Procedure] can pertain to an SDOHCC Goal. See the [Data Modeling Framework] for more detail on the relationships between SDOHCC Goal and the other profiles in this IG.
 
 ### Usage
-This profile supports all of the SDOH goal defined in the IG.  Creating and maintaining a separate Goal profile for each SDOH category would at present be burdensome.
-Instead the table below defines the appropriate VSAC-hosted value set to use for each of the SDOH categories.
 
-For each category of SDOH goal, a specific value SHALL be used for Goal.category, and a specific valueset SHALL be used for the Goal.code as shown in the table below.
-Implentations **SHOULD** use the following a value from the listed value sets when a code exists that describes the concept. The value sets are maintained in the  [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) database.  The  [Social Determinants of Health Goals Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion) contains the full set of values.
+Rather than creating a separate Goal profile for each SDOH category (domain) covered in this IG (e.g., food insecurity, transportation insecurity, etc.), this profile can support any SDOH category. The optional Goal.category slice binds to a required value set of SDOH category codes (first column below). The code selected for Goal.category determines a preferred, category-specific value set for Goal.description as per the table below.
+The preferred value sets for Goal.description are hosted in the [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/). The  [Social Determinants of Health Goals Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion) in VSAC is a grouper value set containing all members of the VSAC Value Sets for Goal below.
+The Gravity Project plans to continue to work with the HL7 Vocabulary WG to determine how best to represent and validate the preferred, category-specific value sets for each of the relevant SDOH CC profiles.
 
-The Gravity Project plans to work with the HL7 Vocabulary WG to determine how best to represent the domain specific value sets in each of the relevant resources and to establish appropriate methods to validate the consistent use of the correct domain specific codes. Future versions of this IG will include the logic to select specific value sets based on the SDOH domain.
-
-
-| [`Goal.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | `Goal.code` ValueSet | ValueSet OID |
+| [`Goal.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | `Goal.description` ValueSet | ValueSet OID |
 | ------ | -------------------- | ------------------------- | ------------ |
 | educational-attainment  | Educational Attainment | [VSAC -  Less than high school education Goals ](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.55/expansion/Latest) | 2.16.840.1.113762.1.4.1247.55 |
 | elder-abuse  | Elder Abuse | [VSAC -  Elder Abuse Goals ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.65/expansion/Latest) |2.16.840.1.113762.1.4.1247.65 |
