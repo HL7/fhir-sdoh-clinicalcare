@@ -1,16 +1,16 @@
 
 
-# Gravity Confluence
+<!-- Gravity Confluence  -->
 [Patient Stories]: (https://confluence.hl7.org/display/GRAV/Patient+Stories)
 [Gravity Confluence Technology Pages]: https://confluence.hl7.org/display/GRAV/Technical+Workstream+Dashboard
 [Gravity Project]:  https://confluence.hl7.org/display/GRAV/The+Gravity+Project
 
-# Other IGs
+<!-- # Other IGs -->
 [US Core Implementation Guide]: https://www.hl7.org/fhir/us/core/
 [HL7 Structured Data Capture IG]: http://hl7.org/fhir/uv/sdc/STU3/extraction.html#structuremap-based-extraction
 [Bulk Data exchange IG]: http://hl7.org/fhir/uv/bulkdata/
 
-# Technical IG Content
+<!--# Technical IG Content -->
 [SDOHCCObservationAssessment]: StructureDefinition-SDOHCC-ObservationAssessment.html
 [SDOHCC ServiceRequest]: StructureDefinition-SDOHCC-ServiceRequest.html
 [SDOHCC Task For Referral Management]: StructureDefinition-SDOHCC-TaskForReferralManagement.html
@@ -20,7 +20,7 @@
 [SDOHCC Condition]: StructureDefinition-SDOHCC-Condition.html
 [SDOHCC Consent]: StructureDefinition-SDOHCC-Consent.html
 
-# Document Sections
+<!--# Document Sections -->
 [Indirect Referral]: functional_use_cases.html#indirectreferral
 [Indirect Referral Light]: functional_use_cases.html#indirectreferrallight
 [Direct Referral]: functional_use_cases.html#directreferral
@@ -38,7 +38,7 @@
 [Checking Task Status]: checking_task_status.html
 [Privacy and Security]: privacy_and_security.html
 
-# Icons
+<!--# Icons -->
 [patienticon]: ./Patient.png
 {: height="15px" width="15px"}
 
