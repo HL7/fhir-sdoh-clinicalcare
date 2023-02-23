@@ -26,7 +26,7 @@ The functional use cases in the table below describe the referral process initia
 | [Direct Referral](functional_use_cases.html#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | ![providericon], ![ccicon], ![patienticon], ![cboicon] |   [Direct Referral Exchange Workflow](exchange_workflow#direct-referral-exchange)              |
 | [Direct Referral (light)](functional_use_cases.html#directreferrallight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | ![providericon]. ![ccicon], ![patienticon], ![ccicon], ![cboicon]  | [Direct Referral (light) Exchange Workflow](exchange_workflow.html#direct-referral-light-exchange) |
 | [Indirect Referral](functional_use_cases.html#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | ![providericon]. ![ccicon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] | [Indirect Referral Exchange Workflow](exchange_workflow.html#indirect-referral-exchange)                   |
-| [Patient Coordiation]| a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange | ![providericon]. ![ccicon], ![patienticon], ![ccicon], ![cboicon]  | [Patient Workflow Exchange](exchange_workflow.html#patient-exchange) |
+| [Patient Coordination](functional_use_cases.html#patientworkflow| a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange | ![providericon]. ![ccicon], ![patienticon], ![ccicon], ![cboicon]  | [Patient Workflow Exchange](exchange_workflow.html#patient-exchange) |
 {:.grid}
 
 
@@ -37,7 +37,7 @@ sharing with them can be facilitated by a Business Associate Agreement (BAA) bet
 Entities covered under a BAA may be able to receive Protected Health Information (PHI) as part of the agreement without consent of the patient. However, they are required to observe the same limitations as covered entities with regard the protection and disclosure of PHI.  Patient consent would generally required for a provider to disclose a patient's PHI to a CBO or CP that is neither a covered entity nor covered by a BAA.  See the [Privacy and Security] section for more detailed requirements on protecting patient privacy.
 
 ### Direct Referral
-<a name="directreferral">
+<a name="directreferral"></a>
 
 In this use case a provider works with a patient using a standardized assessment tool to identify and prioritize SDOH risks (steps 1-3), and then refers the patient to a CBO for help addressing those needs (steps4-9a) a CBO to help address those needs.  The CBO provides the requested support to the patient and the updated information is shared with the referring provider.
 
@@ -116,7 +116,8 @@ Functionally, this use case is the same as the previous use case, except that th
 
 
 ### Indirect Referral with Direct CBO
-<a name="indirectreferral">
+<a name="indirectreferral"></a>
+
 In this use case a provider works with a patient using a standardized assessment tool to identify and prioritize SDOH risks, and then refers the patient indirectly via a CP to a CBO for help addressing those needs.  The CP relays the referral to the CBO.  The CBO provides the requested support to the patient and the updated information is relayed back through the CP where it is shared with the referring provider.
 
 Functionally, this indirect referral is essentially two direct referrals (Provider to CP, and CP to CBO) chained together.
@@ -167,7 +168,8 @@ The flow is the same as for the Direct Referral but with the CP acting as a prov
 {:.grid .center  }
 
 ###  Indirect Referral with Direct Light CBO
-<a name="directreferrallight">
+<a name="directreferrallight"></a>
+
 Applies to Providers and Payers as the referral requester, and patient is assessed by a provider and referred to a CP. CP refers to a CBO to deliver the service.
 
 This section differs from the previous in that the interactions between the CP and CBO follow the Direct Light paradigm. The CBO will do a push to the CP. That is, CBOs without their own FHIR server will modify tasks directly on the CP’s FHIR server.
@@ -230,7 +232,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 
 
 ### Patient Workflow
-<a name="patientworkflow">
+<a name="patientworkflow"></a>
 
 The table below collects the patient interactions from the use cases described above.
 
