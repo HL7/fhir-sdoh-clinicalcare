@@ -25,10 +25,10 @@ The functional use cases in the table below describe the referral process initia
 
 | Functional Use Case |  Description | Actors | Exchange Workflow|
 | ------------------- | ------------- | ------- | ---------------- |
-| [Direct Referral](fulloutline.html#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | ![providericon], CC, Pa, CBO |   [Direct Referral Exchange Workflow](fulloutline.html#direct-referral-exchange)              |
-| [Direct Referral (light)](fulloutline.html#directreferrallight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | ![providericon]. ![ccicon], ![patienticon], ![ccicon], ![cboicon]  | [Direct Referral (light) Exchange Workflow](fulloutline.html#direct-referral-light-exchange) |
-| [Indirect Referral](fulloutline.html#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | ![providericon]. ![ccicon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] | [Indirect Referral Exchange Workflow](fulloutline.html#indirect-referral-exchange)                   |
-| [Patient Coordiation]| a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange | ![providericon]. ![ccicon], ![patienticon], ![ccicon], ![cboicon]  | (no section) |
+| [Direct Referral](functional_use_cases.html#directreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | ![providericon], CC, Pa, CBO |   [Direct Referral Exchange Workflow](exchange_workflow#direct-referral-exchange)              |
+| [Direct Referral (light)](functional_use_cases.html#directreferrallight) | A “light” version of the direct referral where the performing entity uses an application that can access the referring entities’ API (but does not have FHIR API capability) | ![providericon]. ![ccicon], ![patienticon], ![ccicon], ![cboicon]  | [Direct Referral (light) Exchange Workflow](exchange_workflow.html#direct-referral-light-exchange) |
+| [Indirect Referral](functional_use_cases.html#indirectreferral) | A direct referral between a requesting entity and a performing entity where both entities have FHIR APIs to facilitate the exchanges | ![providericon]. ![ccicon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] | [Indirect Referral Exchange Workflow](exchange_workflow.html#indirect-referral-exchange)                   |
+| [Patient Coordiation]| a patient application may optionally communicate directly with any of the entities that support a FHIR API and provide a mechanism for secure exchange | ![providericon]. ![ccicon], ![patienticon], ![ccicon], ![cboicon]  | [Patient Workflow Exchange](exchange_workflow.html#patient-exchange) |
 {:.grid}
 
 
@@ -49,6 +49,7 @@ The CBO may not accept the referral or be unable to perform the requested servic
 #### Actors and Assumptions
 
 <div align="center">
+&nbsp;
 
 | Actor    | Assumption |
 | ---------- | ------------------ |
@@ -88,12 +89,14 @@ Functionally, this use case is the same as the previous use case, except that th
 #### Actors and Assumptions
 <div align="center">
 
+&nbsp;
 | Actor    | Assumption |
-| ---------- | ------------------ |
+| -------- | ----------- |
 |  Provider ![providericon]   | Provider has a FHIR API   |
 |  Patient  ![patienticon]   | Patient has a FHIR-enabled application  |
 |  Community Based Organization (CBO)  ![cboicon] | CBO has a FHIR-enabled API   |
 {:.grid .center }
+
 </div>
 
 #### Annotated Flow Diagram
@@ -131,6 +134,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 
 <div align="center">
 
+&nbsp;
 | Actor    |   Assumption |
 | ---------- | ------------------- |
 |  Provider ![providericon]  | Provider has a FHIR API   |
@@ -183,8 +187,9 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 
 <div align="center">
 
+&nbsp;
 | Actor    |  Assumption |
-| ---------- | ------------------ |
+| -------- | ---------- |
 |  Provider ![providericon]   | Provider has a FHIR API   |
 |  Patient  ![patienticon]   | Patient has a FHIR enabled personal application  |
 |  Coordinating Platform  (CP) ![cpicon]   | CP has a FHIR API   |
@@ -227,6 +232,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 
 <div align="center">
 
+&nbsp;
 | Actor    | Assumption |
 | ----------  | ------------------ |
 |  Provider! [providericon] | Provider has a FHIR API   |
