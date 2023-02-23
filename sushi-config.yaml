@@ -58,7 +58,7 @@ pages:
   exchange_workflow.md:
     title: Exchange Workflow
   functional_use_cases.md:
-    title: Functional Use Cases
+    title: Functional Use Cases (non-technical)
   synchronizing_applications_with_api_data_sources.md:
     title: Synchronizing Applications With API Data Sources
   fhir_artifacts_overview.md:
@@ -131,6 +131,18 @@ groups:
     description: Code Systems
     resources:
       - SDOHCCCodeSystemTemporaryCodes
+  Extensions:
+    name: Extensions
+    description: Extensions
+    resources:
+      - SDOHCCExtensionConditionAsserter
+      - SDOHCCExtensionHealthcareServiceTelecomAppointment
+  SearchParameters:
+    name: Search Parameters
+    description: Search Parameters
+    resources:
+      - ServiceRequest-supporting-info
+      - Task-output-reference
   DraftArtifacts:
     name: Draft Artifacts for Personal Characteristic Observations
     description: Draft Artifacts for Personal Characteristic Observations
@@ -145,31 +157,16 @@ groups:
       - SDOHCCValueSetOMBEthnicityCategories
       - SDOHCCValueSetOMBRaceCategories
       - SDOHCCValueSetPronounsValue
-  Extensions:
-    name: Draft Artifacts for Personal Characteristic Observations
-    description: Draft Artifacts for Personal Characteristic Observations
-    resources:
-      - SDOHCCExtensionConditionAsserter
-      - SDOHCCExtensionHealthcareServiceTelecomAppointment
-  SearchParameters:
-    name: Draft Artifacts for Personal Characteristic Observations
-    description: Draft Artifacts for Personal Characteristic Observations
-    resources:
-      - ServiceRequest-supporting-info
-      - Task-output-reference
   DraftArtifactsExamples:
-    name: Examples of Draft Artifacts for Personal Characteristic Observations
+    name: Draft Artifacts Examples
     description: Examples of Draft Artifacts for Personal Characteristic Observations
     resources:
-    - SDOHCCObservationEthnicityOMBExample
-    - SDOHCCObservationGenderIdentityExample
-    - SDOHCCObservationPersonalPronounsExample
-    - SDOHCCObservationRaceOMBExample
-    - SDOHCCObservationRecordedSexGenderExample
-    - SDOHCCObservationSexualOrientationExample
-    - SDOHCCValueSetOMBEthicityCategoriesExample
-    - SDOHCCValueSetOMBRaceCategoriesExample
-    - SDOHCCValueSetPronounsValueExample
+    - SDOHCC-ObservationEthnicityOMBExample
+    - SDOHCC-ObservationGenderIdentityExample
+    - SDOHCC-ObservationPersonalPronounsExample
+    - SDOHCC-ObservationRaceOMBExample
+    - SDOHCC-ObservationRecordedSexGenderExample
+    - SDOHCC-ObservationSexualOrientationExample
   Examples:
     name: Examples
     description: Examples
@@ -187,7 +184,6 @@ groups:
     - SDOHCC-ObservationAssessmentInadequateFoodIntakeExample
     - SDOHCC-ObservationAssessmentSocialIsolationExample
     - SDOHCC-ObservationAssessmentTransportTooExpensiveExample
-    - SDOHCC-ObservationSexualOrientationExample
     - SDOHCC-OrganizationClinicExample
     - SDOHCC-OrganizationCoordinationPlatformExample
     - SDOHCC-OrganizationPayerExample
