@@ -58,7 +58,7 @@ pages:
   exchange_workflow.md:
     title: Exchange Workflow
   functional_use_cases.md:
-    title: Functional Use Cases
+    title: Functional Use Cases (non-technical)
   synchronizing_applications_with_api_data_sources.md:
     title: Synchronizing Applications With API Data Sources
   fhir_artifacts_overview.md:
