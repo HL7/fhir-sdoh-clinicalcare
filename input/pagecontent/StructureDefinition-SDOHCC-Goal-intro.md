@@ -27,3 +27,5 @@ The Gravity Project plans to continue to work with the HL7 Vocabulary WG to dete
 | transportation-insecurity  | Transportation Insecurity | [VSAC -  Transportation Insecurity Goals ](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.163/expansion/Latest) |2.16.840.1.113762.1.4.1247.163 |
 | veteran-status  | Veteran Status | VSAC -  Veteran Status Goals  | none |
 {:.grid}
+
+{% include markdown-link-references.md %}
