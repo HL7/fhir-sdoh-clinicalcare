@@ -161,15 +161,12 @@ groups:
     name: Examples of Draft Artifacts for Personal Characteristic Observations
     description: Examples of Draft Artifacts for Personal Characteristic Observations
     resources:
-    - SDOHCCObservationEthnicityOMBExample
-    - SDOHCCObservationGenderIdentityExample
-    - SDOHCCObservationPersonalPronounsExample
-    - SDOHCCObservationRaceOMBExample
-    - SDOHCCObservationRecordedSexGenderExample
-    - SDOHCCObservationSexualOrientationExample
-    - SDOHCCValueSetOMBEthicityCategoriesExample
-    - SDOHCCValueSetOMBRaceCategoriesExample
-    - SDOHCCValueSetPronounsValueExample
+    - SDOHCC-ObservationEthnicityOMBExample
+    - SDOHCC-ObservationGenderIdentityExample
+    - SDOHCC-ObservationPersonalPronounsExample
+    - SDOHCC-ObservationRaceOMBExample
+    - SDOHCC-ObservationRecordedSexGenderExample
+    - SDOHCC-ObservationSexualOrientationExample
   Examples:
     name: Examples
     description: Examples
@@ -187,7 +184,6 @@ groups:
     - SDOHCC-ObservationAssessmentInadequateFoodIntakeExample
     - SDOHCC-ObservationAssessmentSocialIsolationExample
     - SDOHCC-ObservationAssessmentTransportTooExpensiveExample
-    - SDOHCC-ObservationSexualOrientationExample
     - SDOHCC-OrganizationClinicExample
     - SDOHCC-OrganizationCoordinationPlatformExample
     - SDOHCC-OrganizationPayerExample
