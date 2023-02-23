@@ -93,7 +93,7 @@ groups:
     resources:
       - SDOHCC-CoordinationPlatform
       - SDOHCC-ReferralRecipientLight
-      - SDOHCC-ReferralRecipientLight
+      - SDOHCC-ReferralRecipient
       - SDOHCC-ReferralSource
       - SDOHCC-PatientApp
   Profiles:
@@ -229,6 +229,7 @@ groups:
       - SDOHCC-ObservationResponseHungerVitalSignQuestion1Example
       - SDOHCC-ObservationResponseHungerVitalSignQuestion2Example
       - SDOHCC-ObservationResponseHungerVitalSignQuestion3Example
+
   menu:
     Home: index.html
     Table of Contents:  toc.html
