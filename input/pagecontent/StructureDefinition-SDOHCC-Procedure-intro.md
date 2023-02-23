@@ -34,10 +34,6 @@ The Gravity Project plans to work with the HL7 Vocabulary WG to determine how be
 | stress  | Stress | [VSAC -  Stress Procedures ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.87/expansion/Latest ) |2.16.840.1.113762.1.4.1247.87|
 | transportation-insecurity  | Transportation Insecurity | [VSAC -  Transportation Insecurity Procedures ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.27/expansion/Latest ) |2.16.840.1.113762.1.4.1247.27|
 | veteran-status  | Veteran Status | [VSAC -  Veteran Status Procedures ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.90/expansion/Latest ) |2.16.840.1.113762.1.4.1247.90|
-<<<<<<< HEAD
 {:.grid}
 
 {% include markdown-link-references.md %}
-=======
-{:.grid}
->>>>>>> 24509a3 (merge profile changes into FSH_based master branch)
