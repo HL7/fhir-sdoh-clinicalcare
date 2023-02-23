@@ -230,30 +230,30 @@ groups:
       - SDOHCC-ObservationResponseHungerVitalSignQuestion2Example
       - SDOHCC-ObservationResponseHungerVitalSignQuestion3Example
 
-  menu:
-    Home: index.html
-    Table of Contents:  toc.html
-    Background:
-      Gravity Background: gravity_background.html
-      SDOH Clinical Care Background: sdoh_clinical_care_background.html
-      Technical Background : technical_background.html
-      Glossary: glossary.html
-      Credits: credits.html
-    Implementation Guidance:
-      Survey Instrument Support: survey_instrument_support.html
-      Mapping Instructions: mapping_instructions.html
-      Exchange Workflow:  exchange_workflow.html
-      Functional Use Cases:   functional_use_cases.html
-      Synchronizing Applications With API Data Sources: synchronizing_applications_with_api_data_sources.html
-    Specifications:
-      FHIR Artifacts Overview: fhir_artifacts_overview.html
-      Checking Task Status: checking_task_status.html
-      Privacy and Security: privacy_and_security.html
-      Must Support and Missing Data: mustsupport_and_missing_data.html
-      Draft Specifications for Personal Characteristics:   draft_specifications_for_personal_characteristics.html
-    Downloads: downloads.html
-    Change History:
-      STU2 Ballot Changes:  stu2_ballot_changes.html
-      STU2 Publication Changes:  stu2_publication_changes.html
-      STU2.1 Update Changes: stu2_1_update_changes.html
-    Artifact Index: artifacts.html
+menu:
+  Home: index.html
+  Table of Contents:  toc.html
+  Background:
+    Gravity Background: gravity_background.html
+    SDOH Clinical Care Background: sdoh_clinical_care_background.html
+    Technical Background : technical_background.html
+    Glossary: glossary.html
+    Credits: credits.html
+  Implementation Guidance:
+    Survey Instrument Support: survey_instrument_support.html
+    Mapping Instructions: mapping_instructions.html
+    Exchange Workflow:  exchange_workflow.html
+    Functional Use Cases:   functional_use_cases.html
+    Synchronizing Applications With API Data Sources: synchronizing_applications_with_api_data_sources.html
+  Specifications:
+    FHIR Artifacts Overview: fhir_artifacts_overview.html
+    Checking Task Status: checking_task_status.html
+    Privacy and Security: privacy_and_security.html
+    Must Support and Missing Data: mustsupport_and_missing_data.html
+    Draft Specifications for Personal Characteristics:   draft_specifications_for_personal_characteristics.html
+  Downloads: downloads.html
+  Change History:
+    STU2 Ballot Changes:  stu2_ballot_changes.html
+    STU2 Publication Changes:  stu2_publication_changes.html
+    STU2.1 Update Changes: stu2_1_update_changes.html
+  Artifact Index: artifacts.html
