@@ -131,6 +131,18 @@ groups:
     description: Code Systems
     resources:
       - SDOHCCCodeSystemTemporaryCodes
+  Extensions:
+    name: Extensions
+    description: Extensions
+    resources:
+      - SDOHCCExtensionConditionAsserter
+      - SDOHCCExtensionHealthcareServiceTelecomAppointment
+  SearchParameters:
+    name: Search Parameters
+    description: Search Parameters
+    resources:
+      - ServiceRequest-supporting-info
+      - Task-output-reference
   DraftArtifacts:
     name: Draft Artifacts for Personal Characteristic Observations
     description: Draft Artifacts for Personal Characteristic Observations
@@ -145,20 +157,8 @@ groups:
       - SDOHCCValueSetOMBEthnicityCategories
       - SDOHCCValueSetOMBRaceCategories
       - SDOHCCValueSetPronounsValue
-  Extensions:
-    name: Draft Artifacts for Personal Characteristic Observations
-    description: Draft Artifacts for Personal Characteristic Observations
-    resources:
-      - SDOHCCExtensionConditionAsserter
-      - SDOHCCExtensionHealthcareServiceTelecomAppointment
-  SearchParameters:
-    name: Draft Artifacts for Personal Characteristic Observations
-    description: Draft Artifacts for Personal Characteristic Observations
-    resources:
-      - ServiceRequest-supporting-info
-      - Task-output-reference
   DraftArtifactsExamples:
-    name: Examples of Draft Artifacts for Personal Characteristic Observations
+    name: Draft Artifacts Examples
     description: Examples of Draft Artifacts for Personal Characteristic Observations
     resources:
     - SDOHCC-ObservationEthnicityOMBExample
