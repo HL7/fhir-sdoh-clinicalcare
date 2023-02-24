@@ -2,11 +2,11 @@
 
 The Gravity Project focus for this version of the IG is to standardize the exchange of SDOH information related to the following activities:
 
-1)	assessment of social risk, 
+1)	assessment of social risk,
 
-2)	establishing coded health concerns/problems, 
+2)	establishing coded health concerns/problems,
 
-3) 	creating patient driven goals, and 
+3) 	creating patient driven goals, and
 
 4)	defining a RESTful closed loop referral process to manage interventions.
 
@@ -24,7 +24,7 @@ The scope of interactions is intended to cover all of the interactions shown wit
 
 ####  Out of Scope
 
-The following items are out of scope for this version of the IG.  
+The following items are out of scope for this version of the IG.
 
 1) Providing guidance on the frequency of administering assessment (this is left up to the responsible organizations based on their standards of practice).
 
@@ -45,4 +45,9 @@ Coded SDOH content is captured across core health care activities: screening/ass
 ### Data Modeling Framework
 The diagram below shows the data model for the assessment process including the creation of health concerns, goal setting (patient-centered goals), and creation of referrals using service request and procedure/intervention. The graphic represents relationships defined in this IG for the Questionnaire, Questionnaire Response, Observation, Condition, Goal, Task, ServiceRequest and Procedure Resources. The following [link](fhir_artifacts_overview.html) will take you to a page that describes the FHIR resources and their uses as well as providing further links to each of the detailed profiles.
 
-<table><tr><td><img src="FHIRModeling.jpg" /></td></tr></table>
+
+<object  data="FHIR_Modeling.svg type="image/svg+xml"/>
+
+New SVG Image as img.
+<img src="FHIR_Modeling.svg" alt="FHIR Modeling" title="FHIR Modeling"/>
+<br/>
