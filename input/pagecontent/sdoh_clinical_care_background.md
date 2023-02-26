@@ -45,4 +45,5 @@ Coded SDOH content is captured across core health care activities: screening/ass
 ### Data Modeling Framework
 The diagram below shows the data model for the assessment process including the creation of health concerns, goal setting (patient-centered goals), and creation of referrals using service request and procedure/intervention. The graphic represents relationships defined in this IG for the [Questionnaire] and  [QuestionnaireResponse] resources, as well as the [Observation], [SDOHCC Condition], [SDOHCC Goal], [SDOHCC Task], [SDOHCC ServiceRequest] and [SDOHCC Procedure] profiles.
 
-<object  data="FHIRModeling.svg" type="image/svg+xml"/></object>
+<object data="FHIRModeling.svg" type="image/svg+xml"></object>
+<br/>
