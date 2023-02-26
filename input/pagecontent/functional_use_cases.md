@@ -151,7 +151,7 @@ See <a href="StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal FHIR profile</a> 
 - CBO may not accept the referral or be unable to perform the requested service
 - Closing the loop via patient reported outcomes
 
-<table><tr><td><img src="FunctionalUseCaseFlowDirectReferral3.jpg" /></td></tr></table>
+<object data="FunctionalUseCaseFlowDirectReferral3.svg" type="image/svg+xml"></object>
 
 
 ###Direct Referral Light (Push by CBO to Provider, involving <a href="checking_task_status.html#polling">Polling</a>)
