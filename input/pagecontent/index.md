@@ -41,33 +41,6 @@ Implementers should pay specific attention to the following sections. They are l
 * [Artifacts Index](artifacts.html) provides easy access for all implementers the FHIR R4 profiles, examples and other FHIR artifacts defined in this implementation guide and linked from this section -- this section also includes details for the declared capability statements for respective servers and clients
 * [Downloads](downloads.html) links to allow implementers to download the IG and various artifacts
 
-### Support for external terminologies for ServiceRequest and Procedure
-
-If implementers of this IG wish to use terminologies that are not part of the required value sets for specific elements that have a type of CodableConcept (such as ServiceRequest.code and Procedure.code) they may include a specific Coding that specifies a system (URL that is defined and supported by the terminology author) as well as the specific code (define in the terminology) as long as the meaning of the code is a concept that is logically the same as, or contained in the concept, of the required code.
-
-The following is an example for a ServiceRequest or Procedure where the external terminology
-
-URL is  : http://terminologysystem and the code is : SummerProgram
-
-		"code" : {
-  	  "coding" : [
-   	   {
- 	       "system" : "http://snomed.info/sct",
-	        "code" : "467681000124101",
-	        "display" : "Assistance with application for Summer Food Service Program"
-	      }
-	      ]
-	    },
-	    {
-	      "coding" : [
-	        {
-	          "system" : "http://terminologysystem",
-	          "code" : "SummerProgram",
-	          "display" : "Summer Food Service Program"
-	        }
-	      ]
-	    }
-	  ],
 
 
 

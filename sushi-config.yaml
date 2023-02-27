@@ -85,7 +85,7 @@ pages:
     title: Artifacts Index
   glossary.md:
     title: Glossary
-  ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.md:
+  ImplementationGuide.md:
      title: ImplementationGuide
 
 groups:
@@ -250,7 +250,7 @@ menu:
     Must Support and Missing Data: mustsupport_and_missing_data.html
     Draft Specifications for Personal Characteristics:   draft_specifications_for_personal_characteristics.html
     Downloads: downloads.html
-    ImplementationGuide: ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.html
+    ImplementationGuide: ImplementationGuide.md
   Change History:
     STU2 Ballot Changes:  stu2_ballot_changes.html
     STU2 Publication Changes:  stu2_publication_changes.html
