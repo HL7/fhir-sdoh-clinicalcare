@@ -7,6 +7,8 @@ canonical: http://hl7.org/fhir/us/sdoh-clinicalcare
 FSHOnly: false
 applyExtensionMetadataToRoot: false
 id: hl7.fhir.us.sdoh-clinicalcare
+packageId: hl7.fhir.us.sdoh-clinicalcare
+url: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.sdoh-clinicalcare
 name: Sdohclinicalcare
 dependencies:
   hl7.fhir.us.core:
