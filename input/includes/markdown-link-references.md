@@ -40,16 +40,16 @@
 
 <!--# Icons -->
 [patienticon]: ./Patient.png
-{: height="15px" width="15px"}
+{: height="25px" width="25px"}
 
 [providericon]: Provider.png
-{: height="15px" width="15px"}
+{: height="25px" width="25px"}
 
 [cboicon]: CBO.png
-{: height="15px" width="15px"}
+{: height="25px" width="25px"}
 
 [ccicon]: CC.png
-{: height="15px" width="15px"}
+{: height="25px" width="25px"}
 
 [cpicon]: CoordinationPlatform.png
-{: height="15px" width="15px"}
+{: height="25px" width="25px"}
