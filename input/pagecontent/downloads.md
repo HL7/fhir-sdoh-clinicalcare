@@ -19,3 +19,8 @@ The following package file includes an NPM package file used by many of the FHIR
 * [XML](examples.xml.zip)
 * [JSON](examples.json.zip)
 * [TTl](examples.ttl.zip)
+
+### Implementation Guide Details
+
+Technical details about the [ImplementationGuide]({{site.data.fhir.path}}implementationguide.html) resource that define this specification, including dependencies and implementation guide publishing parameter settings.
+- [SDOH Clinical Care ImplementationGuide Resource]
