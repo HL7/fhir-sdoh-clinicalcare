@@ -33,24 +33,23 @@
     - FAST for Registries?
     - DaVinci for Auth
     - BSER -- alternate referral workflow that will be harmonized
- - How to Read (each section with audience)
+ - How to Read (each section with audience).  Roughly should be read front to back.
 
 | Section | Sub-section | Description | Audience |
 | --------| ----------- | --------- | ---------|
-| Background| Gravity |      |  General |
-| Background| SDOH Clinical Care Background |      |  General |
-| Background| Functional Use Cases |      |  General |
-| Background| FHIR Technical |      |  General |
-| Implementation Guidance| Standard Survey Instruments for SDOH (includes Mapping Instructions) |      |  General |
-| Implementation Guidance| Functional Use Cases |      |  General |
-| Implementation Guidance|  Referral Exchange Workflow |      |  Detailed Technical |
-| Implementation Guidance | Synchronizing with Data Sources |      |  Detailed Technical  |
-| Specifications | FHIR Artifacts |      |  Detailed Technical |
-| Specifications | Draft FHIR Artifacts for Personal Characteristics |      |  Detailed Technical |
-| Specifications| Must Support Conformance |      |  Detailed Technical |
-| Specifications | Privacy and Security |      |  General |
-| Background| Gravity |      |  General |
-
+| Background| SDOH and Gravity | General background on the importance of collecting and standardizing SDOH data, and the Gravity Project     |  General |
+| Background| SDOH Clinical Care Background | What is in and out of scope for this IG.  Shouldn't this be on the Home Page?     |  General |
+| Background| [Functional Use Cases] |  This section provides a functional description of the interactions between the actors in an SDOH referral, and with links to the profiles and sections of the IG where more detail is provided. This should be read prior to the more detailed exchange workflow description.       |  General |
+| Background| FHIR Technical | Background material that should be understood prior to attempting to understand this IG     |  General/Introductory |
+| Implementation Guidance| [Standard Survey Instruments for SDOH (includes Mapping Instructions)] | The importance of standard survey instruments for the collection of SDOH, and how survey instruments are mapped to SDOH Conditions, Observations and Goals     |  General |
+| Implementation Guidance|  [Referral Exchange Workflow] |  THis has three parts:  1) General description of Assess/Goals/Intervention workflow (should move to background) 2) Management of Consent (should move to separate section) 3) Detailed technical description of implementation of workflow using the IG's API  |  Detailed Technical |
+| Implementation Guidance | [Synchronizing with Data Sources] | I'm not really sure what this is about     |  Detailed Technical  |
+| Specifications | [FHIR Artifacts] | An index of the FHIR artifacts defined as part of this implementation guide.     |  Detailed Technical |
+| Specifications | [Draft FHIR Artifacts for Personal Characteristics] | Draft proposals for profiles of Observation supporting Personal Characteristics     |  Detailed Technical |
+| Specifications| [Must Support and Missing Data Conformance] | Conformance requirements for must support and missing data.     |  Detailed Technical |
+| Specifications | [Privacy and Security] | Conformance requirements for privacy and security considerations     |  Detailed Technical |
+| Specifications | [Downloads] | Downloads     |  Detailed Technical |
+{:.grid}
 
 #### Content and Organization
 #### Notes to Implementers
