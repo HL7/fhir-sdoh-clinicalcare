@@ -40,19 +40,19 @@
 
 <!--# Icons -->
 [patienticon]: ./Patient.png
-{: height="25px" width="25px"}
+{: height="35px" width="35px"}
 
 [providericon]: Provider.png
-{: height="25px" width="25px"}
+{: height="35px" width="35px"}
 
 [cboicon]: CBO.png
-{: height="25px" width="25px"}
+{: height="35px" width="35px"}
 
 [ccicon]: CC.png
-{: height="25px" width="25px"}
+{: height="35px" width="35px"}
 
 [cpicon]: CoordinationPlatform.png
-{: height="25px" width="25px"}
+{: height="35px" width="35px"}
 
 [ehricon]: EHR.png
-{: height="25px" width="25px"}
+{: height="35px" width="35px"}
