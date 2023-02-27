@@ -50,3 +50,31 @@ The following SDOH profile elements  **SHOULD** use values from the associated V
 | [SDOHCCGoal](StructureDefinition-SDOHCC-Goal.html)           | Goal.description    | [SDOHCC Goal Codes](http://hl7.org/fhir/us/sdoh-clinicalcare/STU1/ValueSet-SDOHCC-ValueSetLOINCSNOMEDCT.html) | [Social Determinants of Health Goals Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion) |
 | [SDOHCCServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) | ServiceRequest.code | [US Core Procedure Codes](http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code) | [Social Determinants of Health Service Requests Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion) |
 | [SDOHCCProcedure](StructureDefinition-SDOHCC-Procedure.html) | Procedure.code      | [US Core Procedure Codes](http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code) | [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion) |
+
+### Support for external terminologies for ServiceRequest and Procedure
+
+If implementers of this IG wish to use terminologies that are not part of the required value sets for specific elements that have a type of CodableConcept (such as ServiceRequest.code and Procedure.code) they may include a specific Coding that specifies a system (URL that is defined and supported by the terminology author) as well as the specific code (define in the terminology) as long as the meaning of the code is a concept that is logically the same as, or contained in the concept, of the required code.
+
+The following is an example for a ServiceRequest or Procedure where the external terminology
+
+URL is  : http://terminologysystem and the code is : SummerProgram
+
+		"code" : {
+  	  "coding" : [
+   	   {
+ 	       "system" : "http://snomed.info/sct",
+	        "code" : "467681000124101",
+	        "display" : "Assistance with application for Summer Food Service Program"
+	      }
+	      ]
+	    },
+	    {
+	      "coding" : [
+	        {
+	          "system" : "http://terminologysystem",
+	          "code" : "SummerProgram",
+	          "display" : "Summer Food Service Program"
+	        }
+	      ]
+	    }
+	  ],
