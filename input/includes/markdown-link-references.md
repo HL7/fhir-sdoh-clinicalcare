@@ -18,3 +18,5 @@
 [Gravity Confluence Technology Pages]: https://confluence.hl7.org/display/GRAV/Technical+Workstream+Dashboard
 
 [SDOHCCObservationAssessment]: StructureDefinition-SDOHCC-ObservationAssessment.html
+
+[SDOH Clinical Care ImplementationGuide Resource]: ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.html
