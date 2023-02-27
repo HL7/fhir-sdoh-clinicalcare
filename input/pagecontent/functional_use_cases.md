@@ -67,7 +67,7 @@ The CBO may not accept the referral or be unable to perform the requested servic
 | 2 | ![providericon]| Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity | [SDOHCC Observation Screening Response] |
 | 3 | ![providericon], ![patienticon]|  Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list | [SDOHCC Condition] |
 | 4 | ![providericon], ![patienticon]|  Provider and patient identify a goal to pursue enrollment in a SNAP program | [SDOHCC Goal] |
-| 5 | ![providericon], ![patienticon]|  Provider and patient agree that a referral to a contracted or non-contracted CBO is an appropriate next step| &nbsp; |
+| 5 | ![providericon], ![patienticon]|  Provider and patient agree that a referral to a CBO is an appropriate next step| &nbsp; |
 | 6 | ![patienticon] | Patient consents to be referred to the CBO, and to share appropriate information with the CBO | [SDOHCC Consent] |
 | 7 (optional)| ![providericon] | Provider makes information regarding the referral available to the patient’s application | ??What info?? |
 | 8 | ![cboicon]| Provider or Care Coordinator creates and sends an electronic referral to the CBO | [SDOHCC Service Request], [SDOHCC Task For Referral Management]  |
@@ -104,7 +104,7 @@ Functionally, this use case is the same as the previous use case, except that th
 | 2 | ![providericon]| Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity | &nbsp; |
 | 3 | ![providericon], ![patienticon]|  Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list | [SDOHCC Condition], [SDOHCC Condition] |
 | 4 | ![providericon], ![patienticon]|  Provider and patient identify a goal to pursue enrollment in a SNAP program | [SDOHCC Goal] |
-| 5 | ![providericon], ![patienticon]|  Provider and patient agree that a referral to a contracted or non-contracted CBO is an appropriate next step| &nbsp; |
+| 5 | ![providericon], ![patienticon]|  Provider and patient agree that a referral to a CBO is an appropriate next step| &nbsp; |
 | 6 | ![patienticon] | Patient consents to be referred to the CBO, and to share appropriate information with the CBO | [SDOHCC Consent] |
 | 7 (optional)| ![providericon] | Provider makes information regarding the referral available to the patient’s application | ??What info?? |
 | 8b | ![cboicon]| CBO application queries Provider or Care Coordinator API for new or updated referrals | [SDOHCC Service Request], [SDOHCC Task For Referral Management]  |
@@ -149,7 +149,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 | 2 | ![providericon]| Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity | &nbsp; |
 | 3 | ![providericon], ![patienticon]|  Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list | [SDOHCC Condition], [SDOHCC Condition] |
 | 4 | ![providericon], ![patienticon]|  Provider and patient identify a goal to pursue enrollment in a SNAP program | [SDOHCC Goal] |
-| 5 | ![providericon], ![patienticon]|  Provider and patient agree that a referral to a contracted or non-contracted CBO is an appropriate next step| &nbsp; |
+| 5 | ![providericon], ![patienticon]|  Provider and patient agree that a referral to a CBO is an appropriate next step| &nbsp; |
 | 6 | ![patienticon] | Patient consents to be referred to the CBO, and to share appropriate information with the CBO | [SDOHCC Consent] |
 | 7 (optional)| ![providericon] | Provider makes information regarding the referral available to the patient’s application | ??What info?? |
 | I1 | ![providericon]| Provider or Care Coordinator creates and sends an electronic referral (and a copy of the consent) to the CP.  Same as 8a in the Direct Referral but the Provider is communicating with the CP instead of the CBO | [SDOHCC Service Request], [SDOHCC Task For Referral Management]  |
@@ -200,7 +200,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 | 2 | ![providericon]| Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity | &nbsp; |
 | 3 | ![providericon], ![patienticon]|  Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list |  [SDOHCC Condition] |
 | 4 | ![providericon], ![patienticon]|  Provider and patient identify a goal to pursue enrollment in a SNAP program | [SDOHCC Goal] |
-| 5 | ![providericon], ![patienticon]|  Provider and patient agree that a referral to a contracted or non-contracted CBO is an appropriate next step| &nbsp; |
+| 5 | ![providericon], ![patienticon]|  Provider and patient agree that a referral to a CBO is an appropriate next step| &nbsp; |
 | 6 | ![patienticon] | Patient consents to be referred to the CBO, and to share appropriate information with the CBO | [SDOHCC Consent] |
 | 7 (optional)| ![providericon] | Provider makes information regarding the referral available to the patient’s application | ??What info?? |
 | I1 | ![providericon]| Provider or Care Coordinator creates and sends an electronic referral (and a copy of the consent) to the CP.  Same as 8a in the Direct Referral but the Provider is communicating with the CP instead of the CBO | [SDOHCC Service Request], [SDOHCC Task For Referral Management]  |
