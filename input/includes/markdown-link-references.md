@@ -53,3 +53,6 @@
 
 [cpicon]: CoordinationPlatform.png
 {: height="25px" width="25px"}
+
+[ehricon]: EHR.png
+{: height="25px" width="25px"}
