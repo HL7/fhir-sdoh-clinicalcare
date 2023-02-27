@@ -39,4 +39,3 @@ The following [IG Parameters](https://confluence.hl7.org/display/FHIR/Implementa
 {% for p in site.data.ig.definition.parameter %}
 - code: {{p.code}}<br/>value: {{p.value }}
 {%- endfor -%}
-
