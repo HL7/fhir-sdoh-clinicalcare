@@ -11,7 +11,7 @@
 [Bulk Data exchange IG]: http://hl7.org/fhir/uv/bulkdata/
 
 <!--# Technical IG Content -->
-[SDOHCC Observation Screening Response: StructureDefinition-SDOHCC-ObservationScreeningResponse.html
+[SDOHCC Observation Screening Response]: StructureDefinition-SDOHCC-ObservationScreeningResponse.html
 [SDOHCC Observation Assessment]: StructureDefinition-SDOHCC-ObservationAssessment.html
 [SDOHCC ServiceRequest]: StructureDefinition-SDOHCC-ServiceRequest.html
 [SDOHCC Task For Referral Management]: StructureDefinition-SDOHCC-TaskForReferralManagement.html
