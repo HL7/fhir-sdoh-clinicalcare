@@ -227,7 +227,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 |  Provider! [providericon] | Provider has a FHIR API  ![fhiricon] |
 |  Coordinating Platform (CP) ![cpicon]  | CP has a FHIR API  ![fhiricon] |
 |  Community Based Organization (CBO) ![cboicon]  | CBO has a FHIR enabled application or a FHIR API  |
-|  Patient |   ![patienticon]   | Patient has a FHIR enabled personal application. Registered with Pr's, CP's, and CBO's FHIR API  |
+|  Patient  ![patienticon]   | Patient has a FHIR enabled personal application. Registered with Pr's, CP's, and CBO's FHIR API  |
 {:.grid}
 
 
