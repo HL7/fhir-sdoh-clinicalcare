@@ -11,7 +11,8 @@
 [Bulk Data exchange IG]: http://hl7.org/fhir/uv/bulkdata/
 
 <!--# Technical IG Content -->
-[SDOHCCObservationAssessment]: StructureDefinition-SDOHCC-ObservationAssessment.html
+[SDOHCC Observation Screening Response: StructureDefinition-SDOHCC-ObservationScreeningResponse.html
+[SDOHCC Observation Assessment]: StructureDefinition-SDOHCC-ObservationAssessment.html
 [SDOHCC ServiceRequest]: StructureDefinition-SDOHCC-ServiceRequest.html
 [SDOHCC Task For Referral Management]: StructureDefinition-SDOHCC-TaskForReferralManagement.html
 [SDOHCC Service Request]: StructureDefinition-SDOHCC-ServiceRequest.html
@@ -55,4 +56,7 @@
 {: height="35px" width="35px"}
 
 [ehricon]: EHR.png
+{: height="35px" width="35px"}
+
+[fhiricon]: assets/images/fhir-logo-www.png
 {: height="35px" width="35px"}
