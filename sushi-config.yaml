@@ -167,12 +167,16 @@ groups:
     - SDOHCC-ObservationGenderIdentityExample
     - SDOHCC-ObservationPersonalPronounsExample
     - SDOHCC-ObservationRaceOMBExample
+    - SDOHCC-ObservationRaceOMBMotherExample
+    - SDOHCC-ObservationRaceOMBPractitionerExample
+    - SDOHCC-ObservationRacePractitionerExample
     - SDOHCC-ObservationRecordedSexGenderExample
     - SDOHCC-ObservationSexualOrientationExample
   Examples:
     name: Examples
     description: Examples
     resources:
+    - pat-53234
     - SDOHCC-ConditionAsserterDeviceExample
     - SDOHCC-ConditionFoodInsecurityExample
     - SDOHCC-ConditionHomelessExample
@@ -227,6 +231,11 @@ groups:
     - SDOHCC-ObservationResponseHungerVitalSignQuestion1Example
     - SDOHCC-ObservationResponseHungerVitalSignQuestion2Example
     - SDOHCC-ObservationResponseHungerVitalSignQuestion3Example
+  Parameters:
+    name: Parameters
+    resources:
+    - terminology-settings
+
 
 menu:
   Home: index.html
