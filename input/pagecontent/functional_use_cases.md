@@ -52,9 +52,9 @@ The CBO may not accept the referral or be unable to perform the requested servic
 
 | Actor    | Assumption |
 | ---------- | ------------------ |
-|  Provider ![providericon]   | Provider has a FHIR API   |
-|  Patient  ![patienticon]   | Provider has a FHIR API  |
-|  Community Based Organization (CBO)  ![cboicon] | CBO has a FHIR API   |
+|  Provider ![providericon]   | Provider has a FHIR API ![fhiricon]  |
+|  Community Based Organization (CBO)  ![cboicon] | CBO has a FHIR API  ![fhiricon] |
+|  Patient  ![patienticon]   | Provider has a FHIR-enabled application |
 {:.grid .center }
 
 
@@ -89,8 +89,8 @@ Functionally, this use case is the same as the previous use case, except that th
 | Actor    | Assumption |
 | -------- | ----------- |
 |  Provider ![providericon]   | Provider has a FHIR API ![fhiricon]  |
+|  Community Based Organization (CBO)  ![cboicon] | CBO has a FHIR-enabled Application  |
 |  Patient  ![patienticon]   | Patient has a FHIR-enabled application  |
-|  Community Based Organization (CBO)  ![cboicon] | CBO has a FHIR-enabled API ![fhiricon]  |
 {:.grid .center }
 
 
@@ -133,9 +133,9 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 | Actor    |   Assumption |
 | ---------- | ------------------- |
 |  Provider ![providericon]  | Provider has a FHIR API  ![fhiricon] |
-|  Patient  ![patienticon]  | Patient has a FHIR enabled personal application  |
 |  Coordinating Platform (CP)  ![cpicon] | CP has a FHIR API  ![fhiricon] |
 |  Community Based Organization (CBO) ![cpicon] | CBO has a FHIR  API  ![fhiricon] |
+|  Patient  ![patienticon]  | Patient has a FHIR enabled personal application  |
 {:.grid .center }
 
 
@@ -184,9 +184,9 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 | Actor    |  Assumption |
 | -------- | ---------- |
 |  Provider ![providericon]   | Provider has a FHIR API ![fhiricon]  |
-|  Patient  ![patienticon]   | Patient has a FHIR enabled personal application  |
 |  Coordinating Platform  (CP) ![cpicon]   | CP has a FHIR API  ![fhiricon] |
 |  Community Based Organization (CBO) ![cboicon]  | CBO has a FHIR enabled application (must do a push to CP)   |
+|  Patient  ![patienticon]   | Patient has a FHIR enabled personal application  |
 {:.grid .center}
 
 
@@ -225,9 +225,9 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 | Actor    | Assumption |
 | ----------  | ------------------ |
 |  Provider! [providericon] | Provider has a FHIR API  ![fhiricon] |
-|  Patient |   ![patienticon]   | Patient has a FHIR enabled personal application. Registered with Pr's, CP's, and CBO's FHIR API  |
 |  Coordinating Platform (CP) ![cpicon]  | CP has a FHIR API  ![fhiricon] |
-|  Community Based Organization (CBO) ![cboicon]  | CBO has a FHIR enabled application (must do a push to CP)   |
+|  Community Based Organization (CBO) ![cboicon]  | CBO has a FHIR enabled application or a FHIR API  |
+|  Patient |   ![patienticon]   | Patient has a FHIR enabled personal application. Registered with Pr's, CP's, and CBO's FHIR API  |
 {:.grid}
 
 
