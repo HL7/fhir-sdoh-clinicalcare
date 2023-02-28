@@ -241,12 +241,12 @@ Some limitations on this use case are that the Patient may not have access to an
 The Patient may not be willing or able to respond to the questionnaires
 
 | Step | Actors | Description| References|
-| -----| ------------- | ------- | ---------------- |
+| -----| ------ | ---------- | --------- |
 | 7 (optional)| ![providericon] | Provider makes information regarding the referral available to the patient’s application | ??What info?? |
 | 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Survey Instrument Support] |
-| I3 (optional) | ![cpicon], ![patienticon]| CP communicates with the patient via their application to schedule appointments, collect additional information, etc. This exchange might not occur electronically| ??what info/resources?? |
+| I3 (optional) | ![cpicon], ![patienticon] | CP communicates with the patient via their application to schedule appointments, collect additional information, etc. This exchange might not occur electronically| ??what info/resources?? |
 | I8a (optional) | ![cboicon] | CBO communicates with patient via their application to schedule appointments, collect additional information, etc. |  |
 | I10 | ![cpicon] | CP communicates with patient via their application to close loop on service(s) delivered by CBO | [SDOHCC Task For Referral Management] |
-{:.grid .center  }
+{:.grid}
 
 {% include markdown-link-references.md %}
