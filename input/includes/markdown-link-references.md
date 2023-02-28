@@ -58,5 +58,7 @@
 [ehricon]: EHR.png
 {: height="35px" width="35px"}
 
-[fhiricon]: assets/images/fhir-logo-www.png
-{: height="35px" width="35px"}
+[fhiricon]: icon-fhir-32.png
+{: height="32px" width="32px"}
+
+{% include fsh-link-references.md %}
