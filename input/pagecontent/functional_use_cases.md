@@ -59,7 +59,7 @@ The CBO may not accept the referral or be unable to perform the requested servic
 
 
 #### Annotated Flow Diagram
-![Direct Referral Functional Use Case](FunctionalUseCaseFlowDirectReferral3.jpg){:.center }
+![Direct Referral Functional Use Case](FunctionalUseCaseFlowDirectReferral3.svg){:.center }
 
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
