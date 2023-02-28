@@ -89,7 +89,7 @@
 - [FHIR-36045](https://jira.hl7.org/browse/FHIR-36045)	Procedure _id search parameter Definition & Chaining makes reference to PractitionerRole records
 - [FHIR-35960](https://jira.hl7.org/browse/FHIR-35960)	Subscription in the capability statements has SDOHCC-Procedure as the supported Profile
 - [FHIR-35076](https://jira.hl7.org/browse/FHIR-35076)	Capability Statements - Please provide specific conformance assertions with respect to the various supported profiles
-  - updated [capability statements](artifacts.html#artifacts-summary) page with the requested changes
+  - updated [capability statements](artifacts.html#capability-statements)
 
 #### Privacy and Security
 
