@@ -59,7 +59,7 @@ The CBO may not accept the referral or be unable to perform the requested servic
 
 
 #### Annotated Flow Diagram
-![Direct Referral Functional Use Case](FunctionalUseCaseFlowDirectReferral3.svg){:.center }
+{% include img.html img="FunctionalUseCaseFlowDirectReferral3.svg" caption="Figure 1: Annotated Flow Diagram for Direct Referral" %}
 
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
@@ -96,7 +96,7 @@ Functionally, this use case is the same as the previous use case, except that th
 
 
 #### Annotated Flow Diagram
-![Functional Use Case Direct Referral Light](FunctionalUseCaseFlowDirectLightReferral3.svg){:.center }
+{% include img.html img="FunctionalUseCaseFlowDirectLightReferral3.svg" caption="Figure 2: Annotated Flow Diagram for Direct Referral Light" %}
 
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
@@ -141,7 +141,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 
 
 #### Annotated Flow Diagram
-![Functional Use Case Indirect Referral](FunctionalUseCaseFlowIndirectDirectReferral3.svg){:.center }
+{% include img.html img="FunctionalUseCaseFlowIndirectDirectReferral3.svg" caption="Figure 3: Annotated Flow Diagram for Indirect Referral" %}
 
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
@@ -180,18 +180,19 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 
 #### Actors and Assumptions
 
-
+<table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+<caption style="caption-side:bottom">Table 1: Actors and Assumptions</caption>
 | Actor    |  Assumption |
 | -------- | ---------- |
 |  ![providericon] Provider   | Provider has a FHIR API ![fhiricon]  |
 |  ![cpicon]  Coordinating Platform  (CP)  | CP has a FHIR API  ![fhiricon] |
 |   ![cboicon] Community Based Organization (CBO) | CBO has a FHIR enabled application (must do a push to CP)   |
 |   ![patienticon] Patient   | Patient has a FHIR enabled personal application  |
-{:.grid .center}
-
+{:.grid}
+</table>
 
 #### Annotated Flow Diagram
-![Functional Use Case Indirect Direct Light](FunctionalUseCaseFlowIndirectDirectLightReferral3.svg){:.center }
+{% include img.html img="FunctionalUseCaseFlowIndirectDirectLightReferral3.svg" caption="Figure 3: Annotated Flow Diagram for Indirect Referral Light" %}
 
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
