@@ -70,9 +70,4 @@
 [patientapp]: PatientApplication.png
 {: height="32px" width="32px"}
 
-
-| ![fhirserver] FHIR Server | A server that supports a FHIR API and can make FHIR API calls on other servers |
-| ![fhirapplication] FHIR-enabled Application | An application that can make FHIR API calls to a FHIR server, but does not itself support a FHIR API |
-| ![patientapp] FHIR-enabled Patient Application | A patient application that can connect to FHIR servers |
-
 {% include fsh-link-references.md %}
