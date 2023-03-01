@@ -51,7 +51,6 @@ The Provider and the CBO have FHIR servers.  The Patient has a FHIR-enabled pati
 The example assumes that the Provider has an existing relationship with the CBO.
 The CBO may not accept the referral or be unable to perform the requested service.
 
-#### Annotated Flow Diagram
 {% include img.html img="FunctionalUseCaseFlowDirectReferral3.svg" caption="Figure 1: Annotated Flow Diagram for Direct Referral" %}
 
 | Step | Actors | Description| References|
@@ -80,7 +79,6 @@ The Provider has a FHIR server. The CBO has a FHIR-enabled application.  The Pat
 Functionally, this use case is the same as the previous use case, except that the CBO has a FHIR-enabled application, but does not support a FHIR API.  As a result, the provider can't push information to the CBO, but rather tha CBO needs to pull information from the provider.    At the conclusion of the referral, the CBO POSTS needed information to the Provider FHIR server (e.g., Procedures) and updates the status and the linked resources of the Task.
 
 
-#### Annotated Flow Diagram
 {% include img.html img="FunctionalUseCaseFlowDirectLightReferral3.svg" caption="Figure 2: Annotated Flow Diagram for Direct Referral Light" %}
 
 | Step | Actors | Description| References|
@@ -112,7 +110,6 @@ Functionally, this indirect referral is essentially two direct referrals (Provid
 The Provider has a relationship with the CP, but not with the CBO.  The use case assumes that the CP and the CPO have an established relationship.
 The Provider may request to have the service delivered by a specific CBO.   The CP may not accept the referral or be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
 
-#### Annotated Flow Diagram
 {% include img.html img="FunctionalUseCaseFlowIndirectDirectReferral3.svg" caption="Figure 3: Annotated Flow Diagram for Indirect Referral" %}
 
 | Step | Actors | Description| References|
@@ -152,7 +149,6 @@ The Provider has a relationship with the CP, but not with the CBO.  The use case
 The Provider may request to have the service delivered by a specific CBO.   The CP may not accept the referral or be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
 
 
-#### Annotated Flow Diagram
 {% include img.html img="FunctionalUseCaseFlowIndirectDirectLightReferral3.svg" caption="Figure 3: Annotated Flow Diagram for Indirect Referral Light" %}
 
 | Step | Actors | Description| References|
