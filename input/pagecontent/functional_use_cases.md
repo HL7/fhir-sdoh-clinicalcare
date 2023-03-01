@@ -180,8 +180,10 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 
 #### Actors and Assumptions
 
-<table style="border:1px solid black;margin-left:auto;margin-right:auto;">
-<caption style="caption-side:bottom">Table 1: Actors and Assumptions</caption>
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Table 3: Actors and Assumptions</strong></figcaption>
+
 | Actor    |  Assumption |
 | -------- | ---------- |
 |  ![providericon] Provider   | Provider has a FHIR API ![fhiricon]  |
@@ -189,7 +191,9 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 |   ![cboicon] Community Based Organization (CBO) | CBO has a FHIR enabled application (must do a push to CP)   |
 |   ![patienticon] Patient   | Patient has a FHIR enabled personal application  |
 {:.grid}
-</table>
+
+</figure>
+<p></p>
 
 #### Annotated Flow Diagram
 {% include img.html img="FunctionalUseCaseFlowIndirectDirectLightReferral3.svg" caption="Figure 3: Annotated Flow Diagram for Indirect Referral Light" %}
