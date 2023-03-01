@@ -10,11 +10,11 @@ The actors in the workflows are described in the table below.   The graphical ic
 
 | Actor    |  Description |
 | ----------  | ------------------ |
-|  Provider ![providericon]   | Includes licensed providers and others that interact with the patient to assess social risk, set goals, and determine/recommend referrals.   |
-|  Patient  ![patienticon]   | definition consistent with Glossary   |
-|  Care Coordinator (CC) ![ccicon]         | A person who organizes various referral activities on behalf of the recipient and communicates information between all those involved in the care delivery.   |
-|  Community Based Organization (CBO)  ![cboicon]  | Public or private not-for-profit resource hubs that provide specific services to the community or targeted population within the community.   |
-|  Coordination Platform (CP)  ![cpicon]          | An intermediary that receives referrals, assesses patient needs, and works with one or more CBOs to deliver the services.   |
+| ![providericon] Provider  | Includes licensed providers and others that interact with the patient to assess social risk, set goals, and determine/recommend referrals.   |
+| ![ccicon]  Care Coordinator (CC)       | A person who organizes various referral activities on behalf of the recipient and communicates information between all those involved in the care delivery.   |
+| ![cboicon] Community Based Organization (CBO)  | Public or private not-for-profit resource hubs that provide specific services to the community or targeted population within the community.   |
+| ![cpicon]  Coordination Platform (CP) | An intermediary that receives referrals, assesses patient needs, and works with one or more CBOs to deliver the services.   |
+| ![patienticon] Patient   | definition consistent with Glossary   |
 {:.grid}
 
 
@@ -23,7 +23,7 @@ The functional use cases in the table below describe the referral process initia
 
 
 | Functional Use Case |  Description           | Actors | Exchange Workflow|
-| ------------------- | ---------------------- | ------- | ---------------- |
+| ------------------------- | ------------------------------------ | ---------------- | ---------------- |
 | [Direct Referral](functional_use_cases.html#directreferral) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., CBO) where both entities have FHIR APIs to facilitate exchange and a referring intermediary (e.g., CP) is not involved in the referral | ![providericon], ![ccicon], ![patienticon], ![cboicon] |   [Direct Referral Exchange Workflow](exchange_workflow#direct-referral-exchange)              |
 | [Direct Referral (light)](functional_use_cases.html#directreferrallight) | A “light” version of the Direct Referral with the exception that the performing entity (e.g., CBO) does not have FHIR API capability but has an application that can access the referring entity’s API  | ![providericon], ![patienticon], ![ccicon], ![cboicon]  | [Direct Referral (light) Exchange Workflow](exchange_workflow.html#direct-referral-light-exchange) |
 | [Indirect Referral](functional_use_cases.html#indirectreferral) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., a CBO) that is mediated by a referring intermediary (e.g., a CP) where all entities have FHIR APIs to facilitate exchange  | ![providericon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] | [Indirect Referral Exchange Workflow](exchange_workflow.html#indirect-referral-exchange)                   |
@@ -52,9 +52,9 @@ The CBO may not accept the referral or be unable to perform the requested servic
 
 | Actor    | Assumption |
 | ---------- | ------------------ |
-|  Provider ![providericon]   | Provider has a FHIR API ![fhiricon]  |
-|  Community Based Organization (CBO)  ![cboicon] | CBO has a FHIR API  ![fhiricon] |
-|  Patient  ![patienticon]   | Provider has a FHIR-enabled application |
+|   ![providericon] Provider  | Provider has a FHIR API ![fhiricon]  |
+|   ![cboicon] Community Based Organization (CBO)  | CBO has a FHIR API  ![fhiricon] |
+|   ![patienticon] Patient   | Provider has a FHIR-enabled application |
 {:.grid .center }
 
 
@@ -88,9 +88,9 @@ Functionally, this use case is the same as the previous use case, except that th
 
 | Actor    | Assumption |
 | -------- | ----------- |
-|  Provider ![providericon]   | Provider has a FHIR API ![fhiricon]  |
-|  Community Based Organization (CBO)  ![cboicon] | CBO has a FHIR-enabled Application  |
-|  Patient  ![patienticon]   | Patient has a FHIR-enabled application  |
+|  ![providericon]  Provider  | Provider has a FHIR API ![fhiricon]  |
+|   ![cboicon] Community Based Organization (CBO)  | CBO has a FHIR-enabled Application  |
+|   ![patienticon] Patient    | Patient has a FHIR-enabled application  |
 {:.grid .center }
 
 
@@ -132,10 +132,10 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 
 | Actor    |   Assumption |
 | ---------- | ------------------- |
-|  Provider ![providericon]  | Provider has a FHIR API  ![fhiricon] |
-|  Coordinating Platform (CP)  ![cpicon] | CP has a FHIR API  ![fhiricon] |
-|  Community Based Organization (CBO) ![cpicon] | CBO has a FHIR  API  ![fhiricon] |
-|  Patient  ![patienticon]  | Patient has a FHIR enabled personal application  |
+|  ![providericon] Provider  | Provider has a FHIR API  ![fhiricon] |
+|   ![cpicon] Coordinating Platform (CP)  | CP has a FHIR API  ![fhiricon] |
+|  ![cpicon] Community Based Organization (CBO)  | CBO has a FHIR  API  ![fhiricon] |
+|  ![patienticon] Patient   | Patient has a FHIR enabled personal application  |
 {:.grid .center }
 
 
@@ -183,10 +183,10 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 
 | Actor    |  Assumption |
 | -------- | ---------- |
-|  Provider ![providericon]   | Provider has a FHIR API ![fhiricon]  |
-|  Coordinating Platform  (CP) ![cpicon]   | CP has a FHIR API  ![fhiricon] |
-|  Community Based Organization (CBO) ![cboicon]  | CBO has a FHIR enabled application (must do a push to CP)   |
-|  Patient  ![patienticon]   | Patient has a FHIR enabled personal application  |
+|  ![providericon] Provider   | Provider has a FHIR API ![fhiricon]  |
+|  ![cpicon]  Coordinating Platform  (CP)  | CP has a FHIR API  ![fhiricon] |
+|   ![cboicon] Community Based Organization (CBO) | CBO has a FHIR enabled application (must do a push to CP)   |
+|   ![patienticon] Patient   | Patient has a FHIR enabled personal application  |
 {:.grid .center}
 
 
@@ -224,10 +224,10 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 
 | Actor    | Assumption |
 | ----------  | ------------------ |
-|  Provider! [providericon] | Provider has a FHIR API  ![fhiricon] |
-|  Coordinating Platform (CP) ![cpicon]  | CP has a FHIR API  ![fhiricon] |
-|  Community Based Organization (CBO) ![cboicon]  | CBO has a FHIR enabled application or a FHIR API  |
-|  Patient  ![patienticon]   | Patient has a FHIR enabled personal application. Registered with Pr's, CP's, and CBO's FHIR API  |
+|  ![providericon]  Provider | Provider has a FHIR API  ![fhiricon] |
+|   ![cpicon] Coordinating Platform (CP) | CP has a FHIR API  ![fhiricon] |
+|   ![cboicon] Community Based Organization (CBO) | CBO has a FHIR enabled application or a FHIR API  |
+|   ![patienticon] Patient   | Patient has a FHIR enabled personal application. Registered with Pr's, CP's, and CBO's FHIR API  |
 {:.grid}
 
 
