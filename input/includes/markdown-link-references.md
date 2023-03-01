@@ -61,7 +61,7 @@
 [fhiricon]: fhir-32.png
 {: height="32px" width="32px"}
 
-[fhirserver]: FHIRServer..png
+[fhirserver]: FHIRServer.png
 {: height="32px" width="32px"}
 
 [fhirapplication]: FHIRApplication.png
