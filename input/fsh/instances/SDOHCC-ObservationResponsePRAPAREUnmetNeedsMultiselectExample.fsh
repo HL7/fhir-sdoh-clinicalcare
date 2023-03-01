@@ -1,6 +1,7 @@
 Instance: SDOHCC-ObservationResponsePRAPAREUnmetNeedsMultiselectExample
 InstanceOf: SDOHCCObservationScreeningResponse
 Title: "SDOHCC-ObservationResponsePRAPAREUnmetNeedsMultiselectExample"
+Description: "PRAPARE Unmet Needs Multi select Example"
 Usage: #example
 * meta.versionId = "3"
 * meta.lastUpdated = "2021-06-17T19:18:41.399+00:00"
