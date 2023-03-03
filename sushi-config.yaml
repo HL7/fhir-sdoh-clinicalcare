@@ -43,6 +43,8 @@ description: This HL7 Implementation Guide (IG) defines how to exchange Social D
 pages:
   index.md:
     title: IG Home
+  index_alt.md:
+   title: IG Home (alt)
   gravity_background.md:
     title: Gravity Background
   sdoh_clinical_care_background.md:
@@ -226,7 +228,7 @@ groups:
     - SDOHCC-ObservationSexualOrientationExample
 
 menu:
-  Home: index.html
+  Home: index_alt.html
   Table of Contents:  toc.html
   Background:
     Gravity Background: gravity_background.html
