@@ -192,7 +192,7 @@ groups:
     - SDOHCC-ObservationResponseHungerVitalSignQuestion1Example
     - SDOHCC-ObservationResponseHungerVitalSignQuestion2Example
     - SDOHCC-ObservationResponseHungerVitalSignQuestion3Example
-  Draft Artifacts:
+  DraftArtifacts:
     name: Draft Artifacts for Personal Characteristic Observations
     resources:
       - SDOHCCObservationEthnicityOMB
