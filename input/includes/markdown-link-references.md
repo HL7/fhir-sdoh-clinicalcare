@@ -35,7 +35,6 @@
 [Exchange Workflow]: exchange_workflow.html
 [Functional Use Cases]: functional_use_cases.html
 [Capability Statements]: artifacts.html#capability-statements
-<<<<<<< HEAD
 [SDOHCC Task For Referral Management]: StructureDefinition-SDOHCC-TaskForReferralManagement.html
 [SDOHCC ServiceRequest]: StructureDefinition-SDOHCC-ServiceRequest.html
 [Gravity Project]:  https://confluence.hl7.org/display/GRAV/The+Gravity+Project
@@ -43,7 +42,6 @@
 [Gravity Confluence Technology Pages]: https://confluence.hl7.org/display/GRAV/Technical+Workstream+Dashboard
 [SDOHCCObservationAssessment]: StructureDefinition-SDOHCC-ObservationAssessment.html
 [SDOH Clinical Care ImplementationGuide Resource]: ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.html
-=======
 [Data Modeling Framework]: sdoh_clinical_care_background.html#data-modeling-framework
 [Checking Task Status]: checking_task_status.html
 [Privacy and Security]: privacy_and_security.html
@@ -80,4 +78,3 @@
 {: height="32px" width="32px"}
 
 {% include fsh-link-references.md %}
->>>>>>> usecases
