@@ -47,8 +47,6 @@ pages:
     title: Gravity Background
   sdoh_clinical_care_background.md:
     title: SDOH Clinical Care Background
-  sdoh_clinical_care_background_alt.md:
-    title: SDOH Clinical Care Background
   technical_background.md:
     title: Technical Background
   survey_instrument_support.md:
@@ -60,8 +58,6 @@ pages:
   exchange_workflow.md:
     title: Exchange Workflow
   functional_use_cases.md:
-    title: Functional Use Cases (non-technical)
-  functional_use_cases_alt.md:
     title: Functional Use Cases (non-technical)
   synchronizing_applications_with_api_data_sources.md:
     title: Synchronizing Applications With API Data Sources
