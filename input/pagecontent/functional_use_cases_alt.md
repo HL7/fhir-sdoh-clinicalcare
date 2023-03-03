@@ -185,15 +185,15 @@ The table below collects the patient interactions from the use cases described a
 Some limitations on this use case are that the Patient may not have access to an appropriate application or have completed process to register and authenticate with the API(s).
 The Patient may not be willing or able to respond to the questionnaires.
 
-**Need to expand on Patient Task, sending the patient a questionaire, or a HealthcareService/Location***
+These interactions use a combination of FHIR-based interactions using [SDOHCCTaskForPatient], [Questionnaire] [Questionnaire Response],[SDOHCC Location] and [SDOHCC HealthCareService] as well as portal-based, phone and in-person interactions.
 
 | Step | Actors | Description| References|
 | -----| ------ | ---------- | --------- |
-| 7 (optional)| ![providericon] | Provider makes information regarding the referral available to the patient’s application | ??What info?? |
-| 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Survey Instrument Support], [SDOHCC Task for Patient Task Management] [Questionnaire] [Questionnaire Response],[SDOHCC Location],[SDOHCC HealthCareService] |
-| I3 (optional) | ![cpicon], ![patienticon] | CP communicates with the patient via their application to schedule appointments, collect additional information, etc. This exchange might not occur electronically| ??what info/resources?? |
+| 7 (optional)| ![providericon] | Provider makes information regarding the referral available to the patient’s application |  |
+| 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application |  |
+| I3 (optional) | ![cpicon], ![patienticon] | CP communicates with the patient via their application to schedule appointments, collect additional information, etc. This exchange might not occur electronically| |
 | I8a (optional) | ![cboicon] | CBO communicates with patient via their application to schedule appointments, collect additional information, etc. |  |
-| I10 | ![cpicon] | CP communicates with patient via their application to close loop on service(s) delivered by CBO | [SDOHCC Task For Referral Management] |
+| I10 | ![cpicon] | CP communicates with patient via their application to close loop on service(s) delivered by CBO |  |
 {:.grid}
 
 {% include markdown-link-references.md %}
