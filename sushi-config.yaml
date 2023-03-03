@@ -239,6 +239,7 @@ menu:
     Mapping Instructions: mapping_instructions.html
     Exchange Workflow:  exchange_workflow.html
     Functional Use Cases:   functional_use_cases.html
+    Functional Use Cases (alt):   functional_use_cases_alt.html
     Synchronizing Applications With API Data Sources: synchronizing_applications_with_api_data_sources.html
   Specifications:
     FHIR Artifacts: artifacts.html
