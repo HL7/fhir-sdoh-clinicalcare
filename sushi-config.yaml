@@ -231,6 +231,7 @@ menu:
   Background:
     Gravity Background: gravity_background.html
     SDOH Clinical Care Background: sdoh_clinical_care_background.html
+    SDOH Clinical Care Background (alt): sdoh_clinical_care_background_alt.html
     Technical Background : technical_background.html
     Glossary: glossary.html
     Credits: credits.html
