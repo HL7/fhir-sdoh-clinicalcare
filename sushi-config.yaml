@@ -47,6 +47,8 @@ pages:
     title: Gravity Background
   sdoh_clinical_care_background.md:
     title: SDOH Clinical Care Background
+  sdoh_clinical_care_background_alt.md:
+    title: SDOH Clinical Care Background
   technical_background.md:
     title: Technical Background
   survey_instrument_support.md:
