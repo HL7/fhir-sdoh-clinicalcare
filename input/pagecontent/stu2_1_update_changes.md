@@ -22,3 +22,5 @@ This update is focused on improving the readability of the IG narrative content.
 
 ### FHIR Shorthand
 * The IG is now being maintained in FSH
+
+{% include markdown-link-references.md %}

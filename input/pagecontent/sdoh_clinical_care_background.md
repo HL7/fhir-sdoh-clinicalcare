@@ -2,15 +2,15 @@
 
 The Gravity Project focus for this version of the IG is to standardize the exchange of SDOH information related to the following activities:
 
-1)	assessment of social risk, 
+1)	assessment of social risk,
 
-2)	establishing coded health concerns/problems, 
+2)	establishing coded health concerns/problems,
 
-3) 	creating patient driven goals, and 
+3) 	creating patient driven goals, and
 
 4)	defining a RESTful closed loop referral process to manage interventions.
 
-<table><tr><td><img src="IGScope.jpg" /></td></tr></table>
+<table><tr><td><img src="IGScope.png" /></td></tr></table>
 
 Currently, the Gravity Project has identified a number of SDOH domains that describe various types of social risk.  Work is underway to identify value sets for the above activities related to each of the SDOH domains.  Information on the approach taken by this IG to support code systems and value sets for these SDOH domains can be found [here](support_for_multiple_domains.html).
 
@@ -24,7 +24,7 @@ The scope of interactions is intended to cover all of the interactions shown wit
 
 ####  Out of Scope
 
-The following items are out of scope for this version of the IG.  
+The following items are out of scope for this version of the IG.
 
 1) Providing guidance on the frequency of administering assessment (this is left up to the responsible organizations based on their standards of practice).
 

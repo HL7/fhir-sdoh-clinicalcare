@@ -24,3 +24,5 @@ For each category of SDOH goals, a specific value SHALL be used for Goal.categor
 | transportation-insecurity  | Transportation Insecurity | [VSAC -  Transportation Insecurity Goals ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.163/expansion/Latest ) | https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.163/expansion/Latest |
 | veteran-status  | Veteran Status | VSAC -  Veteran Status Goals  | none |
 {:.grid}
+
+{% include markdown-link-references.md %}

@@ -87,11 +87,12 @@ pages:
     title: Glossary
   ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.md:
     title: SDOH Clinical Care ImplementationGuide Resource
+  fulloutline.md:
+    title: Outline STU2.1
 
 groups:
   CapabilityStatements:
     name: Capability Statements
-    description: Capability Statements
     resources:
       - SDOHCC-CoordinationPlatform
       - SDOHCC-ReferralRecipientLight
@@ -100,7 +101,6 @@ groups:
       - SDOHCC-PatientApp
   Profiles:
     name: Profiles
-    description: Profiles
     resources:
       - SDOHCCCondition
       - SDOHCCConsent
@@ -116,11 +116,8 @@ groups:
       - SDOHCCTaskForReferralManagement
   ValueSets:
     name: Value Sets
-    description: Value Sets
     resources:
       - SDOHCCValueSetLOINCSNOMEDCT
-      - SDOHCCValueSetObservationDataAbsentReason
-      - SDOHCCValueSetObservationDerivedFromIdType
       - SDOHCCValueSetObservationMethod
       - SDOHCCValueSetObservationStatus
       - SDOHCCValueSetSDOHCategory
@@ -130,51 +127,16 @@ groups:
       - SDOHCCValueSetTaskStatus
   CodeSystems:
     name: Code Systems
-    description: Code Systems
     resources:
       - SDOHCCCodeSystemTemporaryCodes
-  Extensions:
-    name: Extensions
-    description: Extensions
-    resources:
-      - SDOHCCExtensionConditionAsserter
-      - SDOHCCExtensionHealthcareServiceTelecomAppointment
   SearchParameters:
-    name: Search Parameters
-    description: Search Parameters
-    resources:
-      - ServiceRequest-supporting-info
-      - Task-output-reference
-  DraftArtifacts:
     name: Draft Artifacts for Personal Characteristic Observations
     description: Draft Artifacts for Personal Characteristic Observations
     resources:
-      - SDOHCCObservationEthnicityOMB
-      - SDOHCCObservationGenderIdentity
-      - SDOHCCObservationPersonalCharacteristic
-      - SDOHCCObservationPersonalPronouns
-      - SDOHCCObservationRaceOMB
-      - SDOHCCObservationRecordedSexGender
-      - SDOHCCObservationSexualOrientation
-      - SDOHCCValueSetOMBEthnicityCategories
-      - SDOHCCValueSetOMBRaceCategories
-      - SDOHCCValueSetPronounsValue
-  DraftArtifactsExamples:
-    name: Draft Artifacts Examples
-    description: Examples of Draft Artifacts for Personal Characteristic Observations
-    resources:
-    - SDOHCC-ObservationEthnicityOMBExample
-    - SDOHCC-ObservationGenderIdentityExample
-    - SDOHCC-ObservationPersonalPronounsExample
-    - SDOHCC-ObservationRaceOMBExample
-    - SDOHCC-ObservationRaceOMBMotherExample
-    - SDOHCC-ObservationRaceOMBPractitionerExample
-    - SDOHCC-ObservationRacePractitionerExample
-    - SDOHCC-ObservationRecordedSexGenderExample
-    - SDOHCC-ObservationSexualOrientationExample
+      - ServiceRequest-supporting-info
+      - Task-output-reference
   Examples:
     name: Examples
-    description: Examples
     resources:
     - pat-53234
     - SDOHCC-ConditionAsserterDeviceExample
@@ -219,7 +181,6 @@ groups:
     - SDOHCC-ObservationResponsePRAPAREClothingNeedExample
     - SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample
     - SDOHCC-ObservationResponsePRAPAREHousingStatusExample
-    - SDOHCC-ObservationResponsePRAPAREUnmetNeedsMultiselectExample
   HVS:
     name: Hunger Vital Signs Examples
     description: Hunger Vital Signs Examples
@@ -231,11 +192,34 @@ groups:
     - SDOHCC-ObservationResponseHungerVitalSignQuestion1Example
     - SDOHCC-ObservationResponseHungerVitalSignQuestion2Example
     - SDOHCC-ObservationResponseHungerVitalSignQuestion3Example
-  Parameters:
-    name: Parameters
+  Draft Artifacts:
+    name: Draft Artifacts for Personal Characteristic Observations
     resources:
-    - terminology-settings
-
+      - SDOHCCObservationEthnicityOMB
+      - SDOHCCObservationGenderIdentity
+      - SDOHCCObservationPersonalCharacteristic
+      - SDOHCCObservationPersonalPronouns
+      - SDOHCCObservationRaceOMB
+      - SDOHCCObservationRecordedSexGender
+      - SDOHCCObservationSexualOrientation
+      - SDOHCCExtensionConditionAsserter
+      - SDOHCCExtensionHealthcareServiceTelecomAppointment
+      - SDOHCCValueSetOMBEthnicityCategories
+      - SDOHCCValueSetOMBRaceCategories
+      - SDOHCCValueSetPronounsValue
+      - SDOHCCValueSetObservationDataAbsentReason
+      - SDOHCCValueSetObservationDerivedFromIdType
+  DraftArtifactsExamples:
+    name: Examples of Draft Artifacts for Personal Characteristic Observations
+    resources:
+    - SDOHCC-ObservationEthnicityOMBExample
+    - SDOHCC-ObservationGenderIdentityExample
+    - SDOHCC-ObservationPersonalPronounsExample
+    - SDOHCC-ObservationRaceOMBExample
+    - SDOHCC-ObservationRaceOMBMotherExample
+    - SDOHCC-ObservationRaceOMBPractitionerExample
+    - SDOHCC-ObservationRecordedSexGenderExample
+    - SDOHCC-ObservationSexualOrientationExample
 
 menu:
   Home: index.html

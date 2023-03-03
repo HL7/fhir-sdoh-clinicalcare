@@ -73,7 +73,7 @@ Community Based Organization (CBO) / Performer
 
 
 #### Direct Referral
-
+<a name="direct-referral-exchange">
 The referral occurs between the Provider / Requester and the CBO / Performer where the CBO has a FHIR API.
 
 Refer to the [Direct Referral] functional use case to understand the numbers in the interaction diagram below.
@@ -89,7 +89,7 @@ Refer to the [Direct Referral] functional use case to understand the numbers in 
 
 
 #### Direct Referral Light
-
+<a name="direct-referral-light-exchange">
 The referral occurs between the Provider / Requester and the CBO / Performer where the CBO / Performer does not have a FHIR API (FHIR Server or FHIR Façade).   The exchange with the Performer is initiated via an email with a secure link to the Provider / Requester API that can be used by an application available to the CBO / Performer to communicate with the Provider / Requester using RESTful exchanges that read, create, and update resources via the Provider / Requester API.
 
 Refer to the [Direct Referral Light] functional use case to understand the numbers in the interaction diagram below.
@@ -105,7 +105,7 @@ Refer to the [Direct Referral Light] functional use case to understand the numbe
 
 
 #### Indirect Referral
-
+<a name="indirect-referral-exchange">
 The referral occurs in two separate interactions. The first is between the Referral Source and the Intermediary and the second is between the Intermediary and the Referral Performer.
 
 This IG assumes that, in an Indirect Referral, the Referral Performer does not have the ability to communicate directly with the Referral Source.  Therefore, the intermediary SHALL support the following.
@@ -137,7 +137,7 @@ This IG assumes that, in an Indirect Referral, the Referral Performer does not h
 4. The Provider / Requester SHOULD set the Task.status to "requested" until it receives a valid HTTPS response indicating that the Task was received at which point it SHOULD set the Task.status to "received".
 
 #### Patient Interactions
-
+<a name="patient-exchange">
 This implementation guide supports additional interactions with a patient/client application (on a smartphone or portal).  These interactions include providing the patient/client with:
 
 1. a copy of the service request sent to the service performer
