@@ -48,7 +48,7 @@ pages:
   sdoh_clinical_care_background.md:
     title: SDOH Clinical Care Background
   sdoh_clinical_care_background_alt.md:
-    title: SDOH Clinical Care Background
+    title: SDOH Clinical Care Background (alt)
   technical_background.md:
     title: Technical Background
   survey_instrument_support.md:
@@ -231,7 +231,7 @@ menu:
   Background:
     Gravity Background: gravity_background.html
     SDOH Clinical Care Background: sdoh_clinical_care_background.html
-    SDOH Clinical Care Background (alt): sdoh_clinical_care_background_alt.html
+    SDOH Clinical Care Background - alt: sdoh_clinical_care_background_alt.html
     Technical Background : technical_background.html
     Glossary: glossary.html
     Credits: credits.html
