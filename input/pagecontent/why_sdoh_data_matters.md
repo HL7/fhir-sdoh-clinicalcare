@@ -13,7 +13,7 @@ There is growing awareness that SDOH information improves whole person care, low
 
 Addressing SDOH is a primary approach to achieve health equity. See National Center for HIV, Viral Hepatitis, STD, and TB Prevention (NCHHSTP) Social Determinants of Health, [Frequently Asked Questions](https://www.cdc.gov/nchhstp/socialdeterminants/faq.html)
 
-These national calls to action for health care systems have spurred innovations, including a wide range of social risk screening tools and practice-based interventions.   Some of these innovations have helped to reduce social risks, improve outcomes, and lower costs.   The experimentation in this area has been bolstered by new value-based payment models and accountable care organizations (ACOs), which together offer financial incentives to advance coordinated care between medical and social service organizations and other organizations directly connected to patients.
+These national calls to action for health care systems have spurred innovations, including a wide range of social care assessment instruments and practice-based interventions.   Some of these innovations have helped to reduce social risks, improve outcomes, and lower costs.   The experimentation in this area has been bolstered by new value-based payment models and accountable care organizations (ACOs), which together offer financial incentives to advance coordinated care between medical and social service organizations and other organizations directly connected to patients.
 
 
 ### Gravity Project Overview
