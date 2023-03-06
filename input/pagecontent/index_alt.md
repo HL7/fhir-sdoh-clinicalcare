@@ -23,24 +23,28 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 ### Key Technical Content of this IG
 * Value sets for describing SDOH-related content:   The Gravity project has worked intensively to develop value sets for SDOH-related content.  This content is described where it is used.  See the following profiles: [SDOHCondition], [SDOHObservationAssessment], [SDOHProcedure], [SDOHProcedure], [SDOHServiceRequest].
 * Management of Referral Process:  The management of referrals by providers to Community-based organizations with different levels of FHIR capability and the assignment of tasks to Patients is described in detail.  See [Functional Use Cases] for an introduction.
-* Capability Statements for Referral Sources and Targets:   See [CapabilityStatement]
-* Draft proposals for profiles of Observation supporting Personal Characteristics:   These profiles are included to promote their use and eventual incorporation into USCore.  See [Draft FHIR Artifacts for Personal Characteristics]
+* [CapabilityStatements] for Referral Sources and Targets:  These capability statements provide the requirements for Referral sources and targets
+* [Draft FHIR Artifacts for Personal Characteristics](draft_specifications_for_personal_characteristics.html):   These profiles are included to promote their use and eventual incorporation into USCore.
 
 ### Dependencies on Other IGs
+
 | Implementation Guide | Version | Dependency |
 | -------------------- | ------- | ---------- |
 | [US Core](https://hl7.org/fhir/us/core/STU3.1.1/) | 3.1.1 | All profiles except those based on Observation, Task, and ServiceRequest are based on USCore profiles  |
 | [Structured Document Capture (SDC)](http://hl7.org/fhir/uv/sdc/)| 3.0.0  | SDC is the basis for mapping QuestionnaireResponses into Observationa and Conditions   |
 | [Subscriptions R5 Backport](http://hl7.org/fhir/uv/subscriptions-backport) |1.1.0   | Subscriptions are recommended for monitoring completion of referrals  |
 | [VSAC](http://fhir.org/packages/us.nlm.vsac) | 0.9.0   |    Gravity-developed value sets are managed through VSAC |
+{:.grid}
 
 ### Relationships to Other IGs
+
 | Implementation Guide |  Relationship  |
 | -------------------- |  ---------- |
 | [Human Services Directory](https://build.fhir.org/ig/HL7/FHIR-IG-Human-Services-Director) | Can be used by a provider to identify referral targets for SDOH-related services  |
 | FAST for Registries? | ??????  |
 | DaVinci for Auth?  |   |
 | [Bidirectional Service eReferral (BSeR)](http://hl7.org/fhir/us/bser/)  | Whereas this IG orchestrates referrals using the FHIR query interface, BSeR bases referral management on the exchange of self-contained Bundles of FHIR resources.  The approaches for referral management offered by this IG and BSeR should be harmonized to provide a consistent template for management of referrals by all IGs. |
+{:.grid}
 
 ### How to Read this IG
 
@@ -56,7 +60,7 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 | Specifications | [FHIR Artifacts] | An index of the FHIR artifacts defined as part of this implementation guide.     |  Detailed Technical |
 | Specifications| [Must Support and Missing Data Conformance] | Conformance requirements for must support and missing data.     |  Detailed Technical |
 | Specifications | [Privacy and Security] | Conformance requirements for privacy and security considerations     |  Detailed Technical |
-| Specifications | [Draft FHIR Artifacts for Personal Characteristics] | Draft proposals for profiles of Observation supporting Personal Characteristics     |  Detailed Technical |
+| Specifications | [Draft FHIR Artifacts for Personal Characteristics](draft_specifications_for_personal_characteristics.html) | Draft proposals for profiles of Observation supporting Personal Characteristics     |  Detailed Technical |
 | Specifications | [Downloads] | Downloads     |  Detailed Technical |
 {:.grid}
 
