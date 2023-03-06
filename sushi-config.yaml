@@ -95,6 +95,8 @@ pages:
     title: SDOH Clinical Care ImplementationGuide Resource
   fulloutline.md:
     title: Outline STU2.1
+  why_sdoh_data_matters.md:
+    title: SDOH Data and the Gravity Project
 
 groups:
   CapabilityStatements:
@@ -124,7 +126,6 @@ groups:
     name: Value Sets
     resources:
       - SDOHCCValueSetLOINCSNOMEDCT
-      - SDOHCCValueSetObservationMethod
       - SDOHCCValueSetObservationStatus
       - SDOHCCValueSetSDOHCategory
       - SDOHCCValueSetSDOHQuestionnaireCategory
@@ -135,9 +136,12 @@ groups:
     name: Code Systems
     resources:
       - SDOHCCCodeSystemTemporaryCodes
+  Extensions:
+    name: Extensions
+    resources:
+      - SDOHCCExtensionHealthcareServiceTelecomAppointment
   SearchParameters:
-    name: Draft Artifacts for Personal Characteristic Observations
-    description: Draft Artifacts for Personal Characteristic Observations
+    name: Search Parameters
     resources:
       - ServiceRequest-supporting-info
       - Task-output-reference
@@ -145,12 +149,8 @@ groups:
     name: Examples
     resources:
     - pat-53234
-    - SDOHCC-ConditionAsserterDeviceExample
-    - SDOHCC-ConditionFoodInsecurityExample
-    - SDOHCC-ConditionHomelessExample
     - SDOHCC-ConditionUnemployedExample
     - SDOHCC-ConsentInformationDisclosureExample
-    - SDOHCC-DeviceSoftwareExample
     - SDOHCC-GoalFoodSecurityExample
     - SDOHCC-GroupSDOHPatientsForPayerExample
     - SDOHCC-HealthcareServiceTelecomAppointmentExample
@@ -166,7 +166,6 @@ groups:
     - SDOHCC-ProcedureFoodPantryApplicationAssistanceExample
     - SDOHCC-ProcedureProvisionOfFoodExample
     - SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample
-    - SDOHCC-RelatedPersonMotherExample
     - SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample
     - SDOHCC-ServiceRequestSubreferralGardenProgramExample
     - SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample
@@ -187,6 +186,7 @@ groups:
     - SDOHCC-ObservationResponsePRAPAREClothingNeedExample
     - SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample
     - SDOHCC-ObservationResponsePRAPAREHousingStatusExample
+    - SDOHCC-ConditionHomelessExample
   HVS:
     name: Hunger Vital Signs Examples
     description: Hunger Vital Signs Examples
@@ -198,6 +198,9 @@ groups:
     - SDOHCC-ObservationResponseHungerVitalSignQuestion1Example
     - SDOHCC-ObservationResponseHungerVitalSignQuestion2Example
     - SDOHCC-ObservationResponseHungerVitalSignQuestion3Example
+    - SDOHCC-ConditionAsserterDeviceExample
+    - SDOHCC-ConditionFoodInsecurityExample
+    - SDOHCC-DeviceSoftwareExample
   DraftArtifacts:
     name: Draft Artifacts for Personal Characteristic Observations
     resources:
@@ -209,12 +212,12 @@ groups:
       - SDOHCCObservationRecordedSexGender
       - SDOHCCObservationSexualOrientation
       - SDOHCCExtensionConditionAsserter
-      - SDOHCCExtensionHealthcareServiceTelecomAppointment
+      - SDOHCCValueSetObservationDataAbsentReason
+      - SDOHCCValueSetObservationDerivedFromIdType
+      - SDOHCCValueSetObservationMethod
       - SDOHCCValueSetOMBEthnicityCategories
       - SDOHCCValueSetOMBRaceCategories
       - SDOHCCValueSetPronounsValue
-      - SDOHCCValueSetObservationDataAbsentReason
-      - SDOHCCValueSetObservationDerivedFromIdType
   DraftArtifactsExamples:
     name: Examples of Draft Artifacts for Personal Characteristic Observations
     resources:
@@ -226,6 +229,7 @@ groups:
     - SDOHCC-ObservationRaceOMBPractitionerExample
     - SDOHCC-ObservationRecordedSexGenderExample
     - SDOHCC-ObservationSexualOrientationExample
+    - SDOHCC-RelatedPersonMotherExample
 
 menu:
   Home: index_alt.html
