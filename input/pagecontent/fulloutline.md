@@ -6,7 +6,7 @@
   - Document SDOH data in conjunction with patient encounters with providers, payers, and community services
   - Document and track SDOH-related interventions to completion
   - Identify cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer) ==> IG doesn't do this.
-- Core Activities Supported
+- Core Activities Supported  (For more details see clinical scope section)
   - Screening: This refers to activities where SDH data from individual patients are initially captured, whether through a self-administered, provider-administered, or health plan-administered questionnaire. These activities may also be repeated at certain intervals to monitor changes in social risks.
   - Assessment/Diagnosis: These include activities where providers (clinical and community-based) and health plans analyze the data obtained through screening to determine a patient’s social risks and needs.
   - Treatment/Interventions: These refer to actions undertaken by providers (clinical and community-based) and health plans to help address identified social needs. These include referrals, case management, care planning, counseling and education, and provision of services and orders.
@@ -60,7 +60,8 @@
 
 #### Authors
 
-### [Gravity Background](gravity_background.html)
+### [SDOH and the Gravity Project](gravity_background.html)
+
 #### Why Social Determinants of Health Matter
 
 - Definition of SDOH
@@ -69,6 +70,8 @@
 
 *(Make the image centered and change the width to make it look better )*
 
+#### [SDOH Clinical Care Framework](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/usecases/sdoh_clinical_care_background.html#conceptual-framework)
+[Scope of Interactions Figure](IGScope.jpg)
 #### Standardizing SDOH Exchange
 
 - Background of Standardizing SDOH data
@@ -85,29 +88,25 @@
 
 #### Gravity Project Challenge Statement
 
-- What is a challenge statement? ### 3. SDOH Clinical Care Background
+- What is a challenge statement?
+### 3. SDOH Clinical Care Background
 
-#### SDOH Clinical Care Scope
-
+#### [SDOH Clinical Care Scope]()
+New drawing that shows the SDOH clinical care, the major actors, and the relevant profiles
 
 ### [SDOH Clinical Care Background](sdoh_clinical_care_background.html)
 #### Clinical Care Scope
 *There is no explanation to this diagram, it is a littler premature, still haven't been introduced to these actors what does scope of interactions mean?*
-
-[Scope of Interactions Figure](IGScope.jpg)
+Suggest deleting this.   It adds only confusion.
 
 [Expanded Scope of Interactions Figure](SDOHInteractionsDrawingexpandedV5.jpg)
-##### Out of Scope
-
-
+##### Out of Scope (of this IG?   THere are a lot more things that are outside of scope)
 1. Guidance on frequency of taking assesment
 2. Standards for reporting quality measures
 3. Addressing Consent beyond sharing to HIPPA
 
 *Does this belong in background, is this out of scope for diagram2*
-#### Conceptual Framework
 
-[Conceptual Framework figure](ConceptualFramework2.jpg)
 
 #### Data Modeling Framework
 *This could be a good example of one of the diagrams we link link the mCode diagram to the existing artifact*
@@ -120,19 +119,9 @@
 #### Overview
 #### Disclosure of Protected Health Information
 #### Direct Referral
-##### Actors and Assumptions
-##### Annotated Flow Diagram
 #### Direct Referral Light
-##### Actors and Assumptions
-##### Annotated Flow Diagram
 #### Indirect Referral with Direct CBO
-##### Actors and Assumptions
-##### Annotated Flow Diagram
-####  Indirect Referral with Direct Light CBO
-##### Actors and Assumptions
-##### Annotated Flow Diagram
-#### Closing the loop with the patient
-##### Actors and Assumptions
+#### Indirect Referral with Direct Light CBO
 #### Patient Workflow
 
 ### [Survey Instrument Support](survey_instrument_support.html)

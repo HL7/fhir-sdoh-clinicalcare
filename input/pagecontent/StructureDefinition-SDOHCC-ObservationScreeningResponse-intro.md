@@ -1,17 +1,12 @@
 
 ### Purpose
-Observation Screening Resonses are created from a Questionaire Response.  They can form the evidence for a Condition, the mitigation target for a Goal, or the reason for a Service Request. See the [Data Modeling Framework] for more detail on the role of the Observation Screening Response in the creation of health concerns, goal setting (patient-centered goals), and creation of referrals using service request and procedure/intervention.
+SDOHCC Observation Screening Response is intended to represent question-answer pairs from a Social Determinants of Health (SDOH) assessment instruments that are represented in LOINC. An [SDOHCC Observation Screening Response] that identifies a social risk or need can be referenced as evidence for an [SDOHCC Condition]. Sometimes, instead of representing a question answered directly on an assessment instrument, an [SDOHCC Observation Screening Response] may be derived from one or more other [SDOHCC Observation Screening Responses] (see [SDOHCC Observation Response Hunger Vital Sign Question 3 Example]). An SDOHCC Observation Screening Response may be addressed by, or be the outcome of, an [SDOHCC Goal], or be the reason for an [SDOHCC ServiceRequest] or an [SDOHCC Procedure]. See the [Data Modeling Framework] for more detail on the relationships between SDOHCC Observation Screening Response  and the other profiles in this IG.
 
 ### Usage
 
-This profile supports all of the SDOH Observation Screening Responses defined in the IG.  Creating and maintaining a separate Observation profile for each SDOH category would at present be burdensome.  Instead the table below defines the appropriate screening instruments for each categury with VSAC-hosted value set.
+Rather than creating a separate SDOHCC Observation Screening Response profile for each SDOH category (domain) covered in this IG (e.g., food insecurity, transportation insecurity, etc.), this profile can support any SDOH category. The optional Observation.category slice binds to a required value set of SDOH category codes (first column below). As per the table below, the code selected for Observation.category determines a downloadable spreadsheet with a set of preferred, category-specific codes for Observation.code. The codes in the spreadsheets are not represented as VSAC values sets.
+For additional guidance on the fields in the spreadsheet, and how to use the codes in the spreadsheets with the SDOHCC Observation Screening Response, please see [Assessment Instrument Spreadsheet Guidance] on the Gravity Project Confluence site.
 
-For each category of SDOH Observation Screening Responses, a specific value SHALL be used for Goal.category.
-Implentations **SHOULD** use a screening instrument from the listed value sets when one exists.
-The value sets are maintained in the  [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) database.
-The [Social Determinants of Health Screening Assessments value set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.126/expansion/Latest) contains the full set of SDOH screening assessment.
-
-The Gravity Project plans to work with the HL7 Vocabulary WG to determine how best to represent the domain specific value sets in each of the relevant resources and to establish appropriate methods to validate the consistent use of the correct domain specific codes. Future versions of this IG will include the logic to select specific value sets based on the SDOH domain.
 
 | [`Observation.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | Screening Instruments |
 | ------ | -------------------- | ------------------------- | ------------ |
