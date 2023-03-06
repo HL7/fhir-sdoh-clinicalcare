@@ -80,3 +80,5 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 </tr>
 </tbody>
 </table>
+
+{% include markdown-link-references.md %}
