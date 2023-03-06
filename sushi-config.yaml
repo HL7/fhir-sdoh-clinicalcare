@@ -136,6 +136,10 @@ groups:
     name: Code Systems
     resources:
       - SDOHCCCodeSystemTemporaryCodes
+  Extensions:
+    name: Extensions
+    resources:
+      - SDOHCCExtensionHealthcareServiceTelecomAppointment
   SearchParameters:
     name: Search Parameters
     resources:
@@ -208,7 +212,6 @@ groups:
       - SDOHCCObservationRecordedSexGender
       - SDOHCCObservationSexualOrientation
       - SDOHCCExtensionConditionAsserter
-      - SDOHCCExtensionHealthcareServiceTelecomAppointment
       - SDOHCCValueSetObservationDataAbsentReason
       - SDOHCCValueSetObservationDerivedFromIdType
       - SDOHCCValueSetObservationMethod
