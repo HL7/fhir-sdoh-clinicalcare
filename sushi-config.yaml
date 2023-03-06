@@ -95,6 +95,8 @@ pages:
     title: SDOH Clinical Care ImplementationGuide Resource
   fulloutline.md:
     title: Outline STU2.1
+  why_sdoh_data_matters.md:
+    title: SDOH Data and the Gravity Project
 
 groups:
   CapabilityStatements:
