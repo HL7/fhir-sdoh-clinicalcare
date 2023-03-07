@@ -6,7 +6,7 @@ The growing awareness around SDOH has contributed to efforts to address actionab
 
 {% include img-med.html img="Whatgoesintoyourhealth.jpg" caption="Figure 1: What Goes Into Your Health. Source: Institute for Clinical Systems Improvement, Going Beyond Clinical Walls: Solving Complex Problems (October 2014) Adapted from [The Bridgespan Group The Community Cure for Health Care](https://ssir.org/articles/entry/the_community_cure_for_health_care)" %}
 
-There is growing awareness that SDOH information improves whole person care, lowers costs, and that unmet social needs negatively impact outcomes. For example:
+There is strong evidence that social risks negatively impact health outcomes and addressing social risks improved health outcomes.  For example:
 * Food insecurity correlates with higher levels of diabetes, hypertension, and heart failure
 * Housing instability factors into lower treatment adherence
 * Transportation barriers result in missed appointments, delayed care, and lower medication compliance
