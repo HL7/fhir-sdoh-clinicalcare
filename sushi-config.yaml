@@ -43,8 +43,6 @@ description: This HL7 Implementation Guide (IG) defines how to exchange Social D
 pages:
   index.md:
     title: IG Home
-  index_alt.md:
-   title: IG Home (alt)
   sdoh_clinical_care_background.md:
     title: SDOH Clinical Care Background
   sdoh_clinical_care_scope_alt.md:
@@ -230,7 +228,7 @@ groups:
     - SDOHCC-RelatedPersonMotherExample
 
 menu:
-  Home: index_alt.html
+  Home: index.html
   Table of Contents:  toc.html
   Background:
     SDOH Data Interoperability: sdoh_challenges_gravity.html
