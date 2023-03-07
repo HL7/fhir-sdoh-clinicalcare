@@ -95,8 +95,8 @@ pages:
     title: SDOH Clinical Care ImplementationGuide Resource
   fulloutline.md:
     title: Outline STU2.1
-  why_sdoh_data_matters.md:
-    title: SDOH Data and the Gravity Project
+  sdoh_challenges_gravity.md:
+    title: SDOH and the Gravity Project
 
 groups:
   CapabilityStatements:
@@ -235,7 +235,7 @@ menu:
   Home: index_alt.html
   Table of Contents:  toc.html
   Background:
-    Gravity Background: gravity_background.html
+    SDOH Data Interoperability: sdoh_challenges_gravity.html
     SDOH Clinical Care Background: sdoh_clinical_care_background.html
     SDOH Clinical Care Background - alt: sdoh_clinical_care_scope_alt.html
     Technical Background : technical_background.html
