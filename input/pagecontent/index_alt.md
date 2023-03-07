@@ -46,6 +46,9 @@ Currently, this IG is intended to support [Patient Applications], [Provider's El
 {:.grid}
 
 ### How to Read this IG
+***This table is a work in progress.  It will be updated once the IG narrative rewrite is complete.  For now it is illustrative***
+
+This IG contains a wealth of material targetting different audiences. Some sections provide more general or introductory content, while others provide detailed technical information targetted at implementors.  The table below provides a listing of the key sections of the IG in the rough order that they should be read.
 
 | Section | Sub-section | Description | Audience |
 | --------| ----------- | --------- | ---------|
