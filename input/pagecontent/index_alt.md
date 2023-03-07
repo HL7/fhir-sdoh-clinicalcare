@@ -16,7 +16,7 @@ The IG supports the following use cases:
 The activities supported by this IG include (see [Clinical Scope](sdoc_clinical_care_scope.html) for more details)
   - Screening: This refers to activities where SDH data from individual patients are initially captured, whether through a self-administered, provider-administered, or health plan-administered questionnaire. These activities may also be repeated at certain intervals to monitor changes in social risks.
   - Assessment/Diagnosis: These include activities where providers (clinical and community-based) and health plans analyze the data obtained through screening to determine a patient’s social risks and needs.
-  - Treatment/Interventions: These refer to actions undertaken by providers (clinical and community-based) and health plans to help address identified social needs. These include referrals, case management, care planning, counseling and education, and provision of services and orders.
+  - Treatment/Interventions: These refer to actions undertaken by providers (clinical and community-based) and health plans to help address identified social risks and needs. These include referrals, case management, care planning, counseling and education, and provision of services and orders.
 
 
 Currently, this IG is intended to support [Patient Applications], [Provider's Electronic Health Record(EHR)] systems, [Coordinating Platforms] that intermediate between Providers and Community Based SDOH Service providers, and [Community Based SDOH Service Providers].  In the future Payer systems and governmental systems will be supported. The IG establishes a framework for SDOH-related interventions including:
@@ -54,10 +54,10 @@ Currently, this IG is intended to support [Patient Applications], [Provider's El
 | Background| [Functional Use Cases] |  This section provides a functional description of the interactions between the actors in an SDOH referral, and with links to the profiles and sections of the IG where more detail is provided. This should be read prior to the more detailed exchange workflow description.       |  General |
 | Background| FHIR Technical | Background material that should be understood prior to attempting to understand this IG     |  General/Introductory |
 | Implementation Guidance| [Standard Survey Instruments for SDOH (includes Mapping Instructions)] | The importance of standard survey instruments for the collection of SDOH, and how survey instruments are mapped to SDOH Conditions, Observations and Goals     |  General |
-| Implementation Guidance|  [Referral Exchange Workflow] |  THis has three parts:  1) General description of Assess/Goals/Intervention workflow (should move to background) 2) Management of Consent (should move to separate section) 3) Detailed technical description of implementation of workflow using the IG's API  |  Detailed Technical |
+| Implementation Guidance|  [Referral Exchange Workflow] |  This has three parts:  1) General description of Assess/Goals/Intervention workflow (should move to background) 2) Management of Consent (should move to separate section) 3) Detailed technical description of implementation of workflow using the IG's API  |  Detailed Technical |
 | Implementation Guidance | [Synchronizing with Data Sources] | I'm not really sure what this is about     |  Detailed Technical  |
-| Specifications | [FHIR Artifacts] | An index of the FHIR artifacts defined as part of this implementation guide.     |  Detailed Technical |
-| Specifications| [Must Support and Missing Data Conformance] | Conformance requirements for must support and missing data.     |  Detailed Technical |
+| Specifications | [FHIR Artifacts] | An index of the FHIR artifacts defined as part of this implementation guide     |  Detailed Technical |
+| Specifications| [Must Support and Missing Data Conformance] | Conformance requirements for must support and missing data     |  Detailed Technical |
 | Specifications | [Privacy and Security] | Conformance requirements for privacy and security considerations     |  Detailed Technical |
 | Specifications | [Draft FHIR Artifacts for Personal Characteristics](draft_specifications_for_personal_characteristics.html) | Draft proposals for profiles of Observation supporting Personal Characteristics     |  Detailed Technical |
 | Specifications | [Downloads] | Downloads     |  Detailed Technical |
