@@ -10,21 +10,21 @@ The guidance on this page details important concepts for implementation. See [Fu
 The Gravity workflow around referrals involves all parties being aware of when relevant Tasks and associated ServiceRequests have been created and/or updated. In most cases, the Tasks will reside within the EHR system of the initiating practitioner.  In this case, the EHR will always be aware when the Task is updated, so the challenge of monitoring Tasks will fall solely on the service delivery organization.  However, the Gravity workflow also supports Tasks being posted to a CBO's FHIR server or an intermediary organization that is responsible for managing the referral fulfillment process.  In these circumstances, both EHR and service delivery organizations will need to monitor for changes to Tasks.
 
 The specific types of events to be monitored for include:
-**Service Delivery Organizations**
-
+<br>
+**Service Delivery Organizations (CBO or CP)**
+<br>
 * A new Task has been assigned to the organization
 * A new Task that is unassigned, but which is seeking action within the organization's purview, has been created
 * A ServiceRequest associated with a Task assigned to the organization has been modified
 * A ServiceRequest associated with a Task assigned to the organization has been canceled
 
-**EHR systems**
-
+**EHR systems (Provider)**
+<br>
 * An assigned Task has been accepted or rejected
 * An unassigned Task has now been assigned
 * Outputs have been added to a Task
 * A Task has been marked as complete
-
-
+<br>
 There are two mechanisms for detecting the above changes - polling and subscriptions.
 
 #### Polling
@@ -38,7 +38,7 @@ or
 
 The time-stamp specified would be the search result returned from the last search.
 
-OPEN ISSUE: Are the organizations in question going to have RESTful ids on the server that holds the tasks or do we need to change this to:
+**OPEN ISSUE: Are the organizations in question going to have RESTful ids on the server that holds the tasks** or do we need to change this to:
 ```[base]/Task?owner:identifier=http%3A%2F%2Fsomeorganization%2Fsome%2Fidentifier%2Fsystem|123&_lastupdated=2021-05-03T17:23:18.1732-04:00```
 
 If unassigned Tasks are possible - i.e. where the organization to perform the service isn't pre-identified and is open to whoever wishes to claim the Task and perform it - organizations interested in examining Tasks available to claim would poll as follows:
@@ -130,7 +130,7 @@ This topic allows for monitoring for newly created tasks as well as updates to a
 </table>
 
 ##### ServiceRequest topic
-This topic allows for monitoring for changes to a ServiceRequest when an organization is involved in fulfilling that request (e.g. to be aware if the request is suspended, cancelled or otherwise modified).  The intent with this subscription is that the filter criteria will be updated regularly to refer to the specific ServiceRequest ids the organization is fulfilling.  Once fulfillment is complete, the ServiceRequest will no longer need to be monitored.
+This topic allows for monitoring for changes to a ServiceRequest when an organization is involved in fulfilling that request (e.g. to be aware if the request is suspended, canceled or otherwise modified).  The intent with this subscription is that the filter criteria will be updated regularly to refer to the specific ServiceRequest ids the organization is fulfilling.  Once fulfillment is complete, the ServiceRequest will no longer need to be monitored.
 
 <table class="grid">
   <thead>

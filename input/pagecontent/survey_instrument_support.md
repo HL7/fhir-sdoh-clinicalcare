@@ -1,34 +1,46 @@
-###  Enabling Survey Instruments
+This section introduces SDOH Survey instruments and describes how they fit into the overall process described by this IG.
+### Introduction to SDOH Survey Instruments
+SDOH Survey instruments are  tools used to gather information about an individual's social and economic factors that can impact their health and well-being. . The information collected through an SDOH survey can be used by healthcare providers, public health organizations, and policymakers to develop interventions and programs aimed at addressing the root causes of health disparities and improving health outcomes for individuals and communities.  This IG builds on existing FHIR frameworks to generate Observations, Conditions and goals from the survey instruments for incorporation into the Patient's health record. Although the Gravity Project has developed a curated collection of survey instruments, it is possible to leverage the capabilities of this IG without using survey instruments.
 
-This Implementation Guide uses the work from both the [Regenstrief Institute](https://www.regenstrief.org/) and the  [National Library of Medicine](https://www.nlm.nih.gov/) (NLM) to standardize the capture, coding and output of social care assessment instruments. The purpose is to use standardized social care assessment instruments to identify health concerns that can be validated by the patient and provider and, where appropriate, promoted to problems on the problem list.  The process ensures that the health concerns and ultimately the problems have appropriate [US Core Condition codes](http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code) consistent with the intent of the social care assessment instrument and consensus work by the Gravity Project. The alternative is to have each provider perform the specific coding.  While this method is supported in the exchange standard created by this IG, it introduces significant variability in the coding process.  LOINC codes are used to describe the results of the question and answer from the social care assessment instrument since they are the only terminology system that has the capability of fully encoding standard survey tools.  While the output of the survey process is an SDC QuestionnaireResponse, we convert the questions and answers to FHIR Observation and Condition resources to facilitate searching for specific survey results (something that is very hard to do with an SDC QuestionnaireResponse) and to identify the health concerns so they can be communicated and promoted to problems on the problem list. 
+Using a standardized SDOH survey instrument has several advantages:
+* **Validity and reliability**: Standard SDOH survey instruments have been validated and tested for reliability, meaning that they have been proven to provide accurate and consistent results.
+* **Comparability**: Standard SDOH survey instruments allow for comparability between different studies and populations, as they use the same questions and measurements.
+* **Ease of use**: Standard SDOH survey instruments are designed to be user-friendly and easy to administer.
+* **Consistency**: Using standard SDOH survey instruments helps to ensure that data collection is consistent, both within a study and across studies.
+* **Cost-effective**: Developing a custom survey instrument can be time-consuming and expensive, especially if you need to test and validate the instrument.
 
-An Observation is used to group all of the observations created by the QuestionnaireResponse using the Observation.hasMember Reference to each of the individual observations. This approach is consistent with US Core and there are examples presented later in IG for both of the example Questionnaires. 
+The Gravity Project has curated survey instruments that cover a broad range of social risks.  See a description of these instruments [here][SDOHCCObservationScreeningResponse].
 
-The following diagram depicts the suggested approach to incorporating social care assessments into the overall information flow for SDOH.
+Survey instruments fit into the [SDOH Clinical Care framework](sdoh_clinical_care_scope_alt.html#conceptual-framework). Providers incorporate screening into the care process to assess concerns and problems.  This information is used to help the Provider and Patient establish goals, and identify SDOH-related interventions that would address those goals.  Responses to standard survey instruments can also be used to drive public health analysis of aggregated data from patient populations, since both the answers to the questions, the questions, and the instrument from which they were drawn can be incorporated into the analysis.
 
-1. Establish complete survey as [LOINC Components](https://loinc.org/kb/faq/structure/) with [LOINC Answer Lists](https://loinc.org/forums/topic/answer-lists/).  
+### Standardization of SDOH Survey Instruments
+We represent the instruments using [Questionnaire] and the completion of an instrument using [QuestionnaireResponse].
+For each SDOH domain, we select [standard sets of questions][Assessment Instrument Spreadsheet Guidance]  leveraging existing validated instruments selected [Regenstrief Institute](https://www.regenstrief.org/) and the  [National Library of Medicine](https://www.nlm.nih.gov/) (NLM) to standardize the capture, coding and output of social care assessment instruments.
+We define common canonical URLs, linkIds and allowed answer codes.
 
-2. Establish calculation logic for the [SDC FHIR Questionnaire](http://hl7.org/fhir/us/sdc/sdc-questionnaire.html) (e.g., where two questions determine the answer to another "question").
+LOINC codes are used to describe the results of the question and answer from the social care assessment instrument since they are the only terminology system that has the capability of fully encoding standard survey tools.  While the output of the survey process is an SDC QuestionnaireResponse, we convert the questions and answers to FHIR Observation and Condition resources to facilitate searching for specific survey results (something that is very hard to do with an SDC QuestionnaireResponse) and to identify the health concerns so they can be communicated and promoted to problems on the problem list.
 
-3. Conversion of the LOINC survey to an [SDC FHIR Questionnaire](http://hl7.org/fhir/us/sdc/sdc-questionnaire.html) using an appropriate conversion tool (Note: the reference implementation of this IG uses the open source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms)).
+An Observation is used to group all of the observations created by the QuestionnaireResponse using the Observation.hasMember Reference to each of the individual observations. This approach is consistent with US Core and there are examples presented later in IG for both of the example Questionnaires.
 
-4. Execute the [SDC FHIR Questionnaire](http://hl7.org/fhir/us/sdc/sdc-questionnaire.html) using an appropriate application (Note: the reference implementation of this IG uses the open source NLM [SDC Questionnaire App](https://lhcforms.nlm.nih.gov/sdc)) and create an [SDC QuestionnaireResponse](http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html).
+### Developing a New Survey Instrument
+Note, most users of this guide will use standard survey instruments.  This description is provided for educational completeness.
 
-5. Using a [StructureMap](http://www.hl7.org/fhir/structuremap.html) and an appropriate validation tool convert the [SDC Questionnaire Response](http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html) to:
+Developing a new survey instrument for incorporation into the process described in this IG involves developing the survey, calculation logic, and conversion logic:
+* **Develop the Survey Instrument**:  The survey is built from a set of survey as [LOINC Components](https://loinc.org/kb/faq/structure/) with associated [LOINC Answer Lists](https://loinc.org/forums/topic/answer-lists/).
+* **Develop the [SDC FHIR Questionnaire]**:  The survey question and answers are incorporated into an [SDC FHIR Questionnaire] which also includes calculation logic that defines the result of some questions as a function of the answers to other questions.  There are tools that support this step (e.g., the open source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms))
+* **Develop the Conversion Logic**: The results of the instrument are captured in a [SDC QuestionnaireResponse], and this in turn can be converted to Observations and Conditions as using a [StructureMap].  The structure map logic needs to be developed.  See the [Mapping Instructions](mapping_instructions.html) page for more on FHIR structure maps. Executing the Structure Map on a QuestionaireResponse produces:
+  * [Observation][SDOHCC Observation Screening Reponse] (each representing a survey question-answer(s) pair),
+  * An  [Observation][SDOHCC Observation Screening Reponse] that groups the Observations associated with a social care assessment together,
+  * As many [Condition(s) resources](StructureDefinition-SDOHCC-Condition.html) indicating Health Concerns identified by the social care assessment instrument answers that should be coded with [US Core Condition codes](http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code).
 
-   - LOINC Coded [Observation resources](StructureDefinition-SDOHCC-ObservationScreeningResponse.html) (each representing a survey question-answer(s) pair), 
 
-   - An  [Observation resource](StructureDefinition-SDOHCC-ObservationScreeningResponse.html) that groups the Observations associated with a social care assessment together,
+### How Survey Instruments Are Incorporated Into the CLinical Workflow
 
-   - and as many [Condition(s) resources](StructureDefinition-SDOHCC-Condition.html) indicating Health Concerns identified by the social care assessment instrument answers that should be coded with [US Core Condition codes](http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code).
+To use a survey instrument in practice, the artifacts produced in the previous section are used.
+* **Patient Answers a Questionnaire**:  The Patient is sent a [SDC FHIR Questionnaire] and fills it out.   The filled out questionnaire is returned as a [SDC QuestionnaireResponse]
+* **QuestionnaireResponse is Processed Using a StructureMap**:  The resulting QuestionnaireResponse is processed by a StructureMap
 
-      Each of the above resources SHALL be compliant with the linked profiles in this IG.
-
-6. Example output and [StructureMap](http://www.hl7.org/fhir/structuremap.html) are available in this IG for the [Hunger Vital Signs](https://loinc.org/88121-9/) and [PRAPARE](https://loinc.org/93025-5/) social care assessment instruments.
-
-*see the [Mapping Instructions](mapping_instructions.html) page for instructions on FHIR structure maps.*
-
-<table><tr><td><img src="enablingsurveyinstruments.jpg" /></td></tr></table>
+Example output and [StructureMap] are available in this IG for the [Hunger Vital Signs](https://loinc.org/88121-9/) and [PRAPARE](https://loinc.org/93025-5/) social care assessment instruments.
 
 #### [Hunger Vital Sign (HVS) Survey](https://loinc.org/88121-9/) Example
 
@@ -54,7 +66,7 @@ This implementation guide includes a complete example of the HVS Survey represen
 
 
 
-The Hunger Vital Sign Survey is included as an example with permission 
+The Hunger Vital Sign Survey is included as an example with permission
 
 © 2010 Dr. Erin Hager and Dr. Anna Quigg and the Children’s HealthWatch research team.
 
@@ -74,8 +86,8 @@ This implementation guide includes a partial example of the PRAPARE Survey repre
 
 - [Employment Status](Observation-SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample.html)
 - [Housing Status](Observation-SDOHCC-ObservationResponsePRAPAREHousingStatusExample.html)
-- [Child Care Need](Observation-SDOHCC-ObservationResponsePRAPAREChildCareNeedExample.html)  
-- [Clothing Need](Observation-SDOHCC-ObservationResponsePRAPAREClothingNeedExample.html) 
+- [Child Care Need](Observation-SDOHCC-ObservationResponsePRAPAREChildCareNeedExample.html)
+- [Clothing Need](Observation-SDOHCC-ObservationResponsePRAPAREClothingNeedExample.html)
 
 5)  two Condition resources to record the health concerns based on the results of the survey
 
@@ -84,6 +96,6 @@ This implementation guide includes a partial example of the PRAPARE Survey repre
 
 
 
-Portions of the PRAPARE Survey are included as an example with permission 
+Portions of the PRAPARE Survey are included as an example with permission
 
  © 2019. This item comes from the national PRAPARE social determinants of health assessment protocol, developed and owned by the National Association of Community Health Centers (NACHC), in partnership with the Association of Asian Pacific Community Health Organization (AAPCHO), the Oregon Primary Care Association (OPCA), and the Institute for Alternative Futures (IAF). For more information, visit [www.nachc.org/prapare](http://www.nachc.org/prapare)

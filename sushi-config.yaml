@@ -243,6 +243,7 @@ menu:
     Exchange Workflow:  exchange_workflow.html
     Functional Use Cases:   functional_use_cases.html
     Functional Use Cases (alt):   functional_use_cases_alt.html
+    Checking Task Status: checking_task_status.html
     Synchronizing Applications With API Data Sources: synchronizing_applications_with_api_data_sources.html
   FHIR Artifacts and Examples:
     Capability Statements: artifacts.html#capability-statements
@@ -256,7 +257,6 @@ menu:
     Examples of Draft Artifacts for Personal Characteristics: artifacts.html#11
     Complete Listing: artifacts.html
   Specifications:
-    Checking Task Status: checking_task_status.html
     Privacy and Security: privacy_and_security.html
     Must Support and Missing Data: mustsupport_and_missing_data.html
     Draft Specifications for Personal Characteristics:   draft_specifications_for_personal_characteristics.html

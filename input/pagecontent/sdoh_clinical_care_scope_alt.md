@@ -51,9 +51,7 @@ In the drawing above, each of the actors supports a set of roles that are descri
   * Provides [review material][SDOHCCPatientTask] to patients
   * Solicits [feedback][SDOHCCPatientTask] from patients
 
-
-
-### Scope of Intereactions
+### Scope of Interactions
 
 The scope of interactions is intended to cover all of the interactions shown in the drawing below. THe focus of the current IG is interactions between a patient, provider, and CBO, with possible intermediation by a CP. In the future, the IG will be expanded to support Payers and Government agencies, and referrals from non-health care providers.  The IG supports interactions with CBOs that support either a FHIR-enabled application that can FHIR servers, or a FHIR-server based application that supports querying other FHIR servers, as well as being queried by other applications.  In the drawing below, bidirectional solid arrows reflect communication between two endpoints with FHIR servers, whereas unidirectional solid arrows reflect communicaiton between a FHIR-enabled application and a FHIR server.
 
