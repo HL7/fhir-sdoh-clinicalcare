@@ -15,7 +15,7 @@ The table shows the types of tasks that can be assigned to the patient and the c
 | Questionaire (URL)| `complete-questionnaire` | required| questionnaire-url, questionaire-category required | If present, questionnaire-response   | |
 | General Information Request | `general-information` | required |        | If present, general-information-response | |
 | Make Contact Directions |  `make-contact` |  | at least one Contact entity is required | If present, Task.output must be “chosen-contact” |
-| Review Material | `review-material` | | | Task.focus of DocumentReference is required. |
+| Review Material | `review-material` | |  | | Task.focus of DocumentReference is required. |
 {:.grid}
 
 #### Checking Task Status
