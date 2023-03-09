@@ -43,10 +43,6 @@ description: This HL7 Implementation Guide (IG) defines how to exchange Social D
 pages:
   index.md:
     title: IG Home
-  index_alt.md:
-   title: IG Home (alt)
-  gravity_background.md:
-    title: Gravity Background
   sdoh_clinical_care_background.md:
     title: SDOH Clinical Care Background
   sdoh_clinical_care_scope_alt.md:
@@ -95,8 +91,8 @@ pages:
     title: SDOH Clinical Care ImplementationGuide Resource
   fulloutline.md:
     title: Outline STU2.1
-  why_sdoh_data_matters.md:
-    title: SDOH Data and the Gravity Project
+  sdoh_challenges_gravity.md:
+    title: SDOH and the Gravity Project
 
 groups:
   CapabilityStatements:
@@ -232,10 +228,10 @@ groups:
     - SDOHCC-RelatedPersonMotherExample
 
 menu:
-  Home: index_alt.html
+  Home: index.html
   Table of Contents:  toc.html
   Background:
-    Gravity Background: gravity_background.html
+    SDOH Data Interoperability: sdoh_challenges_gravity.html
     SDOH Clinical Care Background: sdoh_clinical_care_background.html
     SDOH Clinical Care Background - alt: sdoh_clinical_care_scope_alt.html
     Technical Background : technical_background.html
@@ -248,8 +244,18 @@ menu:
     Functional Use Cases:   functional_use_cases.html
     Functional Use Cases (alt):   functional_use_cases_alt.html
     Synchronizing Applications With API Data Sources: synchronizing_applications_with_api_data_sources.html
+  FHIR Artifacts and Examples:
+    Capability Statements: artifacts.html#capability-statements
+    Profiles: artifacts.html#profiles
+    Value Sets: artifacts.html#value-sets
+    Code Systems: artifacts.html#code-systems
+    Examples: artifacts.html#examples
+    PRAPARE Examples: artifacts.html#prapare-examples
+    Hunger Vital Signs Examples: artifacts.html#hunger-vital-signs-examples
+    Draft Artifacts for Personal Characteristics: artifacts.html#10
+    Examples of Draft Artifacts for Personal Characteristics: artifacts.html#11
+    Complete Listing: artifacts.html
   Specifications:
-    FHIR Artifacts: artifacts.html
     Checking Task Status: checking_task_status.html
     Privacy and Security: privacy_and_security.html
     Must Support and Missing Data: mustsupport_and_missing_data.html
