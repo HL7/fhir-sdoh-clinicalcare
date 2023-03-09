@@ -9,7 +9,8 @@ This update is focused on improving the readability of the IG narrative content.
 
 1. Included value set references in narrative for the multi-domain profiles (Condition, Goal, ServiceRequest, Procedure, and Observation)
 2. Improved narrative in all Profiles
-3. Abstract flag in [SDOHCCObservationAssessment] is now false
+3. Abstract flag in [SDOHCCObservationAssessment] is now false - [FHIR-40460 ](https://jira.hl7.org/browse/FHIR-40460)
+4. Corrected bindings for output procedures in [SDOHCCTaskForReferralManagement]   - [FHIR-40586](https://jira.hl7.org/browse/FHIR-40586)
 
 
 ### CapabilityStatements

@@ -20,7 +20,10 @@
 [SDOHCC Procedure]: StructureDefinition-SDOHCC-Procedure.html
 [SDOHCC Condition]: StructureDefinition-SDOHCC-Condition.html
 [SDOHCC Consent]: StructureDefinition-SDOHCC-Consent.html
-
+<!--# SDC -->
+[SDC QuestionnaireResponse]: http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html
+[SDC FHIR Questionnaire]: http://hl7.org/fhir/us/sdc/sdc-questionnaire.html
+[StructureMap]: http://www.hl7.org/fhir/structuremap.html
 <!--# Document Sections -->
 [Indirect Referral]: functional_use_cases.html#indirectreferral
 [Indirect Referral Light]: functional_use_cases.html#indirectreferrallight

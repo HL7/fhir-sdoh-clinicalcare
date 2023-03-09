@@ -49,8 +49,8 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
     PerformedActivityReference 0..* MS and
     PerformedActivityCode 0..* MS
 * output[PerformedActivityReference].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
-* output[PerformedActivityReference].value[x] only Reference
+* output[PerformedActivityReference].value[x] only Reference(SDOHCCProcedure)
 * output[PerformedActivityReference].value[x] MS
 * output[PerformedActivityCode].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
-* output[PerformedActivityCode].value[x] only CodeableConcept
+* output[PerformedActivityCode].value[x] from USCoreProcedureCodes (required)
 * output[PerformedActivityCode].value[x] MS
