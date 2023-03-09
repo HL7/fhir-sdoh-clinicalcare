@@ -1,4 +1,6 @@
-###  Glossary
+###  Glossary   
+    
+    
 | Term    |  Definition |
 | -------- | ---------- |
 |  Business associate     | A person or entity that performs certain functions or activities that involve the use or disclosure of protected health information on behalf of, or provides services to, a covered entity.  A member of the covered entity’s workforce is not a business associate.  A covered health care provider, health plan, or health care clearinghouse can be a business associate of another covered entity.  The Privacy Rule lists some of the functions or activities, as well as the particular services, that make a person or entity a business associate, if the activity or service involves the use or disclosure of protected health information. The types of functions or activities that may make a person or entity a business associate include payment or health care operations activities, as well as other functions or activities regulated by the Administrative Simplification Rules.  |
