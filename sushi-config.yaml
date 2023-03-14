@@ -75,6 +75,8 @@ pages:
     title: Draft Specifications for Personal Characteristics
   downloads.md:
     title: Downloads
+  dictionary.md:
+    title: Data Dictionary
   credits.md:
     title: Credits
   stu2_ballot_changes.md:
@@ -260,6 +262,7 @@ menu:
     Privacy and Security: privacy_and_security.html
     Must Support and Missing Data: mustsupport_and_missing_data.html
     Draft Specifications for Personal Characteristics:   draft_specifications_for_personal_characteristics.html
+    DataDictionary: dictionary.html
     Downloads: downloads.html
   Change History:
     STU2 Ballot Changes:  stu2_ballot_changes.html
