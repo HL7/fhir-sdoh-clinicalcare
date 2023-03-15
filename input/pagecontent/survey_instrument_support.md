@@ -49,60 +49,39 @@ To use an assessment instrument in practice, the artifacts produced in the previ
 
 Example output and [StructureMap] are available in this IG for the [Hunger Vital Signs](https://loinc.org/88121-9/) and [PRAPARE](https://loinc.org/93025-5/) social care assessment instruments.
 
-#### [Hunger Vital Sign (HVS) Survey](https://loinc.org/88121-9/) Example
+#### Hunger Vital Sign (HVS) Survey Example
 
-This implementation guide includes a complete example of the HVS Survey representation as:
+This implementation guide includes a complete example[^1] of the [Hunger Vital Sign (HVS) Survey](https://loinc.org/88121-9/) representation including:
 
-1) an [SDC Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)
+* an [SDC Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)
+* an [SDC QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html)
+* a [StructureMap](StructureMap-SDOHCC-StructureMapHungerVitalSign.html) that takes the [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) and creates the appropriate Observations and Condition resources
+* an [Observation](Observation-SDOHCC-ObservationResponseHungerVitalSignGroupingExample.html) used to group the specific questions and answers from survey
+* multiple Observations used to record the question and answers for each of the elements of the survey
+  * [Question 1](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion1Example.html)
+  * [Question 2](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion2Example.html)
+  * [Question 3](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example.html) (computed)
+* a [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) resource to record the health concern based on the result of the survey
 
-2) an [SDC QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html)
+[^1]: The Hunger Vital Sign Survey is © 2010 Dr. Erin Hager and Dr. Anna Quigg and the Children’s HealthWatch research team, and the example is included with permission.
 
-3) a [StructureMap](StructureMap-SDOHCC-StructureMapHungerVitalSign.html) that takes the [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) and creates the appropriate Observations and Condition resources
+#### Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences (PRAPARE) Survey Example
 
-4) an [Observation](Observation-SDOHCC-ObservationResponseHungerVitalSignGroupingExample.html) used to group the specific questions and answers from survey
+This implementation guide includes a partial example of the [Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences ([PRAPARE](https://loinc.org/93025-5/)) Survey[^2] representation including:
 
-5) multiple Observations used to record the question and answers for each of the elements of the survey
+* an [SDC Questionnaire](Questionnaire-SDOHCC-QuestionnairePRAPARE.html)
+* an [SDC Questionnaire Response](QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html)
+* a [StructureMap](StructureMap-SDOHCC-StructureMapPRAPARE.html) that takes the [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html) and creates the appropriate Observations and Condition resources
+* multiple Observations used to record the question and answers for a select set of the survey elements (not all questions are provided in these examples)
+  * [Employment Status](Observation-SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample.html)
+  * [Housing Status](Observation-SDOHCC-ObservationResponsePRAPAREHousingStatusExample.html)
+  * [Child Care Need](Observation-SDOHCC-ObservationResponsePRAPAREChildCareNeedExample.html)
+  * [Clothing Need](Observation-SDOHCC-ObservationResponsePRAPAREClothingNeedExample.html)
+* two Condition resources to record the health concerns based on the results of the survey
+  * [Unemployed](Condition-SDOHCC-ConditionUnemployedExample.html)
+  *  [Homeless](Condition-SDOHCC-ConditionHomelessExample.html)
 
-- 	[Question 1](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion1Example.html)
-
-- 	[Question 2](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion2Example.html)
-
-- 	[Question 3](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example.html) (computed)
-
-6)  a [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) resource to record the health concern based on the result of the survey
-
-
-
-The Hunger Vital Sign Survey is included as an example with permission
-
-© 2010 Dr. Erin Hager and Dr. Anna Quigg and the Children’s HealthWatch research team.
-
-
-
-#### [Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences (PRAPARE) Survey](https://loinc.org/93025-5/) Example
-
-This implementation guide includes a partial example of the PRAPARE Survey representation as:
-
-1) an [SDC Questionnaire](Questionnaire-SDOHCC-QuestionnairePRAPARE.html)
-
-2) an [SDC Questionnaire Response](QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html)
-
-3) a [StructureMap](StructureMap-SDOHCC-StructureMapPRAPARE.html) that takes the [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html) and creates the appropriate Observations and Condition resources
-
-4) multiple Observations used to record the question and answers for a select set of the survey elements (not all questions are provided in these examples)
-
-- [Employment Status](Observation-SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample.html)
-- [Housing Status](Observation-SDOHCC-ObservationResponsePRAPAREHousingStatusExample.html)
-- [Child Care Need](Observation-SDOHCC-ObservationResponsePRAPAREChildCareNeedExample.html)
-- [Clothing Need](Observation-SDOHCC-ObservationResponsePRAPAREClothingNeedExample.html)
-
-5)  two Condition resources to record the health concerns based on the results of the survey
-
-- [Unemployed](Condition-SDOHCC-ConditionUnemployedExample.html)
-- [Homeless](Condition-SDOHCC-ConditionHomelessExample.html)
+[^2]: This example comes from the national PRAPARE social determinants of health assessment protocol, developed and © 2019 by the National Association of Community Health Centers (NACHC), in partnership with the Association of Asian Pacific Community Health Organization (AAPCHO), the Oregon Primary Care Association (OPCA), and the Institute for Alternative Futures (IAF). For more information, visit [www.nachc.org/prapare](http://www.nachc.org/prapare). It is included witih permission.
 
 
-
-Portions of the PRAPARE Survey are included as an example with permission
-
- © 2019. This item comes from the national PRAPARE social determinants of health assessment protocol, developed and owned by the National Association of Community Health Centers (NACHC), in partnership with the Association of Asian Pacific Community Health Organization (AAPCHO), the Oregon Primary Care Association (OPCA), and the Institute for Alternative Futures (IAF). For more information, visit [www.nachc.org/prapare](http://www.nachc.org/prapare)
+ {% include markdown-link-references.md %}
