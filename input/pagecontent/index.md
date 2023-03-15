@@ -7,9 +7,9 @@ Social determinants of health (SDOH) are the conditions in the environments wher
 This IG was developed by the [Gravity Project], which aims to build and promulgate consensus driven social determinants of health (SDOH) data standards for health and social care interoperability and use among multi-stakeholders.  Both the project and this implementation guide are focused on the U.S. environment.  This IG leverages content from the [US Core Implementation Guide](https://www.hl7.org/fhir/us/core/) and binds to US-specific terminology.  However, the basic constructs and interaction patterns may well be applicable outside the U.S.
 
 The IG supports the following use cases:
-* 	Document SDOH data in conjunction with patient encounters with providers, payers, and community services
-*   Document and track SDOH-related interventions to completion
-* 	Identifying cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer) 
+* 	Documenting SDOH data in conjunction with patient encounters with providers, payers, and community services
+*   Referring patients to Community Based Organizations (CBOs) to address SDOH needs via an electronic workflow.  The referral framework includes support for intermediary organizations to manage service delivery, closed loop feedback to the ordering clinician and direct engagement with the patient and their care-givers.
+* 	Identifying cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer)
 
 {% include img.html img="ConceptualFramework.png" caption="Figure 1: Conceptual Framework for SDOH Clinical Care" %}
 
