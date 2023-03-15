@@ -105,3 +105,6 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 		</tr>
 	</tbody>
 </table>
+
+
+{% include markdown-link-references.md %}
