@@ -43,10 +43,16 @@ description: This HL7 Implementation Guide (IG) defines how to exchange Social D
 pages:
   index.md:
     title: IG Home
+  sdoh_challenges_gravity.md:
+    title: SDOH and the Gravity Project
   sdoh_clinical_care_scope.md:
     title: SDOH Clinical Care Background
   technical_background.md:
     title: Technical Background
+  glossary.md:
+    title: Glossary
+  credits.md:
+    title: Credits
   survey_instrument_support.md:
     title: Survey Instrument Support
   mapping_instructions.md:
@@ -55,12 +61,12 @@ pages:
     title: Exchange Workflow
   functional_use_cases.md:
     title: Functional Use Cases (non-technical)
-  synchronizing_applications_with_api_data_sources.md:
-    title: Synchronizing Applications With API Data Sources
-  fhir_artifacts_overview.md:
-    title: FHIR Artifacts Overview
   checking_task_status.md:
     title: Checking Task Status
+  synchronizing_applications_with_api_data_sources.md:
+    title: Synchronizing Applications With API Data Sources
+  artifacts.html:
+    title: Artifacts Index
   privacy_and_security.md:
     title: Privacy and Security
   mustsupport_and_missing_data.md:
@@ -71,24 +77,17 @@ pages:
     title: Downloads
   dictionary.md:
     title: Data Dictionary
-  credits.md:
-    title: Credits
   stu2_ballot_changes.md:
     title: STU2 Ballot Changes
   stu2_publication_changes.md:
     title: STU2 Publication Changes
   stu2_1_update_changes.md:
     title: STU2.1 Publication Changes
-  artifacts.html:
-    title: Artifacts Index
-  glossary.md:
-    title: Glossary
   ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.md:
     title: SDOH Clinical Care ImplementationGuide Resource
   fulloutline.md:
     title: Outline STU2.1
-  sdoh_challenges_gravity.md:
-    title: SDOH and the Gravity Project
+
 
 groups:
   CapabilityStatements:
