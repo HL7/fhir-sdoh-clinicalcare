@@ -10,7 +10,7 @@ Rather than offer separate SDOHCC Observation Screening Response profiles for ea
 
 #### General guidance for preferred value sets for SDOHCC Observation Screening Response
 
-Codes in the preferred value sets are from LOINC-encoded assessment instruments that have been vetted as face-valid by the Gravity Project. The [Social Determinants of Health Screening Assessments] Value Set, hosted in the [NIH Value Set Authority Center (VSAC)], contains all assessment instruments from which Gravity has chosen questions. For each Gravity-vetted assessment instrument, the questions are also vetted and only those that also meet Gravity criteria are included in the preferred value sets.
+Codes in the preferred value sets are from LOINC-encoded assessment instruments that have been vetted as face-valid by the Gravity Project. The [Social Determinants of Health Screening Assessments](broken.html) Value Set, hosted in the [NIH Value Set Authority Center (VSAC)][VSAC], contains all assessment instruments from which Gravity has chosen questions. For each Gravity-vetted assessment instrument, the questions are also vetted and only those that also meet Gravity criteria are included in the preferred value sets.
 
 For the Observation.category slice with binding to [SDOHCC ValueSet SDOH Category], the category-specific code selected (first column Table below) determines the preferred, category-specific value sets for Observation.code and Observation.value which are hosted in VSAC.
 
@@ -24,7 +24,7 @@ For an SDOHCC Observation Screening Response that represents a question and its 
  **Category-specific** Screening Assessments Value Set – Contains LOINC codes for the assessment instruments (LOINC panels) from which the preferred, category-specific questions have been selected.
 For an SDOHCC Observation Screening Response that is an Observation Grouping, Observation.code SHOULD use panel LOINC codes from this value set. An Observation Grouping does not have an Observation.value.
 
-Instead, an Observation Grouping (via Observation.member) references all Observations generated from a specific assessment instrument. See SDOHCC Observation Response Hunger Vital Sign Grouping Example.
+Instead, an Observation Grouping (via Observation.hasMember) references all Observations generated from a specific assessment instrument. See [SDOHCC Observation Response Hunger Vital Sign Grouping Example](dkdk).
  **Category-specific** Screening Assessments And Questions Value Set – Contains all codes in  **Category-specific** Screening Assessments Questions Value Set (LOINC question codes) AND  **Category-specific** Screening Assessments Value Set (LOINC panel codes).
 
 For SDOHCC Observation Screening Response, this is the complete set of preferred values allowed for Observation.code for a category-specific Observation and can be used to validate that Observation.code is from a preferred, category-specific value set.
@@ -62,41 +62,41 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
 			<td rowspan="3">Observation.code</td>
-			<td><a href="https://www.nytimes.com">Questions and Panels</a></td>
+			<td><a href="broken.html">Questions and Panels</a></td>
 			<td>OID-1</td>
-			<td colspan="1" rowspan="4"><a href="https://www.nytimes.com">Food Insecurity Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Food Insecurity Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
-			<td><a href="https://www.nytimes.com">Panels</a></td>
+			<td><a href="broken.html">Panels</a></td>
 			<td>OID-2</td>
 		</tr>
 		<tr>
-			<td><a href="https://www.nytimes.com">Questions</a></td>
+			<td><a href="broken.html">Questions</a></td>
 			<td>OID-3</td>
 		</tr>
 		<tr>
 			<td>Observation.value</td>
-			<td><a href="https://www.nytimes.com">Answers</a></td>
+			<td><a href="broken.html">Answers</a></td>
 			<td>OID-4</td>
 		</tr>
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></td>
 			<td rowspan="3">Observation.code</td>
-			<td><a href="https://www.nytimes.com">Questions and Panels</a></td>
+			<td><a href="broken.html">Questions and Panels</a></td>
 			<td>OID-5</td>
-			<td colspan="1" rowspan="4"><a href="https://www.nytimes.com">Housing Instability Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Housing Instability Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
-			<td><a href="https://www.nytimes.com">Panels</a></td>
+			<td><a href="broken.html">Panels</a></td>
 			<td>OID-6</td>
 		</tr>
 		<tr>
-			<td><a href="https://www.nytimes.com">Questions</a></td>
+			<td><a href="broken.html">Questions</a></td>
 			<td>OID-7</td>
 		</tr>
 		<tr>
 			<td>Observation.value</td>
-			<td><a href="https://www.nytimes.com">Answers</a></td>
+			<td><a href="broken.html">Answers</a></td>
 			<td>OID-8</td>
 		</tr>
 		<tr>
