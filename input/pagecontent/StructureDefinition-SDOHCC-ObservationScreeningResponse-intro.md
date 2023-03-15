@@ -105,14 +105,14 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 		</tr>
 	</tbody>
 </table>
-
+<!-- ### Table
 <p>&nbsp;</p>
 </body>
 </div>
 {% include markdown-link-references.md %}
 
 <p>&nbsp;</p>
-<!-- ### Table
+
 
 | [`Observation.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | Screening Instruments |
 | ------ | -------------------- | ------------------------- | ------------ |
