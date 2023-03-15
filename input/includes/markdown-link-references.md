@@ -20,6 +20,8 @@
 [SDOHCC Procedure]: StructureDefinition-SDOHCC-Procedure.html
 [SDOHCC Condition]: StructureDefinition-SDOHCC-Condition.html
 [SDOHCC Consent]: StructureDefinition-SDOHCC-Consent.html
+[SDOHCC ValueSet SDOH Category]: ValueSet-SDOHCC-ValueSetSDOHCategory.html
+
 <!--# SDC -->
 [SDC QuestionnaireResponse]: http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html
 [SDC FHIR Questionnaire]: http://hl7.org/fhir/us/sdc/sdc-questionnaire.html
@@ -50,6 +52,8 @@
 [Checking Task Status]: checking_task_status.html
 [Privacy and Security]: privacy_and_security.html
 [VSAC]: (https://vsac.nlm.nih.gov/)
+
+[SDOHCC Observation Response Hunger Vital Sign Question 3 Example]: Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example.html
 
 <!--# Icons -->
 [patienticon]: ./Patient.png
