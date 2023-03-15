@@ -26,9 +26,9 @@ Coded SDOH content is captured across core health care activities: screening/ass
 ### Actors and Process Roles
 In the drawing above, each of the actors supports a set of roles that are described here:
 
-| Actor |  Process Roles | Relevant Profiles |
-| ----- | -------------- | ----------------- |
-| Patient | <ul><li>Responds to questions and is assessed based on their responses</li><li>Discusses and agrees to Goals</li><li>Consents][SDOHCCConsent] to the sharing of their information</li><li>Completes forms to provide feedback to providers</li></ul> |  [Condition][SDOHCC Condition], [Patient Task][SDOHCC Patient Task] |
+| Actor |  Process Roles                           | Relevant Profiles |
+| ----- | ---------------------------------------- | ----------------- |
+| Patient | <ul><li>Responds to questions and is assessed based on their responses</li><li>Discusses and agrees to Goals</li><li>Consents to the sharing of their information</li><li>Completes forms to provide feedback to providers</li></ul> |  [Condition][SDOHCC Condition], [Patient Task][SDOHCC Patient Task] |
 | Aggregation | <ul><li>Reports summary statistics on groups of patients with common SDOH conditions</li></ul> | [Group][SDOHCC Group] |
 | Provider | <ul><li>Assesses patient</li><li>Records & prioritizes problems and concerns alongside patient</li><li>Establishes Goals alongside patient</li><li>Solicits  Consent for data sharing and, if necessary,shares it with CBO</li><li>Creates referrals and solicits CBOs to fulfill them </li><li>Monitors completion of referral</li><li>Provides review material or provides contact instructions SDOHCCPatientTask to patients</li><li>Solicits feedback from patients</li></ul> | [Assessment][SDOHCCObservationAssessment], [Condition][SDOHCCCondition], [Goals][SDOHCCGoals], [Consents][SDOHCCConsent], [ServiceRequest][SDOHCCServiceRequest], [Task|[TaskforReferralManagement] |
 |Community Based Organization (possibly via Coordinating Platform)|<ul><li>Receives solicitation to complete referrals from provider</li><li>Retrieves referral and accepts or rejects solicitation</li><li>Delivers and records service requested by referral</li><li>Reports completion to referral source</li><li>Provides review material to patients</li><li>Solicits feedback from patients</li></ul>| [TaskforReferralManagement], [referrals][SDOHCCServiceRequest] [Procedure][SDOHCCProcedure] |
