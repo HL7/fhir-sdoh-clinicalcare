@@ -9,24 +9,33 @@ In the future, to promote interoperability, a single StructureMap instance shoul
 Rather than offer separate SDOHCC Observation Screening Response profiles for each SDOH category (domain) covered in this IG (e.g., food insecurity, transportation insecurity, etc.), this profile supports any SDOH category. The minimum required value set bindings for elements are specified in the profile. Additionally, the Table below provides Gravity-vetted, preferred value sets for this profile. Where a preferred value set contains a code to describe a needed concept, servers SHOULD use that code.
 
 #### General guidance for preferred value sets for SDOHCC Observation Screening Response
+
 Codes in the preferred value sets are from LOINC-encoded assessment instruments that have been vetted as face-valid by the Gravity Project. The [Social Determinants of Health Screening Assessments] Value Set, hosted in the [NIH Value Set Authority Center (VSAC)], contains all assessment instruments from which Gravity has chosen questions. For each Gravity-vetted assessment instrument, the questions are also vetted and only those that also meet Gravity criteria are included in the preferred value sets.
+
 For the Observation.category slice with binding to [SDOHCC ValueSet SDOH Category], the category-specific code selected (first column Table below) determines the preferred, category-specific value sets for Observation.code and Observation.value which are hosted in VSAC.
 
 #### Guidance for preferred value sets for Observation.code
 
 In the Value Set names below, <Category-specific> is a placeholder for a specific SDOH category (e.g., Food Insecurity).
 <Category-specific> Screening Assessments Questions Value Set – Contains LOINC codes for the preferred, category-specific questions selected from the Assessment Instruments.
+
 For an SDOHCC Observation Screening Response that represents a question and its coded answer, Observation.code SHOULD be a LOINC question code from this value set and Observation.value SHOULD be a LOINC answer code from the <Category-specific> Screening Assessments Answers Value Set (described below).
+
 <Category-specific> Screening Assessments Value Set – Contains LOINC codes for the assessment instruments (LOINC panels) from which the preferred, category-specific questions have been selected.
-For an SDOHCC Observation Screening Response that is an Observation Grouping, Observation.code SHOULD use panel LOINC codes from this value set. An Observation Grouping does not have an Observation.value. Instead, an Observation Grouping (via Observation.member) references all Observations generated from a specific assessment instrument. See SDOHCC Observation Response Hunger Vital Sign Grouping Example.
+For an SDOHCC Observation Screening Response that is an Observation Grouping, Observation.code SHOULD use panel LOINC codes from this value set. An Observation Grouping does not have an Observation.value.
+
+Instead, an Observation Grouping (via Observation.member) references all Observations generated from a specific assessment instrument. See SDOHCC Observation Response Hunger Vital Sign Grouping Example.
 <Category-specific> Screening Assessments And Questions Value Set – Contains all codes in <Category-specific> Screening Assessments Questions Value Set (LOINC question codes) AND <Category-specific> Screening Assessments Value Set (LOINC panel codes).
+
 For SDOHCC Observation Screening Response, this is the complete set of preferred values allowed for Observation.code for a category-specific Observation and can be used to validate that Observation.code is from a preferred, category-specific value set.
 
 #### Guidance for preferred value sets for Observation.value
 
 <Category-specific> Screening Assessments Answers Value Set – Contains LOINC answer codes for the preferred, category-specific questions.
 For an SDOHCC Observation Screening Response that represents a question and a coded answer, Observation.code SHOULD be a LOINC question code from the <Category-specific> Screening Assessments Questions Value Set and Observation.value SHOULD be a LOINC answer code from this value set.
+
 Of note, each question (Observation.code) has a subset of allowed answers (Observation.value) and, the allowed answers for a specific question may vary depending on the assessment instrument (LOINC panel) on which the question is presented (e.g., 88122-7 Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS] has 4 possible answers on 88121-9 Hunger Vital Sign [HVS] panel versus three possible answers on 99593-6 American Academy of Family Physicians Social Needs Screening Tool). For this reason, the category-specific Assessment Instrument Spreadsheets (last column in Table below) provide additional information to link specific assessment instruments to questions and their allowed LOINC Answer Lists. LOINC also provides Answers Lists for questions from specific assessment instruments (panels).
+
 For additional information on fields in the Assessment Instrument Spreadsheets, see [Assessment Instrument Spreadsheet Guidance] on the Gravity Project Confluence site.
 
 Key for the “ValueSet for” Column: For readability, the formal names of these value sets in VSAC are shortened in the Table as follows:
@@ -35,6 +44,8 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 * Panels = <Category-specific> Screening Assessments
 * Questions = <Category-specific> Screening Assessments Questions
 * Answers = <Category-specific> Screening Assessments Answers Value Set
+
+{% include markdown-link-references.md %}
 
 <div>
 <body class="vsc-initialized">
@@ -124,4 +135,3 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 | veteran-status  | Veteran Status | [Veteran Status Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20220907%20Veteran%20Status%20Screeners%20with%20Available%20Codes.xlsx?api=v2 ) |
 {:.grid}
  -->
-{% include markdown-link-references.md %}
