@@ -18,3 +18,4 @@ Usage: #example
 * valueCodeableConcept = $loinc#LA19952-3 "At risk"
 * derivedFrom[0].reference = "Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion1Example"
 * derivedFrom[+].reference = "Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion2Example"
+* hasMember[hasMember] = Reference(SDOHCC-ObservationResponseHungerVitalSignGroupingExample)

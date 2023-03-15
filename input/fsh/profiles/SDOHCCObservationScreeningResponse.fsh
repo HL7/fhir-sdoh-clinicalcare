@@ -72,11 +72,15 @@ Description: "Profile for observations that represent question and answer pairs 
 * hasMember ^definition = "Used when an observation is a group observation (e.g., the LOINC 88121-9 Hunger Vital Sign [HVS] panel) that includes the target as a member of the group."
 * derivedFrom only Reference(DocumentReference or QuestionnaireResponse or Observation)
 * derivedFrom MS
-* derivedFrom ^slicing.discriminator.type = #profile
-* derivedFrom ^slicing.discriminator.path = "resolve()"
-* derivedFrom ^slicing.rules = #open
+* insert SliceReferenceOnProfile(derivedFrom)
 * derivedFrom contains SupportedDerivedFrom 0..* MS
 * derivedFrom[SupportedDerivedFrom] only Reference(SDOHCCObservationScreeningResponse or SDCQuestionnaireResponse)
 * derivedFrom[SupportedDerivedFrom] ^short = "Related questionnaire responses or observations that the observation is made from"
 * derivedFrom[SupportedDerivedFrom] ^definition = "Questionnaire responses or observations from which this observation value is derived."
 * derivedFrom[SupportedDerivedFrom] ^requirements = "When an screening response observation is based on a survey question that is answered directly by the patient, Observation.derivedFrom should reference instances that comply with the SDC QuestionnaireResponse. When an observation is based on a survey question answer that is derived from one or more other survey question answers (as opposed to answered directly), Observation.derivedFrom should reference instances that comply with SDOHCC Screening Response Observation (e.g., observations generated from questions that were answered directly). However, references to other instance types are also possible."
+* insert SliceReferenceOnProfile(hasMember)
+* hasMember contains hasMember 0..* MS
+* hasMember[hasMember] only Reference(SDOHCCObservationScreeningResponse)
+* hasMember[hasMember] ^short = "Grouping Screening Response Observation for this Screening Response Observation"
+* hasMember[hasMember] ^definition = "Grouping Screening Response Observation for this Screening Response Observation"
+* hasMember[hasMember] ^requirements = "When an screening response observation is based on a survey question that is answered directly by the patient, Observation.hasMember should reference instances that comply with the SDC QuestionnaireResponse. When an observation is based on a survey question answer that is derived from one or more other survey question answers (as opposed to answered directly), Observation.derivedFrom should reference the instance that complies with SDOHCC Screening Response Observation (e.g., the grouper for all of the observations generated from questions that were answered directly)."
