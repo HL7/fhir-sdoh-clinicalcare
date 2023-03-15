@@ -45,21 +45,15 @@ pages:
     title: IG Home
   sdoh_clinical_care_background.md:
     title: SDOH Clinical Care Background
-  sdoh_clinical_care_scope_alt.md:
-    title: SDOH Clinical Care Background (alt)
   technical_background.md:
     title: Technical Background
   survey_instrument_support.md:
     title: Survey Instrument Support
   mapping_instructions.md:
     title: Mapping Instructions
-  support_for_multiple_domains.md:
-    title: Support for Multiple Domains
   exchange_workflow.md:
     title: Exchange Workflow
   functional_use_cases.md:
-    title: Functional Use Cases (non-technical)
-  functional_use_cases_alt.md:
     title: Functional Use Cases (non-technical)
   synchronizing_applications_with_api_data_sources.md:
     title: Synchronizing Applications With API Data Sources
@@ -235,7 +229,6 @@ menu:
   Background:
     SDOH Data Interoperability: sdoh_challenges_gravity.html
     SDOH Clinical Care Background: sdoh_clinical_care_background.html
-    SDOH Clinical Care Background - alt: sdoh_clinical_care_scope_alt.html
     Technical Background : technical_background.html
     Glossary: glossary.html
     Credits: credits.html
@@ -244,7 +237,6 @@ menu:
     Mapping Instructions: mapping_instructions.html
     Exchange Workflow:  exchange_workflow.html
     Functional Use Cases:   functional_use_cases.html
-    Functional Use Cases (alt):   functional_use_cases_alt.html
     Checking Task Status: checking_task_status.html
     Synchronizing Applications With API Data Sources: synchronizing_applications_with_api_data_sources.html
   FHIR Artifacts and Examples:
@@ -253,10 +245,6 @@ menu:
     Value Sets: artifacts.html#value-sets
     Code Systems: artifacts.html#code-systems
     Examples: artifacts.html#examples
-    PRAPARE Examples: artifacts.html#prapare-examples
-    Hunger Vital Signs Examples: artifacts.html#hunger-vital-signs-examples
-    Draft Artifacts for Personal Characteristics: artifacts.html#10
-    Examples of Draft Artifacts for Personal Characteristics: artifacts.html#11
     Complete Listing: artifacts.html
   Specifications:
     Privacy and Security: privacy_and_security.html
