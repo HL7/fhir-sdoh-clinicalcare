@@ -34,7 +34,7 @@ For SDOHCC Observation Screening Response, this is the complete set of preferred
  **Category-specific** Screening Assessments Answers Value Set – Contains LOINC answer codes for the preferred, category-specific questions.
 For an SDOHCC Observation Screening Response that represents a question and a coded answer, Observation.code SHOULD be a LOINC question code from the  **Category-specific** Screening Assessments Questions Value Set and Observation.value SHOULD be a LOINC answer code from this value set.
 
-Of note, each question (Observation.code) has a subset of allowed answers (Observation.value) and, the allowed answers for a specific question may vary depending on the assessment instrument (LOINC panel) on which the question is presented (e.g., 88122-7 Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS] has 4 possible answers on 88121-9 Hunger Vital Sign [HVS] panel versus three possible answers on 99593-6 American Academy of Family Physicians Social Needs Screening Tool). For this reason, the category-specific Assessment Instrument Spreadsheets (last column in Table below) provide additional information to link specific assessment instruments to questions and their allowed LOINC Answer Lists. LOINC also provides Answers Lists for questions from specific assessment instruments (panels).
+Of note, each question (Observation.code) has a subset of allowed answers (Observation.value) and, the allowed answers for a specific question may vary depending on the assessment instrument (LOINC panel) on which the question is presented (e.g., [`88122-7`](https://loinc.org/88122-7) ("Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]") has 4 possible answers on [Hunger Vital Sign (HVS)](https://loinc.org/88121-9) panel versus three possible answers on the [American Academy of Family Physicians Social Needs Screening Tool](https://loinc.org/99593-6). For this reason, the category-specific Assessment Instrument Spreadsheets (last column in Table below) provide additional information to link specific assessment instruments to questions and their allowed LOINC Answer Lists. LOINC also provides Answers Lists for questions from specific assessment instruments (panels).
 
 For additional information on fields in the Assessment Instrument Spreadsheets, see [Assessment Instrument Spreadsheet Guidance] on the Gravity Project Confluence site.
 
@@ -105,6 +105,8 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 		</tr>
 	</tbody>
 </table>
+</body>
+</div>
 
 
 {% include markdown-link-references.md %}
