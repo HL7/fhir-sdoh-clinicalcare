@@ -58,7 +58,7 @@
 [Social Determinants of Health Screening Assessments And Questions]: broken.html
 [Social Determinants of Health Screening Assessments Questions]: broken.html
 [Social Determinants of Health Screening Questions]: broken.html
-
+[Social Determinants of Health Screening Assessments Answers]: broken.html
 
 <!--# Icons -->
 [patienticon]: ./Patient.png
