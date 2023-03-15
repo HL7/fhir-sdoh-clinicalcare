@@ -3,9 +3,6 @@ InstanceOf: SDOHCCHealthcareService
 Title: "SDOHCC HealthcareService Telecom Appointment Example"
 Description: "An example of a HealthcareService with telecom(s) that can be used to make an appointment flagged. This example is used as the referenced healthcare service in other IG examples."
 Usage: #example
-* meta.versionId = "4"
-* meta.lastUpdated = "2021-11-03T20:25:50.174+00:00"
-* meta.source = "#ROynShGIb2ksbTSi"
 * active = true
 * location.reference = "Location/SDOHCC-LocationExample"
 * name = "Family Counseling Services"

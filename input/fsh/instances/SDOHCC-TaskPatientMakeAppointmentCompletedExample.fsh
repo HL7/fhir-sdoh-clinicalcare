@@ -3,9 +3,6 @@ InstanceOf: SDOHCCTaskForPatient
 Title: "SDOHCC Task Patient Make Appointment Completed Example"
 Description: "An example of a completed Task For Patient where the task was to make an appointment."
 Usage: #example
-* meta.versionId = "4"
-* meta.lastUpdated = "2022-04-13T17:35:32.937+00:00"
-* meta.source = "#AgFfi8RxNItzkrVa"
 * intent = #order
 * status = #completed
 * priority = #routine

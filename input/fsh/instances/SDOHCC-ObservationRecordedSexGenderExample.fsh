@@ -3,10 +3,7 @@ InstanceOf: SDOHCCObservationRecordedSexGender
 Title: "SDOHCC Observation Recorded Sex Gender Example"
 Description: "An example of a recorded sex or gender Observation where a clinic has derived the designation M (male) from the subject’s driver’s license."
 Usage: #example
-* meta.versionId = "9"
-* meta.lastUpdated = "2022-04-29T15:44:50.588+00:00"
-* meta.source = "#tapABrXtcF4JyHFC"
-* category = $SDOHCC-CodeSystemTemporaryCodes#personal-characteristic "Personal Characteristic"
+////* category = $SDOHCC-CodeSystemTemporaryCodes#personal-characteristic "Personal Characteristic"
 * code = $loinc#99502-7 "Recorded sex or gender"
 * status = #final
 * subject.reference = "Patient/pat-53234"

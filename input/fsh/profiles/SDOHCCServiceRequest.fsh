@@ -3,10 +3,7 @@ Parent: ServiceRequest
 Id: SDOHCC-ServiceRequest
 Title: "SDOHCC ServiceRequest"
 Description: "Profile for service requests that address Social Determinants of Health."
-* ^meta.versionId = "28"
-* ^meta.lastUpdated = "2022-10-19T17:02:29.639+00:00"
-* ^meta.source = "#xW9slociYJaAOJCX"
-* ^version = "0.1.0"
+
 * ^status = #draft
 * ^date = "2020-12-14T04:01:34+00:00"
 * ^jurisdiction = urn:iso:std:iso:3166#US

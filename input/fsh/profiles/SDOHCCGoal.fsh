@@ -3,13 +3,7 @@ Parent: USCoreGoalProfile
 Id: SDOHCC-Goal
 Title: "SDOHCC Goal"
 Description: "Profile for goals that address Social Determinants of Health (SDOH)."
-* ^meta.versionId = "10"
-* ^meta.lastUpdated = "2022-07-15T15:56:06.624+00:00"
-* ^meta.source = "#q51JsnZHYKCe1D8O"
-* ^version = "0.1.0"
 * ^status = #draft
-* ^date = "2020-12-14T04:01:34+00:00"
-* ^jurisdiction = urn:iso:std:iso:3166#US
 * . ^short = "Describes the intended SDOH-related objective(s) for a patient."
 * . ^definition = "For representation of SDOH goals."
 * . ^comment = "Many of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."

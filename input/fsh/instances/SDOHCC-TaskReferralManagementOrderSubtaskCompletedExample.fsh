@@ -3,9 +3,6 @@ InstanceOf: SDOHCCTaskForReferralManagement
 Title: "SDOHCC Task Referral Management Order Subtask Completed Example"
 Description: "An example of a completed Task For Referral Management that delegates responsibility to fulfill a referral from an intermediary organization to another organization (e.g., when a Coordination Platform receives a Task from a referral source and passes it on to a Community Based Organization)."
 Usage: #example
-* meta.versionId = "5"
-* meta.lastUpdated = "2021-11-15T20:50:16.069+00:00"
-* meta.source = "#YS1UzY6F1o8EwcIo"
 * intent = #order
 * code = $task-code#fulfill "Fulfill the focal request"
 * partOf.reference = "Task/SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample"

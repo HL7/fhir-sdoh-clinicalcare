@@ -3,10 +3,7 @@ Parent: USCoreProcedureProfile
 Id: SDOHCC-Procedure
 Title: "SDOHCC Procedure"
 Description: "Profile for interventions that address Social Determinants of Health."
-* ^meta.versionId = "19"
-* ^meta.lastUpdated = "2022-10-19T17:02:29.639+00:00"
-* ^meta.source = "#Z7191TbvZLv65Z6X"
-* ^version = "0.1.0"
+
 * ^status = #draft
 * ^date = "2020-12-14T04:01:34+00:00"
 * ^jurisdiction = urn:iso:std:iso:3166#US
