@@ -22,6 +22,9 @@
 [SDOHCC Consent]: StructureDefinition-SDOHCC-Consent.html
 [SDOHCC ValueSet SDOH Category]: ValueSet-SDOHCC-ValueSetSDOHCategory.html
 
+[QuestionnaireResponse]: http://hl7.org/fhir/R4B/questionnaireresponse.html
+[Questionnaire]: http://hl7.org/fhir/R4B/questionnaire.html
+
 <!--# SDC -->
 [SDC QuestionnaireResponse]: http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html
 [SDC FHIR Questionnaire]: http://hl7.org/fhir/us/sdc/sdc-questionnaire.html

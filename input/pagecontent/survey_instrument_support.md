@@ -18,7 +18,7 @@ Assessment instruments fit into the [SDOH Clinical Care framework](sdoh_clinical
 Another benefit to using standardized SDOH Assessment Instruments is to automate the conversion of the responses (values) to the questions (assessment items) into standardized terminology expressing the SDOH observation. We represent the instruments using [Questionnaire] for the item and [QuestionnaireResponse] for the value of the item. For each SDOH domain, we select [standard sets of questions][Assessment Instrument Spreadsheet Guidance] leveraging existing validated assessment instruments along with the work from both the [Regenstrief Institute](https://www.regenstrief.org/) and the  [National Library of Medicine](https://www.nlm.nih.gov/) (NLM) to standardize the capture, coding and output of social care assessment instruments.
 We define common canonical URLs, linkIds and allowed answer codes.
 
-LOINC codes are used to describe the results of the question and answer from the social care assessment instrument because they support the encoding of standard assessment tools. While the output of the assessment process is an SDC QuestionnaireResponse, it can be useful to derive FHIR Observation and Condition resources based upon the questions and answers that are deemed to have clinical utility. The Observation supports searching for specific survey results (something that is difficult to do with an SDC QuestionnaireResponse) and the Condition identifies the health concerns so they can be communicated and promoted to problems on the problem list. 
+LOINC codes are used to describe the results of the question and answer from the social care assessment instrument because they support the encoding of standard assessment tools. While the output of the assessment process is an SDC QuestionnaireResponse, it can be useful to derive FHIR Observation and Condition resources based upon the questions and answers that are deemed to have clinical utility. The Observation supports searching for specific survey results (something that is difficult to do with an SDC QuestionnaireResponse) and the Condition identifies the health concerns so they can be communicated and promoted to problems on the problem list.
 
 An Observation is used to group all the observations created by the QuestionnaireResponse using the Observation.hasMember reference to each of the individual observations. This approach is consistent with US Core and there are examples presented later in the IG for both example Questionnaires.
 
@@ -29,7 +29,7 @@ Developing a new assessment instrument for incorporation into the process descri
 * **Develop the assessment Instrument**:  The assessment is built from a set of survey as [LOINC Components](https://loinc.org/kb/faq/structure/) with associated [LOINC Answer Lists](https://loinc.org/forums/topic/answer-lists/).
 * **Develop the [SDC FHIR Questionnaire]**:  The assessment question and answers are incorporated into an [SDC FHIR Questionnaire] which also includes calculation logic that defines the result of some questions as a function of the answers to other questions.  There are tools that support this step (e.g., the open source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms))
 * **Develop the Conversion Logic**: The results of the instrument are captured in a [SDC QuestionnaireResponse], and this in turn can be converted to Observations and Conditions as using a [StructureMap].  The structure map logic needs to be developed.  See the [Mapping Instructions](mapping_instructions.html) page for more on FHIR structure maps. Executing the Structure Map on a QuestionaireResponse produces:
-  * [Observation][SDOHCC Observation Screening Reponse] (each representing an assessment question-answer(s) pair),
+  * [Observation][SDOHCC Observation Screening Response] (each representing an assessment question-answer(s) pair),
   * An  [Observation][SDOHCC Observation Screening Reponse] that groups the Observations associated with a social care assessment together,
   * The related [Condition(s) resources](StructureDefinition-SDOHCC-Condition.html) indicating Health Concerns identified by the social care assessment instrument answers that should be coded with [US Core Condition codes](http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code).
 
@@ -78,4 +78,3 @@ This implementation guide includes a partial example of the [Protocol for Respon
 
 
  {% include markdown-link-references.md %}
-
