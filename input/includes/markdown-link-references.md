@@ -7,8 +7,8 @@
 
 <!-- # Other IGs -->
 [US Core Implementation Guide]: https://www.hl7.org/fhir/us/core/
-[HL7 Structured Data Capture IG]: http://hl7.org/fhir/uv/sdc/STU3/extraction.html#structuremap-based-extraction
-[Bulk Data exchange IG]: http://hl7.org/fhir/uv/bulkdata/
+[HL7 Structured Data Capture IG]: https://hl7.org/fhir/uv/sdc/STU3/extraction.html#structuremap-based-extraction
+[Bulk Data exchange IG]: https://hl7.org/fhir/uv/bulkdata/
 
 <!--# Technical IG Content -->
 [SDOHCC Observation Screening Response]: StructureDefinition-SDOHCC-ObservationScreeningResponse.html
@@ -22,13 +22,13 @@
 [SDOHCC Consent]: StructureDefinition-SDOHCC-Consent.html
 [SDOHCC ValueSet SDOH Category]: ValueSet-SDOHCC-ValueSetSDOHCategory.html
 
-[QuestionnaireResponse]: http://hl7.org/fhir/R4B/questionnaireresponse.html
-[Questionnaire]: http://hl7.org/fhir/R4B/questionnaire.html
+[QuestionnaireResponse]: https://hl7.org/fhir/R4B/questionnaireresponse.html
+[Questionnaire]: https://hl7.org/fhir/R4B/questionnaire.html
 
 <!--# SDC -->
-[SDC QuestionnaireResponse]: http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html
-[SDC FHIR Questionnaire]: http://hl7.org/fhir/us/sdc/sdc-questionnaire.html
-[StructureMap]: http://www.hl7.org/fhir/structuremap.html
+[SDC QuestionnaireResponse]: https://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html
+[SDC FHIR Questionnaire]: https://hl7.org/fhir/us/sdc/sdc-questionnaire.html
+[StructureMap]: https://www.hl7.org/fhir/structuremap.html
 
 <!--# Document Sections -->
 [Indirect Referral]: functional_use_cases.html#indirectreferral
