@@ -3,10 +3,6 @@ Parent: Group
 Id: SDOHCC-Group
 Title: "SDOHCC Group"
 Description: "Profile for identifying groups of patients who have a Social Determinants of Health (SDOH) condition and are members of a specific payer organization."
-* ^meta.versionId = "21"
-* ^meta.lastUpdated = "2022-09-30T14:56:52.050+00:00"
-* ^meta.source = "#dW33peJcv0Fq6Ycq"
-* ^version = "2.0.0-update"
 * ^status = #draft
 * ^abstract = true
 * . ^short = "Group of SDOH patients for a payer"

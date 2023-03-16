@@ -3,9 +3,6 @@ InstanceOf: SDCQuestionnaireExtractStructureMap
 Title: "SDOHCC Questionnaire PRAPARE"
 Description: "A Questionnaire instance that represents the questions and answers from the PRAPARE questionnaire represented in LOINC (code 93025-5)."
 Usage: #example
-* meta.versionId = "5"
-* meta.lastUpdated = "2022-09-14T20:05:52.007+00:00"
-* meta.source = "#triqDuazdqHqt7bE"
 * extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension.valueCanonical = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE"
 * url = "http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-QuestionnairePRAPARE"

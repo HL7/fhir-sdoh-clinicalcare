@@ -3,9 +3,6 @@ InstanceOf: SDOHCCProcedure
 Title: "SDOHCC Procedure Summer Food Program Application Assistance Example"
 Description: "An example of a completed Procedure for assistance with applying to a summer food program that is based on a ServiceRequest and references as its reason a food insecurity Condition."
 Usage: #example
-* meta.versionId = "3"
-* meta.lastUpdated = "2022-07-18T13:21:18.888+00:00"
-* meta.source = "#F1VBlrqwfB4BaZsZ"
 * basedOn.reference = "ServiceRequest/SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample"
 * status = #completed
 * category.coding[0] = $sct#410606002 "Social service procedure"

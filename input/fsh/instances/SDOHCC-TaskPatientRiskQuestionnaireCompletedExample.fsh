@@ -3,9 +3,6 @@ InstanceOf: SDOHCCTaskForPatient
 Title: "SDOHCC Task Patient Risk Questionnaire Completed Example"
 Description: "An example of a completed Task For Patient where the task was to complete a Hunger Vital Signs questionnaire (a questionnaire of the category ‘risk questionnaire’)."
 Usage: #example
-* meta.versionId = "4"
-* meta.lastUpdated = "2021-11-15T20:50:16.161+00:00"
-* meta.source = "#zhym6ICuuWsKnaZo"
 * intent = #order
 * status = #completed
 * priority = #routine

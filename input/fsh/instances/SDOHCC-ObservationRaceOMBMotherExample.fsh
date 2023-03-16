@@ -3,11 +3,8 @@ InstanceOf: SDOHCCObservationRaceOMB
 Title: "SDOHCC-Observation Race OMB Mother Example"
 Description: "An example of a race Observation that uses Observation.focus to make an Observation about the race of the subject’s mother (who is his caretaker)."
 Usage: #example
-* meta.versionId = "3"
-* meta.lastUpdated = "2022-04-25T15:19:38.932+00:00"
-* meta.source = "#9sTX15ZKhIidfIwk"
-* category = $SDOHCC-CodeSystemTemporaryCodes#personal-characteristic "Personal Characteristic"
-* code = $loinc#72826-1 "Race OMB.1997"
+//* category = $SDOHCC-CodeSystemTemporaryCodes#personal-characteristic "Personal Characteristic"
+//* code = $loinc#72826-1 "Race OMB.1997"
 * status = #final
 * subject.reference = "Patient/pat-53234"
 * subject.display = "COLIN ABBAS"

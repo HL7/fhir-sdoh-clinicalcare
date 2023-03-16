@@ -20,10 +20,13 @@
 [SDOHCC Procedure]: StructureDefinition-SDOHCC-Procedure.html
 [SDOHCC Condition]: StructureDefinition-SDOHCC-Condition.html
 [SDOHCC Consent]: StructureDefinition-SDOHCC-Consent.html
+[SDOHCC ValueSet SDOH Category]: ValueSet-SDOHCC-ValueSetSDOHCategory.html
+
 <!--# SDC -->
 [SDC QuestionnaireResponse]: http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html
 [SDC FHIR Questionnaire]: http://hl7.org/fhir/us/sdc/sdc-questionnaire.html
 [StructureMap]: http://www.hl7.org/fhir/structuremap.html
+
 <!--# Document Sections -->
 [Indirect Referral]: functional_use_cases.html#indirectreferral
 [Indirect Referral Light]: functional_use_cases.html#indirectreferrallight
@@ -49,6 +52,13 @@
 [Checking Task Status]: checking_task_status.html
 [Privacy and Security]: privacy_and_security.html
 [VSAC]: (https://vsac.nlm.nih.gov/)
+
+[SDOHCC Observation Response Hunger Vital Sign Question 3 Example]: Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example.html
+[Assessment Instrument Spreadsheet Guidance]: broken.html
+[Social Determinants of Health Screening Assessments And Questions]: broken.html
+[Social Determinants of Health Screening Assessments Questions]: broken.html
+[Social Determinants of Health Screening Questions]: broken.html
+[Social Determinants of Health Screening Assessments Answers]: broken.html
 
 <!--# Icons -->
 [patienticon]: ./Patient.png

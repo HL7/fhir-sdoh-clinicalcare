@@ -3,10 +3,6 @@ Parent: Observation
 Id: SDOHCC-ObservationPersonalCharacteristic
 Title: "SDOHCC Observation Personal Characteristic"
 Description: "Defines constraints that represent the minimum requirement for personal characteristic observations which are observations that are usually self-attested but may be attested to on behalf of the subject and are generally only verifiable by the source of attestation (e.g., race, ethnicity, sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex). This profile is intended for draft use only.  For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
-* ^meta.versionId = "12"
-* ^meta.lastUpdated = "2022-07-18T18:33:38.098+00:00"
-* ^meta.source = "#jmPoTGA7edGgsews"
-* ^version = "2.0.0-update"
 * ^status = #draft
 * ^abstract = true
 * obeys SDOH-Obs-1 and SDOH-Obs-2 and SDOH-Obs-3

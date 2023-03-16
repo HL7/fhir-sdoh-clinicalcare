@@ -3,9 +3,6 @@ Parent: SDOHCCObservationPersonalCharacteristic
 Id: SDOHCC-ObservationPersonalPronouns
 Title: "SDOHCC Observation Personal Pronouns"
 Description: "Profile for observations about the pronouns and possessive adjectives a person wishes to be addressed by. This profile is intended for draft use only.  For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
-* ^meta.versionId = "10"
-* ^meta.lastUpdated = "2022-06-28T15:21:43.612+00:00"
-* ^meta.source = "#4BEaIyPCrnOdqNbM"
 * ^status = #draft
 * ^abstract = false
 * . ^definition = "For observations about the pronouns and possessive adjectives a person wishes to be addressed by."

@@ -3,10 +3,6 @@ Parent: Consent
 Id: SDOHCC-Consent
 Title: "SDOHCC Consent"
 Description: "Profile for consent related to the release of Social Determinants of Health (SDOH) information to non-HIPAA covered organizations."
-* ^meta.versionId = "17"
-* ^meta.lastUpdated = "2021-10-27T17:12:16.709+00:00"
-* ^meta.source = "#c8MwzPSxegU4R8sO"
-* ^version = "2.0.0-update"
 * ^status = #draft
 * . ^definition = "A record of a healthcare consumer’s choices related to the release of SDOH information to non-HIPAA covered organizations."
 * . ^comment = "Providers should consider including standard language to inform the patient that disclosure of their information to entities which are not HIPAA covered entities are no longer protected under the HIPAA Privacy Rule but may be protected by FTC Consumer Protection rules."

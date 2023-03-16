@@ -1,14 +1,11 @@
 Instance: SDOHCC-ConsentInformationDisclosureExample
 InstanceOf: SDOHCCConsent
 Title: "SDOHCC Consent Information Disclosure Example"
-Description: "An example of a Consent for information disclosure related to SDOH information."
+Description: "An example of a Consent for information disclosure related to SDOH information.   A [PDF](ExampleConsent.pdf) is attached to this consent."
 Usage: #example
-* meta.versionId = "1"
-* meta.lastUpdated = "2021-06-03T01:31:59.721+00:00"
-* meta.source = "#YzSjGTznFaYY3gTd"
 * status = #active
 * scope = $consentscope#patient-privacy "Privacy Consent"
-* category = $v3-ActCode#IDSCL "information disclosure"
+* category[IDSCL] = $v3-ActCode#IDSCL "information disclosure"
 * patient.reference = "Patient/pat-53234"
 * patient.display = "Colin Abbas"
 * dateTime = "2021-05-01"

@@ -3,10 +3,7 @@ Parent: Task
 Id: SDOHCC-TaskForPatient
 Title: "SDOHCC Task For Patient"
 Description: "Profile for SDOH-related tasks to be carried out by the patient or someone acting on their behalf."
-* ^meta.versionId = "25"
-* ^meta.lastUpdated = "2022-07-12T13:19:11.898+00:00"
-* ^meta.source = "#by29kGIgG5vNrqtQ"
-* ^version = "2.0.0-update"
+
 * ^status = #draft
 * obeys SDOH-Task-1 and SDOH-Task-2 and SDOH-Task-3 and SDOH-Task-4 and SDOH-Task-5 and SDOH-Task-6 and SDOH-Task-7
 * . ^short = "A request to fulfill an SDOH questionnaire or service request"

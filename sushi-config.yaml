@@ -43,30 +43,30 @@ description: This HL7 Implementation Guide (IG) defines how to exchange Social D
 pages:
   index.md:
     title: IG Home
-  sdoh_clinical_care_background.md:
+  sdoh_challenges_gravity.md:
+    title: SDOH and the Gravity Project
+  sdoh_clinical_care_scope.md:
     title: SDOH Clinical Care Background
-  sdoh_clinical_care_scope_alt.md:
-    title: SDOH Clinical Care Background (alt)
   technical_background.md:
     title: Technical Background
+  glossary.md:
+    title: Glossary
+  credits.md:
+    title: Credits
   survey_instrument_support.md:
     title: Survey Instrument Support
   mapping_instructions.md:
     title: Mapping Instructions
-  support_for_multiple_domains.md:
-    title: Support for Multiple Domains
   exchange_workflow.md:
     title: Exchange Workflow
   functional_use_cases.md:
     title: Functional Use Cases (non-technical)
-  functional_use_cases_alt.md:
-    title: Functional Use Cases (non-technical)
-  synchronizing_applications_with_api_data_sources.md:
-    title: Synchronizing Applications With API Data Sources
-  fhir_artifacts_overview.md:
-    title: FHIR Artifacts Overview
   checking_task_status.md:
     title: Checking Task Status
+  synchronizing_applications_with_api_data_sources.md:
+    title: Synchronizing Applications With API Data Sources
+  artifacts.html:
+    title: Artifacts Index
   privacy_and_security.md:
     title: Privacy and Security
   mustsupport_and_missing_data.md:
@@ -77,24 +77,17 @@ pages:
     title: Downloads
   dictionary.md:
     title: Data Dictionary
-  credits.md:
-    title: Credits
   stu2_ballot_changes.md:
     title: STU2 Ballot Changes
   stu2_publication_changes.md:
     title: STU2 Publication Changes
   stu2_1_update_changes.md:
     title: STU2.1 Publication Changes
-  artifacts.html:
-    title: Artifacts Index
-  glossary.md:
-    title: Glossary
   ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.md:
     title: SDOH Clinical Care ImplementationGuide Resource
   fulloutline.md:
     title: Outline STU2.1
-  sdoh_challenges_gravity.md:
-    title: SDOH and the Gravity Project
+
 
 groups:
   CapabilityStatements:
@@ -234,8 +227,7 @@ menu:
   Table of Contents:  toc.html
   Background:
     SDOH Data Interoperability: sdoh_challenges_gravity.html
-    SDOH Clinical Care Background: sdoh_clinical_care_background.html
-    SDOH Clinical Care Background - alt: sdoh_clinical_care_scope_alt.html
+    SDOH Clinical Care Background: sdoh_clinical_care_scope.html
     Technical Background : technical_background.html
     Glossary: glossary.html
     Credits: credits.html
@@ -244,7 +236,6 @@ menu:
     Mapping Instructions: mapping_instructions.html
     Exchange Workflow:  exchange_workflow.html
     Functional Use Cases:   functional_use_cases.html
-    Functional Use Cases (alt):   functional_use_cases_alt.html
     Checking Task Status: checking_task_status.html
     Synchronizing Applications With API Data Sources: synchronizing_applications_with_api_data_sources.html
   FHIR Artifacts and Examples:
@@ -253,10 +244,6 @@ menu:
     Value Sets: artifacts.html#value-sets
     Code Systems: artifacts.html#code-systems
     Examples: artifacts.html#examples
-    PRAPARE Examples: artifacts.html#prapare-examples
-    Hunger Vital Signs Examples: artifacts.html#hunger-vital-signs-examples
-    Draft Artifacts for Personal Characteristics: artifacts.html#10
-    Examples of Draft Artifacts for Personal Characteristics: artifacts.html#11
     Complete Listing: artifacts.html
   Specifications:
     Privacy and Security: privacy_and_security.html

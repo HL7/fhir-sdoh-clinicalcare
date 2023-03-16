@@ -3,10 +3,7 @@ Parent: Observation
 Id: SDOHCC-ObservationScreeningResponse
 Title: "SDOHCC Observation Screening Response"
 Description: "Profile for observations that represent question and answer pairs from Social Determinants of Health (SDOH) screening instruments that are represented in LOINC."
-* ^meta.versionId = "42"
-* ^meta.lastUpdated = "2022-07-15T15:56:06.628+00:00"
-* ^meta.source = "#QRz7uLOXJauimrhH"
-* ^version = "0.1.0"
+
 * ^status = #draft
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * . ^short = "SDOH screening questionnaire observations"

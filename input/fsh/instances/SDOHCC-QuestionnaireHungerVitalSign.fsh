@@ -3,9 +3,6 @@ InstanceOf: SDCQuestionnaireExtractStructureMap
 Title: "SDOHCC Questionnaire Hunger Vital Sign"
 Description: "A Questionnaire instance that represents the questions and answers from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9)."
 Usage: #example
-* meta.versionId = "4"
-* meta.lastUpdated = "2022-06-08T21:03:16.526+00:00"
-* meta.source = "#BbCECBhzK5Wcmwgy"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/variable"
 * extension[=].valueExpression.name = "worriedAnsCode"
 * extension[=].valueExpression.language = #text/fhirpath
