@@ -30,7 +30,7 @@ Developing a new assessment instrument for incorporation into the process descri
 * **Develop the [SDC FHIR Questionnaire]**:  The assessment question and answers are incorporated into an [SDC FHIR Questionnaire] which also includes calculation logic that defines the result of some questions as a function of the answers to other questions.  There are tools that support this step (e.g., the open source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms))
 * **Develop the Conversion Logic**: The results of the instrument are captured in a [SDC QuestionnaireResponse], and this in turn can be converted to Observations and Conditions as using a [StructureMap].  The structure map logic needs to be developed.  See the [Mapping Instructions](mapping_instructions.html) page for more on FHIR structure maps. Executing the Structure Map on a QuestionaireResponse produces:
   * [Observation][SDOHCC Observation Screening Response] (each representing an assessment question-answer(s) pair),
-  * An  [Observation][SDOHCC Observation Screening Reponse] that groups the Observations associated with a social care assessment together,
+  * An  [Observation][SDOHCC Observation Screening Response] that groups the Observations associated with a social care assessment together,
   * The related [Condition(s) resources](StructureDefinition-SDOHCC-Condition.html) indicating Health Concerns identified by the social care assessment instrument answers that should be coded with [US Core Condition codes](http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code).
 
 
