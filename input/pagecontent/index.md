@@ -13,7 +13,7 @@ The IG supports the following use cases:
 
 {% include img.html img="ConceptualFramework.png" caption="Figure 1: Conceptual Framework for SDOH Clinical Care" %}
 
-The activities supported by this IG include (see [Clinical Scope](sdoc_clinical_care_scope.html) for more details)
+The activities supported by this IG include (see [Clinical Scope](sdoh_clinical_care_scope.html) for more details)
   - Screening: This refers to activities where SDH data from individual patients are initially captured, whether through a self-administered, provider-administered, or health plan-administered questionnaire. These activities may also be repeated at certain intervals to monitor changes in social risks.
   - Assessment/Diagnosis: These include activities where providers (clinical and community-based) and health plans analyze the data obtained through screening to determine a patient’s social risks and needs.
   - Treatment/Interventions: These refer to actions undertaken by providers (clinical and community-based) and health plans to help address identified social risks and needs. These include referrals, case management, care planning, counseling and education, and provision of services and orders.
@@ -39,7 +39,7 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 
 | Implementation Guide |  Relationship  |
 | -------------------- |  ---------- |
-| [Human Services Directory](https://build.fhir.org/ig/HL7/FHIR-IG-Human-Services-Director) | Can be used by a provider to identify referral targets for SDOH-related services  |
+| [Human Services Directory](https://build.fhir.org/ig/HL7/FHIR-IG-Human-Services-Directory) | Can be used by a provider to identify referral targets for SDOH-related services  |
 | [National Healthcare Directory Exchange](http://hl7.org/fhir/us/directory-exchange)| A U.S. Office of the National Coordinator-sponsored IG supporting the exchange of directory information for a wide range of service providers and organizations |
 | [SmartApp Launch](http://hl7.org/fhir/smart-app-launch)  | Allows launching third party applications in the context of another system, including allowing the application to controlled access to patient information.  |
 | [Bidirectional Service eReferral (BSeR)](http://hl7.org/fhir/us/bser/)  | Whereas this IG orchestrates referrals using the FHIR query interface, BSeR bases referral management on the exchange of self-contained Bundles of FHIR resources.  The approaches for referral management offered by this IG and BSeR should be harmonized to provide a consistent template for management of referrals by all IGs. |
@@ -53,7 +53,7 @@ This IG contains a wealth of material targetting different audiences. Some secti
 | Section | Sub-section | Description | Audience |
 | --------| ----------- | --------- | ---------|
 | Background| SDOH and Gravity | General background on the importance of collecting and standardizing SDOH data, and the Gravity Project     |  General |
-| Background| [SDOH Clinical Care Scope](sdoc_clinical_care_scope.html)) | What is in and out of scope for this IG.  Shouldn't this be on the Home Page?     |  General |
+| Background| [SDOH Clinical Care Scope](sdoh_clinical_care_scope.html) | What is in and out of scope for this IG.  Shouldn't this be on the Home Page?     |  General |
 | Background| [Functional Use Cases] |  This section provides a functional description of the interactions between the actors in an SDOH referral, and with links to the profiles and sections of the IG where more detail is provided. This should be read prior to the more detailed exchange workflow description.       |  General |
 | Background| FHIR Technical | Background material that should be understood prior to attempting to understand this IG     |  General/Introductory |
 | Implementation Guidance| [Standard Survey Instruments for SDOH (includes Mapping Instructions)] | The importance of standard survey instruments for the collection of SDOH, and how survey instruments are mapped to SDOH Conditions, Observations and Goals     |  General |
