@@ -1,3 +1,6 @@
+<div class="stu-note">
+<b><i>The specifications described here are drafts.</i></b>
+</div>
 ### Background
 
 Collection of personal characteristics data (e.g., Race and Ethnicity (R/E), gender identity, sexual orientation, recorded sex and gender, and personal pronouns) is important to achieving the goal of health equity. For example, the recent [Cross-Industry Coalition Health Equity Pledge to Address Disparities](https://www.businesswire.com/news/home/20211026005241/en/Cross-Industry-Coalition-of-Health-Care-Organizations-Sign-Health-Equity-Pledge-to-Address-Disparities), and the proposed NCQA race/ethnicity stratification approach "Episode 9, from June 22, 2021,  [Future of HEDIS presentation](https://www.ncqa.org/wp-content/uploads/2021/11/Overview-Memo-Health-Equity-Accreditation-Plus.pdf?utm_medium=email&utm_campaign=publiccomment&utm_source=sf&utm_term=20211109) (see slides 15-25) both include a focus on the collection of Race & Ethnicity (R/E) data.

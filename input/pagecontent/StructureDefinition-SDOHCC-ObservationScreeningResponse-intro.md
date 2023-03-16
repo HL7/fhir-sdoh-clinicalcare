@@ -1,7 +1,9 @@
 
 ### Purpose
 SDOHCC Observation Screening Response is intended to represent question-answer pairs from Social Determinants of Health (SDOH) assessment instruments that are represented in LOINC. An SDOHCC Observation Screening Response that identifies a social risk or need can be referenced as evidence for an [SDOHCC Condition]. Sometimes, instead of representing a question that was answered directly on an assessment instrument, an SDOHCC Observation Screening Response may be derived from one or more other SDOHCC Observation Screening Responses (see [SDOHCC Observation Response Hunger Vital Sign Question 3 Example]). Additionally, an SDOHCC Observation Screening Response may be addressed by, or be the outcome of, an [SDOHCC Goal], or be the reason for an [SDOHCC ServiceRequest] or an [SDOHCC Procedure]. See the [Data Modeling Framework] for more detail on the relationships between SDOHCC Observation Screening Response and the other profiles in this IG.
+
 In this IG, responses to assessment instruments are captured using QuestionnaireResponse. To facilitate querying and searching, it is best that individual responses from a QuestionnaireResponse be converted into Observations. The decision as to whether to convert individual responses from a QuestionnaireResponse into Observations will generally be driven by the clinical utility of the Observation. While clinical utility is subjective, the questions in the preferred value sets in the Usage section below are the questions that Gravity has vetted as face-valid.
+
 In the future, to promote interoperability, a single StructureMap instance should ideally be provided for each assessment instrument to ensure consistency in the Observations generated from that assessment instrument.
 
 ### Usage
@@ -16,34 +18,38 @@ For the Observation.category slice with binding to [SDOHCC ValueSet SDOH Categor
 
 #### Guidance for preferred value sets for Observation.code
 
-In the Value Set names below,  **Category-specific** is a placeholder for a specific SDOH category (e.g., Food Insecurity).
- **Category-specific** Screening Assessments Questions Value Set – Contains LOINC codes for the preferred, category-specific questions selected from the Assessment Instruments.
+In the Value Set names below,  \<Category-specific\> is a placeholder for a specific SDOH category (e.g., Food Insecurity).
 
-For an SDOHCC Observation Screening Response that represents a question and its coded answer, Observation.code SHOULD be a LOINC question code from this value set and Observation.value SHOULD be a LOINC answer code from the  **Category-specific** Screening Assessments Answers Value Set (described below).
+ **\<Category-specific\> Screening Assessments** Questions Value Set – Contains LOINC codes for the preferred, category-specific questions selected from the Assessment Instruments.
 
- **Category-specific** Screening Assessments Value Set – Contains LOINC codes for the assessment instruments (LOINC panels) from which the preferred, category-specific questions have been selected.
+For an SDOHCC Observation Screening Response that represents a question and its coded answer, Observation.code SHOULD be a LOINC question code from this value set and Observation.value SHOULD be a LOINC answer code from the  \<Category-specific\> Screening Assessments Answers Value Set (described below).
+
+ **\<Category-specific\> Screening Assessments**  Value Set – Contains LOINC codes for the assessment instruments (LOINC panels) from which the preferred, category-specific questions have been selected.
+
 For an SDOHCC Observation Screening Response that is an Observation Grouping, Observation.code SHOULD use panel LOINC codes from this value set. An Observation Grouping does not have an Observation.value.
 
-Instead, an Observation Grouping (via Observation.hasMember) references all Observations generated from a specific assessment instrument. See [SDOHCC Observation Response Hunger Vital Sign Grouping Example](dkdk).
- **Category-specific** Screening Assessments And Questions Value Set – Contains all codes in  **Category-specific** Screening Assessments Questions Value Set (LOINC question codes) AND  **Category-specific** Screening Assessments Value Set (LOINC panel codes).
+Instead, an Observation Grouping (via Observation.hasMember) references all Observations generated from a specific assessment instrument. See [SDOHCC Observation Response Hunger Vital Sign Grouping Example](broken.html).
+
+ **\<Category-specific\> Screening Assessments And Questions** Value Set – Contains all codes in  \<Category-specific\> Screening Assessments Questions Value Set (LOINC question codes) AND  \<Category-specific\> Screening Assessments Value Set (LOINC panel codes).
 
 For SDOHCC Observation Screening Response, this is the complete set of preferred values allowed for Observation.code for a category-specific Observation and can be used to validate that Observation.code is from a preferred, category-specific value set.
 
 #### Guidance for preferred value sets for Observation.value
 
- **Category-specific** Screening Assessments Answers Value Set – Contains LOINC answer codes for the preferred, category-specific questions.
-For an SDOHCC Observation Screening Response that represents a question and a coded answer, Observation.code SHOULD be a LOINC question code from the  **Category-specific** Screening Assessments Questions Value Set and Observation.value SHOULD be a LOINC answer code from this value set.
+ \<Category-specific\> Screening Assessments Answers Value Set – Contains LOINC answer codes for the preferred, category-specific questions.
 
-Of note, each question (Observation.code) has a subset of allowed answers (Observation.value) and, the allowed answers for a specific question may vary depending on the assessment instrument (LOINC panel) on which the question is presented (e.g., [`88122-7`](https://loinc.org/88122-7) ("Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]") has 4 possible answers on [Hunger Vital Sign (HVS)](https://loinc.org/88121-9) panel versus three possible answers on the [American Academy of Family Physicians Social Needs Screening Tool](https://loinc.org/99593-6). For this reason, the category-specific Assessment Instrument Spreadsheets (last column in Table below) provide additional information to link specific assessment instruments to questions and their allowed LOINC Answer Lists. LOINC also provides Answers Lists for questions from specific assessment instruments (panels).
+For an SDOHCC Observation Screening Response that represents a question and a coded answer, Observation.code SHOULD be a LOINC question code from the  \<Category-specific\> Screening Assessments Questions Value Set and Observation.value SHOULD be a LOINC answer code from this value set.
+
+Of note, each question (Observation.code) has a subset of allowed answers (Observation.value) and, the allowed answers for a specific question may vary depending on the assessment instrument (LOINC panel) on which the question is presented (e.g., [`88122-7`](https://loinc.org/88122-7) "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]" has 4 possible answers on [Hunger Vital Sign (HVS)](https://loinc.org/88121-9) panel versus three possible answers on the [American Academy of Family Physicians Social Needs Screening Tool](https://loinc.org/99593-6)). For this reason, the category-specific Assessment Instrument Spreadsheets (last column in Table below) provide additional information to link specific assessment instruments to questions and their allowed LOINC Answer Lists. LOINC also provides Answers Lists for questions from specific assessment instruments (panels).
 
 For additional information on fields in the Assessment Instrument Spreadsheets, see [Assessment Instrument Spreadsheet Guidance] on the Gravity Project Confluence site.
 
 Key for the “ValueSet for” Column: For readability, the formal names of these value sets in VSAC are shortened in the Table as follows:
-* Questions and Panels =  **Category-specific** Screening Assessments And Questions
+* Questions and Panels =  \<Category-specific\> Screening Assessments And Questions
 (Example: The formal name in VSAC for the Questions and Panels Value Set for Food insecurity is “Food Insecurity Screening Assessments And Questions”.)
-* Panels =  **Category-specific** Screening Assessments
-* Questions =  **Category-specific** Screening Assessments Questions
-* Answers =  **Category-specific** Screening Assessments Answers Value Set
+* Panels =  \<Category-specific\> Screening Assessments
+* Questions =  \<Category-specific\> Screening Assessments Questions
+* Answers =  \<Category-specific\> Screening Assessments Answers Value Set
 
 
 

@@ -25,15 +25,67 @@ Coded SDOH content is captured across core health care activities: screening/ass
 
 ### Actors and Process Roles
 In the drawing above, each of the actors supports a set of roles that are described here:
+<br>
 
-| Actor |  Process Roles                           | Relevant Profiles |
-| ----- | ---------------------------------------- | ----------------- |
-| Patient | <ul><li>Responds to questions and is assessed based on their responses</li><li>Discusses and agrees to Goals</li><li>Consents to the sharing of their information</li><li>Completes forms to provide feedback to providers</li></ul> |  [Condition][SDOHCC Condition], [Patient Task][SDOHCC Patient Task] |
-| Aggregation | <ul><li>Reports summary statistics on groups of patients with common SDOH conditions</li></ul> | [Group][SDOHCC Group] |
-| Provider | <ul><li>Assesses patient</li><li>Records & prioritizes problems and concerns alongside patient</li><li>Establishes Goals alongside patient</li><li>Solicits  Consent for data sharing and, if necessary,shares it with CBO</li><li>Creates referrals and solicits CBOs to fulfill them </li><li>Monitors completion of referral</li><li>Provides review material or provides contact instructions SDOHCCPatientTask to patients</li><li>Solicits feedback from patients</li></ul> | [Assessment][SDOHCCObservationAssessment], [Condition][SDOHCCCondition], [Goals][SDOHCCGoals], [Consents][SDOHCCConsent], [ServiceRequest][SDOHCCServiceRequest], [Task|[TaskforReferralManagement] |
-|Community Based Organization (possibly via Coordinating Platform)|<ul><li>Receives solicitation to complete referrals from provider</li><li>Retrieves referral and accepts or rejects solicitation</li><li>Delivers and records service requested by referral</li><li>Reports completion to referral source</li><li>Provides review material to patients</li><li>Solicits feedback from patients</li></ul>| [TaskforReferralManagement], [referrals][SDOHCCServiceRequest] [Procedure][SDOHCCProcedure] |
-{.grid:}
+<table>
+<thead>
+<tr>
+<th>Actor</th>
+<th>Process Roles</th>
+<th>Relevant Profiles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Patient</td>
+<td><ul><li>Responds to questions and is assessed based on their responses</li><li>Discusses and agrees to Goals</li><li>Consents to the sharing of their information</li><li>Completes forms to provide feedback to providers</li></ul></td>
+<td>[Condition][SDOHCCCondition], [Patient Task][SDOHCCTaskForPatient]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Aggregation</td>
+<td><ul><li>Reports summary statistics on groups of patients with common SDOH conditions</li></ul></td>
+<td>[Group][SDOHCCGroup]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Provider</td>
+<td><ul><li>Assesses patient</li><li>Records &amp; prioritizes problems and concerns alongside patient</li><li>Establishes Goals alongside patient</li><li>Solicits  Consent for data sharing and, if necessary,shares it with CBO</li><li>Creates referrals and solicits CBOs to fulfill them </li><li>Monitors completion of referral</li><li>Provides review material or provides contact instructions SDOHCCPatientTask to patients</li><li>Solicits feedback from patients</li></ul></td>
+<td>[Assessment][SDOHCCObservationAssessment], [Condition][SDOHCCCondition], [Goals][SDOHCCGoal], [Consents][SDOHCCConsent], [ServiceRequest][SDOHCCServiceRequest], [Task][SDOHCCTaskForReferralManagement]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Community Based Organization (possibly via Coordinating Platform)</td>
+<td><ul><li>Receives solicitation to complete referrals from provider</li><li>Retrieves referral and accepts or rejects solicitation</li><li>Delivers and records service requested by referral</li><li>Reports completion to referral source</li><li>Provides review material to patients</li><li>Solicits feedback from patients</li></ul></td>
+<td>[SDOHCCTaskForReferralManagement], [referrals][SDOHCCServiceRequest], [Procedure][SDOHCCProcedure]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
+
+
+<br>
 ### Scope of Interactions
 
 The scope of interactions is intended to cover all of the interactions shown in the drawing below. THe focus of the current IG is interactions between a patient, provider, and CBO, with possible intermediation by a CP. In the future, the IG will be expanded to support Payers and Government agencies, and referrals from non-health care providers.  The IG supports interactions with CBOs that support either a FHIR-enabled application that can FHIR servers, or a FHIR-server based application that supports querying other FHIR servers, as well as being queried by other applications.  In the drawing below, bidirectional solid arrows reflect communication between two endpoints with FHIR servers, whereas unidirectional solid arrows reflect communicaiton between a FHIR-enabled application and a FHIR server.
