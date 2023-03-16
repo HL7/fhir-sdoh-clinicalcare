@@ -20,7 +20,7 @@ We define common canonical URLs, linkIds and allowed answer codes.
 
 LOINC codes are used to describe the results of the question and answer from the social care assessment instrument because they support the encoding of standard assessment tools. While the output of the assessment process is an SDC QuestionnaireResponse, it can be useful to derive FHIR Observation and Condition resources based upon the questions and answers that are deemed to have clinical utility. The Observation supports searching for specific survey results (something that is difficult to do with an SDC QuestionnaireResponse) and the Condition identifies the health concerns so they can be communicated and promoted to problems on the problem list. 
 
-An Observation is used to group all of the observations created by the QuestionnaireResponse using the Observation.hasMember reference to each of the individual observations. This approach is consistent with US Core and there are examples presented later in IG for both of the example Questionnaires.
+An Observation is used to group all of the observations created by the QuestionnaireResponse using the Observation.hasMember reference to each of the individual observations. This approach is consistent with US Core and there are examples presented later in the IG for both of the example Questionnaires.
 
 ### Developing a New Assessment Instrument
 Note, most users of this guide will use standard assessment instruments.  This description is provided for those organizations that need to use different instruments, either because they are dealing with determinants for which this IG has not yet identified a standard instrument, or oganizational policy requires the use of specific instruments.
@@ -76,29 +76,6 @@ This implementation guide includes a partial example of the [Protocol for Respon
 
 [^2]: This example comes from the national PRAPARE social determinants of health assessment protocol, developed and © 2019 by the National Association of Community Health Centers (NACHC), in partnership with the Association of Asian Pacific Community Health Organization (AAPCHO), the Oregon Primary Care Association (OPCA), and the Institute for Alternative Futures (IAF). For more information, visit [www.nachc.org/prapare](http://www.nachc.org/prapare). It is included witih permission.
 
-<<<<<<< HEAD
-#### [Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences (PRAPARE) Survey](https://loinc.org/93025-5/) Example
-
-This implementation guide includes a partial example of the PRAPARE Survey representation as:
-
-1) an [SDC Questionnaire](Questionnaire-SDOHCC-QuestionnairePRAPARE.html)
-
-2) an [SDC Questionnaire Response](QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html)
-
-3) a [StructureMap](StructureMap-SDOHCC-StructureMapPRAPARE.html) that takes the [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html) and creates the appropriate Observations and Condition resources
-
-4) multiple Observations used to record the question and answers for a select set of the survey elements (not all questions are provided in these examples)
-
-- [Employment Status](Observation-SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample.html)
-- [Housing Status](Observation-SDOHCC-ObservationResponsePRAPAREHousingStatusExample.html)
-- [Child Care Need](Observation-SDOHCC-ObservationResponsePRAPAREChildCareNeedExample.html)
-- [Clothing Need](Observation-SDOHCC-ObservationResponsePRAPAREClothingNeedExample.html)
-
-5)  two Condition resources to record the health concerns based on the results of the survey
-
-- [Unemployed](Condition-SDOHCC-ConditionUnemployedExample.html)
-- [Homeless](Condition-SDOHCC-ConditionHomelessExample.html)
-=======
 
  {% include markdown-link-references.md %}
->>>>>>> 7f1ae73bdfe0201c307603b961ea4f31afec54d7
+
