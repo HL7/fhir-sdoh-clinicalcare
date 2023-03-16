@@ -53,6 +53,7 @@
 [Privacy and Security]: privacy_and_security.html
 [VSAC]: (https://vsac.nlm.nih.gov/)
 
+
 [SDOHCC Observation Response Hunger Vital Sign Question 3 Example]: Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example.html
 [Assessment Instrument Spreadsheet Guidance]: broken.html
 [Social Determinants of Health Screening Assessments And Questions]: broken.html
