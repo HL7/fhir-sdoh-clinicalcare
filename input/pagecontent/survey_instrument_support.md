@@ -1,7 +1,7 @@
 This section introduces Social Care Assessment instruments and explains how they fit into the overall process described by this IG.
 
 ### Introduction to Social Care Assessment Instruments
-Social care assessment instruments are survey tools used to gather information about the social and economic factors that can impact an individual's health and well-being. The information collected through a social care assessment can be used by healthcare providers, public health organizations, and policymakers to develop interventions and programs aimed at addressing the root causes of health disparities and improving health outcomes for individuals and communities. This IG builds on existing FHIR frameworks to generate Observations, Conditions and Goals from the assessment instruments for incorporation into the Patient's health record. Although the Gravity Project has developed a curated collection of assessment instruments, it is possible to leverage the capabilities of this IG without using assessment instruments.
+Social care assessment instruments are survey tools used to gather information about the social and economic factors that can impact an individual's health and well-being. The information collected through a social care assessment can be used by healthcare providers, public health organizations, and policymakers to develop interventions and programs aimed at addressing the root causes of health disparities and improving health outcomes for individuals and communities. This IG builds on existing FHIR frameworks to generate Observations and Conditions from the assessment instruments for incorporation into the Patient's health record. Although the Gravity Project has developed a curated collection of assessment instruments, it is possible to leverage the capabilities of this IG without using assessment instruments.
 
 Using a standardized social care assessment instrument has several advantages:
 * **Validity and reliability**: Standard social care assessment instruments have been validated and tested for reliability, meaning that they have been proven to provide accurate and consistent results.
@@ -10,12 +10,12 @@ Using a standardized social care assessment instrument has several advantages:
 * **Consistency**: Using standard social care assessment instruments helps to ensure that data collection is consistent, both within a study and across studies.
 * **Cost-effective**: Developing a custom assessment instrument can be time-consuming and expensive, especially if you need to test and validate the instrument.
 
-The Gravity Project has curated assessment instruments that cover a broad range of social risks.  See a description of these instruments [here][SDOHCCObservationScreeningResponse].
+The Gravity Project has curated assessment instruments that cover a broad range of social risks.  See a description of these instruments [here](StructureDefinition-SDOHCC-ObservationScreeningResponse-intro.html#general-guidance-for-preferred-value-sets-for-sdohcc-observation-screening-response).
 
-Assessment instruments fit into the [SDOH Clinical Care framework](sdoh_clinical_care_scope_alt.html#conceptual-framework). Providers incorporate screening into the care process to assess concerns and problems.  This information is used to help the Provider and Patient establish goals and identify social risk-related interventions that would address those goals.  Responses to standard assessment instruments can also be used to drive public health analysis of aggregated data from patient populations, since both the answers to the questions, the questions, and the instrument from which they were drawn can be incorporated into the analysis.
+Assessment instruments fit into the [SDOH Clinical Care framework](sdoh_clinical_care_scope.html#conceptual-framework). Providers incorporate screening into the care process to assess concerns and problems.  This information is used to help the Provider and Patient establish goals and identify social risk-related interventions that would address those goals.  Responses to standard assessment instruments can also be used to drive public health analysis of aggregated data from patient populations, since both the answers to the questions, the questions, and the instrument from which they were drawn can be incorporated into the analysis.
 
 ### Standardization of Social Care Assessment Instruments
-Another benefit to using standardized SDOH Assessment Instruments is to automate the conversion of the responses (values) to the questions (assessment items) into standardized terminology expressing the SDOH observation. We represent the instruments using [Questionnaire] for the item and [QuestionnaireResponse] for the value of the item. For each SDOH domain, we select [standard sets of questions][Assessment Instrument Spreadsheet Guidance] leveraging existing validated assessment instruments along with the work from both the [Regenstrief Institute](https://www.regenstrief.org/) and the  [National Library of Medicine](https://www.nlm.nih.gov/) (NLM) to standardize the capture, coding and output of social care assessment instruments.
+Another benefit to using standardized SDOH Assessment Instruments is to automate the conversion of the responses (values) to the questions (assessment items) into standardized terminology expressing the SDOH observation. We represent the instruments using [Questionnaire] for the item and [QuestionnaireResponse] for the value of the item. For each SDOH domain, we select [standard sets of questions - link to guidance spreadhseet][broken.html] leveraging existing validated assessment instruments along with the work from both the [Regenstrief Institute](https://www.regenstrief.org/) and the  [National Library of Medicine](https://www.nlm.nih.gov/) (NLM) to standardize the capture, coding and output of social care assessment instruments.
 We define common canonical URLs, linkIds and allowed answer codes.
 
 LOINC codes are used to describe the results of the question and answer from the social care assessment instrument because they support the encoding of standard assessment tools. While the output of the assessment process is an SDC QuestionnaireResponse, it can be useful to derive FHIR Observation and Condition resources based upon the questions and answers that are deemed to have clinical utility. The Observation supports searching for specific survey results (something that is difficult to do with an SDC QuestionnaireResponse) and the Condition identifies the health concerns so they can be communicated and promoted to problems on the problem list.
@@ -28,11 +28,32 @@ Note, most users of this guide will use standard assessment instruments.  This d
 Developing a new assessment instrument for incorporation into the process described in this IG involves developing the assessment, calculation logic, and conversion logic:
 * **Develop the assessment Instrument**:  The assessment is built from a set of survey as [LOINC Components](https://loinc.org/kb/faq/structure/) with associated [LOINC Answer Lists](https://loinc.org/forums/topic/answer-lists/).
 * **Develop the [SDC FHIR Questionnaire]**:  The assessment question and answers are incorporated into an [SDC FHIR Questionnaire] which also includes calculation logic that defines the result of some questions as a function of the answers to other questions.  There are tools that support this step (e.g., the open source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms))
-* **Develop the Conversion Logic**: The results of the instrument are captured in a [SDC QuestionnaireResponse], and this in turn can be converted to Observations and Conditions as using a [StructureMap].  The structure map logic needs to be developed.  See the [Mapping Instructions](mapping_instructions.html) page for more on FHIR structure maps. Executing the Structure Map on a QuestionaireResponse produces:
+* **Develop the Conversion Logic**: The results of the instrument are captured in a [SDC QuestionnaireResponse], and this in turn can be converted to Observations and Conditions using a [StructureMap].  Section 7.4 below describes the mapping process approach.  
+Executing the Structure Map on a QuestionaireResponse produces:
   * [Observation][SDOHCC Observation Screening Response] (each representing an assessment question-answer(s) pair),
   * An  [Observation][SDOHCC Observation Screening Response] that groups the Observations associated with a social care assessment together,
   * The related [Condition(s) resources](StructureDefinition-SDOHCC-Condition.html) indicating Health Concerns identified by the social care assessment instrument answers that should be coded with [US Core Condition codes](http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code).
 
+
+### Mapping QuestionnaireResponses to FHIR Resources
+
+There are a variety of strategies for converting QuestionnaireResponse data into other FHIR resources. This IG has adopted the map based approach using the FHIR StructureMap described in section 7.3. This approach is selected because it supports complex transformation of data and allows the conversion process between data and Questionnaire to be maintained independently. The StructureMap-based extraction mechanism (considerations, error handling and other details) is documented in the [HL7 Structured Data Capture IG].
+
+The StructureMap resource examples in this IG are generated using the [FHIR Mapping Language].  This language is then used to generate the StructureMap instances.  Authoring the maps in a textual language is much simpler than attempting to craft the XML or JSON StructureMap instances directly.  The mapping language also works regardless of the syntax used for the QuestionnaireResponse.  I.e. it works the same for JSON, XML and RDF instances.
+
+Instructions and tutorials on how to use the FHIR Mapping Language to convert and transform resources are found [here](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Mapping+Language).
+
+That same page also includes references to existing open source implementations that are capable of compiling mapping language instances into FHIR StructureMaps as well as being able to 'execute' maps - i.e. convert a QuestionnaireResponse into a transaction Bundle of other resources.  Implementers are encouraged to leverage one of these existing community-developed implementations rather than creating their own.  This will both save work and minimize the likelihood of introducing implementation-specific errors into the transformation process.
+
+The overall process for supporting this transformation process is therefore as follows:
+1. Identify the Questionnaire that will be used to gather SDOH-related information
+2. Determine what Observation and Condition resources will need to be created to be searchable within the FHIR record
+3. Using the examples provided in this guide as a foundation, create a mapping language file that performs the necessary transformation
+4. Compile the mapping file into a StructureMap instance (e.g. using the FHIR Java validator tool)
+5. Execute the map against a QuestionnaireResponse
+6. Execute the resulting transaction Bundle to create the relevant Observations and Conditions on the desired server
+
+Note that the creation of the mapping file and compiled StructureMap only need to be performed once per Questionnaire.  Implementers leveraging the same Questionnaire are encouraged to share the FHIR Questionnaire instance and associated StructureMap to minimize development and maintenance effort.
 
 ### How Assessment Instruments Are Incorporated Into the Clinical Workflow
 
@@ -40,7 +61,7 @@ To use an assessment instrument in practice, the artifacts produced in the previ
 * **Patient Answers a Questionnaire**:  The Patient is sent a [SDC FHIR Questionnaire] and fills it out. The filled out questionnaire is returned as a [SDC QuestionnaireResponse]
 * **QuestionnaireResponse is Processed Using a StructureMap**:  The resulting QuestionnaireResponse is processed by a StructureMap
 
-Example output and [StructureMap] are available in this IG for the [Hunger Vital Signs](https://loinc.org/88121-9/) and [PRAPARE](https://loinc.org/93025-5/) social care assessment instruments.
+Example StructureMap and output are available below in this IG for the [Hunger Vital Signs](https://loinc.org/88121-9/) and [PRAPARE](https://loinc.org/93025-5/) social care assessment instruments.
 
 #### Hunger Vital Sign (HVS) Survey Example
 
@@ -73,6 +94,8 @@ This implementation guide includes a partial example of the [Protocol for Respon
 * two Condition resources to record the health concerns based on the results of the survey
   * [Unemployed](Condition-SDOHCC-ConditionUnemployedExample.html)
   *  [Homeless](Condition-SDOHCC-ConditionHomelessExample.html)
+
+  ----------------------------------------------------------------------------------------------------
 
 [^2]: This example comes from the national PRAPARE social determinants of health assessment protocol, developed and © 2019 by the National Association of Community Health Centers (NACHC), in partnership with the Association of Asian Pacific Community Health Organization (AAPCHO), the Oregon Primary Care Association (OPCA), and the Institute for Alternative Futures (IAF). For more information, visit [www.nachc.org/prapare](http://www.nachc.org/prapare). It is included witih permission.
 
