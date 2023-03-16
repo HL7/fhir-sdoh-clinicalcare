@@ -3,13 +3,12 @@
 
 The following depicts the general workflow anticipated by this Implementation guide.  The general process is to:
 
-1) Assess the patient to determine social risk -- this may be done by using an assessment tool or via a conversation with the patient, or both.  As part of the assessment, the patient and provider agree on the specific risk items that are to be labeled as verified health concerns or problems.
+1. Assess the patient to determine social risk -- this may be done by using an assessment tool or via a conversation with the patient, or both.  As part of the assessment, the patient and provider agree on the specific risk items that are to be labeled as verified health concerns or problems.
+2. The patient and provider may establish specific goals regarding the identified social risk.
+3. The patient and provider agree on specific referrals/interventions that should be undertaken to address the problems and goals.  The patient's consent is obtained to share their specific information with the entity that will be performing the services.  The provider then sends a task to the performing entity to initiate the electronic referral.
 
-2) The patient and provider may establish specific goals regarding the identified social risk.
-
-3) The patient and provider agree on specific referrals/interventions that should be undertaken to address the problems and goals.  The patient's consent is obtained to share their specific information with the entity that will be performing the services.  The provider then sends a task to the performing entity to initiate the electronic referral.
-
-<table><tr><td><img src="GeneralWorkflow3.jpg" /></td></tr></table>
+<object data="GeneralWorkflow3.svg" type="image/svg+xml"></object>
+<br/>
 
 There are a number of system to system interactions supported by this implementation guide.  These include:
 
@@ -18,9 +17,8 @@ There are a number of system to system interactions supported by this implementa
 3. interactions with a patient to complete a questionnaire or "form", and
 4. interactions with a patient to cancel a service or indicate the outcome of the service
 
-<table><tr><td><img src="OverallInteractions.jpg" /></td></tr></table>
-
-
+<object data="OverallInteractions.svg" type="image/svg+xml"></object>
+<br/>
 
 ### Workflow and Managing Consent
 
@@ -46,29 +44,22 @@ Each of the workflow diagrams below defines the resources that are exchanged and
 
 Provider / Requester  -- this can be any of the following:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) a provider or other provider
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) a payer as part of care management, risk assessment, or via programs that assess and intervene regarding social risk
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3) a Coordination Platform
+1. a provider or other provider
+2. a payer as part of care management, risk assessment, or via programs that assess and intervene regarding social risk
+3. a Coordination Platform
 
 Coordination Platform (CP) / Intermediary
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) This is a service that accepts referrals (it may also create them)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) May determine which Community Based Organization (CBO) is capable and available to provide the appropriate service
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3) Engages the CBO to perform the referral
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4) Tracks the referral process to completion
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5) Reports status back to the Referring Entity
+1. This is a service that accepts referrals (it may also create them)
+2. May determine which Community Based Organization (CBO) is capable and available to provide the appropriate service
+3. Engages the CBO to perform the referral
+4. Tracks the referral process to completion
+5. Reports status back to the Referring Entity
 
 Community Based Organization (CBO) / Performer
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) Provides one or more social risk services
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) Interacts with the CP or RE to provide status of the referral
+1. Provides one or more social risk services
+2. Interacts with the CP or RE to provide status of the referral
 
 
 
