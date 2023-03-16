@@ -19,7 +19,7 @@ The activities supported by this IG include (see [Clinical Scope](sdoc_clinical_
   - Treatment/Interventions: These refer to actions undertaken by providers (clinical and community-based) and health plans to help address identified social risks and needs. These include referrals, case management, care planning, counseling and education, and provision of services and orders.
 
 
-Currently, this IG is intended to support [Patient Applications], [Provider's Electronic Health Record(EHR)] systems, [Coordinating Platforms] that intermediate between Providers and Community Based SDOH Service providers, and [Community Based SDOH Service Providers].  In the future Payer systems and governmental systems will be supported. The IG establishes a framework for SDOH-related interventions including:
+Currently, this IG is intended to support Patient Applications, Provider's Electronic Health Record(EHR) systems, Coordinating Platforms that intermediate between Providers and Community Based SDOH Service providers, and Community Based SDOH Service Providers.  In the future Payer systems and governmental systems will be supported. The IG establishes a framework for SDOH-related interventions including:
 * capture of survey data from validated instruments
 * mapping the responses from assessments into observations, conditions, and goals using SDOH-relevant value sets using established standards (see [Mapping Support])
 * generating and monitoring referrals from providers and care coordinators for SDOH-related services provided by CBOs

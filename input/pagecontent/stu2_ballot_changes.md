@@ -1,9 +1,9 @@
 ### Jira Tickets – all applied -- see changes below
 
-1. [FHIR-34237](https://jira.hl7.org/browse/FHIR-34237) -- Replace Task with a Task for Referrals and one for the Patient, and add documentation 
+1. [FHIR-34237](https://jira.hl7.org/browse/FHIR-34237) -- Replace Task with a Task for Referrals and one for the Patient, and add documentation
    - Patient task should support surveys, documentation, and contact information
 2. [FHIR-34238](https://jira.hl7.org/browse/FHIR-34238) -- Add Draft observations for race and ethnicity that support the identification of “source” and “method” of collection and add documentation – need US core exceptions from CPWG for observations – submitted variance request to CPG and was approved (see profiles)
-3. [FHIR-34242](https://jira.hl7.org/browse/FHIR-34241) -- Change ServiceRequest and Procedure profiles to use US core value set for .code 
+3. [FHIR-34242](https://jira.hl7.org/browse/FHIR-34241) -- Change ServiceRequest and Procedure profiles to use US core value set for .code
 4. [FHIR-34243](https://jira.hl7.org/browse/FHIR-34243) -- Change Condition profile to use US Core .code value set and provide guidance on the use of both SNOMED-CT and ICD-10 (as codings)
 5. [FHIR-34244](https://jira.hl7.org/browse/FHIR-34244) -- Add profile for HealthcareService and Location to use in the Patient Task to indicate contact information
 6. [FHIR-34246](https://jira.hl7.org/browse/FHIR-34246) -- Add Service order detail in the ServiceRequest to indicate that the service organization is not to call the patient/client
@@ -11,14 +11,14 @@
 8. [FHIR-34256](https://jira.hl7.org/browse/FHIR-34256) -- Define workflow with multiple services organization
 9. [FHIR-34257](https://jira.hl7.org/browse/FHIR-34257) -- Add additional examples for each of the new / changed profiles /requirements
 10. [FHIR-34236](https://jira.hl7.org/browse/FHIR-34236) -- Update profiles must support and element definitions based on feedback from implementers
-11. [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233) -- Add support for external terminologies as part of ServiceRequest and Procedure. 
+11. [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233) -- Add support for external terminologies as part of ServiceRequest and Procedure.
 12. [FHIR-34339](https://jira.hl7.org/browse/FHIR-34239) -- Add Guidance on relationship between new Race and Ethnicity Observation with US Core
 
 This ballot is focused on a number of additions and corrections based on feedback from  addresses several additions, modifications, technical corrections, errata, clarifications listed below.
 
 
 
-### CodeSystems 
+### CodeSystems
 
 Added values and notes [FHIR-34237](https://jira.hl7.org/browse/FHIR-34237), [FHIR-34238](https://jira.hl7.org/browse/FHIR-34238), [FHIR-34246](https://jira.hl7.org/browse/FHIR-34246)
 
@@ -55,7 +55,7 @@ Added Value Sets for Race/Ethnicity Observation Profile [FHIR-34238](https://jir
 
 Added Value Sets for Patient Task [FHIR-34237](https://jira.hl7.org/browse/FHIR-34237)
 
-* 
+*
 
 * [SDOHCC ValueSet SDOH Questionnaire Category](ValueSet-SDOHCC-ValueSetSDOHQuestionnaireCategory.html)
 * [SDOHCC ValueSet Task Code](ValueSet-SDOHCC-ValueSetTaskCode.html)
@@ -87,7 +87,7 @@ Updated Profiles [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233)
 
 - - Added guidance on use of SDOH value sets
 
-    
+
 
 * [SDOHCC Goal](StructureDefinition-SDOHCC-Goal.html) [FHIR 34233](https://jira.hl7.org/browse/FHIR-34233)
 
@@ -95,7 +95,7 @@ Updated Profiles [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233)
 
 - - Make Goal.value due date MS
 
-    
+
 
 
 * [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html) [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233), [FHIR-34242](https://jira.hl7.org/browse/FHIR-34242)
@@ -104,7 +104,7 @@ Updated Profiles [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233)
 
 - - Procedure.code.coding -- added slice for example of social services taxonomy (e.g. 211 LA) as Must Support
 
-  
+
 
 * [SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) [FHIR-34246](https://jira.hl7.org/browse/FHIR-34246), [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233), [FHIR-34242](https://jira.hl7.org/browse/FHIR-34242)
 
@@ -118,7 +118,7 @@ Updated Profiles [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233)
 
 * * ServiceRequest.orderDetail -- added order detail to indicate that the service organization is not to call the patient/client
 
-    
+
 
 Added new profiles
 
@@ -159,7 +159,7 @@ Changed name and updated content
 
 Added CapabilityStatement
 
-* [SDOHCC Patient Application](CapabilityStatement-SDOHCC-PatientApp.html) [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255)  
+* [SDOHCC Patient Application](CapabilityStatement-SDOHCC-PatientApp.html) [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255)
 
 
 
@@ -169,13 +169,15 @@ Added CapabilityStatement
 * [STU2 Ballot Changes](stu2_ballot_changes.html) – this page
 * [Functional Use Cases](functional_use_cases.html) – added Patient/Client use case [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255)
 * [Support for Multiple Domains](support_for_multiple_domains.html) – added support for VSAC group value sets [FHIR-34236](https://jira.hl7.org/browse/FHIR-34236)
-* [Exchange Workflow](exchange_workflow.html) – added new workflow for Patient/Client and CBO applications [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255), [FHIR-34256](https://jira.hl7.org/browse/FHIR-34256) 
+* [Exchange Workflow](exchange_workflow.html) – added new workflow for Patient/Client and CBO applications [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255), [FHIR-34256](https://jira.hl7.org/browse/FHIR-34256)
 * [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html) -- new [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255)
 * [FHIR Artifacts Overview](fhir_artifacts_overview.html) – updated to refer to new or changed artifacts
 * [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)-- new [FHIR-34339](https://jira.hl7.org/browse/FHIR-34239)
 
 
 
-### Examples 
+### Examples
 
 * Many of the examples have been renamed, updated, or added to appropriately provide examples of the changes noted above [FHIR-34257](https://jira.hl7.org/browse/FHIR-34257)
+
+{% include markdown-link-references.md %}

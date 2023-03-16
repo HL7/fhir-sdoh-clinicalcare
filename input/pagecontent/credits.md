@@ -30,3 +30,5 @@ We would like to thank [CyncHealth](https://cynchealth.org/), the [Agency for He
 Our thanks to these and to the many others not explicitly listed who contributed their time, enthusiasm and expertise to this work.
 
 This implementation guide was created under the supervision and review of the [HL7 Patient Care workgroup](http://www.hl7.org/Special/committees/patientcare/index.cfm)
+
+{% include markdown-link-references.md %}

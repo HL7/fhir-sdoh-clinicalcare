@@ -11,3 +11,5 @@ The DD intentionally omits certain elements in FHIR that are not expected to be 
 Download links:
 
 * [SDOH Clinical Care Data Dictionary - STU 2.1 (Excel download)](data-dictionary.xlsx)
+
+{% include markdown-link-references.md %}

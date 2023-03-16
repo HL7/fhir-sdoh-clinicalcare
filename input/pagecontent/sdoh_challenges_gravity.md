@@ -31,3 +31,5 @@ The [Gravity Project](https://thegravityproject.net/) was initiated by the [Soci
 The Gravity Project currently has three workstreams as shown in the figure above.  The [Terminology Workstream](https://confluence.hl7.org/display/GRAV/Terminology+Workstream+Dashboard) develops terminology resources that are published via VSAC that support capture of SDOH-related data.  The [Technical workstream](https://confluence.hl7.org/display/GRAV/Technical+Workstream+Dashboard) developed this FHIR Implementation guide and coordinates with other FHIR IG development projects.  The [Pilot testing workstream](https://confluence.hl7.org/display/GRAV/Gravity+Project+Pilots+Affinity+Group+Home) tests the Gravity-developed Terminologies and FHIR IG specifications with partners to assess their usefulness, and drive improvements.
 
 For more information about Gravity see the Gravity project [website](https://thegravityproject.net/) or [confluence site](https://confluence.hl7.org/display/GRAV/Join+the+Gravity+Project).
+
+{% include markdown-link-references.md %}
