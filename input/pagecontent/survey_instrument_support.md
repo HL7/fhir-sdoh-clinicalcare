@@ -10,7 +10,7 @@ Using a standardized social care assessment instrument has several advantages:
 * **Consistency**: Using standard social care assessment instruments helps to ensure that data collection is consistent, both within a study and across studies.
 * **Cost-effective**: Developing a custom assessment instrument can be time-consuming and expensive, especially if you need to test and validate the instrument.
 
-The Gravity Project has curated assessment instruments that cover a broad range of social risks.  See a description of these instruments [here](StructureDefinition-SDOHCC-ObservationScreeningResponse-intro.html#general-guidance-for-preferred-value-sets-for-sdohcc-observation-screening-response).
+The Gravity Project has curated assessment instruments that cover a broad range of social risks.  See a description of these instruments [here](StructureDefinition-SDOHCC-ObservationScreeningResponse.html#general-guidance-for-preferred-value-sets-for-sdohcc-observation-screening-response).
 
 Assessment instruments fit into the [SDOH Clinical Care framework](sdoh_clinical_care_scope.html#conceptual-framework). Providers incorporate screening into the care process to assess concerns and problems.  This information is used to help the Provider and Patient establish goals and identify social risk-related interventions that would address those goals.  Responses to standard assessment instruments can also be used to drive public health analysis of aggregated data from patient populations, since both the answers to the questions, the questions, and the instrument from which they were drawn can be incorporated into the analysis.
 
@@ -32,7 +32,7 @@ Developing a new assessment instrument for incorporation into the process descri
 Executing the Structure Map on a QuestionaireResponse produces:
   * [Observation][SDOHCC Observation Screening Response] (each representing an assessment question-answer(s) pair),
   * An  [Observation][SDOHCC Observation Screening Response] that groups the Observations associated with a social care assessment together,
-  * The related [Condition(s) resources](StructureDefinition-SDOHCC-Condition.html) indicating Health Concerns identified by the social care assessment instrument answers that should be coded with [US Core Condition codes](http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code).
+  * The related [Condition(s) resources](StructureDefinition-SDOHCC-Condition.html) indicating Health Concerns identified by the social care assessment instrument answers that should be coded with [US Core Condition codes](https://hl7.org/fhir/us/core/ValueSet/us-core-condition-code).
 
 
 ### Mapping QuestionnaireResponses to FHIR Resources
