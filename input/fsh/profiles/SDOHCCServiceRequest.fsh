@@ -45,7 +45,7 @@ Description: "Profile for service requests that address Social Determinants of H
 * code from USCoreProcedureCodes (required)
 * code ^short = "What is being requested/ordered."
 * code ^definition = "A code that identifies a particular service (e.g., procedure) that has been requested."
-* code ^comment = "As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories. For further guidance on external value sets vetted by the Gravity Project see: [SDOH terminology guidance](support_for_multiple_domains.html#external-value-set-guidance)"
+* code ^comment = "As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories."
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service."
 * orderDetail ^slicing.discriminator.type = #pattern
 * orderDetail ^slicing.discriminator.path = "coding"

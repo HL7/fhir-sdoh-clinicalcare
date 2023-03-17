@@ -18,7 +18,7 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * category[SDOH] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a goal. It is recommended that SDOH category codes be used to facilitate searching for SDOH-related goals."
 * category[SDOH] ^binding.description = "Codes for high-level SDOH categories."
 * description from SDOHCCValueSetLOINCSNOMEDCT (preferred)
-* description ^comment = "If no code is available, use CodeableConcept.text.\r\n\r\nAs the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories. For further guidance on external value sets vetted by the Gravity Project see: [SDOH terminology guidance](support_for_multiple_domains.html#external-value-set-guidance)"
+* description ^comment = "If no code is available, use CodeableConcept.text.\r\n\r\nAs the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories. "
 * description ^binding.description = "Codes providing the details of a particular goal.  In many systems, only the text element will be used."
 * subject ^definition = "Identifies the patient for whom the goal is being established."
 * target.measure from LOINCCodes (preferred)
