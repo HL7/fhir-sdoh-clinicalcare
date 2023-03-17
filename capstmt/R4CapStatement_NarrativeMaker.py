@@ -1,7 +1,9 @@
 '''
 Benjamin Langley
-Usage: python3 R4CapStatement_NarrativeMaker.py [json file]
-Dependecies:
+
+Usage: python3 R4CapStatement_NarrativeMaker.py [json file (wildcards supported)] {[Artifacts Folder]}
+Wildcards for json file name will iterate on all matches (i.e. support for generating narratives for multiple CapabilityStatement files at the same time)
+Dependecies: 
     fhirclient
     pandas
     xlrd
@@ -10,12 +12,14 @@ Dependecies:
     jinja2
     commonmark
     lxml
+
 To install all dependencies: pip3 install -r requirements.txt
 to run on windows: python -m pip ...
+
 NOTE: this requires the r4models to be installed in the fhirclient pip site-package, to be installed in [installdir]/lib/python/site-packages/fhirclient
-Email Eric Haas for these models (the _element extension elements are not supported in that version. Corety Spears can provide a modified set or rfmodels for
-the capabilitystatement element level extension )
-Modified from:
+
+
+Modified from: 
 https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/R4CapStatement_Maker.ipynb
 and jinja template from
 https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/R4capabilitystatement-server.j2
@@ -24,6 +28,7 @@ import sys
 import os
 import os.path
 from os import path
+from os.path import exists
 import glob
 import validators
 import fhirclient.r4models.capabilitystatement as CS
@@ -35,7 +40,7 @@ import fhirclient.r4models.extension as X
 import fhirclient.r4models.contactdetail as CD
 import fhirclient.r4models.narrative as N
 import fhirclient.r4models.bundle as B
-import re
+import re 
 
 import tarfile
 # import fhirclient.r4models.narrative as N
@@ -92,33 +97,38 @@ def markdown(text, *args, **kwargs):
 def main():
     if (len(sys.argv) < 2):
         print(
-            "Error: missing json file - correct usage is:\n\tpython3 R4CapStatement_NarrativeMaker.py [json file] {[Artifacts Folder]}")
+            "Error: missing json file - correct usage is:\n\tpython3 R4CapStatement_NarrativeMaker.py [json file (wildcards supported)] {[Artifacts Folder]}\n\n\tWildcards for json file name will iterate on all matches (i.e. support for generating narratives for multiple CapabilityStatement files at the same time)")
         return
 
-    xls = sys.argv[1]
+    #xls = sys.argv[1]
 
-    in_json_file = sys.argv[1]
+    #in_json_file = sys.argv[1]
     artifacts_folder = ""
-
+    
     if len(sys.argv) > 2:
         artifacts_folder = sys.argv[2]
 
-    print('....Generating CapabilityStatement Narrative.....')
+    for pattern in sys.argv[1:]:
+        for filename in glob.glob(pattern):
+            if os.path.isfile(filename):
+                generate_single(filename, artifacts_folder)
 
 
+def generate_single(in_json_file, artifacts_folder):
+    print('....Generating CapabilityStatement Narrative for ' +  in_json_file + '.....')
 
-    with open(in_json_file, 'r') as h:
+    with open(in_json_file, 'r', encoding="utf-8") as h:
         pjs = json.load(h)
     capStatement = CS.CapabilityStatement(pjs)
     #print(dumps(capStatement.as_json(), indent=3))    # %% [markdown]
 
     # CapabilityStatement loaded
-
     in_path = ''
     in_file = 'R4capabilitystatement-server.j2'
+    #'/Users/cspears/dev/tools/CapStatement/R4capabilitystatement-server.j2'
 
     env = Environment(
-        loader=FileSystemLoader(searchpath=in_path),
+        loader=FileSystemLoader(searchpath=os.path.abspath(os.path.dirname(os.path.realpath(__file__)))),
         autoescape=select_autoescape(['html', 'xml', 'xhtml', 'j2', 'md'])
     )
 
@@ -126,6 +136,7 @@ def main():
 
 
     template = env.get_template(in_file)
+    #parent=os.path.abspath(os.path.dirname(os.path.realpath(__file__))))
 
     pname_map = {}
     igname_map = {}
@@ -137,7 +148,7 @@ def main():
         struct_def_files = glob.glob(artifacts_folder + "/StructureDefinition-*.json")
         imp_guide_files = glob.glob(artifacts_folder + "/ImplementationGuide-*.json")
         cap_stmt_files = glob.glob(artifacts_folder + "/CapabilityStatement-*.json")
-
+        
         pname_map = get_pname_map(struct_def_files)
         igname_map = get_igname_map(imp_guide_files)
         csname_map = get_csname_map(cap_stmt_files)
@@ -147,7 +158,7 @@ def main():
     if r.status_code == 200:
         print('....Retrieving Online Artifact Names .....')
         # Loop through all references in the CapabilityStatement and attempt to retried the artifacts to load the names into the map
-
+        
 
         # Instantiates
         if capStatement.instantiates:
@@ -176,7 +187,7 @@ def main():
                             url = resource.profile
                             if url not in pname_map:
                                 pname_map[url] = get_url_title(url, resource.type + " profile")
-
+                                
                         if resource.supportedProfile:
                             for url in resource.supportedProfile:
                                 if url not in pname_map:
@@ -188,25 +199,24 @@ def main():
 
 
 
-
-
-
-
-    rendered = template.render(cs=capStatement, path_map='', pname_map=pname_map, purl_map='', sp_map='',
-                            csname_map=csname_map, csurl_map='', sp_url_map='', igname_map=igname_map, igurl_map='')
-
-    #template.render(cs=cs, path_map=path_map, pname_map=pname_map, purl_map=purl_map, sp_map=sp_map,
+    rendered = template.render(cs=capStatement, path_map={}, pname_map=pname_map, purl_map={}, sp_map={}, 
+                            csname_map=csname_map, csurl_map={}, sp_url_map={}, igname_map=igname_map, igurl_map={})
+    
+    #template.render(cs=cs, path_map=path_map, pname_map=pname_map, purl_map=purl_map, sp_map=sp_map, 
     #                       csname_map=csname_map, csurl_map=csurl_map, igname_map=igname_map, igurl_map=igurl_map)
 
     tempPath = Path.cwd() / "test.html"
     tempPath.write_text(rendered)
     #print(rendered)
-
+    
 
     parser = etree.XMLParser(remove_blank_text=True)
     root = etree.fromstring(rendered, parser=parser)
 
     div = (etree.tostring(root[1][0], encoding='unicode', method='html'))
+    #div = div.replace("\\n", "")
+    #div = div.replace("\\t", "")
+    
 
     print("\n####################################################\n")
     #print(etree.tostring(root[1][0], encoding='unicode', method='html'))
@@ -226,14 +236,26 @@ def main():
 
     #print(dumps(narr.div, indent=3))    # %% [markdown]
     capStatement.text = narr
-    outfile = 'Narrative-' + in_json_file
+    outfile = 'Narrative-' + os.path.basename(in_json_file)
     path = Path.cwd() / outfile
     tempOut = dumps(capStatement.as_json(), indent=4)
     tempOut = tempOut.replace("<sup>+</sup>", "<sup>&#8224;</sup>")
+    
     #tempOut = tempOut.replace(“<sup>t</sup>”, “<sup>&#8224;</sup>”)
-    #print(tempOut)
+    
+    tempOut = tempOut.replace("\\n", "")
+    tempOut = tempOut.replace("\\t", "")
+    tempOut = tempOut.replace("<br></br>", "<br/>")
+    tempOut = tempOut.replace("\\u2666", "&#x2666;")
+    tempOut = tempOut.replace("\\u22c4", "&#x22C4;")
+    tempOut = tempOut.replace("\\u25bf", "&#x25BF;")
     path.write_text(tempOut)
 
+    div = div.replace("\\\"", "\"")
+    div = "<html><body>" + div + "</body></html>"
+    # testing output
+    #path = Path.cwd() / 'temper.html'
+    #path.write_text(div)
 
     print('.............validating..............')
     r = validate(capStatement)
@@ -459,51 +481,58 @@ def get_op(r_type, df_op):
     return op_list
 
 def get_pname_map(file_names):
-
+    
     pname_map = {}
     for file_name in file_names:
-        with open(file_name, 'r') as file_h:
+        print("Searching: " + file_name + "\n")
+        with open(file_name, 'r', encoding="utf-8") as file_h:
             sd = SD.StructureDefinition(json.load(file_h))
-            pname_map[sd.url] = sd.title
+            if sd.title != None:
+                pname_map[sd.url] = sd.title
+                print("Found title: " + sd.title + " from URL:" + sd.url + "\n")
         file_h.close()
-
+    
     return pname_map
 
 def get_igname_map(file_names):
     igname_map = {}
     for file_name in file_names:
-        with open(file_name, 'r') as file_h:
+        with open(file_name, 'r', encoding="utf-8") as file_h:
             ig = IG.ImplementationGuide(json.load(file_h))
             igname_map[ig.url] = ig.title
         file_h.close()
-
+    
     return igname_map
 
 def get_csname_map(file_names):
     csname_map = {}
     for file_name in file_names:
-        with open(file_name, 'r') as file_h:
+        with open(file_name, 'r', encoding="utf-8") as file_h:
             cap_stmt = CS.CapabilityStatement(json.load(file_h))
             csname_map[cap_stmt.url] = cap_stmt.title
         file_h.close()
-
+    
     return csname_map
 
 def get_url_title(url, msg_context):
     print("Retrieving " + msg_context + " at: " + url)
-    r = get(url, headers={"Accept":"application/json"})
-    if r.status_code == 200:
-        try:
-            json_data = json.loads(r.content)
-            #Retrieving this as json data instead of from fhirclient objects in case there is a validation error
-            if(json_data['title']):
-                return json_data['title']
-            else:
-                print(bcolors.BOLD + bcolors.FAIL + "Warning: Unable to retrieve title from online " + msg_context + " artifact (" + url + ") - Title will not show up in rendered narrative." + bcolors.ENDC)
-        except ValueError:
-            print(bcolors.BOLD + bcolors.FAIL + "Warning: Unable to decode online " + msg_context + " artifact (" + url + ") - Title will not show up in rendered narrative." + bcolors.ENDC)
-    else:
-        print(bcolors.BOLD + bcolors.FAIL + "Warning: unable to retrieve online " + msg_context + " artifact (" + url + "). Failed with status code: " + str(r.status_code) + " - Title will not show up in rendered narrative." + bcolors.ENDC)
+    try:
+        r = get(url, headers={"Accept":"application/json"})
+        if r.status_code == 200:
+            try:
+                json_data = json.loads(r.content)
+                #Retrieving this as json data instead of from fhirclient objects in case there is a validation error
+                if('title' in json_data):
+                    return json_data['title']
+                else:
+                    print(bcolors.BOLD + bcolors.FAIL + "Warning: Unable to retrieve title from online " + msg_context + " artifact (" + url + ") - Title will not show up in rendered narrative." + bcolors.ENDC)
+            except ValueError:
+                print(bcolors.BOLD + bcolors.FAIL + "Warning: Unable to decode online " + msg_context + " artifact (" + url + ") - Title will not show up in rendered narrative." + bcolors.ENDC)
+        else:
+            print(bcolors.BOLD + bcolors.FAIL + "Warning: unable to retrieve online " + msg_context + " artifact (" + url + "). Failed with status code: " + str(r.status_code) + " - Title will not show up in rendered narrative." + bcolors.ENDC)
+    except ValueError:
+        print(bcolors.BOLD + bcolors.FAIL + "Warning: Unable to retrieve " + msg_context + " artifact (" + url + ")." + bcolors.ENDC)
+
 
 
 def markdown(text, *args, **kwargs):
