@@ -3,18 +3,18 @@
 # The following issue is inherited from the FHIR specification for Consent.
 ERROR: StructureDefinition/SDOHCC-Consent: StructureDefinition.snapshot.element[9].example[0].value.ofType(Identifier): Consent: if identifier.system is ''urn:ietf:rfc:3986'', then the identifier.value must be a full URI (e.g. start with a scheme)
 
-# The following issue is inherited from the FHIR specification.
+# The following issue is inherited from the FHIR specification. x
 ERROR: ValueSet/SDOHCC-ValueSetObservationStatus: The link 'provenance.html' for "Provenance" cannot be resolved
 
 # The following issues have been reviewed and these items are not intended to validate against one of the slices.
 INFORMATION: HealthcareService/SDOHCC-HealthcareServiceTelecomAppointmentExample: HealthcareService.telecom[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService
 INFORMATION: HealthcareService/SDOHCC-HealthcareServiceTelecomAppointmentExample: HealthcareService.telecom[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService
 INFORMATION: Condition/SDOHCC-ConditionAsserterDeviceExample: Condition.category[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition
-INFORMATION: Condition/SDOHCC-ConditionFoodInsecurityExample: Condition.category[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition  
-INFORMATION: Condition/SDOHCC-ConditionHomelessExample: Condition.category[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition  
-INFORMATION: Condition/SDOHCC-ConditionUnemployedExample: Condition.category[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition 
-INFORMATION: Observation/SDOHCC-ObservationAssessmentSocialIsolationExample: Observation.category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment 
-INFORMATION: Observation/SDOHCC-ObservationAssessmentTransportTooExpensiveExample: Observation.category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment 
+INFORMATION: Condition/SDOHCC-ConditionFoodInsecurityExample: Condition.category[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition
+INFORMATION: Condition/SDOHCC-ConditionHomelessExample: Condition.category[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition
+INFORMATION: Condition/SDOHCC-ConditionUnemployedExample: Condition.category[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition
+INFORMATION: Observation/SDOHCC-ObservationAssessmentSocialIsolationExample: Observation.category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment
+INFORMATION: Observation/SDOHCC-ObservationAssessmentTransportTooExpensiveExample: Observation.category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment
 INFORMATION: Practitioner/SDOHCC-PractitionerDrJanWaterExample: Practitioner.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 INFORMATION: Procedure/SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample: Procedure.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure
 INFORMATION: Procedure/SDOHCC-ProcedureProvisionOfFoodExample: Procedure.category.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure
