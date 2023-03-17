@@ -19,4 +19,3 @@ Usage: #example
 * performer.display = "COLIN ABBAS"
 * valueCodeableConcept = $loinc#LA28397-0 "Often true"
 * derivedFrom.reference = "QuestionnaireResponse/SDOHCC-QuestionnaireResponseHungerVitalSignExample"
-* hasMember[hasMember] = Reference(SDOHCC-ObservationResponseHungerVitalSignGroupingExample)
