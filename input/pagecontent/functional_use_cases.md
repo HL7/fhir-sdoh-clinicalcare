@@ -86,6 +86,28 @@ The CBO may not accept the referral or be unable to perform the requested servic
 {:.grid}
 
 #### Direct Referral Detailed View
+{% include img.html img="DetailedDirectReferral.svg" caption="Figure 2: Detailed Direct Referral" %}
+
+1. Post Referral Task
+    Posted Task
+    {% include examplebutton.html example="Post_referral_task" b_title = "Click on Here To See Search Example" %}
+2. Post Subscription
+    Click here for details
+3. Get Service Request and Referenced Resources
+    ServiceRequest and Referenced Resource (A,B, and C)
+    Click here for details
+4. Send Notification
+5. Get Task
+    Same as initial task, with status changed
+6. Send Notification
+7. Get Task
+    Same as initial task, with status changed
+8. Send Notification
+9. Get Task
+    Same as initial task, with status changed
+10. Get Procedures
+    Procedures returned
+    Click here for details
 
 
 ### Direct Referral Light
