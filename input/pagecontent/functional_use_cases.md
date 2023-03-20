@@ -1,9 +1,19 @@
-This section provides a functional description of the interactions between the actors in an SDOH referral, and with links to the profiles and sections of the IG where more detail is provided.
-This should be read prior to the more detailed [exchange workflow][Exchange Workflow] description.
-
-Since this is a functional description, technical details have been abstracted.   For example, the mechanism through which the referring provider is informed of the status of the referral could use FHIR Subscriptions or polling (see [Checking Task Status] for details).   Similarly, the relationships between the profiles referenced are not described (see [Data Modeling Framework] ).  Management of task status is not described (see [Checking Task Status]).
+This section describeds the interactions between the actors in an SDOH referral starting at a high level, and drilling all the way down to the details of the FHIR API calls, and provides links to the profiles and sections of the IG where more detail is provided.  First a high level overview of the interactions is provided that will abstract technical details.   For example, the mechanism through which the referring provider is informed of the status of the referral could use FHIR Subscriptions or polling (see [Checking Task Status] for details).   Similarly, the relationships between the profiles referenced are not described (see [Data Modeling Framework] ).  Management of task status is not described (see [Checking Task Status]).
 
 The use cases here relate to the Gravity [Patient Stories].  Implementers will benefit from looking at the detailed technical description of the exchange work flow for each use case, as well as the [Capability Statements] associated with each workflow and the [conformance artifacts](artifacts.html) generally.
+
+### General Workflow
+
+This IG supports the following general [workflow](sdoh_clinical_care_scope.html):
+
+1. Assess the patient to determine social risk -- this may be done by using an assessment tool or via a conversation with the patient, or both.  As part of the assessment, the patient and provider agree on the specific risk items that are to be labeled as verified health concerns or problems.
+2. The patient and provider may establish specific goals regarding the identified social risk.
+3. The patient and provider agree on specific referrals/interventions that should be undertaken to address the problems and goals.  The patient's consent is obtained to share their specific information with the entity that will be performing the services.  The provider then sends a task to the performing entity to initiate the electronic referral.
+
+The figure below shows this high level workflow, along with the actors involved in each step, and the FHIR resources that support each step.
+
+<object data="GeneralWorkflow3.svg" type="image/svg+xml"></object>
+<br/>
 
 ### Actors and Icons
 The actors in the workflows are described in the table below.   The graphical icons are used throughout the IG.   For each use case the assumptions regarding each type of actor will be described.
@@ -20,6 +30,16 @@ The actors in the workflows are described in the table below.   The graphical ic
 | ![patientapp] FHIR-enabled Patient Application | A patient application that can connect to FHIR servers |
 {:.grid}
 
+The figure below shows thesystem to system interactions supported by this implementation guide.  These include:
+
+1. referrals via an intermediary (or indirect referrals) that may include interactions with multiple service performers,
+2. direct and direct light (where the interaction is with an application) referrals,
+3. interactions with a patient to complete a questionnaire or "form", and
+4. interactions with a patient to cancel a service or indicate the outcome of the service
+
+<object data="OverallInteractions.svg" type="image/svg+xml"></object>
+<br/>
+The workflow and associated exchange patters for these interactions will now be described, first at a high level, and then in detail.
 
 ### Overview
 The functional use cases in the table below describe the referral process initiated by a provider, or other healthcare actor, and a request referral recipient, both directly and indirectly via an intermediary.   For each use case the capabilities or limitations of the actor are described.   The table links to the functional use case and the associated detailed technical exchange workflow.
@@ -33,19 +53,6 @@ The functional use cases in the table below describe the referral process initia
 | [Indirect Referral (light)](functional_use_cases.html#indirectreferrallight) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., a CBO) that is mediated by a referring intermediary (e.g., a CP) where the referring entity and referring intermediary have FHIR APIs, and the performing entity does not have FHIR API capability but has an application that can access the referring entity’s API | ![providericon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] | [Indirect Referral Light Exchange Workflow]        |
 | [Patient Coordination](functional_use_cases.html#patientworkflow)| A patient application may, optionally, communicate directly with any entity that supports a FHIR API and provides a mechanism for secure exchange | ![providericon], ![patienticon], ![ccicon], ![cboicon]  | [Patient Workflow Exchange] |
 {:.grid}
-
-
-### Patient Privacy and Consent
-
-The Gravity Project recognizes the need to appropriately manage privacy and consent related to a patient's social risk issues.  This IG assumes that each organization has appropriate mechanisms in place to secure SDOH information and will only release it with appropriate consent.  The [Office of the National Coordinator (ONC)](https://www.healthit.gov/) and [HL7 International (HL7)](http://www.hl7.org/index.cfm), and the [Office of Civil Rights (OCR)](https://www.hhs.gov/ocr/index.html) (this is not an exhaustive list) have active programs in place to determine what needs to be done to protect all personal information (including SDOH) from inappropriate disclosure and use.
-
-Sharing data with CBOs and CPs must be done in conformance with HIPAA requirements.  Although CBOs and CPs are not 'covered entities' under HIPAA,
-sharing with them can be facilitated by a Business Associate Agreement (BAA) between the covered entity (Providers, Payers and Clearing Houses) and the Business Associate.
-Entities covered under a BAA may be able to receive Protected Health Information (PHI) as part of the agreement without consent of the patient. However, they are required to observe the same limitations as covered entities with regard the protection and disclosure of PHI.  Patient consent would generally required for a provider to disclose a patient's PHI to a CBO or CP that is neither a covered entity nor covered by a BAA.  See the [Privacy and Security] section for more detailed requirements on protecting patient privacy.  CPOs and CPs should only be authorized to access patient data for those patients with which they have a relationship, and access to each patient's data is restricted to those data elements referenced directly or indirectly by the referred Task instance, as restricted by the [capability statement](CapabilityStatement-SDOHCC-ReferralSource.html) of the referral source.
-
- In this version of the IG, we are providing a [profile of the FHIR Consent resource][SDOHCCConsent]  that should be exchanged between a [Covered Entity](https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html) and a [Business Associate (BA)](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html) when the patient has authorized the BA to release their information to a non-HIPAA covered entity.  While this is not a complete treatment of the issues related to consent, it is a starting point to test the viability of exchanging consent information.  Future versions of this IG will incorporate additional technical standards to support the protection and authorized release of SDOH information as they are developed by the ONC, HL7, and OCR.
-
- The consent is referenced indirectly from the that is exchanged as part of the referral, and can be retrieved by the referral recipient through FHIR queries.   These relationships are shown in [Data Modeling Framework].
 
 
 ### Direct Referral
