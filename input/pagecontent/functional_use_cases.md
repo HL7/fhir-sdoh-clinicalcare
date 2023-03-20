@@ -35,11 +35,18 @@ The functional use cases in the table below describe the referral process initia
 {:.grid}
 
 
-### Disclosure of Protected Health Information
+### Patient Privacy and Consent
+
+The Gravity Project recognizes the need to appropriately manage privacy and consent related to a patient's social risk issues.  This IG assumes that each organization has appropriate mechanisms in place to secure SDOH information and will only release it with appropriate consent.  The [Office of the National Coordinator (ONC)](https://www.healthit.gov/) and [HL7 International (HL7)](http://www.hl7.org/index.cfm), and the [Office of Civil Rights (OCR)](https://www.hhs.gov/ocr/index.html) (this is not an exhaustive list) have active programs in place to determine what needs to be done to protect all personal information (including SDOH) from inappropriate disclosure and use.
 
 Sharing data with CBOs and CPs must be done in conformance with HIPAA requirements.  Although CBOs and CPs are not 'covered entities' under HIPAA,
 sharing with them can be facilitated by a Business Associate Agreement (BAA) between the covered entity (Providers, Payers and Clearing Houses) and the Business Associate.
-Entities covered under a BAA may be able to receive Protected Health Information (PHI) as part of the agreement without consent of the patient. However, they are required to observe the same limitations as covered entities with regard the protection and disclosure of PHI.  Patient consent would generally required for a provider to disclose a patient's PHI to a CBO or CP that is neither a covered entity nor covered by a BAA.  See the [Privacy and Security] section for more detailed requirements on protecting patient privacy.
+Entities covered under a BAA may be able to receive Protected Health Information (PHI) as part of the agreement without consent of the patient. However, they are required to observe the same limitations as covered entities with regard the protection and disclosure of PHI.  Patient consent would generally required for a provider to disclose a patient's PHI to a CBO or CP that is neither a covered entity nor covered by a BAA.  See the [Privacy and Security] section for more detailed requirements on protecting patient privacy.  CPOs and CPs should only be authorized to access patient data for those patients with which they have a relationship, and access to each patient's data is restricted to those data elements referenced directly or indirectly by the referred Task instance, as restricted by the [capability statement](CapabilityStatement-SDOHCC-ReferralSource.html) of the referral source.
+
+ In this version of the IG, we are providing a [profile of the FHIR Consent resource][SDOHCCConsent]  that should be exchanged between a [Covered Entity](https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html) and a [Business Associate (BA)](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html) when the patient has authorized the BA to release their information to a non-HIPAA covered entity.  While this is not a complete treatment of the issues related to consent, it is a starting point to test the viability of exchanging consent information.  Future versions of this IG will incorporate additional technical standards to support the protection and authorized release of SDOH information as they are developed by the ONC, HL7, and OCR.
+
+ The consent is referenced indirectly from the that is exchanged as part of the referral, and can be retrieved by the referral recipient through FHIR queries.   These relationships are shown in [Data Modeling Framework].
+
 
 ### Direct Referral
 <a name="directreferral"></a>
@@ -71,6 +78,9 @@ The CBO may not accept the referral or be unable to perform the requested servic
 | 14 | ![providericon] | Provider determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately | [SDOHCC Goal] |
 {:.grid}
 
+#### Direct Referral Detailed View
+
+
 ### Direct Referral Light
 In this use case a provider works with a patient using a standardized assessment tool to identify and prioritize social risks and needs (steps 1-3), and then refers the patient to a CBO for help addressing those needs (steps4-9a) a CBO to help address those needs.  The CBO provides the requested support to the patient and the updated information is shared with the referring provider.
 
@@ -99,6 +109,7 @@ Functionally, this use case is the same as the previous use case, except that th
 | 14 | ![providericon] | determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately | [SDOHCC Goal] |
 {:.grid .center  }
 
+#### Direct Referral Light - Detailed View
 
 ### Indirect Referral with Direct CBO
 <a name="indirectreferral"></a>
@@ -136,6 +147,8 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 | 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Survey Instrument Support] |
 | 14 | ![providericon] | determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately | [SDOHCC Goal] |
 {:.grid .center  }
+
+#### Indirect Referral With Direct CBO - Detailed View
 
 ###  Indirect Referral with Direct Light CBO
 <a name="directreferrallight"></a>
@@ -175,7 +188,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 | 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Survey Instrument Support] |
 | 14 | ![providericon] | determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately | [SDOHCC Goal] |
 {:.grid .center  }
-
+#### Indirect Referral With Direct Light CBO - Detailed View
 
 ### Patient Workflow
 <a name="patientworkflow"></a>

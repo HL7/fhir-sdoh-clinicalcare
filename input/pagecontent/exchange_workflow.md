@@ -20,23 +20,6 @@ There are a number of system to system interactions supported by this implementa
 <object data="OverallInteractions.svg" type="image/svg+xml"></object>
 <br/>
 
-### Workflow and Managing Consent
-
-The Gravity Project recognizes the need to appropriately manage privacy and consent related to a patient's social risk issues.  This IG assumes that each organization has appropriate mechanisms in place to secure SDOH information and will only release it with appropriate consent.  The [Office of the National Coordinator (ONC)](https://www.healthit.gov/) and [HL7 International (HL7)](http://www.hl7.org/index.cfm), and the [Office of Civil Rights (OCR)](https://www.hhs.gov/ocr/index.html) (this is not an exhaustive list) have active programs in place to determine what needs to be done to protect all personal information (including SDOH) from inappropriate disclosure and use.  In this version of the IG, we are providing a specification for a FHIR Consent resource that should be exchanged between a [Covered Entity](https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html) and a [Business Associate (BA)](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html) when the patient has authorized the BA to release their information to a non-HIPAA covered entity.  While this is not a complete treatment of the issues related to consent, it is a starting point to test the viability of exchanging consent information.  Future versions of this IG will incorporate additional technical standards to support the protection and authorized release of SDOH information as they are developed by the ONC, HL7, and OCR.  The diagram below illustrates the approach taken by this IG to exchange a Consent resource between a Covered Entity and its BA.
-
-The following diagram depicts one example of an exchange workflow supported by this version of the IG.
-
-1. The patient interacts with the provider and takes a risk survey that creates the specific health concerns defined by the survey and the patient's responses.
-2. The provider and patient determine which of the health concerns are valid, and "promote" the most important ones to the "problem list" to be addressed.  The patient and provider may establish goals and agree on the specific referrals/interventions/exchanges (not depicted in this diagram).  The patient provides consent to share information with the relevant organizations.
-3. The Provider's System provides (via a FHIR API) the ability to share information with:
-   *  Community Based Organization (CBO) -- share Task and ServiceRequest and allow the CBO to respond by updating the Task status and providing feedback on the service(s) performed (Procedure(s)).
-   *  Coordination Platform (CP) -- share Task and ServiceRequest and allow the CP to respond by updating the Task status and providing feedback on the service(s) performed (Procedure(s)).
-      	Note: Typically, the CP interacts with the Patient and CBOs to perform the requested referrals/services using a variety of methods.
-   *  Responsible Payer -- Provides access to health concerns (Problems) and Interventions to facilitate shared care planning for the covered member.
-
-<table><tr><td><img src="SDOHInteractionsDrawingConsentV5.jpg" /></td></tr></table>
-
-Each of the workflow diagrams below defines the resources that are exchanged and/or updated for the supported use cases. For additional workflow details see [Functional Use Cases](functional_use_cases.html). For enabling access see [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html).
 
 ### Closed Loop Referral
 
@@ -143,7 +126,7 @@ This implementation guide supports additional interactions with a patient/client
 
 ##### Overall Workflow
 
-<table><tr><td><img src="PatientClientExchange.jpg" /></td></tr></table>
+<object data="PatientClientExchange.svg" type="image/svg+xml"></object>
 
 The above patient / client interaction diagram indicates the high level exchanges between the Requester and the Patient / Client:
 
@@ -154,7 +137,7 @@ The above patient / client interaction diagram indicates the high level exchange
 
 ##### Detailed workflow for a single questionnaire
 
-<table><tr><td><img src="PatientQuestionnaire.jpg" /></td></tr></table>
+<object data="PatientQuestionnaire.svg" type="image/svg+xml"></object>
 
 
 ### Support for API Access to SDOH Information
