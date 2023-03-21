@@ -51,6 +51,25 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 * Questions =  \<Category-specific\> Screening Assessments Questions
 * Answers =  \<Category-specific\> Screening Assessments Answers Value Set
 
+| [`Condition.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | `Condition.code` ValueSet | ValueSet OID |
+| ------ | -------------------- | ------------------------- | ------------ |
+| educational-attainment  | Educational Attainment | [VSAC -  Less than high school education Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.103/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.103|
+| elder-abuse  | Elder Abuse | [VSAC -  Elder Abuse Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.63/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.63|
+| employment-status  | Employment Status | [VSAC -  Employment Status Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.42/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.42|
+| financial-insecurity  | Financial Insecurity | [VSAC -  Financial Insecurity Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.108/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.108|
+| food-insecurity  | Food Insecurity | [VSAC -  Food Insecurity Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.17/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.17|
+| health-insurance-coverage-status  | Health Insurance Coverage Status | [VSAC -  Health Insurance Coverage Status Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.148/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.148|
+| health-literacy  | Health Literacy | [VSAC -  Health Literacy Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.116/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.116|
+| homelessness  | Homelessness | [VSAC -  Homelessness Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.18/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.18|
+| housing-instability  | Housing Instability | [VSAC -  Housing Instability Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.24/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.24|
+| inadequate-housing  | Inadequate Housing | [VSAC -  Inadequate Housing Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.48/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.48|
+| intimate-partner-violence  | Intimate Partner Violence | [VSAC -  Intimate Partner Violence Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.84/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.84|
+| material-hardship  | Material Hardship | [VSAC -  Material Hardship Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.35/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.35|
+| medical-cost-burden  | Medical Cost Burden | [VSAC -  Medical Cost Burden Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.153/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.153|
+| social-connection  | Social Connection | [VSAC -  Social Connection Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.81/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.81|
+| stress  | Stress | [VSAC -  Stress Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.75/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.75|
+| transportation-insecurity  | Transportation Insecurity | [VSAC -  Transportation Insecurity Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.26/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.26|
+| veteran-status  | Veteran Status | [VSAC -  Veteran Status Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.78/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.78|
 
 
 <div>
@@ -66,11 +85,11 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td>Assessment Instrument Spreadsheets</td>
 		</tr>
 		<tr>
-			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-educational-attainment">educational-attainment</a></td>
 			<td rowspan="3">Observation.code</td>
 			<td><a href="broken.html">Questions and Panels</a></td>
 			<td>OID-1</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Food Insecurity Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Educational Attainment Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="broken.html">Panels</a></td>
@@ -84,6 +103,126 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td>Observation.value</td>
 			<td><a href="broken.html">Answers</a></td>
 			<td>OID-4</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-elder-abuse">elder-abuse</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Elder Abuse Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-employment-status">employment-status</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Employment Status Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-financial-insecurity">financial-insecurity</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Financial Insecurity Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-health-insurance-coverage-status">health-insurance-coverage-status</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Health Insurance Coverage Status Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-health-literacy">health-literacy</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Health Literacy Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Homelessness Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
 		</tr>
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></td>
@@ -106,6 +245,166 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td>OID-8</td>
 		</tr>
 		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-inadequate-housing">inadequate-housing</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Inadequate Housing Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-intimate-partner-violence">intimate-partner-violence</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Intimate Partner Violence Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-material-hardship">material-hardship</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Material Hardship Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-medical-cost-burden">medical-cost-burden</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Medical Cost Burden Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-social-connection">social-connection</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Social Connection Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-stress">stress</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Stress Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-transportation-insecurity">transportation-insecurity</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Transportation Insecurity Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-veteran-status">veteran-status</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Veteran Status Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+				<tr>
 			<td><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified">sdoh-category-unspecified</a></td>
 			<td colspan="5" rowspan="1">Category-specific value sets not applicable</td>
 		</tr>
