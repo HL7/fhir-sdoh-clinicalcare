@@ -7,7 +7,7 @@ Entities covered under a BAA may be able to receive Protected Health Information
 
  In this version of the IG, we are providing a [profile of the FHIR Consent resource][SDOHCCConsent]  that should be exchanged between a [Covered Entity](https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html) and a [Business Associate (BA)](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html) when the patient has authorized the BA to release their information to a non-HIPAA covered entity.  While this is not a complete treatment of the issues related to consent, it is a starting point to test the viability of exchanging consent information.  Future versions of this IG will incorporate additional technical standards to support the protection and authorized release of SDOH information as they are developed by the ONC, HL7, and OCR.
 
- The consent is referenced indirectly from the that is exchanged as part of the referral, and can be retrieved by the referral recipient through FHIR queries.   These relationships are shown in [Data Modeling Framework].
+ The consent is referenced indirectly from the [SDOHCC Task For Referral Management] that is exchanged as part of the referral, and can be retrieved by the referral recipient through FHIR queries.   These relationships are shown in [Data Modeling Framework].
 
 ### Statutes, Regulations, and Guiding Principles
 All implementations of the SDOH ClinicalCare FHIR Implementation Guide (IG)
