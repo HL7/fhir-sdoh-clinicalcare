@@ -53,7 +53,6 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 
 
 <div>
-<body class="vsc-initialized">
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:1000px;">
 	<caption>Category-specific Preferred Value Sets and Assessment Instrument Spreadsheets</caption>
 	<tbody>
@@ -390,10 +389,10 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 		</tr>
 	</tbody>
 </table>
-</body>
 </div>
 
 <br>&nbsp;<br />
+<div>
 Of note, Grouper VSAC value sets containing the members of all the category-specific value sets for Observation.code and Observation.value are available here:
 
 * For Observation.code:
@@ -401,5 +400,5 @@ Of note, Grouper VSAC value sets containing the members of all the category-spec
   * [Social Determinants of Health Screening Assessments Questions] Value Set
   * [Social Determinants of Health Screening Assessments] Value Set
 * For Observation.value: [Social Determinants of Health Screening Assessments Answers] Value Set
-
+</div>
 {% include markdown-link-references.md %}
