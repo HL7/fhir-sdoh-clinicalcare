@@ -36,7 +36,7 @@ For SDOHCC Observation Screening Response, this is the complete set of preferred
 
 #### Guidance for preferred value sets for Observation.value
 
- \<Category-specific\> Screening Assessments Answers Value Set – Contains LOINC answer codes for the preferred, category-specific questions.
+ **\<Category-specific\> Screening Assessments** Answers Value Set – Contains LOINC answer codes for the preferred, category-specific questions.
 
 For an SDOHCC Observation Screening Response that represents a question and a coded answer, Observation.code SHOULD be a LOINC question code from the  \<Category-specific\> Screening Assessments Questions Value Set and Observation.value SHOULD be a LOINC answer code from this value set.
 
@@ -393,5 +393,12 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 </body>
 </div>
 
+Of note, Grouper VSAC value sets containing the members of all the category-specific value sets for Observation.code and Observation.value are available here:
+
+* For Observation.code:
+  * [Social Determinants of Health Screening Assessments And Questions] Value Set
+  * [Social Determinants of Health Screening Assessments Questions] Value Set
+  * [Social Determinants of Health Screening Assessments] Value Set
+* For Observation.value: [Social Determinants of Health Screening Assessments Answers] Value Set
 
 {% include markdown-link-references.md %}
