@@ -143,6 +143,7 @@ Functionally, this use case is the same as the previous use case, except that th
 {:.grid .center  }
 
 #### Direct Referral Light - Detailed View
+{% include img.html img="DetailedDirectReferralLight.svg" caption="Figure 3: Detailed Direct Referral Light" %}
 
 ### Indirect Referral with Direct CBO
 <a name="indirectreferral"></a>
@@ -182,6 +183,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 {:.grid .center  }
 
 #### Indirect Referral With Direct CBO - Detailed View
+{% include img.html img="DetailedIndirectReferral.svg" caption="Figure 3: Detailed Indirect Referral" %}
 
 ###  Indirect Referral with Direct Light CBO
 <a name="directreferrallight"></a>
@@ -221,7 +223,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 | 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Survey Instrument Support] |
 | 14 | ![providericon] | determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately | [SDOHCC Goal] |
 {:.grid .center  }
-#### Indirect Referral With Direct Light CBO - Detailed View
+
 
 ### Patient Workflow
 <a name="patientworkflow"></a>
