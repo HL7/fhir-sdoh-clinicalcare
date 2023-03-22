@@ -30,7 +30,7 @@ The actors in the workflows are described in the table below.   The graphical ic
 | ![patientapp] FHIR-enabled Patient Application | A patient application that can connect to FHIR servers |
 {:.grid}
 
-The figure below shows thesystem to system interactions supported by this implementation guide.  These include:
+<!-- The figure below shows thesystem to system interactions supported by this implementation guide.  These include:
 
 1. referrals via an intermediary (or indirect referrals) that may include interactions with multiple service performers,
 2. direct and direct light (where the interaction is with an application) referrals,
@@ -39,7 +39,7 @@ The figure below shows thesystem to system interactions supported by this implem
 
 <object data="OverallInteractions.svg" type="image/svg+xml"></object>
 <br/>
-The workflow and associated exchange patters for these interactions will now be described, first at a high level, and then in detail.
+The workflow and associated exchange patters for these interactions will now be described, first at a high level, and then in detail. -->
 
 ### Overview
 The functional use cases in the table below describe the referral process initiated by a provider, or other healthcare actor, and a request referral recipient, both directly and indirectly via an intermediary.   For each use case the capabilities or limitations of the actor are described.   The table links to the functional use case and the associated detailed technical exchange workflow.
@@ -86,28 +86,32 @@ The CBO may not accept the referral or be unable to perform the requested servic
 {:.grid}
 
 #### Direct Referral Detailed View
+The following figure shows the FHIR exchanges between the referral source and target.
+For each numbered exchange, the details of the data elements exchanged, and the FHIR request and response are provided.
+
 {% include img.html img="DetailedDirectReferral.svg" caption="Figure 2: Detailed Direct Referral" %}
 
 1. Post [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html)
-  * Posted Task
-  * {% include examplebutton.html example="Post_referral_task" b_title = "Click on Here To See Search Example" %}
+  * [FHIR Transaction](FHIR_API_Examples.html#post-task-1)
 2. Post Subscription
-  * {% include examplebutton.html example="Post_referral_task" b_title = "Click on Here To See Search Example" %}
 3. Get Service Request and Referenced Resources
   * [ServiceRequest](ServiceRequest-SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample.html), [Consent](Consent-SDOHCC-ConsentInformationDisclosureExample.html), [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html)
-  * {% include examplebutton.html example="Post_referral_task" b_title = "Click on Here To See Search Example" %}
+  * [FHIR Transaction](FHIR_API_Examples.html#post-task-1)
 4. Send Notification
 5. Get Task
   * Same as initial task, with status changed
+  * [FHIR Transaction](FHIR_API_Examples.html#post-task-1)
 6. Send Notification
 7. Get Task
   * Same as initial task, with status changed
+  * [FHIR Transaction](FHIR_API_Examples.html#post-task-1)
 8. Send Notification
 9. Get Task
   * Same as initial task, with status changed
+  * [FHIR Transaction](FHIR_API_Examples.html#post-task-1)
 10. Get Procedures
-  * Procedures returned
-  * {% include examplebutton.html example="Post_referral_task" b_title = "Click on Here To See Search Example" %}
+  * Procedures returned: [Food Provided](SDOHCC-ProcedureProvisionOfFoodExample.html), [Application Assistance](SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample.html)
+  * [FHIR Transaction](FHIR_API_Examples.html#post-task-1)
 
 
 ### Direct Referral Light
@@ -237,5 +241,34 @@ These interactions use a combination of FHIR-based interactions using [SDOHCCTas
 | I8a (optional) | ![cboicon] | CBO communicates with patient via their application to schedule appointments, collect additional information, etc. |  |
 | I10 | ![cpicon] | CP communicates with patient via their application to close loop on service(s) delivered by CBO |  |
 {:.grid}
+
+#### Patient Interactions
+<a name="patient-exchange">
+This implementation guide supports additional interactions with a patient/client application (on a smartphone or portal).  These interactions include providing the patient/client with:
+
+1. a copy of the service request sent to the service performer
+2. contact information for the service performer (where the patient/client does not want the service performer to initiate contact)
+3. any required patient instructions
+4. the ability to cancel the service and indicate the reason via a short questionnaire
+5. the ability to complete a questionnaire or "form" to collect information regarding
+   - social risks (risk survey)
+   - service qualification or application
+6. information regarding available services (usually as a PDF)
+7. closing the loop on services delivered (e.g., providing patient outcomes)
+
+##### Overall Workflow
+
+<object data="PatientClientExchange.svg" type="image/svg+xml"></object>
+
+The above patient / client interaction diagram indicates the high level exchanges between the Requester and the Patient / Client:
+
+1. providing referral information (service requested, contact information, instructions) to the patient's application
+2. enable a patient to use their application to cancel the service
+3. questionnaire retrieved by the patient's application from the referring entity, completed and returned,  to determine the status of a service that may take an extended amount of time (e.g., prior to the patient meeting with the referring provider)
+4. questionnaire retrieved by the patient's application from the referring entity, completed and returned, to close the loop with the patient on completion of the service to determine the patient's view their interaction with the CBO / performer and the ability of the service provided to meet their needs
+
+##### Detailed workflow for a single questionnaire
+
+<object data="PatientQuestionnaire.svg" type="image/svg+xml"></object>
 
 {% include markdown-link-references.md %}
