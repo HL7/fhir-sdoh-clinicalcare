@@ -143,6 +143,8 @@ Functionally, this use case is the same as the previous use case, except that th
 {:.grid .center  }
 
 #### Direct Referral Light - Detailed View
+The referral occurs between the Provider/Requester and the CBO/Performer where the CBO/Performer does not have a FHIR API (FHIR Server or FHIR Façade).   The exchange with the Performer is initiated via an email with a secure link to the Provider/Requester API that can be used by an application available to the CBO/Performer to communicate with the Provider/Requester using RESTful exchanges that read, create, and update resources via the Provider/Requester API.
+
 {% include img.html img="DetailedDirectReferralLight.svg" caption="Figure 3: Detailed Direct Referral Light" %}
 
 ### Indirect Referral with Direct CBO
@@ -183,6 +185,16 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 {:.grid .center  }
 
 #### Indirect Referral With Direct CBO - Detailed View
+The referral occurs in two separate interactions. The first is between the Referral Source and the Intermediary and the second is between the Intermediary and the Referral Performer.
+
+This IG assumes that, in an Indirect Referral, the Referral Performer does not have the ability to communicate directly with the Referral Source.  Therefore, the intermediary SHALL support the following.
+
+1. Create a local copy of all of the relevant referenced resources from the Referral Source
+2. Create a Task to be Posted to the Referral Performer that references the Referral Source Task via Task.partOf
+3. Create a ServiceRequest with ServiceRequest.intent value filler-order and ServiceRequest.basedOn references the original Referral Source ServiceRequest
+4. Since local copies of the referenced resources are maintained by the Intermediary, the intermediary must periodically query the Referral Source for updates to the referenced resources
+5. There are two version of the [Indirect Referral] -- one where the CBO / Performer has a FHIR API (e.g. [Direct Referral]) and one where the CBO / Performer uses a FHIR enabled application (e.g. [Direct Referral Light])
+
 {% include img.html img="DetailedIndirectReferral.svg" caption="Figure 3: Detailed Indirect Referral" %}
 
 ###  Indirect Referral with Direct Light CBO

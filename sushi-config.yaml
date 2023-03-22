@@ -85,8 +85,8 @@ pages:
     title: STU2.1 Publication Changes
   ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.md:
     title: SDOH Clinical Care ImplementationGuide Resource
-  fulloutline.md:
-    title: Outline STU2.1
+  FHIR_API_Examples.md:
+    title: FHIR API Examples
 
 
 groups:
@@ -245,6 +245,7 @@ menu:
     Code Systems: artifacts.html#code-systems
     Examples: artifacts.html#examples
     Complete Listing: artifacts.html
+    FHIR API Examples: FHIR_API_Examples.html
   Specifications:
     Privacy and Security: privacy_and_security.html
     Must Support and Missing Data: mustsupport_and_missing_data.html
