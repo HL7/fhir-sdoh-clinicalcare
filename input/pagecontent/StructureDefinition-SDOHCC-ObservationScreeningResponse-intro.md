@@ -10,13 +10,13 @@ In the future, to promote interoperability, a single StructureMap instance shoul
 
 Rather than offer separate SDOHCC Observation Screening Response profiles for each SDOH category (domain) covered in this IG (e.g., food insecurity, transportation insecurity, etc.), this profile supports any SDOH category. The minimum required value set bindings for elements are specified in the profile. Additionally, the Table below provides Gravity-vetted, preferred value sets for this profile. Where a preferred value set contains a code to describe a needed concept, servers SHOULD use that code.
 
-#### General guidance for preferred value sets for SDOHCC Observation Screening Response
+#### General Guidance For Preferred Value Sets For SDOHCC Observation Screening Response
 
 Codes in the preferred value sets are from LOINC-encoded assessment instruments that have been vetted as face-valid by the Gravity Project. The [Social Determinants of Health Screening Assessments](broken.html) Value Set, hosted in the NIH Value Set Authority Center ([VSAC]), contains all assessment instruments from which Gravity has chosen questions. For each Gravity-vetted assessment instrument, the questions are also vetted and only those that also meet Gravity criteria are included in the preferred value sets.
 
 For the Observation.category slice with binding to [SDOHCC ValueSet SDOH Category], the category-specific code selected (first column Table below) determines the preferred, category-specific value sets for Observation.code and Observation.value which are hosted in VSAC.
 
-#### Guidance for preferred value sets for Observation.code
+#### Guidance For Preferred Value Sets For Observation.code
 
 In the Value Set names below,  \<Category-specific\> is a placeholder for a specific SDOH category (e.g., Food Insecurity).
 
@@ -34,9 +34,9 @@ Instead, an Observation Grouping (via Observation.hasMember) references all Obse
 
 For SDOHCC Observation Screening Response, this is the complete set of preferred values allowed for Observation.code for a category-specific Observation and can be used to validate that Observation.code is from a preferred, category-specific value set.
 
-#### Guidance for preferred value sets for Observation.value
+#### Guidance For Preferred Value Sets For Observation.value
 
- **\<Category-specific\> Screening Assessments** Answers Value Set – Contains LOINC answer codes for the preferred, category-specific questions.
+ **\<Category-specific\> Screening Assessments Answers** Value Set – Contains LOINC answer codes for the preferred, category-specific questions.
 
 For an SDOHCC Observation Screening Response that represents a question and a coded answer, Observation.code SHOULD be a LOINC question code from the  \<Category-specific\> Screening Assessments Questions Value Set and Observation.value SHOULD be a LOINC answer code from this value set.
 
@@ -393,6 +393,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 </body>
 </div>
 
+<br>
 Of note, Grouper VSAC value sets containing the members of all the category-specific value sets for Observation.code and Observation.value are available here:
 
 * For Observation.code:
