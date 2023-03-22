@@ -393,7 +393,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 </body>
 </div>
 
-<br>
+<br>&nbsp;<br />
 Of note, Grouper VSAC value sets containing the members of all the category-specific value sets for Observation.code and Observation.value are available here:
 
 * For Observation.code:
