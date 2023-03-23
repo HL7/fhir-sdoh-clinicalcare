@@ -11,7 +11,7 @@ The IG supports the following use cases:
 *   Referring patients to Community Based Organizations (CBOs) to address SDOH needs via an electronic workflow.  The referral framework includes support for intermediary organizations to manage service delivery, closed loop feedback to the ordering clinician and direct engagement with the patient and their care-givers.
 * 	Identifying cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer)
 
-{% include img.html img="ConceptualFramework.png" caption="Figure 1: Conceptual Framework for SDOH Clinical Care" %}
+{% include img-med.html img="ConceptualFramework.png" caption="Figure 1: Conceptual Framework for SDOH Clinical Care" %}
 
 The activities supported by this IG include (see [Clinical Scope](sdoh_clinical_care_scope.html) for more details)
   - Screening: This refers to activities where SDH data from individual patients are initially captured, whether through a self-administered, provider-administered, or health plan-administered questionnaire. These activities may also be repeated at certain intervals to monitor changes in social risks.
