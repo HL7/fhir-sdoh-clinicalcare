@@ -61,8 +61,8 @@ pages:
     title: Referral Workflow
   checking_task_status.md:
     title: Checking Task Status
-  synchronizing_applications_with_api_data_sources.md:
-    title: Synchronizing Applications With API Data Sources
+  connecting_applications_with_api_data_sources.md:
+    title: Connecting Applications With API Data Sources
   artifacts.html:
     title: Artifacts Index
   privacy_and_security.md:
@@ -234,7 +234,7 @@ menu:
     Mapping Instructions: mapping_instructions.html
     Referral Workflow:  referral_workflow.html
     Checking Task Status: checking_task_status.html
-    Synchronizing Applications With API Data Sources: synchronizing_applications_with_api_data_sources.html
+    Connecting Applications With API Data Sources: connecting_applications_with_api_data_sources.html
   FHIR Artifacts and Examples:
     Capability Statements: artifacts.html#capability-statements
     Profiles: artifacts.html#profiles

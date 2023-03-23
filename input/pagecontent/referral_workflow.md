@@ -122,7 +122,6 @@ The drawing is followed by a key that describes each labeled interaction.   The 
 <object data="FunctionalUseCaseFlowDirectLightReferral3.svg" type="image/svg+xml"></object>
 <br/>
 
-
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
 | 1 | ![patienticon] | Patient takes standardized assessment tool to identify social risks and needs | [Survey Instrument Support] |
@@ -212,7 +211,6 @@ This IG assumes that, in an Indirect Referral, the Referral Performer does not h
 {% include img.html img="DetailedIndirectReferral.svg" caption="Figure 3: Detailed Indirect Referral" %}
 
 ###  Indirect Referral with Direct Light CBO
-<a name="directreferrallight"></a>
 
 Applies to Providers and Payers as the referral requester, and patient is assessed by a provider and referred to a CP. CP refers to a CBO to deliver the service. The Provider, CP, and CBO are all equipped with FHIR servers.  The patient is equipped with a FHIR-enabled application.
 
