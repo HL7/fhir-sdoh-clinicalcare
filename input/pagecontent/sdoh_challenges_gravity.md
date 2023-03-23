@@ -4,7 +4,7 @@ The influence of social determinants on outcomes is increasingly recognized in e
 
 The growing awareness around SDOH has contributed to efforts to address actionable social risk factors through the health care delivery system.  Recommendations from national groups, including the [American Academy of Pediatrics](https://www.aap.org/), [American Academy of Family Physicians](https://www.aafp.org/), [Agency for Healthcare Research and Quality](https://www.ahrq.gov/), [National Quality Forum (NQF)](https://www.qualityforum.org/), and [Institute for Health Care Improvement](http://www.ihi.org/) underscore the various roles the health care system could play in helping to identify and address patients' social risks and needs.
 
-{% include img-small.html img="Whatgoesintoyourhealth.jpg" caption="Figure 1: What goes into your health? An illustration of the impact health care has on a person’s health versus non-healthcare factors." %}
+{% include img-med.html img="Whatgoesintoyourhealth.jpg" caption="Figure 1: What goes into your health? An illustration of the impact health care has on a person’s health versus non-healthcare factors." %}
 
 There is strong evidence that social risks negatively impact health outcomes and addressing social risks improved health outcomes.  For example:
 * Food insecurity correlates with higher levels of diabetes, hypertension, and heart failure
