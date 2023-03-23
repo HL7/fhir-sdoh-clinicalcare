@@ -51,7 +51,7 @@ The functional use cases in the table below describe the referral process initia
 | [Direct Referral (light)](functional_use_cases.html#directreferrallight) | A “light” version of the Direct Referral with the exception that the performing entity (e.g., CBO) does not have FHIR API capability but has an application that can access the referring entity’s API  | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
 | [Indirect Referral](functional_use_cases.html#indirectreferral) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., a CBO) that is mediated by a referring intermediary (e.g., a CP) where all entities have FHIR APIs to facilitate exchange  | ![providericon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] |
 | [Indirect Referral (light)](functional_use_cases.html#indirectreferrallight) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., a CBO) that is mediated by a referring intermediary (e.g., a CP) where the referring entity and referring intermediary have FHIR APIs, and the performing entity does not have FHIR API capability but has an application that can access the referring entity’s API | ![providericon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] |
-| [Patient Coordination](functional_use_cases.html#patientworkflow)| A patient application may, optionally, communicate directly with any entity that supports a FHIR API and provides a mechanism for secure exchange | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
+| [Patient Coordination](functional_use_cases.html#patientcoordinationworkflow)| A patient application may, optionally, communicate directly with any entity that supports a FHIR API and provides a mechanism for secure exchange | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
 {:.grid}
 
 
@@ -65,7 +65,11 @@ The Provider and the CBO have FHIR servers.  The Patient has a FHIR-enabled pati
 The example assumes that the Provider has an existing relationship with the CBO.
 The CBO may not accept the referral or be unable to perform the requested service.
 
-{% include img.html img="FunctionalUseCaseFlowDirectReferral3.svg" caption="Figure 1: Annotated Flow Diagram for Direct Referral" %}
+The drawing is followed by a key that describes each labeled interaction.   The section of the drawing focused on the FHIR-based exchanges specified by this IG are highlighted with a blue dashed rectangle.  The details of the FHIR-based exchanges in that box are provided in the [following section](functional_use_cases.html#direct-referral-detailed-view).
+
+<object data="FunctionalUseCaseFlowDirectReferral3.svg" type="image/svg+xml"></object>
+<br/>
+
 
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
@@ -106,7 +110,6 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 {:.grid}
 
 
-
 ### Direct Referral Light
 In this use case a provider works with a patient using a standardized assessment tool to identify and prioritize social risks and needs (steps 1-3), and then refers the patient to a CBO for help addressing those needs (steps4-9a) a CBO to help address those needs.  The CBO provides the requested support to the patient and the updated information is shared with the referring provider.
 
@@ -114,8 +117,11 @@ The Provider has a FHIR server. The CBO has a FHIR-enabled application.  The Pat
 
 Functionally, this use case is the same as the previous use case, except that the CBO has a FHIR-enabled application, but does not support a FHIR API.  As a result, the provider can't push information to the CBO, but rather tha CBO needs to pull information from the provider.    At the conclusion of the referral, the CBO POSTS needed information to the Provider FHIR server (e.g., Procedures) and updates the status and the linked resources of the Task.
 
+The drawing is followed by a key that describes each labeled interaction.   The section of the drawing focused on the FHIR-based exchanges specified by this IG are highlighted with a blue dashed rectangle.  The details of the FHIR-based exchanges in that box are provided in the [following section](functional_use_cases.html#direct-referral-detailed-view).
 
-{% include img.html img="FunctionalUseCaseFlowDirectLightReferral3.svg" caption="Figure 2: Annotated Flow Diagram for Direct Referral Light" %}
+<object data="FunctionalUseCaseFlowDirectLightReferral3.svg" type="image/svg+xml"></object>
+<br/>
+
 
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
@@ -138,7 +144,22 @@ Functionally, this use case is the same as the previous use case, except that th
 #### Direct Referral Light - Detailed View
 The referral occurs between the Provider/Requester and the CBO/Performer where the CBO/Performer does not have a FHIR API (FHIR Server or FHIR Façade).   The exchange with the Performer is initiated via an email with a secure link to the Provider/Requester API that can be used by an application available to the CBO/Performer to communicate with the Provider/Requester using RESTful exchanges that read, create, and update resources via the Provider/Requester API.
 
+The following figure shows the FHIR exchanges between the referral source and target.
+For each numbered exchange, the details of the data elements exchanged, and the FHIR request and response are provided.
+
 {% include img.html img="DetailedDirectReferralLight.svg" caption="Figure 3: Detailed Direct Referral Light" %}
+
+| #    | From |  Description | Instances involved | FHIR Transaction |
+| ===  | ==== | ============ | ================== | ================ |
+| 1 |  Source | Send e-mail with Secure Link |  | e-mail |
+| 2 |  Target | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) | [Transaction 1](FHIR_API_Examples.html#post-task-1) |
+| 3 |  Target  | Get Service Request and Referenced Resources | [ServiceRequest](ServiceRequest-SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample.html), [Consent](Consent-SDOHCC-ConsentInformationDisclosureExample.html), [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) | [Transaction 3](FHIR_API_Examples.html#post-task-1) |
+| 4 |  Target | Update Task (accepted) | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 4](FHIR_API_Examples.html#post-task-1) |
+| 5 |  Target | Update Task (in-progress) | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 5](FHIR_API_Examples.html#post-task-1) |
+| 6 |  Target | Post Procedures | [Food Provided](SDOHCC-ProcedureProvisionOfFoodExample.html), [Application Assistance](SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample.html) | [Transaction 6](FHIR_API_Examples.html#post-task-1) |
+| 7 |  Source | Update Task (completed) | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 7](FHIR_API_Examples.html#post-task-1) |
+(FHIR_API_Examples.html#post-task-1) |
+{:.grid}
 
 ### Indirect Referral with Direct CBO
 <a name="indirectreferral"></a>
@@ -236,51 +257,39 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 3. The above system flows do not define the handling of all possible scenarios. Exchange scenarios may include refusing the referral, canceling the referral by either party, and error conditions that may occur when using RESTful exchanges.  It is up to each party to follow the current best practice in managing the state of the referral.
 4. The Provider / Requester SHOULD set the Task.status to "requested" until it receives a valid HTTPS response indicating that the Task was received at which point it SHOULD set the Task.status to "received".
 
-### Patient Workflow
-<a name="patientworkflow"></a>
+### Patient Coordination Workflow
 
-The table below collects the patient interactions from the use cases described above.
-
-Some limitations on this use case are that the Patient may not have access to an appropriate application or have completed process to register and authenticate with the API(s).
-The Patient may not be willing or able to respond to the questionnaires.
-
-These interactions use a combination of FHIR-based interactions using [SDOHCCTaskForPatient], [Questionnaire] [Questionnaire Response],[SDOHCC Location] and [SDOHCC HealthCareService] as well as portal-based, phone and in-person interactions.
-
-| Step | Actors | Description| References|
-| -----| ------ | ---------- | --------- |
-| 7 (optional)| ![providericon] | Provider makes information regarding the referral available to the patient’s application |  |
-| 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application |  |
-| I3 (optional) | ![cpicon], ![patienticon] | CP communicates with the patient via their application to schedule appointments, collect additional information, etc. This exchange might not occur electronically| |
-| I8a (optional) | ![cboicon] | CBO communicates with patient via their application to schedule appointments, collect additional information, etc. |  |
-| I10 | ![cpicon] | CP communicates with patient via their application to close loop on service(s) delivered by CBO |  |
-{:.grid}
-
-#### Patient Interactions
 This implementation guide supports additional interactions with a patient/client application (on a smartphone or portal).  These interactions include providing the patient/client with:
 
-1. a copy of the service request sent to the service performer
-2. contact information for the service performer (where the patient/client does not want the service performer to initiate contact)
-3. any required patient instructions
-4. the ability to cancel the service and indicate the reason via a short questionnaire
-5. the ability to complete a questionnaire or "form" to collect information regarding
-   - social risks (risk survey)
-   - service qualification or application
-6. information regarding available services (usually as a PDF)
-7. closing the loop on services delivered (e.g., providing patient outcomes)
+1. Information relating to a specific service referral
+  * service requested
+  * contact information for the service performer (where the patient/client does not want the service performer to initiate contact)
+  * any required patient instructions
+2. General information regarding available services (usually as a PDF)
+3. Completion of a questionnaire (form) to:
+  * assess social risks (risk survey)
+  * inform service qualification or application
+  * indicate reason for cancellation
+  * determine the patient's view their interaction with the CBO/performer and the ability of the service provided to meet their needs
+4. the ability to cancel the service
+5. the ability to close the loop on services delivered (e.g., providing patient outcomes)
 
-##### Overall Workflow
 
-<object data="PatientClientExchange.svg" type="image/svg+xml"></object>
-
-The above patient/client interaction diagram indicates the high level exchanges between the Requester and the Patient / Client:
-
-1. providing referral information (service requested, contact information, instructions) to the patient's application
-2. enable a patient to use their application to cancel the service
-3. questionnaire retrieved by the patient's application from the referring entity, completed and returned,  to determine the status of a service that may take an extended amount of time (e.g., prior to the patient meeting with the referring provider)
-4. questionnaire retrieved by the patient's application from the referring entity, completed and returned, to close the loop with the patient on completion of the service to determine the patient's view their interaction with the CBO / performer and the ability of the service provided to meet their needs
-
-##### Detailed workflow for a single questionnaire
+##### Patient Completion of Questionnaire -- Detailed View
+Here we provided a detailed view of an interaction between a patient application and a requester (Provider, CBO or CPP) for the completion of a questionnaire.
 
 <object data="PatientQuestionnaire.svg" type="image/svg+xml"></object>
+<br>
 
+| #    | From |  Description | Instances involved | FHIR Transaction |
+| ===  | ==== | ============ | ================== | ================ |
+| 1 |  Requester | Send e-mail with Secure Link |  | e-mail |
+| 2 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) | [Transaction 1](FHIR_API_Examples.html#post-task-1) |
+| 3 |  Patient  | Get Questionnaire | [Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html) | [Transaction 3](FHIR_API_Examples.html#post-task-1) |
+| 4 |  Patient | Update Task (accepted) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 4](FHIR_API_Examples.html#post-task-1) |
+| 5 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 5](FHIR_API_Examples.html#post-task-1) |
+| 6 |  Patient | Post Questionnaire Response | [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) | [Transaction 6](FHIR_API_Examples.html#post-task-1) |
+| 7 |  Source | Update Task (completed) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 7](FHIR_API_Examples.html#post-task-1) |
+(FHIR_API_Examples.html#post-task-1) |
+{:.grid}
 {% include markdown-link-references.md %}
