@@ -27,7 +27,7 @@ Coded SDOH content is captured across core health care activities: screening/ass
 In the drawing above, each of the actors supports a set of roles that are described here:
 <br>
 
-<div>
+
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:1000px;">
 <thead>
 <tr>
@@ -83,7 +83,6 @@ In the drawing above, each of the actors supports a set of roles that are descri
 </tr>
 </tbody>
 </table>
-</div>
 
 <br>
 ### Scope of Interactions
