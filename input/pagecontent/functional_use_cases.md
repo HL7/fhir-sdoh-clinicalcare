@@ -45,13 +45,13 @@ The workflow and associated exchange patters for these interactions will now be 
 The functional use cases in the table below describe the referral process initiated by a provider, or other healthcare actor, and a request referral recipient, both directly and indirectly via an intermediary.   For each use case the capabilities or limitations of the actor are described.   The table links to the functional use case and the associated detailed technical exchange workflow.
 
 
-| Functional Use Case |  Description           | Actors | Exchange Workflow|
-| ------------------------- | ------------------------------------ | ---------------- | ---------------- |
-| [Direct Referral](functional_use_cases.html#directreferral) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., CBO) where both entities have FHIR APIs to facilitate exchange and a referring intermediary (e.g., CP) is not involved in the referral | ![providericon], ![ccicon], ![patienticon], ![cboicon] |   [Direct Referral Exchange Workflow]     |
-| [Direct Referral (light)](functional_use_cases.html#directreferrallight) | A “light” version of the Direct Referral with the exception that the performing entity (e.g., CBO) does not have FHIR API capability but has an application that can access the referring entity’s API  | ![providericon], ![patienticon], ![ccicon], ![cboicon]  | [Direct Referral (light) Exchange Workflow]  |
-| [Indirect Referral](functional_use_cases.html#indirectreferral) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., a CBO) that is mediated by a referring intermediary (e.g., a CP) where all entities have FHIR APIs to facilitate exchange  | ![providericon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] | [Indirect Referral Exchange Workflow]    |
-| [Indirect Referral (light)](functional_use_cases.html#indirectreferrallight) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., a CBO) that is mediated by a referring intermediary (e.g., a CP) where the referring entity and referring intermediary have FHIR APIs, and the performing entity does not have FHIR API capability but has an application that can access the referring entity’s API | ![providericon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] | [Indirect Referral Light Exchange Workflow]        |
-| [Patient Coordination](functional_use_cases.html#patientworkflow)| A patient application may, optionally, communicate directly with any entity that supports a FHIR API and provides a mechanism for secure exchange | ![providericon], ![patienticon], ![ccicon], ![cboicon]  | [Patient Workflow Exchange] |
+| Functional Use Case |  Description           | Actors |
+| ------------------------- | ------------------------------------ | ---------------- |
+| [Direct Referral](functional_use_cases.html#directreferral) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., CBO) where both entities have FHIR APIs to facilitate exchange and a referring intermediary (e.g., CP) is not involved in the referral | ![providericon], ![ccicon], ![patienticon], ![cboicon] |
+| [Direct Referral (light)](functional_use_cases.html#directreferrallight) | A “light” version of the Direct Referral with the exception that the performing entity (e.g., CBO) does not have FHIR API capability but has an application that can access the referring entity’s API  | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
+| [Indirect Referral](functional_use_cases.html#indirectreferral) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., a CBO) that is mediated by a referring intermediary (e.g., a CP) where all entities have FHIR APIs to facilitate exchange  | ![providericon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] |
+| [Indirect Referral (light)](functional_use_cases.html#indirectreferrallight) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., a CBO) that is mediated by a referring intermediary (e.g., a CP) where the referring entity and referring intermediary have FHIR APIs, and the performing entity does not have FHIR API capability but has an application that can access the referring entity’s API | ![providericon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] |
+| [Patient Coordination](functional_use_cases.html#patientworkflow)| A patient application may, optionally, communicate directly with any entity that supports a FHIR API and provides a mechanism for secure exchange | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
 {:.grid}
 
 
@@ -91,27 +91,20 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 
 {% include img.html img="DetailedDirectReferral.svg" caption="Figure 2: Detailed Direct Referral" %}
 
-1. Post [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html)
-  * [FHIR Transaction](FHIR_API_Examples.html#post-task-1)
-2. Post Subscription
-3. Get Service Request and Referenced Resources
-  * [ServiceRequest](ServiceRequest-SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample.html), [Consent](Consent-SDOHCC-ConsentInformationDisclosureExample.html), [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html)
-  * [FHIR Transaction](FHIR_API_Examples.html#post-task-1)
-4. Send Notification
-5. Get Task
-  * Same as initial task, with status changed
-  * [FHIR Transaction](FHIR_API_Examples.html#post-task-1)
-6. Send Notification
-7. Get Task
-  * Same as initial task, with status changed
-  * [FHIR Transaction](FHIR_API_Examples.html#post-task-1)
-8. Send Notification
-9. Get Task
-  * Same as initial task, with status changed
-  * [FHIR Transaction](FHIR_API_Examples.html#post-task-1)
-10. Get Procedures
-  * Procedures returned: [Food Provided](SDOHCC-ProcedureProvisionOfFoodExample.html), [Application Assistance](SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample.html)
-  * [FHIR Transaction](FHIR_API_Examples.html#post-task-1)
+| #    | From |  Description | Instances involved | FHIR Transaction |
+| ===  | ==== | ============ | ================== | ================ |
+| 1 |  Source | Post Referral Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) | [Transaction 1](FHIR_API_Examples.html#post-task-1) |
+| 2 |  Source | Post Subscription | [Subscription](broken.html) | [Transaction 2](broken.html) |
+| 3 |  Target  | Get Service Request and Referenced Resources | [ServiceRequest](ServiceRequest-SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample.html), [Consent](Consent-SDOHCC-ConsentInformationDisclosureExample.html), [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) | [Transaction 3](FHIR_API_Examples.html#post-task-1) |
+| 4 |  Target | Send Notification |  | [Transaction 4](FHIR_API_Examples.html#post-task-1) |
+| 5 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 5](FHIR_API_Examples.html#post-task-1) |
+| 6 |  Target | Send Notification |  | [Transaction 6](FHIR_API_Examples.html#post-task-1) |
+| 7 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 7](FHIR_API_Examples.html#post-task-1) |
+| 8 |  Target | Send Notification |  | [Transaction 8](FHIR_API_Examples.html#post-task-1) |
+| 9 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 9](FHIR_API_Examples.html#post-task-1) |
+| 10 |  Source | Get Procedures | [Food Provided](SDOHCC-ProcedureProvisionOfFoodExample.html), [Application Assistance](SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample.html) | [Transaction 10](FHIR_API_Examples.html#post-task-1) |
+{:.grid}
+
 
 
 ### Direct Referral Light
@@ -236,6 +229,12 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 | 14 | ![providericon] | determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately | [SDOHCC Goal] |
 {:.grid .center  }
 
+#### Notes on Direct and Indirect Referrals
+
+1. Parties SHOULD use polling if one or both of the parties is unable to support the subscription model (see notes on the [Checking Task Status](checking_task_status.html) page).
+2. The receiving party for the referral SHOULD use the batch query process to request periodic updates of reference resources.
+3. The above system flows do not define the handling of all possible scenarios. Exchange scenarios may include refusing the referral, canceling the referral by either party, and error conditions that may occur when using RESTful exchanges.  It is up to each party to follow the current best practice in managing the state of the referral.
+4. The Provider / Requester SHOULD set the Task.status to "requested" until it receives a valid HTTPS response indicating that the Task was received at which point it SHOULD set the Task.status to "received".
 
 ### Patient Workflow
 <a name="patientworkflow"></a>
@@ -257,7 +256,6 @@ These interactions use a combination of FHIR-based interactions using [SDOHCCTas
 {:.grid}
 
 #### Patient Interactions
-<a name="patient-exchange">
 This implementation guide supports additional interactions with a patient/client application (on a smartphone or portal).  These interactions include providing the patient/client with:
 
 1. a copy of the service request sent to the service performer
@@ -274,7 +272,7 @@ This implementation guide supports additional interactions with a patient/client
 
 <object data="PatientClientExchange.svg" type="image/svg+xml"></object>
 
-The above patient / client interaction diagram indicates the high level exchanges between the Requester and the Patient / Client:
+The above patient/client interaction diagram indicates the high level exchanges between the Requester and the Patient / Client:
 
 1. providing referral information (service requested, contact information, instructions) to the patient's application
 2. enable a patient to use their application to cancel the service

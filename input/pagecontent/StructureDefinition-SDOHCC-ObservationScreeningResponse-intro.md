@@ -51,6 +51,13 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 * Questions =  \<Category-specific\> Screening Assessments Questions
 * Answers =  \<Category-specific\> Screening Assessments Answers Value Set
 
+Of note, Grouper VSAC value sets containing the members of all the category-specific value sets for Observation.code and Observation.value are available here:
+
+* For Observation.code:
+  * [Social Determinants of Health Screening Assessments And Questions] Value Set
+  * [Social Determinants of Health Screening Assessments Questions] Value Set
+  * [Social Determinants of Health Screening Assessments] Value Set
+* For Observation.value: [Social Determinants of Health Screening Assessments Answers] Value Set
 
 <div>
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:1000px;">
@@ -391,15 +398,6 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 </table>
 </div>
 
-
-#### More
-Of note, Grouper VSAC value sets containing the members of all the category-specific value sets for Observation.code and Observation.value are available here:
-
-* For Observation.code:
-  * [Social Determinants of Health Screening Assessments And Questions] Value Set
-  * [Social Determinants of Health Screening Assessments Questions] Value Set
-  * [Social Determinants of Health Screening Assessments] Value Set
-* For Observation.value: [Social Determinants of Health Screening Assessments Answers] Value Set
 
 
 {% include markdown-link-references.md %}
