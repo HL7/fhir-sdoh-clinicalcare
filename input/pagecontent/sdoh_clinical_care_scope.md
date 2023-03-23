@@ -27,7 +27,8 @@ Coded SDOH content is captured across core health care activities: screening/ass
 In the drawing above, each of the actors supports a set of roles that are described here:
 <br>
 
-<table>
+<div>
+<table align="left" border="1" cellpadding="1" cellspacing="1" style="width:1000px;">
 <thead>
 <tr>
 <th>Actor</th>
@@ -44,7 +45,7 @@ In the drawing above, each of the actors supports a set of roles that are descri
 <tr>
 <td>Patient</td>
 <td><ul><li>Responds to questions and is assessed based on their responses</li><li>Discusses and agrees to Goals</li><li>Consents to the sharing of their information</li><li>Completes forms to provide feedback to providers</li></ul></td>
-<td><a href="StructureDefinition-SDOHCC-Condition.html">Condition</a>, [Patient Task][SDOHCCTaskForPatient]</td>
+<td><a href="StructureDefinition-SDOHCC-Condition.html">Condition</a>, <a href="StructureDefinition-SDOHCC-TaskForPatient.html">Task for Patient</a></td>
 </tr>
 <tr>
 <td></td>
@@ -82,8 +83,7 @@ In the drawing above, each of the actors supports a set of roles that are descri
 </tr>
 </tbody>
 </table>
-
-
+</div>
 
 <br>
 ### Scope of Interactions
