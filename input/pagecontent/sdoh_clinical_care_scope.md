@@ -44,7 +44,7 @@ In the drawing above, each of the actors supports a set of roles that are descri
 <tr>
 <td>Patient</td>
 <td><ul><li>Responds to questions and is assessed based on their responses</li><li>Discusses and agrees to Goals</li><li>Consents to the sharing of their information</li><li>Completes forms to provide feedback to providers</li></ul></td>
-<td>[Condition][SDOHCCCondition], [Patient Task][SDOHCCTaskForPatient]</td>
+<td><a href="StructureDefinition-SDOHCC-Condition.html">Condition</a>, [Patient Task][SDOHCCTaskForPatient]</td>
 </tr>
 <tr>
 <td></td>
@@ -54,7 +54,7 @@ In the drawing above, each of the actors supports a set of roles that are descri
 <tr>
 <td>Aggregation</td>
 <td><ul><li>Reports summary statistics on groups of patients with common SDOH conditions</li></ul></td>
-<td>[Group][SDOHCCGroup]</td>
+<td><a href="StructureDefinition-SDOHCC-Group.html">Group</a></td>
 </tr>
 <tr>
 <td></td>
@@ -64,7 +64,7 @@ In the drawing above, each of the actors supports a set of roles that are descri
 <tr>
 <td>Provider</td>
 <td><ul><li>Assesses patient</li><li>Records &amp; prioritizes problems and concerns alongside patient</li><li>Establishes Goals alongside patient</li><li>Solicits  Consent for data sharing and, if necessary,shares it with CBO</li><li>Creates referrals and solicits CBOs to fulfill them </li><li>Monitors completion of referral</li><li>Provides review material or provides contact instructions SDOHCCPatientTask to patients</li><li>Solicits feedback from patients</li></ul></td>
-<td>[Assessment][SDOHCCObservationAssessment], [Condition][SDOHCCCondition], [Goals][SDOHCCGoal], [Consents][SDOHCCConsent], [ServiceRequest][SDOHCCServiceRequest], [Task][SDOHCCTaskForReferralManagement]</td>
+<td><a href="StructureDefinition-SDOHCC-ObservationAssessment.html">Observation Assessment</a>, <a href="StructureDefinition-SDOHCC-ObservationScreeningResponse.html">Observation Screening Response</a>, <a href="StructureDefinition-SDOHCC-Condition.html">Condition</a>, <a href="StructureDefinition-SDOHCC-Goal.html">Goal</a>, <a href="StructureDefinition-SDOHCC-Consent.html">COnsent</a>, <a href="StructureDefinition-SDOHCC-ServiceRequest.html">ServiceRequest</a>, <a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">Task for Referral Management</a></td>
 </tr>
 <tr>
 <td></td>
@@ -74,7 +74,7 @@ In the drawing above, each of the actors supports a set of roles that are descri
 <tr>
 <td>Community Based Organization (possibly via Coordinating Platform)</td>
 <td><ul><li>Receives solicitation to complete referrals from provider</li><li>Retrieves referral and accepts or rejects solicitation</li><li>Delivers and records service requested by referral</li><li>Reports completion to referral source</li><li>Provides review material to patients</li><li>Solicits feedback from patients</li></ul></td>
-<td>[SDOHCCTaskForReferralManagement], [referrals][SDOHCCServiceRequest], [Procedure][SDOHCCProcedure]</td>
+<td><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">Task for Referral Management</a>, <a href="StructureDefinition-SDOHCC-ServiceRequest.html">ServiceRequest</a>, <a href="StructureDefinition-SDOHCC-Procedure.html">Procedure</a></td>
 </tr>
 <tr>
 <td></td>
