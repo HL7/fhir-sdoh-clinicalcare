@@ -55,7 +55,6 @@ Added Value Sets for Race/Ethnicity Observation Profile [FHIR-34238](https://jir
 
 Added Value Sets for Patient Task [FHIR-34237](https://jira.hl7.org/browse/FHIR-34237)
 
-*
 
 * [SDOHCC ValueSet SDOH Questionnaire Category](ValueSet-SDOHCC-ValueSetSDOHQuestionnaireCategory.html)
 * [SDOHCC ValueSet Task Code](ValueSet-SDOHCC-ValueSetTaskCode.html)
@@ -115,9 +114,7 @@ Updated Profiles [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233)
 * * ServiceRequest.code.coding -- added slice for example of social services taxonomy (e.g. 211 LA) as Must Support
 
 * * ServiceRequest.reasonReference – added guidance
-
 * * ServiceRequest.orderDetail -- added order detail to indicate that the service organization is not to call the patient/client
-
 
 
 Added new profiles
@@ -131,20 +128,14 @@ Added new profiles
 * [SDOHCC Task For Patient](StructureDefinition-SDOHCC-TaskForPatient.html)  [FHIR-34244](https://jira.hl7.org/browse/FHIR-34244), [FHIR-34237](https://jira.hl7.org/browse/FHIR-34237)
 * [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html) [FHIR-34237](https://jira.hl7.org/browse/FHIR-34237)
 
-
-
 New Draft Observation Profiles for Race and Ethnicity
 
 * [SDOHCC Observation Ethnicity OMB](StructureDefinition-SDOHCC-ObservationEthnicityOMB.html) [FHIR-34238](https://jira.hl7.org/browse/FHIR-34238), [FHIR-34339](https://jira.hl7.org/browse/FHIR-34239)
 * [SDOHCC Observation Race OMB](StructureDefinition-SDOHCC-ObservationRaceOMB.html) [FHIR-34238](https://jira.hl7.org/browse/FHIR-34238), [FHIR-34339](https://jira.hl7.org/browse/FHIR-34239)
 
-
-
 Removed
 
 * [SDOHCC Task](http://hl7.org/fhir/us/sdoh-clinicalcare/STU1/StructureDefinition-SDOHCC-Task.html) [FHIR-34237](https://jira.hl7.org/browse/FHIR-34237)
-
-
 
 ### CapabilityStatements
 
@@ -155,23 +146,19 @@ Changed name and updated content
 * From [SDOH Clinical Care Referral Recipient](http://hl7.org/fhir/us/sdoh-clinicalcare/STU1/CapabilityStatement-SDOH-ClinicalCareReferralRecipient.html) to [SDOHCC Referral Recipient](CapabilityStatement-SDOHCC-ReferralRecipient.html)
 * From [SDOH Clinical Care Referral Source](http://hl7.org/fhir/us/sdoh-clinicalcare/STU1/CapabilityStatement-SDOH-ClinicalCareReferralSource.html) to  [SDOHCC Referral Source](CapabilityStatement-SDOHCC-ReferralSource.html)
 
-
-
 Added CapabilityStatement
 
 * [SDOHCC Patient Application](CapabilityStatement-SDOHCC-PatientApp.html) [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255)
-
-
 
 ### Documentation
 
 * [Home Page](index.html) – added reference to new content
 * [STU2 Ballot Changes](stu2_ballot_changes.html) – this page
-* [Functional Use Cases](functional_use_cases.html) – added Patient/Client use case [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255)
-* [Support for Multiple Domains](support_for_multiple_domains.html) – added support for VSAC group value sets [FHIR-34236](https://jira.hl7.org/browse/FHIR-34236)
+* Functional Use Cases – added Patient/Client use case [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255)
+* Support for Multiple Domains – added support for VSAC group value sets [FHIR-34236](https://jira.hl7.org/browse/FHIR-34236)
 * [Exchange Workflow](exchange_workflow.html) – added new workflow for Patient/Client and CBO applications [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255), [FHIR-34256](https://jira.hl7.org/browse/FHIR-34256)
-* [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html) -- new [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255)
-* [FHIR Artifacts Overview](fhir_artifacts_overview.html) – updated to refer to new or changed artifacts
+* [Connecting Applications with API Data Sources](connecting_applications_with_api_data_sources.html) -- new [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255)
+* FHIR Artifacts Overview[artifacts.html] – updated to refer to new or changed artifacts
 * [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)-- new [FHIR-34339](https://jira.hl7.org/browse/FHIR-34239)
 
 

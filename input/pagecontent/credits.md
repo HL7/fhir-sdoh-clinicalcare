@@ -25,7 +25,16 @@ We would like to thank [CyncHealth](https://cynchealth.org/), the [Agency for He
 | Rob Hausam         | [Hausam Consulting LLC](https://www.linkedin.com/in/robert-hausam-a273aa7/)        |
 | Cheng Liu          | [MaxMD](https://www.maxmddirect.com/)                                              |
 | Natasha Kreisle    | [MaxMD](https://www.maxmddirect.com/)                                              |
+| Corey Spears       | [MITRE](https://www.mitre.org/) [^1]                                               |
+| Saul A. Kravitz    | [MITRE](https://www.mitre.org/) [^1]                                            |
+| Gail Shenk         | [MITRE](https://www.mitre.org/) [^1]                                             |
+{:.grid}
 
+[^1] MITRE's participation in the development of this IG was supported under contract to The Centers for Medicare & Medicaid Services, Office of Burden Reduction & Health Informatics.
+
+The STU2.1 Update was developed using [FHIR Shorthand syntax](http://hl7.org/fhir/uv/shorthand/) and the [SUSHI tookit](https://fshschool.org/docs/sushi/), a free, open source toolchain. Generous guidance on FHIR Shorthand and SUSHI was provided by Chris Moesel.
+
+Capability statements were rendered with [tools](https://github.com/caspears/CapStatement) developed by Eric Haas and modified by Corey Spears, and additional [scripts](https://github.com/HL7/fhir-sdoh-clinicalcare/tree/master/capstmt).
 
 Our thanks to these and to the many others not explicitly listed who contributed their time, enthusiasm and expertise to this work.
 
