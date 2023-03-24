@@ -52,8 +52,8 @@ pages:
     title: Glossary
   credits.md:
     title: Credits
-  survey_instrument_support.md:
-    title: Survey Instrument Support
+  assessment_instrument_support.md:
+    title: Assessment Instrument Support
   mapping_instructions.md:
     title: Mapping Instructions
   referral_workflow.md:
