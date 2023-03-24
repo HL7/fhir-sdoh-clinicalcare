@@ -28,7 +28,7 @@ For an SDOHCC Observation Screening Response that represents a question and its 
 
 For an SDOHCC Observation Screening Response that is an Observation Grouping, Observation.code SHOULD use panel LOINC codes from this value set. An Observation Grouping does not have an Observation.value.
 
-Instead, an Observation Grouping (via Observation.hasMember) references all Observations generated from a specific assessment instrument. See [SDOHCC Observation Response Hunger Vital Sign Grouping Example](broken.html).
+Instead, an Observation Grouping (via Observation.hasMember) references all Observations generated from a specific assessment instrument. See [SDOHCC Observation Response Hunger Vital Sign Grouping Example][SDOHCC-ObservationResponseHungerVitalSignGroupingExample].
 
  **\<Category-specific\> Screening Assessments And Questions** Value Set – Contains all codes in  \<Category-specific\> Screening Assessments Questions Value Set (LOINC question codes) AND  \<Category-specific\> Screening Assessments Value Set (LOINC panel codes).
 
@@ -171,7 +171,7 @@ Of note, Grouper VSAC value sets containing the members of all the category-spec
 			<td>OID-8</td>
 		</tr>
 		<tr>
-			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-health-literacy">health-literacy</a></td>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-personal-health-literacy">personal-health-literacy</a></td>
 			<td rowspan="3">Observation.code</td>
 			<td><a href="broken.html">Questions and Panels</a></td>
 			<td>OID-5</td>
