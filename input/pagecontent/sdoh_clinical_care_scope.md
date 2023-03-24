@@ -3,7 +3,7 @@
 
 The focus for this version of the IG is to standardize the exchange of SDOH information related to the following activities:
 
-* *assessment of social risk,
+* assessment of social risk,
 * establishing coded health concerns/problems,
 * creating patient driven goals, and
 * defining a RESTful closed loop referral process to manage interventions.

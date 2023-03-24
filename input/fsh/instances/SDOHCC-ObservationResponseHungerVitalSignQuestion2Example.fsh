@@ -6,9 +6,8 @@ Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-06-03T01:20:13.913+00:00"
 * meta.source = "#wKZYwCGk24dXCysA"
-* category[0] = $observation-category#social-history "Social History"
-* category[+] = $observation-category#survey "Survey"
-* category[+] = $SDOHCC-CodeSystemTemporaryCodes#food-insecurity "Food Insecurity"
+* category[Survey] = $observation-category#survey "Survey"
+* category[SDOH] = $SDOHCC-CodeSystemTemporaryCodes#food-insecurity "Food Insecurity"
 * status = #final
 * code = $loinc#88123-5 "Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]"
 * subject.reference = "Patient/pat-53234"
