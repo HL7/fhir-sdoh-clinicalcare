@@ -6,7 +6,7 @@ The DD intentionally omits certain elements in FHIR that are not expected to be 
 
 * **Profiles not shown in the DD:** Not all profiles used by an IG are included in the Data Dictionary. These profiles are not included in the DD because they are defined externally to this IG.
 
-* **Data elements not shown in the DD:** Only elements marked as "Must Support"(MS) are included in data dictionary. These are elements that implementers may be expected to provide meaningful support for; see [Profile-Level Conformance Expectations](conformance-profiles.html#profile-level-conformance-expectations) for more information. Some of the MS elements are inherited from US Core.
+* **Data elements not shown in the DD:** Only elements marked as "Must Support"(MS) are included in data dictionary. These are elements that implementers may be expected to provide meaningful support for.   Some of the MS elements are inherited from US Core.
 
 Download links:
 

@@ -82,7 +82,7 @@
 - [FHIR-35721](https://jira.hl7.org/browse/FHIR-35721)	Recommend better definition and consistence with diagram and rest of 9
 - [FHIR-35717](https://jira.hl7.org/browse/FHIR-35717)	Move this section up so that it is easier to find
 - [FHIR-35637](https://jira.hl7.org/browse/FHIR-35637)	Workflow and Managing Consent diagram should be expanded to include API Resources
-  - Applied the above ticket dispositions to the [Exchange Workflow](exchange_workflow.html) page
+  - Applied the above ticket dispositions to the Exchange Workflow page
 
 #### Capability Statements
 

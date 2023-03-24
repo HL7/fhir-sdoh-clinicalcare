@@ -1,6 +1,6 @@
 This Implementation Guide (IG) is providing recommended specifications for the synchronization of patient and Community Based Organization (CBO) applications with API data sources for SDOH information as defined in this IG.
 
-The below is for establishing connections to enable the exchange of information (seen in the [Exchange Workflow](exchange_workflow.html) page and with additional guidance in [Functional Use Cases](functional_use_cases.html)).
+The below is for establishing connections to enable the exchange of information (seen in the [Referral Workflow] section.
 
 ### Requirements
 
