@@ -25,9 +25,10 @@ We would like to thank [CyncHealth](https://cynchealth.org/), the [Agency for He
 | Rob Hausam         | [Hausam Consulting LLC](https://www.linkedin.com/in/robert-hausam-a273aa7/)        |
 | Cheng Liu          | [MaxMD](https://www.maxmddirect.com/)                                              |
 | Natasha Kreisle    | [MaxMD](https://www.maxmddirect.com/)                                              |
-| Corey Spears       | [MITRE[^1] ](https://www.mitre.org/)                                              |
-| Saul A. Kravitz    | [MITRE[^1] ](https://www.mitre.org/)                                           |
-| Gail Shenk         | [MITRE[^1] ](https://www.mitre.org/)                                            |
+| Bret Heale         | [Elimu](https://www.elimu.io/)                                              |
+| Corey Spears       | [MITRE](https://www.mitre.org/)[^1]                                               |
+| Saul A. Kravitz    | [MITRE](https://www.mitre.org/)[^1]                                            |
+| Gail Shenk         | [MITRE](https://www.mitre.org/)[^1]                                             |
 {:.grid}
 
 
