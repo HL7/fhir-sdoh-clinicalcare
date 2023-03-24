@@ -29,9 +29,8 @@ dependencies:
     version: 4.0.1
 parameters:
   show-inherited-invariants: false
-  jira-code: vrdr
+  jira-code: sdoh-cc
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
-  applyExtensionMetadataToRoot: false
 
 license: CC0-1.0
 publisher:
@@ -230,7 +229,7 @@ menu:
     Glossary: glossary.html
     Credits: credits.html
   Implementation Guidance:
-    Survey Instrument Support: survey_instrument_support.html
+    Assessment Instrument Support: assessment_instrument_support.html
     Mapping Instructions: mapping_instructions.html
     Referral Workflow:  referral_workflow.html
     Checking Task Status: checking_task_status.html
