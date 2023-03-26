@@ -85,15 +85,13 @@ This implementation guide includes a complete example[^1] of the [Hunger Vital S
   * [Question 3](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example.html) (computed in the assessment instrument based on Questions 1 and 2)
 * a [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) that could be used to record the health concern based on the assessment instrument results
 
-[^1]: The Hunger Vital Sign Survey is © 2010 Dr. Erin Hager and Dr. Anna Quigg and the Children’s HealthWatch research team, and the example is included with permission.
-
 #### Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences (PRAPARE) Survey Example
 
-This implementation guide includes a partial example of the [Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences ([PRAPARE](https://loinc.org/93025-5/)) Assessment Instrument[^2] including:
+This implementation guide includes a partial example of the [PRAPARE](https://loinc.org/93025-5/) Assessment Instrument[^2] including:
 
 * an [SDC Questionnaire](Questionnaire-SDOHCC-QuestionnairePRAPARE.html)
 * an [SDC Questionnaire Response](QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html)
-* a [StructureMap](StructureMap-SDOHCC-StructureMapPRAPARE.html) that takes the [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html) and creates the appropriate [SDOHCC Observation Screening Response] and [SDOHCC Condition] instances resources
+* a [StructureMap](StructureMap-SDOHCC-StructureMapPRAPARE.html) that takes the [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html) and creates the appropriate [SDOHCC Observation Screening Response] and [SDOHCC Condition] instances
 * multiple [SDOHCC Observation Screening Response] instances used to record the question and answers for a select set of the survey elements (not all questions are provided in these examples)
   * [Employment Status](Observation-SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample.html)
   * [Housing Status](Observation-SDOHCC-ObservationResponsePRAPAREHousingStatusExample.html)
@@ -105,6 +103,7 @@ This implementation guide includes a partial example of the [Protocol for Respon
 
   ----------------------------------------------------------------------------------------------------
 
+[^1]: The Hunger Vital Sign Survey is © 2010 Dr. Erin Hager and Dr. Anna Quigg and the Children’s HealthWatch research team, and the example is included with permission.
 [^2]: This example comes from the national PRAPARE social determinants of health assessment protocol, developed and © 2019 by the National Association of Community Health Centers (NACHC), in partnership with the Association of Asian Pacific Community Health Organization (AAPCHO), the Oregon Primary Care Association (OPCA), and the Institute for Alternative Futures (IAF). For more information, visit [www.nachc.org/prapare](http://www.nachc.org/prapare). It is included witih permission.
 
 

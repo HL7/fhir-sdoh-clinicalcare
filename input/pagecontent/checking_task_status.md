@@ -3,7 +3,7 @@
 Task.status is the communication mechanism that indicates the status (e.g. requested, accepted, in progress or completed) of action(s) taken to fulfill a ServiceRequest.
 This enables  the exchange of information related to the request for and progress related to addressing a ServiceRequest. The value sets for the [Referral Task] status and the [Patient Task] status are different due to the purpose of the exchange between the requesting entity and the intermediary or performing entity (Referral Task) vs the exchange with the patient (Patient Task).  See those profile pages for details.
 
-The guidance on this page details important concepts for implementation. See [Functional Use Cases](functional_use_cases.html) and [Exchange Workflow](exchange_workflow.html) pages to learn how the concepts fit into the overarching guidance.
+The guidance on this page details important concepts for implementation. See [Referral Workflow](referral_workflow.html)  to learn how the concepts fit into the overarching guidance.
 
 ### Checking Task Status
 

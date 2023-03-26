@@ -6,7 +6,7 @@ The growing awareness around SDOH has contributed to efforts to address actionab
 
 {% include img-med.html img="Whatgoesintoyourhealth.jpg" caption="Figure 1: What goes into your health? An illustration of the impact health care has on a person’s health versus non-healthcare factors." %}
 
-There is strong evidence that social risks negatively impact health outcomes and addressing social risks improved health outcomes.  For example:
+There is gorwing awareness that social risks negatively impact health outcomes and that addressing social risks improves health outcomes.  For example:
 * Food insecurity correlates with higher levels of diabetes, hypertension, and heart failure
 * Housing instability factors into lower treatment adherence
 * Transportation barriers result in missed appointments, delayed care, and lower medication compliance
@@ -26,9 +26,12 @@ Based on the growing collection of social risk data in health care systems, an i
 ### Gravity Project Overview
 The [Gravity Project](https://thegravityproject.net/) was initiated by the [Social Interventions Research and Evaluation Network (SIREN)](https://chc.ucsf.edu/siren) with support from the [Robert Wood Johnson Foundation](https://www.rwjf.org/).   The Gravity Project mission is to create and maintain a consensus-building community to expand available SDOH Core Data for Interoperability and accelerate standards-based information exchange by using HL7 FHIR. The Gravity Project aims to standardize medical codes to facilitate the use of social determinants of health-related data in patient care, care coordination between the health and human services sectors, population health management, value-based payment, and clinical research.
 
-{% include img-medsmall.html img="GravityProject.png" caption="Figure 2: Gravity Project Workstreams" %}
+The Gravity Project currently has three workstreams as shown in the figure below.  The [Terminology Workstream](https://confluence.hl7.org/display/GRAV/Terminology+Workstream+Dashboard)
+develops terminology resources that are published via the [Value Set Authority Center (VSAC)][VSAC] that support capture of SDOH-related data.  The [Technical workstream](https://confluence.hl7.org/display/GRAV/Technical+Workstream+Dashboard) developed this FHIR Implementation Guide (IG) and coordinates with other FHIR IG development projects.
 
-The Gravity Project currently has three workstreams as shown in the figure above.  The [Terminology Workstream](https://confluence.hl7.org/display/GRAV/Terminology+Workstream+Dashboard) develops terminology resources that are published via VSAC that support capture of SDOH-related data.  The [Technical workstream](https://confluence.hl7.org/display/GRAV/Technical+Workstream+Dashboard) developed this FHIR Implementation guide and coordinates with other FHIR IG development projects.  The [Pilot testing workstream](https://confluence.hl7.org/display/GRAV/Gravity+Project+Pilots+Affinity+Group+Home) tests the Gravity-developed Terminologies and FHIR IG specifications with partners to assess their usefulness, and drive improvements.
+The [Pilot testing workstream](https://confluence.hl7.org/display/GRAV/Gravity+Project+Pilots+Affinity+Group+Home) works with partners to test and provide feedback on the Gravity-developed Terminology Resources and FHIR IG specifications.
+
+{% include img-medsmall.html img="GravityProject.png" caption="Figure 2: Gravity Project Workstreams" %}
 
 For more information about Gravity see the Gravity project [website](https://thegravityproject.net/) or [confluence site](https://confluence.hl7.org/display/GRAV/Join+the+Gravity+Project).
 

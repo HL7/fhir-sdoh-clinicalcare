@@ -1,4 +1,4 @@
-This section describeds the interactions between the actors in an SDOH referral starting at a high level, and drilling all the way down to the details of the FHIR API calls, and provides links to the profiles and sections of the IG where more detail is provided.  First a high level overview of the interactions is provided that will abstract technical details.   For example, the mechanism through which the referring provider is informed of the status of the referral could use FHIR Subscriptions or polling (see [Checking Task Status] for details).   Similarly, the relationships between the profiles referenced are not described (see [Data Modeling Framework] ).  Management of task status is not described (see [Checking Task Status]).
+This section describes the interactions between the actors in an SDOH referral starting at a high level, and drilling down to the details of the FHIR API calls, and provides links to the profiles and sections of the IG where more detail is provided.  First a high-level overview of the interactions is provided that will abstract technical details.   For example, the mechanism through which the referring provider is informed of the status of the referral could use FHIR Subscriptions or polling (see [Checking Task Status] for details).   Similarly, the relationships between the profiles referenced are not described (see [Data Modeling Framework] ).  Management of task status is not described (see [Checking Task Status]).
 
 The use cases here relate to the Gravity [Patient Stories].  Implementers will benefit from looking at the detailed technical description of the exchange work flow for each use case, as well as the [Capability Statements] associated with each workflow and the [conformance artifacts](artifacts.html) generally.
 
@@ -47,11 +47,11 @@ The functional use cases in the table below describe the referral process initia
 
 | Functional Use Case |  Description           | Actors |
 | ------------------------- | ------------------------------------ | ---------------- |
-| [Direct Referral](functional_use_cases.html#directreferral) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., CBO) where both entities have FHIR APIs to facilitate exchange and a referring intermediary (e.g., CP) is not involved in the referral | ![providericon], ![ccicon], ![patienticon], ![cboicon] |
-| [Direct Referral (light)](functional_use_cases.html#directreferrallight) | A “light” version of the Direct Referral with the exception that the performing entity (e.g., CBO) does not have FHIR API capability but has an application that can access the referring entity’s API  | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
-| [Indirect Referral](functional_use_cases.html#indirectreferral) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., a CBO) that is mediated by a referring intermediary (e.g., a CP) where all entities have FHIR APIs to facilitate exchange  | ![providericon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] |
-| [Indirect Referral (light)](functional_use_cases.html#indirectreferrallight) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., a CBO) that is mediated by a referring intermediary (e.g., a CP) where the referring entity and referring intermediary have FHIR APIs, and the performing entity does not have FHIR API capability but has an application that can access the referring entity’s API | ![providericon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] |
-| [Patient Coordination](functional_use_cases.html#patientcoordinationworkflow)| A patient application may, optionally, communicate directly with any entity that supports a FHIR API and provides a mechanism for secure exchange | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
+| [Direct Referral](referral_workflow.html#directreferral) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., CBO) where both entities have FHIR APIs to facilitate exchange and a referring intermediary (e.g., CP) is not involved in the referral | ![providericon], ![ccicon], ![patienticon], ![cboicon] |
+| [Direct Referral (light)](referral_workflow.html#directreferrallight) | A “light” version of the Direct Referral with the exception that the performing entity (e.g., CBO) does not have FHIR API capability but has an application that can access the referring entity’s API  | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
+| [Indirect Referral](referral_workflow.html#indirectreferral) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., a CBO) that is mediated by a referring intermediary (e.g., a CP) where all entities have FHIR APIs to facilitate exchange  | ![providericon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] |
+| [Indirect Referral (light)](referral_workflow.html#indirectreferrallight) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., a CBO) that is mediated by a referring intermediary (e.g., a CP) where the referring entity and referring intermediary have FHIR APIs, and the performing entity does not have FHIR API capability but has an application that can access the referring entity’s API | ![providericon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] |
+| [Patient Coordination](referral_workflow.html#patientcoordinationworkflow)| A patient application may, optionally, communicate directly with any entity that supports a FHIR API and provides a mechanism for secure exchange | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
 {:.grid}
 
 
@@ -65,7 +65,7 @@ The Provider and the CBO have FHIR servers.  The Patient has a FHIR-enabled pati
 The example assumes that the Provider has an existing relationship with the CBO.
 The CBO may not accept the referral or be unable to perform the requested service.
 
-The drawing is followed by a key that describes each labeled interaction.   The section of the drawing focused on the FHIR-based exchanges specified by this IG are highlighted with a blue dashed rectangle.  The details of the FHIR-based exchanges in that box are provided in the [following section](functional_use_cases.html#direct-referral-detailed-view).
+The drawing is followed by a key that describes each labeled interaction.   The section of the drawing focused on the FHIR-based exchanges specified by this IG are highlighted with a blue dashed rectangle.  The details of the FHIR-based exchanges in that box are provided in the [following section](referral_workflow.html#direct-referral-detailed-view).
 
 <object data="FunctionalUseCaseFlowDirectReferral3.svg" type="image/svg+xml"></object>
 <br/>
@@ -74,18 +74,18 @@ The drawing is followed by a key that describes each labeled interaction.   The 
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
 | 1 | ![patienticon] | Patient takes standardized assessment tool to identify social risks and needs |  [SDOHCCTaskForPatient] , [Questionnaire], [QuestionnaireResponse] |
-| 2 | ![providericon]| Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity | [SDOHCC Observation Screening REsponse][SDOHCCObservationScreeningResponse] |
+| 2 | ![providericon]| Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity | [SDOHCC Observation Screening Response][SDOHCCObservationScreeningResponse] |
 | 3 | ![providericon], ![patienticon]|  Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list | [SDOHCC Condition] |
 | 4 | ![providericon], ![patienticon]|  Provider and patient identify a goal to pursue enrollment in a SNAP program | [SDOHCC Goal][SDOHCCGoal] |
 | 5 | ![providericon], ![patienticon]|  Provider and patient agree that a referral to a CBO is an appropriate next step| &nbsp; |
 | 6 | ![patienticon] | Patient consents to be referred to the CBO, and to share appropriate information with the CBO | [SDOHCC Consent][SDOHCCConsent] |
 | 7 (optional)| ![providericon] | Provider makes information regarding the referral available to the patient’s application |  |
-| 8 | ![cboicon]| Provider or Care Coordinator creates and sends an electronic referral to the CBO | [SDOHCC Service Request], [SDOHCCTaskForReferral Management]  |
+| 8 | ![cboicon]| Provider or Care Coordinator creates and sends an electronic referral to the CBO | [SDOHCC Service Request], [SDOHCC Task ForReferral Management]  |
 | 9 | ![cboicon] | CBO receives and accepts referral  (task)| [SDOHCC Task For Referral Management]  |
 | 10 (optional) | ![cboicon], ![patienticon]| CBO communicates with the patient via their application to schedule appointments, collect additional information, etc.  This communication might not take place electronically.|  |
 | 11 | ![cboicon] | CBO completes the evaluation and enrollment, updates the status of the referral (task) to completed, and includes information on what was completed | [SDOHCC Task For Referral Management], [SDOHCC Procedure] |
 | 12 | ![providericon] | Provider receives the updated status and updates the status of the referral (service request) | [Checking Task Status] |
-| 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Survey Instrument Support], [SDOHCC Task For Patient][SDOHCCTaskForPatient], [Questionnaire] |
+| 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Assessment Instrument Support], [SDOHCC Task For Patient][SDOHCCTaskForPatient], [Questionnaire] |
 | 14 | ![providericon] | Provider determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately | [SDOHCC Goal] |
 {:.grid}
 
@@ -106,7 +106,7 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 | 7 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 7](FHIR_API_Examples.html#post-task-1) |
 | 8 |  Target | Send Notification |  | [Transaction 8](FHIR_API_Examples.html#post-task-1) |
 | 9 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 9](FHIR_API_Examples.html#post-task-1) |
-| 10 |  Source | Get Procedures | [Food Provided](SDOHCC-ProcedureProvisionOfFoodExample.html), [Application Assistance](SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample.html) | [Transaction 10](FHIR_API_Examples.html#post-task-1) |
+| 10 |  Source | Get Procedures | [Food Provided](Procedure-SDOHCC-ProcedureProvisionOfFoodExample.html), [Application Assistance](Procedure-SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample.html) | [Transaction 10](FHIR_API_Examples.html#post-task-1) |
 {:.grid}
 
 
@@ -117,14 +117,16 @@ The Provider has a FHIR server. The CBO has a FHIR-enabled application.  The Pat
 
 Functionally, this use case is the same as the previous use case, except that the CBO has a FHIR-enabled application, but does not support a FHIR API.  As a result, the provider can't push information to the CBO, but rather tha CBO needs to pull information from the provider.    At the conclusion of the referral, the CBO POSTS needed information to the Provider FHIR server (e.g., Procedures) and updates the status and the linked resources of the Task.
 
-The drawing is followed by a key that describes each labeled interaction.   The section of the drawing focused on the FHIR-based exchanges specified by this IG are highlighted with a blue dashed rectangle.  The details of the FHIR-based exchanges in that box are provided in the [following section](functional_use_cases.html#direct-referral-detailed-view).
+The drawing is followed by a key that describes each labeled interaction.   The section of the drawing focused on the FHIR-based exchanges specified by this IG are highlighted with a blue dashed rectangle.  The details of the FHIR-based exchanges in that box are provided in the [following section](referral_workflow.html#direct-referral-detailed-view).
 
 <object data="FunctionalUseCaseFlowDirectLightReferral3.svg" type="image/svg+xml"></object>
 <br/>
 
+** ALIGN THESE DEFINITIONS WITH GLOSSARY **
+
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
-| 1 | ![patienticon] | Patient takes standardized assessment tool to identify social risks and needs | [Survey Instrument Support] |
+| 1 | ![patienticon] | Patient takes standardized assessment tool to identify social risks and needs | [Assessment Instrument Support] |
 | 2 | ![providericon]| Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity | &nbsp; |
 | 3 | ![providericon], ![patienticon]|  Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list | [SDOHCC Condition], [SDOHCC Condition] |
 | 4 | ![providericon], ![patienticon]|  Provider and patient identify a goal to pursue enrollment in a SNAP program | [SDOHCC Goal] |
@@ -176,7 +178,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 | -----| ------------- | ------- | ---------------- |
 | 1 | ![patienticon] | Patient takes standardized assessment tool to identify social risks and needs | [Survey Instrument Support] |
 | 2 | ![providericon]| Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity | &nbsp; |
-| 3 | ![providericon], ![patienticon]|  Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list | [SDOHCC Condition], [SDOHCC Condition] |
+| 3 | ![providericon], ![patienticon]|  Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list | [SDOHCC Condition] |
 | 4 | ![providericon], ![patienticon]|  Provider and patient identify a goal to pursue enrollment in a SNAP program | [SDOHCC Goal] |
 | 5 | ![providericon], ![patienticon]|  Provider and patient agree that a referral to a CBO is an appropriate next step| &nbsp; |
 | 6 | ![patienticon] | Patient consents to be referred to the CBO, and to share appropriate information with the CBO | [SDOHCC Consent] |
