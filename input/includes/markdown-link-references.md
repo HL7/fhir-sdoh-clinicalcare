@@ -52,7 +52,7 @@
 [Checking Task Status]: checking_task_status.html
 [Privacy and Security]: privacy_and_security.html
 [VSAC]: https://vsac.nlm.nih.gov/
-[Patient Coordination Workflow:] referral_workflow.html#patient-coordination-workflow
+[Patient Coordination Workflow]: referral_workflow.html#patient-coordination-workflow
 [Indirect Referral]: referral_workflow.html#indirect-referral-with-direct-cbo
 [Indirect Referral Light]: referral_workflow.html#indirect-referral-with-direct-light-cbo
 [Direct Referral]: referral_workflow.html#direct-referral
