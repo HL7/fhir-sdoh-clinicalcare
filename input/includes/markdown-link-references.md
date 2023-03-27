@@ -52,15 +52,12 @@
 [Checking Task Status]: checking_task_status.html
 [Privacy and Security]: privacy_and_security.html
 [VSAC]: https://vsac.nlm.nih.gov/
-[Direct Referral Exchange Workflow]: referral_workflow#direct-referral
-[Direct Referral (light) Exchange Workflow]: referral_workflow.html#direct-referral-light-exchange
-[Indirect Referral Exchange Workflow]: referral_workflow.html#indirect-referral-exchange
-[Indirect Referral Light Exchange Workflow]: referral_workflow.html#indirect-referral-exchange
-[Patient Workflow Exchange]: referral_workflow.html#patient-exchange
-[Indirect Referral]: referral_workflow.html#indirect-referral
-[Indirect Referral Light]: referral_workflow.html#indirect-referral-light
+[Patient Coordination Workflow:] referral_workflow.html#patient-coordination-workflow
+[Indirect Referral]: referral_workflow.html#indirect-referral-with-direct-cbo
+[Indirect Referral Light]: referral_workflow.html#indirect-referral-with-direct-light-cbo
 [Direct Referral]: referral_workflow.html#direct-referral
 [Direct Referral Light]: referral_workflow.html#direct-referral-light
+[Assessment Instrument Support]: assessment_instrument_support.html
 
 [SDOHCC Observation Response Hunger Vital Sign Question 3 Example]: Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example.html
 [Assessment Instrument Spreadsheet Guidance]: broken.html
