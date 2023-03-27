@@ -1,37 +1,403 @@
 
 ### Purpose
-Observation Screening Resonses are created from a Questionaire Response.  They can form the evidence for a Condition, the mitigation target for a Goal, or the reason for a Service Request. See the [Data Modeling Framework] for more detail on the role of the Observation Screening Response in the creation of health concerns, goal setting (patient-centered goals), and creation of referrals using service request and procedure/intervention.
+SDOHCC Observation Screening Response is intended to represent question-answer pairs from Social Determinants of Health (SDOH) assessment instruments that are represented in LOINC. An SDOHCC Observation Screening Response that identifies a social risk or need can be referenced as evidence for an [SDOHCC Condition]. Sometimes, instead of representing a question that was answered directly on an assessment instrument, an SDOHCC Observation Screening Response may be derived from one or more other SDOHCC Observation Screening Responses (see [SDOHCC Observation Response Hunger Vital Sign Question 3 Example]). Additionally, an SDOHCC Observation Screening Response may be addressed by, or be the outcome of, an [SDOHCC Goal], or be the reason for an [SDOHCC ServiceRequest] or an [SDOHCC Procedure]. See the [Data Modeling Framework] for more detail on the relationships between SDOHCC Observation Screening Response and the other profiles in this IG.
+
+In this IG, responses to assessment instruments are captured using QuestionnaireResponse. To facilitate querying and searching, it is best that individual responses from a QuestionnaireResponse be converted into Observations. The decision as to whether to convert individual responses from a QuestionnaireResponse into Observations will generally be driven by the clinical utility of the Observation. While clinical utility is subjective, the questions in the preferred value sets in the Usage section below are the questions that Gravity has vetted as face-valid.
+
+In the future, to promote interoperability, a single StructureMap instance should ideally be provided for each assessment instrument to ensure consistency in the Observations generated from that assessment instrument.
 
 ### Usage
 
-This profile supports all of the SDOH Observation Screening Responses defined in the IG.  Creating and maintaining a separate Observation profile for each SDOH category would at present be burdensome.  Instead the table below defines the appropriate screening instruments for each categury with VSAC-hosted value set.
+Rather than offer separate SDOHCC Observation Screening Response profiles for each SDOH category (domain) covered in this IG (e.g., food insecurity, transportation insecurity, etc.), this profile supports any SDOH category. The minimum required value set bindings for elements are specified in the profile. Additionally, the Table below provides Gravity-vetted, preferred value sets for this profile. Where a preferred value set contains a code to describe a needed concept, servers SHOULD use that code.
 
-For each category of SDOH Observation Screening Responses, a specific value SHALL be used for Goal.category.
-Implentations **SHOULD** use a screening instrument from the listed value sets when one exists.
-The value sets are maintained in the  [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) database.
-The [Social Determinants of Health Screening Assessments value set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.126/expansion/Latest) contains the full set of SDOH screening assessment.
+#### General Guidance For Preferred Value Sets For SDOHCC Observation Screening Response
 
-The Gravity Project plans to work with the HL7 Vocabulary WG to determine how best to represent the domain specific value sets in each of the relevant resources and to establish appropriate methods to validate the consistent use of the correct domain specific codes. Future versions of this IG will include the logic to select specific value sets based on the SDOH domain.
+Codes in the preferred value sets are from LOINC-encoded assessment instruments that have been vetted as face-valid by the Gravity Project. The [Social Determinants of Health Screening Assessments](broken.html) Value Set, hosted in the NIH Value Set Authority Center ([VSAC]), contains all assessment instruments from which Gravity has chosen questions. For each Gravity-vetted assessment instrument, the questions are also vetted and only those that also meet Gravity criteria are included in the preferred value sets.
 
-| [`Observation.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | Screening Instruments |
-| ------ | -------------------- | ------------------------- | ------------ |
-| educational-attainment  | Educational Attainment | [Educational Attaiment Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20220719%20Less%20than%20high%20school%20education%20Screeners%20with%20Available%20Codes.xlsx?api=v2 ) |
-| elder-abuse  | Elder Abuse | [Elder Abuse Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20220818%20Elder%20Abuse%20Screeners%20with%20Available%20Codes.xlsx?api=v2 ) |
-| employment-status  | Employment Status | [Employment Status Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20220907%20Unemployment%20Screeners%20with%20Currently%20Available%20Codes.xlsx?api=v2 ) |
-| financial-insecurity  | Financial Insecurity | [Financial Insecurity Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20220113%20Financial%20Insecurity%20Screeners%20with%20Available%20Codes.xlsx?api=v2 ) |
-| food-insecurity  | Food Insecurity | [Food Insecurity Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20220902%20Food%20Insecurity%20Screeners%20with%20Available%20Codes.xlsx?api=v2 ) |
-| health-insurance-coverage-status  | Health Insurance Coverage Status | [Health Insurance Coverage Status Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20220713%20Health%20Insurance%20Coverage%20Status%20Screeners%20with%20Available%20Codes.xlsx?api=v2) |
-| health-literacy  | Health Literacy | [Health Literacy Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20220713%20Health%20Literacy%20Screeners%20with%20Available%20Codes.xlsx?api=v2 ) |
-| homelessness  | Homelessness | [Homelessness Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20230111%20Homelessness%20Screeners%20with%20Available%20Codes.xlsx?api=v2 ) |
-| housing-instability  | Housing Instability | [Housing Instability Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20230111%20Housing%20Instability%20Screeners%20with%20Available%20Codes.xlsx?api=v2 ) |
-| inadequate-housing  | Inadequate Housing | [Inadequate Housing Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20230111%20Inadequate%20Housing%20Screeners%20with%20Available%20Codes.xlsx?api=v2 ) |
-| intimate-partner-violence  | Intimate Partner Violence | [Intimate Partner Violence Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20220203%20Intimate%20Partner%20Violence%20Screeners%20with%20Available%20Codes.xlsx?api=v2 ) |
-| material-hardship  | Material Hardship | [Material Hardship Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20220721%20Material%20Hardship%20Screeners%20with%20Available%20Codes-2.xlsx?api=v2 ) |
-| medical-cost-burden  | Medical Cost Burden | Medical Cost Burden Screeners  (none defined) |
-| social-connection  | Social Connection | [Social Connection Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20220202%20Social%20Connection%20Screeners%20with%20Available%20Codes.xlsx?api=v2 ) |
-| stress  | Stress | [Stress Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20220202%20Stress%20Screeners%20with%20Available%20Codes.xlsx?api=v2 ) |
-| transportation-insecurity  | Transportation Insecurity | [Transportation Insecurity Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20230201%20Transportation%20Insecurity%20Screeners%20with%20Available%20codes.xlsx.xlsx?api=v2 ) |
-| veteran-status  | Veteran Status | [Veteran Status Screeners ]( https://confluence.hl7.org/download/attachments/97463504/20220907%20Veteran%20Status%20Screeners%20with%20Available%20Codes.xlsx?api=v2 ) |
-{:.grid}
+For the Observation.category slice with binding to [SDOHCC ValueSet SDOH Category], the category-specific code selected (first column Table below) determines the preferred, category-specific value sets for Observation.code and Observation.value which are hosted in VSAC.
+
+#### Guidance For Preferred Value Sets For Observation.code
+
+In the Value Set names below,  \<Category-specific\> is a placeholder for a specific SDOH category (e.g., Food Insecurity).
+
+ **\<Category-specific\> Screening Assessments** Questions Value Set – Contains LOINC codes for the preferred, category-specific questions selected from the Assessment Instruments.
+
+For an SDOHCC Observation Screening Response that represents a question and its coded answer, Observation.code SHOULD be a LOINC question code from this value set and Observation.value SHOULD be a LOINC answer code from the  \<Category-specific\> Screening Assessments Answers Value Set (described below).
+
+ **\<Category-specific\> Screening Assessments**  Value Set – Contains LOINC codes for the assessment instruments (LOINC panels) from which the preferred, category-specific questions have been selected.
+
+For an SDOHCC Observation Screening Response that is an Observation Grouping, Observation.code SHOULD use panel LOINC codes from this value set. An Observation Grouping does not have an Observation.value.
+
+Instead, an Observation Grouping (via Observation.hasMember) references all Observations generated from a specific assessment instrument. See [SDOHCC Observation Response Hunger Vital Sign Grouping Example][SDOHCC-ObservationResponseHungerVitalSignGroupingExample].
+
+ **\<Category-specific\> Screening Assessments And Questions** Value Set – Contains all codes in  \<Category-specific\> Screening Assessments Questions Value Set (LOINC question codes) AND  \<Category-specific\> Screening Assessments Value Set (LOINC panel codes).
+
+For SDOHCC Observation Screening Response, this is the complete set of preferred values allowed for Observation.code for a category-specific Observation and can be used to validate that Observation.code is from a preferred, category-specific value set.
+
+#### Guidance For Preferred Value Sets For Observation.value
+
+ **\<Category-specific\> Screening Assessments Answers** Value Set – Contains LOINC answer codes for the preferred, category-specific questions.
+
+For an SDOHCC Observation Screening Response that represents a question and a coded answer, Observation.code SHOULD be a LOINC question code from the  \<Category-specific\> Screening Assessments Questions Value Set and Observation.value SHOULD be a LOINC answer code from this value set.
+
+Of note, each question (Observation.code) has a subset of allowed answers (Observation.value) and, the allowed answers for a specific question may vary depending on the assessment instrument (LOINC panel) on which the question is presented (e.g., [`88122-7`](https://loinc.org/88122-7) "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]" has 4 possible answers on [Hunger Vital Sign (HVS)](https://loinc.org/88121-9) panel versus three possible answers on the [American Academy of Family Physicians Social Needs Screening Tool](https://loinc.org/99593-6)). For this reason, the category-specific Assessment Instrument Spreadsheets (last column in Table below) provide additional information to link specific assessment instruments to questions and their allowed LOINC Answer Lists. LOINC also provides Answers Lists for questions from specific assessment instruments (panels).
+
+For additional information on fields in the Assessment Instrument Spreadsheets, see [Assessment Instrument Spreadsheet Guidance] on the Gravity Project Confluence site.
+
+Key for the “ValueSet for” Column: For readability, the formal names of these value sets in VSAC are shortened in the Table as follows:
+* Questions and Panels =  \<Category-specific\> Screening Assessments And Questions
+(Example: The formal name in VSAC for the Questions and Panels Value Set for Food insecurity is “Food Insecurity Screening Assessments And Questions”.)
+* Panels =  \<Category-specific\> Screening Assessments
+* Questions =  \<Category-specific\> Screening Assessments Questions
+* Answers =  \<Category-specific\> Screening Assessments Answers Value Set
+
+Of note, Grouper VSAC value sets containing the members of all the category-specific value sets for Observation.code and Observation.value are available here:
+
+* For Observation.code:
+  * [Social Determinants of Health Screening Assessments And Questions] Value Set
+  * [Social Determinants of Health Screening Assessments Questions] Value Set
+  * [Social Determinants of Health Screening Assessments] Value Set
+* For Observation.value: [Social Determinants of Health Screening Assessments Answers] Value Set
+
+<div>
+<table align="left" border="1" cellpadding="1" cellspacing="1" style="width:1000px;">
+	<caption>Category-specific Preferred Value Sets and Assessment Instrument Spreadsheets</caption>
+	<tbody>
+		<tr>
+			<td>Observation.category</td>
+			<td>Element binding</td>
+			<td>VSAC ValueSet for</td>
+			<td>VSAC OID</td>
+			<td>Assessment Instrument Spreadsheets</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-educational-attainment">educational-attainment</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-1</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Educational Attainment Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-2</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-3</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-4</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-elder-abuse">elder-abuse</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Elder Abuse Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-employment-status">employment-status</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Employment Status Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-financial-insecurity">financial-insecurity</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Financial Insecurity Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-health-insurance-coverage-status">health-insurance-coverage-status</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Health Insurance Coverage Status Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-personal-health-literacy">personal-health-literacy</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Health Literacy Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Homelessness Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Housing Instability Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-inadequate-housing">inadequate-housing</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Inadequate Housing Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-intimate-partner-violence">intimate-partner-violence</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Intimate Partner Violence Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-material-hardship">material-hardship</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Material Hardship Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-medical-cost-burden">medical-cost-burden</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Medical Cost Burden Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-social-connection">social-connection</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Social Connection Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-stress">stress</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Stress Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-transportation-insecurity">transportation-insecurity</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Transportation Insecurity Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-veteran-status">veteran-status</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="broken.html">Questions and Panels</a></td>
+			<td>OID-5</td>
+			<td colspan="1" rowspan="4"><a href="broken.html">Veteran Status Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Panels</a></td>
+			<td>OID-6</td>
+		</tr>
+		<tr>
+			<td><a href="broken.html">Questions</a></td>
+			<td>OID-7</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="broken.html">Answers</a></td>
+			<td>OID-8</td>
+		</tr>
+				<tr>
+			<td><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified">sdoh-category-unspecified</a></td>
+			<td colspan="5" rowspan="1">Category-specific value sets not applicable</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+
 
 {% include markdown-link-references.md %}

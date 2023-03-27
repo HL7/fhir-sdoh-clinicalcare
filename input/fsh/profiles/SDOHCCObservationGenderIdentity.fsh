@@ -3,7 +3,6 @@ Parent: SDOHCCObservationPersonalCharacteristic
 Id: SDOHCC-ObservationGenderIdentity
 Title: "SDOHCC Observation Gender Identity"
 Description: "Profile for gender identity observations which are based on a person’s inner sense of being a girl/woman/female/feminine, boy/man/male/masculine, nonbinary, something else, or having no gender. This profile is intended for draft use only. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
-* ^meta.versionId = "8"
 * ^status = #draft
 * ^abstract = false
 * . ^short = "Profile for observations about gender identity."

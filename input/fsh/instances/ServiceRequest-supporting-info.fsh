@@ -3,9 +3,6 @@ InstanceOf: SearchParameter
 Title: "ServiceRequestSupportingInfo"
 Description: "Any resources referenced by ServiceRequest.supportingInfo"
 Usage: #definition
-* meta.versionId = "2"
-* meta.lastUpdated = "2021-11-19T04:12:56.592+00:00"
-* meta.source = "#burpFh4Jg6KP31k5"
 * url = "http://hl7.org/fhir/us/sdoh-clinicalcare/SearchParameter/ServiceRequest-supporting-info"
 * version = "1.0.0"
 * name = "ServiceRequestSupportingInfo"

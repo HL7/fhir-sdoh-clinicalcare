@@ -3,9 +3,6 @@ InstanceOf: USCorePractitionerRoleProfile
 Title: "SDOHCC Practitioner Role Dr Jan Water Example"
 Description: "An example of a family medicine physician PractitionerRole. This example is used as the referenced practitioner role in other IG examples."
 Usage: #example
-* meta.versionId = "6"
-* meta.lastUpdated = "2022-04-06T20:56:13.866+00:00"
-* meta.source = "#BjmS65cneLYxVyRU"
 * identifier.system = "http://www.deerland.org/practitioners"
 * identifier.value = "2424"
 * active = true

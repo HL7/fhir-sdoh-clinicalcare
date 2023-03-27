@@ -3,10 +3,7 @@ Parent: USCoreProcedureProfile
 Id: SDOHCC-Procedure
 Title: "SDOHCC Procedure"
 Description: "Profile for interventions that address Social Determinants of Health."
-* ^meta.versionId = "19"
-* ^meta.lastUpdated = "2022-10-19T17:02:29.639+00:00"
-* ^meta.source = "#Z7191TbvZLv65Z6X"
-* ^version = "0.1.0"
+
 * ^status = #draft
 * ^date = "2020-12-14T04:01:34+00:00"
 * ^jurisdiction = urn:iso:std:iso:3166#US
@@ -46,7 +43,7 @@ Description: "Profile for interventions that address Social Determinants of Heal
 * category.coding[SDOH] ^binding.description = "Codes for high-level SDOH categories."
 * code from USCoreProcedureCodes (required)
 * code ^definition = "The specific procedure that is performed. Use text if the exact nature of the procedure cannot be coded."
-* code ^comment = "As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories. For further guidance on external value sets vetted by the Gravity Project see: [SDOH terminology guidance](support_for_multiple_domains.html#external-value-set-guidance)"
+* code ^comment = "As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories."
 * code ^binding.description = "Codes describing the type of  Procedure"
 * performed[x] ^requirements = "NOTE: dateTime should be Must Support, but currenlty tooling does not support this."
 * reasonCode ^comment = "Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used. Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure.\r\n\r\nInformation represented by Procedure.reasonCode may overlap significantly with information represented by Procedure.reasonReference. Multiple approaches to representing the same information may negatively impact interoperability. Therefore, where similar information could be provided by either Procedure.reasonCode or Procedure.reasonReference, it is recommended that Procedure.reasonReference be used to provide a reason for why a procedure was performed.\r\n\r\nAs the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set may be refined to codes that pertain to SDOH categories."

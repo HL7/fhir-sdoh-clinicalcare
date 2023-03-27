@@ -1,6 +1,7 @@
 
-### Usage
-* Needs an intro that explains what the profile is for and point to the page(s) in the spec where its use in workflow is described.
+### Purpose
+SDOHCC Group is intended to support identification of cohorts of individuals who have conditions in the same SDOH category (domain) AND are members of the same specific payer organization. (See Gravity [Use Case 3] which involves aggregation and analysis of individual-level social risk and need data to support clinical, system, and community activities.)
+The two required slices on Group.characteristic can be used to identify a cohort of subjects who have coverage through a specific payer organization AND a condition that falls into a specified SDOH category/domain.
 
 
 {% include markdown-link-references.md %}

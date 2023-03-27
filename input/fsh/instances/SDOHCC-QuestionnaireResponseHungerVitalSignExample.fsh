@@ -3,9 +3,6 @@ InstanceOf: SDCQuestionnaireResponse
 Title: "SDOHCC QuestionnaireResponse Hunger Vital Sign Example"
 Description: "An example of an SDC QuestionnaireResponse that represents questions and selected answers from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9). The example is generated using the LHC-Forms SDC Questionnaire App."
 Usage: #example
-* meta.versionId = "2"
-* meta.lastUpdated = "2022-04-26T15:19:58.281+00:00"
-* meta.source = "#kDPcb791ZinzUvXA"
 * questionnaire = "http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-QuestionnaireHungerVitalSign"
 * questionnaire.extension.url = "http://hl7.org/fhir/StructureDefinition/display"
 * questionnaire.extension.valueString = "SDOHCC Questionnaire Hunger Vital Sign"

@@ -1,26 +1,35 @@
 ### Jira Tickets – all applied -- see changes below
 
-1. FHIR-
-2. FHIR-
+* [FHIR-40447](https://jira.hl7.org/browse/FHIR-40447) Document the use of Gravity VS in the multi-domain profiles
+* [FHIR-40449](https://jira.hl7.org/browse/FHIR-40449) Improve rendering of Capability Statements
+* [FHIR-40450](https://jira.hl7.org/browse/FHIR-40450) Glossary
+* [FHIR-40460](https://jira.hl7.org/browse/FHIR-40460) SDOHCC Observation Assessment is not abstract
+* [FHIR-40586](https://jira.hl7.org/browse/FHIR-40586) Referral Task outputs bound appropriately
+* [FHIR-40611](https://jira.hl7.org/browse/FHIR-40611) Added slice to to ObservationScreeningResponse.member to reference all observations that are members of the group
+
+
+
 
 This update is focused on improving the readability of the IG narrative content.
 
 ### StructureDefinitions
 
-1. Included value set references in narrative for the multi-domain profiles (Condition, Goal, ServiceRequest, Procedure, and Observation)
-2. Improved narrative in all Profiles
-3. Abstract flag in [SDOHCCObservationAssessment] is now false
+* Included value set references in narrative for the multi-domain profiles (Condition, Goal, ServiceRequest, Procedure, and Observation)
+* Improved narrative in all Profiles
+* Abstract flag in [SDOHCCObservationAssessment] is now false - [FHIR-40460 ](https://jira.hl7.org/browse/FHIR-40460)
+* Corrected bindings for output procedures in [SDOHCCTaskForReferralManagement]   - [FHIR-40586](https://jira.hl7.org/browse/FHIR-40586)
+* Added slice to to ObservationScreeningResponse.member to reference all observations that are members of the group [FHIR-40611](https://jira.hl7.org/browse/FHIR-40611)
 
 
 ### CapabilityStatements
 
-1. Improved Rendering
+* Improved Rendering of all Capability Statements using [tools](https://github.com/caspears/CapStatement) and additional [scripts](https://github.com/HL7/fhir-sdoh-clinicalcare/tree/master/capstmt). [FHIR-40449](https://jira.hl7.org/browse/FHIR-40449)
 
-### Documentation
-
-* [Glossary](glossary.html) – Added glossary
+### Narrative
+* The narrative has been restructured and edited and all of the figures redrawn to improve overall readability
+* [Glossary](glossary.html) – Added glossary [FHIR-40450](https://jira.hl7.org/browse/FHIR-40450)
 
 ### FHIR Shorthand
-* The IG is now being maintained in FSH
+* The IG is now being maintained in [FHIR Shorthand syntax](http://hl7.org/fhir/uv/shorthand/)
 
 {% include markdown-link-references.md %}

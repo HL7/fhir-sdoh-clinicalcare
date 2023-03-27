@@ -3,12 +3,7 @@ Parent: USCoreCondition
 Id: SDOHCC-Condition
 Title: "SDOHCC Condition"
 Description: "Profile for Social Determinants of Health (SDOH) conditions."
-* ^meta.versionId = "23"
-* ^meta.lastUpdated = "2022-08-30T13:43:44.568+00:00"
-* ^meta.source = "#w2NX9ggeoO7TtL08"
-* ^version = "0.1.0"
 * ^status = #draft
-* ^date = "2020-12-14T04:01:34+00:00"
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * obeys SDOH-Con-1
 * . ^short = "Detailed information about SDOH conditions, problems or diagnoses"
@@ -33,7 +28,7 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * category[SDOH] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a condition. It is recommended that SDOH category codes be used to facilitate searching for SDOH conditions."
 * category[SDOH] ^binding.description = "Codes for high-level SDOH categories."
 * code from USCoreConditionCode (required)
-* code ^comment = "As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories. For further guidance on external value sets vetted by the Gravity Project see: [SDOH terminology guidance](support_for_multiple_domains.html#external-value-set-guidance)"
+* code ^comment = "As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories."
 * code ^requirements = "Code is required and must be selected from the bound value set."
 * code ^binding.description = "Valueset to describe the actual problem experienced by the patient"
 * bodySite ..0

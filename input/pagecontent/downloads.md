@@ -24,3 +24,5 @@ The following package file includes an NPM package file used by many of the FHIR
 
 Technical details about the [ImplementationGuide]({{site.data.fhir.path}}implementationguide.html) resource that define this specification, including dependencies and implementation guide publishing parameter settings.
 - [SDOH Clinical Care ImplementationGuide Resource](ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.html)
+
+{% include markdown-link-references.md %}

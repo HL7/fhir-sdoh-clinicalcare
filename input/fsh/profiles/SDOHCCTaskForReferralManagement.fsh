@@ -3,10 +3,7 @@ Parent: Task
 Id: SDOHCC-TaskForReferralManagement
 Title: "SDOHCC Task For Referral Management"
 Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceRequest (i.e. referral for service) and subsequently tracking and managing the fulfillment of that referral."
-* ^meta.versionId = "5"
-* ^meta.lastUpdated = "2022-05-10T15:07:12.720+00:00"
-* ^meta.source = "#tgdzTypVvy7mfvm3"
-* ^version = "0.1.0"
+
 * ^status = #draft
 * ^date = "2020-12-14T04:01:34+00:00"
 * ^jurisdiction = urn:iso:std:iso:3166#US
@@ -49,8 +46,8 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
     PerformedActivityReference 0..* MS and
     PerformedActivityCode 0..* MS
 * output[PerformedActivityReference].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
-* output[PerformedActivityReference].value[x] only Reference
+* output[PerformedActivityReference].value[x] only Reference(SDOHCCProcedure)
 * output[PerformedActivityReference].value[x] MS
 * output[PerformedActivityCode].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
-* output[PerformedActivityCode].value[x] only CodeableConcept
+* output[PerformedActivityCode].value[x] from USCoreProcedureCodes (required)
 * output[PerformedActivityCode].value[x] MS

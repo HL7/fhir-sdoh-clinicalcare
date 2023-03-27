@@ -1,3 +1,15 @@
+### Patient Privacy and Consent
+The Gravity Project recognizes the need to appropriately manage privacy and consent related to a patient's social risk issues.  This IG assumes that each organization has appropriate mechanisms in place to secure SDOH information and will only release it with appropriate consent.  The [Office of the National Coordinator (ONC)](https://www.healthit.gov/) and [HL7 International (HL7)](http://www.hl7.org/index.cfm), and the [Office of Civil Rights (OCR)](https://www.hhs.gov/ocr/index.html) (this is not an exhaustive list) have active programs in place to determine what needs to be done to protect all personal information (including SDOH) from inappropriate disclosure and use.
+
+Sharing data with CBOs and CPs must be done in conformance with HIPAA requirements.  Under HIPAA the disclosing party needs to acquire and maintain a record of the patient's consent.
+Although CBOs and CPs are not 'covered entities' under HIPAA,
+sharing with them can be facilitated by a Business Associate Agreement (BAA) between the covered entity (Providers, Payers and Clearing Houses) and the Business Associate.
+Entities covered under a BAA may be able to receive Protected Health Information (PHI) as part of the agreement without consent of the patient. However, they are required to observe the same limitations as covered entities with regard the protection and disclosure of PHI.  Patient consent would generally required for a provider to disclose a patient's PHI to a CBO or CP that is neither a covered entity nor covered by a BAA.  See the [Privacy and Security] section for more detailed requirements on protecting patient privacy.  CPOs and CPs should only be authorized to access patient data for those patients with which they have a relationship, and access to each patient's data is restricted to those data elements needed for the referral task, as described in the [Authorization and Access Control](http://hl7.org/fhir/R4/security.html#binding) section of FHIR Security.
+
+ In this version of the IG, we are providing a [profile of the FHIR Consent resource][SDOHCCConsent]  that can be exchanged between a [Covered Entity](https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html) and a [Business Associate (BA)](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html) when the patient has authorized the BA to release their information to a non-HIPAA covered entity.  The BA can use the provided consent in lieu of obtaining consent directly from the patient, reducing burden on the patient and BA.  Exchanging the consent obtained by the referring party is therefore a convenience, not a requirement.  While this is not a complete treatment of the issues related to consent, it is a starting point to test the viability of exchanging consent information.
+
+ The consent is referenced indirectly from the [SDOHCC Task For Referral Management] that is exchanged as part of the referral, and can be retrieved by the referral recipient through FHIR queries.   These relationships are shown in [Data Modeling Framework].
+
 ### Statutes, Regulations, and Guiding Principles
 All implementations of the SDOH ClinicalCare FHIR Implementation Guide (IG)
 * **SHALL** meet all current relevant Federal and State statutes and regulations regarding security and privacy.
@@ -36,3 +48,5 @@ Additionally protected information may include items defined by Federal (e.g., 4
 
 Where permitted by law and in accordance with legal requirements and, where appropriate, consent of the individual, release of additionally protected information **SHALL** always be supported.
 Release of the information without explicit request of the patient/member **SHALL** be based on organization policy consistent with Federal and State regulations. Examples are legal requests for information (HIPAA includes specific guidelines around who and which entities are duly authorized to make such requests and processes that must be followed at 45 CFR 164.512(e)-(f)) and “break glass” to treat a patient that is unable to provide consent (HIPAA speaks to the conditions that allow covered entities to use or disclose PHI when an individual is incapacitated at 45 CFR 164.510(a)(3)).
+
+{% include markdown-link-references.md %}

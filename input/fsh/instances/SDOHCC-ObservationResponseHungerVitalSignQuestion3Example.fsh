@@ -6,9 +6,8 @@ Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-06-03T01:20:13.914+00:00"
 * meta.source = "#KaCVXPLXkDdavodu"
-* category[0] = $observation-category#social-history "Social History"
-* category[+] = $observation-category#survey "Survey"
-* category[+] = $SDOHCC-CodeSystemTemporaryCodes#food-insecurity "Food Insecurity"
+* category[Survey] = $observation-category#survey "Survey"
+* category[SDOH] = $SDOHCC-CodeSystemTemporaryCodes#food-insecurity "Food Insecurity"
 * status = #final
 * code = $loinc#88124-3 "Food insecurity risk [HVS]"
 * subject.reference = "Patient/pat-53234"
@@ -18,4 +17,3 @@ Usage: #example
 * valueCodeableConcept = $loinc#LA19952-3 "At risk"
 * derivedFrom[0].reference = "Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion1Example"
 * derivedFrom[+].reference = "Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion2Example"
-* hasMember[hasMember] = Reference(SDOHCC-ObservationResponseHungerVitalSignGroupingExample)

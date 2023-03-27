@@ -1,14 +1,14 @@
 
 
 <!-- Gravity Confluence  -->
-[Patient Stories]: (https://confluence.hl7.org/display/GRAV/Patient+Stories)
+[Patient Stories]: https://confluence.hl7.org/display/GRAV/Patient+Stories
 [Gravity Confluence Technology Pages]: https://confluence.hl7.org/display/GRAV/Technical+Workstream+Dashboard
 [Gravity Project]:  https://confluence.hl7.org/display/GRAV/The+Gravity+Project
 
 <!-- # Other IGs -->
 [US Core Implementation Guide]: https://www.hl7.org/fhir/us/core/
-[HL7 Structured Data Capture IG]: http://hl7.org/fhir/uv/sdc/STU3/extraction.html#structuremap-based-extraction
-[Bulk Data exchange IG]: http://hl7.org/fhir/uv/bulkdata/
+[HL7 Structured Data Capture IG]: https://hl7.org/fhir/uv/sdc/STU3/extraction.html#structuremap-based-extraction
+[Bulk Data exchange IG]: https://hl7.org/fhir/uv/bulkdata/
 
 <!--# Technical IG Content -->
 [SDOHCC Observation Screening Response]: StructureDefinition-SDOHCC-ObservationScreeningResponse.html
@@ -20,22 +20,27 @@
 [SDOHCC Procedure]: StructureDefinition-SDOHCC-Procedure.html
 [SDOHCC Condition]: StructureDefinition-SDOHCC-Condition.html
 [SDOHCC Consent]: StructureDefinition-SDOHCC-Consent.html
+[SDOHCC ValueSet SDOH Category]: ValueSet-SDOHCC-ValueSetSDOHCategory.html
+
+[QuestionnaireResponse]: https://hl7.org/fhir/R4B/questionnaireresponse.html
+[Questionnaire]: https://hl7.org/fhir/R4B/questionnaire.html
+
+<!--# SDC -->
+[SDC QuestionnaireResponse]: https://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html
+[SDC FHIR Questionnaire]: https://hl7.org/fhir/us/sdc/sdc-questionnaire.html
+[StructureMap]: https://www.hl7.org/fhir/structuremap.html
+[Timing]: https://www.hl7.org/fhir/datatypes.html#timing
 
 <!--# Document Sections -->
-[Indirect Referral]: functional_use_cases.html#indirectreferral
-[Indirect Referral Light]: functional_use_cases.html#indirectreferrallight
-[Direct Referral]: functional_use_cases.html#directreferral
-[Direct Referral Light]: functional_use_cases.html#directreferrallight
-[Patient Workflow]: functional_use_cases.html#patientworkflow
-[Survey Instrument Support]: survey_instrument_support.html
+[Referral Workflow]: referral_workflow.html
+[Patient Workflow]: referral_workflow.html#patientworkflow
+[Assessment Instrument Support]: assessment_instrument_support.html
 [Observations]: {{site.data.fhir.path}}observation.html
 [Conditions]: {{site.data.fhir.path}}condition.html
 [StructureMap]: {{site.data.fhir.path}}structuremap.html
 [FHIR Mapping Language]: {{site.data.fhir.path}}mapping-language.html
-[Exchange Workflow]: exchange_workflow.html
-[Functional Use Cases]: functional_use_cases.html
+[Exchange Workflow]: referral_workflow.html
 [Capability Statements]: artifacts.html#capability-statements
-<<<<<<< HEAD
 [SDOHCC Task For Referral Management]: StructureDefinition-SDOHCC-TaskForReferralManagement.html
 [SDOHCC ServiceRequest]: StructureDefinition-SDOHCC-ServiceRequest.html
 [Gravity Project]:  https://confluence.hl7.org/display/GRAV/The+Gravity+Project
@@ -43,10 +48,26 @@
 [Gravity Confluence Technology Pages]: https://confluence.hl7.org/display/GRAV/Technical+Workstream+Dashboard
 [SDOHCCObservationAssessment]: StructureDefinition-SDOHCC-ObservationAssessment.html
 [SDOH Clinical Care ImplementationGuide Resource]: ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.html
-=======
-[Data Modeling Framework]: sdoh_clinical_care_background.html#data-modeling-framework
+[Data Modeling Framework]: sdoh_clinical_care_scope.html#data-modeling-framework
 [Checking Task Status]: checking_task_status.html
 [Privacy and Security]: privacy_and_security.html
+[VSAC]: https://vsac.nlm.nih.gov/
+[Direct Referral Exchange Workflow]: referral_workflow#direct-referral
+[Direct Referral (light) Exchange Workflow]: referral_workflow.html#direct-referral-light-exchange
+[Indirect Referral Exchange Workflow]: referral_workflow.html#indirect-referral-exchange
+[Indirect Referral Light Exchange Workflow]: referral_workflow.html#indirect-referral-exchange
+[Patient Workflow Exchange]: referral_workflow.html#patient-exchange
+[Indirect Referral]: referral_workflow.html#indirect-referral
+[Indirect Referral Light]: referral_workflow.html#indirect-referral-light
+[Direct Referral]: referral_workflow.html#direct-referral
+[Direct Referral Light]: referral_workflow.html#direct-referral-light
+
+[SDOHCC Observation Response Hunger Vital Sign Question 3 Example]: Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example.html
+[Assessment Instrument Spreadsheet Guidance]: broken.html
+[Social Determinants of Health Screening Assessments And Questions]: broken.html
+[Social Determinants of Health Screening Assessments Questions]: broken.html
+[Social Determinants of Health Screening Questions]: broken.html
+[Social Determinants of Health Screening Assessments Answers]: broken.html
 
 <!--# Icons -->
 [patienticon]: ./Patient.png
@@ -80,4 +101,3 @@
 {: height="32px" width="32px"}
 
 {% include fsh-link-references.md %}
->>>>>>> usecases

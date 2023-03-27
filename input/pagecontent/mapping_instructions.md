@@ -24,3 +24,5 @@ This guide includes examples of a Questionnaire, QuestionnaireResponse, resultin
 
 1. [Hunger Vital Sign Examples](artifacts.html#hunger-vital-signs-examples)
 2. [PRAPARE Examples](artifacts.html#prapare-examples)
+
+{% include markdown-link-references.md %}
