@@ -50,7 +50,7 @@ This IG contains a wealth of material targetting different audiences. Some secti
 
 | Section | Sub-section | Description | Audience |
 | --------| ----------- | --------- | ---------|
-| Background| SDOH and Gravity | General background on the importance of collecting and standardizing SDOH data, and the Gravity Project     |  General |
+| Background| [SDOH and Gravity](sdoh_challenges_gravity.html) | General background on the importance of collecting and standardizing SDOH data, and the Gravity Project     |  General |
 | Background| [SDOH Clinical Care Scope](sdoh_clinical_care_scope.html) | A description of the clinical scope of this IG    |  General |
 | Background| [FHIR Technical Background](technical_background.html) | Background material that should be understood prior to attempting to understand this IG     |  General/Introductory |
 | Implementation Guidance| [Assessment Instrument Support] | The importance of standard survey instruments for the collection of SDOH, and how survey instruments are mapped to SDOH Conditions, Observations and Goals     |  General |
