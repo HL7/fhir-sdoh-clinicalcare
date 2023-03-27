@@ -7,7 +7,7 @@ The below is for establishing connections to enable the exchange of information 
 The intent of this section is to further standardize the interactions between FHIR APIs and consumer or CBO applications.  To accomplish this, we are recommending that the following processes **SHOULD** be supported by all referral platforms and applications, to enable consistent processes to access data. The [capability statements](artifacts.html#capability-statements) provide further specifications for servers.
 
 #### Patient/Client Applications
-FHIR-enabled Patient/Client Applications follows connect to Provider or CBO as described in the [Patient Workflow] use case.
+FHIR-enabled Patient/Client Applications follows connect to Provider or CBO as described in the [Patient Coordination Workflow.
 This section describes the initial connection of the the Patient/Client application to the referral source (Provider) or referral target (CBO) CBO System.
 
 1. Applications are registered with the appropriate referral platforms.

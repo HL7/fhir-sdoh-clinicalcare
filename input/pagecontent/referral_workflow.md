@@ -138,7 +138,7 @@ The drawing is followed by a key that describes each labeled interaction.   The 
 | 10 (optional) | ![cboicon], ![patienticon]| CBO communicates with the patient via their application to schedule appointments, collect additional information, etc. This exchange might not occur electronically|  |
 | 11 | ![cboicon] | CBO completes the evaluation and enrollment, updates the status of the referral to completed, and includes information on what was completed. This will involve POSTing resources such as Procedures to the Provider FHIR server, and making sure they are linked appropriately. | [SDOHCC Task For Referral Management], [SDOHCC Procedure] |
 | 12 | ![providericon] | Provider receives the updated status | [Checking Task Status] |
-| 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Survey Instrument Support] |
+| 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Assessment Instrument Support] |
 | 14 | ![providericon] | determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately | [SDOHCC Goal] |
 {:.grid .center  }
 
@@ -157,7 +157,7 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 | 3 |  Target  | Get Service Request and Referenced Resources | [ServiceRequest](ServiceRequest-SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample.html), [Consent](Consent-SDOHCC-ConsentInformationDisclosureExample.html), [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) | [Transaction 3](FHIR_API_Examples.html#post-task-1) |
 | 4 |  Target | Update Task (accepted) | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 4](FHIR_API_Examples.html#post-task-1) |
 | 5 |  Target | Update Task (in-progress) | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 5](FHIR_API_Examples.html#post-task-1) |
-| 6 |  Target | Post Procedures | [Food Provided](SDOHCC-ProcedureProvisionOfFoodExample.html), [Application Assistance](SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample.html) | [Transaction 6](FHIR_API_Examples.html#post-task-1) |
+| 6 |  Target | Post Procedures | [Food Provided](Procedure-SDOHCC-ProcedureProvisionOfFoodExample.html), [Application Assistance](Procedure-SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample.html) | [Transaction 6](FHIR_API_Examples.html#post-task-1) |
 | 7 |  Source | Update Task (completed) | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 7](FHIR_API_Examples.html#post-task-1) |
 (FHIR_API_Examples.html#post-task-1) |
 {:.grid}

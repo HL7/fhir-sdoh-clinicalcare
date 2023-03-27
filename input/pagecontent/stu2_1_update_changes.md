@@ -8,8 +8,6 @@
 * [FHIR-40611](https://jira.hl7.org/browse/FHIR-40611) Added slice to to ObservationScreeningResponse.member to reference all observations that are members of the group
 
 
-
-
 This update is focused on improving the readability of the IG narrative content.
 
 ### StructureDefinitions

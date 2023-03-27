@@ -164,10 +164,10 @@ Added CapabilityStatement
 
 * [Home Page](index.html) – added reference to new content
 * [STU2 Changes](stu2_changes.html) – this page
-* [Functional Use Cases](functional_use_cases.html) – added Patient/Client use case (FHIR-34255) (FHIR-34255)
+* Functional Use Cases – added Patient/Client use case (FHIR-34255) (FHIR-34255)
 * Support for Multiple Domains – added support for VSAC group value sets (FHIR-34236)
-* [Exchange Workflow](exchange_workflow.html) – added new workflow for Patient/Client and CBO applications (FHIR-34255) (FHIR-34256)
-* [Synchronizing Applications with API Data Sources](synchronizing_applications_with_api_data_sources.html) -- new (FHIR-34255)
+* Exchange Workflow] – added new workflow for Patient/Client and CBO applications (FHIR-34255) (FHIR-34256)
+* Synchronizing Applications with API Data Sources -- new (FHIR-34255)
 * FHIR Artifacts Overview – updated to refer to new or changed artifacts
 * [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)-- new (FHIR-34339)
 
