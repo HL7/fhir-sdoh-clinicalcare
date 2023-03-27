@@ -1,6 +1,6 @@
 == Suppressed Messages ==
 
-# The following issue is inherited from the FHIR specification for Consent.
+# The  following issue is inherited from the FHIR specification for Consent.
 ERROR: StructureDefinition/SDOHCC-Consent: StructureDefinition.snapshot.element[9].example[0].value.ofType(Identifier): Consent: if identifier.system is ''urn:ietf:rfc:3986'', then the identifier.value must be a full URI (e.g. start with a scheme)
 
 # The following issues have been reviewed and these items are not intended to validate against one of the slices.
