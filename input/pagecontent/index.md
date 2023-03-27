@@ -2,7 +2,6 @@
 
 Social determinants of health (SDOH) are the conditions in the environments where people are born, live, learn, work, play, worship, and age that affect a wide range of health, functioning, and quality-of-life outcomes and risks[^1]. They are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange coded content using the HL7 FHIR Standard for the following SDOH-focused care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions.  This IG addresses the need to gather SDOH information in multiple settings, share that information between stakeholders, and exchange referrals between organizations to address specific social risk needs, all with appropriate patient consent.  In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research.
 
-[^1]: [Healthy People 2030](https://health.gov/healthypeople/priority-areas/social-determinants-health)
 
 This IG was developed by the [Gravity Project], which aims to build and promulgate consensus driven social determinants of health (SDOH) data standards for health and social care interoperability and use among multi-stakeholders.  Both the project and this implementation guide are focused on the U.S. environment.  This IG leverages content from the [US Core Implementation Guide](https://www.hl7.org/fhir/us/core/) and binds to US-specific terminology.  However, the basic constructs and interaction patterns may well be applicable outside the U.S.
 
@@ -46,7 +45,6 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 {:.grid}
 
 ### How to Read this IG
-***This table is a work in progress.  It will be updated once the IG narrative rewrite is complete.  For now it is illustrative***
 
 This IG contains a wealth of material targetting different audiences. Some sections provide more general or introductory content, while others provide detailed technical information targetted at implementors.  The table below provides a listing of the key sections of the IG in the rough order that they should be read.
 
@@ -72,5 +70,8 @@ This IG contains a wealth of material targetting different audiences. Some secti
 * [Examples](artifacts.html#examples):  This IG provides contextually relevant examples of all profiles.
 * [Referral Workflow]:  The management of referrals by providers to Community-based organizations with different levels of FHIR capability and the assignment of tasks to Patients is described in detail.
 * [Draft FHIR Artifacts for Personal Characteristics](draft_specifications_for_personal_characteristics.html):   These profiles are included to promote their use and eventual incorporation into USCore.
+
+----------------------------------------------------------------------------------------------------
+[^1]: [Healthy People 2030](https://health.gov/healthypeople/priority-areas/social-determinants-health)
 
 {% include markdown-link-references.md %}
