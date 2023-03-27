@@ -32,15 +32,14 @@
 [Timing]: https://www.hl7.org/fhir/datatypes.html#timing
 
 <!--# Document Sections -->
-
-[Patient Workflow]: functional_use_cases.html#patientworkflow
-[Survey Instrument Support]: survey_instrument_support.html
+[Referral Workflow]: referral_workflow.html
+[Patient Workflow]: referral_workflow.html#patientworkflow
+[Assessment Instrument Support]: assessment_instrument_support.html
 [Observations]: {{site.data.fhir.path}}observation.html
 [Conditions]: {{site.data.fhir.path}}condition.html
 [StructureMap]: {{site.data.fhir.path}}structuremap.html
 [FHIR Mapping Language]: {{site.data.fhir.path}}mapping-language.html
-[Exchange Workflow]: exchange_workflow.html
-[Functional Use Cases]: functional_use_cases.html
+[Exchange Workflow]: referral_workflow.html
 [Capability Statements]: artifacts.html#capability-statements
 [SDOHCC Task For Referral Management]: StructureDefinition-SDOHCC-TaskForReferralManagement.html
 [SDOHCC ServiceRequest]: StructureDefinition-SDOHCC-ServiceRequest.html
@@ -53,15 +52,15 @@
 [Checking Task Status]: checking_task_status.html
 [Privacy and Security]: privacy_and_security.html
 [VSAC]: https://vsac.nlm.nih.gov/
-[Direct Referral Exchange Workflow]: exchange_workflow#direct-referral
-[Direct Referral (light) Exchange Workflow]: exchange_workflow.html#direct-referral-light-exchange
-[Indirect Referral Exchange Workflow]: exchange_workflow.html#indirect-referral-exchange
-[Indirect Referral Light Exchange Workflow]: exchange_workflow.html#indirect-referral-exchange
-[Patient Workflow Exchange]: exchange_workflow.html#patient-exchange
-[Indirect Referral]: functional_use_cases.html#indirect-referral
-[Indirect Referral Light]: functional_use_cases.html#indirect-referral-light
-[Direct Referral]: functional_use_cases.html#direct-referral
-[Direct Referral Light]: functional_use_cases.html#direct-referral-light
+[Direct Referral Exchange Workflow]: referral_workflow#direct-referral
+[Direct Referral (light) Exchange Workflow]: referral_workflow.html#direct-referral-light-exchange
+[Indirect Referral Exchange Workflow]: referral_workflow.html#indirect-referral-exchange
+[Indirect Referral Light Exchange Workflow]: referral_workflow.html#indirect-referral-exchange
+[Patient Workflow Exchange]: referral_workflow.html#patient-exchange
+[Indirect Referral]: referral_workflow.html#indirect-referral
+[Indirect Referral Light]: referral_workflow.html#indirect-referral-light
+[Direct Referral]: referral_workflow.html#direct-referral
+[Direct Referral Light]: referral_workflow.html#direct-referral-light
 
 [SDOHCC Observation Response Hunger Vital Sign Question 3 Example]: Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example.html
 [Assessment Instrument Spreadsheet Guidance]: broken.html
