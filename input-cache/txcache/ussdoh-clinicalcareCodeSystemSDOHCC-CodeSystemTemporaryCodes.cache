@@ -6,6 +6,118 @@
     "include" : [{
       "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
       "concept" : [{
+        "code" : "self-reported",
+        "display" : "Self Reported"
+      },
+      {
+        "code" : "reported-by-related-person",
+        "display" : "Reported By Related Person"
+      },
+      {
+        "code" : "administrative",
+        "display" : "Administrative"
+      },
+      {
+        "code" : "derived-specify",
+        "display" : "Derived Specify"
+      },
+      {
+        "code" : "other-specify",
+        "display" : "Other Specify"
+      },
+      {
+        "code" : "observed",
+        "display" : "Observed"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:ceb23760-7433-434c-978a-e2c833bae2f9",
+    "timestamp" : "2023-03-28T03:04:46.510Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|2.0.0-update"
+    }],
+    "contains" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The subject reported the information about the subject."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "self-reported",
+      "display" : "Self Reported"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Someone related to the subject reported the information about the subject."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "reported-by-related-person",
+      "display" : "Reported By Related Person"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The information about the subject was collected by an organization for administrative reasons not necessarily directly related to obtaining healthcare or health insurance."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "administrative",
+      "display" : "Administrative"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The information about the subject was derived from information or methods other than directly reported by an individual. Text or derivedFrom should be used to further specify the method."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "derived-specify",
+      "display" : "Derived Specify"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The actual value is not a member of the set of permitted data values in the constrained value domain of a variable. Text should be used to further specify the value."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "other-specify",
+      "display" : "Other Specify"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Direct observation of the subject was used to obtain information about the subject."
+      }],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "code" : "observed",
+      "display" : "Observed"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "concept" : [{
         "code" : "sdoh-category-unspecified",
         "display" : "SDOH Category Unspecified"
       },
@@ -86,8 +198,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:27a8f48f-1834-414b-866d-9ac9a1abc039",
-    "timestamp" : "2022-12-17T23:28:52.619Z",
+    "identifier" : "urn:uuid:6c97dd8e-f603-41d8-b7d2-274b5f340c46",
+    "timestamp" : "2023-03-28T03:04:46.839Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -98,7 +210,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|2.0.0"
+      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|2.0.0-update"
     }],
     "contains" : [{
       "extension" : [{
@@ -302,8 +414,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:3b533ea2-9291-457a-9329-a25278f30be0",
-    "timestamp" : "2022-12-17T23:28:53.010Z",
+    "identifier" : "urn:uuid:f408410c-30cc-4730-a8b6-c9f2cf64f472",
+    "timestamp" : "2023-03-28T03:04:47.292Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -314,7 +426,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|2.0.0"
+      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|2.0.0-update"
     }],
     "contains" : [{
       "extension" : [{
@@ -393,8 +505,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:0382a8fe-0392-4b9f-a903-3b7b0ae13ff2",
-    "timestamp" : "2022-12-17T23:28:53.369Z",
+    "identifier" : "urn:uuid:a5acdd7f-13c2-4a39-83ff-f2c4f583faee",
+    "timestamp" : "2023-03-28T03:04:47.510Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -405,7 +517,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|2.0.0"
+      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|2.0.0-update"
     }],
     "contains" : [{
       "extension" : [{
@@ -433,118 +545,6 @@ e: {
       "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
       "code" : "general-information",
       "display" : "General Information"
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "inactive" : true,
-    "include" : [{
-      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
-      "concept" : [{
-        "code" : "self-reported",
-        "display" : "Self Reported"
-      },
-      {
-        "code" : "reported-by-related-person",
-        "display" : "Reported By Related Person"
-      },
-      {
-        "code" : "administrative",
-        "display" : "Administrative"
-      },
-      {
-        "code" : "derived-specify",
-        "display" : "Derived Specify"
-      },
-      {
-        "code" : "other-specify",
-        "display" : "Other Specify"
-      },
-      {
-        "code" : "observed",
-        "display" : "Observed"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "language" : "en",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:fb119f56-d456-4e25-92a3-bd1674fe30c6",
-    "timestamp" : "2022-12-17T23:28:55.088Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes|2.0.0"
-    }],
-    "contains" : [{
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "The subject reported the information about the subject."
-      }],
-      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
-      "code" : "self-reported",
-      "display" : "Self Reported"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Someone related to the subject reported the information about the subject."
-      }],
-      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
-      "code" : "reported-by-related-person",
-      "display" : "Reported By Related Person"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "The information about the subject was collected by an organization for administrative reasons not necessarily directly related to obtaining healthcare or health insurance."
-      }],
-      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
-      "code" : "administrative",
-      "display" : "Administrative"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "The information about the subject was derived from information or methods other than directly reported by an individual. Text or derivedFrom should be used to further specify the method."
-      }],
-      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
-      "code" : "derived-specify",
-      "display" : "Derived Specify"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "The actual value is not a member of the set of permitted data values in the constrained value domain of a variable. Text should be used to further specify the value."
-      }],
-      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
-      "code" : "other-specify",
-      "display" : "Other Specify"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Direct observation of the subject was used to obtain information about the subject."
-      }],
-      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
-      "code" : "observed",
-      "display" : "Observed"
     }]
   }
 },

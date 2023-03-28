@@ -60,10 +60,22 @@ For the purposes of this IG, there will be no need for 'topic discovery' as ther
 ServiceRequest](#servicerequest-topic).  While neither of these topics are unique to the Gravity IG, because no standard topics have yet been defined for US Core, this IG will define the needed
 topics here.  In the future, these topics may be subsumed into general-purpose topics defined by US Core and/or the FHIR core specification.
 
-**NOTE:  Lloyd will add some text about using e-mail and SMS as a notification mechanism**
+Subscriptions can also be used to nofify CBOs that are less sophisticated and do not have a reliable endpoint to receive a web-hook or similar notification.  Subscription can also be
+to send notifications to users rather than systems.  The [[[Subscription]]] resource includes a `channelType` of "email".  This release of the specification is also introducing a new
+`channelType` code of [sms](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sms) (see below).  Both of these approaches can be used to alert a service 
+delivery provider that there are changes in their subscription and that they should sign into their application and check for new information.
 
-Systems supporting subscription SHALL support the rest-hook channel mechanism, though they may choose to support other channel approaches.  Servers SHALL support both
-JSON and XML and clients SHALL support at least one of these.  Client and server SHALL support id-only, though they may  also support other content approaches.  The
+While the email channelType communicates both human-readable text as well as a computable [[[Bundle]]] containing the subscription notification, the new sms notification only communicates
+human readable information - the subscription id as well as a short message indicating that there is new information available.  `Subscription.contentType` SHALL be "omit" for
+both security as well as bandwidth reasons.  The `endpoint` will be populated with the phone number to send the SMS message to, expressed in compliance with 
+[rfc3966](https://www.rfc-editor.org/rfc/rfc3966) - i.e. "tel:" followed by the phone number digits.
+
+While CBOs wishing to use subscription rather than polling SHOULD support creating and updating the Subscription instance using the RESTful endpoint, in some environments the
+subscription configuration might be maintained manually by the CP or EHR, minimizing the complexity needed for the CBO system.
+
+EHR and CBO systems supporting subscription SHALL support the rest-hook channel mechanism and SHOULD support email, though they may choose to support other channel approaches.  Servers SHALL support both
+JSON and XML and clients SHALL support at least one of these.  Client and server SHALL support "id-only", though they may  also support other content approaches.
+(If they support SMS, they SHALL support "omit".)  The
 id-only approach means that the id of the Task or ServiceRequest that was updated or created will be provided.  The client will then perform a read or a query to
 retrieve the specified record(s) specified in the subscription notification. E.g.
 
