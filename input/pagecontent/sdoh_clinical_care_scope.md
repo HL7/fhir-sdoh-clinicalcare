@@ -13,9 +13,9 @@ The focus for this version of the IG is to standardize the exchange of SDOH info
 The following items are out of scope for this version of the IG.
 
 * Providing guidance on the frequency of administering assessments (this is left up to the responsible organizations based on their standards of practice).
-* Standards for reporting quality measures to payers or quality organizations (this is left to the Data Exchange for Quality Measures Implementation Guide that was co-authored by NCQA).
+* Standards for reporting quality measures to payers or quality organizations (this is left to the [Data Exchange for Quality Measures Implementation Guide](https://hl7.org/fhir/us/davinci-deqm/) that was co-authored by NCQA).
 * Addressing Consent beyond the consent to share information between a HIPAA covered entity and entities that are not covered by HIPAA.
-* Administrative activities such as eligibility checking, prior authorization, or billing for SDOH services.
+* Administrative activities such as eligibility checking, prior authorization, or billing for SDOH services. *** Do we want to explicitly cite other IGs?***
 
 ### Conceptual Framework
 
@@ -28,7 +28,7 @@ In the drawing above, each of the actors supports a set of roles that are descri
 <br>
 
 
-<table align="left" border="1" cellpadding="1" cellspacing="1" style="width:1000px;">
+<table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
 <thead>
 <tr>
 <th>Actor</th>
@@ -43,7 +43,9 @@ In the drawing above, each of the actors supports a set of roles that are descri
 <td></td>
 </tr>
 <tr>
-<td>Patient</td>
+<td>Patient
+<img src="patient.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="Patient}">
+</td>
 <td><ul><li>Responds to screening questions and is assessed based on the responses and interaction with a provider</li><li>Discusses with provider and agrees to establihsing concerns/problems (Conditions) Goals</li><li>Consents to the sharing of their information</li><li>Completes additional feedback questionnaire(s) for providers</li></ul></td>
 <td><a href="https://www.hl7.org/fhir/questionnaire.html">Questionnaire</a>, <a href="https://www.hl7.org/fhir/questionnaireresponse.html">QuestionnaireResponse</a>,
 <a href="StructureDefinition-SDOHCC-Condition.html">SDOHCC Condition</a>, <a href="StructureDefinition-SDOHCC-ObservationAssessment.html">SDOHCC Observation Assessment</a>, <a href="StructureDefinition-SDOHCC-ObservationScreeningResponse.html">SDOHCC Observation Screening Response</a>,<a href="StructureDefinition-SDOHCC-TaskForPatient.html">SDOHCC Task for Patient</a></td>
@@ -87,6 +89,8 @@ In the drawing above, each of the actors supports a set of roles that are descri
 </table>
 
 <br>
+
+
 ### Scope of Interactions
 
 The scope of interactions is intended to cover all of the interactions shown in the drawing below. The focus of the current IG is interactions between a patient, provider, and CBO, with possible intermediation by a CP. **In the future, the IG will be expanded to support Payers and Government agencies, and referrals from non-health care providers.**  The IG supports interactions with CBOs that support either a FHIR-enabled application that can FHIR servers, or a FHIR-server based application that supports querying other FHIR servers, as well as being queried by other applications.  In the drawing below, bidirectional solid arrows reflect communication between two endpoints with FHIR servers, whereas unidirectional solid arrows reflect communicaiton between a FHIR-enabled application and a FHIR server.
