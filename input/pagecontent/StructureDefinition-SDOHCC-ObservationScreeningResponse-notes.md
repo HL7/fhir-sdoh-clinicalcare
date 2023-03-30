@@ -43,7 +43,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 Of note, Grouper VSAC value sets containing the members of all the category-specific value sets for Observation.code and Observation.value are available here:
 
 * For Observation.code:
-  * [Social Determinants of Health Screening Assessments And Questions] Value Set
+  * [Social Determinants of Health Screening Assessments And Questions](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/updates/broken.html) Value Set
   * [Social Determinants of Health Screening Assessments Questions] Value Set
   * [Social Determinants of Health Screening Assessments] Value Set
 * For Observation.value: [Social Determinants of Health Screening Assessments Answers] Value Set
@@ -82,22 +82,22 @@ Of note, Grouper VSAC value sets containing the members of all the category-spec
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-elder-abuse">elder-abuse</a></td>
 			<td rowspan="3">Observation.code</td>
-			<td><a href="broken.html">Questions and Panels</a></td>
-			<td>OID-5</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.191/expansion/Latest">Questions and Panels</a></td>
+			<td>2.16.840.1.113762.1.4.1247.191</td>
 			<td colspan="1" rowspan="4"><a href="broken.html">Elder Abuse Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
-			<td><a href="broken.html">Panels</a></td>
-			<td>OID-6</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.144/expansion/Latest">Panels</a></td>
+			<td>2.16.840.1.113762.1.4.1247.144</td>
 		</tr>
 		<tr>
-			<td><a href="broken.html">Questions</a></td>
-			<td>OID-7</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.189/expansion/Latest">Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.189</td>
 		</tr>
 		<tr>
 			<td>Observation.value</td>
-			<td><a href="broken.html">Answers</a></td>
-			<td>OID-8</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.190/expansion/Latest">Answers</a></td>
+			<td>2.16.840.1.113762.1.4.1247.190</td>
 		</tr>
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-employment-status">employment-status</a></td>
