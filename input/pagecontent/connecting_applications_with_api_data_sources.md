@@ -12,8 +12,8 @@ This section describes the initial connection of the the Patient/Client applicat
 
 1. Applications are registered with the appropriate referral platforms.
 2. On the first use of the application
-  * Patient/Client is provided a URL (e.g., via a QR code) to download the application to their smart phone or a link to an on-line application.
-  * Patient/Client establishes application security
+  * Patient/Client is provided a URL or a QR code.  The patient passes this information to the app - by keying in the URL or by authorizing the app to take a picture of the QR code in order to download the application to their smart phone or use as a link to an on-line application.
+  * Patient/Client establishes application security  **expand??**
 3. Referral Source provides Patient with a URL (e.g., via a QR code) to the API that redirects to an authorization server
   * Patient enters credentials provided by the referral platform
   * Application is provided with an access token and refresh token
@@ -21,7 +21,7 @@ This section describes the initial connection of the the Patient/Client applicat
 5. When the patient/client authenticates to the application, on a timed schedule or on demand
   * Application uses the URL and refresh token to obtain an access token
   * ~~Application follows the Referral Source Light workflow process~~
-6. **Application queries for Tasks????**
+6. **Application queries for Tasks????  "patient app might query for Tasks, Goals, Referrals"**
 
 Note: steps 3-5 are repeated for each referral source
 
@@ -35,8 +35,8 @@ FHIR-enabled CBO Applications follows the [Direct Referral Light] or [Indirect R
 3. API URL and the tokens are stored in the application
 4. When the CBO authenticates to the application, on a timed schedule, or on demand
   * Application uses the URL and refresh token to obtain an access token
-5. **Application queries for Tasks????**
+5. **Application queries for Tasks???? CBO app will query for Tasks, as well as updates to data they've previously received **
 
-Note: steps 2-4 are repeated for each referral source
+Note: steps 2-5 are repeated for each referral source
 
 {% include markdown-link-references.md %}
