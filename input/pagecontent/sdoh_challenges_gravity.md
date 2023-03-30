@@ -4,9 +4,9 @@ The influence of social determinants on outcomes is increasingly recognized in e
 
 The growing awareness around SDOH has contributed to efforts to address actionable social risk factors through the health care delivery system.  Recommendations from national groups, including the [American Academy of Pediatrics](https://www.aap.org/), [American Academy of Family Physicians](https://www.aafp.org/), [Agency for Healthcare Research and Quality](https://www.ahrq.gov/), [National Quality Forum (NQF)](https://www.qualityforum.org/), and [Institute for Health Care Improvement](http://www.ihi.org/) underscore the various roles the health care system could play in helping to identify and address patients' social risks and needs.
 
-{% include img-med.html img="Whatgoesintoyourhealth.jpg" caption="Figure 1: What goes into your health? An illustration of the impact health care has on a person’s health versus non-healthcare factors." %}
+{% include img.html img="Whatgoesintoyourhealth.jpg" caption="Figure 1: What goes into your health? An illustration of the impact health care has on a person’s health versus non-healthcare factors.<sup>1</sup>" %}
 
-There is gorwing awareness that social risks negatively impact health outcomes and that addressing social risks improves health outcomes.  For example:
+There is growing awareness that social risks negatively impact health outcomes and that addressing social risks improves health outcomes.  For example:
 * Food insecurity correlates with higher levels of diabetes, hypertension, and heart failure
 * Housing instability factors into lower treatment adherence
 * Transportation barriers result in missed appointments, delayed care, and lower medication compliance
@@ -34,5 +34,8 @@ The [Pilot testing workstream](https://confluence.hl7.org/display/GRAV/Gravity+
 {% include img-medsmall.html img="GravityProject.png" caption="Figure 2: Gravity Project Workstreams" %}
 
 For more information about Gravity see the Gravity project [website](https://thegravityproject.net/) or [confluence site](https://confluence.hl7.org/display/GRAV/Join+the+Gravity+Project).
+
+----------------------------------------------------------------------
+[^1]: Source: Institute for Clinical Systems Improvement.  Going Beyond Clinical Walls.  Solving Complex Problems (Octoboer 2014)
 
 {% include markdown-link-references.md %}
