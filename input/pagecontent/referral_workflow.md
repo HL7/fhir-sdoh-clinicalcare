@@ -85,7 +85,7 @@ The drawing is followed by a key that describes each labeled interaction.   The 
 | 10 (optional) | ![cboicon], ![patienticon]| CBO communicates with the patient via their application to schedule appointments, collect additional information, etc.  This communication might not take place electronically.|  |
 | 11 | ![cboicon] | CBO completes the evaluation and enrollment, updates the status of the referral (task) to completed, and includes information on what was completed | [SDOHCC Task For Referral Management], [SDOHCC Procedure] |
 | 12 | ![providericon] | Provider receives the updated status and updates the status of the referral (service request) | [Checking Task Status] |
-| 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Assessment Instrument Support], [SDOHCC Task For Patient][SDOHCCTaskForPatient], [Questionnaire] |
+| 13 (Optional) | ![providericon] | Provider closes loop by gathering feedback/satisfaction via questionnaire | [Assessment Instrument Support], [SDOHCC Task For Patient][SDOHCCTaskForPatient], [Questionnaire] |
 | 14 | ![providericon] | Provider determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately | [SDOHCC Goal] |
 {:.grid}
 
@@ -98,15 +98,14 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 | #    | From |  Description | Instances involved | FHIR Transaction |
 | ===  | ==== | ============ | ================== | ================ |
 | 1 |  Source | Post Referral Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) | [Transaction 1](FHIR_API_Examples.html#post-task-1) |
-| 2 |  Source | Post Subscription | [Subscription](broken.html) | [Transaction 2](broken.html) |
-| 3 |  Target  | Get Service Request and Referenced Resources | [ServiceRequest](ServiceRequest-SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample.html), [Consent](Consent-SDOHCC-ConsentInformationDisclosureExample.html), [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) | [Transaction 3](FHIR_API_Examples.html#post-task-1) |
-| 4 |  Target | Send Notification |  | [Transaction 4](FHIR_API_Examples.html#post-task-1) |
-| 5 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 5](FHIR_API_Examples.html#post-task-1) |
-| 6 |  Target | Send Notification |  | [Transaction 6](FHIR_API_Examples.html#post-task-1) |
-| 7 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 7](FHIR_API_Examples.html#post-task-1) |
-| 8 |  Target | Send Notification |  | [Transaction 8](FHIR_API_Examples.html#post-task-1) |
-| 9 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 9](FHIR_API_Examples.html#post-task-1) |
-| 10 |  Source | Get Procedures | [Food Provided](Procedure-SDOHCC-ProcedureProvisionOfFoodExample.html), [Application Assistance](Procedure-SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample.html) | [Transaction 10](FHIR_API_Examples.html#post-task-1) |
+| 2 |  Target  | Get Service Request and Referenced Resources | [ServiceRequest](ServiceRequest-SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample.html), [Consent](Consent-SDOHCC-ConsentInformationDisclosureExample.html), [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) | [Transaction 3](FHIR_API_Examples.html#post-task-1) |
+| 3 |  Target | Send Notification | [Subscription Notification Bundle] | [Transaction 4](FHIR_API_Examples.html#post-task-1) |
+| 4 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 5](FHIR_API_Examples.html#post-task-1) |
+| 5 |  Target | Send Notification | [Subscription Notification Bundle] | [Transaction 6](FHIR_API_Examples.html#post-task-1) |
+| 6 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 7](FHIR_API_Examples.html#post-task-1) |
+| 7 |  Target | Send Notification | [Subscription Notification Bundle] | [Transaction 8](FHIR_API_Examples.html#post-task-1) |
+| 8 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 9](FHIR_API_Examples.html#post-task-1) |
+| 9 |  Source | Get Procedures | [Food Provided](Procedure-SDOHCC-ProcedureProvisionOfFoodExample.html), [Application Assistance](Procedure-SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample.html) | [Transaction 10](FHIR_API_Examples.html#post-task-1) |
 {:.grid}
 
 
@@ -255,7 +254,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 1. Parties SHOULD use polling if one or both of the parties is unable to support the subscription model (see notes on the [Checking Task Status](checking_task_status.html) page).
 2. The receiving party for the referral SHOULD use the batch query process to request periodic updates of reference resources.
 3. The above system flows do not define the handling of all possible scenarios. Exchange scenarios may include refusing the referral, canceling the referral by either party, and error conditions that may occur when using RESTful exchanges.  It is up to each party to follow the current best practice in managing the state of the referral.
-4. The Provider / Requester SHOULD set the Task.status to "requested" until it receives a valid HTTPS response indicating that the Task was received at which point it SHOULD set the Task.status to "received".
+4. The Provider/Requester SHOULD set the Task.status to "requested" until it receives a valid HTTPS response indicating that the Task was received at which point it SHOULD set the Task.status to "received".
 
 ### Patient Coordination Workflow
 
