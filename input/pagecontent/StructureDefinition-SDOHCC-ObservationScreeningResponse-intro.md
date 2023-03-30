@@ -59,7 +59,7 @@ Of note, Grouper VSAC value sets containing the members of all the category-spec
   * [Social Determinants of Health Screening Assessments] Value Set
 * For Observation.value: [Social Determinants of Health Screening Assessments Answers] Value Set
 
-<div>
+<div width=100%>
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:1000px;">
 	<caption>Category-specific Preferred Value Sets and Assessment Instrument Spreadsheets</caption>
 	<tbody>

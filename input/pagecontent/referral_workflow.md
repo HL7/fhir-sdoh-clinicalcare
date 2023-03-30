@@ -1,4 +1,4 @@
-This section describes the interactions between the actors in an SDOH referral starting at a high level, and drilling down to the details of the FHIR API calls, and provides links to the profiles and sections of the IG where more detail is provided.  First a high-level overview of the interactions is provided that will abstract technical details.   For example, the mechanism through which the referring provider is informed of the status of the referral could use FHIR Subscriptions or polling (see [Checking Task Status] for details).   Similarly, the relationships between the profiles referenced are not described (see [Data Modeling Framework] ).  Management of task status is not described (see [Checking Task Status]).
+This section describes the interactions between the actors in an SDOH referral starting both at a high level and at the level of FHIR API calls.   First a high-level overview of the interactions is provided.  This description abstracts technical details and should be accessible to the non-technical reader.  Details on task status updates (see [Checking Task Status] for details), and the relationship between profiles references (see [Data Modeling Framework] ) are omitted for clarity.
 
 The use cases here relate to the Gravity [Patient Stories].  Implementers will benefit from looking at the detailed technical description of the exchange work flow for each use case, as well as the [Capability Statements] associated with each workflow and the [conformance artifacts](artifacts.html) generally.
 
@@ -21,10 +21,10 @@ The actors in the workflows are described in the table below.   The graphical ic
 | Actor    |  Description |
 | ----------  | ------------------ |
 | ![providericon] Provider  | Includes licensed providers and others that interact with the patient to assess social risk, set goals, and determine/recommend referrals.   |
-| ![ccicon]  Care Coordinator (CC)       | A person who organizes various referral activities on behalf of the recipient and communicates information between all those involved in the care delivery.   |
+| ![ccicon]  Care Coordinator (CC)       | Coordinates the care and referral activities but normally does not make assessment, goal, or referral decisions.   |
 | ![cboicon] Community Based Organization (CBO)  | Public or private not-for-profit resource hubs that provide specific services to the community or targeted population within the community.   |
 | ![cpicon]  Coordination Platform (CP) | An intermediary that receives referrals, assesses patient needs, and works with one or more CBOs to deliver the services.   |
-| ![patienticon] Patient   | definition consistent with Glossary   |
+| ![patienticon] Patient   | A consumer, or client, who is the subject of the assessment, goals, referrals and services delivered. Use of the term in this IG does not imply a clinical context.   |
 | ![fhirserver] FHIR Server | A server that supports a FHIR API and can make FHIR API calls on other servers |
 | ![fhirapplication] FHIR-enabled Application | An application that can make FHIR API calls to a FHIR server, but does not itself support a FHIR API |
 | ![patientapp] FHIR-enabled Patient Application | A patient application that can connect to FHIR servers |
@@ -67,7 +67,7 @@ The CBO may not accept the referral or be unable to perform the requested servic
 
 The drawing is followed by a key that describes each labeled interaction.   The section of the drawing focused on the FHIR-based exchanges specified by this IG are highlighted with a blue dashed rectangle.  The details of the FHIR-based exchanges in that box are provided in the [following section](referral_workflow.html#direct-referral-detailed-view).
 
-<object data="FunctionalUseCaseFlowDirectReferral3.svg" type="image/svg+xml"></object>
+<object data="DirectReferral.svg" type="image/svg+xml"></object>
 <br/>
 
 
