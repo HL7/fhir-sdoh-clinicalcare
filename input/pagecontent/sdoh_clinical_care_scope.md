@@ -24,6 +24,10 @@ Coded SDOH content is captured across core health care activities: screening/ass
 {% include img.html img="AlternateScopeOfIG.svg" caption="Figure 1: Scope of IG" %}
 
 ### Actors and Process Roles
+** LM: Are the actors the people or the systems?  I had presumed they were systems, but if that's the case, the names should reflect that. **
+
+** LM: SHould we break CP into its own row?. **
+
 In the drawing above, each of the actors supports a set of roles that are described here:
 <br>
 
@@ -44,7 +48,7 @@ In the drawing above, each of the actors supports a set of roles that are descri
 </tr>
 <tr>
 <td>Patient
-<img src="patient.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="Patient}">
+<img src="Patient.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="Patient}">
 </td>
 <td><ul><li>Responds to screening questions and is assessed based on the responses and interaction with a provider</li><li>Discusses with provider and agrees to establihsing concerns/problems (Conditions) Goals</li><li>Consents to the sharing of their information</li><li>Completes additional feedback questionnaire(s) for providers</li></ul></td>
 <td><ul><li><a href="https://www.hl7.org/fhir/questionnaire.html">Questionnaire</a></li><li><a href="https://www.hl7.org/fhir/questionnaireresponse.html">QuestionnaireResponse</a></li><li>
@@ -93,7 +97,7 @@ In the drawing above, each of the actors supports a set of roles that are descri
 
 ### Scope of Interactions
 
-The scope of interactions is intended to cover all of the interactions shown in the drawing below. The focus of the current IG is interactions between a patient, provider, and CBO, with possible intermediation by a CP. **In the future, the IG will be expanded to support Payers and Government agencies, and referrals from non-health care providers.**  The IG supports interactions with CBOs that support either a FHIR-enabled application that can FHIR servers, or a FHIR-server based application that supports querying other FHIR servers, as well as being queried by other applications.  In the drawing below, bidirectional solid arrows reflect communication between two endpoints with FHIR servers, whereas unidirectional solid arrows reflect communicaiton between a FHIR-enabled application and a FHIR server.
+The scope of interactions is intended to cover all of the interactions shown in the drawing below. The focus of the current IG is interactions between a patient, provider, and CBO, with possible intermediation by a CP. **In the future, the IG will be expanded to support Payers and Government agencies, and referrals from non-health care providers.**  The IG supports interactions with CBOs that support either a FHIR-enabled application that can FHIR servers, or a FHIR-server based application that supports querying other FHIR servers, as well as being queried by other applications.  In the drawing below, bidirectional solid arrows reflect communication between two endpoints with FHIR servers, whereas unidirectional solid arrows reflect FHIR API calls by a FHIR-enabled application against a FHIR server.
 
 {% include img.html img="SystemDiagram.svg" caption="Figure 2: System Interactions" %}
 <br>
