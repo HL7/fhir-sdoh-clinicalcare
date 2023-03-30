@@ -2,7 +2,7 @@
 
 The influence of social determinants on outcomes is increasingly recognized in emerging payment reform programs, federal and state-based policies, and information technology initiatives.  Social determinants of health (SDOH) are defined by the [World Health Organization](https://www.who.int/) as the conditions in which people are born, live, work, and age.
 
-The growing awareness around SDOH has contributed to efforts to address actionable social risk factors through the health care delivery system.  Recommendations from national groups, including the [American Academy of Pediatrics](https://www.aap.org/), [American Academy of Family Physicians](https://www.aafp.org/), [Agency for Healthcare Research and Quality](https://www.ahrq.gov/), [National Quality Forum (NQF)](https://www.qualityforum.org/), and [Institute for Health Care Improvement](http://www.ihi.org/) underscore the various roles the health care system could play in helping to identify and address patients' social risks and needs.
+The growing awareness around SDOH has contributed to efforts to address actionable social risk factors through the health care delivery system.  Recommendations from national groups, including the [American Academy of Pediatrics](https://www.aap.org/), [American Academy of Family Physicians](https://www.aafp.org/), [Agency for Healthcare Research and Quality](https://www.ahrq.gov/), [National Quality Forum (NQF)](https://www.qualityforum.org/), and [Institute for Health Care Improvement](http://www.ihi.org/) underscore the various roles the health care system could play in helping to identify and address patients' social risks and needs.[^1]
 
 {% include img.html img="Whatgoesintoyourhealth.jpg" caption="Figure 1: What goes into your health? An illustration of the impact health care has on a person’s health versus non-healthcare factors.<sup>1</sup>" %}
 
@@ -36,6 +36,6 @@ The [Pilot testing workstream](https://confluence.hl7.org/display/GRAV/Gravity+
 For more information about Gravity see the Gravity project [website](https://thegravityproject.net/) or [confluence site](https://confluence.hl7.org/display/GRAV/Join+the+Gravity+Project).
 
 ----------------------------------------------------------------------
-[^1]: Source: Institute for Clinical Systems Improvement.  Going Beyond Clinical Walls.  Solving Complex Problems (Octoboer 2014)
+[^1]: Source: Institute for Clinical Systems Improvement.  Going Beyond Clinical Walls.  Solving Complex Problems (Octoboer 2014).  The BridgeSpan Group.
 
 {% include markdown-link-references.md %}
