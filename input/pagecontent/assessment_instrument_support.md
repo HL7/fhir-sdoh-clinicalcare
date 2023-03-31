@@ -53,7 +53,7 @@ Example StructureMap and output are available below in this IG for the [Hunger V
 
 #### Hunger Vital Sign (HVS) Assessment Instrument Example
 
-This implementation guide includes a complete example[^1] of the [Hunger Vital Sign (HVS) Survey](https://loinc.org/88121-9/) assessment instrument including:
+This implementation guide includes a complete example of the [Hunger Vital Sign (HVS) Survey](https://loinc.org/88121-9/) assessment instrument[^1] including:
 
 * an [SDC Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)
 * an [SDC QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html)
@@ -80,8 +80,6 @@ This implementation guide includes a partial example of the [PRAPARE](https://lo
 * two [SDOHCC Condition] instances to record the health concerns based on the results of the assessment instrument
   * [Unemployed](Condition-SDOHCC-ConditionUnemployedExample.html)
   *  [Homeless](Condition-SDOHCC-ConditionHomelessExample.html)
-
-  ----------------------------------------------------------------------------------------------------
 
 [^1]: The Hunger Vital Sign Survey is © 2010 Dr. Erin Hager and Dr. Anna Quigg and the Children’s HealthWatch research team, and the example is included with permission.
 [^2]: This example comes from the national PRAPARE social determinants of health assessment protocol, developed and © 2019 by the National Association of Community Health Centers (NACHC), in partnership with the Association of Asian Pacific Community Health Organization (AAPCHO), the Oregon Primary Care Association (OPCA), and the Institute for Alternative Futures (IAF). For more information, visit [www.nachc.org/prapare](http://www.nachc.org/prapare). It is included with permission.
@@ -114,5 +112,6 @@ This guide includes examples of a Questionnaire, QuestionnaireResponse, resultin
 1. [Hunger Vital Sign Examples](artifacts.html#hunger-vital-signs-examples)
 2. [PRAPARE Examples](artifacts.html#prapare-examples)
 
+ ----------------------------------------------------------------------------------------------------
 
  {% include markdown-link-references.md %}
