@@ -8,14 +8,37 @@ Codes in the category-specific, preferred value sets are from LOINC-encoded asse
 ### Guidance on Category-specific Preferred Value Set Naming Conventions, Content, and Usage
 For category-specific, preferred value sets for this profile, Table 1 provides guidance on naming conventions, content, and usage. Table 2 provides links to the category-specific preferred value sets in VSAC and to accompanying category-specific Assessment Instrument Spreadsheets on the Gravity Project Confluence page.
 
+<table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
+	<caption>Guidance on Naming COnventions</caption>
+	<tbody>
+		<tr>
+			<td>Value Set Naming Pattern</td>
+			<td>Value Set Contains</td>
+			<td>Value Set Usage Guidance</td>
+		</tr>
+		<tr>
+			<td>\<Category\> Screening Assessments Questions</td>
+			<td>LOINC codes for the preferred, category-specific questions selected from the Assessment Instruments.</td>
+			<td>For an SDOHCC Observation Screening Response that represents a question and its coded answer, Observation.code SHOULD be a LOINC question code from this value set and Observation.value SHOULD be a LOINC answer code from the \<Category\> Screening Assessments Answers value set (described below).</td>
+		</tr>
+		<tr>
+			<td>\<Category\> Screening Assessments</td>
+			<td>LOINC codes for the assessment instruments (LOINC panels) from which the preferred, category-specific questions have been selected.</td>
+			<td>For an SDOHCC Observation Screening Response that is an Observation Grouping, Observation.code SHOULD use panel LOINC codes from this value set. An Observation Grouping does not have an Observation.value. Instead, an Observation Grouping (via Observation.hasMember) references all Observations generated from a specific assessment instrument. See [SDOHCC Observation Response Hunger Vital Sign Grouping Example].  |</td>
+		</tr>
+			<tr>
+			<td>\<Category\> Screening Assessments And Questions</td>
+			<td>All codes in \<Category\> Screening Assessments Questions value set (LOINC question codes) AND \<Category\> Screening Assessments value set (LOINC panel codes).</td>
+			<td>For SDOHCC Observation Screening Response, this is the complete set of preferred values allowed for Observation.code for a category-specific Observation and can be used to validate that Observation.code is from a preferred, category-specific value set.</td>
+		</tr>
+		<tr>
+			<td>\<Category\> Screening Assessments Answers</td>
+			<td>LOINC answer codes for the preferred, category-specific questions.</td>
+			<td>For an SDOHCC Observation Screening Response that represents a question and a coded answer, Observation.code SHOULD be a LOINC question code from the \<Category\> Screening Assessments Questions value set and Observation.value SHOULD be a LOINC answer code from the \<Category\> Screening Assessments Answers value set.</td>
+		</tr>
+	</tbody>
+</table>
 
-| Value Set Naming Pattern    | Value Set Contains   | Value Set Usage Guidance      |
-| --------------------------- | -------------------- | ---------------------------   |
-| \<Category\> Screening Assessments Questions | LOINC codes for the preferred, category-specific questions selected from the Assessment Instruments.  | For an SDOHCC Observation Screening Response that represents a question and its coded answer, Observation.code SHOULD be a LOINC question code from this value set and Observation.value SHOULD be a LOINC answer code from the \<Category\> Screening Assessments Answers value set (described below). |
-| \<Category\> Screening Assessments | LOINC codes for the assessment instruments (LOINC panels) from which the preferred, category-specific questions have been selected.  | For an SDOHCC Observation Screening Response that is an Observation Grouping, Observation.code SHOULD use panel LOINC codes from this value set. An Observation Grouping does not have an Observation.value. Instead, an Observation Grouping (via Observation.hasMember) references all Observations generated from a specific assessment instrument. See [SDOHCC Observation Response Hunger Vital Sign Grouping Example].  |
-| \<Category\> Screening Assessments And Questions | All codes in \<Category\> Screening Assessments Questions value set (LOINC question codes) AND \<Category\> Screening Assessments value set (LOINC panel codes). | For SDOHCC Observation Screening Response, this is the complete set of preferred values allowed for Observation.code for a category-specific Observation and can be used to validate that Observation.code is from a preferred, category-specific value set. |
-| \<Category\> Screening Assessments Answers   | LOINC answer codes for the preferred, category-specific questions. | For an SDOHCC Observation Screening Response that represents a question and a coded answer, Observation.code SHOULD be a LOINC question code from the \<Category\> Screening Assessments Questions value set and Observation.value SHOULD be a LOINC answer code from the \<Category\> Screening Assessments Answers value set. |
-{.:grid}
 
 ### Guidance For Preferred Value Sets For Observation.code
 
