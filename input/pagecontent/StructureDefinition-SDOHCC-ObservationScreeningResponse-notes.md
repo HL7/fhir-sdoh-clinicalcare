@@ -92,7 +92,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="broken.html">Panels and Questions</a></td>
 			<td>missing</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Educational Attainment Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Less%20Than%20High%20School%20Education%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Educational Attainment Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="broken.html">Panels</a></td>
@@ -132,7 +132,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.205/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1247.205</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Employment Status Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Unemployment%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Employment Status Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.133/expansion/Latest">Panels</a></td>
@@ -172,7 +172,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.2.16.840.1.113762.1.4.1247.194/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1247.194</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Food Insecurity Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Food%20Insecurity%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Food Insecurity Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.138/expansion/Latest">Panels</a></td>
@@ -191,7 +191,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.3519/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1196.3519</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Health Insurance Coverage Status Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Health%20Insurance%20Coverage%20Status%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Health Insurance Coverage Status Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.138/expansion/Latest/">Panels</a></td>
@@ -211,7 +211,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.195/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1247.195</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Health Literacy Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Health%20Literacy%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Health Literacy Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.141/expansion/Latest">Panels</a></td>
@@ -231,7 +231,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.196/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1247.196</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Homelessness Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Homelessness%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Homelessness Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.129/expansion/Latest">Panels</a></td>
@@ -251,7 +251,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.197/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1247.197</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Housing Instability Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Housing%20Instability%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Housing Instability Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.130/expansion/Latest">Panels</a></td>
@@ -271,7 +271,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.3520/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1196.3520</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Inadequate Housing Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Inadequate%20Housing%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Inadequate Housing Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.131/expansion/Latest">Panels</a></td>
@@ -311,7 +311,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.140/expansion/Latest">Panels and Questions</a></td>
 			<td>missing</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Material Hardship Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Material%20Hardship%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Material Hardship Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.140/expansion/Latest">Panels</a></td>
@@ -331,7 +331,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="broken.html">Panels and Questions</a></td>
 			<td>OID-5</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Medical Cost Burden Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Medical%20Cost%20Burden%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Medical Cost Burden Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="broken.html">Panels</a></td>
@@ -391,7 +391,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="broken.html">Panels and Questions</a></td>
 			<td>OID-5</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Transportation Insecurity Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Transportation%20Insecurity%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Transportation Insecurity Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="broken.html">Panels</a></td>

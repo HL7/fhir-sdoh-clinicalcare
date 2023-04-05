@@ -6,6 +6,7 @@
 * [FHIR-40460](https://jira.hl7.org/browse/FHIR-40460) SDOHCC Observation Assessment is not abstract
 * [FHIR-40586](https://jira.hl7.org/browse/FHIR-40586) Referral Task outputs bound appropriately
 * [FHIR-40611](https://jira.hl7.org/browse/FHIR-40611) Added slice to to ObservationScreeningResponse.member to reference all observations that are members of the group
+* [FHIR-40771](https://jira.hl7.org/browse/FHIR-40771) Constrained TaskForReferralManagement.status to exclude requested value.
 
 
 This update is focused on improving the readability of the IG narrative content.
@@ -17,7 +18,7 @@ This update is focused on improving the readability of the IG narrative content.
 * Abstract flag in [SDOHCCObservationAssessment] is now false - [FHIR-40460 ](https://jira.hl7.org/browse/FHIR-40460)
 * Corrected bindings for output procedures in [SDOHCCTaskForReferralManagement]   - [FHIR-40586](https://jira.hl7.org/browse/FHIR-40586)
 * Added slice to to ObservationScreeningResponse.member to reference all observations that are members of the group [FHIR-40611](https://jira.hl7.org/browse/FHIR-40611)
-
+* Restricted TaskForReferralManagement.status to exclude requested value.
 
 ### CapabilityStatements
 

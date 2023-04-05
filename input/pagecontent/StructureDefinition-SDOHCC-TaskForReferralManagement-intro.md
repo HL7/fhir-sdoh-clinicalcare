@@ -19,7 +19,6 @@ The allowed state transitions are defined graphically in the state diagram below
 | ---- | ------- | ---------- | ------ |
 | `draft` | Draft | The task is not yet ready to be acted upon | Requester |
 | `requested` | Requested | The task is ready to be acted upon and action is sought | Requester |
-| `received` | Received | A potential performer has claimed ownership of the task and is evaluating whether to perform it | Responder |
 | `accepted` | Accepted | The potential performer has agreed to execute the task but has not yet started work | Responder |
 | `rejected` | Rejected | The potential performer has decided not to execute it prior to performing any action. | Responder |
 | `ready` | Ready | The task is ready to be performed, but no action has been taken. Used in place of requwested/received/accepted/rejected when request assignment and acceptance is given| Responder |

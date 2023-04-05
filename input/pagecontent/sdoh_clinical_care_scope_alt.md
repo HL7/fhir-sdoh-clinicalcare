@@ -15,7 +15,7 @@ The following items are out of scope for this version of the IG.
 * Providing guidance on the frequency of administering assessments (this is left up to the responsible organizations based on their standards of practice).
 * Standards for reporting quality measures to payers or quality organizations (this is left to the [Data Exchange for Quality Measures Implementation Guide](https://hl7.org/fhir/us/davinci-deqm/) that was co-authored by NCQA).
 * Addressing Consent beyond the consent to share information between a HIPAA covered entity and entities that are not covered by HIPAA.
-* Administrative activities such as eligibility checking, prior authorization, or billing for SDOH services. *** Do we want to explicitly cite other IGs?***
+* Administrative activities such as eligibility checking, prior authorization, or billing for SDOH services.
 
 ### Conceptual Framework
 
