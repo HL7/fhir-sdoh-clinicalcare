@@ -6,7 +6,7 @@ The use cases here relate to the Gravity [Patient Stories].  Implementers will b
 
 This IG supports the following general [workflow](sdoh_clinical_care_scope.html):
 
-1. Assess the patient to determine social risk -- this may be done by using an assessment tool or via a conversation with the patient, or both.  As part of the assessment, the patient and provider agree on the specific risk items that are to be labeled as verified health concerns or problems.
+1. Assess the patient to determine social risk -- this may be done by using an assessment instrument or via a conversation with the patient, or both.  As part of the assessment, the patient and provider agree on the specific social risk that are to be labeled as verified health concerns or problems.
 2. The patient and provider may establish specific goals regarding the identified social risk.
 3. The patient and provider agree on specific referrals/interventions that should be undertaken to address the problems and goals.  The patient's consent is obtained to share their specific information with the entity that will be performing the services.  The provider then sends a task to the performing entity to initiate the electronic referral.
 
@@ -60,7 +60,7 @@ The functional use cases in the table below describe the referral process initia
 ### Direct Referral
 <a name="directreferral"></a>
 
-In this use case a provider works with a patient using a standardized assessment tool to identify and prioritize social risks and needs, set goals, and obtain consent for referral ( steps 1-6 in diagram below).The patient is then referred to a CBO for help addressing prioritized needs ( steps 8-9) The CBO accepts the referral, provides the requested support to the patient, and shares the updated information with the referring provider.
+In this use case a provider works with a patient using a standardized assessment instrument to identify and prioritize social risks and needs, set goals, and obtain consent for referral ( steps 1-6 in diagram below).The patient is then referred to a CBO for help addressing prioritized needs ( steps 8-9) The CBO accepts the referral, provides the requested support to the patient, and shares the updated information with the referring provider.
 
 The Provider and the CBO have FHIR servers.  The Patient has a FHIR-enabled patient application.
 
@@ -75,7 +75,7 @@ The drawing is followed by a key that describes each labeled interaction.   The 
 
 | Step | Actors | Description| Exchanged | Aligns With|
 | -----| ------------- | ------- | ---------------- |
-| 1 | ![patienticon] | Patient takes standardized assessment tool to identify social risks and needs |  | [SDOHCCTaskForPatient] , [Questionnaire], [QuestionnaireResponse] |
+| 1 | ![patienticon] | Patient takes standardized assessment to identify social risks and needs |  | [SDOHCCTaskForPatient] , [Questionnaire], [QuestionnaireResponse] |
 | 2 | ![providericon]| Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity | | [SDOHCC Observation Screening Response][SDOHCCObservationScreeningResponse] |
 | 3 | ![providericon], ![patienticon]|  Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list | | [SDOHCC Condition] |
 | 4 | ![providericon], ![patienticon]|  Provider and patient identify a goal to pursue enrollment in a SNAP program | | [SDOHCC Goal][SDOHCCGoal] |
@@ -112,7 +112,7 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 
 
 ### Direct Referral Light
-In this use case a provider works with a patient using a standardized assessment tool to identify and prioritize social risks and needs (steps 1-3), and then refers the patient to a CBO for help addressing those needs (steps4-9a) a CBO to help address those needs.  The CBO provides the requested support to the patient and the updated information is shared with the referring provider.
+In this use case a provider works with a patient using a standardized assessment instrument to identify and prioritize social risks and needs (steps 1-3), and then refers the patient to a CBO for help addressing those needs (steps4-9a) a CBO to help address those needs.  The CBO provides the requested support to the patient and the updated information is shared with the referring provider.
 
 The Provider has a FHIR server. The CBO has a FHIR-enabled application.  The Patient has a FHIR-enabled patient application.
 
@@ -126,7 +126,7 @@ The drawing is followed by a key that describes each labeled interaction.   The 
 
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
-| 1 | ![patienticon] | Patient takes standardized assessment tool to identify social risks and needs | [Assessment Instrument Support] |
+| 1 | ![patienticon] | Patient takes standardized assessment to identify social risks and needs | [Assessment Instrument Support] |
 | 2 | ![providericon]| Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity | &nbsp; |
 | 3 | ![providericon], ![patienticon]|  Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list | [SDOHCC Condition], [SDOHCC Condition] |
 | 4 | ![providericon], ![patienticon]|  Provider and patient identify a goal to pursue enrollment in a SNAP program | [SDOHCC Goal] |
@@ -165,7 +165,7 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 ### Indirect Referral with Direct CBO
 <a name="indirectreferral"></a>
 
-In this use case a provider works with a patient using a standardized assessment tool to identify and prioritize social risks and needs, and then refers the patient indirectly via a CP to a CBO for help addressing those needs.  The CP relays the referral to the CBO.  The CBO provides the requested support to the patient and the updated information is relayed back through the CP where it is shared with the referring provider.
+In this use case a provider works with a patient using a standardized assessment instrument to identify and prioritize social risks and needs, and then refers the patient indirectly via a CP to a CBO for help addressing those needs.  The CP relays the referral to the CBO.  The CBO provides the requested support to the patient and the updated information is relayed back through the CP where it is shared with the referring provider.
 
 Functionally, this indirect referral is essentially two direct referrals (Provider to CP, and CP to CBO) chained together.  The Provider, CP, and CBO all have FHIR servers.  The Patient has a FHIR-enabled application.
 
@@ -176,7 +176,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
-| 1 | ![patienticon] | Patient takes standardized assessment tool to identify social risks and needs | [Survey Instrument Support] |
+| 1 | ![patienticon] | Patient takes standardized assessment to identify social risks and needs | [Survey Instrument Support] |
 | 2 | ![providericon]| Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity | &nbsp; |
 | 3 | ![providericon], ![patienticon]|  Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list | [SDOHCC Condition] |
 | 4 | ![providericon], ![patienticon]|  Provider and patient identify a goal to pursue enrollment in a SNAP program | [SDOHCC Goal] |
@@ -227,7 +227,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
-| 1 | ![patienticon] | Patient takes standardized assessment tool to identify social risks and needs | [Survey Instrument Support] |
+| 1 | ![patienticon] | Patient takes standardized assessment to identify social risks and needs | [Survey Instrument Support] |
 | 2 | ![providericon]| Provider evaluates assessment and identifies Food Insecurity and Transportation Insecurity | &nbsp; |
 | 3 | ![providericon], ![patienticon]|  Provider and patient decide to address the Food Insecurity first – Provider promotes the health concern to the problem list |  [SDOHCC Condition] |
 | 4 | ![providericon], ![patienticon]|  Provider and patient identify a goal to pursue enrollment in a SNAP program | [SDOHCC Goal] |
