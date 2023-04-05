@@ -1,20 +1,22 @@
 
-### General Guidance For Preferred Value Sets For SDOHCC Observation Screening Response
+#### General Guidance For Preferred Value Sets For SDOHCC Observation Screening Response
 
 The minimum value set bindings for Observation.code and Observation.value are specified in the profile. However, for each SDOH category (domain) covered in this IG, there are also category-specific, preferred value sets. For an observation instance, selecting a category-specific code (e.g., food-insecurity, transportation-insecurity) from the [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) bound to Observation.category will determine the preferred, category-specific value sets for Observation.code and Observation.value. Where a preferred value set contains a code to describe a needed concept, servers SHOULD use that code.
 
 Codes in the category-specific, preferred value sets are from LOINC-encoded assessment instruments that have been vetted as face-valid by the Gravity Project. For the list of assessment instruments from which Gravity has chosen questions, see the [Social Determinants of Health Screening Assessments](broken.html) value set which is hosted in the NIH Value Set Authority Center ([VSAC]). For each Gravity-vetted assessment instrument, the questions are also vetted and only those that also meet Gravity criteria are included in the preferred value sets.
 
-### Guidance on Category-specific Preferred Value Set Naming Conventions, Content, and Usage
-For category-specific, preferred value sets for this profile, Table 1 provides guidance on naming conventions, content, and usage. Table 2 provides links to the category-specific preferred value sets in VSAC and to accompanying category-specific Assessment Instrument Spreadsheets on the Gravity Project Confluence page.
+#### Guidance on Category-specific Preferred Value Set Naming Conventions, Content, and Usage
+The table provides guidance on naming conventions, content, and usage for the category-specific, preferred value sets.
+
+Note: For “Value Set Naming Pattern” below, <Category> is a placeholder for a specific SDOH category/domain (e.g., Food Insecurity).
 
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
-	<caption>Guidance on Naming Conventions</caption>
+	<caption><b>Category-specific Preferred Value Set Naming Conventions, Content and Usage</b></caption>
 	<tbody>
 		<tr>
-			<td>Value Set Naming Pattern</td>
-			<td>Value Set Contains</td>
-			<td>Value Set Usage Guidance</td>
+			<td><b>Value Set Naming Pattern</b></td>
+			<td><b>Value Set Contains</b></td>
+			<td><b>Value Set Usage Guidance</b></td>
 		</tr>
 		<tr>
 			<td>&lt;Category&gt; Screening Assessments Questions</td>
@@ -24,7 +26,7 @@ For category-specific, preferred value sets for this profile, Table 1 provides g
 		<tr>
 			<td>&lt;Category&gt; Screening Assessments</td>
 			<td>LOINC codes for the assessment instruments (LOINC panels) from which the preferred, category-specific questions have been selected.</td>
-			<td>For an SDOHCC Observation Screening Response that is an Observation Grouping, Observation.code SHOULD use panel LOINC codes from this value set. An Observation Grouping does not have an Observation.value. Instead, an Observation Grouping (via Observation.hasMember) references all Observations generated from a specific assessment instrument. See [SDOHCC Observation Response Hunger Vital Sign Grouping Example].  |</td>
+			<td>For an SDOHCC Observation Screening Response that is an Observation Grouping, Observation.code SHOULD use panel LOINC codes from this value set. An Observation Grouping does not have an Observation.value. Instead, an Observation Grouping (via Observation.hasMember) references all Observations generated from a specific assessment instrument. See <a href="Observation-SDOHCC-ObservationResponseHungerVitalSignGroupingExample.html">SDOHCC Observation Response Hunger Vital Sign Grouping Example</a>.  |</td>
 		</tr>
 			<tr>
 			<td>&lt;Category&gt; Screening Assessments And Questions</td>
@@ -40,7 +42,7 @@ For category-specific, preferred value sets for this profile, Table 1 provides g
 </table>
 
 
-### Guidance For Preferred Value Sets For Observation.code
+<!-- #### Guidance For Preferred Value Sets For Observation.code
 
 In the Value Set names below,  \<Category-specific\> is a placeholder for a specific SDOH category (e.g., Food Insecurity).
 
@@ -58,7 +60,7 @@ Instead, an Observation Grouping (via Observation.hasMember) references all Obse
 
 For SDOHCC Observation Screening Response, this is the complete set of preferred values allowed for Observation.code for a category-specific Observation and can be used to validate that Observation.code is from a preferred, category-specific value set.
 
-### Guidance For Preferred Value Sets For Observation.value
+#### Guidance For Preferred Value Sets For Observation.value
 
  **\<Category-specific\> Screening Assessments Answers** Value Set – Contains LOINC answer codes for the preferred, category-specific questions.
 
@@ -67,8 +69,8 @@ For an SDOHCC Observation Screening Response that represents a question and a co
 Of note, each question (Observation.code) has a subset of allowed answers (Observation.value) and, the allowed answers for a specific question may vary depending on the assessment instrument (LOINC panel) on which the question is presented (e.g., [`88122-7`](https://loinc.org/88122-7) "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]" has 4 possible answers on [Hunger Vital Sign (HVS)](https://loinc.org/88121-9) panel versus three possible answers on the [American Academy of Family Physicians Social Needs Screening Tool](https://loinc.org/99593-6)). For this reason, the category-specific Assessment Instrument Spreadsheets (last column in Table below) provide additional information to link specific assessment instruments to questions and their allowed LOINC Answer Lists. LOINC also provides Answers Lists for questions from specific assessment instruments (panels).
 
 For additional information on fields in the Assessment Instrument Spreadsheets, see [Assessment Instrument Spreadsheet Guidance] on the Gravity Project Confluence site.
-
-### Links to Category-specific Preferred Value Sets and Assessment Instrument Spreadsheets
+ -->
+#### Links to Category-specific Preferred Value Sets and Assessment Instrument Spreadsheets
 
 Key for the “ValueSet for” Column: For readability, the formal names of these value sets in VSAC are shortened in the Table as follows:
 * Panels and Questions =  \<Category-specific\> Screening Assessments And Questions
@@ -78,14 +80,14 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 * Answers =  \<Category-specific\> Screening Assessments Answers Value Set
 
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
-	<caption>Category-specific Preferred Value Sets and Assessment Instrument Spreadsheets</caption>
+	<caption><b>Category-specific Preferred Value Sets and Assessment Instrument Spreadsheets</b></caption>
 	<tbody>
 		<tr>
-			<td>Observation.category</td>
-			<td>Element binding</td>
-			<td>VSAC ValueSet for</td>
-			<td>VSAC OID</td>
-			<td>Assessment Instrument Spreadsheets</td>
+			<td><b>Observation.category</b></td>
+			<td><b>Element binding</b></td>
+			<td><b>VSAC ValueSet for</b></td>
+			<td><b>VSAC OID</b></td>
+			<td><b>Assessment Instrument Spreadsheets (explained <a href = "StructureDefinition-SDOHCC-ObservationScreeningResponse.html#guidance-on-category-specific-assessment-instrument-spreadsheets">here</a>)</b></td>
 		</tr>
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-educational-attainment">educational-attainment</a></td>
@@ -441,9 +443,9 @@ Of note, Grouper VSAC value sets containing the members of all the category-spec
   * [Social Determinants of Health Screening Assessments] Value Set
 * For Observation.value: [Social Determinants of Health Screening Assessments Answers] Value Set
 
-### Guidance on Category-specific Assessment Instrument Spreadsheets
+#### Guidance on Category-specific Assessment Instrument Spreadsheets
 
-Each question (Observation.code) on an assessment instrument has a set of allowed answers (Observation.value). The allowed answers for a specific question may vary depending on the assessment instrument (LOINC panel) on which the question is presented (e.g., [88122-7](https://loinc.org/88122-7) "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]" has 4 possible answers on the [Hunger Vital Sign (HVS)](https://loinc.org/88121-9) panel versus three possible answers on the [American Academy of Family Physicians Social Needs Screening Tool](https://loinc.org/99593-6)). For this reason, the category-specific Assessment Instrument Spreadsheets (last column in Table 2 below) provide additional information to link specific assessment instruments to questions and their allowed LOINC Answer Lists. LOINC also provides Answers Lists for questions from specific assessment instruments (panels).
+Each question (Observation.code) on an assessment instrument has a set of allowed answers (Observation.value). The allowed answers for a specific question may vary depending on the assessment instrument (LOINC panel) on which the question is presented (e.g., [88122-7](https://loinc.org/88122-7) "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]" has 4 possible answers on the [Hunger Vital Sign (HVS)](https://loinc.org/88121-9) panel versus three possible answers on the [American Academy of Family Physicians Social Needs Screening Tool](https://loinc.org/99593-6)). For this reason, the category-specific Assessment Instrument Spreadsheets provide additional information to link specific assessment instruments to questions and their allowed LOINC Answer Lists. LOINC also provides Answers Lists for questions from specific assessment instruments (panels).
 
 ​For additional information on fields in the Assessment Instrument Spreadsheets, see [Assessment Instrument Spreadsheet Guidance](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/updates_0327/broken.html) on the Gravity Project Confluence site.
 
