@@ -217,22 +217,22 @@ The Provider has a relationship with the CP, but not with the CBO.  The use case
 The Provider may request to have the service delivered by a specific CBO.   The CP may not accept the referral or be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
 
 
-{% include img.html img="FunctionalUseCaseFlowIndirectDirectLightReferral3.svg" caption="Figure 3: Annotated Flow Diagram for Indirect Referral Light" %}
+{% include img.html img="FlowIndirectDirectLightReferralFunctional" caption="Figure 3: Annotated Flow Diagram for Indirect Referral Light" %}
 
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
-| I1 | ![providericon]| Provider or Care Coordinator creates and sends an electronic referral (and a copy of the consent) to the CP.  Same as 8a in the Direct Referral but the Provider is communicating with the CP instead of the CBO | [SDOHCC Service Request], [SDOHCC Task For Referral Management]  |
-| I2 | ![cpicon] | CP receives and accepts referral | [SDOHCC Task For Referral Management]  |
-| I3 (optional) | ![cpicon], ![patienticon]| CP communicates with the patient via their application to schedule appointments, collect additional information, etc. This exchange might not occur electronically| |
-| I4b | ![cboicon] | CBO application queries CP FHIR API for new or updated referrals.  The flow is the same as for the Direct Referral Light but with the CP acting as a provider system. | [SDOHCC Task For Referral Management], [SDOHCC Procedure] |
-| I5b | ![cboicon] | CBO finds new referral and accepts the referral | [SDOHCC Task For Referral Management] |
-| I6a (optional)| ![cpicon] | CP makes information regarding the referral available to the patient’s application. |  |
-| I7 | ![cboicon] | CP updates status of the initial referral | [SDOHCC Task For Referral Management] |
-| I8b (optional) | ![cboicon] | Optional exchange with Patient does not occur electronically (no app to app exchange) |  |
-| I9b | ![cboicon] | CBO completes the evaluation and enrollment, updates the status of the referral to completed, and includes information on what was completed. This will involve POSTing resources such as Procedures to the CP FHIR server, and making sure they are linked appropriately. | [SDOHCC Task For Referral Management] |
-| I10 | ![cpicon] | CP communicates with patient via their application to close loop on service(s) delivered by CBO | [SDOHCC Task For Referral Management] |
-| I11 | ![cpicon] | CP uses input from CBO and Patient to update the status of the referral and includes information on what was completed | [SDOHCC Task For Referral Management] |
-| I12 | ![providericon] | Provider receives the updated status | [Checking Task Status] |
+| 1 | ![providericon]| Provider or Care Coordinator creates and sends an electronic referral (and a copy of the consent) to the CP.  Same as 8a in the Direct Referral but the Provider is communicating with the CP instead of the CBO | [SDOHCC Service Request], [SDOHCC Task For Referral Management]  |
+| 2 | ![cpicon] | CP receives and accepts referral | [SDOHCC Task For Referral Management]  |
+| 3 (optional) | ![cpicon], ![patienticon]| CP communicates with the patient via their application to schedule appointments, collect additional information, etc. This exchange might not occur electronically| |
+| 4 | ![cboicon] | CBO application queries CP FHIR API for new or updated referrals.  The flow is the same as for the Direct Referral Light but with the CP acting as a provider system. | [SDOHCC Task For Referral Management], [SDOHCC Procedure] |
+| 5 | ![cboicon] | CBO finds new referral and accepts the referral | [SDOHCC Task For Referral Management] |
+| 6 (optional)| ![cpicon] | CP makes information regarding the referral available to the patient’s application. |  |
+| 7 | ![cboicon] | CP updates status of the initial referral | [SDOHCC Task For Referral Management] |
+| 8 (optional) | ![cboicon] | Optional exchange with Patient does not occur electronically (no app to app exchange) |  |
+| 9 | ![cboicon] | CBO completes the evaluation and enrollment, updates the status of the referral to completed, and includes information on what was completed. This will involve POSTing resources such as Procedures to the CP FHIR server, and making sure they are linked appropriately. | [SDOHCC Task For Referral Management] |
+| 10 | ![cpicon] | CP communicates with patient via their application to close loop on service(s) delivered by CBO | [SDOHCC Task For Referral Management] |
+| 11 | ![cpicon] | CP uses input from CBO and Patient to update the status of the referral and includes information on what was completed | [SDOHCC Task For Referral Management] |
+| 12 | ![providericon] | Provider receives the updated status | [Checking Task Status] |
 | 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Survey Instrument Support] |
 {:.grid .center  }
 
