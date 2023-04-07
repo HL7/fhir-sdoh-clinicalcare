@@ -20,7 +20,7 @@ The activities supported by this IG include (see [Clinical Scope](sdoh_clinical_
 
 Currently, this IG is intended to support Patient Applications, Provider's Electronic Health Record(EHR) systems, Coordinating Platforms that intermediate between Providers and Community Based SDOH Service providers, and Community Based SDOH Service Providers.  In the future Payer systems and governmental systems will be supported. The IG establishes a framework for SDOH-related interventions including:
 * capture of survey data from validated instruments
-* mapping the responses from assessments into observations, conditions, and goals using SDOH-relevant value sets using established standards (see [Mapping Support])
+* mapping the responses from assessments into observations, conditions, and goals using SDOH-relevant value sets using established standards (see [Mapping QuestionnaireResponses to FHIR Resources](assessment_instrument_support.html#mapping-questionnaireresponses-to-fhir-resources))
 * generating and monitoring referrals from providers and care coordinators for SDOH-related services provided by CBOs
 * capturing the results of the referrals as procedures
 
@@ -51,11 +51,11 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 
 ### How to Read this IG
 
-This IG contains a wealth of material targetting different audiences. Some sections provide more general or introductory content, while others provide detailed technical information targetted at implementors.  The table below provides a listing of the key sections of the IG in the rough order that they should be read.
+This IG contains a wealth of material targeting different audiences. Some sections provide more general or introductory content, while others provide detailed technical information targetted at implementors.  The table below provides a listing of the key sections of the IG in the rough order that they should be read.
 
 | Section | Sub-section | Description | Audience |
 | --------| ----------- | --------- | ---------|
-| Background| [SDOH and Gravity](sdoh_challenges_gravity.html) | General background on the importance of collecting and standardizing SDOH data, and the Gravity Project     |  General |
+| Background| [SDOH and Gravity](sdoh_challenges_gravity.html) | General background on the importance of collecting and standardizing social risk data, and the Gravity Project     |  General |
 | Background| [SDOH Clinical Care Scope](sdoh_clinical_care_scope.html) | A description of the clinical scope of this IG    |  General |
 | Background| [FHIR Technical Background](technical_background.html) | Background material that should be understood prior to attempting to understand this IG     |  General/Introductory |
 | Implementation Guidance| [Assessment Instrument Support] | The importance of standard survey instruments for the collection of social risk data, and how survey instruments are mapped to SDOH Conditions, Observations and Goals     |  General |
@@ -70,10 +70,10 @@ This IG contains a wealth of material targetting different audiences. Some secti
 
 ### Key Technical Content of this IG
 * [CapabilityStatements](artifacts.html#):   FHIR Capability statements provide the detailed requirements for a server or client.  This IG provides capability statements for Patient applications, referral sources and recipients, and coordinating platform intermediaries.
-* [Profiles](artifacts.html#profiles): FHIR Profiles constrain and extend a base resource.  This I provides profiles of Conditions, Goals, HealthcareService, Location, Observations, Procedures, ServiceRequests and Task.
-* [Value Sets](artifacts.html#value-sets):  FHIR value sets specify a set of codes drawn from one or more code systems, intended for use in a particular context. The Gravity project has worked intensively to develop value sets for SDOH-related content.  This content is described where it is used.  See the following profiles: [SDOHCondition], [SDOHObservationAssessment], [SDOHProcedure], [SDOHProcedure], [SDOHServiceRequest].
+* [Profiles](artifacts.html#profiles): FHIR Profiles constrain and extend a base resource.  This IG provides profiles of Conditions, Goals, HealthcareService, Location, Observations, Procedures, ServiceRequests and Task.
+* [Value Sets](artifacts.html#value-sets):  FHIR value sets specify a set of codes drawn from one or more code systems, intended for use in a particular context. The Gravity project has worked intensively to develop value sets for SDOH-related content.  This content is described where it is used.  See the following profiles: [SDOHCC Condition], [SDOHCC ObservationAssessment], [SDOHCC Procedure], [SDOHCC ServiceRequest].
 * [Examples](artifacts.html#examples):  This IG provides contextually relevant examples of all profiles.
-* [Referral Workflow]:  The management of referrals by providers to Community-based organizations with different levels of FHIR capability and the assignment of tasks to Patients is described in detail.
+* [Referral Workflow](referral_workflow.html):  The management of referrals by providers to Community-based organizations with different levels of FHIR capability and the assignment of tasks to Patients is described in detail.
 * [Draft FHIR Artifacts for Personal Characteristics](draft_specifications_for_personal_characteristics.html):   These profiles are included to promote their use and eventual incorporation into USCore.
 
 ----------------------------------------------------------------------------------------------------
