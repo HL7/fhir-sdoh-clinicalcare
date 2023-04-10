@@ -56,8 +56,6 @@ pages:
     title: Credits
   assessment_instrument_support.md:
     title: Assessment Instrument Support
-  mapping_instructions.md:
-    title: Mapping Instructions
   referral_workflow.md:
     title: Referral Workflow
   checking_task_status.md:
@@ -232,7 +230,6 @@ menu:
     Credits: credits.html
   Implementation Guidance:
     Assessment Instrument Support: assessment_instrument_support.html
-    Mapping Instructions: mapping_instructions.html
     Referral Workflow:  referral_workflow.html
     Checking Task Status: checking_task_status.html
     Connecting Applications With API Data Sources: connecting_applications_with_api_data_sources.html
