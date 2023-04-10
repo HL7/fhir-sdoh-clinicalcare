@@ -37,6 +37,6 @@ FHIR-enabled CBO Applications follows the [Direct Referral Light] or [Indirect R
   * Application uses the URL and refresh token to obtain an access token
 5. **Application queries for Tasks???? CBO app will query for Tasks, as well as updates to data they've previously received **
 
-Note: steps 2-5 are repeated for each referral source
+Note: steps 2-4 are repeated for each referral source
 
 {% include markdown-link-references.md %}
