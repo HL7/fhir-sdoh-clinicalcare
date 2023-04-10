@@ -46,8 +46,6 @@ pages:
     title: SDOH and the Gravity Project
   sdoh_clinical_care_scope.md:
     title: SDOH Clinical Care Background
-  sdoh_clinical_care_scope_alt.md:
-    title: SDOH Clinical Care Background
   technical_background.md:
     title: Technical Background
   glossary.md:
