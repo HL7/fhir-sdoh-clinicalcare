@@ -1,6 +1,6 @@
 ### Overview
 
-Social determinants of health (SDOH) are the conditions in the environments where people are born, live, learn, work, play, worship, and age that affect a wide range of health, functioning, and quality-of-life outcomes and risks[^1]. They are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange coded content using the HL7 FHIR Standard for the following SDOH-focused care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions.  This IG addresses the need to gather SDOH information in multiple settings, share that information between stakeholders, and exchange referrals between organizations to address specific social risk needs, all with appropriate patient consent.  In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research.
+Social determinants of health (SDOH) are the conditions in the environments where people are born, live, learn, work, play, worship, and age that affect a wide range of health, functioning, and quality-of-life outcomes and risks[^1]. They are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange coded content using the HL7 FHIR Standard for the following SDOH-focused care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions.  This IG addresses the need to gather SDOH information in multiple settings, share that information between stakeholders, and exchange referrals between organizations to address specific social risks and needs, all with appropriate patient consent.  In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research.
 
 
 This IG was developed by the [Gravity Project], which aims to build and promulgate consensus driven social determinants of health (SDOH) data standards for health and social care interoperability and use among multi-stakeholders.  Both the project and this implementation guide are focused on the U.S. environment.  This IG leverages content from the [US Core Implementation Guide](https://www.hl7.org/fhir/us/core/) and binds to US-specific terminology.  However, the basic constructs and interaction patterns may well be applicable outside the U.S.
@@ -13,14 +13,14 @@ The IG supports the following use cases:
 {% include img-med.html img="ConceptualFramework.png" caption="Figure 1: Conceptual Framework for SDOH Clinical Care" %}
 
 The activities supported by this IG include (see [Clinical Scope](sdoh_clinical_care_scope.html) for more details)
-  - Screening: This refers to activities where SDH data from individual patients are initially captured, whether through a self-administered, provider-administered, or health plan-administered questionnaire. These activities may also be repeated at certain intervals to monitor changes in social risks.
+  - Screening: This refers to activities where social risk data from individual patients are initially captured, whether through a self-administered, provider-administered, or health plan-administered questionnaire. These activities may also be repeated at certain intervals to monitor changes in social risks.
   - Assessment/Diagnosis: These include activities where providers (clinical and community-based) and health plans analyze the data obtained through screening to determine a patient’s social risks and needs.
   - Treatment/Interventions: These refer to actions undertaken by providers (clinical and community-based) and health plans to help address identified social risks and needs. These include referrals, case management, care planning, counseling and education, and provision of services and orders.
 
 
 Currently, this IG is intended to support Patient Applications, Provider's Electronic Health Record(EHR) systems, Coordinating Platforms that intermediate between Providers and Community Based SDOH Service providers, and Community Based SDOH Service Providers.  In the future Payer systems and governmental systems will be supported. The IG establishes a framework for SDOH-related interventions including:
 * capture of survey data from validated instruments
-* mapping the responses from assessments into observations, conditions, and goals using SDOH-relevant value sets using established standards (see [Mapping Support])
+* mapping the responses from assessments into observations, conditions, and goals using SDOH-relevant value sets using established standards (see [Mapping QuestionnaireResponses to FHIR Resources](assessment_instrument_support.html#mapping-questionnaireresponses-to-fhir-resources))
 * generating and monitoring referrals from providers and care coordinators for SDOH-related services provided by CBOs
 * capturing the results of the referrals as procedures
 
@@ -42,19 +42,24 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 | [National Healthcare Directory Exchange](http://hl7.org/fhir/us/directory-exchange)| A U.S. Office of the National Coordinator-sponsored IG supporting the exchange of directory information for a wide range of service providers and organizations |
 | [SmartApp Launch](http://hl7.org/fhir/smart-app-launch)  | Allows launching third party applications in the context of another system, including allowing the application to controlled access to patient information.  |
 | [Bidirectional Service eReferral (BSeR)](http://hl7.org/fhir/us/bser/)  | Whereas this IG orchestrates referrals using the FHIR query interface, BSeR bases referral management on the exchange of self-contained Bundles of FHIR resources.  The approaches for referral management offered by this IG and BSeR should be harmonized to provide a consistent template for management of referrals by all IGs. |
+| [DaVinci Prior Authorization Support](http://hl7.org/fhir/us/davinci-pas/) |  |
+| [DaVinci Coverage Requirements Discovery](http://hl7.org/fhir/us/davinci-crd/) |   |
+| [DaVinci Documentation Templates and Rules](http://hl7.org/fhir/us/davinci-dtr/) |   |
+| [Structure Data Capture](http://hl7.org/fhir/uv/sdc/) |   |
+| [Data Exchange for Quality Measures Implementation Guide](https://hl7.org/fhir/us/davinci-deqm/) |  |
 {:.grid}
 
 ### How to Read this IG
 
-This IG contains a wealth of material targetting different audiences. Some sections provide more general or introductory content, while others provide detailed technical information targetted at implementors.  The table below provides a listing of the key sections of the IG in the rough order that they should be read.
+This IG contains a wealth of material targeting different audiences. Some sections provide more general or introductory content, while others provide detailed technical information targeted at implementors.  The table below provides a listing of the key sections of the IG in the rough order that they should be read.
 
 | Section | Sub-section | Description | Audience |
 | --------| ----------- | --------- | ---------|
-| Background| [SDOH and Gravity](sdoh_challenges_gravity.html) | General background on the importance of collecting and standardizing SDOH data, and the Gravity Project     |  General |
+| Background| [SDOH and Gravity](sdoh_challenges_gravity.html) | General background on the importance of collecting and standardizing social risk data, and the Gravity Project     |  General |
 | Background| [SDOH Clinical Care Scope](sdoh_clinical_care_scope.html) | A description of the clinical scope of this IG    |  General |
 | Background| [FHIR Technical Background](technical_background.html) | Background material that should be understood prior to attempting to understand this IG     |  General/Introductory |
-| Implementation Guidance| [Assessment Instrument Support] | The importance of standard survey instruments for the collection of SDOH, and how survey instruments are mapped to SDOH Conditions, Observations and Goals     |  General |
-| Implementation Guidance|  [Referral Workflow] |  Provides a high level description of the referral workflows and patient interactions supported by this IG, and then drills down to a detailed description of the FHIR API calls implementing the referral workflow   |  Introductiory and Detailed Technical |
+| Implementation Guidance| [Assessment Instrument Support] | The importance of standard survey instruments for the collection of social risk data, and how survey instruments are mapped to SDOH Conditions, Observations and Goals     |  General |
+| Implementation Guidance|  [Referral Workflow] |  Provides a high level description of the referral workflows and patient interactions supported by this IG, and then drills down to a detailed description of the FHIR API calls implementing the referral workflow   |  Introductory and Detailed Technical |
 | Implementation Guidance | [Connecting Applications with API Data Sources] | Provides a description of  establishing connections to enable the exchange of information supporting the [Referral Workflow].    |  Detailed Technical  |
 | Specifications | [FHIR Artifacts](artifacts.html) | An index of the FHIR artifacts defined as part of this implementation guide     |  Detailed Technical |
 | Specifications| [Conformance](conformance.html) | Conformance requirements for must support and missing data     |  Detailed Technical |
@@ -64,11 +69,12 @@ This IG contains a wealth of material targetting different audiences. Some secti
 {:.grid}
 
 ### Key Technical Content of this IG
-* [Referral Workflow]:  The management of referrals by providers to Community-based organizations with different levels of FHIR capability and the assignment of tasks to Patients is described in detail.
 * [CapabilityStatements](artifacts.html#):   FHIR Capability statements provide the detailed requirements for a server or client.  This IG provides capability statements for Patient applications, referral sources and recipients, and coordinating platform intermediaries.
-* [Profiles](artifacts.html#profiles): FHIR Profiles constrain and extend a base resource.  This I provides profiles of Conditions, Goals, HealthcareService, Location, Observations, Procedures, ServiceRequests and Task.
-* [Value Sets](artifacts.html#value-sets):  FHIR value sets specify a set of codes drawn from one or more code systems, intended for use in a particular context. The Gravity project has worked intensively to develop value sets for SDOH-related content.  This content is described where it is used.  See the following profiles: [SDOHCondition], [SDOHObservationAssessment], [SDOHProcedure], [SDOHProcedure], [SDOHServiceRequest].
+* [Profiles](artifacts.html#profiles): The profiles in this IG constrain or extend a base FHIR resource or US Core profile. This IG provides Observation, Condition, Procedure, ServiceRequest, Task, Goal, Group, HealthcareService, and Location profiles.
+* [Value Sets](artifacts.html#value-sets):  FHIR value sets specify a set of codes drawn from one or more code systems, intended for use in a particular context. The Gravity project has worked intensively to develop value sets for SDOH-related content.  This content is described where it is used.  See the following profiles: [SDOHCC Condition], [SDOHCC ObservationScreeningResponse], [SDOHCC Procedure], [SDOHCC ServiceRequest], [SDOHCC Goal].
 * [Examples](artifacts.html#examples):  This IG provides contextually relevant examples of all profiles.
+* [Referral Workflow](referral_workflow.html):  The management of referrals by providers to community-based organizations with different levels of FHIR capability and the assignment of tasks to Patients is described in detail.
+
 * [Draft FHIR Artifacts for Personal Characteristics](draft_specifications_for_personal_characteristics.html):   These profiles are included to promote their use and eventual incorporation into USCore.
 
 ----------------------------------------------------------------------------------------------------

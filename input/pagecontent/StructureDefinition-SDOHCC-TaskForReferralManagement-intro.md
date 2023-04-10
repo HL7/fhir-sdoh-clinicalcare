@@ -2,6 +2,9 @@
 ### Purpose
 This profile is used to pass a [SDOHCCServiceRequest] (the .focus field) authored by a Practitioner or Organization (.requester field) targetting an Patient, Related Person or Group (.for field) to a service-providing organization. These input fields are required.  The .output is used to return a collection of procedure codes or references to procedures that were performed in fulfillment of the referral.
 
+If the Task is posted to the service delivery system and the ServiceRequest is on a different system, the reference should be absolute.
+The Task can be updated by either the service requester or the responder.
+
 ### Usage
 
 #### Checking Task Status
@@ -19,7 +22,6 @@ The allowed state transitions are defined graphically in the state diagram below
 | ---- | ------- | ---------- | ------ |
 | `draft` | Draft | The task is not yet ready to be acted upon | Requester |
 | `requested` | Requested | The task is ready to be acted upon and action is sought | Requester |
-| `received` | Received | A potential performer has claimed ownership of the task and is evaluating whether to perform it | Responder |
 | `accepted` | Accepted | The potential performer has agreed to execute the task but has not yet started work | Responder |
 | `rejected` | Rejected | The potential performer has decided not to execute it prior to performing any action. | Responder |
 | `ready` | Ready | The task is ready to be performed, but no action has been taken. Used in place of requwested/received/accepted/rejected when request assignment and acceptance is given| Responder |
