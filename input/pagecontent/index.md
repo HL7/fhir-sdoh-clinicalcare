@@ -70,10 +70,10 @@ This IG contains a wealth of material targeting different audiences. Some sectio
 
 ### Key Technical Content of this IG
 * [CapabilityStatements](artifacts.html#):   FHIR Capability statements provide the detailed requirements for a server or client.  This IG provides capability statements for Patient applications, referral sources and recipients, and coordinating platform intermediaries.
-* [Profiles](artifacts.html#profiles): FHIR Profiles constrain and extend a base resource.  This IG provides profiles of Conditions, Goals, HealthcareService, Location, Observations, Procedures, ServiceRequests and Task.
-* [Value Sets](artifacts.html#value-sets):  FHIR value sets specify a set of codes drawn from one or more code systems, intended for use in a particular context. The Gravity project has worked intensively to develop value sets for SDOH-related content.  This content is described where it is used.  See the following profiles: [SDOHCC Condition], [SDOHCC ObservationAssessment], [SDOHCC Procedure], [SDOHCC ServiceRequest].
+* [Profiles](artifacts.html#profiles): The profiles in this IG constrain or extend a base FHIR resource or US Core profile. This IG provides Observation, Condition, Procedure, ServiceRequest, Task, Goal, Group, HealthcareService, and Location profiles.
+* [Value Sets](artifacts.html#value-sets):  FHIR value sets specify a set of codes drawn from one or more code systems, intended for use in a particular context. The Gravity project has worked intensively to develop value sets for SDOH-related content.  This content is described where it is used.  See the following profiles: [SDOHCC Condition], [SDOHCC ObservationScreeningResponse], [SDOHCC Procedure], [SDOHCC ServiceRequest], [SDOHCC Goal].
 * [Examples](artifacts.html#examples):  This IG provides contextually relevant examples of all profiles.
-* [Referral Workflow](referral_workflow.html):  The management of referrals by providers to Community-based organizations with different levels of FHIR capability and the assignment of tasks to Patients is described in detail.
+* [Referral Workflow](referral_workflow.html):  The management of referrals by providers to community-based organizations with different levels of FHIR capability and the assignment of tasks to Patients is described in detail.
 * [Draft FHIR Artifacts for Personal Characteristics](draft_specifications_for_personal_characteristics.html):   These profiles are included to promote their use and eventual incorporation into USCore.
 
 ----------------------------------------------------------------------------------------------------
