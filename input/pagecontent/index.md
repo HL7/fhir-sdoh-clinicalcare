@@ -74,6 +74,7 @@ This IG contains a wealth of material targeting different audiences. Some sectio
 * [Value Sets](artifacts.html#value-sets):  FHIR value sets specify a set of codes drawn from one or more code systems, intended for use in a particular context. The Gravity project has worked intensively to develop value sets for SDOH-related content.  This content is described where it is used.  See the following profiles: [SDOHCC Condition], [SDOHCC ObservationScreeningResponse], [SDOHCC Procedure], [SDOHCC ServiceRequest], [SDOHCC Goal].
 * [Examples](artifacts.html#examples):  This IG provides contextually relevant examples of all profiles.
 * [Referral Workflow](referral_workflow.html):  The management of referrals by providers to community-based organizations with different levels of FHIR capability and the assignment of tasks to Patients is described in detail.
+
 * [Draft FHIR Artifacts for Personal Characteristics](draft_specifications_for_personal_characteristics.html):   These profiles are included to promote their use and eventual incorporation into USCore.
 
 ----------------------------------------------------------------------------------------------------
