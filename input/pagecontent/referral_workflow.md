@@ -6,7 +6,7 @@ The use cases here relate to the Gravity [Patient Stories].  Implementers will b
 
 This IG supports the following general [workflow](sdoh_clinical_care_scope.html):
 
-1. Assess the patient to determine social risk -- this may be done by using an assessment instrument or via a conversation with the patient, or both.  As part of the assessment, the patient and provider agree on the specific social risk that are to be labeled as verified health concerns or problems.
+1. Assess the patient to determine social risk -- this may be done by using an assessment instrument or via a conversation with the patient, or both.  As part of the assessment, the patient and provider agree on the specific social risks that are to be labeled as verified health concerns or problems.
 2. The patient and provider may establish specific goals regarding the identified social risk.
 3. The patient and provider agree on specific referrals/interventions that should be undertaken to address the problems and goals.  The patient's consent is obtained to share their specific information with the entity that will be performing the services.  The provider then sends a task to the performing entity to initiate the electronic referral.
 
@@ -216,7 +216,7 @@ The Provider has a relationship with the CP, but not with the CBO.  The use case
 The Provider may request to have the service delivered by a specific CBO.   The CP may not accept the referral or be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
 
 
-{% include img.html img="FlowIndirectDirectLightReferralFunctional" caption="Figure 3: Annotated Flow Diagram for Indirect Referral Light" %}
+{% include img.html img="FlowIndirectDirectLightReferralFunctional.svg" caption="Figure 3: Annotated Flow Diagram for Indirect Referral Light" %}
 
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
