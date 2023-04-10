@@ -2,10 +2,6 @@ Extension: SDOHCCExtensionHealthcareServiceTelecomAppointment
 Id: SDOHCC-ExtensionHealthcareServiceTelecomAppointment
 Title: "SDOHCC Extension HealthcareService Telecom Appointment"
 Description: "Extension for flagging a HealthcareService.telecom as one the patient can use to make an appointment."
-* ^meta.versionId = "2"
-* ^meta.lastUpdated = "2021-10-27T17:12:16.602+00:00"
-* ^meta.source = "#M1539zXBbBxt0iUs"
-* ^version = "2.0.0-update"
 * ^status = #draft
 * ^context.type = #element
 * ^context.expression = "HealthcareService.telecom"

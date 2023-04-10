@@ -3,9 +3,6 @@ InstanceOf: SDOHCCCondition
 Title: "SDOHCC Condition Unemployed Example"
 Description: "An example of a Condition (a health concern) that is based on an Observation related to employment status that is derived from a QuestionnaireResponse to PRAPARE (represented in LOINC)."
 Usage: #example
-* meta.versionId = "3"
-* meta.lastUpdated = "2021-06-25T16:28:03.017+00:00"
-* meta.source = "#gfGbbXBqHQ271B1H"
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#unconfirmed "Unconfirmed"
 * category[0] = $condition-category#health-concern "Health Concern"

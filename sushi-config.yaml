@@ -1,5 +1,5 @@
 status: draft
-version: 2.0.0-update
+version: 2.1.0-update
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
@@ -70,8 +70,6 @@ pages:
     title: Draft Specifications for Personal Characteristics
   downloads.md:
     title: Downloads
-  dictionary.md:
-    title: Data Dictionary
   stu2_ballot_changes.md:
     title: STU2 Ballot Changes
   stu2_publication_changes.md:
@@ -243,7 +241,6 @@ menu:
     Privacy and Security: privacy_and_security.html
     Must Support and Missing Data: mustsupport_and_missing_data.html
     Draft Specifications for Personal Characteristics:   draft_specifications_for_personal_characteristics.html
-    DataDictionary: dictionary.html
     Downloads: downloads.html
   Change History:
     STU2 Ballot Changes:  stu2_ballot_changes.html

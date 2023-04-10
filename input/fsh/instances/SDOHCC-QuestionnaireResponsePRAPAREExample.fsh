@@ -3,9 +3,6 @@ InstanceOf: SDCQuestionnaireResponse
 Title: "SDOHCC QuestionnaireResponse PRAPARE Example"
 Description: "An example of an SDC QuestionnaireResponse that represents questions and selected answers from the PRAPARE questionnaire represented in LOINC (code 93025-5). The example is generated using the LHC-Forms SDC Questionnaire App."
 Usage: #example
-* meta.versionId = "3"
-* meta.lastUpdated = "2022-09-14T19:18:58.305+00:00"
-* meta.source = "#3nQhq9rJHhkLXP7K"
 * questionnaire = "http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-QuestionnairePRAPARE"
 * questionnaire.extension.url = "http://hl7.org/fhir/StructureDefinition/display"
 * questionnaire.extension.valueString = "SDOHCC Questionnaire PRAPARE"

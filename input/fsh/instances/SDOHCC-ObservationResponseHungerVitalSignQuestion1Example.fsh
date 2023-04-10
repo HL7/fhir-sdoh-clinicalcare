@@ -3,9 +3,6 @@ InstanceOf: SDOHCCObservationScreeningResponse
 Title: "SDOHCC Observation Response Hunger Vital Sign Question 1 Example"
 Description: "An example of a screening response Observation that represents the first question (LOINC code 88122-7) and answer from the Hunger Vital Sign [HVS] screening questionnaire represented in LOINC."
 Usage: #example
-* meta.versionId = "1"
-* meta.lastUpdated = "2021-06-03T01:20:13.912+00:00"
-* meta.source = "#7H39OcdhzK4QcYSi"
 * category[Survey] = $observation-category#survey "Survey"
 * category[SDOH] = $SDOHCC-CodeSystemTemporaryCodes#food-insecurity "Food Insecurity"
 * status = #final

@@ -3,10 +3,6 @@ Id: SDOHCC-ValueSetObservationMethod
 Title: "SDOHCC ValueSet Observation Method"
 Description: "Codes that represent methods by which an individual's race or ethnicity information can be elicited."
 * ^status = #draft
-* ^version = "0.1.0"
-* ^meta.versionId = "8"
-* ^meta.lastUpdated = "2022-09-20T21:39:16.172+00:00"
-* ^meta.source = "#GHHPJj6u06Hz9eDh"
 * ^experimental = false
 * ^date = "2020-12-14T04:01:34+00:00"
 * ^publisher = "HL7 International - Patient Care WG"

@@ -3,9 +3,6 @@ InstanceOf: SearchParameter
 Title: "TaskOutputReference"
 Description: "The value of any outputs of type 'Reference'"
 Usage: #definition
-* meta.versionId = "2"
-* meta.lastUpdated = "2021-11-19T04:18:52.778+00:00"
-* meta.source = "#euF2X6YJgs01eKBr"
 * url = "http://hl7.org/fhir/us/sdoh-clinicalcare/SearchParameter/Task-output-reference"
 * version = "1.0.0"
 * name = "TaskOutputReference"

@@ -3,9 +3,6 @@ InstanceOf: SDOHCCCondition
 Title: "SDOHCC Condition Homeless Example"
 Description: "An example of a homelessness Condition (a health concern) that is based on an Observation related to housing status that is derived from a QuestionnaireResponse to PRAPARE (represented in LOINC)."
 Usage: #example
-* meta.versionId = "5"
-* meta.lastUpdated = "2021-06-25T18:58:01.507+00:00"
-* meta.source = "#nUKafeh0gl4Fksae"
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#unconfirmed "Unconfirmed"
 * category[0] = $condition-category#health-concern "Health Concern"

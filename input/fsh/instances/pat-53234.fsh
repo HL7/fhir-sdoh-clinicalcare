@@ -3,9 +3,6 @@ InstanceOf: USCorePatientProfile
 Title: "Patient Colin Abbas Example"
 Description: "An example of a patient. This example is used as the referenced patient in other examples in this IG."
 Usage: #example
-* meta.versionId = "1"
-* meta.lastUpdated = "2020-08-24T12:21:34.589+00:00"
-* meta.source = "#rq5cL5wChZs1CEfu"
 * extension[0].extension[0].url = "ombCategory"
 * extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2106-3 "White"
 * extension[=].extension[+].url = "ombCategory"

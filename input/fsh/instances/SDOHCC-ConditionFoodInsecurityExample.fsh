@@ -3,9 +3,6 @@ InstanceOf: SDOHCCCondition
 Title: "SDOHCC Condition Food Insecurity Example"
 Description: "An example of a food insecurity Condition (a health concern) that references, as evidence, Observations derived from the LOINC Hunger Vital Sign [HVS] questionnaire (88121-9)."
 Usage: #example
-* meta.versionId = "3"
-* meta.lastUpdated = "2021-06-17T19:04:43.302+00:00"
-* meta.source = "#0R7Gw7f50bKBvXZl"
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#unconfirmed "Unconfirmed"
 * category[0] = $condition-category#health-concern "Health Concern"
