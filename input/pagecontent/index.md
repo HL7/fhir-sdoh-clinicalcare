@@ -51,7 +51,7 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 
 ### How to Read this IG
 
-This IG contains a wealth of material targeting different audiences. Some sections provide more general or introductory content, while others provide detailed technical information targetted at implementors.  The table below provides a listing of the key sections of the IG in the rough order that they should be read.
+This IG contains a wealth of material targeting different audiences. Some sections provide more general or introductory content, while others provide detailed technical information targeted at implementors.  The table below provides a listing of the key sections of the IG in the rough order that they should be read.
 
 | Section | Sub-section | Description | Audience |
 | --------| ----------- | --------- | ---------|
@@ -59,7 +59,7 @@ This IG contains a wealth of material targeting different audiences. Some sectio
 | Background| [SDOH Clinical Care Scope](sdoh_clinical_care_scope.html) | A description of the clinical scope of this IG    |  General |
 | Background| [FHIR Technical Background](technical_background.html) | Background material that should be understood prior to attempting to understand this IG     |  General/Introductory |
 | Implementation Guidance| [Assessment Instrument Support] | The importance of standard survey instruments for the collection of social risk data, and how survey instruments are mapped to SDOH Conditions, Observations and Goals     |  General |
-| Implementation Guidance|  [Referral Workflow] |  Provides a high level description of the referral workflows and patient interactions supported by this IG, and then drills down to a detailed description of the FHIR API calls implementing the referral workflow   |  Introductiory and Detailed Technical |
+| Implementation Guidance|  [Referral Workflow] |  Provides a high level description of the referral workflows and patient interactions supported by this IG, and then drills down to a detailed description of the FHIR API calls implementing the referral workflow   |  Introductory and Detailed Technical |
 | Implementation Guidance | [Connecting Applications with API Data Sources] | Provides a description of  establishing connections to enable the exchange of information supporting the [Referral Workflow].    |  Detailed Technical  |
 | Specifications | [FHIR Artifacts](artifacts.html) | An index of the FHIR artifacts defined as part of this implementation guide     |  Detailed Technical |
 | Specifications| [Conformance](conformance.html) | Conformance requirements for must support and missing data     |  Detailed Technical |

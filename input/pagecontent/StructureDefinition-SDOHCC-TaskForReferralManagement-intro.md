@@ -2,6 +2,9 @@
 ### Purpose
 This profile is used to pass a [SDOHCCServiceRequest] (the .focus field) authored by a Practitioner or Organization (.requester field) targetting an Patient, Related Person or Group (.for field) to a service-providing organization. These input fields are required.  The .output is used to return a collection of procedure codes or references to procedures that were performed in fulfillment of the referral.
 
+If the Task is posted to the service delivery system and the ServiceRequest is on a different system, the reference should be absolute.
+The Task can be updated by either the service requester or the responder.
+
 ### Usage
 
 #### Checking Task Status

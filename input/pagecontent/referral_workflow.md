@@ -61,7 +61,6 @@ This figure shows this high level context of the referral use cases that are des
 The two right most columns show data that could be exchanged at that step, and data though is aligned with that step.  This I only specifies the
 data that is exchanged, so systems are free to use any internal representation.
 
-<object data="HighLevelReferralContext.svg" type="image/svg+xml"></object>
 {% include img.html img="HighLevelReferralContext.svg" caption="Figure `1`: Referral Use Cases Context" %}
 
 
@@ -72,7 +71,7 @@ data that is exchanged, so systems are free to use any internal representation.
 | 3 | ![providericon], ![patienticon]|  Provider and Patient: <ul><li>prioritize goals</li><li>agree on referral</li><li>capture consent for sharing information</li></ul> | none  | none  |
 | 4 | ![providericon] | Provider promotes the health concern to the problem list, records goals, and captures patient consent  | none  | [SDOHCC Condition], [SDOHCC Consent][SDOHCCConsent], [SDOHCC Goal] |
 | 5 (optional)| ![providericon] | Provider makes information regarding the referral available to the patient’s application |  ??   |  ??    |
-| 6 | ![cboicon]| Provider or Care Coordinator initiates a referral to the CBO | [SDOHCC Service Request], [SDOHCC Task ForReferral Management]  | none   |
+| 6 | ![cboicon]| Provider or Care Coordinator initiates a referral to the CBO | [SDOHCC Service Request], [SDOHCC Task For Referral Management]  | none   |
 | 7 | ![cboicon] | CBO receives and accepts referral  (task)| [SDOHCC Task For Referral Management], [SDOHCC ServiceRequest], [SDOHCC Goal], [SDOHCC Condition]  |  none  |
 | 8 | ![cboicon] | CBO updates the status of the referral (task) | [SDOHCC Task For Referral Management] |  none  |
 | 9 (optional) | ![cboicon], ![patienticon]| CBO communicates with the patient via their application to schedule appointments, collect additional information, etc.  This communication might not take place electronically.| none | none   |
