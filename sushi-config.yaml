@@ -60,6 +60,8 @@ pages:
     title: Checking Task Status
   connecting_applications_with_api_data_sources.md:
     title: Connecting Applications With API Data Sources
+  gravity_terminology.md:
+    title: Gravity Value Sets
   artifacts.html:
     title: Artifacts Index
   privacy_and_security.md:
@@ -229,6 +231,7 @@ menu:
     Referral Workflow:  referral_workflow.html
     Checking Task Status: checking_task_status.html
     Connecting Applications With API Data Sources: connecting_applications_with_api_data_sources.html
+    Gravity Value Sets: gravity_terminology.html
   FHIR Artifacts and Examples:
     Capability Statements: artifacts.html#capability-statements
     Profiles: artifacts.html#profiles
