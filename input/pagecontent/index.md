@@ -7,7 +7,7 @@ This IG was developed by the [Gravity Project], which aims to build and promulga
 
 The IG supports the following use cases:
 * 	Documenting SDOH data in conjunction with patient encounters with providers, payers, and community services
-*   Referring patients to ~Community Based Organizations (CBOs)~ to address SDOH needs via an electronic workflow.  The referral framework includes support for intermediary organizations to manage service delivery, closed loop feedback to the ordering ~clinician~ provider and direct engagement with the patient and their care-givers.
+*   Referring patients to ~~Community Based Organizations (CBOs)~~ to address SDOH needs via an electronic workflow.  The referral framework includes support for intermediary organizations to manage service delivery, closed loop feedback to the ordering ~~clinician~~ provider and direct engagement with the patient and their care-givers.
 * 	Identifying cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer)
 
 {% include img-med.html img="ConceptualFramework.png" caption="Figure 1: Conceptual Framework for SDOH Clinical Care" %}
