@@ -9,7 +9,6 @@ We would like to thank [CyncHealth](https://cynchealth.org/), the [Agency for He
 | Robert Dieterle    | [EnableCare LLC](http://www.enablecare.us/)                                        |
 | Corey Smith        | [AMA](https://www.ama-assn.org/)                                                   |
 | Monique van Berkum | [AMA ](https://www.ama-assn.org/)                                                  |
-| Himali Saitwal     | [EMI Advisors](https://www.emiadvisors.net/)                                       |
 | James Shalaby      | [Elimu](https://www.elimu.io/)                                                     |
 | Lloyd McKenzie     | [Gevity](https://www.gevityinc.com/)/[Accenture](https://www.accenture.com)        |
 | Joee Garcia        | [Gevity](https://www.gevityinc.com/)/[Accenture](https://www.accenture.com)        |
@@ -26,10 +25,11 @@ We would like to thank [CyncHealth](https://cynchealth.org/), the [Agency for He
 | Rob Hausam         | [Hausam Consulting LLC](https://www.linkedin.com/in/robert-hausam-a273aa7/)        |
 | Cheng Liu          | [MaxMD](https://www.maxmddirect.com/)                                              |
 | Natasha Kreisle    | [MaxMD](https://www.maxmddirect.com/)                                              |
-| Bret Heale         | [Elimu](https://www.elimu.io/)                                              |
-| Corey Spears       | [MITRE](https://www.mitre.org/)[^1]                                               |
-| Saul A. Kravitz    | [MITRE](https://www.mitre.org/)[^1]                                            |
-| Gail Shenk         | [MITRE](https://www.mitre.org/)[^1]                                             |
+| Bret Heale         | [Elimu](https://www.elimu.io/)                                                     |
+| Himali Saitwal     | [EMI Advisors](https://www.emiadvisors.net/)                                       |
+| Corey Spears       | [MITRE](https://www.mitre.org/)[^1]                                                |
+| Saul A. Kravitz    | [MITRE](https://www.mitre.org/)[^1]                                                |
+| Gail Shenk         | [MITRE](https://www.mitre.org/)[^1]                                                |
 {:.grid}
 
 
