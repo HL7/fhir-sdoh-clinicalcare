@@ -9,6 +9,7 @@ We would like to thank [CyncHealth](https://cynchealth.org/), the [Agency for He
 | Robert Dieterle    | [EnableCare LLC](http://www.enablecare.us/)                                        |
 | Corey Smith        | [AMA](https://www.ama-assn.org/)                                                   |
 | Monique van Berkum | [AMA ](https://www.ama-assn.org/)                                                  |
+| Himali Saitwal     | [EMI Advisors](https://www.emiadvisors.net/)                                       |
 | James Shalaby      | [Elimu](https://www.elimu.io/)                                                     |
 | Lloyd McKenzie     | [Gevity](https://www.gevityinc.com/)/[Accenture](https://www.accenture.com)        |
 | Joee Garcia        | [Gevity](https://www.gevityinc.com/)/[Accenture](https://www.accenture.com)        |
@@ -16,7 +17,7 @@ We would like to thank [CyncHealth](https://cynchealth.org/), the [Agency for He
 | Matt Elrod         | [MaxMD](https://www.maxmddirect.com/)                                              |
 | Matt Menning       | [AMA  ](https://www.ama-assn.org/)                                                 |
 | Becky Gradl        | [Academy of Nutrition and Dietetics ](https://www.eatright.org/)                   |
-| Sarah DeSilvey     | [Larner College of Medicine at the University of Vermont](http://www.med.uvm.edu/) |
+| Sarah DeSilvey     | [Gravity Project Director of Technology](https://confluence.hl7.org/display/GRAV/Project+Team) |
 | Donna Pertel       | [Academy of Nutrition and Dietetics](https://www.eatright.org/)                    |
 | Evelyn Gallego     | [EMI Advisors, LLC](https://www.emiadvisors.net/)                                  |
 | Linda Hyde         | [EMI Advisors, LLC](https://www.emiadvisors.net/)                                  |
