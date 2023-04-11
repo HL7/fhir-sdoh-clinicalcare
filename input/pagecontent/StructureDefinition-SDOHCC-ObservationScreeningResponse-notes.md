@@ -26,7 +26,7 @@ Note: For “Value Set Naming Pattern” below, <Category> is a placeholder for 
 		<tr>
 			<td>&lt;Category&gt; Screening Assessments</td>
 			<td>LOINC codes for the assessment instruments (LOINC panels) from which the preferred, category-specific questions have been selected.</td>
-			<td>For an SDOHCC Observation Screening Response that is an Observation Grouping, Observation.code SHOULD use panel LOINC codes from this value set. An Observation Grouping does not have an Observation.value. Instead, an Observation Grouping (via Observation.hasMember) references all Observations generated from a specific assessment instrument. See <a href="Observation-SDOHCC-ObservationResponseHungerVitalSignGroupingExample.html">SDOHCC Observation Response Hunger Vital Sign Grouping Example</a>.  |</td>
+			<td>For an SDOHCC Observation Screening Response that is an Observation Grouping, Observation.code SHOULD use panel LOINC codes from this value set. An Observation Grouping does not have an Observation.value. Instead, an Observation Grouping (via Observation.hasMember) references all Observations generated from a specific assessment instrument. See <a href="Observation-SDOHCC-ObservationResponseNewGroupingExample.html">SDOHCC Observation Response TBD Grouping Example</a>.  |</td>
 		</tr>
 			<tr>
 			<td>&lt;Category&gt; Screening Assessments And Questions</td>
