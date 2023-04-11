@@ -12,7 +12,7 @@ The IG supports the following use cases:
 
 {% include img-med.html img="ConceptualFramework.png" caption="Figure 1: Conceptual Framework for SDOH Clinical Care" %}
 
-<div markdown="1" class="note-to-implementers">
+<div markdown="1" class="note-to-balloters">
 This IG often refers to Community Based Organizations (CBOs) as synonymous with a referral target and clinicians as synonymous with the referring provider.
 There is nothing that prevents us of the IG for other referral source and targets, and it is the Gravity project's intent to generalize the language in future releases of the IG.
 </div>
