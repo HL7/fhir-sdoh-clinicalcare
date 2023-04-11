@@ -65,3 +65,5 @@ The FHIR Code System defined by the SDOH ClinicalCare IG is hyperlinked from thi
 
 
 Additional information about the use of these artifacts can be found in the relevant specification and on the [artifacts](artifacts.html) page
+
+ {% include markdown-link-references.md %}

@@ -256,8 +256,7 @@ This implementation guide supports additional interactions with a patient/client
   * inform service qualification or application
   * indicate reason for cancellation
   * determine the patient's view their interaction with the CBO/performer and the ability of the service provided to meet their needs
-4. the ability to cancel the service
-5. the ability to close the loop on services delivered (e.g., providing patient outcomes)
+4. the ability to close the loop on services delivered (e.g., providing patient outcomes)
 
 
 ##### Patient Completion of Questionnaire -- Detailed View
