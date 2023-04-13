@@ -1,6 +1,6 @@
 Instance: SDOHCC-ObservationResponseNHANESQuestion6Example
 InstanceOf: SDOHCCObservationScreeningResponse
-Title: "SDOHCC Observation Response Hunger Vital Sign Question 1 Example"
+Title: "SDOHCC Observation Response NHANES Question 6 Example"
 Description: "An example of a screening response Observation that represents the score from the NHANES screening questionnaire represented in LOINC."Usage: #example
 * category[Survey] = $observation-category#survey "Survey"
 * category[SDOH] = $SDOHCC-CodeSystemTemporaryCodes#food-insecurity "Food Insecurity"
