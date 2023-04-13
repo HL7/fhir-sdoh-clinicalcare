@@ -28,7 +28,7 @@ We define common canonical URLs, linkIds and allowed answer codes.
 
 LOINC codes are used to describe the results of the question and answer from the social care assessment instrument because they support the encoding of standard assessment tools. While the output of the assessment process is an SDC QuestionnaireResponse, it can be useful to derive FHIR Observation and Condition resources based upon the questions and answers that are deemed to have clinical utility. The Observation supports searching for specific survey results (QuestionnaireResponses don't support searching based on answers provided) and the Condition identifies the health concerns so they can be communicated and promoted to problems on the problem list.
 
-An Observation is used to group all the observations created by the QuestionnaireResponse using the Observation.hasMember reference to each of the individual observations. This approach is consistent with US Core and there are examples presented later in the IG for both example Questionnaires.
+An Observation ~is~ may be used to group all the observations created by the QuestionnaireResponse using the Observation.hasMember reference to each of the individual observations. This approach is consistent with US Core and there are examples presented later in the IG for both example Questionnaires.
 
 ### Developing a New Assessment Instrument
 Note, most users of this guide will use standardized assessment instruments. This description is provided for those organizations that need to use different instruments, either because they are dealing with determinants for which this IG has not yet identified a standard instrument, or organizational policy requires the use of specific instruments.
@@ -40,7 +40,7 @@ Developing a new assessment instrument for incorporation into the process descri
 * **Develop the Conversion Logic**: The results of the instrument are captured in a [SDC QuestionnaireResponse], and this in turn can be converted to Observations and Conditions using a [StructureMap].  Section **7.4 - fix reference and add hyperlink** below describes the mapping process approach.
 Executing the Structure Map on a QuestionaireResponse produces:
   * [Observation][SDOHCC Observation Screening Response] (each representing an assessment question-answer(s) pair),
-  * An  [Observation][SDOHCC Observation Screening Response] that groups the Observations associated with a social care assessment together,
+  * An optional [Observation][SDOHCC Observation Screening Response] that groups the Observations associated with a social care assessment together,
   * The related [Condition(s) resources](StructureDefinition-SDOHCC-Condition.html) indicating Health Concerns identified by the social care assessment instrument answers that should be coded with [US Core Condition codes](https://hl7.org/fhir/us/core/ValueSet/us-core-condition-code).
 
 ### Incorporation of Assessment Instruments into Clinical Workflow
@@ -58,7 +58,7 @@ This implementation guide includes a complete example of the [Hunger Vital Sign 
 * an [SDC Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)
 * an [SDC QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html)
 * a [StructureMap](StructureMap-SDOHCC-StructureMapHungerVitalSign.html) that takes the [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) and creates the appropriate [SDOHCC Observation Screening Response] and [SDOHCC Condition] instances
-* a [Grouping Observation](Observation-SDOHCC-ObservationResponseHungerVitalSignGroupingExample.html) created using [SDOHCC Observation Screening Response] to group the [SDOHCC Observation Screening Response] instances generated from specific questions and answers from the assessment instrument
+* ~a [Grouping Observation](Observation-SDOHCC-ObservationResponseHungerVitalSignGroupingExample.html) created using [SDOHCC Observation Screening Response] to group the [SDOHCC Observation Screening Response] instances generated from specific questions and answers from the assessment instrument~
 * multiple [SDOHCC Observation Screening Response] instances used to record the questions and answers on the assessment instrument
   * [Question 1](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion1Example.html)
   * [Question 2](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion2Example.html)
