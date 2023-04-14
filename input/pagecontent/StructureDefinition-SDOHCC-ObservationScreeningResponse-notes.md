@@ -300,13 +300,13 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td>2.16.840.1.113762.1.4.1247.140</td>
 		</tr>
 		<tr>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/missing/expansion/Latest">Questions</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.211/expansion/Latest">Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.211</td>
 		</tr>
 		<tr>
 			<td>Observation.value</td>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/missing/expansion/Latest">Answers</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.209/expansion/Latest">Answers</a></td>
+			<td>2.16.840.1.113762.1.4.1247.209</td>
 		</tr>
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-material-hardship">material-hardship</a></td>
@@ -360,13 +360,13 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td>2.16.840.1.113762.1.4.1247.135</td>
 		</tr>
 		<tr>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/missing/expansion/Latest">Questions</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.212/expansion/Latest">Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.212</td>
 		</tr>
 		<tr>
 			<td>Observation.value</td>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/missing/expansion/Latest">Answers</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.210/expansion/Latest">Answers</a></td>
+			<td>2.16.840.1.113762.1.4.1247.210</td>
 		</tr>
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-stress">stress</a></td>
