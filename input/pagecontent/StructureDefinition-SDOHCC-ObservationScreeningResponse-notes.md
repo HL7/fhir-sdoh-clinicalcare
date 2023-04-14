@@ -311,22 +311,22 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-material-hardship">material-hardship</a></td>
 			<td rowspan="3">Observation.code</td>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.140/expansion/Latest">Panels and Questions</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.200/expansion/Latest">Panels and Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.200</td>
 			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Material%20Hardship%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Material Hardship Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.140/expansion/Latest">Panels</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.139/expansion/Latest">Panels</a></td>
+			<td>2.16.840.1.113762.1.4.1247.139</td>
 		</tr>
 		<tr>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.140/expansion/Latest">Questions</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.168/expansion/Latest">Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.168</td>
 		</tr>
 		<tr>
 			<td>Observation.value</td>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.140/expansion/Latest">Answers</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.180/expansion/Latest">Answers</a></td>
+			<td>2.16.840.1.113762.1.4.1247.180</td>
 		</tr>
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-medical-cost-burden">medical-cost-burden</a></td>
