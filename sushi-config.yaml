@@ -163,7 +163,7 @@ groups:
     - SDOHCC-TaskReferralManagementOrderSubtaskCompletedExample
   PRAPARE:
     name: PRAPARE Examples
-    description: PRAPARE Examples
+    description: PRAPARE Examples are an example of observations derived from a QuestionnaireResponse using a StructureMap
     resources:
     - SDOHCC-StructureMapPRAPARE
     - SDOHCC-QuestionnairePRAPARE
@@ -175,7 +175,7 @@ groups:
     - SDOHCC-ConditionHomelessExample
   HVS:
     name: Hunger Vital Signs Examples
-    description: Hunger Vital Signs Examples
+    description: Hunger Vital Signs Examples are an example of observations derived from a QuestionnaireResponse using a StructureMap
     resources:
     - SDOHCC-StructureMapHungerVitalSign
     - SDOHCC-QuestionnaireHungerVitalSign
@@ -187,6 +187,17 @@ groups:
     - SDOHCC-ConditionAsserterDeviceExample
     - SDOHCC-ConditionFoodInsecurityExample
     - SDOHCC-DeviceSoftwareExample
+  NHANES:
+    name: NHANES Examples
+    description: NHANES Examples are an example of observations not derived from a QuestionnaireResponse, with a defined grouping.
+    resources:
+    - SDOHCC-ObservationResponseNHANESGroupingExample
+    - SDOHCC-ObservationResponseNHANESQuestion1Example
+    - SDOHCC-ObservationResponseNHANESQuestion2Example
+    - SDOHCC-ObservationResponseNHANESQuestion3Example
+    - SDOHCC-ObservationResponseNHANESQuestion4Example
+    - SDOHCC-ObservationResponseNHANESQuestion5Example
+    - SDOHCC-ObservationResponseNHANESQuestion6Example
   DraftArtifacts:
     name: Draft Artifacts for Personal Characteristic Observations
     resources:
