@@ -11,4 +11,3 @@ Usage: #example
 * derivedFrom[+].reference = "Observation/SDOHCC-ObservationResponseNHANESQuestion3Example"
 * derivedFrom[+].reference = "Observation/SDOHCC-ObservationResponseNHANESQuestion4Example"
 * derivedFrom[+].reference = "Observation/SDOHCC-ObservationResponseNHANESQuestion5Example"
-* derivedFrom[+].reference = "Observation/SDOHCC-ObservationResponseNHANESQuestion6Example"

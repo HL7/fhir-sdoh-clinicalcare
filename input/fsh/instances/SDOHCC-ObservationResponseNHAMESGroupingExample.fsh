@@ -13,7 +13,7 @@ RuleSet: NHANESCommon
 Instance: SDOHCC-ObservationResponseNHANESGroupingExample
 InstanceOf: SDOHCCObservationScreeningResponse
 Title: "SDOHCC Observation Response NHANES Grouping Example"
-Description: "An example of an Observation grouping that has as its members the 5 Observations generated from the LOINC NHANES questionnaire (LOINC code 76506-5)."
+Description: "An example of an Observation grouping that has as its members the 6 Observations generated from the LOINC NHANES questionnaire (LOINC code 76506-5)."
 Usage: #example
 * insert NHANESCommon
 * code = $loinc#76506-5 "Social Connection and Isolation Panel"
@@ -22,3 +22,4 @@ Usage: #example
 * hasMember[SupportedHasMember][+].reference = "Observation/SDOHCC-ObservationResponseNHANESQuestion3Example"
 * hasMember[SupportedHasMember][+].reference = "Observation/SDOHCC-ObservationResponseNHANESQuestion4Example"
 * hasMember[SupportedHasMember][+].reference = "Observation/SDOHCC-ObservationResponseNHANESQuestion5Example"
+* hasMember[SupportedHasMember][+].reference = "Observation/SDOHCC-ObservationResponseNHANESQuestion6Example"
