@@ -144,7 +144,7 @@ The drawing is followed by a key that describes each labeled interaction.     Th
 {:.grid}
 
 ##### Direct Referral Light - Detailed View
-The referral occurs between the Provider/Requester and the CBO/Performer where the CBO/Performer does not have a FHIR API (FHIR Server or FHIR Façade).   The exchange with the Performer is initiated via an email with a secure link to the Provider/Requester API that can be used by an application available to the CBO/Performer to communicate with the Provider/Requester using RESTful exchanges that read, create, and update resources via the Provider/Requester API.
+The referral occurs between the Provider/Requester and the CBO/Performer where the CBO/Performer does not have a FHIR API (FHIR Server or FHIR Façade).   The exchange with the Performer is initiated via an email with a ~~secure link to the Provider/Requester API that can be used by an application available~~ link to an application and instructions for authentication with the application.  This application can be used by the CBO/Performer to communicate with the Provider/Requester using RESTful exchanges that read, create, and update resources via the Provider/Requester API.
 
 The following figure shows the FHIR exchanges between the referral source and target.
 For each numbered exchange, the details of the data elements exchanged, and the FHIR request and response are provided.
@@ -153,7 +153,7 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 
 | #    | From |  Description | Instances involved | FHIR Transaction |
 | ===  | ==== | ============ | ================== | ================ |
-| 1 |  Source | Send e-mail with Secure Link |  | e-mail |
+| 1 |  Source | Send e-mail with link to application and authentication instructions |  | e-mail |
 | 2 |  Target | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) | [Transaction 1](FHIR_API_Examples.html#post-task-1) |
 | 3 |  Target  | Get Service Request and Referenced Resources | [ServiceRequest](ServiceRequest-SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample.html), [Consent](Consent-SDOHCC-ConsentInformationDisclosureExample.html), [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) | [Transaction 3](FHIR_API_Examples.html#post-task-1) |
 | 4 |  Target | Update Task (accepted) | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 4](FHIR_API_Examples.html#post-task-1) |
@@ -267,7 +267,7 @@ Here we provided a detailed view of an interaction between a patient application
 
 | #    | From |  Description | Instances involved | FHIR Transaction |
 | ===  | ==== | ============ | ================== | ================ |
-| 1 |  Requester | Send e-mail with Secure Link |  | e-mail |
+| 1 |  Requester | Send e-mail with link to an application and instructions for authentication with the application |  | e-mail |
 | 2 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) | [Transaction 1](FHIR_API_Examples.html#post-task-1) |
 | 3 |  Patient  | Get Questionnaire | [Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html) | [Transaction 3](FHIR_API_Examples.html#post-task-1) |
 | 4 |  Patient | Update Task (accepted) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 4](FHIR_API_Examples.html#post-task-1) |
