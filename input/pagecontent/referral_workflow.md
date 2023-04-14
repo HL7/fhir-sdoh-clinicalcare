@@ -319,7 +319,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 | 10 | ![cpicon] | CP communicates with patient via their application to close loop on service(s) delivered by CBO | [SDOHCC Task For Referral Management] |
 | 11 | ![cpicon] | CP uses input from CBO and Patient to update the status of the referral and includes information on what was completed | [SDOHCC Task For Referral Management] |
 | 12 | ![providericon] | Provider receives the updated status | [Checking Task Status] |
-| 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Survey Instrument Support] |
+| 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Assessment Instrument Support] |
 {:.grid .center  }
 
 #### Notes on Direct and Indirect Referrals
