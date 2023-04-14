@@ -66,19 +66,19 @@ data that is exchanged, so systems are free to use any internal representation.
 
 | Step | Actors | Description| Exchanged | Aligns With|
 | ----- | ------------- | ------- | ---------------- | ---------------- |
-| 1 | ![patienticon] | Patient takes standardized assessment tool to identify social risks and needs. This could be done via a SMART app that would post a QuestionnaireResponse or via the PatientTask mechanism, but could be manual|  none    | [SDOHCCTaskForPatient] , [Questionnaire], [QuestionnaireResponse] |
+| 1 | ![patienticon] | Patient takes standardized assessment tool to identify social risks and needs. This could be done via a SMART app that would post a QuestionnaireResponse or via the PatientTask mechanism, but could be manual|  none    | <ul><li>[SDOHCCTaskForPatient]</li><li>[Questionnaire]</li><li>[QuestionnaireResponse]</li></ul> |
 | 2 | ![providericon]| Provider evaluates assessment and identifies social risks | none | [SDOHCC Observation Screening Response][SDOHCCObservationScreeningResponse] |
 | 3 | ![providericon], ![patienticon]|  Provider and Patient: <ul><li>prioritize goals</li><li>agree on referral</li><li>capture consent for sharing information</li></ul> | none  | none  |
-| 4 | ![providericon] | Provider promotes the health concern to the problem list, records goals, and captures patient consent  | none  | [SDOHCC Condition], [SDOHCC Consent][SDOHCCConsent], [SDOHCC Goal] |
-| 5 (optional)| ![providericon] | Provider makes information regarding the referral available to the patient’s application |  ??   |  ??    |
-| 6 | ![cboicon]| Provider or Care Coordinator initiates a referral to the CBO | [SDOHCC Service Request], [SDOHCC Task For Referral Management]  | none   |
-| 7 | ![cboicon] | CBO receives and accepts referral  (task)| [SDOHCC Task For Referral Management], [SDOHCC ServiceRequest], [SDOHCC Goal], [SDOHCC Condition]  |  none  |
+| 4 | ![providericon] | Provider promotes the health concern to the problem list, records goals, and captures patient consent  | none  | <ul><li>[SDOHCC Condition]</li><li>[SDOHCC Consent][SDOHCCConsent]</li><li>[SDOHCC Goal]</li></ul> |
+| 5 (optional)| ![providericon] | Provider makes information regarding the referral available to the patient’s application |  <ul><li>[SDOHCC Service Request]</li><li>[SDOHCC Location] </li></ul>   |  none    |
+| 6 | ![cboicon]| Provider or Care Coordinator initiates a referral to the CBO | <ul><li>[SDOHCC Service Request]</li><li>[SDOHCC Task For Referral Management] </li></ul> | none   |
+| 7 | ![cboicon] | CBO receives and accepts referral  (task)| <ul><li>[SDOHCC Task For Referral Management]</li><li>[SDOHCC ServiceRequest]</li><li>[SDOHCC Goal]</li><li>[SDOHCC Condition]</li></ul>  |  none  |
 | 8 | ![cboicon] | CBO updates the status of the referral (task) | [SDOHCC Task For Referral Management] |  none  |
 | 9 (optional) | ![cboicon], ![patienticon]| CBO communicates with the patient via their application to schedule appointments, collect additional information, etc.  This communication might not take place electronically.| none | none   |
-| 10 | ![cboicon] | CBO completes the evaluation and enrollment, updates the status of the referral (task) to completed, and includes information on what was completed | [SDOHCC Task For Referral Management], [SDOHCC Procedure] | missing   |
-| 11 | ![providericon] | Provider receives the updated status and updates the status of the referral (service request) | none  | missing   |
-| 12 (Optional) | ![providericon] | Provider closes loop by gathering feedback/satisfaction via questionnaire | [Assessment Instrument Support], [SDOHCC Task For Patient][SDOHCCTaskForPatient], [Questionnaire] | missing   |
-| 13 | ![providericon] | Provider determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately | [SDOHCC Goal] | missing   |
+| 10 | ![cboicon] | CBO completes the evaluation and enrollment, updates the status of the referral (task) to completed, and includes information on what was completed | <ul><li>[SDOHCC Task For Referral Management]</li><li>[SDOHCC Procedure]</li></ul> | missing   |
+| 11 | ![providericon] | Provider receives the updated status and updates the status of the referral (service request) | [SDOHCC Task For Referral Management]  | none   |
+| 12 (Optional) | ![providericon] | Provider closes loop by gathering feedback/satisfaction via questionnaire |<ul><li>[SDOHCC Task For Patient][SDOHCCTaskForPatient]</li><li>[Questionnaire]</li></ul> | missing   |
+| 13 | ![providericon] | Provider determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately | none | [SDOHCC Goal]   |
 {:.grid}
 
 #### Direct Referral
