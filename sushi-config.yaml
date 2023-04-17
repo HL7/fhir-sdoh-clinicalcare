@@ -188,8 +188,8 @@ groups:
     - SDOHCC-ConditionFoodInsecurityExample
     - SDOHCC-DeviceSoftwareExample
   NHANES:
-    name: NHANES Examples
-    description: NHANES Examples are an example of observations not derived from a QuestionnaireResponse, with a defined grouping.
+    name: Social Connection and Isolation Panel Examples
+    description: These examples illustrate how an Observation grouping can use hasMember to link individual Observations from a questionnaire/panel in the case where the individual Observations do not reference QuestionnaireResponse.
     resources:
     - SDOHCC-ObservationResponseNHANESGroupingExample
     - SDOHCC-ObservationResponseNHANESQuestion1Example
