@@ -61,12 +61,7 @@
 [Assessment Instrument Support]: assessment_instrument_support.html
 [Connecting Applications with API Data Sources]: connecting_applications_with_api_data_sources.html
 [SDOHCC Observation Response Hunger Vital Sign Question 3 Example]: Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example.html
-[Assessment Instrument Spreadsheet Guidance]: broken.html
-[Social Determinants of Health Screening Assessments And Questions]: broken.html
-[Social Determinants of Health Screening Assessments Questions]: broken.html
-[Social Determinants of Health Screening Questions]: broken.html
-[Social Determinants of Health Screening Assessments Answers]: broken.html
-[Subscription Notification Bundle]: http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition-backport-subscription-notification-r4.html
+[Subscription Notification Bundle]: https://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition-backport-subscription-notification-r4.html
 <!--# Icons -->
 [patienticon]: ./Patient.png
 {: height="35px" width="35px"}

@@ -3,7 +3,7 @@
 
 The minimum value set bindings for Observation.code and Observation.value are specified in the profile. However, for each SDOH category (domain) covered in this IG, there are also category-specific, preferred value sets. For an observation instance, selecting a category-specific code (e.g., food-insecurity, transportation-insecurity) from the [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) bound to Observation.category will determine the preferred, category-specific value sets for Observation.code and Observation.value. Where a preferred value set contains a code to describe a needed concept, servers SHOULD use that code.
 
-Codes in the category-specific, preferred value sets are from LOINC-encoded assessment instruments that have been vetted as face-valid by the Gravity Project. For the list of assessment instruments from which Gravity has chosen questions, see the [Social Determinants of Health Screening Assessments](broken.html) value set which is hosted in the NIH Value Set Authority Center ([VSAC]). For each Gravity-vetted assessment instrument, the questions are also vetted and only those that also meet Gravity criteria are included in the preferred value sets.
+Codes in the category-specific, preferred value sets are from LOINC-encoded assessment instruments that have been vetted as face-valid by the Gravity Project. For the list of assessment instruments from which Gravity has chosen questions, see the [Social Determinants of Health Screening Assessments](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.126/expansion/Latest) value set which is hosted in the NIH Value Set Authority Center ([VSAC]). For each Gravity-vetted assessment instrument, the questions are also vetted and only those that also meet Gravity criteria are included in the preferred value sets.
 
 #### Guidance on Category-specific Preferred Value Set Naming Conventions, Content, and Usage
 The table provides guidance on naming conventions, content, and usage for the category-specific, preferred value sets.
@@ -114,7 +114,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.191/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1247.191</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Elder Abuse Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Elder%20Abuse%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Elder Abuse Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.144/expansion/Latest">Panels</a></td>
@@ -154,7 +154,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.193/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1247.193</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Financial Insecurity Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Financial%20Insecurity%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Financial Insecurity Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.138/expansion/Latest">Panels</a></td>
@@ -293,7 +293,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.198/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1247.198</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Intimate Partner Violence Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Intimate%20Partner%20Violence%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Intimate Partner Violence Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.140/expansion/Latest">Panels</a></td>
@@ -353,7 +353,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.202/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1247.202</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Social Connection Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Social%20Connection%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Social Connection Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.135/expansion/Latest">Panels</a></td>
@@ -373,7 +373,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.203/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1247.203</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Stress Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Stress%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Stress Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.136/expansion/Latest">Panels</a></td>
@@ -413,7 +413,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.192/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1247.192</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Veteran Status Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Veteran%20Status%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Veteran Status Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.134/expansion/Latest">Panels</a></td>
@@ -447,7 +447,7 @@ Of note, Grouper VSAC value sets containing the members of all the category-spec
 
 Each question (Observation.code) on an assessment instrument has a set of allowed answers (Observation.value). The allowed answers for a specific question may vary depending on the assessment instrument (LOINC panel) on which the question is presented (e.g., [88122-7](https://loinc.org/88122-7) "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]" has 4 possible answers on the [Hunger Vital Sign (HVS)](https://loinc.org/88121-9) panel versus three possible answers on the [American Academy of Family Physicians Social Needs Screening Tool](https://loinc.org/99593-6)). For this reason, the category-specific Assessment Instrument Spreadsheets provide additional information to link specific assessment instruments to questions and their allowed LOINC Answer Lists. LOINC also provides Answers Lists for questions from specific assessment instruments (panels).
 
-​For additional information on fields in the Assessment Instrument Spreadsheets, see [Assessment Instrument Spreadsheet Guidance](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/updates_0327/broken.html) on the Gravity Project Confluence site.
+​For additional information on fields in the Assessment Instrument Spreadsheets, see [Assessment Instrument Spreadsheet Guidance] on the Gravity Project Confluence site.
 
 
 {% include markdown-link-references.md %}
