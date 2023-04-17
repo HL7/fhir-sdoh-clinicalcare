@@ -45,11 +45,11 @@ The functional use cases in the table below describe the referral process initia
 ### Patient Coordination Use Cases
 __Need a patient coordination intro, and to refine the Referral Use Cases Intro above__
 
-The [Patient Coordination](referral_workflow.html#patientcoordinationworkflow) includes some, but not all of the interactions with the Patient.  Specifically it contains those interactions where a task is created, whereas some patient interactions could involve the Patient application querying for data, such as Goals or Referral Tasks. In figure 1 below, patient coordination is indicated by a red box on steps 9 and 12.
+The [Patient Coordination](referral_workflow.html#patient-coordination-workflow) includes some, but not all of the interactions with the Patient.  Specifically it contains those interactions where a task is created, whereas some patient interactions could involve the Patient application querying for data, such as Goals or Referral Tasks. In figure 1 below, patient coordination is indicated by a red box on steps 9 and 12.
 
 | Functional Use Case |  Description           | Actors |
 | ------------------------- | ------------------------------------ | ---------------- |
-| [Patient Coordination](referral_workflow.html#patientcoordinationworkflow)|  A way for a referring party (provider, CBO, CP) to ask a patient to do something and track whether or not they have done it and why, and possibly the outcomes. Patient tasks include requests to out a form, contact a service provider, or review  material. | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
+| [Patient Coordination](referral_workflow.html#patient-coordination-workflow)|  A way for a referring party (provider, CBO, CP) to ask a patient to do something and track whether or not they have done it and why, and possibly the outcomes. Patient tasks include requests to out a form, contact a service provider, or review  material. | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
 {:.grid}
 
 ### Referral Use Cases
