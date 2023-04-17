@@ -188,7 +188,7 @@ groups:
     - SDOHCC-ConditionFoodInsecurityExample
     - SDOHCC-DeviceSoftwareExample
   NHANES:
-    name: Social Connection and Isolation Panel Examples
+    name: Social Connection and Isolation Panel (NHANES) Examples
     description: These examples illustrate how an Observation grouping can use hasMember to link individual Observations from a questionnaire/panel in the case where the individual Observations do not reference QuestionnaireResponse.
     resources:
     - SDOHCC-ObservationResponseNHANESGroupingExample

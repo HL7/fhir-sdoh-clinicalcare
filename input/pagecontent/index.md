@@ -67,7 +67,7 @@ This IG contains a wealth of material targeting different audiences. Some sectio
 | Implementation Guidance|  [Referral Workflow] |  Provides a high level description of the referral workflows and patient interactions supported by this IG, and then drills down to a detailed description of the FHIR API calls implementing the referral workflow   |  Introductory and Detailed Technical |
 | Implementation Guidance | [Connecting Applications with API Data Sources] | Provides a description of  establishing connections to enable the exchange of information supporting the [Referral Workflow].    |  Detailed Technical  |
 | Specifications | [FHIR Artifacts](artifacts.html) | An index of the FHIR artifacts defined as part of this implementation guide     |  Detailed Technical |
-| Specifications| [Conformance](conformance.html) | Conformance requirements for must support and missing data     |  Detailed Technical |
+| Specifications| [Must Support and Missing Data] | Conformance requirements for must support and missing data     |  Detailed Technical |
 | Specifications | [Privacy and Security] | Conformance requirements for privacy and security considerations     |  Detailed Technical |
 | Specifications | [Draft FHIR Artifacts for Personal Characteristics](draft_specifications_for_personal_characteristics.html) | Draft proposals for profiles of Observation supporting Personal Characteristics     |  Detailed Technical |
 | Specifications | [Downloads](downloads.html) | Downloads     |  Detailed Technical |
