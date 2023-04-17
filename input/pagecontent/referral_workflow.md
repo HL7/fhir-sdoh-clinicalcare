@@ -41,8 +41,8 @@ The actors in the workflows are described in the table below.   The graphical ic
 <br/>
 The workflow and associated exchange patters for these interactions will now be described, first at a high level, and then in detail. -->
 
-### Overview
-The functional use cases in the table below describe the referral process initiated by a provider, or other healthcare actor, and a request referral recipient, both directly and indirectly via an intermediary.   For each use case the capabilities or limitations of the actor are described.   The table links to the functional use case and the associated detailed technical exchange workflow.  Note that the [Patient Coordination](referral_workflow.html#patientcoordinationworkflow) includes some, but not all of the interactions with the Patient.  Specifically it contains those interactions where a task is created, whereas some patient interactions could involve the Patient application querying for data, such as Goals or Referral Tasks.
+### Referral Use Cases
+The functional use cases in the table below describe the referral process initiated by a provider, or other healthcare actor, and a request referral recipient, both directly and indirectly via an intermediary.   For each use case the capabilities or limitations of the actor are described.   The table links to the functional use case and the associated detailed technical exchange workflow.
 
 
 | Functional Use Case |  Description           | Actors |
@@ -51,6 +51,15 @@ The functional use cases in the table below describe the referral process initia
 | [Direct Referral (light)](referral_workflow.html#directreferrallight) | A “light” version of the Direct Referral with the exception that the performing entity (e.g., CBO) does not have FHIR API capability but has an application that can access the referring entity’s API  | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
 | [Indirect Referral](referral_workflow.html#indirectreferral) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., a CBO) that is mediated by a referring intermediary (e.g., a CP) where all entities have FHIR APIs to facilitate exchange  | ![providericon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] |
 | [Indirect Referral (light)](referral_workflow.html#indirectreferrallight) | A referral between a referring entity (e.g., Provider) and a performing entity (e.g., a CBO) that is mediated by a referring intermediary (e.g., a CP) where the referring entity and referring intermediary have FHIR APIs, and the performing entity does not have FHIR API capability but has an application that can access the referring entity’s API | ![providericon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] |
+{:.grid}
+
+### Patient Coordination Use Cases
+__Need a patient coordination intro, and to refine the Referral Use Cases Intro above__
+
+The [Patient Coordination](referral_workflow.html#patientcoordinationworkflow) includes some, but not all of the interactions with the Patient.  Specifically it contains those interactions where a task is created, whereas some patient interactions could involve the Patient application querying for data, such as Goals or Referral Tasks. In figure 1 below, patient coordination is indicated by a red box on steps 9 and 12.
+
+| Functional Use Case |  Description           | Actors |
+| ------------------------- | ------------------------------------ | ---------------- |
 | [Patient Coordination](referral_workflow.html#patientcoordinationworkflow)|  A way for a referring party (provider, CBO, CP) to ask a patient to do something and track whether or not they have done it and why, and possibly the outcomes. Patient tasks include requests to out a form, contact a service provider, or review  material. | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
 {:.grid}
 
@@ -64,7 +73,8 @@ data that is exchanged, so systems are free to use any internal representation.
 {% include img.html img="HighLevelReferralContext.svg" caption="Figure 1: Referral Use Cases Context" %}
 
 
-<table>
+<table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
+	<caption><b>Annotations of Figure 1</b></caption>
 <thead>
 <tr>
 <th>Step</th>
@@ -83,64 +93,64 @@ data that is exchanged, so systems are free to use any internal representation.
 </tr>
 <tr>
 <td>2</td>
-<td><img src="Provider.png" alt="Patient" width="35" height="35"></td>
+<td><img src="Provider.png" alt="Provider" width="35" height="35"></td>
 <td>Provider evaluates assessment and identifies social risks</td>
 <td>none</td>
-<td>[SDOHCC Observation Screening Response][SDOHCCObservationScreeningResponse]</td>
+<td><ul><li>[SDOHCC Observation Screening Response]</li><li>[SDOHCCObservationScreeningResponse]</li></ul>  ,</td>
 </tr>
 <tr>
 <td>3</td>
-<td><img src="Provider.png" alt="Patient" width="35" height="35">, <img src="Patient.png" alt="Patient" width="35" height="35"></td>
+<td><img src="Provider.png" alt="Provider" width="35" height="35">, <img src="Patient.png" alt="Patient" width="35" height="35"></td>
 <td>Provider and Patient: <ul><li>prioritize goals</li><li>agree on referral</li><li>capture consent for sharing information</li></ul></td>
 <td>none</td>
 <td>none</td>
 </tr>
 <tr>
 <td>4</td>
-<td><img src="Provider.png" alt="Patient" width="35" height="35"></td>
+<td><img src="Provider.png" alt="Provider" width="35" height="35"></td>
 <td>Provider promotes the health concern to the problem list, records goals, and captures patient consent</td>
 <td>none</td>
 <td><ul><li>[SDOHCC Condition]</li><li>[SDOHCC Consent][SDOHCCConsent]</li><li>[SDOHCC Goal]</li></ul></td>
 </tr>
 <tr>
 <td>5 (optional)</td>
-<td><img src="Provider.png" alt="Patient" width="35" height="35"></td>
-<td>Provider makes information regarding the referral available to the patient’s application</td>
+<td><img src="Provider.png" alt="Provider" width="35" height="35"></td>
+<td>Provider makes information regarding the referral, goals and plan available to the patient’s application</td>
 <td><ul><li>[SDOHCC Service Request]</li><li>[SDOHCC Location] </li></ul></td>
 <td>none</td>
 </tr>
 <tr>
 <td>6</td>
-<td><img src="CBO.png" alt="Patient" width="35" height="35"></td>
-<td>Provider or Care Coordinator initiates a referral to the CBO</td>
+<td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
+<td>Provider or Care Coordinator initiates a referral to the CBO or CP</td>
 <td><ul><li>[SDOHCC Service Request]</li><li>[SDOHCC Task For Referral Management] </li></ul></td>
 <td>none</td>
 </tr>
 <tr>
 <td>7</td>
-<td><img src="CBO.png" alt="Patient" width="35" height="35"></td>
-<td>CBO receives and accepts referral  (task)</td>
+<td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
+<td>Recipient (CBO or CP) retrieves information about the referral and any needed supporting information, then makes a decision to accept or reject the referral. If the recipient rejects the referral either the process ends, or it resumes at step #6.</td>
 <td><ul><li>[SDOHCC Task For Referral Management]</li><li>[SDOHCC ServiceRequest]</li><li>[SDOHCC Goal]</li><li>[SDOHCC Condition]</li></ul></td>
 <td>none</td>
 </tr>
 <tr>
 <td>8</td>
-<td><img src="CBO.png" alt="Patient" width="35" height="35"></td>
-<td>CBO updates the status of the referral (task)</td>
+<td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
+<td>Recipient (CBO or CP) updates the status of their work (task) to reflect progress via notes or status.</td>
 <td>[SDOHCC Task For Referral Management]</td>
 <td>none</td>
 </tr>
 <tr>
 <td>9 (optional)</td>
-<td><img src="CBO.png" alt="Patient" width="35" height="35">, <img src="Patient.png" alt="Patient" width="35" height="35"></td>
-<td>CBO communicates with the patient via their application to schedule appointments, collect additional information, etc.  This communication might not take place electronically.</td>
+<td><td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>, <img src="Patient.png" alt="Patient" width="35" height="35"></td>
+<td>Recipient (CBO or CP) communicates with the patient via their application to schedule appointments, collect additional information, etc.  This communication might not take place electronically.</td>
 <td>none</td>
 <td>none</td>
 </tr>
 <tr>
 <td>10</td>
-<td><img src="CBO.png" alt="Patient" width="35" height="35"></td>
-<td>CBO completes the evaluation and enrollment, updates the status of the referral (task) to completed, and includes information on what was completed</td>
+<td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
+<td>Recipient (CBO or CP) completes the completes the requested action, updates the status of their work (task) to completed, and includes information on what was completed</td>
 <td><ul><li>[SDOHCC Task For Referral Management]</li><li>[SDOHCC Procedure]</li></ul></td>
 <td>missing</td>
 </tr>
@@ -161,7 +171,7 @@ data that is exchanged, so systems are free to use any internal representation.
 <tr>
 <td>13</td>
 <td><img src="Provider.png" alt="Patient" width="35" height="35"></td>
-<td>Provider determines if the goal has been satisfied and/or progress has been made on the goal and updates the goal appropriately</td>
+<td>Provider determines if the goals/plan have been satisfied and/or progress has been made on the goal/plan and updates the goal/plan appropriately</td>
 <td>none</td>
 <td>[SDOHCC Goal]</td>
 </tr>
@@ -173,14 +183,15 @@ data that is exchanged, so systems are free to use any internal representation.
 
 In this use case the patient is referred to a CBO for help addressing prioritized needs. The CBO accepts the referral, provides the requested support to the patient, and shares the updated information with the referring provider.
 
-The Provider and the CBO have FHIR servers.  The Patient has a FHIR-enabled patient application.
+The Provider and the CBO have FHIR servers.  The Patient may have a FHIR-enabled patient application.
 
 The example assumes that the Provider has an existing relationship with the CBO.
 The CBO may not accept the referral or be unable to perform the requested service.
 
-The drawing is followed by a key that describes each labeled interaction.     The details of the FHIR-based exchanges  are provided in the [following section](referral_workflow.html#direct-referral-detailed-view).
+<!-- The drawing is followed by a key that describes each labeled interaction.     -->
+The details of the FHIR-based exchanges  are provided in the [following section](referral_workflow.html#direct-referral-detailed-view).
 
-{% include img.html img="DirectReferralFunctional.svg" caption="Figure 2: Direct Referral" %}
+<!-- {% include img.html img="DirectReferralFunctional.svg" caption="Figure 2: Direct Referral" %}
 
 
 | Step | Actors | Description| Exchanged | Aligns With|
@@ -190,7 +201,7 @@ The drawing is followed by a key that describes each labeled interaction.     Th
 | 3 (optional) | ![cboicon], ![patienticon]| CBO communicates with the patient via their application to schedule appointments, collect additional information, etc.  This communication might not take place electronically.|  | |
 | 4 | ![cboicon] | CBO completes the evaluation and enrollment, updates the status of the referral (task) to completed, and includes information on what was completed | [SDOHCC Task For Referral Management], [SDOHCC Procedure] | |
 {:.grid}
-
+ -->
 ##### Direct Referral Detailed View
 The following figure shows the FHIR exchanges between the referral source and target.
 For each numbered exchange, the details of the data elements exchanged, and the FHIR request and response are provided.
@@ -218,9 +229,10 @@ The Provider has a FHIR server. The CBO has a FHIR-enabled application.  The Pat
 
 Functionally, this use case is the same as the previous use case, except that the CBO has a FHIR-enabled application, but does not support a FHIR API.  As a result, the provider can't push information to the CBO, but rather tha CBO needs to pull information from the provider.    At the conclusion of the referral, the CBO POSTS needed information to the Provider FHIR server (e.g., Procedures) and updates the status and the linked resources of the Task.
 
-The drawing is followed by a key that describes each labeled interaction.     The details of the FHIR-based exchanges in that box are provided in the [following section](referral_workflow.html#direct-referral-detailed-view).
+<!-- The drawing is followed by a key that describes each labeled interaction.      -->
+The details of the FHIR-based exchanges in that box are provided in the [following section](referral_workflow.html#direct-referral-detailed-view).
 
-{% include img.html img="DirectLightReferralFunctional.svg" caption="Figure 4: Direct Light Referral" %}
+<!-- {% include img.html img="DirectLightReferralFunctional.svg" caption="Figure 4: Direct Light Referral" %}
 
 | Step | Actors | Description| Exchanged | Aligns With|
 | -----| ------------- | ------- | ---------------- |
@@ -228,7 +240,7 @@ The drawing is followed by a key that describes each labeled interaction.     Th
 | 2 | ![cboicon] | CBO finds new referral and accepts the referral | [SDOHCC Task For Referral Management]  |
 | 3 (optional) | ![cboicon], ![patienticon]| CBO communicates with the patient via their application to schedule appointments, collect additional information, etc. This exchange might not occur electronically|  |
 | 4 | ![cboicon] | CBO completes the evaluation and enrollment, updates the status of the referral to completed, and includes information on what was completed. This will involve POSTing resources such as Procedures to the Provider FHIR server, and making sure they are linked appropriately. | [SDOHCC Task For Referral Management], [SDOHCC Procedure] |
-{:.grid}
+{:.grid} -->
 
 ##### Direct Referral Light - Detailed View
 The referral occurs between the Provider/Requester and the CBO/Performer where the CBO/Performer does not have a FHIR API (FHIR Server or FHIR Façade).   The exchange with the Performer is initiated via an email with a ~~secure link to the Provider/Requester API that can be used by an application available~~ link to an application and instructions for authentication with the application.  This application can be used by the CBO/Performer to communicate with the Provider/Requester using RESTful exchanges that read, create, and update resources via the Provider/Requester API.
@@ -260,7 +272,7 @@ Functionally, this indirect referral is essentially two direct referrals (Provid
 The Provider has a relationship with the CP, but not with the CBO.  The use case assumes that the CP and the CPO have an established relationship.
 The Provider may request to have the service delivered by a specific CBO.   The CP may not accept the referral or be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
 
-{% include img.html img="FlowIndirectDirectReferralFunctional.svg" caption="Figure 5: Indirect Referral with Direct CBO" %}
+<!-- {% include img.html img="FlowIndirectDirectReferralFunctional.svg" caption="Figure 5: Indirect Referral with Direct CBO" %}
 
 | Step | Actors | Description| References|
 | -----| ------------- | ------- | ---------------- |
@@ -278,7 +290,7 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 | 12 | ![providericon] | Provider receives the updated status | [Checking Task Status] |
 | 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Survey Instrument Support] |
 {:.grid .center  }
-
+ -->
 ##### Indirect Referral With Direct CBO - Detailed View
 The referral occurs in two separate interactions. The first is between the Referral Source and the Intermediary and the second is between the Intermediary and the Referral Performer.
 
@@ -362,4 +374,5 @@ Here we provided a detailed view of an interaction between a patient application
 | 6 |  Patient | Post Questionnaire Response | [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) | [Transaction 6](FHIR_API_Examples.html#post-task-1) |
 | 7 |  Patient | Update Task (completed and .Output references QuestionnaireResponse) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 7](FHIR_API_Examples.html#post-task-1) |
 {:.grid}
+
 {% include markdown-link-references.md %}
