@@ -16,7 +16,7 @@
 
 - [FHIR-38082](https://jira.hl7.org/browse/FHIR-38082)	Beef up the mapping instructions page
 - [FHIR-38081](https://jira.hl7.org/browse/FHIR-38081)	Mapping page should not have the mapping language content
-  - updated [mapping instructions](mapping_instructions.html)
+  - updated mapping instructions
 
 #### Task Instructions
 
@@ -67,7 +67,7 @@
 - [FHIR-35621](https://jira.hl7.org/browse/FHIR-35621)	What is the CP doing on behalf of the provider organization that renders it a business associate?
 - [FHIR-35377](https://jira.hl7.org/browse/FHIR-35377)	Additional info about what a CP is might be helpful here
 - [FHIR-34881](https://jira.hl7.org/browse/FHIR-34881)	Referral workflow steps need to be aligned
-  - Applied the above ticket dispositions to the [Functional Use Cases](functional_use_cases.html) page
+  - Applied the above ticket dispositions to the Functional Use Cases page
 
 #### Structure Definitions
 
