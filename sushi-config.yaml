@@ -115,6 +115,7 @@ groups:
       - SDOHCCValueSetObservationStatus
       - SDOHCCValueSetSDOHCategory
       - SDOHCCValueSetSDOHQuestionnaireCategory
+      - SDOHCCValueSetReferralTaskStatus
       - SDOHCCValueSetTaskCode
       - SDOHCCValueSetTaskPriority
       - SDOHCCValueSetTaskStatus
