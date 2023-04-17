@@ -30,17 +30,6 @@ The actors in the workflows are described in the table below.   The graphical ic
 | ![patientapp] FHIR-enabled Patient Application | A patient application that can connect to FHIR servers |
 {:.grid}
 
-<!-- The figure below shows thesystem to system interactions supported by this implementation guide.  These include:
-
-1. referrals via an intermediary (or indirect referrals) that may include interactions with multiple service performers,
-2. direct and direct light (where the interaction is with an application) referrals,
-3. interactions with a patient to complete a questionnaire or "form", and
-4. interactions with a patient to cancel a service or indicate the outcome of the service
-
-<object data="OverallInteractions.svg" type="image/svg+xml"></object>
-<br/>
-The workflow and associated exchange patters for these interactions will now be described, first at a high level, and then in detail. -->
-
 ### Referral Use Cases
 The functional use cases in the table below describe the referral process initiated by a provider, or other healthcare actor, and a request referral recipient, both directly and indirectly via an intermediary.   For each use case the capabilities or limitations of the actor are described.   The table links to the functional use case and the associated detailed technical exchange workflow.
 
@@ -188,20 +177,8 @@ The Provider and the CBO have FHIR servers.  The Patient may have a FHIR-enabled
 The example assumes that the Provider has an existing relationship with the CBO.
 The CBO may not accept the referral or be unable to perform the requested service.
 
-<!-- The drawing is followed by a key that describes each labeled interaction.     -->
 The details of the FHIR-based exchanges  are provided in the [following section](referral_workflow.html#direct-referral-detailed-view).
 
-<!-- {% include img.html img="DirectReferralFunctional.svg" caption="Figure 2: Direct Referral" %}
-
-
-| Step | Actors | Description| Exchanged | Aligns With|
-| -----| ------------- | ------- | ---------------- |
-| 1 | ![cboicon]| Provider or Care Coordinator creates and sends an electronic referral to the CBO | [SDOHCC Service Request], [SDOHCC Task ForReferral Management]  | |
-| 2 | ![cboicon] | CBO receives and accepts referral  (task)| [SDOHCC Task For Referral Management]  | |
-| 3 (optional) | ![cboicon], ![patienticon]| CBO communicates with the patient via their application to schedule appointments, collect additional information, etc.  This communication might not take place electronically.|  | |
-| 4 | ![cboicon] | CBO completes the evaluation and enrollment, updates the status of the referral (task) to completed, and includes information on what was completed | [SDOHCC Task For Referral Management], [SDOHCC Procedure] | |
-{:.grid}
- -->
 ##### Direct Referral Detailed View
 The following figure shows the FHIR exchanges between the referral source and target.
 For each numbered exchange, the details of the data elements exchanged, and the FHIR request and response are provided.
@@ -229,18 +206,7 @@ The Provider has a FHIR server. The CBO has a FHIR-enabled application.  The Pat
 
 Functionally, this use case is the same as the previous use case, except that the CBO has a FHIR-enabled application, but does not support a FHIR API.  As a result, the provider can't push information to the CBO, but rather tha CBO needs to pull information from the provider.    At the conclusion of the referral, the CBO POSTS needed information to the Provider FHIR server (e.g., Procedures) and updates the status and the linked resources of the Task.
 
-<!-- The drawing is followed by a key that describes each labeled interaction.      -->
 The details of the FHIR-based exchanges in that box are provided in the [following section](referral_workflow.html#direct-referral-detailed-view).
-
-<!-- {% include img.html img="DirectLightReferralFunctional.svg" caption="Figure 4: Direct Light Referral" %}
-
-| Step | Actors | Description| Exchanged | Aligns With|
-| -----| ------------- | ------- | ---------------- |
-| 1 | ![cboicon]| CBO application queries Provider or Care Coordinator API for new or updated referrals | [SDOHCC Service Request], [SDOHCC Task For Referral Management]  | |
-| 2 | ![cboicon] | CBO finds new referral and accepts the referral | [SDOHCC Task For Referral Management]  |
-| 3 (optional) | ![cboicon], ![patienticon]| CBO communicates with the patient via their application to schedule appointments, collect additional information, etc. This exchange might not occur electronically|  |
-| 4 | ![cboicon] | CBO completes the evaluation and enrollment, updates the status of the referral to completed, and includes information on what was completed. This will involve POSTing resources such as Procedures to the Provider FHIR server, and making sure they are linked appropriately. | [SDOHCC Task For Referral Management], [SDOHCC Procedure] |
-{:.grid} -->
 
 ##### Direct Referral Light - Detailed View
 The referral occurs between the Provider/Requester and the CBO/Performer where the CBO/Performer does not have a FHIR API (FHIR Server or FHIR Façade).   The exchange with the Performer is initiated via an email with a ~~secure link to the Provider/Requester API that can be used by an application available~~ link to an application and instructions for authentication with the application.  This application can be used by the CBO/Performer to communicate with the Provider/Requester using RESTful exchanges that read, create, and update resources via the Provider/Requester API.
@@ -272,25 +238,6 @@ Functionally, this indirect referral is essentially two direct referrals (Provid
 The Provider has a relationship with the CP, but not with the CBO.  The use case assumes that the CP and the CPO have an established relationship.
 The Provider may request to have the service delivered by a specific CBO.   The CP may not accept the referral or be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
 
-<!-- {% include img.html img="FlowIndirectDirectReferralFunctional.svg" caption="Figure 5: Indirect Referral with Direct CBO" %}
-
-| Step | Actors | Description| References|
-| -----| ------------- | ------- | ---------------- |
-| 1 | ![providericon]| Provider or Care Coordinator creates and sends an electronic referral (and a copy of the consent) to the CP.  Same as step 1 in the Direct Referral but the Provider is communicating with the CP instead of the CBO | [SDOHCC Service Request], [SDOHCC Task For Referral Management]  |
-| 2 | ![cpicon] | CP receives and accepts referral | [SDOHCC Task For Referral Management]  |
-| 3 (optional) | ![cpicon], ![patienticon]| CP communicates with the patient via their application to schedule appointments, collect additional information, etc. This exchange might not occur electronically|  |
-| 4 | ![cpicon] | CP refers patient to a CBO, with which they have a relationship, to evaluate a patient’s eligibility and help the patient enroll in a SNAP program, if appropriate. The flow is the same as for the Direct Referral but with the CP acting as a provider system. | [SDOHCC Task For Referral Management], [SDOHCC Procedure] |
-| 5 | ![cboicon] | CBO receives and accepts the referral | [SDOHCC Task For Referral Management] |
-| 6 (optional)| ![cboicon] | CP makes information regarding the referral available to the patient’s application. |  |
-| 7 | ![cpicon] | CP updates status of the initial referral | [SDOHCC Task For Referral Management] |
-| 8 (optional) | ![cboicon] | CBO communicates with patient via their application to schedule appointments, collect additional information, etc. |  |
-| 9 | ![cboicon] | CBO updates the status of the referral to completed, and includes information on what was completed | [SDOHCC Task For Referral Management] |
-| 10 | ![cpicon] | CP communicates with the patient via their application to close loop on service(s) delivered by the CBO | [SDOHCC Task For Referral Management] |
-| 11 | ![cpicon] | CP uses input from the CBO and Patient to update the status of the referral and includes information on what was completed | [SDOHCC Task For Referral Management] |
-| 12 | ![providericon] | Provider receives the updated status | [Checking Task Status] |
-| 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Survey Instrument Support] |
-{:.grid .center  }
- -->
 ##### Indirect Referral With Direct CBO - Detailed View
 The referral occurs in two separate interactions. The first is between the Referral Source and the Intermediary and the second is between the Intermediary and the Referral Performer.
 
@@ -333,6 +280,9 @@ The Provider may request to have the service delivered by a specific CBO.   The 
 | 12 | ![providericon] | Provider receives the updated status | [Checking Task Status] |
 | 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Assessment Instrument Support] |
 {:.grid .center  }
+
+##### Indirect Referral With Direct Light CBO - Detailed View
+__Need to replace above figure with detailed view __
 
 #### Notes on Direct and Indirect Referrals
 
