@@ -85,7 +85,7 @@ data that is exchanged, so systems are free to use any internal representation.
 <td><img src="Provider.png" alt="Provider" width="35" height="35"></td>
 <td>Provider evaluates assessment and identifies social risks</td>
 <td>none</td>
-<td><a href="StructureDefinition-SDOHCC-ObservationScreeningResponse.html">SDOHCC Observation Screening Response</a></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-ObservationScreeningResponse.html">SDOHCC Observation Screening Response</li></ul></a></td>
 </tr>
 <tr>
 <td>3</td>
@@ -126,12 +126,12 @@ data that is exchanged, so systems are free to use any internal representation.
 <td>8</td>
 <td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
 <td>Recipient (CBO or CP) updates the status of their work (task) to reflect progress via notes or status.</td>
-<td><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a></li></ul></td>
 <td>none</td>
 </tr>
 <tr>
 <td>9 (optional)</td>
-<td><td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>, <img src="Patient.png" alt="Patient" width="35" height="35"></td>
+<td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>, <img src="Patient.png" alt="Patient" width="35" height="35"></td>
 <td>Recipient (CBO or CP) communicates with the patient via their application to schedule appointments, collect additional information, etc.  This communication might not take place electronically.</td>
 <td>none</td>
 <td>none</td>
@@ -147,7 +147,7 @@ data that is exchanged, so systems are free to use any internal representation.
 <td>11</td>
 <td><img src="Provider.png" alt="Patient" width="35" height="35"></td>
 <td>Provider receives the updated status and updates the status of the referral (service request)</td>
-<td><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a></li></ul></td>
 <td>none</td>
 </tr>
 <tr>
@@ -162,7 +162,7 @@ data that is exchanged, so systems are free to use any internal representation.
 <td><img src="Provider.png" alt="Patient" width="35" height="35"></td>
 <td>Provider determines if the goals/plan have been satisfied and/or progress has been made on the goal/plan and updates the goal/plan appropriately</td>
 <td>none</td>
-<td><a href="StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal</a></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal</a></li></ul></td>
 </tr>
 </tbody></table>
 
