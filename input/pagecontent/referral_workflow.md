@@ -78,14 +78,14 @@ data that is exchanged, so systems are free to use any internal representation.
 <td><img src="Patient.png" alt="Patient" width="35" height="35"></td>
 <td>Patient takes standardized assessment tool to identify social risks and needs. This could be done via a SMART app that would post a QuestionnaireResponse or via the PatientTask mechanism, but could be manual</td>
 <td>none</td>
-<td><ul><li>[SDOHCCTaskForPatient]</li><li>[Questionnaire]</li><li>[QuestionnaireResponse]</li></ul></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-TaskForPatient.html">SDOHCC Task For Patient</a></li><li><a href="https://www.hl7.org/fhir/questionnaire.html">Questionnaire</a></li><li><a href="https://www.hl7.org/fhir/questionnaireresponse.html">QuestionnareResponse</a></li></ul></td>
 </tr>
 <tr>
 <td>2</td>
 <td><img src="Provider.png" alt="Provider" width="35" height="35"></td>
 <td>Provider evaluates assessment and identifies social risks</td>
 <td>none</td>
-<td><ul><li>[SDOHCC Observation Screening Response]</li><li>[SDOHCCObservationScreeningResponse]</li></ul>  ,</td>
+<td><a href="StructureDefinition-SDOHCC-ObservationScreeningResponse.html">SDOHCC Observation Screening Response</a></td>
 </tr>
 <tr>
 <td>3</td>
@@ -99,34 +99,34 @@ data that is exchanged, so systems are free to use any internal representation.
 <td><img src="Provider.png" alt="Provider" width="35" height="35"></td>
 <td>Provider promotes the health concern to the problem list, records goals, and captures patient consent</td>
 <td>none</td>
-<td><ul><li>[SDOHCC Condition]</li><li>[SDOHCC Consent][SDOHCCConsent]</li><li>[SDOHCC Goal]</li></ul></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-Condition.html">SDOHCC Observation Screening Response</a></li><li><a href="StructureDefinition-SDOHCC-Consent.html">SDOHCC Consent</a></li><li><a href="StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal</a></li></ul></td>
 </tr>
 <tr>
 <td>5 (optional)</td>
 <td><img src="Provider.png" alt="Provider" width="35" height="35"></td>
 <td>Provider makes information regarding the referral, goals and plan available to the patient’s application</td>
-<td><ul><li>[SDOHCC Service Request]</li><li>[SDOHCC Location] </li></ul></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a></li><li><a href="StructureDefinition-SDOHCC-Location.html">SDOHCC Location</a> </li></ul></td>
 <td>none</td>
 </tr>
 <tr>
 <td>6</td>
 <td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
 <td>Provider or Care Coordinator initiates a referral to the CBO or CP</td>
-<td><ul><li>[SDOHCC Service Request]</li><li>[SDOHCC Task For Referral Management] </li></ul></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a></li><li><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a> </li></ul></td>
 <td>none</td>
 </tr>
 <tr>
 <td>7</td>
 <td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
 <td>Recipient (CBO or CP) retrieves information about the referral and any needed supporting information, then makes a decision to accept or reject the referral. If the recipient rejects the referral either the process ends, or it resumes at step #6.</td>
-<td><ul><li>[SDOHCC Task For Referral Management]</li><li>[SDOHCC ServiceRequest]</li><li>[SDOHCC Goal]</li><li>[SDOHCC Condition]</li></ul></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a></li><li><a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a></li><li><a href="StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal</a></li><li><a href="StructureDefinition-SDOHCC-Condition.html">SDOHCC Observation Screening Response</a></li></ul></td>
 <td>none</td>
 </tr>
 <tr>
 <td>8</td>
 <td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
 <td>Recipient (CBO or CP) updates the status of their work (task) to reflect progress via notes or status.</td>
-<td>[SDOHCC Task For Referral Management]</td>
+<td><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a></td>
 <td>none</td>
 </tr>
 <tr>
@@ -140,21 +140,21 @@ data that is exchanged, so systems are free to use any internal representation.
 <td>10</td>
 <td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
 <td>Recipient (CBO or CP) completes the completes the requested action, updates the status of their work (task) to completed, and includes information on what was completed</td>
-<td><ul><li>[SDOHCC Task For Referral Management]</li><li>[SDOHCC Procedure]</li></ul></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC ServiceRequest</a></li><li><a href="StructureDefinition-SDOHCC-Procedure.html">SDOHCC Procedure</a></li></ul></td>
 <td>missing</td>
 </tr>
 <tr>
 <td>11</td>
 <td><img src="Provider.png" alt="Patient" width="35" height="35"></td>
 <td>Provider receives the updated status and updates the status of the referral (service request)</td>
-<td>[SDOHCC Task For Referral Management]</td>
+<td><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a></td>
 <td>none</td>
 </tr>
 <tr>
 <td>12 (Optional)</td>
 <td><img src="Provider.png" alt="Patient" width="35" height="35"></td>
 <td>Provider closes loop by gathering feedback/satisfaction via questionnaire</td>
-<td><ul><li>[SDOHCC Task For Patient][SDOHCCTaskForPatient]</li><li>[Questionnaire]</li></ul></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-TaskForPatient.html">SDOHCCTaskForPatient</a></li><li><a href="https://www.hl7.org/fhir/questionnaire.html">Questionnaire</a></li></ul></td>
 <td>missing</td>
 </tr>
 <tr>
@@ -162,7 +162,7 @@ data that is exchanged, so systems are free to use any internal representation.
 <td><img src="Provider.png" alt="Patient" width="35" height="35"></td>
 <td>Provider determines if the goals/plan have been satisfied and/or progress has been made on the goal/plan and updates the goal/plan appropriately</td>
 <td>none</td>
-<td>[SDOHCC Goal]</td>
+<td><a href="StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal</a></td>
 </tr>
 </tbody></table>
 
@@ -261,28 +261,8 @@ The Provider and CP have FHIR APIs.  The CBO has a FHIR-enabled application.  Th
 The Provider has a relationship with the CP, but not with the CBO.  The use case assumes that the CP and the CPO have an established relationship.
 The Provider may request to have the service delivered by a specific CBO.   The CP may not accept the referral or be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
 
-
-{% include img.html img="FlowIndirectDirectLightReferralFunctional.svg" caption="Figure 3: Annotated Flow Diagram for Indirect Referral Light" %}
-
-| Step | Actors | Description| References|
-| -----| ------------- | ------- | ---------------- |
-| 1 | ![providericon]| Provider or Care Coordinator creates and sends an electronic referral (and a copy of the consent) to the CP.  Same as 1 in the Direct Referral but the Provider is communicating with the CP instead of the CBO | [SDOHCC Service Request], [SDOHCC Task For Referral Management]  |
-| 2 | ![cpicon] | CP receives and accepts referral | [SDOHCC Task For Referral Management]  |
-| 3 (optional) | ![cpicon], ![patienticon]| CP communicates with the patient via their application to schedule appointments, collect additional information, etc. This exchange might not occur electronically| |
-| 4 | ![cboicon] | CBO application queries CP FHIR API for new or updated referrals.  The flow is the same as for the Direct Referral Light but with the CP acting as a provider system. | [SDOHCC Task For Referral Management], [SDOHCC Procedure] |
-| 5 | ![cboicon] | CBO finds new referral and accepts the referral | [SDOHCC Task For Referral Management] |
-| 6 (optional)| ![cpicon] | CP makes information regarding the referral available to the patient’s application. |  |
-| 7 | ![cboicon] | CP updates status of the initial referral | [SDOHCC Task For Referral Management] |
-| 8 (optional) | ![cboicon] | Optional exchange with Patient does not occur electronically (no app to app exchange) |  |
-| 9 | ![cboicon] | CBO completes the evaluation and enrollment, updates the status of the referral to completed, and includes information on what was completed. This will involve POSTing resources such as Procedures to the CP FHIR server, and making sure they are linked appropriately. | [SDOHCC Task For Referral Management] |
-| 10 | ![cpicon] | CP communicates with patient via their application to close loop on service(s) delivered by CBO | [SDOHCC Task For Referral Management] |
-| 11 | ![cpicon] | CP uses input from CBO and Patient to update the status of the referral and includes information on what was completed | [SDOHCC Task For Referral Management] |
-| 12 | ![providericon] | Provider receives the updated status | [Checking Task Status] |
-| 13 (Optional) | ![providericon] | Provider closes loop with patient via questionnaire available to a patient’s application | [Assessment Instrument Support] |
-{:.grid .center  }
-
 ##### Indirect Referral With Direct Light CBO - Detailed View
-__Need to replace above figure with detailed view __
+{% include img.html img="DetailedIndirectReferralLight.svg" caption="Figure 3: Detailed Indirect Referral Light" %}
 
 #### Notes on Direct and Indirect Referrals
 
