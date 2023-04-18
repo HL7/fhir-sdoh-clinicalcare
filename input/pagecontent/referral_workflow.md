@@ -34,7 +34,6 @@ The actors in the workflows are described in the table below.   The graphical ic
 ### Referral Use Cases
 The functional use cases in the table below describe the referral process initiated by a provider, or other healthcare actor, to a referral recipient, both directly and indirectly via an intermediary.   For each use case the capabilities or limitations of the actor are described.   The table links to the functional use case and the associated detailed technical exchange workflow.
 
-
 | Functional Use Case |  Description           | Actors |
 | ------------------------- | ------------------------------------ | ---------------- |
 | [Direct Referral](referral_workflow.html#directreferral) | A referral between a referring entity (e.g., provider) and a performing entity (e.g., CBO) where both entities have FHIR APIs to facilitate exchange and a referring intermediary (e.g., CP) is not involved in the referral | ![providericon], ![ccicon], ![patienticon], ![cboicon] |
@@ -43,21 +42,8 @@ The functional use cases in the table below describe the referral process initia
 | [Indirect Referral (light)](referral_workflow.html#indirect-referral-with-direct-light-cbo) | A referral between a referring entity (e.g., provider) and a performing entity (e.g., a CBO) that is mediated by a referring intermediary (e.g., a CP) where the referring entity and referring intermediary have FHIR APIs, and the performing entity does not have FHIR API capability but has an application that can access the referring entity’s API | ![providericon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] |
 {:.grid}
 
-### Patient Coordination Use Cases
 
-The [Patient Coordination](referral_workflow.html#patient-coordination-workflow) includes some, but not all the interactions with the patient.  It provides a way for a referral sources, CPs, and CBOs to ask a patient to do something and track whether or not they have done it and why, and possibly the outcomes. In figure 1 below, patient coordination is indicated by a red box on steps 9 and 12.
-
-
-| Functional Use Case |  Description           | Actors |
-| ------------------------- | ------------------------------------ | ---------------- |
-| [Complete Questionnaire](referral_workflow.html#patient-coordination-questionnaire)|  Referring party (provider, CBO, CP) asks a patient to complete a questionnaire.  This functionality can be used to assess social risks, inform service qualification or application, indicate reasons for cancellation, or determine the patient's view their interaction with the CBO/performer and the ability of the service provided to meet their needs. | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
-| [General Information Request](referral_workflow.html#patient-coordination-info)| Referring party (provider, CBO, CP) sends a patient a free text question and receives a free text response.  | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
-| [Make Contact Directions](referral_workflow.html#patient-coordination-contact)|  Referring party (provider, CBO, CP) provides contact information for the service performer (where the patient/client does not want the service performer to initiate contact). | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
-| [Review Material](referral_workflow.html#patient-coordination-review)|  Referring party (provider, CBO, CP) requests that the patient review a document, usually as a PDF. | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
-{:.grid}
-
-
-### Referral Use Cases
+#### Referral Use Case Overview
 The referral use cases described below all involve a provider interacting with a patient to assess needs, establish goals, agree to a referral and acquire patient consent, initiate and track the progress of the referral, and update goals.   The "direct" and "indirect" use cases are distinguished by the absence or presence of an intermediary, and the FHIR capabilities of the recipient of the referral.
 
 This figure shows the high-level context of the referral use cases that are described in the sections that follow.
@@ -225,7 +211,7 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 {:.grid}
 
 
-### Direct Referral Light
+#### Direct Referral Light
 In this use case, a provider works with a patient using a standardized assessment instrument to identify and prioritize social risks and needs, and then refers the patient to a CBO for help addressing those needs.  The CBO provides the requested support to the patient and the updated information is shared with the referring provider.
 
 The provider has a FHIR server. The CBO has a FHIR-enabled application.  The patient has a FHIR-enabled patient application.
@@ -299,6 +285,9 @@ The provider may request to have the service delivered by a specific CBO.   The 
 
 ### Patient Coordination Workflow
 
+The [Patient Coordination](referral_workflow.html#patient-coordination-workflow) includes some, but not all the interactions with the patient.  It provides a way for a referral sources, CPs, and CBOs to ask a patient to do something and track whether or not they have done it and why, and possibly the outcomes. In figure 1 below, patient coordination is indicated by a red box on steps 9 and 12.
+
+
 | Functional Use Case |  Description           | Actors |
 | ------------------------- | ------------------------------------ | ---------------- |
 | [Complete Questionnaire](referral_workflow.html#patient-coordination-questionnaire)|  Referring party (provider, CBO, CP) asks a patient to complete a questionnaire.  This functionality can be used to assess social risks, inform service qualification or application, indicate reasons for cancellation, or determine the patient's view their interaction with the CBO/performer and the ability of the service provided to meet their needs. | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
@@ -308,7 +297,7 @@ The provider may request to have the service delivered by a specific CBO.   The 
 {:.grid}
 
 
-##### Complete Questionnaire -- Detailed View
+#### Complete Questionnaire -- Detailed View
 Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CPP) for the completion of a questionnaire.
 
 <object data="PatientQuestionnaire.svg" type="image/svg+xml"></object>
@@ -325,7 +314,7 @@ Here we provide a detailed view of an interaction between a patient application 
 | 7 |  Patient | Update Task (completed and .Output references QuestionnaireResponse) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 7](FHIR_API_Examples.html#post-task-1) |
 {:.grid}
 
-##### General Information Request
+#### General Information Request
 | #    | From |  Description | Instances involved | FHIR Transaction |
 | ===  | ==== | ============ | ================== | ================ |
 | 1 |  Requester | Send e-mail with link to an application and instructions for authentication with the application |  | e-mail |
@@ -336,7 +325,7 @@ Here we provide a detailed view of an interaction between a patient application 
 
 
 
-##### Make Contact Directions
+#### Make Contact Directions
 | #    | From |  Description | Instances involved | FHIR Transaction |
 | ===  | ==== | ============ | ================== | ================ |
 | 1 |  Requester | Send e-mail with link to an application and instructions for authentication with the application |  | e-mail |
@@ -346,7 +335,7 @@ Here we provide a detailed view of an interaction between a patient application 
 | 5 |  Patient | Update Task (completed and .Output includes text of response) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 7](FHIR_API_Examples.html#post-task-1) |
 {:.grid}
 
-##### Review Material
+#### Review Material
 | #    | From |  Description | Instances involved | FHIR Transaction |
 | ===  | ==== | ============ | ================== | ================ |
 | 1 |  Requester | Send e-mail with link to an application and instructions for authentication with the application |  | e-mail |
