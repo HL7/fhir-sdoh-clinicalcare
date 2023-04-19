@@ -197,17 +197,17 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 
 {% include img.html img="DetailedDirectReferral.svg" caption="Figure 3: Detailed Direct Referral" %}
 
-| #    | From |  Description | Instances involved | FHIR Transaction |
-| ---  | ---- | ------------ | ------------------ | ---------------- |
-| 1 |  Source | Post Referral Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) | [Transaction 1](FHIR_API_Examples.html#post-task-1) |
-| 2 |  Target  | Get Service Request and Referenced Resources | [ServiceRequest](ServiceRequest-SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample.html), [Consent](Consent-SDOHCC-ConsentInformationDisclosureExample.html), [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) | [Transaction 3](FHIR_API_Examples.html#post-task-1) |
-| 3 |  Target | Send Notification | [Subscription Notification Bundle] | [Transaction 4](FHIR_API_Examples.html#post-task-1) |
-| 4 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 5](FHIR_API_Examples.html#post-task-1) |
-| 5 |  Target | Send Notification | [Subscription Notification Bundle] | [Transaction 6](FHIR_API_Examples.html#post-task-1) |
-| 6 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 7](FHIR_API_Examples.html#post-task-1) |
-| 7 |  Target | Send Notification | [Subscription Notification Bundle] | [Transaction 8](FHIR_API_Examples.html#post-task-1) |
-| 8 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 9](FHIR_API_Examples.html#post-task-1) |
-| 9 |  Source | Get Procedures | [Food Provided](Procedure-SDOHCC-ProcedureProvisionOfFoodExample.html), [Application Assistance](Procedure-SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample.html) | [Transaction 10](FHIR_API_Examples.html#post-task-1) |
+| #    | From |  Description | Instances involved |
+| ---  | ---- | ------------ | ------------------ |
+| 1 |  Source | Post Referral Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) |
+| 2 |  Target  | Get Service Request and Referenced Resources | [ServiceRequest](ServiceRequest-SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample.html), [Consent](Consent-SDOHCC-ConsentInformationDisclosureExample.html), [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) |
+| 3 |  Target | Send Notification | [Subscription Notification Bundle] |
+| 4 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed |
+| 5 |  Target | Send Notification | [Subscription Notification Bundle] |
+| 6 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed |
+| 7 |  Target | Send Notification | [Subscription Notification Bundle] |
+| 8 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed |
+| 9 |  Source | Get Procedures | [Food Provided](Procedure-SDOHCC-ProcedureProvisionOfFoodExample.html), [Application Assistance](Procedure-SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample.html) |
 {:.grid}
 
 
@@ -228,15 +228,15 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 
 {% include img.html img="DetailedDirectReferralLight.svg" caption="Figure 3: Detailed Direct Referral Light" %}
 
-| #    | From |  Description | Instances involved | FHIR Transaction |
-| ---  | ---- | ------------ | ------------------ | ---------------- |
-| 1 |  Source | Send e-mail with link to application and authentication instructions |  | e-mail |
-| 2 |  Target | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) | [Transaction 1](FHIR_API_Examples.html#post-task-1) |
-| 3 |  Target  | Get Service Request and Referenced Resources | [ServiceRequest](ServiceRequest-SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample.html), [Consent](Consent-SDOHCC-ConsentInformationDisclosureExample.html), [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) | [Transaction 3](FHIR_API_Examples.html#post-task-1) |
-| 4 |  Target | Update Task (accepted) | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 4](FHIR_API_Examples.html#post-task-1) |
-| 5 |  Target | Update Task (in-progress) | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 5](FHIR_API_Examples.html#post-task-1) |
-| 6 |  Target | Post Procedures | [Food Provided](Procedure-SDOHCC-ProcedureProvisionOfFoodExample.html), [Application Assistance](Procedure-SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample.html) | [Transaction 6](FHIR_API_Examples.html#post-task-1) |
-| 7 |  Source | Update Task (completed) | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 7](FHIR_API_Examples.html#post-task-1) |
+| #    | From |  Description | Instances involved |
+| ---  | ---- | ------------ | ------------------ |
+| 1 |  Source | Send e-mail with link to application and authentication instructions |
+| 2 |  Target | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) |
+| 3 |  Target  | Get Service Request and Referenced Resources | [ServiceRequest](ServiceRequest-SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample.html), [Consent](Consent-SDOHCC-ConsentInformationDisclosureExample.html), [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) |
+| 4 |  Target | Update Task (accepted) | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed |
+| 5 |  Target | Update Task (in-progress) | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed |
+| 6 |  Target | Post Procedures | [Food Provided](Procedure-SDOHCC-ProcedureProvisionOfFoodExample.html), [Application Assistance](Procedure-SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample.html) |
+| 7 |  Source | Update Task (completed) | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed |
 (FHIR_API_Examples.html#post-task-1) |
 {:.grid}
 
@@ -305,13 +305,13 @@ Here we provide a detailed view of an interaction between a patient application 
 <object data="PatientQuestionnaire.svg" type="image/svg+xml"></object>
 <br>
 
-| #    | From |  Description | Instances involved | FHIR Transaction |
-| ---  | ---- | ------------ | ------------------ | ---------------- |
-| 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) | [Transaction 1](FHIR_API_Examples.html#post-task-1) |
-| 2 |  Patient  | Get Questionnaire, Questionnaire PDF, or Questionnaire URL | [Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html) | [Transaction 3](FHIR_API_Examples.html#post-task-1) |
-| 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 4](FHIR_API_Examples.html#post-task-1) |
-| 4 |  Patient | Post Questionnaire Response | [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) | [Transaction 6](FHIR_API_Examples.html#post-task-1) |
-| 5 |  Patient | Update Task (completed and .Output references QuestionnaireResponse) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 7](FHIR_API_Examples.html#post-task-1) |
+| #    | From |  Description | Instances involved |
+| ---  | ---- | ------------ | ------------------ |
+| 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientRiskQuestionnaireCompletedExample.html) |
+| 2 |  Patient  | Get Questionnaire, Questionnaire PDF, or Questionnaire URL | [Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html) |
+| 3 |  Patient | Update Task (in-progress) | [Patient Task](SDOHCC-TaskPatientRiskQuestionnaireCompletedExample) with status changed |
+| 4 |  Patient | Post Questionnaire Response | [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) |
+| 5 |  Patient | Update Task (completed and .Output references QuestionnaireResponse) | [Patient Task](SDOHCC-TaskPatientRiskQuestionnaireCompletedExample) with status changed |
 {:.grid}
 
 #### General Information Request
@@ -320,11 +320,11 @@ Here we provide a detailed view of an interaction between a patient application 
 <object data="PatientInformation.svg" type="image/svg+xml"></object>
 <br>
 
-| #    | From |  Description | Instances involved | FHIR Transaction |
-| ---  | ---- | ------------ | ------------------ | ---------------- |
-| 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) | [Transaction 1](FHIR_API_Examples.html#post-task-1) |
-| 2 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 4](FHIR_API_Examples.html#post-task-1) |
-| 3 |  Patient | Update Task (completed and .Output.value includes text of response) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 7](FHIR_API_Examples.html#post-task-1) |
+| #    | From |  Description | Instances involved |
+| ---  | ---- | ------------ | ------------------ |
+| 1 |  Patient | Get Task | [Patient Task](TaskPatientMakeAppointmentCompletedExample.html) |
+| 2 |  Patient | Update Task (in-progress) | [Patient Task](TaskPatientMakeAppointmentCompletedExample.html) with status changed |
+| 3 |  Patient | Update Task (completed and .Output.value includes text of response) | [Patient Task](TaskPatientMakeAppointmentCompletedExample.html) with status changed |
 {:.grid}
 
 #### Make Contact Directions
@@ -333,12 +333,12 @@ Here we provide a detailed view of an interaction between a patient application 
 <object data="PatientContact.svg" type="image/svg+xml"></object>
 <br>
 
-| #    | From |  Description | Instances involved | FHIR Transaction |
-| ---  | ---- | ------------ | ------------------ | ---------------- |
-| 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) | [Transaction 1](FHIR_API_Examples.html#post-task-1) |
-| 2 |  Patient  | Get Contact | [HealthCareService] | [Transaction 3](FHIR_API_Examples.html#post-task-1) |
-| 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 4](FHIR_API_Examples.html#post-task-1) |
-| 4 |  Patient | Update Task (completed and .Output includes chosen contact) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 7](FHIR_API_Examples.html#post-task-1) |
+| #    | From |  Description | Instances involved |
+| ---  | ---- | ------------ | ------------------ |
+| 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) |
+| 2 |  Patient  | Get Contact | [HealthCareService](HealthcareService-SDOHCC-HealthcareServiceTelecomAppointmentExample.html) |
+| 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed |
+| 4 |  Patient | Update Task (completed and .Output includes chosen contact) | [Patient Task](SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) with status changed |
 {:.grid}
 
 #### Review Material
@@ -346,12 +346,13 @@ Here we provide a detailed view of an interaction between a patient application 
 
 <object data="PatientReview.svg" type="image/svg+xml"></object>
 <br>
-| #    | From |  Description | Instances involved | FHIR Transaction |
-| ---  | ---- | ------------ | ------------------ | ---------------- |
-| 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) | [Transaction 1](FHIR_API_Examples.html#post-task-1) |
-| 2 |  Patient  | Get DocumentReference | [DocumentReference] | [Transaction 3](FHIR_API_Examples.html#post-task-1) |
-| 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 4](FHIR_API_Examples.html#post-task-1) |
-| 4 |  Patient | Update Task (completed ) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed | [Transaction 7](FHIR_API_Examples.html#post-task-1) |
+
+| #    | From |  Description | Instances involved |
+| ---  | ---- | ------------ | ------------------ |
+| 1 |  Patient | Get Task | [Patient Task](TaskPatientMakeAppointmentCompletedExample.html) |
+| 2 |  Patient  | Get DocumentReference | [DocumentReference] |
+| 3 |  Patient | Update Task (in-progress) | [Patient Task](TaskPatientMakeAppointmentCompletedExample.html) with status changed |
+| 4 |  Patient | Update Task (completed ) | [Patient Task](TaskPatientMakeAppointmentCompletedExample.html) with status changed |
 {:.grid}
 
 
