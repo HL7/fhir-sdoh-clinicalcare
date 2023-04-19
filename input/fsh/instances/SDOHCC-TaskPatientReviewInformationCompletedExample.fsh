@@ -19,5 +19,6 @@ Usage: #example
 Instance: DocumentReferenceExample
 InstanceOf: DocumentReference
 Title: "Document Reference for Diabetes Handout"
+Description: "Document Reference for a Diabetes Handout"
 * content.attachment.url = "https://www.cdc.gov/diabetes/pdfs/managing/Managing-Diabetes_CMS-CDC_English-508.pdf"
 * status = http://hl7.org/fhir/document-reference-status#current

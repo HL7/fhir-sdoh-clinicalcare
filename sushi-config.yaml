@@ -164,6 +164,7 @@ groups:
     - SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample
     - SDOHCC-TaskReferralManagementOrderSubtaskAcceptedExample
     - SDOHCC-TaskReferralManagementOrderSubtaskCompletedExample
+    - DocumentReferenceExample
   PRAPARE:
     name: PRAPARE Examples
     description: PRAPARE Examples are an example of observations derived from a QuestionnaireResponse using a StructureMap
