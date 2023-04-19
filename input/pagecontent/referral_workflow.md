@@ -50,6 +50,8 @@ This figure shows the high-level context of the referral use cases that are desc
 The two right-most columns show data that could be exchanged at that step, and data though is aligned with that step.  This only specifies the
 data that is exchanged, so systems are free to use any internal representation.
 
+The [Patient Coordination](referral_workflow.html#patient-coordination-workflow) includes some, but not all the interactions with the patient.  It provides a way for a referral sources, CPs, and CBOs to ask a patient to do something and track whether or not they have done it and why, and possibly the outcomes. In figure 1 below, patient coordination is indicated by a red box on steps 9 and 12.
+
 {% include img.html img="HighLevelReferralContext.svg" caption="Figure 1: Referral Use Cases Context" %}
 
 
@@ -285,8 +287,6 @@ The provider may request to have the service delivered by a specific CBO.   The 
 
 ### Patient Coordination Workflow
 
-The [Patient Coordination](referral_workflow.html#patient-coordination-workflow) includes some, but not all the interactions with the patient.  It provides a way for a referral sources, CPs, and CBOs to ask a patient to do something and track whether or not they have done it and why, and possibly the outcomes. In figure 1 below, patient coordination is indicated by a red box on steps 9 and 12.
-
 
 | Functional Use Case       |  Description                         | Actors           |
 | ------------------------- | ------------------------------------ | ---------------- |
@@ -297,7 +297,7 @@ The [Patient Coordination](referral_workflow.html#patient-coordination-workflow)
 {:.grid}
 
 In the examples below, it is assumed that the patient has been equipped with the patient application, and authenticated communication between the patient application and the requester has already been established.
-See [Connecting Applications with API Data Sources](connecting_applications_with_api_data_sources.html#patientclient-applications) for more details.
+See [Connecting Applications with API Data Sources](connecting_applications_with_api_data_sources.html#patientclient-applications) for more details.  The referenced data instances are all in their completed state. In practice, they would move through the state transitions indicated, with the requester initializing their inputs fields, and the patient completing the output fields, and updating the status.
 
 #### Complete Questionnaire
 Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CPP) for the completion of a questionnaire.
