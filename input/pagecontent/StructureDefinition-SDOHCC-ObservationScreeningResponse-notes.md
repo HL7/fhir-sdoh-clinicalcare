@@ -26,12 +26,12 @@ Note: For “Value Set Naming Pattern” below, <Category> is a placeholder for 
 		<tr>
 			<td>&lt;Category&gt; Screening Assessments</td>
 			<td>LOINC codes for the assessment instruments (LOINC panels) from which the preferred, category-specific questions have been selected.</td>
-			<td>For an SDOHCC Observation Screening Response that is an Observation Grouping, Observation.code SHOULD use panel LOINC codes from this value set. An Observation Grouping does not have an Observation.value. Instead, an Observation Grouping (via Observation.hasMember) references all Observations generated from a specific assessment instrument. See <a href="Observation-SDOHCC-ObservationResponseNHANESGroupingExample.html">SDOHCC Observation Response Grouping Example</a>.  |</td>
+			<td>For an SDOHCC Observation Screening Response that is an Observation grouping of an entire assessment instrument, Observation.code SHOULD use the panel LOINC codes from this value set. This Observation grouping (via Observation.hasMember) will reference all Observations generated from a specific assessment instrument. See <a href="Observation-SDOHCC-ObservationResponseNHANESGroupingExample.html">SDOHCC Observation Response Grouping Example</a></td>
 		</tr>
 			<tr>
 			<td>&lt;Category&gt; Screening Assessments And Questions</td>
 			<td>All codes in &lt;Category&gt; Screening Assessments Questions value set (LOINC question codes) AND &lt;Category&gt; Screening Assessments value set (LOINC panel codes).</td>
-			<td>For SDOHCC Observation Screening Response, this is the complete set of preferred values allowed for Observation.code for a category-specific Observation and can be used to validate that Observation.code is from a preferred, category-specific value set.</td>
+			<td>For an SDOHCC Observation Screening Response that represents an individual question-answer pair or an Observation grouping of an entire assessment instrument, this is the complete set of preferred values allowed for Observation.code for a category-specific Observation and can be used to validate that Observation.code is from a preferred, category-specific value set.</td>
 		</tr>
 		<tr>
 			<td>&lt;Category&gt; Screening Assessments Answers</td>
@@ -368,8 +368,8 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.210/expansion/Latest">Answers</a></td>
 			<td>2.16.840.1.113762.1.4.1247.210</td>
 		</tr>
-		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-stress">stress</a></td>
+		<tr>
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.203/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1247.203</td>
