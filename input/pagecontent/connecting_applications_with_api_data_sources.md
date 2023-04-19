@@ -12,31 +12,27 @@ This section describes the initial connection of the the Patient/Client applicat
 
 1. Applications are registered with the appropriate referral platforms.
 2. On the first use of the application
-  * Patient/Client is provided a URL or a QR code.  The patient passes this information to the app - by keying in the URL or by authorizing the app to take a picture of the QR code in order to download the application to their smart phone or use as a link to an on-line application.
-  * Patient/Client establishes application security  **expand??**
-3. Referral Source provides Patient with a URL (e.g., via a QR code) to the API that redirects to an authorization server
-  * Patient enters credentials provided by the referral platform
-  * Application is provided with an access token and refresh token
-4. API URL and the tokens are stored in the application
-5. When the patient/client authenticates to the application, on a timed schedule or on demand
+  * Patient/Client is provided a URL or a QR code.  The patient passes this information to the app - by keying in the URL or by authorizing the app to take a picture of the QR code in order to download the application to their smart phone or use as a link to an on-line application. The App authenticates the user using credentials provided by the care provider.  Application needs to be registered with the server using some shared secrets (name, DOB, registration code, etc).
+  * Patient/Client establish establish credentials (username/password) and use them to authenticate.
+3. API URL and the tokens are stored in the application
+4. When the patient/client authenticates to the application, on a timed schedule or on demand
   * Application uses the URL and refresh token to obtain an access token
-  * ~~Application follows the Referral Source Light workflow process~~
-6. **Application queries for Tasks????  "patient app might query for Tasks, Goals, Referrals"**
+5. Application queries for Tasks, ServiceRequests and other referenced data.
 
 Note: steps 3-5 are repeated for each referral source
 
 #### CBO Applications
 FHIR-enabled CBO Applications follows the [Direct Referral Light] or [Indirect Referral Light] use cases. This section describes the initial connection of the the FHIR-enabled CPO application to the referral source (Provider or Coordinating Platform system).
 
-1. Participating CBO applications are registered with the appropriate referral platforms **(e.g., Epic, UniteUS?)**
-2. Referral Source provides ~~Patient~~ CBO (e.g., via a QR code) with a URL to the API that redirects to an authorization server
+1. Participating CBO applications are registered with the appropriate referral platforms (e.g., Epic, UniteUS)
+2. Referral Source provides CBO (e.g., via a QR code) with a URL to the API that redirects to an authorization server
   * CBO enters credentials provided by the referral platform
   * Application is provided with an access token and refresh token
 3. API URL and the tokens are stored in the application
 4. When the CBO authenticates to the application, on a timed schedule, or on demand
   * Application uses the URL and refresh token to obtain an access token
-5. **Application queries for Tasks???? CBO app will query for Tasks, as well as updates to data they've previously received **
+5. Application queries for relevant data, including Tasks assigned to them, Tasks assigned to others, Patient (self) demographics, Goals, ServiceRequests, etc.
 
-Note: steps 2-4 are repeated for each referral source
+Note: steps 2-5 are repeated for each referral source
 
 {% include markdown-link-references.md %}
