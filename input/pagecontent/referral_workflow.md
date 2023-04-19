@@ -290,14 +290,14 @@ The [Patient Coordination](referral_workflow.html#patient-coordination-workflow)
 
 | Functional Use Case       |  Description                         | Actors           |
 | ------------------------- | ------------------------------------ | ---------------- |
-| [Complete Questionnaire](referral_workflow.html#patient-coordination-questionnaire)|  Referring party (provider, CBO, CP) asks a patient to complete a questionnaire.  This functionality can be used to assess social risks, inform service qualification or application, indicate reasons for cancellation, or determine the patient's view their interaction with the CBO/performer and the ability of the service provided to meet their needs. | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
-| [General Information Request](referral_workflow.html#patient-coordination-info)| Referring party (provider, CBO, CP) sends a patient a free text question and receives a free text response.  | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
-| [Make Contact Directions](referral_workflow.html#patient-coordination-contact)|  Referring party (provider, CBO, CP) provides contact information for the service performer (where the patient/client does not want the service performer to initiate contact). | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
-| [Review Material](referral_workflow.html#patient-coordination-review)|  Referring party (provider, CBO, CP) requests that the patient review a document, usually as a PDF. | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
+| [Complete Questionnaire](referral_workflow.html#complete-questionnaire)|  Referring party (provider, CBO, CP) asks a patient to complete a questionnaire.  This functionality can be used to assess social risks, inform service qualification or application, indicate reasons for cancellation, or determine the patient's view their interaction with the CBO/performer and the ability of the service provided to meet their needs. | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
+| [General Information Request](referral_workflow.html#general-information-request)| Referring party (provider, CBO, CP) sends a patient a free text question and receives a free text response.  | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
+| [Make Contact Directions](referral_workflow.html#make-contact-directions)|  Referring party (provider, CBO, CP) provides contact information for the service performer (where the patient/client does not want the service performer to initiate contact). | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
+| [Review Material](referral_workflow.html#review-material)|  Referring party (provider, CBO, CP) requests that the patient review a document, usually as a PDF. | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
 {:.grid}
 
 
-#### Complete Questionnaire -- Detailed View
+#### Complete Questionnaire
 Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CPP) for the completion of a questionnaire.
 
 <object data-"PatientQuestionnaire.svg" type-"image/svg+xml"></object>
@@ -315,6 +315,10 @@ Here we provide a detailed view of an interaction between a patient application 
 {:.grid}
 
 #### General Information Request
+Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CPP) for the completion of a questionnaire.
+
+<object data-"PatientInformation.svg" type-"image/svg+xml"></object>
+<br>
 
 | #    | From |  Description | Instances involved | FHIR Transaction |
 | ---  | ---- | ------------ | ------------------ | ---------------- |
@@ -325,6 +329,10 @@ Here we provide a detailed view of an interaction between a patient application 
 {:.grid}
 
 #### Make Contact Directions
+Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CPP) for the completion of a questionnaire.
+
+<object data-"PatientContact.svg" type-"image/svg+xml"></object>
+<br>
 
 | #    | From |  Description | Instances involved | FHIR Transaction |
 | ---  | ---- | ------------ | ------------------ | ---------------- |
@@ -336,7 +344,10 @@ Here we provide a detailed view of an interaction between a patient application 
 {:.grid}
 
 #### Review Material
+Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CPP) for the completion of a questionnaire.
 
+<object data-"PatientReview.svg" type-"image/svg+xml"></object>
+<br>
 | #    | From |  Description | Instances involved | FHIR Transaction |
 | ---  | ---- | ------------ | ------------------ | ---------------- |
 | 1 |  Requester | Send e-mail with link to an application and instructions for authentication with the application |  | e-mail |
