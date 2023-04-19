@@ -51,7 +51,7 @@
 [Data Modeling Framework]: sdoh_clinical_care_scope.html#data-modeling-framework
 [Checking Task Status]: checking_task_status.html
 [Privacy and Security]: privacy_and_security.html
-[Must Support and Missing Data]: mustsupport_and_missing_data.md
+[Must Support and Missing Data]: mustsupport_and_missing_data.html
 [VSAC]: https://vsac.nlm.nih.gov/
 [Patient Coordination Workflow]: referral_workflow.html#patient-coordination-workflow
 [Indirect Referral]: referral_workflow.html#indirect-referral-with-direct-cbo
