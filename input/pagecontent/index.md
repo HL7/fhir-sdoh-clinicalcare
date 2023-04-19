@@ -7,7 +7,7 @@ This IG was developed by the [Gravity Project], which aims to build and promulga
 
 The IG supports the following use cases:
 * 	Documenting SDOH data in conjunction with patient encounters with providers, payers, and community services
-*   Referring patients to ~~Community Based Organizations (CBOs)~~ to address SDOH needs via an electronic workflow.  The referral framework includes support for intermediary organizations to manage service delivery, closed loop feedback to the ordering ~~clinician~~ provider and direct engagement with the patient and their care-givers.
+*   Referring patients to to address SDOH needs via an electronic workflow.  The referral framework includes support for intermediary organizations to manage service delivery, closed loop feedback to the ordering provider and direct engagement with the patient and their care-givers.
 * 	Identifying cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer)
 
 {% include img-med.html img="ConceptualFramework.png" caption="Figure 1: Conceptual Framework for SDOH Clinical Care" %}
@@ -47,11 +47,11 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 | [National Healthcare Directory Exchange](http://hl7.org/fhir/us/directory-exchange)| A U.S. Office of the National Coordinator-sponsored IG supporting the exchange of directory information for a wide range of service providers and organizations |
 | [SmartApp Launch](http://hl7.org/fhir/smart-app-launch)  | Allows launching third party applications in the context of another system, including allowing the application to controlled access to patient information.  |
 | [Bidirectional Service eReferral (BSeR)](http://hl7.org/fhir/us/bser/)  | Whereas this IG orchestrates referrals using the FHIR query interface, BSeR bases referral management on the exchange of self-contained Bundles of FHIR resources.  The approaches for referral management offered by this IG and BSeR should be harmonized to provide a consistent template for management of referrals by all IGs. |
-| [DaVinci Prior Authorization Support](http://hl7.org/fhir/us/davinci-pas/) |  |
-| [DaVinci Coverage Requirements Discovery](http://hl7.org/fhir/us/davinci-crd/) |   |
-| [DaVinci Documentation Templates and Rules](http://hl7.org/fhir/us/davinci-dtr/) |   |
-| [Structure Data Capture](http://hl7.org/fhir/uv/sdc/) |   |
-| [Data Exchange for Quality Measures Implementation Guide](https://hl7.org/fhir/us/davinci-deqm/) |  |
+| [DaVinci Prior Authorization Support](http://hl7.org/fhir/us/davinci-pas/) |  Payment for SDOH-related services may require integration of Prior Authorization |
+| [DaVinci Coverage Requirements Discovery](http://hl7.org/fhir/us/davinci-crd/) |  Payment for SDOH-related services may require integration of Prior Authorization |
+| [DaVinci Documentation Templates and Rules](http://hl7.org/fhir/us/davinci-dtr/) | Payment for SDOH-related services may require integration of Prior Authorization  |
+| [Structure Data Capture (IG)](http://hl7.org/fhir/uv/sdc/) |  This IG builds on the SDC IG for Questionnaires and QuestionnaireReponses |
+| [Data Exchange for Quality Measures Implementation Guide](https://hl7.org/fhir/us/davinci-deqm/) | SDOH-related services will inevitably be included in quality measurement programs |
 {:.grid}
 
 ### How to Read this IG

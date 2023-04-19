@@ -42,6 +42,10 @@ The functional use cases in the table below describe the referral process initia
 | [Indirect Referral (light)](referral_workflow.html#indirect-referral-with-direct-light-cbo) | A referral between a referring entity (e.g., provider) and a performing entity (e.g., a CBO) that is mediated by a referring intermediary (e.g., a CP) where the referring entity and referring intermediary have FHIR APIs, and the performing entity does not have FHIR API capability but has an application that can access the referring entity’s API | ![providericon], ![patienticon], ![ccicon], ![cboicon]. ![cpicon] |
 {:.grid}
 
+<div markdown="1" class="stu-note">
+Indirect referral requires making data instances from the referral source available for query from the referral target (e.g., ServiceRequest, Condition, DocumentReference) and vice versa (e.g., Procedures).
+The intermediary can make this happen by cloning the data from the source, or by proxying access to the source.  This IG does not specify how precisely this should be done and resolution of this issue should be a topic of implementer discussion.
+</div>
 
 #### Referral Use Case Overview
 The referral use cases described below all involve a provider interacting with a patient to assess needs, establish goals, agree to a referral and acquire patient consent, initiate and track the progress of the referral, and update goals.   The "direct" and "indirect" use cases are distinguished by the absence or presence of an intermediary, and the FHIR capabilities of the recipient of the referral.
