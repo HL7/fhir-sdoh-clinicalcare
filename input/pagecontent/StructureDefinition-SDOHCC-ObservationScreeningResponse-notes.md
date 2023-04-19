@@ -438,10 +438,10 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 Of note, Grouper VSAC value sets containing the members of all the category-specific value sets for Observation.code and Observation.value are available here:
 
 * For Observation.code:
-  * [Social Determinants of Health Screening Assessments And Questions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.126/expansion/Latest) Value Set
-  * [Social Determinants of Health Screening Assessments Questions] Value Set
-  * [Social Determinants of Health Screening Assessments] Value Set
-* For Observation.value: [Social Determinants of Health Screening Assessments Answers] Value Set
+  * [Social Determinants of Health Screening Assessments And Questions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.206/expansion/Latest) Value Set
+  * [Social Determinants of Health Screening Assessments Questions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.207/expansion/Latest) Value Set
+  * [Social Determinants of Health Screening Assessments](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.126/expansion/Latest) Value Set
+* For Observation.value: [Social Determinants of Health Screening Assessments Answers](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.208/expansion/Latest) Value Set
 
 #### Guidance on Category-specific Assessment Instrument Spreadsheets
 
