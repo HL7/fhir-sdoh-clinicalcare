@@ -167,7 +167,7 @@ groups:
     name: PRAPARE Examples
     description: PRAPARE Examples
     resources:
-    - SDOHCC-StructureMapPRAPARE
+#    - SDOHCC-StructureMapPRAPARE
     - SDOHCC-QuestionnairePRAPARE
     - SDOHCC-QuestionnaireResponsePRAPAREExample
     - SDOHCC-ObservationResponsePRAPAREChildCareNeedExample
@@ -179,7 +179,7 @@ groups:
     name: Hunger Vital Signs Examples
     description: Hunger Vital Signs Examples
     resources:
-    - SDOHCC-StructureMapHungerVitalSign
+ #   - SDOHCC-StructureMapHungerVitalSign
     - SDOHCC-QuestionnaireHungerVitalSign
     - SDOHCC-QuestionnaireResponseHungerVitalSignExample
     - SDOHCC-ObservationResponseHungerVitalSignGroupingExample
