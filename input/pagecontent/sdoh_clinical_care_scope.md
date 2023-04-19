@@ -1,4 +1,10 @@
 ###  SDOH Clinical Care Scope
+
+### Conceptual Framework
+
+Coded SDOH content is captured across core health care activities: screening/assessment, establishing health concerns, goal setting, care planning, interventions, outcomes and reporting. The conceptual framework, illustrated below, shows how these activities form a cycle of care. Over time, a patient’s progress toward care goals can be tracked and measured.
+{% include img.html img="ConceptualFramework-orig.jpeg" caption="Figure 1: Conceptual Framework" %}
+
 ### Scope of this IG
 
 The focus for this version of the IG is to standardize the exchange of SDOH information related to the following activities:
@@ -16,11 +22,6 @@ The following items are out of scope for this version of the IG.
 * Standards for reporting quality measures to payers or quality organizations (this is left to the [Data Exchange for Quality Measures Implementation Guide](https://hl7.org/fhir/us/davinci-deqm/) that was co-authored by NCQA).
 * Addressing Consent beyond the consent to share information between a HIPAA covered entity and entities that are not covered by HIPAA.
 * Administrative activities such as eligibility checking, prior authorization, or billing for SDOH services.
-
-### Conceptual Framework
-
-Coded SDOH content is captured across core health care activities: screening/assessment, establishing health concerns, goal setting, care planning, interventions, outcomes and reporting. The conceptual framework, illustrated below, shows how these activities form a cycle of care. Over time, a patient’s progress toward care goals can be tracked and measured.
-{% include img.html img="ConceptualFramework-orig.jpeg" caption="Figure 1: Conceptual Framework" %}
 
 ### Scope of Interactions
 

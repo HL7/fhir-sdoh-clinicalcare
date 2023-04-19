@@ -60,6 +60,8 @@ pages:
     title: Checking Task Status
   connecting_applications_with_api_data_sources.md:
     title: Connecting Applications With API Data Sources
+  gravity_terminology.md:
+    title: Gravity Value Sets
   artifacts.html:
     title: Artifacts Index
   privacy_and_security.md:
@@ -113,6 +115,7 @@ groups:
       - SDOHCCValueSetObservationStatus
       - SDOHCCValueSetSDOHCategory
       - SDOHCCValueSetSDOHQuestionnaireCategory
+      - SDOHCCValueSetReferralTaskStatus
       - SDOHCCValueSetTaskCode
       - SDOHCCValueSetTaskPriority
       - SDOHCCValueSetTaskStatus
@@ -155,13 +158,16 @@ groups:
     - SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample
     - SDOHCC-TaskPatientMakeAppointmentCompletedExample
     - SDOHCC-TaskPatientRiskQuestionnaireCompletedExample
+    - SDOHCC-TaskPatientReviewInformationCompletedExample
+    - SDOHCC-TaskPatientInformationRequestCompletedExample
     - SDOHCC-TaskReferralManagementOrderFulfillmentAcceptedExample
     - SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample
     - SDOHCC-TaskReferralManagementOrderSubtaskAcceptedExample
     - SDOHCC-TaskReferralManagementOrderSubtaskCompletedExample
+    - DocumentReferenceExample
   PRAPARE:
     name: PRAPARE Examples
-    description: PRAPARE Examples
+    description: PRAPARE Examples are an example of observations derived from a QuestionnaireResponse using a StructureMap
     resources:
     - SDOHCC-StructureMapPRAPARE
     - SDOHCC-QuestionnairePRAPARE
@@ -173,7 +179,7 @@ groups:
     - SDOHCC-ConditionHomelessExample
   HVS:
     name: Hunger Vital Signs Examples
-    description: Hunger Vital Signs Examples
+    description: Hunger Vital Signs Examples are an example of observations derived from a QuestionnaireResponse using a StructureMap
     resources:
     - SDOHCC-StructureMapHungerVitalSign
     - SDOHCC-QuestionnaireHungerVitalSign
@@ -185,6 +191,17 @@ groups:
     - SDOHCC-ConditionAsserterDeviceExample
     - SDOHCC-ConditionFoodInsecurityExample
     - SDOHCC-DeviceSoftwareExample
+  NHANES:
+    name: Social Connection and Isolation Panel (NHANES) Examples
+    description: These examples illustrate how an Observation grouping can use hasMember to link individual Observations from a questionnaire/panel in the case where the individual Observations do not reference QuestionnaireResponse.
+    resources:
+    - SDOHCC-ObservationResponseNHANESGroupingExample
+    - SDOHCC-ObservationResponseNHANESQuestion1Example
+    - SDOHCC-ObservationResponseNHANESQuestion2Example
+    - SDOHCC-ObservationResponseNHANESQuestion3Example
+    - SDOHCC-ObservationResponseNHANESQuestion4Example
+    - SDOHCC-ObservationResponseNHANESQuestion5Example
+    - SDOHCC-ObservationResponseNHANESQuestion6Example
   DraftArtifacts:
     name: Draft Artifacts for Personal Characteristic Observations
     resources:
@@ -229,6 +246,7 @@ menu:
     Referral Workflow:  referral_workflow.html
     Checking Task Status: checking_task_status.html
     Connecting Applications With API Data Sources: connecting_applications_with_api_data_sources.html
+    Gravity Value Sets: gravity_terminology.html
   FHIR Artifacts and Examples:
     Capability Statements: artifacts.html#capability-statements
     Profiles: artifacts.html#profiles

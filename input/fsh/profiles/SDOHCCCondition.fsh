@@ -59,6 +59,6 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * evidence.detail ^slicing.rules = #open
 * evidence.detail ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\nAdditionally, see Comment for Condition.evidence.code."
 * evidence.detail contains SupportedDetail 0..* MS
-* evidence.detail[SupportedDetail] only Reference(SDOHCCObservationScreeningResponse or SDOHCCCondition or SDOHCCObservationAssessment)
+* evidence.detail[SupportedDetail] only Reference(SDOHCCObservationScreeningResponse or SDOHCCCondition or SDOHCCObservationAssessment or SDCQuestionnaireResponse)
 * evidence.detail[SupportedDetail] ^definition = "Links to other relevant information."
 * evidence.detail[SupportedDetail] ^requirements = "When a condition is based on one or more SDOH observations that were generated from questionnaire responses, Condition.evidence.detail should reference instances that comply with the SDOHCC Screening Response Observation. However, references to other instance types are also possible."

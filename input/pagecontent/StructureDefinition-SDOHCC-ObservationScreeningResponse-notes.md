@@ -3,7 +3,7 @@
 
 The minimum value set bindings for Observation.code and Observation.value are specified in the profile. However, for each SDOH category (domain) covered in this IG, there are also category-specific, preferred value sets. For an observation instance, selecting a category-specific code (e.g., food-insecurity, transportation-insecurity) from the [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) bound to Observation.category will determine the preferred, category-specific value sets for Observation.code and Observation.value. Where a preferred value set contains a code to describe a needed concept, servers SHOULD use that code.
 
-Codes in the category-specific, preferred value sets are from LOINC-encoded assessment instruments that have been vetted as face-valid by the Gravity Project. For the list of assessment instruments from which Gravity has chosen questions, see the [Social Determinants of Health Screening Assessments](broken.html) value set which is hosted in the NIH Value Set Authority Center ([VSAC]). For each Gravity-vetted assessment instrument, the questions are also vetted and only those that also meet Gravity criteria are included in the preferred value sets.
+Codes in the category-specific, preferred value sets are from LOINC-encoded assessment instruments that have been vetted as face-valid by the Gravity Project. For the list of assessment instruments from which Gravity has chosen questions, see the [Social Determinants of Health Screening Assessments](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.126/expansion/Latest) value set which is hosted in the NIH Value Set Authority Center ([VSAC]). For each Gravity-vetted assessment instrument, the questions are also vetted and only those that also meet Gravity criteria are included in the preferred value sets.
 
 #### Guidance on Category-specific Preferred Value Set Naming Conventions, Content, and Usage
 The table provides guidance on naming conventions, content, and usage for the category-specific, preferred value sets.
@@ -26,12 +26,12 @@ Note: For “Value Set Naming Pattern” below, <Category> is a placeholder for 
 		<tr>
 			<td>&lt;Category&gt; Screening Assessments</td>
 			<td>LOINC codes for the assessment instruments (LOINC panels) from which the preferred, category-specific questions have been selected.</td>
-			<td>For an SDOHCC Observation Screening Response that is an Observation Grouping, Observation.code SHOULD use panel LOINC codes from this value set. An Observation Grouping does not have an Observation.value. Instead, an Observation Grouping (via Observation.hasMember) references all Observations generated from a specific assessment instrument. See <a href="Observation-SDOHCC-ObservationResponseHungerVitalSignGroupingExample.html">SDOHCC Observation Response Hunger Vital Sign Grouping Example</a>.  |</td>
+			<td>For an SDOHCC Observation Screening Response that is an Observation grouping of an entire assessment instrument, Observation.code SHOULD use the panel LOINC codes from this value set. This Observation grouping (via Observation.hasMember) will reference all Observations generated from a specific assessment instrument. See <a href="Observation-SDOHCC-ObservationResponseNHANESGroupingExample.html">SDOHCC Observation Response Grouping Example</a></td>
 		</tr>
 			<tr>
 			<td>&lt;Category&gt; Screening Assessments And Questions</td>
 			<td>All codes in &lt;Category&gt; Screening Assessments Questions value set (LOINC question codes) AND &lt;Category&gt; Screening Assessments value set (LOINC panel codes).</td>
-			<td>For SDOHCC Observation Screening Response, this is the complete set of preferred values allowed for Observation.code for a category-specific Observation and can be used to validate that Observation.code is from a preferred, category-specific value set.</td>
+			<td>For an SDOHCC Observation Screening Response that represents an individual question-answer pair or an Observation grouping of an entire assessment instrument, this is the complete set of preferred values allowed for Observation.code for a category-specific Observation and can be used to validate that Observation.code is from a preferred, category-specific value set.</td>
 		</tr>
 		<tr>
 			<td>&lt;Category&gt; Screening Assessments Answers</td>
@@ -92,29 +92,29 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-educational-attainment">educational-attainment</a></td>
 			<td rowspan="3">Observation.code</td>
-			<td><a href="broken.html">Panels and Questions</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.199/expansion/Latest">Panels and Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.199</td>
 			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Less%20Than%20High%20School%20Education%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Educational Attainment Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
-			<td><a href="broken.html">Panels</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.132/expansion/Latest">Panels</a></td>
+			<td>2.16.840.1.113762.1.4.1247.132</td>
 		</tr>
 		<tr>
-			<td><a href="broken.html">Questions</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.3488/expansion/Latest">Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1196.3488</td>
 		</tr>
 		<tr>
 			<td>Observation.value</td>
-			<td><a href="broken.html">Answers</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.179/expansion/Latest">Answers</a></td>
+			<td>2.16.840.1.113762.1.4.1247.179</td>
 		</tr>
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-elder-abuse">elder-abuse</a></td>
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.191/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1247.191</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Elder Abuse Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Elder%20Abuse%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Elder Abuse Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.144/expansion/Latest">Panels</a></td>
@@ -154,7 +154,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.193/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1247.193</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Financial Insecurity Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Financial%20Insecurity%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Financial Insecurity Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.138/expansion/Latest">Panels</a></td>
@@ -293,140 +293,140 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.198/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1247.198</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Intimate Partner Violence Assessment Instruments Codes</a></td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Intimate%20Partner%20Violence%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Intimate Partner Violence Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.140/expansion/Latest">Panels</a></td>
 			<td>2.16.840.1.113762.1.4.1247.140</td>
 		</tr>
 		<tr>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/missing/expansion/Latest">Questions</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.211/expansion/Latest">Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.211</td>
 		</tr>
 		<tr>
 			<td>Observation.value</td>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/missing/expansion/Latest">Answers</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.209/expansion/Latest">Answers</a></td>
+			<td>2.16.840.1.113762.1.4.1247.209</td>
 		</tr>
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-material-hardship">material-hardship</a></td>
 			<td rowspan="3">Observation.code</td>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.140/expansion/Latest">Panels and Questions</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.200/expansion/Latest">Panels and Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.200</td>
 			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Material%20Hardship%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Material Hardship Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.140/expansion/Latest">Panels</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.139/expansion/Latest">Panels</a></td>
+			<td>2.16.840.1.113762.1.4.1247.139</td>
 		</tr>
 		<tr>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.140/expansion/Latest">Questions</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.168/expansion/Latest">Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.168</td>
 		</tr>
 		<tr>
 			<td>Observation.value</td>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.140/expansion/Latest">Answers</a></td>
-			<td>missing</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.180/expansion/Latest">Answers</a></td>
+			<td>2.16.840.1.113762.1.4.1247.180</td>
 		</tr>
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-medical-cost-burden">medical-cost-burden</a></td>
 			<td rowspan="3">Observation.code</td>
-			<td><a href="broken.html">Panels and Questions</a></td>
-			<td>OID-5</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.201/expansion/Latest">Panels and Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.201</td>
 			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Medical%20Cost%20Burden%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Medical Cost Burden Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
-			<td><a href="broken.html">Panels</a></td>
-			<td>OID-6</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.142/expansion/Latest">Panels</a></td>
+			<td>2.16.840.1.113762.1.4.1247.142</td>
 		</tr>
 		<tr>
-			<td><a href="broken.html">Questions</a></td>
-			<td>OID-7</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.188/expansion/Latest">Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.188</td>
 		</tr>
 		<tr>
 			<td>Observation.value</td>
-			<td><a href="broken.html">Answers</a></td>
-			<td>OID-8</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.187/expansion/Latest">Answers</a></td>
+			<td>2.16.840.1.113762.1.4.1247.187</td>
 		</tr>
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-social-connection">social-connection</a></td>
 			<td rowspan="3">Observation.code</td>
-			<td><a href="broken.html">Panels and Questions</a></td>
-			<td>OID-5</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Social Connection Assessment Instruments Codes</a></td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.202/expansion/Latest">Panels and Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.202</td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Social%20Connection%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Social Connection Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
-			<td><a href="broken.html">Panels</a></td>
-			<td>OID-6</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.135/expansion/Latest">Panels</a></td>
+			<td>2.16.840.1.113762.1.4.1247.135</td>
 		</tr>
 		<tr>
-			<td><a href="broken.html">Questions</a></td>
-			<td>OID-7</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.212/expansion/Latest">Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.212</td>
 		</tr>
 		<tr>
 			<td>Observation.value</td>
-			<td><a href="broken.html">Answers</a></td>
-			<td>OID-8</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.210/expansion/Latest">Answers</a></td>
+			<td>2.16.840.1.113762.1.4.1247.210</td>
 		</tr>
-		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-stress">stress</a></td>
+		<tr>
 			<td rowspan="3">Observation.code</td>
-			<td><a href="broken.html">Panels and Questions</a></td>
-			<td>OID-5</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Stress Assessment Instruments Codes</a></td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.203/expansion/Latest">Panels and Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.203</td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Stress%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Stress Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
-			<td><a href="broken.html">Panels</a></td>
-			<td>OID-6</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.136/expansion/Latest">Panels</a></td>
+			<td>2.16.840.1.113762.1.4.1247.136</td>
 		</tr>
 		<tr>
-			<td><a href="broken.html">Questions</a></td>
-			<td>OID-7</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.169/expansion/Latest">Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.169</td>
 		</tr>
 		<tr>
 			<td>Observation.value</td>
-			<td><a href="broken.html">Answers</a></td>
-			<td>OID-8</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.181/expansion/Latest">Answers</a></td>
+			<td>2.16.840.1.113762.1.4.1247.181</td>
 		</tr>
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-transportation-insecurity">transportation-insecurity</a></td>
 			<td rowspan="3">Observation.code</td>
-			<td><a href="broken.html">Panels and Questions</a></td>
-			<td>OID-5</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.204/expansion/Latest">Panels and Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.204</td>
 			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Transportation%20Insecurity%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Transportation Insecurity Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
-			<td><a href="broken.html">Panels</a></td>
-			<td>OID-6</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.128/expansion/Latest">Panels</a></td>
+			<td>2.16.840.1.113762.1.4.1247.128</td>
 		</tr>
 		<tr>
-			<td><a href="broken.html">Questions</a></td>
-			<td>OID-7</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.170/expansion/Latest">Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.170</td>
 		</tr>
 		<tr>
 			<td>Observation.value</td>
-			<td><a href="broken.html">Answers</a></td>
-			<td>OID-8</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.182/expansion/Latest">Answers</a></td>
+			<td>2.16.840.1.113762.1.4.1247.182</td>
 		</tr>
 		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-veteran-status">veteran-status</a></td>
 			<td rowspan="3">Observation.code</td>
-			<td><a href="broken.html">Panels and Questions</a></td>
-			<td>OID-5</td>
-			<td colspan="1" rowspan="4"><a href="broken.html">Veteran Status Assessment Instruments Codes</a></td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.192/expansion/Latest">Panels and Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.192</td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Veteran%20Status%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Veteran Status Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
-			<td><a href="broken.html">Panels</a></td>
-			<td>OID-6</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.134/expansion/Latest">Panels</a></td>
+			<td>2.16.840.1.113762.1.4.1247.134</td>
 		</tr>
 		<tr>
-			<td><a href="broken.html">Questions</a></td>
-			<td>OID-7</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.172/expansion/Latest">Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.172</td>
 		</tr>
 		<tr>
 			<td>Observation.value</td>
-			<td><a href="broken.html">Answers</a></td>
-			<td>OID-8</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.184/expansion/Latest">Answers</a></td>
+			<td>2.16.840.1.113762.1.4.1247.184</td>
 		</tr>
 				<tr>
 			<td><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified">sdoh-category-unspecified</a></td>
@@ -438,16 +438,16 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 Of note, Grouper VSAC value sets containing the members of all the category-specific value sets for Observation.code and Observation.value are available here:
 
 * For Observation.code:
-  * [Social Determinants of Health Screening Assessments And Questions](broken.html) Value Set
-  * [Social Determinants of Health Screening Assessments Questions] Value Set
-  * [Social Determinants of Health Screening Assessments] Value Set
-* For Observation.value: [Social Determinants of Health Screening Assessments Answers] Value Set
+  * [Social Determinants of Health Screening Assessments And Questions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.206/expansion/Latest) Value Set
+  * [Social Determinants of Health Screening Assessments Questions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.207/expansion/Latest) Value Set
+  * [Social Determinants of Health Screening Assessments](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.126/expansion/Latest) Value Set
+* For Observation.value: [Social Determinants of Health Screening Assessments Answers](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.208/expansion/Latest) Value Set
 
 #### Guidance on Category-specific Assessment Instrument Spreadsheets
 
 Each question (Observation.code) on an assessment instrument has a set of allowed answers (Observation.value). The allowed answers for a specific question may vary depending on the assessment instrument (LOINC panel) on which the question is presented (e.g., [88122-7](https://loinc.org/88122-7) "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]" has 4 possible answers on the [Hunger Vital Sign (HVS)](https://loinc.org/88121-9) panel versus three possible answers on the [American Academy of Family Physicians Social Needs Screening Tool](https://loinc.org/99593-6)). For this reason, the category-specific Assessment Instrument Spreadsheets provide additional information to link specific assessment instruments to questions and their allowed LOINC Answer Lists. LOINC also provides Answers Lists for questions from specific assessment instruments (panels).
 
-​For additional information on fields in the Assessment Instrument Spreadsheets, see [Assessment Instrument Spreadsheet Guidance](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/updates_0327/broken.html) on the Gravity Project Confluence site.
+​For additional information on fields in the Assessment Instrument Spreadsheets, see [Assessment Instrument Spreadsheet Guidance] on the Gravity Project Confluence site.
 
 
 {% include markdown-link-references.md %}
