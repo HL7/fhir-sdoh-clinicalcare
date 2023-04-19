@@ -1,6 +1,6 @@
 Instance: SDOHCC-TaskPatientReviewInformationCompletedExample
 InstanceOf: SDOHCCTaskForPatient
-Title: "SDOHCC Task Patient Reiew Information Completed Example"
+Title: "SDOHCC Task Patient Review Information Completed Example"
 Description: "An example of a completed Task For Patient where the task was to review material."
 Usage: #example
 * intent = #order
