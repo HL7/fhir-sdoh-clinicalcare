@@ -309,9 +309,9 @@ Here we provide a detailed view of an interaction between a patient application 
 | ---  | ---- | ------------ | ------------------ |
 | 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientRiskQuestionnaireCompletedExample.html) |
 | 2 |  Patient  | Get Questionnaire, Questionnaire PDF, or Questionnaire URL | [Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html) |
-| 3 |  Patient | Update Task (in-progress) | [Patient Task](SDOHCC-TaskPatientRiskQuestionnaireCompletedExample) with status changed |
+| 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientRiskQuestionnaireCompletedExample) with status changed |
 | 4 |  Patient | Post Questionnaire Response | [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) |
-| 5 |  Patient | Update Task (completed and .Output references QuestionnaireResponse) | [Patient Task](SDOHCC-TaskPatientRiskQuestionnaireCompletedExample) with status changed |
+| 5 |  Patient | Update Task (completed and .Output references QuestionnaireResponse) | [Patient Task](Task-SDOHCC-TaskPatientRiskQuestionnaireCompletedExample) with status changed |
 {:.grid}
 
 #### General Information Request
@@ -338,7 +338,7 @@ Here we provide a detailed view of an interaction between a patient application 
 | 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) |
 | 2 |  Patient  | Get Contact | [HealthCareService](HealthcareService-SDOHCC-HealthcareServiceTelecomAppointmentExample.html) |
 | 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed |
-| 4 |  Patient | Update Task (completed and .Output includes chosen contact) | [Patient Task](SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) with status changed |
+| 4 |  Patient | Update Task (completed and .Output includes chosen contact) | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) with status changed |
 {:.grid}
 
 #### Review Material
@@ -349,7 +349,7 @@ Here we provide a detailed view of an interaction between a patient application 
 
 | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |
-| 1 |  Patient | Get Task | [Patient Task](TaskPatientMakeAppointmentCompletedExample.html) |
+| 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) |
 | 2 |  Patient  | Get DocumentReference | [DocumentReference] |
 | 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) with status changed |
 | 4 |  Patient | Update Task (completed ) | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) with status changed |
