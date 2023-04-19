@@ -13,7 +13,7 @@ This IG supports the following general [workflow](sdoh_clinical_care_scope.html)
 
 The figure below shows this high-level workflow, the actors involved in each step, and the FHIR resources that support each step.
 
-<object data-"GeneralWorkflow3.svg" type-"image/svg+xml"></object>
+<object data="GeneralWorkflow3.svg" type="image/svg+xml"></object>
 <br/>
 
 ### Actors, Systems and Icons
@@ -50,10 +50,10 @@ This figure shows the high-level context of the referral use cases that are desc
 The two right-most columns show data that could be exchanged at that step, and data though is aligned with that step.  This only specifies the
 data that is exchanged, so systems are free to use any internal representation.
 
-{% include img.html img-"HighLevelReferralContext.svg" caption-"Figure 1: Referral Use Cases Context" %}
+{% include img.html img="HighLevelReferralContext.svg" caption="Figure 1: Referral Use Cases Context" %}
 
 
-<table align-"left" border-"1" cellpadding-"1" cellspacing-"1" style-"width:100%;">
+<table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
 	<caption><b>Annotations of Figure 1</b></caption>
 <thead>
 <tr>
@@ -66,25 +66,25 @@ data that is exchanged, so systems are free to use any internal representation.
 </thead>
 <tbody><tr>
 <td>1</td>
-<td><img src-"Patient.png" alt-"Patient" width-"35" height-"35"></td>
+<td><img src="Patient.png" alt="Patient" width="35" height="35"></td>
 <td>Patient takes standardized assessment tool to identify social risks and needs. This could be done via a SMART app that would post a QuestionnaireResponse or via the PatientTask mechanism, but could be manual</td>
 <td><ul>
-<li><a href-"StructureDefinition-SDOHCC-TaskForPatient.html">SDOHCC Task For Patient</a></li>
-<li><a href-"https://www.hl7.org/fhir/questionnaire.html">Questionnaire</a></li>
-<li><a href-"https://www.hl7.org/fhir/questionnaireresponse.html">QuestionnareResponse</a></li></ul></td>
+<li><a href="StructureDefinition-SDOHCC-TaskForPatient.html">SDOHCC Task For Patient</a></li>
+<li><a href="https://www.hl7.org/fhir/questionnaire.html">Questionnaire</a></li>
+<li><a href="https://www.hl7.org/fhir/questionnaireresponse.html">QuestionnareResponse</a></li></ul></td>
 <td>none</td>
 </tr>
 <tr>
 <td>2</td>
-<td><img src-"Provider.png" alt-"Provider" width-"35" height-"35"></td>
+<td><img src="Provider.png" alt="Provider" width="35" height="35"></td>
 <td>Provider evaluates assessment and identifies social risks</td>
 <td>none</td>
-<td><ul><li><a href-"StructureDefinition-SDOHCC-ObservationScreeningResponse.html">SDOHCC Observation Screening Response</a></li>
-        <li><a href-"StructureDefinition-SDOHCC-Condition.html">SDOHCC Condition</a></li></ul></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-ObservationScreeningResponse.html">SDOHCC Observation Screening Response</a></li>
+        <li><a href="StructureDefinition-SDOHCC-Condition.html">SDOHCC Condition</a></li></ul></td>
 </tr>
 <tr>
 <td>3</td>
-<td><img src-"Provider.png" alt-"Provider" width-"35" height-"35">, <img src-"Patient.png" alt-"Patient" width-"35" height-"35"></td>
+<td><img src="Provider.png" alt="Provider" width="35" height="35">, <img src="Patient.png" alt="Patient" width="35" height="35"></td>
 <td>Provider and Patient: <ul>
                           <li>agree on Conditions to add to Problem List</li>
                           <li>prioritize goals</li>
@@ -96,91 +96,91 @@ data that is exchanged, so systems are free to use any internal representation.
 </tr>
 <tr>
 <td>4</td>
-<td><img src-"Provider.png" alt-"Provider" width-"35" height-"35"></td>
+<td><img src="Provider.png" alt="Provider" width="35" height="35"></td>
 <td>Provider promotes the health concern to the problem list, records goals, and captures patient consent</td>
 <td>none</td>
 <td><ul>
-<li><a href-"StructureDefinition-SDOHCC-Condition.html">SDOHCC Observation Screening Response</a></li>
-<li><a href-"StructureDefinition-SDOHCC-Condition.html">SDOHCC Condition</a></li>
-<li><a href-"StructureDefinition-SDOHCC-Consent.html">SDOHCC Consent</a></li>
-<li><a href-"StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal</a></li></ul></td>
+<li><a href="StructureDefinition-SDOHCC-Condition.html">SDOHCC Observation Screening Response</a></li>
+<li><a href="StructureDefinition-SDOHCC-Condition.html">SDOHCC Condition</a></li>
+<li><a href="StructureDefinition-SDOHCC-Consent.html">SDOHCC Consent</a></li>
+<li><a href="StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal</a></li></ul></td>
 </tr>
 <tr>
 <td>5 (optional)</td>
-<td><img src-"Provider.png" alt-"Provider" width-"35" height-"35"></td>
+<td><img src="Provider.png" alt="Provider" width="35" height="35"></td>
 <td>Provider makes information regarding the referral, goals and plan available to the patient’s application</td>
-<td><ul><li><a href-"StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a></li><li><a href-"StructureDefinition-SDOHCC-Location.html">SDOHCC Location</a> </li></ul></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a></li><li><a href="StructureDefinition-SDOHCC-Location.html">SDOHCC Location</a> </li></ul></td>
 <td>none</td>
 </tr>
 <tr>
 <td>6</td>
-<td><img src-"CBO.png" alt-"CBO" width-"35" height-"35"> or <img src-"CoordinationPlatform.png" alt-"CP" width-"35" height-"35"></td>
+<td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
 <td>Provider or Care Coordinator initiates a referral to the CBO or CP</td>
-<td><ul><li><a href-"StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a></li><li><a href-"StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a> </li></ul></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a></li><li><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a> </li></ul></td>
 <td>none</td>
 </tr>
 <tr>
 <td>7</td>
-<td><img src-"CBO.png" alt-"CBO" width-"35" height-"35"> or <img src-"CoordinationPlatform.png" alt-"CP" width-"35" height-"35"></td>
+<td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
 <td>Recipient (CBO or CP) retrieves information about the referral and any needed supporting information, then decides to accept or reject the referral. If the recipient rejects the referral either the process ends, or it resumes at step #6.</td>
 <td><ul>
-<li><a href-"StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a></li>
-<li><a href-"StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a></li>
-<li><a href-"StructureDefinition-SDOHCC-Condition.html">SDOHCC Condition</a></li>
-<li><a href-"StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal</a></li>
-<li><a href-"StructureDefinition-SDOHCC-Condition.html">SDOHCC Observation Screening Response</a></li>
+<li><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a></li>
+<li><a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a></li>
+<li><a href="StructureDefinition-SDOHCC-Condition.html">SDOHCC Condition</a></li>
+<li><a href="StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal</a></li>
+<li><a href="StructureDefinition-SDOHCC-Condition.html">SDOHCC Observation Screening Response</a></li>
 </ul></td>
 <td>none</td>
 </tr>
 <tr>
 <td>8</td>
-<td><img src-"CBO.png" alt-"CBO" width-"35" height-"35"> or <img src-"CoordinationPlatform.png" alt-"CP" width-"35" height-"35"></td>
+<td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
 <td>Recipient (CBO or CP) updates the status of their work (task) to reflect progress via notes or status.</td>
-<td><ul><li><a href-"StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a></li></ul></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a></li></ul></td>
 <td>none</td>
 </tr>
 <tr>
 <td>9 (optional)</td>
-<td><img src-"CBO.png" alt-"CBO" width-"35" height-"35"> or <img src-"CoordinationPlatform.png" alt-"CP" width-"35" height-"35">, <img src-"Patient.png" alt-"Patient" width-"35" height-"35"></td>
+<td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35">, <img src="Patient.png" alt="Patient" width="35" height="35"></td>
 <td>Recipient (CBO or CP) communicates with the patient via their application to schedule appointments, collect additional information, etc.  This IG doesn't highlight communication outside of electronic means, but such communication is always possible.</td>
 <td>none</td>
 <td>none</td>
 </tr>
 <tr>
 <td>10</td>
-<td><img src-"CBO.png" alt-"CBO" width-"35" height-"35"> or <img src-"CoordinationPlatform.png" alt-"CP" width-"35" height-"35"></td>
+<td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
 <td>Recipient (CBO or CP) completes the requested action, updates the status of their work (task) to completed, and includes information on what was completed</td>
-<td><ul><li><a href-"StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC ServiceRequest</a></li><li><a href-"StructureDefinition-SDOHCC-Procedure.html">SDOHCC Procedure</a></li></ul></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC ServiceRequest</a></li><li><a href="StructureDefinition-SDOHCC-Procedure.html">SDOHCC Procedure</a></li></ul></td>
 <td>missing</td>
 </tr>
 <tr>
 <td>11</td>
-<td><img src-"Provider.png" alt-"Patient" width-"35" height-"35"></td>
+<td><img src="Provider.png" alt="Patient" width="35" height="35"></td>
 <td>Provider receives the updated status and updates the status of the referral (service request)</td>
-<td><ul><li><a href-"StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a></li></ul></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a></li></ul></td>
 <td>none</td>
 </tr>
 <tr>
 <td>12 (Optional)</td>
-<td><img src-"Provider.png" alt-"Patient" width-"35" height-"35"></td>
+<td><img src="Provider.png" alt="Patient" width="35" height="35"></td>
 <td>Provider closes loop by gathering feedback/satisfaction via questionnaire</td>
 <td><ul>
-<li><a href-"StructureDefinition-SDOHCC-TaskForPatient.html">SDOHCCTaskForPatient</a></li>
-<li><a href-"https://www.hl7.org/fhir/questionnaire.html">Questionnaire</a></li></ul></td>
+<li><a href="StructureDefinition-SDOHCC-TaskForPatient.html">SDOHCCTaskForPatient</a></li>
+<li><a href="https://www.hl7.org/fhir/questionnaire.html">Questionnaire</a></li></ul></td>
 <td>missing</td>
 </tr>
 <tr>
 <td>13</td>
-<td><img src-"Provider.png" alt-"Patient" width-"35" height-"35"></td>
+<td><img src="Provider.png" alt="Patient" width="35" height="35"></td>
 <td>Provider determines if the goals/plan have been satisfied and/or progress has been made on the goal/plan and updates the goal/plan appropriately</td>
 <td>none</td>
-<td><ul><li><a href-"StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal</a></li></ul></td>
+<td><ul><li><a href="StructureDefinition-SDOHCC-Goal.html">SDOHCC Goal</a></li></ul></td>
 </tr>
 </tbody></table>
 
 
 #### Direct Referral
-<a name-"directreferral"></a>
+<a name="directreferral"></a>
 
 In this use case the patient is referred to a CBO for help addressing prioritized needs. The CBO accepts the referral, provides the requested support to the patient, and shares the updated information with the referring provider.
 
@@ -195,7 +195,7 @@ The details of the FHIR-based exchanges  are provided in the [following section]
 The following figure shows the FHIR exchanges between the referral source and target.
 For each numbered exchange, the details of the data elements exchanged, and the FHIR request and response are provided.
 
-{% include img.html img-"DetailedDirectReferral.svg" caption-"Figure 3: Detailed Direct Referral" %}
+{% include img.html img="DetailedDirectReferral.svg" caption="Figure 3: Detailed Direct Referral" %}
 
 | #    | From |  Description | Instances involved | FHIR Transaction |
 | ---  | ---- | ------------ | ------------------ | ---------------- |
@@ -226,7 +226,7 @@ The referral occurs between the provider/Requester and the CBO/Performer where t
 The following figure shows the FHIR exchanges between the referral source and target.
 For each numbered exchange, the details of the data elements exchanged, and the FHIR request and response are provided.
 
-{% include img.html img-"DetailedDirectReferralLight.svg" caption-"Figure 3: Detailed Direct Referral Light" %}
+{% include img.html img="DetailedDirectReferralLight.svg" caption="Figure 3: Detailed Direct Referral Light" %}
 
 | #    | From |  Description | Instances involved | FHIR Transaction |
 | ---  | ---- | ------------ | ------------------ | ---------------- |
@@ -241,7 +241,7 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 {:.grid}
 
 #### Indirect Referral with Direct CBO
-<a name-"indirectreferral"></a>
+<a name="indirectreferral"></a>
 
 In this use case, a provider works with a patient using a standardized assessment instrument to identify and prioritize social risks and needs, and then refers the patient indirectly via a CP to a CBO for help addressing those needs.  The CP relays the referral to the CBO.  The CBO provides the requested support to the patient and the updated information is relayed back through the CP where it is shared with the referring provider.
 
@@ -261,7 +261,7 @@ This IG assumes that, in an Indirect Referral, the Referral Performer does not h
 4. Since local copies of the referenced resources are maintained by the intermediary, the intermediary must periodically query the Referral Source for updates to the referenced resources
 5. There are two versions of the [Indirect Referral] -- one where the CBO / Performer has a FHIR API (e.g. [Direct Referral]) and one where the CBO / Performer uses a FHIR enabled application (e.g. [Direct Referral Light])
 
-{% include img.html img-"DetailedIndirectReferral.svg" caption-"Figure 3: Detailed Indirect Referral" %}
+{% include img.html img="DetailedIndirectReferral.svg" caption="Figure 3: Detailed Indirect Referral" %}
 
 ####  Indirect Referral with Direct Light CBO
 
@@ -274,7 +274,7 @@ The provider has a relationship with the CP, but not with the CBO.  The use case
 The provider may request to have the service delivered by a specific CBO.   The CP may not accept the referral or be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
 
 ##### Indirect Referral With Direct Light CBO - Detailed View
-{% include img.html img-"DetailedIndirectReferralLight.svg" caption-"Figure 3: Detailed Indirect Referral Light" %}
+{% include img.html img="DetailedIndirectReferralLight.svg" caption="Figure 3: Detailed Indirect Referral Light" %}
 
 #### Notes on Direct and Indirect Referrals
 
@@ -302,7 +302,7 @@ See [Connecting Applications with API Data Sources](connecting_applications_with
 #### Complete Questionnaire
 Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CPP) for the completion of a questionnaire.
 
-<object data-"PatientQuestionnaire.svg" type-"image/svg+xml"></object>
+<object data="PatientQuestionnaire.svg" type="image/svg+xml"></object>
 <br>
 
 | #    | From |  Description | Instances involved | FHIR Transaction |
@@ -317,7 +317,7 @@ Here we provide a detailed view of an interaction between a patient application 
 #### General Information Request
 Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CPP) for a general information request.
 
-<object data-"PatientInformation.svg" type-"image/svg+xml"></object>
+<object data="PatientInformation.svg" type="image/svg+xml"></object>
 <br>
 
 | #    | From |  Description | Instances involved | FHIR Transaction |
@@ -330,7 +330,7 @@ Here we provide a detailed view of an interaction between a patient application 
 #### Make Contact Directions
 Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CPP) for providing contact directions.
 
-<object data-"PatientContact.svg" type-"image/svg+xml"></object>
+<object data="PatientContact.svg" type="image/svg+xml"></object>
 <br>
 
 | #    | From |  Description | Instances involved | FHIR Transaction |
@@ -344,7 +344,7 @@ Here we provide a detailed view of an interaction between a patient application 
 #### Review Material
 Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CPP) for providing review materials.
 
-<object data-"PatientReview.svg" type-"image/svg+xml"></object>
+<object data="PatientReview.svg" type="image/svg+xml"></object>
 <br>
 | #    | From |  Description | Instances involved | FHIR Transaction |
 | ---  | ---- | ------------ | ------------------ | ---------------- |
