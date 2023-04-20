@@ -1,5 +1,5 @@
 ### Purpose
-This profile is used to pass a Task authored by a Practitioner or Organization (.requester field) targetting an Patient or Related Person (.owner field) to the individual. These input fields are required.  The .output is used to return a response appropriate to the requested Task code.
+This profile is used to pass a Task authored by a Practitioner or Organization (.requester field) targeting an Patient or Related Person (.owner field) to the individual. These input fields are required.  The .output is used to return a response appropriate to the requested Task code.
 
 ### Usage
 
@@ -10,9 +10,9 @@ The table shows the types of tasks that can be assigned to the patient and the c
 
 |    Description     | Task.code             | Task.description | Task.input                  |  Task.output                                    |   Other |
 | ------------------ | --------------------- | ---------------- | --------------------------- |------------------------------------------------ | ------ |
-| Questionaire (FHIR)| `complete-questionnaire` | required | questionnaire, questionaire-category required | If present, questionnaire-response   | |
-| Questionaire (PDF)| `complete-questionnaire`  | required| questionnaire-pdf, questionaire-category required | If present, questionnaire-response   | |
-| Questionaire (URL)| `complete-questionnaire` | required| questionnaire-url, questionaire-category required | If present, questionnaire-response   | |
+| Questionaire (FHIR)| `complete-questionnaire` | required | questionnaire, questionnaire-category required | If present, questionnaire-response   | |
+| Questionaire (PDF)| `complete-questionnaire`  | required| questionnaire-pdf, questionnaire-category required | If present, questionnaire-response   | |
+| Questionaire (URL)| `complete-questionnaire` | required| questionnaire-url, questionnaire-category required | If present, questionnaire-response   | |
 | General Information Request | `general-information` | required |        | If present, general-information-response | The request is in Task.description |
 | Make Contact Directions |  `make-contact` |  | at least one Contact entity is required | If present, Task.output must be “chosen-contact” |
 | Review Material | `review-material` | |  | | Task.focus of DocumentReference is required. |
@@ -30,7 +30,7 @@ The allowed state transitions are defined graphically in the state diagram below
 
 | Code | Display | Definition | Set By |
 | ---- | ------- | ---------- | ------ |
-| `ready` | Ready | The task is ready to be performed, but no action has been taken. Used in place of requwested/received/accepted/rejected when request assignment and acceptance is given| Requester |
+| `ready` | Ready | The task is ready to be performed, but no action has been taken. Used in place of requested/received/accepted/rejected when request assignment and acceptance is given| Requester |
 | `in-progress` | In Progress | The task has been started but is not yet complete | Patient App |
 | `completed` | Completed | The task has been completed. |  Patient App|
 | `cancelled`  |Cancelled  | The task was not completed | Requester or Patient App |
