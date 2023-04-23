@@ -1,6 +1,8 @@
 /// name = "SDOHCC-PRAPARE-Map"
 /// status = draft
 
+// This is a more complex example where the author has chosen to extract *all* answers to Observations and to create a grouping Observation
+
 map "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE" = "SDOHCCStructureMapPRAPARE"
 
 uses "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse" alias questionnaireResponse as source
@@ -51,7 +53,7 @@ group SetValueCodeableConceptFromAnswer(source answer, target observation) {
   } "obsnValue";
 }
 
-group TransformObservation(source src: questionnaireResponse, source answerItem, source bundle, target observation: sdohccObservation, target entry, target bundle)
+group TransformObservation(source src: questionnaireResponse, source answerItem, source srcBundle, target observation: sdohccObservation, target entry, target bundle)
 {
   src -> observation.id = uuid() then
   	SetObservationFullUrl(observation, entry) "obsnFullUrl";
@@ -86,7 +88,7 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
 
   // 1. Ethnicity
   answerItem where linkId = '/93043-8/56051-6' -> observation.code = cc('http://loinc.org', '56051-6') as code then 
-    SetValueCodeableConcept(answerItem, observation) "obsn-code-ethnicity";
+    SetValueCodeableConcept(answerItem, observation) "obsnCodeEthnicity";
   answerItem where linkId = '/93043-8/56051-6' -> observation.category = create('CodeableConcept') as newCC then {
     src -> newCC.coding = create('Coding') as newCoding then {
       src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsnCatCodingSystem";
@@ -119,7 +121,7 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
 
   // 4. Veteran Status
   answerItem where linkId = '/93043-8/93034-7' -> observation.code = cc('http://loinc.org', '93034-7') as code then
-    SetValueCodeableConcept(answerItem, observation) "obsn-code-vet-status";
+    SetValueCodeableConcept(answerItem, observation) "obsnCodeVetStatus";
   answerItem where linkId = '/93043-8/93034-7' -> observation.category = create('CodeableConcept') as newCC then {
     src -> newCC.coding = create('Coding') as newCoding then {
       src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsnCatCodingSystem";
@@ -130,7 +132,7 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
   
   // 5. English Proficiency
   answerItem where linkId = '/93043-8/54899-0' -> observation.code = cc('http://loinc.org', '54899-0') as code then
-    SetValueCodeableConcept(answerItem, observation) "obsn-code-eng-prof";
+    SetValueCodeableConcept(answerItem, observation) "obsnCodeEngProf";
   answerItem where linkId = '/93043-8/54899-0' -> observation.category = create('CodeableConcept') as newCC then {
     src -> newCC.coding = create('Coding') as newCoding then {
       src -> newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' "obsnCatCodingSystem";
@@ -328,11 +330,11 @@ group TransformObservation(source src: questionnaireResponse, source answerItem,
 
   //create a Condition if homeless
   answerItem where linkId = '/93042-0/71802-3' and answer.value.code ='LA30190-5' -> bundle.entry as entry, entry.resource = create('sdohccCondition') as condition then
-    TransformCondition(src, bundle, condition, entry), SetConditionCodeAndEvidence1(src, bundle, condition) "conditionHomeless";
+    TransformCondition(src, bundle, condition, entry), SetConditionCodeAndEvidence1(src, srcBundle, condition) "conditionHomeless";
 
   //create a Condition if unemployed
   answerItem where linkId = '/93041-2/67875-5' and answer.value.code ='LA17956-6' -> bundle.entry as entry, entry.resource = create('sdohccCondition') as condition then
-    TransformCondition(src, bundle, condition, entry), SetConditionCodeAndEvidence2(src, bundle, condition) "conditionUnemployed";
+    TransformCondition(src, bundle, condition, entry), SetConditionCodeAndEvidence2(src, srcBundle, condition) "conditionUnemployed";
 
   src -> entry.request as request then {
     src -> request.method = 'POST' "obsnRequestMethod";
