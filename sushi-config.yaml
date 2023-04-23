@@ -26,7 +26,8 @@ dependencies:
     uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
     id: vsac
   hl7.fhir.extensions.r5:
-    version: 4.0.1
+    version: 5.0.0
+#    version: 4.0.1
 parameters:
   show-inherited-invariants: false
   jira-code: sdoh-cc
@@ -167,7 +168,7 @@ groups:
     name: PRAPARE Examples
     description: PRAPARE Examples
     resources:
-#    - SDOHCC-StructureMapPRAPARE
+    - StructureMap/SDOHCC-StructureMapPRAPARE
     - SDOHCC-QuestionnairePRAPARE
     - SDOHCC-QuestionnaireResponsePRAPAREExample
     - SDOHCC-ObservationResponsePRAPAREChildCareNeedExample
@@ -179,7 +180,7 @@ groups:
     name: Hunger Vital Signs Examples
     description: Hunger Vital Signs Examples
     resources:
- #   - SDOHCC-StructureMapHungerVitalSign
+    - StructureMap/SDOHCC-StructureMapHungerVitalSign
     - SDOHCC-QuestionnaireHungerVitalSign
     - SDOHCC-QuestionnaireResponseHungerVitalSignExample
     - SDOHCC-ObservationResponseHungerVitalSignGroupingExample

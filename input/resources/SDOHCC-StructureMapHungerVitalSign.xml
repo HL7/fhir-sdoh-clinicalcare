@@ -1,0 +1,2540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureMap xmlns="http://hl7.org/fhir">
+  <id value="SDOHCC-StructureMapHungerVitalSign"/>
+  <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <pre>/// name = &quot;SDOHCC-Hunger-Vital-Sign-Map&quot;
+/// status = draft
+
+map &quot;http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapHungerVitalSign&quot; = &quot;SDOHCCStructureMapHungerVitalSign&quot;
+
+uses &quot;http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse&quot; alias questionnaireResponse as source
+uses &quot;http://hl7.org/fhir/StructureDefinition/Bundle&quot; as target
+uses &quot;http://hl7.org/fhir/StructureDefinition/Observation&quot; as target
+uses &quot;http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition&quot; alias sdohccCondition as target
+uses &quot;http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse&quot; alias sdohccObservation as target
+
+group sdohMapping(source src : questionnaireResponse, target bundle : Bundle) {
+  //temporarily set id to human-readable id as example
+  //src -&gt; bundle.id = uuid();
+  src -&gt; bundle.id = 'SDOHCC-BundleHungerVitalSignExample' &quot;bundleId&quot;;
+  src -&gt; bundle.type = 'transaction' &quot;bundleType&quot;;
+
+  //for each answer item in the questionnareResponse, create an Observation and add it to the groupObservation
+  src.item as answerItem1 where linkId = '/88122-7' -&gt; bundle.entry as entry, entry.resource = create('sdohccObservation') as observation1 then
+    TransformObservation(src, answerItem1, observation1, entry), TransformObservation1(src, answerItem1, observation1, entry);
+
+  src.item as answerItem2 where linkId = '/88123-5' -&gt; bundle.entry as entry, entry.resource = create('sdohccObservation') as observation2 then 
+    TransformObservation(src, answerItem2, observation2, entry), TransformObservation2(src, answerItem2, observation2, entry);
+
+  src.item as answerItem3 where linkId = '/88124-3' -&gt; bundle.entry as entry, entry.resource = create('sdohccObservation') as observation3 then 
+    TransformObservation(src, answerItem3, observation3, entry), TransformObservation3(src, answerItem3, observation3, entry); 
+
+  //create group observation containing the 3 observations above as hasMember
+  src -&gt; bundle.entry as entry, entry.resource = create('sdohccObservation') as groupObservation then 
+	  TransformGroupObservation(src, bundle, groupObservation, entry) &quot;groupObsn&quot;;
+
+  //create condition if answer to third question is &quot;At Risk&quot;
+  src.item where linkId = '/88124-3' and answer.value.code ='LA19952-3' -&gt; bundle.entry as entry, entry.resource = create('sdohccCondition') as condition then
+    TransformCondition(src, bundle, condition, entry);
+}
+
+group TransformObservation(source src: questionnaireResponse, source answerItem, target observation: sdohccObservation, target entry)
+{
+  //temporarily set id to human-readable id as example
+  //src -&gt; observation.id = uuid() then
+  //  SetObservationFullUrl(observation, entry);
+  src -&gt; observation.status = 'final' &quot;obsnStatus&quot;;
+
+  src -&gt; observation.meta = create('Meta') as newMeta then {
+    src -&gt; newMeta.profile = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse' &quot;obsnMetaProfile&quot;;
+  } &quot;obsnMeta&quot;;
+
+  src -&gt; observation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'social-history', 'Social History') &quot;obsnCatSocialHist&quot;;
+  src -&gt; observation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'survey', 'Survey') &quot;obsnCatSurvey&quot;;
+
+  //Add sdoh category
+  src -&gt; observation.category = create('CodeableConcept') as newCC then {
+      src -&gt; newCC.coding = create('Coding') as newCoding then {
+        src -&gt; newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' &quot;obsnCatCodingSystem&quot;;
+        src -&gt; newCoding.code = 'food-insecurity' &quot;obsnCatCodingCode&quot;;
+        src -&gt; newCoding.display = 'Food Insecurity' &quot;obsnCatCodingDisplay&quot;;
+    } &quot;obsnCatCoding&quot;;
+  } &quot;obsnCatFoodInsecurity&quot;;  
+
+  src.authored as authored -&gt; observation.issued = authored, observation.effective = authored;
+
+  answerItem.answer as answer -&gt; observation.value = create('CodeableConcept') as newCC then {
+    answer.value as coding -&gt; newCC.coding = coding as newCoding;
+  };
+
+  src.subject as qSubject -&gt; observation.subject = create('Reference') as newReference then {
+    qSubject.reference as qReference -&gt; newReference.reference = qReference;
+    qSubject.display as qDisplay -&gt; newReference.display = qDisplay;
+  };
+
+  src -&gt; entry.request as request then {
+    src -&gt; request.method = 'POST' &quot;obsnRequestMethod&quot;;
+    src -&gt; request.url = 'Observation' &quot;obsnRequestUrl&quot;;
+  } &quot;obsnEntryRequest&quot;;
+}
+
+group TransformObservation1(source src: questionnaireResponse, source item, target observation: sdohccObservation, target entry)
+{
+  src -&gt; observation.id = 'SDOHCC-ObservationResponseHungerVitalSignQuestion1Example' then
+    SetObservationFullUrl(observation, entry) &quot;obsn1Id&quot;;
+
+  item as i -&gt; observation.code = cc('http://loinc.org', '88122-7') as code &quot;obsn1Code&quot;;
+
+  src.subject as qSubject -&gt; observation.performer = create('Reference') as newReference then {
+    qSubject.reference as qReference -&gt; newReference.reference = qReference;
+    qSubject.display as qDisplay -&gt; newReference.display = qDisplay;
+  };
+
+  src.id as id -&gt; observation.derivedFrom = create('Reference') as newReference then {
+    id -&gt; newReference.reference = append('QuestionnaireResponse/', id) &quot;obsn1DerivedFrom&quot;;
+  };
+}
+
+group TransformObservation2(source src: questionnaireResponse, source item, target observation: sdohccObservation, target entry)
+{
+  src -&gt; observation.id = 'SDOHCC-ObservationResponseHungerVitalSignQuestion2Example' then
+   	SetObservationFullUrl(observation, entry) &quot;obns2Id&quot;;
+
+  item as i -&gt; observation.code = cc('http://loinc.org', '88123-5') as code &quot;obns2Code&quot;;
+
+  src.subject as qSubject -&gt; observation.performer = create('Reference') as newReference then {
+    qSubject.reference as qReference -&gt; newReference.reference = qReference;
+    qSubject.display as qDisplay -&gt; newReference.display = qDisplay;
+  };
+
+  src.id as id -&gt; observation.derivedFrom = create('Reference') as newReference then {
+    id -&gt; newReference.reference = append('QuestionnaireResponse/', id) &quot;obsn2DerivedFrom&quot;;
+  };
+}
+
+group TransformObservation3(source src: questionnaireResponse, source item, source bundle, target observation: sdohccObservation, target entry)
+{
+  src -&gt; observation.id = 'SDOHCC-ObservationResponseHungerVitalSignQuestion3Example' then
+   	SetObservationFullUrl(observation, entry) &quot;obsn3Id&quot;;
+
+  item as i -&gt; observation.code = cc('http://loinc.org', '88124-3') as code &quot;obsn3Code&quot;;
+     
+  bundle.entry as entries -&gt; observation.derivedFrom = create('Reference') as df then 
+    TransformObservationDerived(entries, df) &quot;obsn3DerivedFrom&quot;;
+}
+
+group TransformObservationDerived(source entries, target df) {
+  entries.resource as obs1 where code.coding.code = '88122-7'-&gt; df.reference = reference(obs1); 
+  entries.resource as obs2 where code.coding.code = '88123-5' -&gt; df.reference = reference(obs2); 
+}
+
+group TransformGroupObservation(source src: questionnaireResponse, source bundle:Bundle, target groupObservation: Observation, target entry)
+{
+  //temporarily set id to human-readable id as example
+  //src -&gt; groupObservation.id = uuid() then
+
+  src -&gt; groupObservation.meta = create('Meta') as newMeta then {
+    src -&gt; newMeta.profile = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse' &quot;grpObsnMetaProfile&quot;;
+  } &quot;grpObsnMeta&quot;;
+
+  src -&gt; groupObservation.id = 'SDOHCC-ObservationResponseHungerVitalSignGroupingExample' then
+    SetObservationFullUrl(groupObservation, entry) &quot;grpObsnFullUrl&quot;;  
+  src -&gt; groupObservation.status = 'final' &quot;grpObsnFullStatus&quot;;
+  src -&gt; groupObservation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'social-history', 'Social History') &quot;grpObsnCatSocialHistory&quot;;
+  src -&gt; groupObservation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'survey', 'Survey') &quot;grpObsnCatSurvey&quot;;
+
+  //Add sdoh category
+  src -&gt; groupObservation.category = create('CodeableConcept') as newCC then {
+      src -&gt; newCC.coding = create('Coding') as newCoding then {
+        src -&gt; newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' &quot;grpObsnCatCodingSystem&quot;;
+        src -&gt; newCoding.code = 'food-insecurity' &quot;grpObsnCatCodingCode&quot;;
+        src -&gt; newCoding.display = 'Food Insecurity' &quot;grpObsnCatCodingDisplay&quot;;
+    } &quot;grpObsnCatCoding&quot;;
+  } &quot;grpObsnCatFoodInsecurity&quot;;    
+
+  src.authored as authored -&gt; groupObservation.effective = authored &quot;grpObsnAuthored&quot;;
+  src.subject as qSubject -&gt; groupObservation.subject = create('Reference') as newReference then {
+    qSubject.reference as qReference -&gt; newReference.reference = qReference;
+    qSubject.display as qDisplay -&gt; newReference.display = qDisplay;
+  };  
+
+  src -&gt; groupObservation.code = cc('http://loinc.org', '88121-9', 'Hunger Vital Sign [HVS]') &quot;grpObsnCode&quot;;   
+
+  bundle.entry as entries -&gt; groupObservation.hasMember = create('Reference') as df then {
+  	entries.resource as obs1 where code.coding.code = '88122-7'-&gt; df.reference = reference(obs1); 
+	entries.resource as obs2 where code.coding.code = '88123-5' -&gt; df.reference = reference(obs2); 
+	entries.resource as obs3 where code.coding.code = '88124-3' -&gt; df.reference = reference(obs3); 
+  };
+
+  src.id as id -&gt; groupObservation.derivedFrom = create('Reference') as newReference then {
+    id -&gt; newReference.reference = append('QuestionnaireResponse/', id) &quot;grpObsnDerivedFrom&quot;;
+  };
+
+  src -&gt; entry.request as request then {
+    src -&gt; request.method = 'POST' &quot;grpObsnRequestMethod&quot;;
+    src -&gt; request.url = 'Observation' &quot;grpObsnRequestUrl&quot;;
+  } &quot;grpObsnEntryRequest&quot;;
+}
+
+group SetObservationFullUrl(source observation: Observation, target entry)
+{
+  observation.id as id -&gt; entry.fullUrl = append('http://hl7.org/fhir/us/sdoh-clinicalcare/Observation/', id);
+}
+
+group TransformCondition(source src: questionnaireResponse, source bundle, target condition: sdohccCondition, target entry)
+{
+  //temporarily set id to human-readable id as example
+  //src -&gt; condition.id = uuid() then
+  src -&gt; condition.id = 'SDOHCC-ConditionFoodInsecurityExample' then
+    SetConditionFullUrl(condition, entry) &quot;conditionId&quot;;
+       
+  src -&gt; condition.meta = create('Meta') as newMeta then {
+    src -&gt; newMeta.profile = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition' &quot;conditionMetaProfile&quot;;
+  } &quot;conditionMeta&quot;;
+
+  src -&gt; condition.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical', 'active', 'Active') &quot;conditionClinicalStatus&quot;;
+  src -&gt; condition.verificationStatus = cc('http://terminology.hl7.org/CodeSystem/condition-ver-status', 'unconfirmed', 'Unconfirmed') &quot;conditionVeriStatus&quot;;
+  src -&gt; condition.category = create('CodeableConcept') as newCC then {
+      src -&gt; newCC.coding = create('Coding') as newCoding then {
+        src -&gt; newCoding.system = 'http://hl7.org/fhir/us/core/CodeSystem/condition-category' &quot;conditionCatCodingSystemHealthConcern&quot;;
+        src -&gt; newCoding.code = 'health-concern' &quot;conditionCatCodingCodeHealthConcern&quot;;
+        src -&gt; newCoding.display = 'Health Concern' &quot;conditionCatCodingDisplayHealthConcern&quot;;
+    } &quot;conditionCatCodingHealthConcern&quot;;
+  } &quot;conditionCatHealthConcern&quot;;
+
+  //Add sdoh category
+  src -&gt; condition.category = create('CodeableConcept') as newCC then {
+      src -&gt; newCC.coding = create('Coding') as newCoding then {
+        src -&gt; newCoding.system = 'http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' &quot;conditionCatCodingSystemFoodInsecurity&quot;;
+        src -&gt; newCoding.code = 'food-insecurity' &quot;conditionCatCodingCodeFoodInsecurity&quot;;
+        src -&gt; newCoding.display = 'Food Insecurity' &quot;conditionCatCodingDisplayFoodInsecurity&quot;;
+    } &quot;conditionCatCodingFoodInsecurity&quot;;
+  } &quot;conditionCatFoodInsecurity&quot;;
+
+  src -&gt; condition.code = create('CodeableConcept') as newCodeCC then {
+      src -&gt; newCodeCC.coding = create('Coding') as newCoding then {
+        src -&gt; newCoding.system = 'http://snomed.info/sct' &quot;conditionCodeCodingSystemFoodInsecurity&quot;;
+        src -&gt; newCoding.code = '733423003' &quot;conditionCodeCodingCodeFoodInsecurity&quot;;
+        src -&gt; newCoding.display = 'Food insecurity' &quot;conditionCodeCodingDisplayFoodInsecurity&quot;;
+    } &quot;conditionCodeCodingFoodInsecurity&quot;;
+    src -&gt; newCodeCC.coding = create('Coding') as newCoding2 then {
+        src -&gt; newCoding2.system = 'http://hl7.org/fhir/sid/icd-10-cm' &quot;conditionCodeCodingSystemLackOfFood&quot;;
+        src -&gt; newCoding2.code = 'Z59.4' &quot;conditionCodeCodingCodeLackOfFood&quot;;
+        src -&gt; newCoding2.display = 'Lack of adequate food and safe drinking water' &quot;conditionCodeCodingDisplayLackOfFood&quot;;
+    } &quot;conditionCodeCodingLackOfFood&quot;;
+  } &quot;conditionCode&quot;;
+      
+  src.authored as authored -&gt; condition.onset = create('Period') as period,
+    period.start = authored;
+
+  bundle.entry as entries -&gt; condition.evidence as evidence, evidence.detail = create('Reference') as detailReference then {
+  	entries.resource as obs3 where code.coding.code = '88124-3'-&gt; detailReference.reference = reference(obs3); 
+  };
+
+  src.subject as qSubject -&gt; condition.subject = create('Reference') as newReference then {
+    qSubject.reference as qReference -&gt; newReference.reference = qReference;
+    qSubject.display as qDisplay -&gt; newReference.display = qDisplay;
+  };
+
+  src -&gt; entry.request as request then {
+    src -&gt; request.method = 'POST' &quot;conditionRequestMethod&quot;;
+    src -&gt; request.url = 'Condition' &quot;conditionRequestUrl&quot;;
+  } &quot;conditionEntryRequest&quot;;  
+}
+
+group SetConditionFullUrl(source condition: sdohccCondition, target entry)
+{
+  condition.id as id -&gt; entry.fullUrl = append('http://hl7.org/fhir/us/sdoh-clinicalcare/Condition/', id);
+}</pre>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapHungerVitalSign"/>
+  <name value="SDOHCCStructureMapHungerVitalSign"/>
+  <structure>
+    <url value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"/>
+    <mode value="source"/>
+    <alias value="questionnaireResponse"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+    <mode value="target"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <mode value="target"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+    <mode value="target"/>
+    <alias value="sdohccCondition"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+    <mode value="target"/>
+    <alias value="sdohccObservation"/>
+  </structure>
+  <group>
+    <name value="sdohMapping"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="questionnaireResponse"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="bundle"/>
+      <type value="Bundle"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="bundleId"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="bundle"/>
+        <contextType value="variable"/>
+        <element value="id"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="SDOHCC-BundleHungerVitalSignExample"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="bundleType"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="bundle"/>
+        <contextType value="variable"/>
+        <element value="type"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="transaction"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="item"/>
+      <source>
+        <context value="src"/>
+        <element value="item"/>
+        <variable value="answerItem1"/>
+        <condition value="linkId = '/88122-7'"/>
+      </source>
+      <target>
+        <context value="bundle"/>
+        <contextType value="variable"/>
+        <element value="entry"/>
+        <variable value="entry"/>
+      </target>
+      <target>
+        <context value="entry"/>
+        <contextType value="variable"/>
+        <element value="resource"/>
+        <variable value="observation1"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="sdohccObservation"/>
+        </parameter>
+      </target>
+      <dependent>
+        <name value="TransformObservation"/>
+        <variable value="src">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="answerItem1">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="observation1">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="entry">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+      </dependent>
+      <dependent>
+        <name value="TransformObservation1"/>
+        <variable value="src">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="answerItem1">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="observation1">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="entry">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+      </dependent>
+    </rule>
+    <rule>
+      <name value="item"/>
+      <source>
+        <context value="src"/>
+        <element value="item"/>
+        <variable value="answerItem2"/>
+        <condition value="linkId = '/88123-5'"/>
+      </source>
+      <target>
+        <context value="bundle"/>
+        <contextType value="variable"/>
+        <element value="entry"/>
+        <variable value="entry"/>
+      </target>
+      <target>
+        <context value="entry"/>
+        <contextType value="variable"/>
+        <element value="resource"/>
+        <variable value="observation2"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="sdohccObservation"/>
+        </parameter>
+      </target>
+      <dependent>
+        <name value="TransformObservation"/>
+        <variable value="src">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="answerItem2">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="observation2">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="entry">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+      </dependent>
+      <dependent>
+        <name value="TransformObservation2"/>
+        <variable value="src">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="answerItem2">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="observation2">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="entry">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+      </dependent>
+    </rule>
+    <rule>
+      <name value="item"/>
+      <source>
+        <context value="src"/>
+        <element value="item"/>
+        <variable value="answerItem3"/>
+        <condition value="linkId = '/88124-3'"/>
+      </source>
+      <target>
+        <context value="bundle"/>
+        <contextType value="variable"/>
+        <element value="entry"/>
+        <variable value="entry"/>
+      </target>
+      <target>
+        <context value="entry"/>
+        <contextType value="variable"/>
+        <element value="resource"/>
+        <variable value="observation3"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="sdohccObservation"/>
+        </parameter>
+      </target>
+      <dependent>
+        <name value="TransformObservation"/>
+        <variable value="src">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="answerItem3">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="observation3">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="entry">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+      </dependent>
+      <dependent>
+        <name value="TransformObservation3"/>
+        <variable value="src">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="answerItem3">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="observation3">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="entry">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+      </dependent>
+    </rule>
+    <rule>
+      <name value="groupObsn"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="bundle"/>
+        <contextType value="variable"/>
+        <element value="entry"/>
+        <variable value="entry"/>
+      </target>
+      <target>
+        <context value="entry"/>
+        <contextType value="variable"/>
+        <element value="resource"/>
+        <variable value="groupObservation"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="sdohccObservation"/>
+        </parameter>
+      </target>
+      <dependent>
+        <name value="TransformGroupObservation"/>
+        <variable value="src">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="bundle">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="groupObservation">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="entry">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+      </dependent>
+    </rule>
+    <rule>
+      <name value="item"/>
+      <source>
+        <context value="src"/>
+        <element value="item"/>
+        <condition value="(linkId = '/88124-3') and (answer.value.code = 'LA19952-3')"/>
+      </source>
+      <target>
+        <context value="bundle"/>
+        <contextType value="variable"/>
+        <element value="entry"/>
+        <variable value="entry"/>
+      </target>
+      <target>
+        <context value="entry"/>
+        <contextType value="variable"/>
+        <element value="resource"/>
+        <variable value="condition"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="sdohccCondition"/>
+        </parameter>
+      </target>
+      <dependent>
+        <name value="TransformCondition"/>
+        <variable value="src">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="bundle">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="condition">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="entry">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+      </dependent>
+    </rule>
+  </group>
+  <group>
+    <name value="TransformObservation"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="questionnaireResponse"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="answerItem"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="observation"/>
+      <type value="sdohccObservation"/>
+      <mode value="target"/>
+    </input>
+    <input>
+      <name value="entry"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="obsnStatus"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="status"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="final"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="obsnMeta"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="meta"/>
+        <variable value="newMeta"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Meta"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="obsnMetaProfile"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="newMeta"/>
+          <contextType value="variable"/>
+          <element value="profile"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="obsnCatSocialHist"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="category"/>
+        <transform value="cc"/>
+        <parameter>
+          <valueString value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+        </parameter>
+        <parameter>
+          <valueString value="social-history"/>
+        </parameter>
+        <parameter>
+          <valueString value="Social History"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="obsnCatSurvey"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="category"/>
+        <transform value="cc"/>
+        <parameter>
+          <valueString value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+        </parameter>
+        <parameter>
+          <valueString value="survey"/>
+        </parameter>
+        <parameter>
+          <valueString value="Survey"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="obsnCatFoodInsecurity"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="category"/>
+        <variable value="newCC"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="CodeableConcept"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="obsnCatCoding"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="newCC"/>
+          <contextType value="variable"/>
+          <element value="coding"/>
+          <variable value="newCoding"/>
+          <transform value="create"/>
+          <parameter>
+            <valueString value="Coding"/>
+          </parameter>
+        </target>
+        <rule>
+          <name value="obsnCatCodingSystem"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding"/>
+            <contextType value="variable"/>
+            <element value="system"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="obsnCatCodingCode"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding"/>
+            <contextType value="variable"/>
+            <element value="code"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="food-insecurity"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="obsnCatCodingDisplay"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding"/>
+            <contextType value="variable"/>
+            <element value="display"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="Food Insecurity"/>
+            </parameter>
+          </target>
+        </rule>
+      </rule>
+    </rule>
+    <rule>
+      <name value="authored"/>
+      <source>
+        <context value="src"/>
+        <element value="authored"/>
+        <variable value="authored"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="issued"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="authored"/>
+        </parameter>
+      </target>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="effective"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="authored"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="answer"/>
+      <source>
+        <context value="answerItem"/>
+        <element value="answer"/>
+        <variable value="answer"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="value"/>
+        <variable value="newCC"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="CodeableConcept"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="value"/>
+        <source>
+          <context value="answer"/>
+          <element value="value"/>
+          <variable value="coding"/>
+        </source>
+        <target>
+          <context value="newCC"/>
+          <contextType value="variable"/>
+          <element value="coding"/>
+          <variable value="newCoding"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="coding"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="subject"/>
+      <source>
+        <context value="src"/>
+        <element value="subject"/>
+        <variable value="qSubject"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="subject"/>
+        <variable value="newReference"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Reference"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="reference"/>
+        <source>
+          <context value="qSubject"/>
+          <element value="reference"/>
+          <variable value="qReference"/>
+        </source>
+        <target>
+          <context value="newReference"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="qReference"/>
+          </parameter>
+        </target>
+      </rule>
+      <rule>
+        <name value="display"/>
+        <source>
+          <context value="qSubject"/>
+          <element value="display"/>
+          <variable value="qDisplay"/>
+        </source>
+        <target>
+          <context value="newReference"/>
+          <contextType value="variable"/>
+          <element value="display"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="qDisplay"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="obsnEntryRequest"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="entry"/>
+        <contextType value="variable"/>
+        <element value="request"/>
+        <variable value="request"/>
+      </target>
+      <rule>
+        <name value="obsnRequestMethod"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="request"/>
+          <contextType value="variable"/>
+          <element value="method"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="POST"/>
+          </parameter>
+        </target>
+      </rule>
+      <rule>
+        <name value="obsnRequestUrl"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="request"/>
+          <contextType value="variable"/>
+          <element value="url"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="Observation"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+  </group>
+  <group>
+    <name value="TransformObservation1"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="questionnaireResponse"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="item"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="observation"/>
+      <type value="sdohccObservation"/>
+      <mode value="target"/>
+    </input>
+    <input>
+      <name value="entry"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="obsn1Id"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="id"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="SDOHCC-ObservationResponseHungerVitalSignQuestion1Example"/>
+        </parameter>
+      </target>
+      <dependent>
+        <name value="SetObservationFullUrl"/>
+        <variable value="observation">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="entry">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+      </dependent>
+    </rule>
+    <rule>
+      <name value="obsn1Code"/>
+      <source>
+        <context value="item"/>
+        <variable value="i"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="code"/>
+        <variable value="code"/>
+        <transform value="cc"/>
+        <parameter>
+          <valueString value="http://loinc.org"/>
+        </parameter>
+        <parameter>
+          <valueString value="88122-7"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="subject"/>
+      <source>
+        <context value="src"/>
+        <element value="subject"/>
+        <variable value="qSubject"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="performer"/>
+        <variable value="newReference"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Reference"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="reference"/>
+        <source>
+          <context value="qSubject"/>
+          <element value="reference"/>
+          <variable value="qReference"/>
+        </source>
+        <target>
+          <context value="newReference"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="qReference"/>
+          </parameter>
+        </target>
+      </rule>
+      <rule>
+        <name value="display"/>
+        <source>
+          <context value="qSubject"/>
+          <element value="display"/>
+          <variable value="qDisplay"/>
+        </source>
+        <target>
+          <context value="newReference"/>
+          <contextType value="variable"/>
+          <element value="display"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="qDisplay"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="id"/>
+      <source>
+        <context value="src"/>
+        <element value="id"/>
+        <variable value="id"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="derivedFrom"/>
+        <variable value="newReference"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Reference"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="obsn1DerivedFrom"/>
+        <source>
+          <context value="id"/>
+        </source>
+        <target>
+          <context value="newReference"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="append"/>
+          <parameter>
+            <valueString value="QuestionnaireResponse/"/>
+          </parameter>
+          <parameter>
+            <valueId value="id"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+  </group>
+  <group>
+    <name value="TransformObservation2"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="questionnaireResponse"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="item"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="observation"/>
+      <type value="sdohccObservation"/>
+      <mode value="target"/>
+    </input>
+    <input>
+      <name value="entry"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="obns2Id"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="id"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="SDOHCC-ObservationResponseHungerVitalSignQuestion2Example"/>
+        </parameter>
+      </target>
+      <dependent>
+        <name value="SetObservationFullUrl"/>
+        <variable value="observation">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="entry">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+      </dependent>
+    </rule>
+    <rule>
+      <name value="obns2Code"/>
+      <source>
+        <context value="item"/>
+        <variable value="i"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="code"/>
+        <variable value="code"/>
+        <transform value="cc"/>
+        <parameter>
+          <valueString value="http://loinc.org"/>
+        </parameter>
+        <parameter>
+          <valueString value="88123-5"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="subject"/>
+      <source>
+        <context value="src"/>
+        <element value="subject"/>
+        <variable value="qSubject"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="performer"/>
+        <variable value="newReference"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Reference"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="reference"/>
+        <source>
+          <context value="qSubject"/>
+          <element value="reference"/>
+          <variable value="qReference"/>
+        </source>
+        <target>
+          <context value="newReference"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="qReference"/>
+          </parameter>
+        </target>
+      </rule>
+      <rule>
+        <name value="display"/>
+        <source>
+          <context value="qSubject"/>
+          <element value="display"/>
+          <variable value="qDisplay"/>
+        </source>
+        <target>
+          <context value="newReference"/>
+          <contextType value="variable"/>
+          <element value="display"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="qDisplay"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="id"/>
+      <source>
+        <context value="src"/>
+        <element value="id"/>
+        <variable value="id"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="derivedFrom"/>
+        <variable value="newReference"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Reference"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="obsn2DerivedFrom"/>
+        <source>
+          <context value="id"/>
+        </source>
+        <target>
+          <context value="newReference"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="append"/>
+          <parameter>
+            <valueString value="QuestionnaireResponse/"/>
+          </parameter>
+          <parameter>
+            <valueId value="id"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+  </group>
+  <group>
+    <name value="TransformObservation3"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="questionnaireResponse"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="item"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="bundle"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="observation"/>
+      <type value="sdohccObservation"/>
+      <mode value="target"/>
+    </input>
+    <input>
+      <name value="entry"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="obsn3Id"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="id"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="SDOHCC-ObservationResponseHungerVitalSignQuestion3Example"/>
+        </parameter>
+      </target>
+      <dependent>
+        <name value="SetObservationFullUrl"/>
+        <variable value="observation">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="entry">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+      </dependent>
+    </rule>
+    <rule>
+      <name value="obsn3Code"/>
+      <source>
+        <context value="item"/>
+        <variable value="i"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="code"/>
+        <variable value="code"/>
+        <transform value="cc"/>
+        <parameter>
+          <valueString value="http://loinc.org"/>
+        </parameter>
+        <parameter>
+          <valueString value="88124-3"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="obsn3DerivedFrom"/>
+      <source>
+        <context value="bundle"/>
+        <element value="entry"/>
+        <variable value="entries"/>
+      </source>
+      <target>
+        <context value="observation"/>
+        <contextType value="variable"/>
+        <element value="derivedFrom"/>
+        <variable value="df"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Reference"/>
+        </parameter>
+      </target>
+      <dependent>
+        <name value="TransformObservationDerived"/>
+        <variable value="entries">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="df">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+      </dependent>
+    </rule>
+  </group>
+  <group>
+    <name value="TransformObservationDerived"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="entries"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="df"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="resource"/>
+      <source>
+        <context value="entries"/>
+        <element value="resource"/>
+        <variable value="obs1"/>
+        <condition value="code.coding.code = '88122-7'"/>
+      </source>
+      <target>
+        <context value="df"/>
+        <contextType value="variable"/>
+        <element value="reference"/>
+        <transform value="reference"/>
+        <parameter>
+          <valueId value="obs1"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="resource"/>
+      <source>
+        <context value="entries"/>
+        <element value="resource"/>
+        <variable value="obs2"/>
+        <condition value="code.coding.code = '88123-5'"/>
+      </source>
+      <target>
+        <context value="df"/>
+        <contextType value="variable"/>
+        <element value="reference"/>
+        <transform value="reference"/>
+        <parameter>
+          <valueId value="obs2"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+  <group>
+    <name value="TransformGroupObservation"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="questionnaireResponse"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="bundle"/>
+      <type value="Bundle"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="groupObservation"/>
+      <type value="Observation"/>
+      <mode value="target"/>
+    </input>
+    <input>
+      <name value="entry"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="grpObsnMeta"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="groupObservation"/>
+        <contextType value="variable"/>
+        <element value="meta"/>
+        <variable value="newMeta"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Meta"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="grpObsnMetaProfile"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="newMeta"/>
+          <contextType value="variable"/>
+          <element value="profile"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="grpObsnFullUrl"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="groupObservation"/>
+        <contextType value="variable"/>
+        <element value="id"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="SDOHCC-ObservationResponseHungerVitalSignGroupingExample"/>
+        </parameter>
+      </target>
+      <dependent>
+        <name value="SetObservationFullUrl"/>
+        <variable value="groupObservation">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="entry">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+      </dependent>
+    </rule>
+    <rule>
+      <name value="grpObsnFullStatus"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="groupObservation"/>
+        <contextType value="variable"/>
+        <element value="status"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="final"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="grpObsnCatSocialHistory"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="groupObservation"/>
+        <contextType value="variable"/>
+        <element value="category"/>
+        <transform value="cc"/>
+        <parameter>
+          <valueString value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+        </parameter>
+        <parameter>
+          <valueString value="social-history"/>
+        </parameter>
+        <parameter>
+          <valueString value="Social History"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="grpObsnCatSurvey"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="groupObservation"/>
+        <contextType value="variable"/>
+        <element value="category"/>
+        <transform value="cc"/>
+        <parameter>
+          <valueString value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+        </parameter>
+        <parameter>
+          <valueString value="survey"/>
+        </parameter>
+        <parameter>
+          <valueString value="Survey"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="grpObsnCatFoodInsecurity"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="groupObservation"/>
+        <contextType value="variable"/>
+        <element value="category"/>
+        <variable value="newCC"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="CodeableConcept"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="grpObsnCatCoding"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="newCC"/>
+          <contextType value="variable"/>
+          <element value="coding"/>
+          <variable value="newCoding"/>
+          <transform value="create"/>
+          <parameter>
+            <valueString value="Coding"/>
+          </parameter>
+        </target>
+        <rule>
+          <name value="grpObsnCatCodingSystem"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding"/>
+            <contextType value="variable"/>
+            <element value="system"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="grpObsnCatCodingCode"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding"/>
+            <contextType value="variable"/>
+            <element value="code"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="food-insecurity"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="grpObsnCatCodingDisplay"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding"/>
+            <contextType value="variable"/>
+            <element value="display"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="Food Insecurity"/>
+            </parameter>
+          </target>
+        </rule>
+      </rule>
+    </rule>
+    <rule>
+      <name value="grpObsnAuthored"/>
+      <source>
+        <context value="src"/>
+        <element value="authored"/>
+        <variable value="authored"/>
+      </source>
+      <target>
+        <context value="groupObservation"/>
+        <contextType value="variable"/>
+        <element value="effective"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="authored"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="subject"/>
+      <source>
+        <context value="src"/>
+        <element value="subject"/>
+        <variable value="qSubject"/>
+      </source>
+      <target>
+        <context value="groupObservation"/>
+        <contextType value="variable"/>
+        <element value="subject"/>
+        <variable value="newReference"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Reference"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="reference"/>
+        <source>
+          <context value="qSubject"/>
+          <element value="reference"/>
+          <variable value="qReference"/>
+        </source>
+        <target>
+          <context value="newReference"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="qReference"/>
+          </parameter>
+        </target>
+      </rule>
+      <rule>
+        <name value="display"/>
+        <source>
+          <context value="qSubject"/>
+          <element value="display"/>
+          <variable value="qDisplay"/>
+        </source>
+        <target>
+          <context value="newReference"/>
+          <contextType value="variable"/>
+          <element value="display"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="qDisplay"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="grpObsnCode"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="groupObservation"/>
+        <contextType value="variable"/>
+        <element value="code"/>
+        <transform value="cc"/>
+        <parameter>
+          <valueString value="http://loinc.org"/>
+        </parameter>
+        <parameter>
+          <valueString value="88121-9"/>
+        </parameter>
+        <parameter>
+          <valueString value="Hunger Vital Sign [HVS]"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="entry"/>
+      <source>
+        <context value="bundle"/>
+        <element value="entry"/>
+        <variable value="entries"/>
+      </source>
+      <target>
+        <context value="groupObservation"/>
+        <contextType value="variable"/>
+        <element value="hasMember"/>
+        <variable value="df"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Reference"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="resource"/>
+        <source>
+          <context value="entries"/>
+          <element value="resource"/>
+          <variable value="obs1"/>
+          <condition value="code.coding.code = '88122-7'"/>
+        </source>
+        <target>
+          <context value="df"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="reference"/>
+          <parameter>
+            <valueId value="obs1"/>
+          </parameter>
+        </target>
+      </rule>
+      <rule>
+        <name value="resource"/>
+        <source>
+          <context value="entries"/>
+          <element value="resource"/>
+          <variable value="obs2"/>
+          <condition value="code.coding.code = '88123-5'"/>
+        </source>
+        <target>
+          <context value="df"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="reference"/>
+          <parameter>
+            <valueId value="obs2"/>
+          </parameter>
+        </target>
+      </rule>
+      <rule>
+        <name value="resource"/>
+        <source>
+          <context value="entries"/>
+          <element value="resource"/>
+          <variable value="obs3"/>
+          <condition value="code.coding.code = '88124-3'"/>
+        </source>
+        <target>
+          <context value="df"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="reference"/>
+          <parameter>
+            <valueId value="obs3"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="id"/>
+      <source>
+        <context value="src"/>
+        <element value="id"/>
+        <variable value="id"/>
+      </source>
+      <target>
+        <context value="groupObservation"/>
+        <contextType value="variable"/>
+        <element value="derivedFrom"/>
+        <variable value="newReference"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Reference"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="grpObsnDerivedFrom"/>
+        <source>
+          <context value="id"/>
+        </source>
+        <target>
+          <context value="newReference"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="append"/>
+          <parameter>
+            <valueString value="QuestionnaireResponse/"/>
+          </parameter>
+          <parameter>
+            <valueId value="id"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="grpObsnEntryRequest"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="entry"/>
+        <contextType value="variable"/>
+        <element value="request"/>
+        <variable value="request"/>
+      </target>
+      <rule>
+        <name value="grpObsnRequestMethod"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="request"/>
+          <contextType value="variable"/>
+          <element value="method"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="POST"/>
+          </parameter>
+        </target>
+      </rule>
+      <rule>
+        <name value="grpObsnRequestUrl"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="request"/>
+          <contextType value="variable"/>
+          <element value="url"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="Observation"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+  </group>
+  <group>
+    <name value="SetObservationFullUrl"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="observation"/>
+      <type value="Observation"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="entry"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="id"/>
+      <source>
+        <context value="observation"/>
+        <element value="id"/>
+        <variable value="id"/>
+      </source>
+      <target>
+        <context value="entry"/>
+        <contextType value="variable"/>
+        <element value="fullUrl"/>
+        <transform value="append"/>
+        <parameter>
+          <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/Observation/"/>
+        </parameter>
+        <parameter>
+          <valueId value="id"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+  <group>
+    <name value="TransformCondition"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="questionnaireResponse"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="bundle"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="condition"/>
+      <type value="sdohccCondition"/>
+      <mode value="target"/>
+    </input>
+    <input>
+      <name value="entry"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="conditionId"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="condition"/>
+        <contextType value="variable"/>
+        <element value="id"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="SDOHCC-ConditionFoodInsecurityExample"/>
+        </parameter>
+      </target>
+      <dependent>
+        <name value="SetConditionFullUrl"/>
+        <variable value="condition">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+        <variable value="entry">
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/original-item-type">
+            <valueUrl value="id"/>
+          </extension>
+        </variable>
+      </dependent>
+    </rule>
+    <rule>
+      <name value="conditionMeta"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="condition"/>
+        <contextType value="variable"/>
+        <element value="meta"/>
+        <variable value="newMeta"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Meta"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="conditionMetaProfile"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="newMeta"/>
+          <contextType value="variable"/>
+          <element value="profile"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="conditionClinicalStatus"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="condition"/>
+        <contextType value="variable"/>
+        <element value="clinicalStatus"/>
+        <transform value="cc"/>
+        <parameter>
+          <valueString value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+        </parameter>
+        <parameter>
+          <valueString value="active"/>
+        </parameter>
+        <parameter>
+          <valueString value="Active"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="conditionVeriStatus"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="condition"/>
+        <contextType value="variable"/>
+        <element value="verificationStatus"/>
+        <transform value="cc"/>
+        <parameter>
+          <valueString value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+        </parameter>
+        <parameter>
+          <valueString value="unconfirmed"/>
+        </parameter>
+        <parameter>
+          <valueString value="Unconfirmed"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="conditionCatHealthConcern"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="condition"/>
+        <contextType value="variable"/>
+        <element value="category"/>
+        <variable value="newCC"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="CodeableConcept"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="conditionCatCodingHealthConcern"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="newCC"/>
+          <contextType value="variable"/>
+          <element value="coding"/>
+          <variable value="newCoding"/>
+          <transform value="create"/>
+          <parameter>
+            <valueString value="Coding"/>
+          </parameter>
+        </target>
+        <rule>
+          <name value="conditionCatCodingSystemHealthConcern"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding"/>
+            <contextType value="variable"/>
+            <element value="system"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="http://hl7.org/fhir/us/core/CodeSystem/condition-category"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="conditionCatCodingCodeHealthConcern"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding"/>
+            <contextType value="variable"/>
+            <element value="code"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="health-concern"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="conditionCatCodingDisplayHealthConcern"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding"/>
+            <contextType value="variable"/>
+            <element value="display"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="Health Concern"/>
+            </parameter>
+          </target>
+        </rule>
+      </rule>
+    </rule>
+    <rule>
+      <name value="conditionCatFoodInsecurity"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="condition"/>
+        <contextType value="variable"/>
+        <element value="category"/>
+        <variable value="newCC"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="CodeableConcept"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="conditionCatCodingFoodInsecurity"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="newCC"/>
+          <contextType value="variable"/>
+          <element value="coding"/>
+          <variable value="newCoding"/>
+          <transform value="create"/>
+          <parameter>
+            <valueString value="Coding"/>
+          </parameter>
+        </target>
+        <rule>
+          <name value="conditionCatCodingSystemFoodInsecurity"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding"/>
+            <contextType value="variable"/>
+            <element value="system"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="conditionCatCodingCodeFoodInsecurity"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding"/>
+            <contextType value="variable"/>
+            <element value="code"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="food-insecurity"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="conditionCatCodingDisplayFoodInsecurity"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding"/>
+            <contextType value="variable"/>
+            <element value="display"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="Food Insecurity"/>
+            </parameter>
+          </target>
+        </rule>
+      </rule>
+    </rule>
+    <rule>
+      <name value="conditionCode"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="condition"/>
+        <contextType value="variable"/>
+        <element value="code"/>
+        <variable value="newCodeCC"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="CodeableConcept"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="conditionCodeCodingFoodInsecurity"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="newCodeCC"/>
+          <contextType value="variable"/>
+          <element value="coding"/>
+          <variable value="newCoding"/>
+          <transform value="create"/>
+          <parameter>
+            <valueString value="Coding"/>
+          </parameter>
+        </target>
+        <rule>
+          <name value="conditionCodeCodingSystemFoodInsecurity"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding"/>
+            <contextType value="variable"/>
+            <element value="system"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="http://snomed.info/sct"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="conditionCodeCodingCodeFoodInsecurity"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding"/>
+            <contextType value="variable"/>
+            <element value="code"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="733423003"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="conditionCodeCodingDisplayFoodInsecurity"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding"/>
+            <contextType value="variable"/>
+            <element value="display"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="Food insecurity"/>
+            </parameter>
+          </target>
+        </rule>
+      </rule>
+      <rule>
+        <name value="conditionCodeCodingLackOfFood"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="newCodeCC"/>
+          <contextType value="variable"/>
+          <element value="coding"/>
+          <variable value="newCoding2"/>
+          <transform value="create"/>
+          <parameter>
+            <valueString value="Coding"/>
+          </parameter>
+        </target>
+        <rule>
+          <name value="conditionCodeCodingSystemLackOfFood"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding2"/>
+            <contextType value="variable"/>
+            <element value="system"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="http://hl7.org/fhir/sid/icd-10-cm"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="conditionCodeCodingCodeLackOfFood"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding2"/>
+            <contextType value="variable"/>
+            <element value="code"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="Z59.4"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="conditionCodeCodingDisplayLackOfFood"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="newCoding2"/>
+            <contextType value="variable"/>
+            <element value="display"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="Lack of adequate food and safe drinking water"/>
+            </parameter>
+          </target>
+        </rule>
+      </rule>
+    </rule>
+    <rule>
+      <name value="authored"/>
+      <source>
+        <context value="src"/>
+        <element value="authored"/>
+        <variable value="authored"/>
+      </source>
+      <target>
+        <context value="condition"/>
+        <contextType value="variable"/>
+        <element value="onset"/>
+        <variable value="period"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Period"/>
+        </parameter>
+      </target>
+      <target>
+        <context value="period"/>
+        <contextType value="variable"/>
+        <element value="start"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="authored"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="entry"/>
+      <source>
+        <context value="bundle"/>
+        <element value="entry"/>
+        <variable value="entries"/>
+      </source>
+      <target>
+        <context value="condition"/>
+        <contextType value="variable"/>
+        <element value="evidence"/>
+        <variable value="evidence"/>
+      </target>
+      <target>
+        <context value="evidence"/>
+        <contextType value="variable"/>
+        <element value="detail"/>
+        <variable value="detailReference"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Reference"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="resource"/>
+        <source>
+          <context value="entries"/>
+          <element value="resource"/>
+          <variable value="obs3"/>
+          <condition value="code.coding.code = '88124-3'"/>
+        </source>
+        <target>
+          <context value="detailReference"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="reference"/>
+          <parameter>
+            <valueId value="obs3"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="subject"/>
+      <source>
+        <context value="src"/>
+        <element value="subject"/>
+        <variable value="qSubject"/>
+      </source>
+      <target>
+        <context value="condition"/>
+        <contextType value="variable"/>
+        <element value="subject"/>
+        <variable value="newReference"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Reference"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="reference"/>
+        <source>
+          <context value="qSubject"/>
+          <element value="reference"/>
+          <variable value="qReference"/>
+        </source>
+        <target>
+          <context value="newReference"/>
+          <contextType value="variable"/>
+          <element value="reference"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="qReference"/>
+          </parameter>
+        </target>
+      </rule>
+      <rule>
+        <name value="display"/>
+        <source>
+          <context value="qSubject"/>
+          <element value="display"/>
+          <variable value="qDisplay"/>
+        </source>
+        <target>
+          <context value="newReference"/>
+          <contextType value="variable"/>
+          <element value="display"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="qDisplay"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="conditionEntryRequest"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="entry"/>
+        <contextType value="variable"/>
+        <element value="request"/>
+        <variable value="request"/>
+      </target>
+      <rule>
+        <name value="conditionRequestMethod"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="request"/>
+          <contextType value="variable"/>
+          <element value="method"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="POST"/>
+          </parameter>
+        </target>
+      </rule>
+      <rule>
+        <name value="conditionRequestUrl"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="request"/>
+          <contextType value="variable"/>
+          <element value="url"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="Condition"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+  </group>
+  <group>
+    <name value="SetConditionFullUrl"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="condition"/>
+      <type value="sdohccCondition"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="entry"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="id"/>
+      <source>
+        <context value="condition"/>
+        <element value="id"/>
+        <variable value="id"/>
+      </source>
+      <target>
+        <context value="entry"/>
+        <contextType value="variable"/>
+        <element value="fullUrl"/>
+        <transform value="append"/>
+        <parameter>
+          <valueString value="http://hl7.org/fhir/us/sdoh-clinicalcare/Condition/"/>
+        </parameter>
+        <parameter>
+          <valueId value="id"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+</StructureMap>
