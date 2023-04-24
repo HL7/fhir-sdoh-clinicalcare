@@ -6,7 +6,7 @@ results of the 5 questions."
 Usage: #example
 * insert NHANESCommon
 * code = $loinc#76512-3	"Social isolation score [NHANES]"
-* valueQuantity = 7 'Number'
+* valueQuantity = 7 '{Number}'
 * derivedFrom[0].reference = "Observation/SDOHCC-ObservationResponseNHANESQuestion1Example"
 * derivedFrom[+].reference = "Observation/SDOHCC-ObservationResponseNHANESQuestion2Example"
 * derivedFrom[+].reference = "Observation/SDOHCC-ObservationResponseNHANESQuestion3Example"

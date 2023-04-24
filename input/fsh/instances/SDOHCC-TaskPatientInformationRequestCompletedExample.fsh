@@ -14,5 +14,5 @@ Usage: #example
 * requester.reference = "Organization/SDOHCC-OrganizationClinicExample"
 * owner.reference = "Patient/pat-53234"
 * owner.display = "COLIN ABBAS"
-* output.valueString = "Safeway, please"
+* output.valueMarkdown = "Safeway, please"
 * output.type = $SDOHCC-CodeSystemTemporaryCodes#general-information-response "General Information Response"

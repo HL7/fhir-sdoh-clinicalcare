@@ -36,6 +36,6 @@ The [Pilot testing workstream](https://confluence.hl7.org/display/GRAV/Gravity+
 For more information about Gravity see the Gravity project [website](https://thegravityproject.net/) or [confluence site](https://confluence.hl7.org/display/GRAV/Join+the+Gravity+Project).
 
 ----------------------------------------------------------------------
-[^1]: Source: Institute for Clinical Systems Improvement.  Going Beyond Clinical Walls.  Solving Complex Problems (Octoboer 2014).  The BridgeSpan Group.
+[^1]: Source: Institute for Clinical Systems Improvement.  Going Beyond Clinical Walls.  Solving Complex Problems (October 2014).  The BridgeSpan Group.
 
 {% include markdown-link-references.md %}
