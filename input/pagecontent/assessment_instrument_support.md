@@ -99,10 +99,11 @@ If assessment instrument results are represented only as Observation data, a gro
 
 Where information is represented using a QuestionnaireResponse, there is no requirement that all question-answer pairs be surfaced as Observations, but any Observations that are produced SHALL include a derivation link (derivedFrom) to the QuestionnaireResponse.
 Key questions for deciding which question-answer pairs should be represented Observations include but are not limited to:
-•	Is it a score or other key measure which may determine whether a problem is recorded in the patient’s record?
-•	Is it something for which a provider might want to see trends?
-•	Is it needed as part of the calculation of a measure?
-•	Is it something a provider would likely search for?
+
+* Is it a score or other key measure which may determine whether a problem is recorded in the patient’s record?
+* Is it something for which a provider might want to see trends?
+* Is it needed as part of the calculation of a measure?
+* Is it something a provider would likely search for?
 
 Even if systems have the QuestionnaireResponse, some may opt to represent all question-answer pairs as Observations while others may not find this useful and may feel it creates ‘noise’ in the EHR.
 
