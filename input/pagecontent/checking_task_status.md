@@ -32,14 +32,11 @@ There are two mechanisms for detecting the above changes - polling and subscript
 In this mode, the system needing information (the 'client') occasionally queries the system maintaining the relevant Tasks and/or ServiceRequests to see if there is anything 'new'.  Clients may need to perform queries against multiple clients if relevant Tasks and ServiceRequests will not be maintained on the same server. To poll, the client will perform a [search]({{site.data.fhir.path}}search.html) for Tasks that are filtered to those either owned or requested by the searching organization. The search would also filter to only include those Tasks that had been created or changed since the server last looked.
 E.g.
 
-```[base]/Task?owner=Organization/123&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
+```[base]/Task?owner=https://example.com/fhir/Organization/123&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
 or
-```[base]/Task?owner=Organization/456&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
+```[base]/Task?owner=https://example.com/fhir/Organization/456&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
 
 The time-stamp specified would be the search result returned from the last search.
-
-**OPEN ISSUE: Are the organizations in question going to have RESTful ids on the server that holds the tasks** or do we need to change this to:
-```[base]/Task?owner:identifier=http%3A%2F%2Fsomeorganization%2Fsome%2Fidentifier%2Fsystem|123&_lastupdated=2021-05-03T17:23:18.1732-04:00```
 
 If unassigned Tasks are possible - i.e. where the organization to perform the service isn't pre-identified and is open to whoever wishes to claim the Task and perform it - organizations interested in examining Tasks available to claim would poll as follows:
 
