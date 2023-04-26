@@ -3,9 +3,10 @@
 [SDOHCC Procedure] is generally intended to represent a procedure performed to address an identified social risk or need (i.e., [SDOHCC Condition], [SDOHCC Observation Screening Response], [SDOHCC Observation Assessment]). SDOHCC Procedure can be based on an [SDOHCC ServiceRequest] and pertain to an [SDOHCC Goal]. See the [Data Modeling Framework] for more detail on the relationships between SDOHCC Procedure and the other profiles in this IG.
 
 ### Usage
-Rather than creating a separate Procedure profile for each SDOH category (domain) covered in this IG (e.g., food insecurity, transportation insecurity, etc.), this profile can support any SDOH category. The optional Procedure.category slice binds to a required value set of SDOH category codes (first column below). The code selected for Procedure.category.coding determines a preferred, category-specific value set for Procedure.code as per the table below.
-The preferred value sets for Procedure.code are hosted in the [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) (VSAC). [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion) in VSAC is a grouper value set containing all members of the VSAC Value Sets for Procedure below.
-The Gravity Project plans to continue to work with the HL7 Vocabulary WG to determine how best to represent and validate the preferred, category-specific value sets for each of the relevant SDOH CC profiles.
+
+Rather than offer a separate Procedure profile for each SDOH category (also called domain – e.g., food insecurity, transportation insecurity), this profile can support any SDOH category. For Procedure.code, the minimum value set bindings are specified in the profile. Additionally, based on the code selected for the optional Procedure.category.coding slice, the Table below provides the Gravity-vetted, preferred value sets for Procedure.code. Where a preferred value set contains a code to describe a needed concept, servers SHOULD use that code.
+
+The preferred value sets in the Table are hosted in the [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/). The [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion) in VSAC is a grouper value set containing all members of the VSAC Value Sets below. The Gravity Project plans to continue to work with the HL7 Vocabulary WG to determine how best to represent and validate these preferred, category-specific value sets.
 
 
 | [`Procedure.category.coding`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | `Procedure.code` ValueSet | ValueSet OID |
