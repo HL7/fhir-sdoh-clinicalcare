@@ -15,4 +15,4 @@ Usage: #example
 * owner.reference = "Patient/pat-53234"
 * owner.display = "COLIN ABBAS"
 * output.valueString = "Safeway, please"
-* output.type = $temp#general-information-response "General Information Response"
+* output.type = $SDOHCC-CodeSystemTemporaryCodes#general-information-response "General Information Response"

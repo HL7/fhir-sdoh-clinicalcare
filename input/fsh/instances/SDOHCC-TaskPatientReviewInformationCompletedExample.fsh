@@ -14,4 +14,11 @@ Usage: #example
 * requester.reference = "Organization/SDOHCC-OrganizationClinicExample"
 * owner.reference = "Patient/pat-53234"
 * owner.display = "COLIN ABBAS"
-* focus = Reference("https://www.cdc.gov/diabetes/pdfs/managing/Managing-Diabetes_CMS-CDC_English-508.pdf")
+* focus = Reference(DocumentReferenceExample)
+
+Instance: DocumentReferenceExample
+InstanceOf: DocumentReference
+Title: "Document Reference for Diabetes Handout"
+Description: "Document Reference for a Diabetes Handout"
+* content.attachment.url = "https://www.cdc.gov/diabetes/pdfs/managing/Managing-Diabetes_CMS-CDC_English-508.pdf"
+* status = http://hl7.org/fhir/document-reference-status#current
