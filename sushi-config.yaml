@@ -158,6 +158,8 @@ groups:
     - SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample
     - SDOHCC-TaskPatientMakeAppointmentCompletedExample
     - SDOHCC-TaskPatientRiskQuestionnaireCompletedExample
+    - SDOHCC-TaskPatientReviewInformationCompletedExample
+    - SDOHCC-TaskPatientInformationRequestCompletedExample
     - SDOHCC-TaskReferralManagementOrderFulfillmentAcceptedExample
     - SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample
     - SDOHCC-TaskReferralManagementOrderSubtaskAcceptedExample
