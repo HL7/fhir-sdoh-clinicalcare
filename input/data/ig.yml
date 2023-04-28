@@ -1,6 +1,7 @@
 status: draft
 version: 2.0.0-update
 fhirVersion: 4.0.1
+uscore: https://hl7.org/fhir/us/core/STU3.1.1
 copyrightYear: 2021+
 releaseLabel: ci-build
 canonical: http://hl7.org/fhir/us/sdoh-clinicalcare
@@ -13,19 +14,15 @@ name: Sdohclinicalcare
 dependencies:
   hl7.fhir.us.core:
     version: 3.1.1
-    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
     id: sdohcore
   hl7.fhir.uv.sdc:
     version: 3.0.0
-    uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc#3.0.0
     id: hl7fhiruvsdc
   hl7.fhir.uv.subscriptions-backport:
     version: 0.1.0
-    uri: http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport
     id: sdohsub
   us.nlm.vsac:
     version: 0.9.0
-    uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
     id: vsac
   hl7.fhir.extensions.r5:
     version: 4.0.1
