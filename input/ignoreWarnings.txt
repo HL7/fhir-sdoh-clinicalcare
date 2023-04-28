@@ -25,7 +25,7 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalca
 INFORMATION: HealthcareService/SDOHCC-HealthcareServiceTelecomAppointmentExample: HealthcareService.telecom[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService|2.1.0-update
 INFORMATION: HealthcareService/SDOHCC-HealthcareServiceTelecomAppointmentExample: HealthcareService.telecom[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService|2.1.0-update
 
-# The following issues have been reviewed and these items are not intended to validate against one of the slices.
+# The following  issues have been reviewed and these items are not intended to validate against one of the slices.
 INFORMATION: Condition/SDOHCC-ConditionAsserterDeviceExample: Condition.category[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition|2.1.0-update
 INFORMATION: Condition/SDOHCC-ConditionFoodInsecurityExample: Condition.category[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition|2.1.0-update
 INFORMATION: Condition/SDOHCC-ConditionHomelessExample: Condition.category[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition|2.1.0-update
