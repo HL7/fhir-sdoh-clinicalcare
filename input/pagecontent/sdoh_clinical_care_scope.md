@@ -33,7 +33,7 @@ The scope of interactions is intended to cover all of the interactions shown in 
 ### Data Modeling Framework
 The diagram below shows the data model for the assessment process including the creation of health concerns, goal setting (patient-centered goals), and creation of referrals using service request and procedure/intervention. The graphic represents key relationships defined in this IG for the [Questionnaire] and  [QuestionnaireResponse] resources, as well as the [SDOHCC Observation Screening Response], [SDOHCC Observation Assessment], [SDOHCC Condition], [SDOHCC Goal], [SDOHCC Task For Referral Management],  [SDOHCC ServiceRequest] and [SDOHCC Procedure] profiles.   For graphical clarity, only key references between profiles are shown (e.g., references to Patient profile are not shown).   Clicking on the profiles in the drawing will link to the defining specification.
 
-<object data="FHIRModeling.svg" type="image/svg+xml"></object>
+<object data="FHIRModelingV2.svg" type="image/svg+xml"></object>
 <br/>
 **Figure 3: Data Modeling Framework**
 
