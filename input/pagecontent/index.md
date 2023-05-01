@@ -47,9 +47,9 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 | [National Healthcare Directory Exchange](http://hl7.org/fhir/us/directory-exchange)| A U.S. Office of the National Coordinator-sponsored IG supporting the exchange of directory information for a wide range of service providers and organizations |
 | [SmartApp Launch](http://hl7.org/fhir/smart-app-launch)  | Allows launching third party applications in the context of another system, including allowing the application to controlled access to patient information.  |
 | [Bidirectional Service eReferral (BSeR)](http://hl7.org/fhir/us/bser/)  | Whereas this IG orchestrates referrals using the FHIR query interface, BSeR bases referral management on the exchange of self-contained Bundles of FHIR resources.  The approaches for referral management offered by this IG and BSeR should be harmonized to provide a consistent template for management of referrals by all IGs. |
-| [DaVinci Prior Authorization Support](http://hl7.org/fhir/us/davinci-pas/) |  Payment for SDOH-related services may require integration of Prior Authorization |
-| [DaVinci Coverage Requirements Discovery](http://hl7.org/fhir/us/davinci-crd/) |  Payment for SDOH-related services may require integration of Prior Authorization |
-| [DaVinci Documentation Templates and Rules](http://hl7.org/fhir/us/davinci-dtr/) | Payment for SDOH-related services may require integration of Prior Authorization  |
+| [DaVinci Prior Authorization Support](http://hl7.org/fhir/us/davinci-pas/) (PAS)|  Payment for SDOH-related services may require integration of Prior Authorization (PAS)|
+| [DaVinci Coverage Requirements Discovery](http://hl7.org/fhir/us/davinci-crd/) (CRD) |  PAS requires integration of CRD |
+| [DaVinci Documentation Templates and Rules](http://hl7.org/fhir/us/davinci-dtr/) (DTR) | PAS require integration of DTR  |
 | [Structure Data Capture (IG)](http://hl7.org/fhir/uv/sdc/) |  This IG builds on the SDC IG for Questionnaires and QuestionnaireResponses |
 | [Data Exchange for Quality Measures Implementation Guide](https://hl7.org/fhir/us/davinci-deqm/) | SDOH-related services will inevitably be included in quality measurement programs |
 {:.grid}
