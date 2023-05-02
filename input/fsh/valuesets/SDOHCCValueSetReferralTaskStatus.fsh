@@ -5,4 +5,5 @@ Description: "Codes for the status of a referral task."
 * ^status = #draft
 * ^experimental = false
 * include codes from valueset TaskStatus
-* exclude TaskStatus#requested
+* exclude TaskStatus#ready
+* exclude TaskStatus#received

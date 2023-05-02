@@ -88,5 +88,5 @@ Description: "Profile for observations that represent question and answer pairs 
 * hasMember[SupportedHasMember] only Reference(SDOHCCObservationScreeningResponse or SDCQuestionnaireResponse )
 * hasMember[SupportedHasMember] ^short = "For an Observation Grouping, the Observations generated from an assessment instrument"
 * hasMember[SupportedHasMember] ^definition = "This is the set of child observations that are expected to be supported by SDOH implementations."
-* hasMember[SupportedHasMember] ^requirements = "Provides context to the child observations of "in what instrument/panel was this information collected", which is critical in situations where the child observations do not have derivedFrom relationships to a QuestionnaireResponse."
+* hasMember[SupportedHasMember] ^requirements = "Provides context to the child observations of \"in what instrument/panel was this information collected\", which is critical in situations where the child observations do not have derivedFrom relationships to a QuestionnaireResponse."
 * hasMember[SupportedHasMember] ^comment = "Other types of observations or resources can still be sent, but SDOH systems aren't required to pay attention to them."
