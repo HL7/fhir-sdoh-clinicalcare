@@ -7,7 +7,7 @@ The guidance on this page details important concepts for implementation. See [Re
 
 ### Checking Task Status
 
-The Gravity workflow around referrals involves all parties being aware of when relevant Tasks and associated ServiceRequests have been created and/or updated. In most cases, the Tasks will reside within the EHR system of the initiating practitioner.  In this case, the EHR will always be aware when the Task is updated, so the challenge of monitoring Tasks will fall solely on the service delivery organization.  However, the Gravity workflow also supports Tasks being posted to a CBO's FHIR server or an intermediary organization that is responsible for managing the referral fulfillment process.  In these circumstances, both EHR and service delivery organizations will need to monitor for changes to Tasks.
+The Gravity workflow around referrals involves all parties being aware of when relevant Tasks and associated ServiceRequests have been created and/or updated. In most cases, the Tasks will reside within the EHR system of the initiating provider.  In this case, the EHR will always be aware when the Task is updated, so the challenge of monitoring Tasks will fall solely on the service delivery organization.  However, the Gravity workflow also supports Tasks being posted to a Community Based Organization's (CBO's) FHIR server or an intermediary organization like a Coordination Platform (CP) that is responsible for managing the referral fulfillment process.  In these circumstances, both EHR and service delivery organizations will need to monitor for changes to Tasks.
 
 The specific types of events to be monitored for include:
 <br>
@@ -38,7 +38,7 @@ or
 
 The time-stamp specified would be the search result returned from the last search.
 
-If unassigned Tasks are possible - i.e. where the organization to perform the service isn't pre-identified and is open to whoever wishes to claim the Task and perform it - organizations interested in examining Tasks available to claim would poll as follows:
+If unassigned Tasks are possible - i.e. where the organization to perform the service isn't pre-identified and the Task is open to whoever wishes to claim and perform it - organizations interested in examining Tasks available to claim would poll as follows:
 
 ```[base]/Task?owner:missing=true&status=requested&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
 
@@ -70,7 +70,7 @@ If search is used, the client MAY use _include=Task:focus to retrieve the refere
 <code>[base]/Task?_id=1234m5678&_include=Task:focus</code>
 
 ##### Task topic
-This topic allows for monitoring for newly created tasks as well as updates to assigned or requested tasks.
+This topic allows for monitoring for newly created Tasks as well as updates to assigned or requested Tasks.
 
 <table class="grid">
   <thead>
