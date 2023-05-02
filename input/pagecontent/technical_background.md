@@ -17,4 +17,4 @@ Implementers should also be familiar with the following Implementation Guides us
 * [US Core]({{site.data.fhir.ver.uscore}}/index.html)
 * [Structured Data Capture]({{site.data.fhir.ver.sdc}}) 
 
-This IG supports the [R4 version](http://hl7.org/fhir/R4) of the FHIR standard. R4 is recently published and the goal is to ensure the that this IG is aligned with the current direction of the FHIR standard.
+This IG supports the [R4 version](http://hl7.org/fhir/R4) of the FHIR standard. R4 is recently published and the goal is to ensure that this IG is aligned with the current direction of the FHIR standard.
