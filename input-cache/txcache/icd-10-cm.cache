@@ -5097,3 +5097,63 @@ v: {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "code" : "Z59.4"
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--3", "version": "3.1.1", "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY", "versionFlexible":"true"}####
+v: {
+  "display" : "Lack of adequate food and safe drinking water",
+  "code" : "Z59.4",
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "code" : "Z59.4"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Lack of adequate food and safe drinking water",
+  "code" : "Z59.4",
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "code" : "Z59.0"
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--3", "version": "3.1.1", "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY", "versionFlexible":"true"}####
+v: {
+  "display" : "Homelessness",
+  "code" : "Z59.0",
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "code" : "Z59.0"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Homelessness",
+  "code" : "Z59.0",
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "code" : "Z56.0"
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--3", "version": "3.1.1", "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY", "versionFlexible":"true"}####
+v: {
+  "display" : "Unemployment, unspecified",
+  "code" : "Z56.0",
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "code" : "Z56.0"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Unemployment, unspecified",
+  "code" : "Z56.0",
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm"
+}
+-------------------------------------------------------------------------------------

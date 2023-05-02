@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/other-code-system",
+  "code" : "social-connection",
+  "display" : "Social Connection"
+}, "valueSet" :null, "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "The CodeSystem http://example.org/CodeSystem/other-code-system is unknown; The provided code http://example.org/CodeSystem/other-code-system#social-connection is not in the value set 'http://hl7.org/fhir/ValueSet/@all' (from Tx-Server)",
+  "class" : "UNKNOWN"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/other-code-system",
+  "code" : "transportation-insecurity-financial",
+  "display" : "Transportation Insecurity Financial"
+}, "valueSet" :null, "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "The CodeSystem http://example.org/CodeSystem/other-code-system is unknown; The provided code http://example.org/CodeSystem/other-code-system#transportation-insecurity-financial is not in the value set 'http://hl7.org/fhir/ValueSet/@all' (from Tx-Server)",
+  "class" : "UNKNOWN"
+}
+-------------------------------------------------------------------------------------

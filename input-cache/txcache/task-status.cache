@@ -98,3 +98,49 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/task-status",
+      "concept" : [{
+        "code" : "requested"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:505c8166-b8ab-4917-8988-6fdc8b918fc6",
+    "timestamp" : "2023-04-23T17:52:00.982Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/task-status|4.0.1"
+    }],
+    "contains" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "The task is ready to be acted upon and action is sought."
+      }],
+      "system" : "http://hl7.org/fhir/task-status",
+      "code" : "requested",
+      "display" : "Requested"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

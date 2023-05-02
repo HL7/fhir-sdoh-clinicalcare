@@ -53,3 +53,34 @@ e: {
   "error" : "Error from server: The filter \"abstract = false\" from the value set http://hl7.org/fhir/us/core/ValueSet/us-core-provider-specialty was not understood in the context of http://nucc.org/provider-taxonomy"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://nucc.org/provider-taxonomy",
+  "code" : "207Q00000X"
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role--0", "version": "3.1.1", "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY", "versionFlexible":"true"}####
+v: {
+  "display" : "Family Medicine",
+  "code" : "207Q00000X",
+  "system" : "http://nucc.org/provider-taxonomy"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://nucc.org/provider-taxonomy",
+  "code" : "207Q00000X",
+  "display" : "Family Medicine Physician"
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role", "version": "3.1.1", "langs":"[]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Family Medicine Physician",
+  "code" : "207Q00000X",
+  "system" : "http://nucc.org/provider-taxonomy"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://nucc.org/provider-taxonomy",
+  "code" : "207Q00000X"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Family Medicine Physician",
+  "code" : "207Q00000X",
+  "system" : "http://nucc.org/provider-taxonomy"
+}
+-------------------------------------------------------------------------------------

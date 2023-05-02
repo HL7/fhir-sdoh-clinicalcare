@@ -1,0 +1,131 @@
+/// name = "SDOHCC-Hunger-Vital-Sign-Map"
+/// status = draft
+
+map "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapHungerVitalSign" = "SDOHCCStructureMapHungerVitalSign"
+
+uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias questionnaireResponse as source
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias bundle as target
+uses "http://hl7.org/fhir/StructureDefinition/Observation" alias observation as target
+uses "http://hl7.org/fhir/StructureDefinition/Condition" alias sdohccCondition as target
+uses "http://hl7.org/fhir/StructureDefinition/Observation" alias sdohccObservation as target
+
+group sdohMapping(source src : questionnaireResponse, target bundle : Bundle) {
+  //temporarily set id to human-readable id as example
+  //src -> bundle.id = uuid();
+  src -> bundle.id = 'SDOHCC-BundleHungerVitalSignExample' "bundleId";
+  src -> bundle.type = 'transaction' "bundleType";
+
+  //for each 'key' answer item in the questionnareResponse, create an Observation
+  src.item as answerItem3 where linkId = '/88124-3' -> bundle.entry as entry, entry.resource = create('Observation') as observation3 then 
+    TransformObservation(src, answerItem3, observation3, entry); 
+
+  //create condition if answer to third question is "At Risk"
+  src.item where linkId = '/88124-3' and answer.value.code ='LA19952-3' -> bundle.entry as entry, entry.resource = create('Condition') as condition then
+    TransformCondition(src, bundle, condition, entry);
+}
+
+group TransformObservation(source src: questionnaireResponse, source answerItem, target observation: Observation, target entry)
+{
+  src -> entry.request as request then {
+    src -> request.method = 'POST' "obsnRequestMethod";
+    src -> request.url = 'Observation' "obsnRequestUrl";
+  } "obsnEntryRequest";
+
+  //temporarily set id to human-readable id as example
+  //src -> observation.id = uuid() then
+  //  SetObservationFullUrl(observation, entry);
+  src -> observation.id = 'SDOHCC-ObservationResponseHungerVitalSignQuestion3Example' then
+   	SetObservationFullUrl(observation, entry) "obsn3Id";
+
+  src -> observation.meta = create('Meta') as newMeta then {
+    src -> newMeta.profile = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse' "obsnMetaProfile";
+  } "obsnMeta";
+
+  src -> observation.status = 'final' "obsnStatus";
+
+  src -> observation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'social-history', 'Social History') "obsnCatSocialHist";
+  src -> observation.category = cc('http://terminology.hl7.org/CodeSystem/observation-category', 'survey', 'Survey') "obsnCatSurvey";
+  src -> observation.category = cc('http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes', 'food-insecurity', 'Food Insecurity') "obsnCatFoodInsecurity";  
+
+  answerItem as i -> observation.code = cc('http://loinc.org', '88124-3') as code "obsn3Code";
+
+  src.subject as qSubject -> observation.subject = create('Reference') as newReference then {
+    qSubject.reference as qReference -> newReference.reference = qReference;
+    qSubject.display as qDisplay -> newReference.display = qDisplay;
+  };
+
+  src.authored as authored -> observation.effective = authored, observation.issued = authored;
+
+  answerItem.answer as answer -> observation.value = create('CodeableConcept') as newCC then {
+    answer.value as coding -> newCC.coding = coding as newCoding;
+  };
+
+  src -> observation.derivedFrom = create('Reference') as newReference then {
+    src.id as id -> newReference.reference = append('QuestionnaireResponse/', id);
+  } "obsnDerivation";
+}
+
+group SetObservationFullUrl(source observation: Observation, target entry)
+{
+  observation.id as id -> entry.fullUrl = append('http://hl7.org/fhir/us/sdoh-clinicalcare/Observation/', id);
+}
+
+group TransformCondition(source src: QuestionnaireResponse, source bundle: Bundle, target condition: Condition, target entry)
+{
+  //temporarily set id to human-readable id as example
+  //src -> condition.id = uuid() then
+  src -> condition.id = 'SDOHCC-ConditionFoodInsecurityExample' then
+    SetConditionFullUrl(condition, entry) "conditionId";
+       
+  src -> condition.meta = create('Meta') as newMeta then {
+    src -> newMeta.profile = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition' "conditionMetaProfile";
+  } "conditionMeta";
+
+  src -> condition.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical', 'active', 'Active') "conditionClinicalStatus";
+  src -> condition.verificationStatus = cc('http://terminology.hl7.org/CodeSystem/condition-ver-status', 'unconfirmed', 'Unconfirmed') "conditionVeriStatus";
+  src -> condition.category = create('CodeableConcept') as newCC then {
+      src -> newCC.coding = create('Coding') as newCoding then {
+        src -> newCoding.system = 'http://hl7.org/fhir/us/core/CodeSystem/condition-category' "conditionCatCodingSystemHealthConcern";
+        src -> newCoding.code = 'health-concern' "conditionCatCodingCodeHealthConcern";
+        src -> newCoding.display = 'Health Concern' "conditionCatCodingDisplayHealthConcern";
+    } "conditionCatCodingHealthConcern";
+  } "conditionCatHealthConcern";
+
+  //Add sdoh category
+  src -> condition.category = cc('http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes', 'food-insecurity', 'Food Insecurity') "conditionCatFoodInsecurity";
+
+  src -> condition.code = create('CodeableConcept') as newCodeCC then {
+      src -> newCodeCC.coding = create('Coding') as newCoding then {
+        src -> newCoding.system = 'http://snomed.info/sct' "conditionCodeCodingSystemFoodInsecurity";
+        src -> newCoding.code = '733423003' "conditionCodeCodingCodeFoodInsecurity";
+        src -> newCoding.display = 'Food insecurity' "conditionCodeCodingDisplayFoodInsecurity";
+    } "conditionCodeCodingFoodInsecurity";
+    src -> newCodeCC.coding = create('Coding') as newCoding2 then {
+        src -> newCoding2.system = 'http://hl7.org/fhir/sid/icd-10-cm' "conditionCodeCodingSystemLackOfFood";
+        src -> newCoding2.code = 'Z59.4' "conditionCodeCodingCodeLackOfFood";
+        src -> newCoding2.display = 'Lack of adequate food and safe drinking water' "conditionCodeCodingDisplayLackOfFood";
+    } "conditionCodeCodingLackOfFood";
+  } "conditionCode";
+      
+  src.authored as authored -> condition.onset = create('Period') as period,
+    period.start = authored;
+
+  bundle.entry as entries -> condition.evidence as evidence, evidence.detail = create('Reference') as detailReference then {
+  	entries.resource as obs3 where code.coding.code = '88124-3'-> detailReference.reference = reference(obs3); 
+  };
+
+  src.subject as qSubject -> condition.subject = create('Reference') as newReference then {
+    qSubject.reference as qReference -> newReference.reference = qReference;
+    qSubject.display as qDisplay -> newReference.display = qDisplay;
+  };
+
+  src -> entry.request as request then {
+    src -> request.method = 'POST' "conditionRequestMethod";
+    src -> request.url = 'Condition' "conditionRequestUrl";
+  } "conditionEntryRequest";  
+}
+
+group SetConditionFullUrl(source condition: Condition, target entry)
+{
+  condition.id as id -> entry.fullUrl = append('http://hl7.org/fhir/us/sdoh-clinicalcare/Condition/', id);
+}
