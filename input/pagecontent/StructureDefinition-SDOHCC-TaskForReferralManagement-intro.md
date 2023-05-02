@@ -24,11 +24,11 @@ The allowed state transitions are defined graphically in the state diagram below
 | `requested` | Requested | The task is ready to be acted upon and action is sought | Requester |
 | `accepted` | Accepted | The potential performer has agreed to execute the task but has not yet started work | Responder |
 | `rejected` | Rejected | The potential performer has decided not to execute it prior to performing any action. | Responder |
-| `ready` | Ready | The task is ready to be performed, but no action has been taken. Used in place of requested/received/accepted/rejected when request assignment and acceptance is given| Responder |
-| `in-progress` | In Progress | The task has been started but is not yet complete | Responder |
-| `completed` | Completed | The task has been completed. |  Responder|
 | `canceled`  |Canceled  | The task was not completed | Requester or Responder |
+| `in-progress` | In Progress | The task has been started but is not yet complete | Responder |
 | `on-hold`  |On Hold | The task has been started but work has been paused. | Responder  |
+| `failed` | Failed | The task was attempted but could not be completed due to some error. |  Responder|
+| `completed` | Completed | The task has been completed. |  Responder|
 | `entered-in-error` | Entered in Error | The task should never have existed and is retained only because of the possibility it may have been used | Requester |
 {:.grid}
 

@@ -1,4 +1,4 @@
-This section describes the interactions between the actors in an SDOH referral starting both at a high-level and at the level of FHIR API calls.   First a high-level overview of the interactions is provided.  This description abstracts technical details and should be accessible to the non-technical reader.
+This section describes the interactions between the actors in an SDOH referral starting both at a high-level and at the level of FHIR API calls.   First, a high-level overview of the interactions is provided.  This description abstracts technical details and should be accessible to the non-technical reader.
 For the sake of simplicity, only relationships critical to the Referral Workflow are provided. (For additional details on task status updates see [Checking Task Status], and  on relationships between profiles see [Data Modeling Framework].)
 
 The use cases here relate to the Gravity [Patient Stories].  Implementers will benefit from looking at the detailed technical description of the exchange work flow for each use case, as well as the [Capability Statements] associated with each workflow and the [conformance artifacts](artifacts.html) generally.
@@ -17,7 +17,7 @@ The figure below shows this high-level workflow, the actors involved in each ste
 <br/>
 
 ### Actors, Systems and Icons
-The actors in the workflows are described in the table below.   The graphical icons are used throughout the IG.   For each use case the assumptions regarding each type of actor will be described.
+The actors in the workflows are described in the table below.   The graphical icons are used throughout the IG.   For each use case, the assumptions regarding each type of actor are described.
 
 | Actor    |  Description |
 | ----------  | ------------------ |
@@ -32,7 +32,7 @@ The actors in the workflows are described in the table below.   The graphical ic
 {:.grid}
 
 ### Referral Use Cases
-The functional use cases in the table below describe the referral process initiated by a provider, or other healthcare actor, to a referral recipient, both directly and indirectly via an intermediary.   For each use case the capabilities or limitations of the actor are described.   The table links to the functional use case and the associated detailed technical exchange workflow.
+The functional use cases in the table below describe the referral process initiated by a provider, or other healthcare actor, to a referral recipient, both directly and indirectly via an intermediary.   For each use case, the capabilities or limitations of the actor are described.   The table links to the functional use case and the associated detailed technical exchange workflow.
 
 | Functional Use Case |  Description           | Actors |
 | ------------------------- | ------------------------------------ | ---------------- |
@@ -51,10 +51,10 @@ The intermediary can make this happen by cloning the data from the source, or by
 The referral use cases described below all involve a provider interacting with a patient to assess needs, establish goals, agree to a referral and acquire patient consent, initiate and track the progress of the referral, and update goals.   The "direct" and "indirect" use cases are distinguished by the absence or presence of an intermediary, and the FHIR capabilities of the recipient of the referral.
 
 This figure shows the high-level context of the referral use cases that are described in the sections that follow.
-The two right-most columns show data that could be exchanged at that step, and data though is aligned with that step.  This only specifies the
+The two right-most columns show data that could be exchanged at that step, and data that is aligned with that step.  This only specifies the
 data that is exchanged, so systems are free to use any internal representation.
 
-The [Patient Coordination](referral_workflow.html#patient-coordination-workflow) includes some, but not all the interactions with the patient.  It provides a way for a referral sources, CPs, and CBOs to ask a patient to do something and track whether or not they have done it and why, and possibly the outcomes. In figure 1 below, patient coordination is indicated by a red box on steps 9 and 12.
+The [Patient Coordination](referral_workflow.html#patient-coordination-workflow) includes some, but not all the interactions with the patient.  It provides a way for  referral sources, CPs, and CBOs to ask a patient to do something and track whether or not they have done it and why, and possibly the outcomes. In figure 1 below, patient coordination is indicated by a red box on steps 9 and 12.
 
 {% include img.html img="HighLevelReferralContext.svg" caption="Figure 1: Referral Use Cases Context" %}
 
@@ -188,7 +188,7 @@ The [Patient Coordination](referral_workflow.html#patient-coordination-workflow)
 #### Direct Referral
 <a name="directreferral"></a>
 
-In this use case the patient is referred to a CBO for help addressing prioritized needs. The CBO accepts the referral, provides the requested support to the patient, and shares the updated information with the referring provider.
+In this use case, the patient is referred to a CBO for help addressing prioritized needs. The CBO accepts the referral, provides the requested support to the patient, and shares the updated information with the referring provider.
 
 The provider and the CBO have FHIR servers.  The patient may have a FHIR-enabled patient application.
 
@@ -254,7 +254,7 @@ In this use case, a provider works with a patient using a standardized assessmen
 Functionally, this indirect referral is essentially two direct referrals (provider to CP, and CP to CBO) chained together.  The provider, CP, and CBO all have FHIR servers.  The patient has a FHIR-enabled application.
 
 The provider has a relationship with the CP, but not with the CBO.  The use case assumes that the CP and the CPO have an established relationship.
-The provider may request to have the service delivered by a specific CBO.   The CP may not accept the referral or be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
+The provider may request to have the service delivered by a specific CBO.   The CP may not accept the referral, be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
 
 ##### Indirect Referral With Direct CBO - Detailed View
 The referral occurs in two separate interactions. The first is between the Referral Source and the intermediary and the second is between the intermediary and the Referral Performer.
@@ -290,21 +290,21 @@ The provider may request to have the service delivered by a specific CBO.   The 
 4. The provider/Requester SHOULD set the Task.status to "requested" until it receives a valid HTTPS response indicating that the Task was received at which point it SHOULD set the Task.status to "received".
 
 ### Patient Coordination Workflow
+This implementation guide supports additional interactions with a patient/client application (on a smartphone or portal) including:
 
-
-| Functional Use Case       |  Description                         | Actors           |
-| ------------------------- | ------------------------------------ | ---------------- |
-| [Complete Questionnaire](referral_workflow.html#complete-questionnaire)|  Referring party (provider, CBO, CP) asks a patient to complete a questionnaire.  This functionality can be used to assess social risks, inform service qualification or application, indicate reasons for cancellation, or determine the patient's view their interaction with the CBO/performer and the ability of the service provided to meet their needs. | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
-| [General Information Request](referral_workflow.html#general-information-request)| Referring party (provider, CBO, CP) sends a patient a free text question and receives a free text response.  | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
-| [Make Contact Directions](referral_workflow.html#make-contact-directions)|  Referring party (provider, CBO, CP) provides contact information for the service performer (where the patient/client does not want the service performer to initiate contact). | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
-| [Review Material](referral_workflow.html#review-material)|  Referring party (provider, CBO, CP) requests that the patient review a document, usually as a PDF. | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
+| Functional Use Case       |  Task.code            |  Description                         | Actors           |
+| ------------------------- | --------------------- | ------------------------------------ | ---------------- |
+| [Complete Questionnaire Request](referral_workflow.html#complete-questionnaire)|  `complete-questionnaire` | Referring party (provider, CBO, CP) asks a patient to complete a questionnaire.  This functionality can be used to assess social risks, inform service qualification or application, indicate reasons for cancellation, or determine the patient's view of their interaction with the CBO/performer and the ability of the service provided to meet their needs. | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
+| [General Information Request](referral_workflow.html#general-information-request)|  `general-information-request` | Referring party (provider, CBO, CP) sends a patient a free text question and receives a free text response.  | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
+| [Make Contact Request](referral_workflow.html#make-contact-directions)|   `make-contact-directions` | Referring party (provider, CBO, CP) provides contact information for the service performer (where the patient/client does not want the service performer to initiate contact). | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
+| [Review Material Request](referral_workflow.html#review-material)|   `review-material` |Referring party (provider, CBO, CP) requests that the patient review a document, usually as a PDF. | ![providericon], ![patienticon], ![ccicon], ![cboicon]  |
 {:.grid}
 
 In the examples below, it is assumed that the patient has been equipped with the patient application, and authenticated communication between the patient application and the requester has already been established.
-See [Connecting Applications with API Data Sources](connecting_applications_with_api_data_sources.html#patientclient-applications) for more details.  The referenced data instances are all in their completed state. In practice, they would move through the state transitions indicated, with the requester initializing their inputs fields, and the patient completing the output fields, and updating the status.
+See [Connecting Applications with API Data Sources](connecting_applications_with_api_data_sources.html#patientclient-applications) for more details.  The referenced data instances are all in their completed state. In practice, they would move through the state transitions indicated, with the requester initializing their input fields, and the patient completing the output fields, and updating the status.
 
-#### Complete Questionnaire
-Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CPP) for the completion of a questionnaire.
+#### Complete Questionnaire Request
+Here we provide a detailed view of an example interaction between a patient application and a requester (provider, CBO or CP) for the completion of a questionnaire. The example shows one of the four ways the questionnaire can be transmitted and the response received from the patient.
 
 <object data="PatientQuestionnaire.svg" type="image/svg+xml"></object>
 <br>
@@ -312,14 +312,14 @@ Here we provide a detailed view of an interaction between a patient application 
 | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |
 | 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientRiskQuestionnaireCompletedExample.html) |
-| 2 |  Patient  | Get Questionnaire, Questionnaire PDF, or Questionnaire URL | [Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html) |
+| 2 |  Patient  | Get Questionnaire, Questionnaire PDF, or Questionnaire URL | [Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)|
 | 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientRiskQuestionnaireCompletedExample.html) with status changed |
-| 4 |  Patient | Post Questionnaire Response | [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) |
+| 4 |  Patient | Post Questionnaire Response or Document Reference with Filled Out PDF | [QuestionnaireResponse] (QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) |
 | 5 |  Patient | Update Task (completed and .Output references QuestionnaireResponse) | [Patient Task](Task-SDOHCC-TaskPatientRiskQuestionnaireCompletedExample.html) with status changed |
 {:.grid}
 
 #### General Information Request
-Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CPP) for a general information request.
+Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CP) for a general information request.
 
 <object data="PatientInformation.svg" type="image/svg+xml"></object>
 <br>
@@ -331,8 +331,8 @@ Here we provide a detailed view of an interaction between a patient application 
 | 3 |  Patient | Update Task (completed and .Output.value includes text of response) | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) with status changed |
 {:.grid}
 
-#### Make Contact Directions
-Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CPP) for providing contact directions.
+#### Make Contact Request
+Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CP) for providing contact directions.
 
 <object data="PatientContact.svg" type="image/svg+xml"></object>
 <br>
@@ -345,8 +345,8 @@ Here we provide a detailed view of an interaction between a patient application 
 | 4 |  Patient | Update Task (completed and .Output includes chosen contact) | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) with status changed |
 {:.grid}
 
-#### Review Material
-Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CPP) for providing review materials.
+#### Review Material Request
+Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CP) for providing review materials.
 
 <object data="PatientReview.svg" type="image/svg+xml"></object>
 <br>
