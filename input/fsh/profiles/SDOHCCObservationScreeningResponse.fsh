@@ -69,18 +69,24 @@ Description: "Profile for observations that represent question and answer pairs 
 * dataAbsentReason ^comment = "\"Null\" or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values. For a given LOINC question, if the LOINC answer list includes concepts such as 'unknown' or 'not available', they should be used for Observation.value. Where these concepts are not part of the value set for Observation.value, the Observation.dataAbsentReason can be used if necessary and appropriate."
 * bodySite ..0
 * specimen ..0
-* hasMember ^definition = "Used when an observation is a group observation (e.g., the LOINC 88121-9 Hunger Vital Sign [HVS] panel) that includes the target as a member of the group."
+* hasMember ^definition = "References the child observations of a grouping observation."
 * derivedFrom only Reference(DocumentReference or QuestionnaireResponse or Observation)
+* derivedFrom ^definition = "The target resource represents a QuestionnaireResponse or other Observation from which the value of this Observation was inferred or calculated."
 * derivedFrom MS
 * insert SliceReferenceOnProfile(derivedFrom)
 * derivedFrom contains SupportedDerivedFrom 0..* MS
+* derivedFrom ^definition = "The target resource represents a QuestionnaireResponse or other Observation from which the value of this Observation was inferred or calculated."
+* derivedFrom ^comment = "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value."
 * derivedFrom[SupportedDerivedFrom] only Reference(SDOHCCObservationScreeningResponse or SDCQuestionnaireResponse)
 * derivedFrom[SupportedDerivedFrom] ^short = "Related questionnaire responses or observations that the observation is made from"
-* derivedFrom[SupportedDerivedFrom] ^definition = "Questionnaire responses or observations from which this observation value is derived."
-* derivedFrom[SupportedDerivedFrom] ^requirements = "When an screening response observation is based on a survey question that is answered directly by the patient, Observation.derivedFrom should reference instances that comply with the SDC QuestionnaireResponse. When an observation is based on a survey question answer that is derived from one or more other survey question answers (as opposed to answered directly), Observation.derivedFrom should reference instances that comply with SDOHCC Screening Response Observation (e.g., observations generated from questions that were answered directly). However, references to other instance types are also possible."
+* derivedFrom[SupportedDerivedFrom] ^definition =  "The types of 'derivedFrom' resources that must be supported by implementations conforming to this IG."
+* derivedFrom[SupportedDerivedFrom] ^requirements = "When SDC QuestionnaireResponse is not used to capture responses to an assessment instrument, Observation.hasMember should reference Observation instances generated from the assessment instrument that comply with SDOHCC Observation Screening Response."
+* derivedFrom[SupportedDerivedFrom] ^comment = "Additional derivation targets (as supported by the underlying Observation resource) are allowed, but there is no expectation that implementers of this IG will pay attention to them."
 * insert SliceReferenceOnProfile(hasMember)
 * hasMember contains SupportedHasMember 0..* MS
+* hasMember ^short = "References the child observations of a grouping observation"
 * hasMember[SupportedHasMember] only Reference(SDOHCCObservationScreeningResponse or SDCQuestionnaireResponse )
 * hasMember[SupportedHasMember] ^short = "For an Observation Grouping, the Observations generated from an assessment instrument"
-* hasMember[SupportedHasMember] ^definition = "For an Observation Grouping, the Observations generated from an assessment instrument"
-* hasMember[SupportedHasMember] ^requirements = "When an screening response observation is based on a survey question that is answered directly by the patient, Observation.hasMember should reference instances that comply with the SDC QuestionnaireResponse. When an observation is based on a survey question answer that is derived from one or more other survey question answers (as opposed to answered directly), Observation.derivedFrom should reference the instance that complies with SDOHCC Screening Response Observation (e.g., the grouper for all of the observations generated from questions that were answered directly)."
+* hasMember[SupportedHasMember] ^definition = "This Observation is an Observation grouping (e.g., an SDOH assessment instrument) that includes the target as a member of the group."
+* hasMember[SupportedHasMember] ^requirements = "Allows traceability (and context) for Observations derived from a QuestionnaireResponse and also establishes links for observations that were calculated or inferred based on other Observations (e.g. for calculated scores)."
+* hasMember[SupportedHasMember] ^comment = "Other types of observations or resources can still be sent, but SDOH systems aren't required to pay attention to them."
