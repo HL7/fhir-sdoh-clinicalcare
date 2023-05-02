@@ -314,7 +314,7 @@ Here we provide a detailed view of an example interaction between a patient appl
 | 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientRiskQuestionnaireCompletedExample.html) |
 | 2 |  Patient  | Get Questionnaire, Questionnaire PDF, or Questionnaire URL | [Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)|
 | 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientRiskQuestionnaireCompletedExample.html) with status changed |
-| 4 |  Patient | Post Questionnaire Response or Document Reference with Filled Out PDF | [QuestionnaireResponse] (QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) |
+| 4 |  Patient | Post Questionnaire Response or Document Reference with Filled Out PDF | [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) |
 | 5 |  Patient | Update Task (completed and .Output references QuestionnaireResponse) | [Patient Task](Task-SDOHCC-TaskPatientRiskQuestionnaireCompletedExample.html) with status changed |
 {:.grid}
 
