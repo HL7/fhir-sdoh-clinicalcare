@@ -10,7 +10,9 @@ In the future, to promote interoperability by ensuring consistency in Observatio
 
 ### Usage
 
-Rather than offer separate SDOHCC Observation Screening Response profiles for each SDOH category (also called domain – e.g., food insecurity, transportation insecurity), the OSR profile can support any SDOH category. For Observation.code and Observation.value, the minimum value set bindings are specified in the profile. Additionally, the Table in the [Notes](#notes) section below provides the Gravity-vetted, preferred value sets for this profile. Where a preferred value set contains a code to describe a needed concept, servers SHOULD use that code.
+Rather than offer a separate SDOHCC Observation Screening Response profile for each SDOH category (also called domain – e.g., food insecurity, transportation insecurity), this profile can support any SDOH category. For Observation.code and Observation.value, the minimum value set bindings are specified in the profile. Additionally, based on the code selected for the optional Observation.category slice, the Table in the [Notes](#notes) section below provides the Gravity-vetted, preferred value sets for Observation.code and Observation.value. Where a preferred value set contains a code to describe a needed concept, servers SHOULD use that code.
+
+The preferred value sets in the Table are hosted in the [NIH Value Set Authority Center (VSAC)][VSAC]. The Gravity Project plans to continue to work with the HL7 Vocabulary WG to determine how best to represent and validate these preferred, category-specific value sets.
 
 
 

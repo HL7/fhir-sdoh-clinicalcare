@@ -4,11 +4,9 @@ SDOHCC Condition is generally intended to represent a health concern or problem 
 
 ### Usage
 
-Rather than creating a separate Condition profile for each SDOH category (domain) covered in this IG (e.g., food insecurity, transportation insecurity, etc), this profile can support any SDOH category. The optional Condition.category slice binds to a required value set of SDOH category codes (first column below). The code selected for Condition.category determines a preferred, category-specific value set for Condition.code as per the table below.
+Rather than offer a separate Condition profile for each SDOH category (also called domain – e.g., food insecurity, transportation insecurity), this profile can support any SDOH category. For Condition.code, the minimum value set bindings are specified in the profile. Additionally, based on the code selected for the optional Condition.category slice, the Table below provides the Gravity-vetted, preferred value sets for Condition.code. Where a preferred value set contains a code to describe a needed concept, servers SHOULD use that code.
 
-The preferred value sets for Condition.code are hosted in the [NIH Value Set Authority Center (VSAC)]. The [Social Determinants of Health Conditions Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion) in VSAC is a grouper value set containing all members of the VSAC Value Sets for Condition below.
-
-The Gravity Project plans to continue to work with the HL7 Vocabulary WG to determine how best to represent and validate the preferred, category-specific value sets for each of the relevant SDOH CC profiles.
+The preferred value sets in the Table are hosted in the [NIH Value Set Authority Center (VSAC)][VSAC]. [Social Determinants of Health Conditions Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion) in VSAC is a grouper value set containing all members of the VSAC Value Sets below. The Gravity Project plans to continue to work with the HL7 Vocabulary WG to determine how best to represent and validate these preferred, category-specific value sets.
 
 
 | [`Condition.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | `Condition.code` ValueSet | ValueSet OID |

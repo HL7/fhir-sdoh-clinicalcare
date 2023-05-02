@@ -15,7 +15,7 @@ This Implementation Guide (IG) has defined draft specifications for the exchange
 
 For example, the draft R/E specifications are defined to meet the reporting requirements of a number of states. As an example, specific organizations require that the source and collection method of R/E data must be reported. Depending on the source and collection method, it is possible for an individual to have more than one observation about a specific personal characteristic (e.g., more than one race and/or more than one ethnicity expressed for an individual).
 
-The current [race extension](http://hl7.org/fhir/us/core/StructureDefinition-us-core-race.html) and [ethnicity extension](http://hl7.org/fhir/us/core/StructureDefinition-us-core-ethnicity.html) for the [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient) profile do not allow multiple occurrences of either extension or the capture of source and collection method.
+The current [race extension]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-race.html) and [ethnicity extension]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-ethnicity.html) for the [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) profile do not allow multiple occurrences of either extension or the capture of source and collection method.
 
 Since personal characteristics (e.g., R/E) are more consistent with an observation than demographic data, we have modeled the specifications as profiles on the base Observation resource.
 
