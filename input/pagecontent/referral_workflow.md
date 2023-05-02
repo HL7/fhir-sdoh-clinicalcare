@@ -319,7 +319,7 @@ Here we provide a detailed view of an example interaction between a patient appl
 {:.grid}
 
 #### General Information Request
-Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CP) for a general information request.
+Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CP) for a general information request.  The example shows the patient returning an optional response.
 
 <object data="PatientInformation.svg" type="image/svg+xml"></object>
 <br>
@@ -332,7 +332,7 @@ Here we provide a detailed view of an interaction between a patient application 
 {:.grid}
 
 #### Make Contact Request
-Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CP) for providing contact directions.
+Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CP) for providing one or more options from which to select to make contact with a service, provider or organization. The example shows the patient returning an optional response.
 
 <object data="PatientContact.svg" type="image/svg+xml"></object>
 <br>
@@ -346,7 +346,7 @@ Here we provide a detailed view of an interaction between a patient application 
 {:.grid}
 
 #### Review Material Request
-Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CP) for providing review materials.
+Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO or CP) for providing review material. 
 
 <object data="PatientReview.svg" type="image/svg+xml"></object>
 <br>
