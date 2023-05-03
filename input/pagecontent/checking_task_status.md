@@ -1,6 +1,6 @@
 ### Use of Task Status
 
-Task.status is the communication mechanism that indicates the status (e.g. requested, accepted, in progress or completed) of action(s) taken to fulfill a ServiceRequest.
+Task.status is the communication mechanism that indicates the status (e.g. requested, accepted, in progress or completed).
 This enables  the exchange of information related to the request for and progress related to addressing a ServiceRequest. The value sets for the [Referral Task] status and the [Patient Task] status are different due to the purpose of the exchange between the requesting entity and the intermediary or performing entity (Referral Task) vs the exchange with the patient (Patient Task).  See those profile pages for details.
 
 The guidance on this page details important concepts for implementation. See [Referral Workflow](referral_workflow.html)  to learn how the concepts fit into the overarching guidance.
@@ -14,14 +14,12 @@ The specific types of events to be monitored for include:
 **Service Delivery Organizations (CBO or CP)**
 <br>
 * A new Task has been assigned to the organization
-* A new Task that is unassigned, but which is seeking action within the organization's purview, has been created
 * A ServiceRequest associated with a Task assigned to the organization has been modified
 * A ServiceRequest associated with a Task assigned to the organization has been canceled
 
 **EHR systems (Provider)**
 <br>
 * An assigned Task has been accepted or rejected
-* An unassigned Task has now been assigned
 * Outputs have been added to a Task
 * A Task has been marked as complete
 <br>
@@ -38,7 +36,7 @@ or
 
 The time-stamp specified would be the search result returned from the last search.
 
-If unassigned Tasks are possible - i.e. where the organization to perform the service isn't pre-identified and the Task is open to whoever wishes to claim and perform it - organizations interested in examining Tasks available to claim would poll as follows:
+If unassigned Tasks are possible - i.e., where the organization to perform the service isn't pre-identified and the Task is open to whoever wishes to claim and perform it - organizations interested in examining Tasks available to claim would poll as follows:
 
 ```[base]/Task?owner:missing=true&status=requested&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
 
