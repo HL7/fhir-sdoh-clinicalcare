@@ -22,7 +22,7 @@ The specific types of events to be monitored for include:
 * An assigned Task has been accepted or rejected
 * Outputs have been added to a Task
 * A Task has been marked as complete
-<br>
+
 There are two mechanisms for detecting the above changes - polling and subscriptions.
 
 #### Polling
