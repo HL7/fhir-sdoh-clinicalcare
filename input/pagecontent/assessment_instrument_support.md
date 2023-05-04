@@ -1,7 +1,7 @@
 This section describes standardized social risk assessment instruments, their benefits, and how to standardize their capture, coding and output leveraging work from the  [Regenstrief Institute](https://www.regenstrief.org/) and the [National Library of Medicine](https://www.nlm.nih.gov/) (NLM), [SDC FHIR Questionnaire], [SDC QuestionnaireResponse], and [StructureMap] to automate the creation of [SDOHCC Observation Screening Response] and [SDOHCC Condition].
 
 ### Introduction to Social Care Assessment Instruments
-Social risk assessment instruments are used to gather information about social risks that can impact an individual’s health and well-being. TThe information collected through social risk assessment instruments can be used by providers, public health organizations, and policymakers to develop interventions and programs aimed at addressing the root causes of health disparities and improving health outcomes for individuals and communities. This IG builds on existing FHIR frameworks to generate Observations (e.g., [SDOHCC Observation Screening Response]) and Conditions (e.g., [SDOHCC Condition]) from LOINC-encoded assessment instruments for incorporation into the patient’s health record.
+Social risk assessment instruments are used to gather information about social risks that can impact an individual’s health and well-being. The information collected through social risk assessment instruments can be used by providers, public health organizations, and policymakers to develop interventions and programs aimed at addressing the root causes of health disparities and improving health outcomes for individuals and communities. This IG builds on existing FHIR frameworks to generate Observations (e.g., [SDOHCC Observation Screening Response]) and Conditions (e.g., [SDOHCC Condition]) from LOINC-encoded assessment instruments for incorporation into the patient’s health record.
 
 Assessment instruments fit into the SDOH CC [Conceptual Framework](sdoh_clinical_care_scope.html) which illustrates how: 1) To incorporate screening into the care process to assess health concerns and problems.  2) Use this information to help the provider and patient establish goals and identify social risk-related interventions to address those goals. 3) Use responses from standardized assessment instruments to drive public health analysis of aggregated data from patient populations.
 
@@ -27,11 +27,11 @@ This IG uses the process below for implementing an assessment instrument. The pr
 * **Convert the LOINC-encoded assessment instrument to an [SDC FHIR Questionnaire]**: The open-source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms) supports this step by rendering input forms based on FHIR [Questionnaire] for Web-based applications and can be used to build and edit FHIR Questionnaires. For some assessment instruments, this step may include establishing calculation logic to define the result of some questions as a function of answers to other questions (e.g., where one or more questions determine an answer to another “question” as in Hunger Vital Sign Question 3). 
 * **Execute the [SDC FHIR Questionnaire]**: Using an appropriate application (e.g., the open-source NLM [FHIR SDC SMART App](https://lhcforms.nlm.nih.gov/sdc)) create an [SDC QuestionnaireResponse]
 * **Develop conversion logic to use [StructureMap] and a validation tool to convert the [SDC QuestionnaireResponse] and create these instances (where relevant)**: 
- * [Observation][SDOHCC Observation Screening Response] to represent a question-answer(s) pair from the assessment instrument
- * [Condition][SDOHCC Condition] to represent any health concerns identified by the assessment instrument
- * [Observation][SDOHCC Observation Screening Response] grouping - to group any Observations associated with the assessment instrument. Of note, for Observations that can reference a QuestionnaireResponse (as in this process), this is generally redundant but is not prohibited.
+  * [Observation][SDOHCC Observation Screening Response] to represent a question-answer(s) pair from the assessment instrument
+  * [Condition][SDOHCC Condition] to represent any health concerns identified by the assessment instrument
+  * [Observation][SDOHCC Observation Screening Response] grouping - to group any Observations associated with the assessment instrument. Of note, for Observations that can reference a QuestionnaireResponse (as in this process), this is generally redundant but is not prohibited.
 
-### Incorporation of Assessment Instruments into Clinical Workflow
+### Incorporating Assessment Instruments into Clinical Workflow
 
 When an [SDC FHIR Questionnaire] is completed, stored as an [SDC QuestionnaireResponse], and processed using a [StructureMap], the resulting instances of [Observation][SDOHCC Observation Screening Response] and [Condition][SDOHCC Condition] can be integrated into the clinical workflow to assist in guiding care.
 
