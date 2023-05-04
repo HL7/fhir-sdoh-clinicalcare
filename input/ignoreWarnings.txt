@@ -61,3 +61,10 @@ INFORMATION: Questionnaire/SDOHCC-QuestionnaireHungerVitalSign: Questionnaire.it
 INFORMATION: Questionnaire/SDOHCC-QuestionnaireHungerVitalSign: Questionnaire.item[2].extension[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap|3.0.0
 INFORMATION: Questionnaire/SDOHCC-QuestionnaireHungerVitalSign: Questionnaire.item[2].extension[4]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap|3.0.0
 INFORMATION: Questionnaire/SDOHCC-QuestionnaireHungerVitalSign: Questionnaire.item[2].extension[5]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap|3.0.0
+
+# These are Valid LOINC Value Sets
+WARNING: StructureDefinition/SDOHCC-ObservationRecordedSexGender: StructureDefinition.differential.element[2].binding: The valueSet reference http://loinc.org/vs/LL6134-2 on element Observation.value[x] could not be resolved
+WARNING: StructureDefinition/SDOHCC-ObservationRecordedSexGender: StructureDefinition.snapshot.element[27].binding: The valueSet reference http://loinc.org/vs/LL6134-2 on element Observation.value[x] could not be resolved
+WARNING: StructureDefinition/SDOHCC-ObservationSexualOrientation: StructureDefinition.differential.element[2].binding: The valueSet reference http://loinc.org/vs/LL3323-4 on element Observation.value[x] could not be resolved
+WARNING: StructureDefinition/SDOHCC-ObservationSexualOrientation: StructureDefinition.snapshot.element[27].binding: The valueSet reference http://loinc.org/vs/LL3323-4 on element Observation.value[x] could not be resolved
+
