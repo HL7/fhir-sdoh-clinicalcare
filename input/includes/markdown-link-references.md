@@ -27,7 +27,7 @@
 
 <!--# SDC -->
 [SDC QuestionnaireResponse]: https://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html
-[SDC FHIR Questionnaire]: https://hl7.org/fhir/us/sdc/sdc-questionnaire.html
+[SDC Questionnaire]: https://hl7.org/fhir/us/sdc/sdc-questionnaire.html
 [StructureMap]: https://www.hl7.org/fhir/structuremap.html
 [Timing]: https://www.hl7.org/fhir/datatypes.html#timing
 

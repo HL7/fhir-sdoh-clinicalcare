@@ -1,11 +1,11 @@
-This section describes standardized social risk assessment instruments, their benefits, and how to standardize their capture, coding and output leveraging work from the  [Regenstrief Institute](https://www.regenstrief.org/) and the [National Library of Medicine](https://www.nlm.nih.gov/) (NLM), [SDC FHIR Questionnaire], [SDC QuestionnaireResponse], and [StructureMap] to automate the creation of [SDOHCC Observation Screening Response] and [SDOHCC Condition].
+This section describes standardized social risk assessment instruments, their benefits, and how to standardize their capture, coding and output leveraging work from the  [Regenstrief Institute](https://www.regenstrief.org/) and the [National Library of Medicine](https://www.nlm.nih.gov/) (NLM), [SDC Questionnaire], [SDC QuestionnaireResponse], and [StructureMap] to automate the creation of [SDOHCC Observation Screening Response] and [SDOHCC Condition].
 
 ### Introduction to Social Care Assessment Instruments
 Social risk assessment instruments are used to gather information about social risks that can impact an individual’s health and well-being. The information collected through social risk assessment instruments can be used by providers, public health organizations, and policymakers to develop interventions and programs aimed at addressing the root causes of health disparities and improving health outcomes for individuals and communities. This IG builds on existing FHIR frameworks to generate Observations (e.g., [SDOHCC Observation Screening Response]) and Conditions (e.g., [SDOHCC Condition]) from LOINC-encoded assessment instruments for incorporation into the patient’s health record.
 
 Assessment instruments fit into the SDOH CC [Conceptual Framework](sdoh_clinical_care_scope.html) which illustrates how: 1) To incorporate screening into the care process to assess health concerns and problems.  2) Use this information to help the provider and patient establish goals and identify social risk-related interventions to address those goals. 3) Use responses from standardized assessment instruments to drive public health analysis of aggregated data from patient populations.
 
-The list of assessment instruments from which questions have been selected and vetted by the Gravity Project as [face-valid](https://mmshub.cms.gov/measure-lifecycle/measure-testing/evaluation-criteria/scientific-acceptability/validity#:~:text=correlation%20or%20equity-,Face%20Validity,measure%20score%20is%20not%20feasible) can be found in the [Social Determinants of Health Screening Assessments] Value Set.
+The list of assessment instruments from which questions have been selected and vetted by the Gravity Project as [face-valid](https://mmshub.cms.gov/measure-lifecycle/measure-testing/evaluation-criteria/scientific-acceptability/validity#:~:text=correlation%20or%20equity-,Face%20Validity,measure%20score%20is%20not%20feasible) can be found in the [Social Determinants of Health Screening Assessments](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.126/expansion/Latest) Value Set.
 
 ### Advantages of Standardized Social Care Assessment Instruments
 
@@ -24,8 +24,8 @@ In the future, to promote interoperability, a single StructureMap instance could
 This IG uses the process below for implementing an assessment instrument. The process can be used for assessment instruments vetted by Gravity but can also be applied to other assessment instruments.
 
 * **Use a LOINC-encoded assessment instrument**:  [LOINC Components](https://loinc.org/kb/faq/structure/) and [LOINC Answer Lists](https://loinc.org/forums/topic/answer-lists/) standardize the coding and facilitate leveraging the open-source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms).
-* **Convert the LOINC-encoded assessment instrument to an [SDC FHIR Questionnaire]**: The open-source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms) supports this step by rendering input forms based on FHIR [Questionnaire] for Web-based applications and can be used to build and edit FHIR Questionnaires. For some assessment instruments, this step may include establishing calculation logic to define the result of some questions as a function of answers to other questions (e.g., where one or more questions determine an answer to another “question” as in Hunger Vital Sign Question 3). 
-* **Execute the [SDC FHIR Questionnaire]**: Using an appropriate application (e.g., the open-source NLM [FHIR SDC SMART App](https://lhcforms.nlm.nih.gov/sdc)) create an [SDC QuestionnaireResponse]
+* **Convert the LOINC-encoded assessment instrument to an [SDC Questionnaire]**: The open-source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms) supports this step by rendering input forms based on FHIR [Questionnaire] for Web-based applications and can be used to build and edit FHIR Questionnaires. For some assessment instruments, this step may include establishing calculation logic to define the result of some questions as a function of answers to other questions (e.g., where one or more questions determine an answer to another “question” as in Hunger Vital Sign Question 3). 
+* **Execute the [SDC Questionnaire]**: Using an appropriate application (e.g., the open-source NLM [FHIR SDC SMART App](https://lhcforms.nlm.nih.gov/sdc)) create an [SDC QuestionnaireResponse]
 * **Develop conversion logic to use [StructureMap] and a validation tool to convert the [SDC QuestionnaireResponse] and create these instances (where relevant)**: 
   * [Observation][SDOHCC Observation Screening Response] to represent a question-answer(s) pair from the assessment instrument
   * [Condition][SDOHCC Condition] to represent any health concerns identified by the assessment instrument
@@ -33,7 +33,7 @@ This IG uses the process below for implementing an assessment instrument. The pr
 
 ### Incorporating Assessment Instruments into Clinical Workflow
 
-When an [SDC FHIR Questionnaire] is completed, stored as an [SDC QuestionnaireResponse], and processed using a [StructureMap], the resulting instances of [Observation][SDOHCC Observation Screening Response] and [Condition][SDOHCC Condition] can be integrated into the clinical workflow to assist in guiding care.
+When an [SDC Questionnaire] is completed, stored as an [SDC QuestionnaireResponse], and processed using a [StructureMap], the resulting instances of [Observation][SDOHCC Observation Screening Response] and [Condition][SDOHCC Condition] can be integrated into the clinical workflow to assist in guiding care.
 
 Examples of these artifacts for [Hunger Vital Signs](https://loinc.org/88121-9/) and [PRAPARE](https://loinc.org/93025-5/) are listed below.
 
@@ -41,8 +41,8 @@ Examples of these artifacts for [Hunger Vital Signs](https://loinc.org/88121-9/)
 
 This implementation guide includes a complete example of the [Hunger Vital Sign (HVS) Survey](https://loinc.org/88121-9/) assessment instrument[^1] including:
 
-* an [SDC Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)
-* an [SDC QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html)
+* an [SDC HVS Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)
+* an [SDC HVS QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html)
 * a [StructureMap](StructureMap-SDOHCC-StructureMapHungerVitalSign.html) that takes the [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) and creates the appropriate [SDOHCC Observation Screening Response] and [SDOHCC Condition] instances
 * three [SDOHCC Observation Screening Response] instances used to record the questions and answers on the assessment instrument
   * [Question 1](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion1Example.html)
@@ -54,8 +54,8 @@ This implementation guide includes a complete example of the [Hunger Vital Sign 
 
 This implementation guide includes a partial example of the [PRAPARE](https://loinc.org/93025-5/) Assessment Instrument[^2] including:
 
-* an [SDC Questionnaire](Questionnaire-SDOHCC-QuestionnairePRAPARE.html)
-* an [SDC Questionnaire Response](QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html)
+* an [SDC PRAPARE Questionnaire](Questionnaire-SDOHCC-QuestionnairePRAPARE.html)
+* an [SDC PRAPARE Questionnaire Response](QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html)
 * a [StructureMap](StructureMap-SDOHCC-StructureMapPRAPARE.html) that takes the [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html) and creates the appropriate [SDOHCC Observation Screening Response] and [SDOHCC Condition] instances
 * multiple [SDOHCC Observation Screening Response] instances used to record some of the question and answers (not all questions are provided in these examples)
   * [Employment Status](Observation-SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample.html)
