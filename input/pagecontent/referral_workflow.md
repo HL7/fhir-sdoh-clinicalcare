@@ -276,8 +276,8 @@ Applies to providers and Payers as the referral requester, and patient is assess
 This section differs from the previous in that the interactions between the CP and CBO follow the Direct Light paradigm. The CBO will do a push to the CP. That is, CBOs without their own FHIR server will modify tasks directly on the CP’s FHIR server.
 The provider and CP have FHIR APIs.  The CBO has a FHIR-enabled application.  The patient has a FHIR-enabled application.
 
-The provider has a relationship with the CP, but not with the CBO.  The use case assumes that the CP and the CPO have an established relationship.
-The provider may request to have the service delivered by a specific CBO.   The CP may not accept the referral or be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
+The provider has a relationship with the CP, but not with the CBO.  The use case assumes that the CP and the CBO have an established relationship.
+The provider may request to have the service delivered by a specific CBO.   The CP may not accept the referra, be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
 
 ##### Indirect Referral With Direct Light CBO - Detailed View
 {% include img.html img="DetailedIndirectReferralLight.svg" caption="Figure 3: Detailed Indirect Referral Light" %}
@@ -301,7 +301,7 @@ This implementation guide supports additional interactions with a patient/client
 {:.grid}
 
 In the examples below, it is assumed that the patient has been equipped with the patient application, and authenticated communication between the patient application and the requester has already been established.
-See [Connecting Applications with API Data Sources](connecting_applications_with_api_data_sources.html#patientclient-applications) for more details.  The referenced data instances are all in their completed state. In practice, they would move through the state transitions indicated, with the requester initializing their input fields, and the patient completing the output fields, and updating the status.
+See [Connecting Applications with API Data Sources](connecting_applications_with_api_data_sources.html#patientclient-applications) for more details.  The referenced data instances are all in their completed state. In practice, they would move through the state transitions indicated, with the requester initializing their input-fields, and the patient completing the output fields, and updating the status.
 
 #### Complete Questionnaire Request
 Here we provide a detailed view of an example interaction between a patient application and a requester (provider, CBO or CP) for the completion of a questionnaire. The example shows one of the four ways the questionnaire can be transmitted and the response received from the patient.
