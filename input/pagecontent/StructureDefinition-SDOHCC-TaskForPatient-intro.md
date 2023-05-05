@@ -35,6 +35,7 @@ The allowed state transitions are defined graphically in the state diagram below
 | `completed` | Completed | The task has been completed. |  Patient App|
 | `cancelled`  |Cancelled  | The task was not completed | Requester or Patient App |
 | `on-hold`  |On Hold | The task has been started but work has been paused. | |
+| `failed` | Failed | The task was attempted but could not be completed due to some error. |  Patient App|
 {:.grid}
 
 ### Modification of fields
