@@ -368,6 +368,7 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.210/expansion/Latest">Answers</a></td>
 			<td>2.16.840.1.113762.1.4.1247.210</td>
 		</tr>
+		<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-stress">stress</a></td>
 			<td rowspan="3">Observation.code</td>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.203/expansion/Latest">Panels and Questions</a></td>
