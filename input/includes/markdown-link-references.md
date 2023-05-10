@@ -42,6 +42,7 @@
 [Exchange Workflow]: referral_workflow.html
 [Capability Statements]: artifacts.html#capability-statements
 [SDOHCC Task For Referral Management]: StructureDefinition-SDOHCC-TaskForReferralManagement.html
+[SDOHCC Task For Patient]: StructureDefinition-SDOHCC-TaskForReferralManagement.html
 [SDOHCC ServiceRequest]: StructureDefinition-SDOHCC-ServiceRequest.html
 [Gravity Project]:  https://confluence.hl7.org/display/GRAV/The+Gravity+Project
 [US Core Implementation Guide]: https://www.hl7.org/fhir/us/core/
