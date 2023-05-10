@@ -8,21 +8,21 @@ This profile is used to pass a Task authored by a Practitioner or Organization (
 The table shows the types of tasks that can be assigned to the patient and the constraints imposed by each usage that are enforced through invariants:
 
 
-|    Description     | Task.code             | Task.description | Task.input                  |  Task.output                                    |   Other |
+|    Task Type     | Task.code             | Task.description | Task.input                  |  Task.output                                    |   Task.focus |
 | ------------------ | --------------------- | ---------------- | --------------------------- |------------------------------------------------ | ------ |
-| Questionaire (FHIR)| `complete-questionnaire` | required | questionnaire, questionnaire-category required | If present, questionnaire-response   | |
-| Questionaire (PDF)| `complete-questionnaire`  | required| questionnaire-pdf, questionnaire-category required | If present, questionnaire-response   | |
-| Questionaire (URL)| `complete-questionnaire` | required| questionnaire-url, questionnaire-category required | If present, questionnaire-response   | |
-| General Information Request | `general-information` | required |        | If present, general-information-response | The request is in Task.description |
-| Make Contact Directions |  `make-contact` |  | at least one Contact entity is required | If present, Task.output must be “chosen-contact” |
-| Review Material | `review-material` | |  | | Task.focus of DocumentReference is required. |
+| Questionnaire (FHIR)| `complete-questionnaire` |  | questionnaire, questionnaire-category required | If present, questionnaire-response   | |
+| Questionnaire (PDF)| `complete-questionnaire`  | | questionnaire-pdf, questionnaire-category required | If present, questionnaire-pdf-completed   | |
+| Questionnaire (URL)| `complete-questionnaire` | | questionnaire-url, questionnaire-category required |     | |
+| General Information  | `general-information` | required |        | If present, general-information-response | The request is in Task.description |
+| Make Contact Directions |  `make-contact` |  | at least one contact-entity is required | If present, chosen-contact |
+| Review Material | `review-material` | |  | | DocumentReference required. |
 {:.grid}
 
 #### Checking Task Status
 See [Checking Task Status](checking_task_status.html).
 
 #### Status Management
-The status values constrain the task to specific states that are required to support communication with a patient application.
+The status values constrain the Task to specific states that are required to support communication with a patient application.
 
 The allowed state transitions are defined graphically in the state diagram below, and are described in the table below.
 
@@ -39,6 +39,6 @@ The allowed state transitions are defined graphically in the state diagram below
 {:.grid}
 
 ### Modification of fields
-In addition to a limited set of status values, the patient application is only permitted to modify a specific set of elements in responding to the task request.  These elements include: .status, .statusReason, and .output.  All other elements are outside of the scope of this IG. The patient application cannot modify the status of the referral task, that can only be done by the requester and the performing or intermediary entity.
+In addition to a limited set of status values, the patient application is only permitted to modify a specific set of elements in responding to the task request.  These elements include: .status, .statusReason, and .output.  All other elements are outside of the scope of this IG. The patient application cannot modify the status of the referral task (SDOHCC Task For Referral Management), that can only be done by the requester and the performing or intermediary entity.
 
 {% include markdown-link-references.md %}

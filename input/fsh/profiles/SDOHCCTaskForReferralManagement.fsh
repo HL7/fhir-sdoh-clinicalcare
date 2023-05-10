@@ -5,8 +5,6 @@ Title: "SDOHCC Task For Referral Management"
 Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceRequest (i.e. referral for service) and subsequently tracking and managing the fulfillment of that referral."
 
 * ^status = #draft
-* ^date = "2020-12-14T04:01:34+00:00"
-* ^jurisdiction = urn:iso:std:iso:3166#US
 * . ^short = "A request to fulfill an SDOH service request"
 * . ^comment = "For Tasks used in requesting fulfillment of an SDOHCC ServiceRequest (i.e. referral for service) and subsequently tracking and managing the fulfillment of that referral."
 * partOf ^slicing.discriminator[0].type = #profile

@@ -5,8 +5,6 @@ Title: "SDOHCC ServiceRequest"
 Description: "Profile for service requests that address Social Determinants of Health."
 
 * ^status = #draft
-* ^date = "2020-12-14T04:01:34+00:00"
-* ^jurisdiction = urn:iso:std:iso:3166#US
 * . ^short = "A request for a service to address an SDOH condition, observation or goal."
 * . ^definition = "For service requests that address SDOH conditions, observations or goals."
 * . ^comment = "Many of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."
@@ -45,7 +43,6 @@ Description: "Profile for service requests that address Social Determinants of H
 * code from USCoreProcedureCodes (required)
 * code ^short = "What is being requested/ordered."
 * code ^definition = "A code that identifies a particular service (e.g., procedure) that has been requested."
-* code ^comment = "As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories."
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service."
 * orderDetail ^slicing.discriminator.type = #pattern
 * orderDetail ^slicing.discriminator.path = "coding"
@@ -62,7 +59,7 @@ Description: "Profile for service requests that address Social Determinants of H
 * requester MS
 * performer only Reference(HealthcareService or Device or RelatedPerson or USCorePatientProfile or USCorePractitionerProfile or USCorePractitionerRoleProfile or USCoreOrganizationProfile or USCoreCareTeam)
 * performer MS
-* reasonCode ^comment = "This element represents why the referral is being made and may be used to decide how the service will be performed, or even if it will be performed at all.   Use `CodeableConcept.text` element if the data is free (uncoded) text as shown in the [CT Scan example](servicerequest-example-di.html).\r\n\r\nInformation represented by ServiceRequest.reasonCode may overlap significantly with information represented by ServiceRequest.reasonReference. Multiple approaches to representing the same information may negatively impact interoperability. Therefore, where similar information could be provided by either ServiceRequest.reasonCode or ServiceRequest.reasonReference, it is recommended that ServiceRequest.reasonReference be used to provide a reason for why a service request was made.\r\n\r\nAs the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set may be refined to codes that pertain to SDOH categories."
+* reasonCode ^comment = "This element represents why the referral is being made and may be used to decide how the service will be performed, or even if it will be performed at all.   Use `CodeableConcept.text` element if the data is free (uncoded) text as shown in the [CT Scan example](servicerequest-example-di.html).\r\n\r\nInformation represented by ServiceRequest.reasonCode may overlap significantly with information represented by ServiceRequest.reasonReference. Multiple approaches to representing the same information may negatively impact interoperability. Therefore, where similar information could be provided by either ServiceRequest.reasonCode or ServiceRequest.reasonReference, it is recommended that ServiceRequest.reasonReference be used to provide a reason for why a service request was made.."
 * reasonReference ^slicing.discriminator.type = #profile
 * reasonReference ^slicing.discriminator.path = "resolve()"
 * reasonReference ^slicing.rules = #open

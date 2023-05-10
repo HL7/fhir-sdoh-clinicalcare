@@ -14,9 +14,8 @@ Description: "Profile for SDOH-related tasks to be carried out by the patient or
 * partOf[SupportedPartOf] only Reference(SDOHCCTaskForReferralManagement or SDOHCCTaskForPatient)
 * status MS
 * status from SDOHCCValueSetTaskStatus (required)
-* status ^short = "ready | cancelled | completed | in progress | on hold"
-* status ^comment = "Note that FHIR strings SHALL NOT exceed 1MB in size. For further details on Task.status see [Checking Task Status](checking_task_status.html)."
-* status ^requirements = "These states enable coordination of task status with off-the-shelf workflow solutions that support automation of tasks. The values are constrained to ready | cancelled | completed | in progress | on hold. The task comes to the patient in the ready status and the patient can update status as appropriate."
+* status ^comment = "For further details on Task.status see [Checking Task Status](checking_task_status.html)."
+* status ^requirements = "These states enable coordination of task status with off-the-shelf workflow solutions that support automation of tasks. "
 * statusReason MS
 * statusReason ^definition = "If the task is cancelled by the patient, an explanation as to why should be provided."
 * statusReason ^comment = "This applies to the current status.  Look at the history of the task to see reasons for past statuses. If the Task.status is cancelled, then Task.statusReason.text should be included."
@@ -34,7 +33,7 @@ Description: "Profile for SDOH-related tasks to be carried out by the patient or
 * code from SDOHCCValueSetTaskCode (extensible)
 * code.text MS
 * description MS
-* description ^comment = "If Task.code is \"adhoc\", Task.description should be displayed to the user with no other computable expectation other than allowing the patient to update the Task.status and optionally capture a free text response for Task.output."
+* description ^comment = "If Task.code is \"general-information\", Task.description should be displayed to the user with no other computable expectation other than allowing the patient to update the Task.status and optionally capture a free text response for Task.output."
 * description ^condition[0] = "SDOH-Task-2"
 * description ^condition[+] = "SDOH-Task-7"
 * focus MS
@@ -78,7 +77,7 @@ Description: "Profile for SDOH-related tasks to be carried out by the patient or
 * input[Contact] ^comment = "If Task.code is \"make-contact\" and multiple Task.inputs are provided, the intent is that the task owner selects only one to contact. If more than one contact needs to be made, there should be separate Tasks."
 * input[Contact] ^condition[0] = "SDOH-Task-4"
 * input[Contact].type = $SDOHCC-CodeSystemTemporaryCodes#contact-entity
-* input[Contact].type ^comment = "When Task.code is \"make-contact\", \"contact-service\" is used for Task.input.type to indicate that the task owner should contact one of the healthcare services represented in Task.input.value."
+* input[Contact].type ^comment = "When Task.code is \"make-contact\", \"contact-entity\" is used for Task.input.type to indicate that the task owner should contact one of the healthcare services represented in Task.input.value."
 * input[Contact].value[x] only Reference(SDOHCCHealthcareService or USCorePractitionerRoleProfile or USCorePractitionerProfile or USCoreOrganizationProfile)
 * output ^slicing.discriminator.type = #pattern
 * output ^slicing.discriminator.path = "type"

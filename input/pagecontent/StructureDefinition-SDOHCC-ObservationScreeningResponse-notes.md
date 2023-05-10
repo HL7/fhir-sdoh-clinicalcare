@@ -447,7 +447,7 @@ Of note, Grouper VSAC value sets containing the members of all the category-spec
 
 Each question (Observation.code) on an assessment instrument has a set of allowed answers (Observation.value). The allowed answers for a specific question may vary depending on the assessment instrument (LOINC panel) on which the question is presented (e.g., [88122-7](https://loinc.org/88122-7) "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]" has 4 possible answers on the [Hunger Vital Sign (HVS)](https://loinc.org/88121-9) panel versus three possible answers on the [American Academy of Family Physicians Social Needs Screening Tool](https://loinc.org/99593-6)). For this reason, the category-specific Assessment Instrument Spreadsheets provide additional information to link specific assessment instruments to questions and their allowed LOINC Answer Lists. LOINC also provides Answers Lists for questions from specific assessment instruments (panels).
 
-​For additional information on fields in the Assessment Instrument Spreadsheets, see [Assessment Instrument Spreadsheet Guidance] on the Gravity Project Confluence site.
+​For additional information on fields in the Assessment Instrument Spreadsheets, see [Assessment Instrument Spreadsheet Guidance](https://confluence.hl7.org/display/GRAV/Gravity+Terminology+Value+Sets?preview=/97463504/161062739/Assessment_Instruments_Spreadsheet_Guidance_V1.pdf) on the Gravity Project Confluence site.
 
 
 {% include markdown-link-references.md %}
