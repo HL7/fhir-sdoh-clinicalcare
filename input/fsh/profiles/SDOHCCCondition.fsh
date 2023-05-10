@@ -28,7 +28,6 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * category[SDOH] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a condition. It is recommended that SDOH category codes be used to facilitate searching for SDOH conditions."
 * category[SDOH] ^binding.description = "Codes for high-level SDOH categories."
 * code from USCoreConditionCode (required)
-* code ^comment = "As the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories."
 * code ^requirements = "Code is required and must be selected from the bound value set."
 * code ^binding.description = "Valueset to describe the actual problem experienced by the patient"
 * bodySite ..0
@@ -53,7 +52,7 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * asserter ^condition = "SDOH-Con-1"
 * stage ..0
 * evidence MS
-* evidence.code ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\n\r\nInformation represented by Condition.evidence.code may overlap significantly with information represented by Condition.evidence.detail. Multiple approaches to representing the same information may negatively impact interoperability. Therefore, where similar infomation could be provided by either Condition.evidence.code or Condition.evidence.detail, it is recommended that Condition.evidence.detail should be used as supporting evidence for the condition.\r\n\r\nAs the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set may be refined to codes that pertain to SDOH categories."
+* evidence.code ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\n\r\nInformation represented by Condition.evidence.code may overlap significantly with information represented by Condition.evidence.detail. Multiple approaches to representing the same information may negatively impact interoperability. Therefore, where similar infomation could be provided by either Condition.evidence.code or Condition.evidence.detail, it is recommended that Condition.evidence.detail should be used as supporting evidence for the condition.\r\n\r"
 * evidence.detail ^slicing.discriminator.type = #profile
 * evidence.detail ^slicing.discriminator.path = "resolve()"
 * evidence.detail ^slicing.rules = #open
