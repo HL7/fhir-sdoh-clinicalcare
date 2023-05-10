@@ -18,7 +18,7 @@ The VSAC value set names align with the profiles in which they are used in this 
 
 In VSAC, for the above profiles (e.g., [SDOHCC Condition][SDOHCC Condition], code system-specific value sets are created for each domain (e.g., [Food Insecuirty Diagnoses ICD10CM](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.3/expansion/Latest), [Food Insecurity Diagnosis SNOMED CT](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.1/expansion/Latest)) and then grouped into domain-specific value sets (e.g., [Food Insecurity Diagnoses](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.17/expansion/Latest) for use as preferred value sets for a profile. Finally, the domain-specific value sets for each profile are grouped into a value set containing the values for all SDOH domains (e.g., [Social Determinants of Health Conditions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion/Latest)).
 
-### Example of Value Sets for Condition.Code and their grouping in VSAC
+### Example of Value Sets for Condition.code and their grouping in VSAC
 The figure below illustrates how value sets are used and grouped for Condition.code for the [SDOHCC Condition][SDOHCC Condition] profile.
 * 	The minimum value set bindings specified in the profile for Condition.code (i.e., to [US Core Condition Code]({{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html))
 *   The preferred value set bindings for Condition.code and their grouping structure in VSAC are shown in the green box. (For additional guidance on these preferred value sets for SDOHCC Condition, see [Usage](StructureDefinition-SDOHCC-Condition.html#usage))
