@@ -6,19 +6,21 @@ Usage: #example
 * active = true
 * location.reference = "Location/SDOHCC-LocationExample"
 * name = "Family Counseling Services"
-* telecom[0].extension.url = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ExtensionHealthcareServiceTelecomAppointment"
-* telecom[=].extension.valueBoolean = true
-* telecom[=].system = #phone
-* telecom[=].value = "(555) appoint"
-* telecom[=].use = #work
-* telecom[+].system = #phone
-* telecom[=].value = "(555) office"
-* telecom[=].use = #work
-* telecom[+].system = #phone
-* telecom[=].value = "(555) nursepr"
-* telecom[=].use = #work
-* telecom[+].extension.url = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ExtensionHealthcareServiceTelecomAppointment"
-* telecom[=].extension.valueBoolean = true
-* telecom[=].system = #email
-* telecom[=].value = "familyCounseling@example.com"
-* telecom[=].use = #work
+* telecom[AppointmentContact][0]
+  * system = #phone
+  * value = "(555) appoint"
+  * use = #work
+  * extension[ForAppointment].valueBoolean = true 
+* telecom[+]
+  * system = #phone
+  * value = "(555) office"
+  * use = #work
+* telecom[+]
+  * system = #phone
+  * value = "(555) nursepr"
+  * use = #work
+* telecom[AppointmentContact][+]
+  * system = #email
+  * value = "familyCounseling@example.com"
+  * use = #work
+  * extension[ForAppointment].valueBoolean = true 
