@@ -5,6 +5,7 @@ Description: "The value of any outputs of type 'Reference'"
 Usage: #definition
 * name = "TaskOutputReference"
 * status = #draft
+* description = "The value of any outputs of type 'Reference'"
 * experimental = false
 * code = #output
 * base = #Task

@@ -8,4 +8,4 @@ Description: "Codes that represent categories of Social Determinants of Health (
 * SDOHCCCodeSystemTemporaryCodes#feedback-questionnaire "Feedback Questionnaire"
 * SDOHCCCodeSystemTemporaryCodes#application-questionnaire "Application Questionnaire"
 * SDOHCCCodeSystemTemporaryCodes#personal-characteristics-questionnaire "Personal Characteristics Questionnaire"
-* SDOHCCCodeSystemTemporaryCodes#other-questionnaire "Other Questionnaire"
+* SDOHCCCodeSystemTemporaryCodes#other-specify "Other Specify"
