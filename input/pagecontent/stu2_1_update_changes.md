@@ -8,6 +8,7 @@
 * [FHIR-40611](https://jira.hl7.org/browse/FHIR-40611) Added slice to to ObservationScreeningResponse.member to reference all observations that are members of the group
 * [FHIR-40771](https://jira.hl7.org/browse/FHIR-40771) Constrained TaskForReferralManagement.status to exclude requested value.
 * [FHIR-41278](https://jira.hl7.org/browse/FHIR-41278) Fixed cardinality of extension to HealthcareService.telecom so that there would be one boolean flag per telecom
+* [FHIR-41310](https://jira.hl7.org/browse/FHIR-FHIR-41310)  ObservationScreeningResponse.hasMember[SupportedHasMember] can only reference an ObservationScreeningResponse.  Previously it could also reference a QuestionnaireResponse.
 
 
 This update is focused on improving the readability of the IG narrative content.

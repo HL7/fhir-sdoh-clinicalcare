@@ -20,10 +20,10 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalca
 # The following issue is addressed by an exception granted by the Cross-Group Projects work group (Jira ticket  https://jira.hl7.org/browse/FHIR-37583 )
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationSexualOrientation').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 
-# The following issues are addressed by an exception granted by the Cross-Group Projects work group (Jira ticket  https://jira.hl7.org/browse/FHIR-41236).
+# The following issues are addressed by an exception granted by the Cross-Group Projects work group (Jira ticket  https://jira.hl7.org/browse/FHIR-41236 Eric Haas/Isaac Letter: 9-0-0 5/11/23).
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest').baseDefinition: US FHIR Usage rules require that all profiles on ServiceRequest derive from the core US profile
 
-# The following issues are addressed by an exception granted by the Cross-Group Projects work group (Jira ticket https://jira.hl7.org/browse/FHIR-41235).
+# The following issues are addressed by an exception granted by the Cross-Group Projects work group (Jira ticket https://jira.hl7.org/browse/FHIR-41235 - Jason Vogt/Isaac Letter: 9-0-0 5/11/23).
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition').baseDefinition: US FHIR Usage rules require that all profiles on Condition derive from one of the base US profiles
 
 # The following issues have been reviewed and these items are not intended to validate against one of the slices.

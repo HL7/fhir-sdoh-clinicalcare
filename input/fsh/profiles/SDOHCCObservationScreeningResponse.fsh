@@ -81,7 +81,7 @@ New:  An observation may have; 1) a single value here, 2) both a value and a set
 * insert SliceReferenceOnProfile(hasMember)
 * hasMember contains SupportedHasMember 0..* MS
 * hasMember ^short = "References the child observations of a grouping observation"
-* hasMember[SupportedHasMember] only Reference(SDOHCCObservationScreeningResponse or SDCQuestionnaireResponse )
+* hasMember[SupportedHasMember] only Reference(SDOHCCObservationScreeningResponse )
 * hasMember[SupportedHasMember] ^short = "For an Observation Grouping, the Observations generated from an assessment instrument"
 * hasMember[SupportedHasMember] ^definition = "This is the set of child observations that are expected to be supported by SDOH implementations."
 * hasMember[SupportedHasMember] ^requirements = "Provides context to the child observations of \"in what instrument/panel was this information collected\", which is critical in situations where the child observations do not have derivedFrom relationships to a QuestionnaireResponse."
