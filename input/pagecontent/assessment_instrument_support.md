@@ -100,7 +100,6 @@ There are a variety of strategies for converting QuestionnaireResponse data into
 The StructureMap resource examples in this IG are generated using the [FHIR Mapping Language].  This language is then used to generate the StructureMap instances.  Authoring the maps in a textual language is much simpler than attempting to craft the XML or JSON StructureMap instances directly.  The mapping language also works regardless of the syntax used for the QuestionnaireResponse, i.e., it works the same for JSON, XML and RDF instances.
 
 Instructions and tutorials on how to use the FHIR Mapping Language to convert and transform resources are found [here](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Mapping+Language).
-
 This page also includes references to existing open-source implementations that are capable of compiling mapping language instances into FHIR StructureMaps as well as being able to 'execute' maps - i.e., convert a QuestionnaireResponse into a transaction Bundle of other resources.  Implementers are encouraged to leverage one of these existing community-developed implementations rather than creating their own.  This will save work and minimize the likelihood of introducing implementation-specific errors into the transformation process.
 
 The overall process for supporting this transformation process is therefore as follows:

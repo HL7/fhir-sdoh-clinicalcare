@@ -301,7 +301,7 @@ This implementation guide supports additional interactions with a patient/client
 {:.grid}
 
 In the examples below, it is assumed that the patient has been equipped with the patient application, and authenticated communication between the patient application and the requester has already been established.
-See [Connecting Applications with API Data Sources](connecting_applications_with_api_data_sources.html#patientclient-applications) for more details.  The referenced data instances are all in their completed state. In practice, they would move through the state transitions indicated, with the requester initializing their input-fields, and the patient completing the output fields, and updating the status.
+See [Connecting Applications with API Data Sources](connecting_applications_with_api_data_sources.html#patientclient-applications) for more details.  The referenced data instances are all in their completed state. In practice, they would move through the state transitions indicated, with the requester initializing their input fields, and the patient completing the output fields, and updating the status.
 
 #### Complete Questionnaire Request
 Here we provide a detailed view of an example interaction between a patient application and a requester (provider, CBO or CP) for the completion of a questionnaire. The example shows one of the four ways the questionnaire can be transmitted and the response received from the patient.

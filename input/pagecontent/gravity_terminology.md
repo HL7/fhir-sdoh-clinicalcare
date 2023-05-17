@@ -23,7 +23,7 @@ The figure below illustrates how value sets are used and grouped for Condition.c
 * 	The minimum value set bindings specified in the profile for Condition.code (i.e., to [US Core Condition Code]({{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html))
 *   The preferred value set bindings for Condition.code and their grouping structure in VSAC are shown in the green box. (For additional guidance on these preferred value sets for SDOHCC Condition, see [Usage](StructureDefinition-SDOHCC-Condition.html#usage))
 
-{% include img-med.html img="VSACValueSet.svg" caption="Example of VSAC SDOH Group Value Set for Condition.Code" %}
+{% include img-med.html img="VSACValueSet.svg" caption="Example of VSAC SDOH Grouping Value Set for Condition.Code" %}
 
 
  {% include markdown-link-references.md %}
