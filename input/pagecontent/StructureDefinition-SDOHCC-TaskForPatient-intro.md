@@ -1,5 +1,5 @@
 ### Purpose
-This profile is used to pass a Task authored by a Practitioner or Organization (.requester field) targeting an Patient or Related Person (.owner field) to the individual. These input fields are required.  The .output is used to return a response appropriate to the requested Task code.
+This profile is used to pass a Task authored by a Practitioner or Organization (.requester field) targeting a Patient or Related Person (.owner field) to the individual. These fields are required.  The .output is used to return a response appropriate to the requested Task code.
 
 ### Usage
 
