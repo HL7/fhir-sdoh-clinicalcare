@@ -11,7 +11,12 @@ Usage: #example
   * value = "(555) appoint"
   * use = #work
   * extension[ForAppointment].valueBoolean = true 
-* telecom[+]
+* telecom[AppointmentContact][+]
+  * system = #email
+  * value = "familyCounseling@example.com"
+  * use = #work
+  * extension[ForAppointment].valueBoolean = true 
+* telecom[2]
   * system = #phone
   * value = "(555) office"
   * use = #work
@@ -19,8 +24,3 @@ Usage: #example
   * system = #phone
   * value = "(555) nursepr"
   * use = #work
-* telecom[AppointmentContact][+]
-  * system = #email
-  * value = "familyCounseling@example.com"
-  * use = #work
-  * extension[ForAppointment].valueBoolean = true 
