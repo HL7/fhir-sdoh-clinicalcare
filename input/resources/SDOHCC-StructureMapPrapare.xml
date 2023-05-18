@@ -8,6 +8,9 @@
       <pre>/// name = &quot;SDOHCC-PRAPARE-Map&quot;
 /// status = draft
 
+/// title = "SDOHCC StructureMap PRAPARE"
+/// description = "A StructureMap instance that represents the resource that transforms specific questions and answers from the PRAPARE questionnaire represented in LOINC (code 93025-5) into their corresponding Observations and derived Conditions (health concerns)."
+
 // This is a more complex example where the author has chosen to extract *all* answers to Observations and to create a grouping Observation
 
 map &quot;http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE&quot; = &quot;SDOHCCStructureMapPRAPARE&quot;
