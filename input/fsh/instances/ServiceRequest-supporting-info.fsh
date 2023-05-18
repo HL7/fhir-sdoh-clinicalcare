@@ -2,7 +2,7 @@ Instance: ServiceRequest-supporting-info
 InstanceOf: SearchParameter
 Title: "ServiceRequestSupportingInfo"
 Description: "Any resources referenced by ServiceRequest.supportingInfo"
-Usage: #example
+Usage: #definition
 * url = "http://hl7.org/fhir/us/sdoh-clinicalcare/SearchParameter/ServiceRequest-supporting-info"
 * name = "ServiceRequestSupportingInfo"
 * status = #draft
