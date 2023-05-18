@@ -12,7 +12,7 @@ See [Checking Task Status](checking_task_status.html).
 
 
 #### Status Management
-The status values allow for a complete flow of the task in both the requesting and performing systems.
+The status values allow for a complete flow of the Task in both the requesting and performing systems.
 
 The allowed state transitions are defined graphically in the state diagram below, and are described in the table below.
 
