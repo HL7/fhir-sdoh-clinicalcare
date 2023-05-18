@@ -12,7 +12,7 @@ The preferred value sets in the Table are hosted in the [NIH Value Set Authority
 | ------ | -------------------- | ------------------------- | ------------ |
 | educational-attainment  | Educational Attainment | [VSAC -  Less than high school education Goals ](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.55/expansion/Latest) | 2.16.840.1.113762.1.4.1247.55 |
 | elder-abuse  | Elder Abuse | [VSAC -  Elder Abuse Goals ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.65/expansion/Latest) |2.16.840.1.113762.1.4.1247.65 |
-| employment-status  | Employment Status | [VSAC -  Employment Status Goals ](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.70/expansion/Latest) |2.16.840.1.113762.1.4.1247.70 |
+| employment-status  | Employment Status | [VSAC -  Unemployment Goals ](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.70/expansion/Latest) |2.16.840.1.113762.1.4.1247.70 |
 | financial-insecurity  | Financial Insecurity | [VSAC -  Financial Insecurity Goals ](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.30/expansion/Latest) |2.16.840.1.113762.1.4.1247.30 |
 | food-insecurity  | Food Insecurity | [VSAC -  Food Insecurity Goals ](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.16/expansion/Latest) |2.16.840.1.113762.1.4.1247.16 |
 | health-insurance-coverage-status  | Health Insurance Coverage Status | [VSAC -  Health Insurance Coverage Status Goals ](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.121/expansion/Latest) |2.16.840.1.113762.1.4.1247.121 |
