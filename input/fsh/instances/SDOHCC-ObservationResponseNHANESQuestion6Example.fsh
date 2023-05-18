@@ -1,7 +1,7 @@
 Instance: SDOHCC-ObservationResponseNHANESQuestion6Example
 InstanceOf: SDOHCCObservationScreeningResponse
 Title: "SDOHCC Observation Response NHANES Question 6 Example"
-Description: "An example of a screening response Observation that represents the score from the NHANES screening questionnaire represented in LOINC.  THis result is derived from the
+Description: "An example of a screening response Observation that represents the score from the NHANES screening questionnaire represented in LOINC.  This result is derived from the
 results of the 5 questions."
 Usage: #example
 * insert NHANESCommon
