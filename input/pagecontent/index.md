@@ -46,12 +46,12 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 | [Human Services Directory](https://build.fhir.org/ig/HL7/FHIR-IG-Human-Services-Directory) | Can be used by a provider to identify referral targets for SDOH-related services  |
 | [National Healthcare Directory Exchange](http://hl7.org/fhir/us/directory-exchange)| A U.S. Office of the National Coordinator-sponsored IG supporting the exchange of directory information for a wide range of service providers and organizations |
 | [SmartApp Launch](http://hl7.org/fhir/smart-app-launch)  | Allows launching third party applications in the context of another system, including allowing the application to controlled access to patient information.  |
-| [Bidirectional Service eReferral (BSeR)](http://hl7.org/fhir/us/bser/)  | Whereas this IG orchestrates referrals using the FHIR query interface, BSeR bases referral management on the exchange of self-contained Bundles of FHIR resources.  The approaches for referral management offered by this IG and BSeR should be harmonized to provide a consistent template for management of referrals by all IGs. |
+| [Bidirectional Service eReferral (BSeR)](http://hl7.org/fhir/us/bser/)  | Whereas this IG orchestrates referrals using the FHIR query interface, BSeR bases referral management on the exchange of self-contained Bundles of FHIR resources.  Gravity is working with BSeR to align referral approaches. |
 | [DaVinci Prior Authorization Support](http://hl7.org/fhir/us/davinci-pas/) (PAS)|  Payment for SDOH-related services may require integration of Prior Authorization (PAS)|
 | [DaVinci Coverage Requirements Discovery](http://hl7.org/fhir/us/davinci-crd/) (CRD) |  PAS requires integration of CRD |
 | [DaVinci Documentation Templates and Rules](http://hl7.org/fhir/us/davinci-dtr/) (DTR) | PAS require integration of DTR  |
-| [Structure Data Capture (IG)](http://hl7.org/fhir/uv/sdc/) |  This IG builds on the SDC IG for Questionnaires and QuestionnaireResponses |
 | [Data Exchange for Quality Measures Implementation Guide](https://hl7.org/fhir/us/davinci-deqm/) | SDOH-related services will inevitably be included in quality measurement programs |
+| [Physical Activity](https://hl7.org/fhir/us/physical-activity/) | This IG inherits functionality from the SDOH IG and uses a similar architectural approach to manage sharing of physical activity goals, referrals, and patient engagement. |
 {:.grid}
 
 ### How to Read this IG
@@ -60,7 +60,7 @@ This IG contains a wealth of material targeting different audiences. Some sectio
 
 | Section | Sub-section | Description | Audience |
 | --------| ----------- | --------- | ---------|
-| Background| [SDOH and the Graity Project](sdoh_challenges_gravity.html) | General background on the importance of collecting and standardizing social risk data, and the Gravity Project     |  General |
+| Background| [SDOH and the Gravity Project](sdoh_challenges_gravity.html) | General background on the importance of collecting and standardizing social risk data, and the Gravity Project     |  General |
 | Background| [SDOH Clinical Care Background](sdoh_clinical_care_scope.html) | A description of the clinical scope of this IG    |  General |
 | Background| [Technical Background](technical_background.html) | Background material that should be understood prior to attempting to understand this IG     |  General/Introductory |
 | Implementation Guidance| [Assessment Instrument Support] | A description of the importance of standard assessment instruments for the collection of social risk data, and how assessment instruments are mapped to SDOH Conditions, Observations and Goals     |  General |
