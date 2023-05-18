@@ -1,7 +1,10 @@
 /// name = "SDOHCC-PRAPARE-Map"
 /// status = draft
+/// title = "SDOHCC StructureMap PRAPARE"
+/// description = "A StructureMap instance that represents the resource that transforms specific questions and answers from the PRAPARE questionnaire represented in LOINC (code 93025-5) into their corresponding Observations and derived Conditions (health concerns)."
 
-map "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE" = "SDOHCCStructureMapPRAPARE"
+
+map "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE" = "SDOHCC StructureMap PRAPARE"
 
 uses "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse" alias questionnaireResponse as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
