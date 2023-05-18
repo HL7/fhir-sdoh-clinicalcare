@@ -165,7 +165,7 @@ groups:
     - DocumentReferenceExample
   PRAPARE:
     name: PRAPARE Examples
-    description: PRAPARE Examples are an example of observations derived from a QuestionnaireResponse using a StructureMap
+    description: The PRAPARE Observation Examples are examples of observations derived from a QuestionnaireResponse using a StructureMap
     resources:
     - SDOHCC-ConditionHomelessExample
     - SDOHCC-ObservationResponsePRAPAREHousingStatusExample
@@ -177,7 +177,7 @@ groups:
     - SDOHCC-QuestionnairePRAPARE
   HVS:
     name: Hunger Vital Signs Examples
-    description: Hunger Vital Signs Examples are an example of observations derived from a QuestionnaireResponse using a StructureMap
+    description: The Hunger Vital Sign Observation Examples are examples of observations derived from a QuestionnaireResponse using a StructureMap
     resources:
     - StructureMap/SDOHCC-StructureMapHungerVitalSign
     - SDOHCC-QuestionnaireHungerVitalSign
