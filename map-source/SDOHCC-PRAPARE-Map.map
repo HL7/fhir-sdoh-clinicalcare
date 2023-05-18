@@ -6,7 +6,7 @@
 
 // This is a more complex example where the author has chosen to extract *all* answers to Observations and to create a grouping Observation
 
-map "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE" = "SDOHCCStructureMapPRAPARE"
+map "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE" = "SDOHCC StructureMap PRAPARE"
 
 uses "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse" alias questionnaireResponse as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
