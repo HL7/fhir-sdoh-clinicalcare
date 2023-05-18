@@ -18,7 +18,7 @@ Usage: #example
 
 Instance: DocumentReferenceExample
 InstanceOf: DocumentReference
-Title: "Document Reference for Diabetes Handout"
-Description: "Document Reference for a Diabetes Handout"
+Title: "SDOHCC DocumentReference Diabetes Handout Example"
+Description: "Document Reference for a Diabetes Handout. An example of a DocumentReference for a diabetes handout. This example is used as the referenced document in other IG examples."
 * content.attachment.url = "https://www.cdc.gov/diabetes/pdfs/managing/Managing-Diabetes_CMS-CDC_English-508.pdf"
 * status = http://hl7.org/fhir/document-reference-status#current
