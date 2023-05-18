@@ -57,8 +57,6 @@ For the purposes of this IG, there will be no need for 'topic discovery' as ther
 ServiceRequest](#servicerequest-topic).  While neither of these topics are unique to the Gravity IG, because no standard topics have yet been defined for US Core, this IG will define the needed
 topics here.  In the future, these topics may be subsumed into general-purpose topics defined by US Core and/or the FHIR core specification.
 
-**NOTE:  Lloyd will add some text about using e-mail and SMS as a notification mechanism**
-
 Systems supporting subscription SHALL support the rest-hook channel mechanism, though they may choose to support other channel approaches.  Servers SHALL support both
 JSON and XML and clients SHALL support at least one of these.  Client and server SHALL support id-only, though they may  also support other content approaches.  The
 id-only approach means that the id of the Task or ServiceRequest that was updated or created will be provided.  The client will then perform a read or a query to
