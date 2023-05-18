@@ -7,9 +7,9 @@ The guidance on this page details important concepts for implementation. See [Re
 
 ### Checking Task Status
 
-The Gravity workflow around referrals involves all parties being aware of when relevant Tasks and associated ServiceRequests have been created and/or updated. In most cases, the Tasks will reside within the EHR system of the initiating provider.  In this case, the EHR will always be aware when the Task is updated, so the challenge of monitoring Tasks will fall solely on the service delivery organization.  However, the Gravity workflow also supports Tasks being posted to a Community Based Organization's (CBO's) FHIR server or an intermediary organization like a Coordination Platform (CP) that is responsible for managing the referral fulfillment process.  In these circumstances, both EHR and service delivery organizations will need to monitor for changes to Tasks.
+The Gravity workflow around referrals involves all parties being aware of when relevant Tasks and (for referrals) associated ServiceRequests have been created and/or updated. In most cases, the Tasks will reside within the EHR system of the initiating provider.  In this case, the EHR will always be aware when the Task is updated, so the challenge of monitoring Tasks will fall solely on the service delivery organization.  However, the Gravity workflow also supports Tasks being posted to a Community Based Organization's (CBO's) FHIR server or an intermediary organization like a Coordination Platform (CP) that is responsible for managing the referral fulfillment process.  In these circumstances, the EHR will need to monitor for changes to Tasks in addition to or instead of the Service Provider.
 
-The specific types of events to be monitored for include:
+The types of task occurrences that may be of interest include:
 <br>
 **Service Delivery Organizations (CBO or CP)**
 <br>
@@ -65,7 +65,7 @@ retrieve the specified record(s) specified in the subscription notification. E.g
 <code>[base]/Task?_id=1234,5678</code>
 
 If search is used, the client MAY use _include=Task:focus to retrieve the referenced ServiceRequest as well.  E.g.
-<code>[base]/Task?_id=1234m5678&_include=Task:focus</code>
+<code>[base]/Task?_id=1234,5678&_include=Task:focus</code>
 
 ##### Task topic
 This topic allows for monitoring for newly created Tasks as well as updates to assigned or requested Tasks.
