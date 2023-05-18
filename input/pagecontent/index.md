@@ -10,7 +10,7 @@ The IG supports the following use cases:
 *   Referring patients to address SDOH needs via an electronic workflow.  The referral framework includes support for intermediary organizations to manage service delivery, closed loop feedback to the ordering provider and direct engagement with the patient and their care-givers.
 * 	Identifying cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer)
 
-{% include img-med.html img="ConceptualFramework.png" caption="Figure 1: Conceptual Framework for SDOH Clinical Care" %}
+{% include img-med.html img="ConceptualFramework-orig.jpeg" caption="Figure 1: Conceptual Framework for SDOH Clinical Care" %}
 
 <div markdown="1" class="stu-note">
 This IG often refers to Community Based Organizations (CBOs) as synonymous with a referral target and clinicians as synonymous with the referring provider.
