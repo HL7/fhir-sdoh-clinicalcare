@@ -139,7 +139,9 @@ group SetConditionFullUrl(source condition: Condition, target entry)
     </div>
   </text>
   <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapHungerVitalSign"/>
-  <name value="SDOHCCStructureMapHungerVitalSign"/>
+  <name value="SDOHCC-StructureMapHungerVitalSign"/>
+  <title value="SDOHCC StructureMap HungerVitalSign"/>
+  <description value="Description here"/>
   <structure>
     <url value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"/>
     <mode value="source"/>

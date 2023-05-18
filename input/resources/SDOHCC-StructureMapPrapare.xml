@@ -512,7 +512,9 @@ group TransformGroupObservation(source src: questionnaireResponse, source bundle
     </div>
   </text>
   <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE"/>
-  <name value="SDOHCCStructureMapPRAPARE"/>
+  <name value="SDOHCC-StructureMapPRAPARE"/>
+  <title value="SDOHCC StructureMap PRAPARE"/>
+  <description value="Description here"/>
   <structure>
     <url value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"/>
     <mode value="source"/>
