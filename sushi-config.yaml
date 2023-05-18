@@ -60,12 +60,12 @@ pages:
     title: Connecting Applications With API Data Sources
   gravity_terminology.md:
     title: Gravity Value Sets
-  artifacts.html:
-    title: Artifacts Index
-  privacy_and_security.md:
-    title: Privacy and Security
   mustsupport_and_missing_data.md:
     title: Must Support and Missing Data
+  privacy_and_security.md:
+    title: Privacy and Security
+  artifacts.html:
+    title: Artifacts Index
   draft_specifications_for_personal_characteristics.md:
     title: Draft Specifications for Personal Characteristics
   downloads.md:
