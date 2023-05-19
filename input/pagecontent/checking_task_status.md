@@ -1,15 +1,17 @@
 ### Use of Task Status
 
-Task.status is the communication mechanism that indicates the status (e.g. requested, accepted, in progress or completed).
-This enables  the exchange of information related to the request for and progress related to addressing a ServiceRequest. The value sets for the [Referral Task] status and the [Patient Task] status are different due to the purpose of the exchange between the requesting entity and the intermediary or performing entity (Referral Task) vs the exchange with the patient (Patient Task).  See those profile pages for details.
+Task.status is the communication mechanism that indicates the status of the fulfillment of a referral or patient-assigned 'to-do' (e.g. requested, accepted, in progress or completed).
+Setting the status allows the initiator of the task to understand how (and if) it is progressing. The value sets for the [Referral Task](StructureDefinition-SDOHCC-TaskForReferralManagement.html) status and the [Patient Task](StructureDefinition-SDOHCC-TaskForPatient.html) status are different due to the purpose of the exchange between the requesting entity and the intermediary or performing entity [Referral Task](StructureDefinition-SDOHCC-TaskForReferralManagement.html) vs the exchange with the patient [Patient Task](StructureDefinition-SDOHCC-TaskForPatient.html).  See those profile pages for details.
+
+"StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management
 
 The guidance on this page details important concepts for implementation. See [Referral Workflow](referral_workflow.html)  to learn how the concepts fit into the overarching guidance.
 
 ### Checking Task Status
 
-The Gravity workflow around referrals involves all parties being aware of when relevant Tasks and associated ServiceRequests have been created and/or updated. In most cases, the Tasks will reside within the EHR system of the initiating provider.  In this case, the EHR will always be aware when the Task is updated, so the challenge of monitoring Tasks will fall solely on the service delivery organization.  However, the Gravity workflow also supports Tasks being posted to a Community Based Organization's (CBO's) FHIR server or an intermediary organization like a Coordination Platform (CP) that is responsible for managing the referral fulfillment process.  In these circumstances, both EHR and service delivery organizations will need to monitor for changes to Tasks.
+The Gravity workflow around referrals involves all parties being aware of when relevant Tasks and (for referrals) associated ServiceRequests have been created and/or updated. In most cases, the Tasks will reside within the EHR system of the initiating provider.  In this case, the EHR will always be aware when the Task is updated, so the challenge of monitoring Tasks will fall solely on the service delivery organization.  However, the Gravity workflow also supports Tasks being posted to a Community Based Organization's (CBO's) FHIR server or an intermediary organization like a Coordination Platform (CP) that is responsible for managing the referral fulfillment process.  In these circumstances, the EHR will need to monitor for changes to Tasks in addition to or instead of the Service Provider.
 
-The specific types of events to be monitored for include:
+The types of task occurrences that may be of interest include:
 <br>
 **Service Delivery Organizations (CBO or CP)**
 <br>
@@ -55,8 +57,6 @@ For the purposes of this IG, there will be no need for 'topic discovery' as ther
 ServiceRequest](#servicerequest-topic).  While neither of these topics are unique to the Gravity IG, because no standard topics have yet been defined for US Core, this IG will define the needed
 topics here.  In the future, these topics may be subsumed into general-purpose topics defined by US Core and/or the FHIR core specification.
 
-**NOTE:  Lloyd will add some text about using e-mail and SMS as a notification mechanism**
-
 Systems supporting subscription SHALL support the rest-hook channel mechanism, though they may choose to support other channel approaches.  Servers SHALL support both
 JSON and XML and clients SHALL support at least one of these.  Client and server SHALL support id-only, though they may  also support other content approaches.  The
 id-only approach means that the id of the Task or ServiceRequest that was updated or created will be provided.  The client will then perform a read or a query to
@@ -65,7 +65,7 @@ retrieve the specified record(s) specified in the subscription notification. E.g
 <code>[base]/Task?_id=1234,5678</code>
 
 If search is used, the client MAY use _include=Task:focus to retrieve the referenced ServiceRequest as well.  E.g.
-<code>[base]/Task?_id=1234m5678&_include=Task:focus</code>
+<code>[base]/Task?_id=1234,5678&_include=Task:focus</code>
 
 ##### Task topic
 This topic allows for monitoring for newly created Tasks as well as updates to assigned or requested Tasks.

@@ -115,8 +115,8 @@ Note that the creation of the mapping file and compiled StructureMap only needs 
 
 This guide includes examples of a Questionnaire, QuestionnaireResponse, resulting Observations and Conditions, and the StructureMap used to convert from one to the other:
 
-1. [Hunger Vital Sign Examples](artifacts.html#hunger-vital-signs-examples)
-2. [PRAPARE Examples](artifacts.html#prapare-examples)
+1. [Hunger Vital Sign Examples](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html)
+2. [PRAPARE Examples](QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html)
 
  ----------------------------------------------------------------------------------------------------
 

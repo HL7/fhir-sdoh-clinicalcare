@@ -5,8 +5,8 @@ Systems claiming to conform to a profile SHALL support the elements in a profile
 **All Sending Systems**
 
 Sending Systems are defined as: 1) Provider Systems, 2) Payer Systems, and 3) Coordination Platforms
-* The Sending System **SHALL** provide the capability for the user to include all elements that have a MustSupport flag.
-* The Sending System **SHALL** populate all elements with a MustSupport flag if the information exists.
+* The Sending System **SHALL** provide the capability for the user to enter, select, or otherwise cause to be populated all elements marked as MustSupport.
+* The Sending System **SHALL** populate all elements with a MustSupport flag if the information exists and patient consent and receiver permissions allow.  A system SHALL be able to demonstrate transmission of all MustSupport elements.
 * The Sending System **SHALL NOT** include a data element in the resource instance if the cardinality is 0..n and the information for that particular data element is not present.
 * The Sending System **SHALL** provide the capability for elements with cardinality >=1..* when the information does not exist to send the reason that information is missing using values from the value set indicating the absent reason or, if a missing information reason does not exist in the defined value set, use the dataAbsentReason extension where it is defined.
 Note: populating the element with the value set absent reason or using the dataAbsentReason **SHOULD** be handled by the Sending System and not require provider action.
@@ -17,7 +17,7 @@ Receiving Systems are defined as 1) Payer Systems, 2) Provider Systems, 3) Coord
 * The Receiving System **SHALL** be capable of processing resource instances containing required and allowed data elements without generating an error or causing the application to fail.
 * The Receiving System **SHALL** be capable of processing (display, store, etc) all required elements (cardinality 1 or greater) and **SHOULD** be capable of processing (display, store, etc) all MustSupport elements.
 * Note: the expectation is that this requirement will be tightened (**SHOULD** going to **SHALL**) for at least a subset of the MustSupport elements in future versions of the IG.
-* The Receiving System **SHALL** interpret missing data elements within resource instances as data not present in the Senders systems.
+* The Receiving System **SHALL** interpret missing data elements within resource instances as data not present in the Senders systems or where transmission of the data is prohibited by access control rules.
 * The Receiving System **SHALL** be able to process resource instances containing data elements asserting missing information without generating an error or causing the application to fail.
 
 **Conformance to US Core Profile**

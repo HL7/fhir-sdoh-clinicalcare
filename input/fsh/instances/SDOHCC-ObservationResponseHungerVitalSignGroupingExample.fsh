@@ -1,7 +1,7 @@
 Instance: SDOHCC-ObservationResponseHungerVitalSignGroupingExample
 InstanceOf: SDOHCCObservationScreeningResponse
 Title: "SDOHCC Observation Response Hunger Vital Sign Grouping Example"
-Description: "An example of an Observation grouping that has as its members the 3 Observations generated from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9)."
+Description: "An example of an Observation grouping that has as its members the 3 Observations generated from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9). This is an example of a grouping that is not absolutely needed since each of the 3 Observations it groups already reference the QuestionnaireResponse from which they were derived. However, implementers may still choose to also create a grouping."
 Usage: #example
 * category[SocialHistory] = $observation-category#social-history "Social History"
 * category[Survey] = $observation-category#survey "Survey"

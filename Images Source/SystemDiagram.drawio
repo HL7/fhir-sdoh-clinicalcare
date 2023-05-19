@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-04-24T21:35:59.077Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.1 Chrome/112.0.5615.87 Electron/24.1.2 Safari/537.36" etag="BmQqIPRaqf59vf51Zb85" version="21.2.1" type="device">
+<mxfile host="Electron" modified="2023-05-18T23:52:43.100Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="6nNvQ2JBeEVIGVMEn3aT" version="21.2.8" type="device">
   <diagram id="pe06soAly0J2VH7pr7Gp" name="Page-1">
-    <mxGraphModel dx="2212" dy="971" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1179" dy="769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -161,8 +161,8 @@
         <mxCell id="up1Xrg0N40dvPqba2eU4-151" value="FHIR Server" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="708" y="437" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="up1Xrg0N40dvPqba2eU4-152" value="Patient App or &lt;br&gt;FHIR-enabled application&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="408" y="430" width="150" height="30" as="geometry" />
+        <mxCell id="up1Xrg0N40dvPqba2eU4-152" value="Patient App or &lt;br&gt;FHIR-Client Enabled&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="413" y="425" width="140" height="40" as="geometry" />
         </mxCell>
         <mxCell id="up1Xrg0N40dvPqba2eU4-154" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="798" y="445" width="30" height="44" as="geometry" />

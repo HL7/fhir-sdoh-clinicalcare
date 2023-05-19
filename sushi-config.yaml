@@ -60,12 +60,12 @@ pages:
     title: Connecting Applications With API Data Sources
   gravity_terminology.md:
     title: Gravity Value Sets
-  artifacts.html:
-    title: Artifacts Index
-  privacy_and_security.md:
-    title: Privacy and Security
   mustsupport_and_missing_data.md:
     title: Must Support and Missing Data
+  privacy_and_security.md:
+    title: Privacy and Security
+  artifacts.html:
+    title: Artifacts Index
   draft_specifications_for_personal_characteristics.md:
     title: Draft Specifications for Personal Characteristics
   downloads.md:
@@ -167,16 +167,16 @@ groups:
     name: PRAPARE Examples
     description: The PRAPARE Observation Examples are examples of observations derived from a QuestionnaireResponse using a StructureMap
     resources:
-    - SDOHCC-ConditionHomelessExample
-    - SDOHCC-ObservationResponsePRAPAREHousingStatusExample
-    - SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample
-    - SDOHCC-ObservationResponsePRAPAREClothingNeedExample
-    - SDOHCC-ObservationResponsePRAPAREChildCareNeedExample
-    - StructureMap/SDOHCC-StructureMapPRAPARE
-    - SDOHCC-QuestionnaireResponsePRAPAREExample
     - SDOHCC-QuestionnairePRAPARE
+    - SDOHCC-QuestionnaireResponsePRAPAREExample
+    - StructureMap/SDOHCC-StructureMapPRAPARE
+    - SDOHCC-ObservationResponsePRAPAREChildCareNeedExample
+    - SDOHCC-ObservationResponsePRAPAREClothingNeedExample
+    - SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample
+    - SDOHCC-ObservationResponsePRAPAREHousingStatusExample
+    - SDOHCC-ConditionHomelessExample
   HVS:
-    name: Hunger Vital Signs Examples
+    name: Hunger Vital Sign Examples
     description: The Hunger Vital Sign Observation Examples are examples of observations derived from a QuestionnaireResponse using a StructureMap
     resources:
     - StructureMap/SDOHCC-StructureMapHungerVitalSign

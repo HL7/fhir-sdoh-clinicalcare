@@ -33,8 +33,8 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 
 | Implementation Guide | Version | Dependency |
 | -------------------- | ------- | ---------- |
-| [US Core](https://hl7.org/fhir/us/core/STU3.1.1/) | 3.1.1 | The Condition, Goal, Procedure and Location profiles are based on  US Core  |
-| [Structured Document Capture (SDC)](http://hl7.org/fhir/uv/sdc/)| 3.0.0  | SDC is the basis for mapping QuestionnaireResponses into Observations and Conditions   |
+| [US Core](https://hl7.org/fhir/us/core/STU3.1.1/) | 3.1.1 | Where possible, all profiles in this IG are either derived from US Core 3.1.1 or aligned with that release and future releases as much as possible.  U.S. core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.  |
+| [Structured Document Capture (SDC)](http://hl7.org/fhir/uv/sdc/)| 3.0.0  | SDC is the basis for mapping QuestionnaireResponses into Observations and Conditions. SDC also provides guidance around how questionnaires can be created with support for score calculation, conditional behavior, specific rendering expectations, etc.   |
 | [Subscriptions R5 Backport](http://hl7.org/fhir/uv/subscriptions-backport) |1.1.0   | Subscriptions are recommended for monitoring completion of referrals  |
 |[Value Set Authority Center](https://vsac.nlm.nih.gov/) (VSAC)| 0.9.0   |    Gravity Project social risk data elements are published in [Value Set Authority Center](https://vsac.nlm.nih.gov/) (VSAC) value sets. The value sets can be identified by searching for "The Gravity Project" steward. You will need to create a free National Library of Medicine (NLM) account to access the value sets. Value sets will be updated bi-annually on June 30th and December 31st.   |
 {:.grid}
@@ -46,12 +46,12 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 | [Human Services Directory](https://build.fhir.org/ig/HL7/FHIR-IG-Human-Services-Directory) | Can be used by a provider to identify referral targets for SDOH-related services  |
 | [National Healthcare Directory Exchange](http://hl7.org/fhir/us/directory-exchange)| A U.S. Office of the National Coordinator-sponsored IG supporting the exchange of directory information for a wide range of service providers and organizations |
 | [SmartApp Launch](http://hl7.org/fhir/smart-app-launch)  | Allows launching third party applications in the context of another system, including allowing the application to controlled access to patient information.  |
-| [Bidirectional Service eReferral (BSeR)](http://hl7.org/fhir/us/bser/)  | Whereas this IG orchestrates referrals using the FHIR query interface, BSeR bases referral management on the exchange of self-contained Bundles of FHIR resources.  The approaches for referral management offered by this IG and BSeR should be harmonized to provide a consistent template for management of referrals by all IGs. |
-| [DaVinci Prior Authorization Support](http://hl7.org/fhir/us/davinci-pas/) (PAS)|  Payment for SDOH-related services may require integration of Prior Authorization (PAS)|
-| [DaVinci Coverage Requirements Discovery](http://hl7.org/fhir/us/davinci-crd/) (CRD) |  PAS requires integration of CRD |
-| [DaVinci Documentation Templates and Rules](http://hl7.org/fhir/us/davinci-dtr/) (DTR) | PAS require integration of DTR  |
-| [Structure Data Capture (IG)](http://hl7.org/fhir/uv/sdc/) |  This IG builds on the SDC IG for Questionnaires and QuestionnaireResponses |
+| [Bidirectional Service eReferral (BSeR)](http://hl7.org/fhir/us/bser/)  | Whereas this IG orchestrates referrals using the FHIR query interface, BSeR bases referral management on the exchange of self-contained Bundles of FHIR resources.  Gravity is working with BSeR to align referral approaches. |
+| [DaVinci Prior Authorization Support](http://hl7.org/fhir/us/davinci-pas/) (PAS)|  Together with CRD and DTR, these three IGs (collectively known as the Da Vinci Burden Reduction IGs) provide support for prior authorization and other documentation capture and could be relevant for SDOH-related services. |
+| [DaVinci Coverage Requirements Discovery](http://hl7.org/fhir/us/davinci-crd/) (CRD) |  Together with PAS and DTR, these three IGs (collectively known as the Da Vinci Burden Reduction IGs) provide support for prior authorization and other documentation capture and could be relevant for SDOH-related services. |
+| [DaVinci Documentation Templates and Rules](http://hl7.org/fhir/us/davinci-dtr/) (DTR) | Together with PAS and CRD, these three IGs (collectively known as the Da Vinci Burden Reduction IGs) provide support for prior authorization and other documentation capture and could be relevant for SDOH-related services.  |
 | [Data Exchange for Quality Measures Implementation Guide](https://hl7.org/fhir/us/davinci-deqm/) | SDOH-related services will inevitably be included in quality measurement programs |
+| [Physical Activity](https://hl7.org/fhir/us/physical-activity/) | This IG inherits functionality from the SDOH IG and uses a similar architectural approach to manage sharing of physical activity goals, referrals, and patient engagement. |
 {:.grid}
 
 ### How to Read this IG
@@ -60,7 +60,7 @@ This IG contains a wealth of material targeting different audiences. Some sectio
 
 | Section | Sub-section | Description | Audience |
 | --------| ----------- | --------- | ---------|
-| Background| [SDOH and the Graity Project](sdoh_challenges_gravity.html) | General background on the importance of collecting and standardizing social risk data, and the Gravity Project     |  General |
+| Background| [SDOH and the Gravity Project](sdoh_challenges_gravity.html) | General background on the importance of collecting and standardizing social risk data, and the Gravity Project     |  General |
 | Background| [SDOH Clinical Care Background](sdoh_clinical_care_scope.html) | A description of the clinical scope of this IG    |  General |
 | Background| [Technical Background](technical_background.html) | Background material that should be understood prior to attempting to understand this IG     |  General/Introductory |
 | Implementation Guidance| [Assessment Instrument Support] | A description of the importance of standard assessment instruments for the collection of social risk data, and how assessment instruments are mapped to SDOH Conditions, Observations and Goals     |  General |
@@ -74,8 +74,8 @@ This IG contains a wealth of material targeting different audiences. Some sectio
 {:.grid}
 
 ### Key Technical Content of this IG
-* [CapabilityStatements](artifacts.html#):   FHIR Capability statements provide the detailed requirements for a server or client.  This IG provides capability statements for Patient applications, referral sources and recipients, and coordination platform intermediaries.
-* [Profiles](artifacts.html#profiles): The profiles in this IG constrain or extend a base FHIR resource or US Core profile. This IG provides Observation, Condition, Procedure, ServiceRequest, Task, Goal, Group, HealthcareService, Consent, and Location profiles.
+* [CapabilityStatements](artifacts.html#):   CapabilityStatements formally define the different types of systems that can comply with this implementation guide and set conformance expectations around what resources and behaviors they must support.  This IG provides capability statements for Patient applications, referral sources and recipients, and coordination platform intermediaries.
+* [Profiles](artifacts.html#profiles): Profiles describe constraints and extensions on resources and data types to reflect the requirements of the use cases in an implementation guide This IG provides Observation, Condition, Procedure, ServiceRequest, Task, Goal, Group, HealthcareService, Consent, and Location profiles. In addition, this implementation guide uses (and in some cases further profiles) profiles defined in US Core.
 * [Value Sets](artifacts.html#value-sets):  FHIR value sets specify a set of codes drawn from one or more code systems, intended for use in a particular context. The Gravity Project has worked intensively to develop value sets for SDOH-related content.  This content is described where it is used.  See the following profiles: [SDOHCC Condition], [SDOHCC Observation Screening Response], [SDOHCC Procedure], [SDOHCC ServiceRequest], [SDOHCC Goal].
 * [Examples](artifacts.html#examples):  This IG provides contextually relevant examples of all profiles.
 * [Referral Workflow](referral_workflow.html):  The management of referrals by providers to community-based organizations with different levels of FHIR capability and the assignment of tasks to Patients is described in detail.
