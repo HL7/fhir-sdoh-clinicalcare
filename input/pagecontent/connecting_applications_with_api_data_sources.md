@@ -12,7 +12,7 @@ This section describes the initial connection of the Patient/Client application 
 
 1. Applications are registered with the appropriate referral platforms.
 2. On the first use of the application
-  * Patient/Client is provided a URL or a QR code.  The patient passes this information to the app - by keying in the URL or by authorizing the app to take a picture of the QR code in order to download the application to their smartphone or use as a link to an on-line application. The App authenticates the user using credentials provided by the care provider.  The App needs to be registered with the server using some shared secrets (name, DOB, registration code, etc).
+  * Patient/Client is provided a URL or a QR code.  The patient uses this information to either find the app and install it on their mobile device, or to launch an on-line application. The App authenticates the user using credentials known to or provided by the care provider (E.g. email address, DOB, registration code, etc.).
   * Patient/Client establishes credentials (username/password) and uses them to authenticate.
 3. API URL and the tokens are stored in the application
 4. When the patient/client authenticates to the application, on a timed schedule or on demand
