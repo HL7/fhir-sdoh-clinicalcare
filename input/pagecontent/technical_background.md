@@ -1,5 +1,5 @@
 ###  Underlying Technologies
-This guide is based on the [HL7 FHIR](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=491) standard. Therefore, Implementers of this specification need to understand some basic information about the FHIR specification.
+This guide is based on the [HL7 FHIR](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=491) standard. Therefore, implementers of this specification need to understand some basic information about the FHIR specification.
 
 
 This Implementation Guide uses terminology, notations and design principles that are specific to FHIR. Before reading this IG, it’s important to be familiar with some of the basic principles of FHIR as well as general guidance on how to read FHIR specifications. Readers who are unfamiliar with FHIR are encouraged to read (or at least skim) the following prior to reading the rest of this IG.
@@ -17,4 +17,4 @@ Implementers should also be familiar with the following Implementation Guides us
 * [US Core]({{site.data.fhir.ver.uscore}}/index.html)
 * [Structured Data Capture]({{site.data.fhir.ver.sdc}}) 
 
-This IG supports the [R4 version](http://hl7.org/fhir/R4) of the FHIR standard. R4 is recently published and the goal is to ensure that this IG is aligned with the current direction of the FHIR standard.
+This IG supports the [R4 version](http://hl7.org/fhir/R4) of the FHIR standard. 
