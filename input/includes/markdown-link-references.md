@@ -17,6 +17,7 @@
 [SDOHCC Task For Referral Management]: StructureDefinition-SDOHCC-TaskForReferralManagement.html
 [SDOHCC Service Request]: StructureDefinition-SDOHCC-ServiceRequest.html
 [SDOHCC Goal]: StructureDefinition-SDOHCC-Goal.html
+[SDOHCC Healthcare Service]: StructureDefinition-SDOHCC-HealthcareService.html
 [SDOHCC Procedure]: StructureDefinition-SDOHCC-Procedure.html
 [SDOHCC Condition]: StructureDefinition-SDOHCC-Condition.html
 [SDOHCC Consent]: StructureDefinition-SDOHCC-Consent.html
