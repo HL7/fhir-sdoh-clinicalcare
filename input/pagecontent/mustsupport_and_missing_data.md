@@ -8,8 +8,7 @@ Sending Systems are defined as: 1) Provider Systems, 2) Payer Systems, and 3) Co
 * The Sending System **SHALL** provide the capability for the user to enter, select, or otherwise cause to be populated all elements marked as MustSupport.
 * The Sending System **SHALL** populate all elements with a MustSupport flag if the information exists and patient consent and receiver permissions allow.  A system SHALL be able to demonstrate transmission of all MustSupport elements.
 * The Sending System **SHALL NOT** include a data element in the resource instance if the cardinality is 0..n and the information for that particular data element is not present.
-* The Sending System **SHALL** provide the capability for elements with cardinality >=1..* when the information does not exist to send the reason that information is missing using values from the value set indicating the absent reason or, if a missing information reason does not exist in the defined value set, use the dataAbsentReason extension where it is defined.
-Note: populating the element with the value set absent reason or using the dataAbsentReason **SHOULD** be handled by the Sending System and not require provider action.
+* Where elements have a lower cardinality of one or more, instances complying with those profiles **SHALL** include the element. Where the profile includes explicit support for an extension, such as [dataAbsentReason], then the extension may be sent without providing a value or child elements.  If no extension is explicitly defined in the profile then, unless the profile is derived from US Core (which has laxer rules), the expectation in this IG is that the element **SHALL** have a value or standard child elements and sending an extension instead is not compliant.
 
 **All Receiving Systems**
 
