@@ -182,9 +182,6 @@ groups:
     - StructureMap/SDOHCC-StructureMapHungerVitalSign
     - SDOHCC-QuestionnaireHungerVitalSign
     - SDOHCC-QuestionnaireResponseHungerVitalSignExample
-    - SDOHCC-ObservationResponseHungerVitalSignGroupingExample
-    - SDOHCC-ObservationResponseHungerVitalSignQuestion1Example
-    - SDOHCC-ObservationResponseHungerVitalSignQuestion2Example
     - SDOHCC-ObservationResponseHungerVitalSignQuestion3Example
     - SDOHCC-ConditionAsserterDeviceExample
     - SDOHCC-ConditionFoodInsecurityExample
