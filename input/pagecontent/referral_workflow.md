@@ -201,7 +201,7 @@ The details of the FHIR-based exchanges  are provided in the [following section]
 The following figure shows the FHIR exchanges between the referral source and target.
 For each numbered exchange, the details of the data elements exchanged, and the FHIR request and response are provided.
 
-{% include img.html img="DetailedDirectReferral.svg" caption="Figure 3: Detailed Direct Referral" %}
+{% include img.html img="DetailedDirectReferral.svg" caption="Figure 2: Detailed Direct Referral" %}
 
 | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |
@@ -267,7 +267,7 @@ This IG assumes that, in an Indirect Referral, the Referral Performer does not h
 4. Since local copies of the referenced resources are maintained by the intermediary, the intermediary must periodically query the Referral Source for updates to the referenced resources
 5. There are two versions of the [Indirect Referral] -- one where the CBO / Performer has a FHIR API (e.g. [Direct Referral]) and one where the CBO / Performer uses a FHIR enabled application (e.g. [Direct Referral Light])
 
-{% include img.html img="DetailedIndirectReferral.svg" caption="Figure 3: Detailed Indirect Referral" %}
+{% include img.html img="DetailedIndirectReferral.svg" caption="Figure 4: Detailed Indirect Referral" %}
 
 ####  Indirect Referral with Direct Light CBO
 
@@ -280,7 +280,7 @@ The provider has a relationship with the CP, but not with the CBO.  The use case
 The provider may request to have the service delivered by a specific CBO.   The CP may not accept the referral, be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
 
 ##### Indirect Referral With Direct Light CBO - Detailed View
-{% include img.html img="DetailedIndirectReferralLight.svg" caption="Figure 3: Detailed Indirect Referral Light" %}
+{% include img.html img="DetailedIndirectReferralLight.svg" caption="Figure 5: Detailed Indirect Referral Light" %}
 
 #### Notes on Direct and Indirect Referrals
 
