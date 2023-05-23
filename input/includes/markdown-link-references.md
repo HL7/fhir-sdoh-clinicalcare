@@ -39,6 +39,7 @@
 [Observations]: {{site.data.fhir.path}}observation.html
 [Conditions]: {{site.data.fhir.path}}condition.html
 [StructureMap]: {{site.data.fhir.path}}structuremap.html
+[DocumentReference]: {{site.data.fhir.path}}documentreference.html
 [FHIR Mapping Language]: {{site.data.fhir.path}}mapping-language.html
 [Exchange Workflow]: referral_workflow.html
 [Capability Statements]: artifacts.html#capability-statements
