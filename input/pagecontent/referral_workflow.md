@@ -222,7 +222,7 @@ In this use case, a provider works with a patient using a standardized assessmen
 
 The provider has a FHIR server. The CBO has a FHIR-enabled application.  The patient has a FHIR-enabled patient application.
 
-Functionally, this use case is the same as the previous use case, except that the CBO has a FHIR-enabled application, but does not support a FHIR API.  As a result, the provider can't push information to the CBO, but rather the CBO needs to pull information from the provider.    At the conclusion of the referral, the CBO POSTS needed information (e.g., Procedures) to the provider FHIR server and updates the status and the linked resources of the Task.
+Functionally, this use case is the same as the previous use case, except that the CBO has a FHIR-enabled application but does not support a FHIR API.  As a result, the provider can't push information to the CBO, but rather the CBO needs to pull information from the provider.    At the conclusion of the referral, the CBO POSTS needed information (e.g., Procedures) to the provider FHIR server and updates the status and the linked resources of the Task.
 
 The details of the FHIR-based exchanges in that box are provided in the [following section](referral_workflow.html#direct-referral-detailed-view).
 
@@ -277,7 +277,7 @@ This section differs from the previous in that the interactions between the CP a
 The provider and CP have FHIR APIs.  The CBO has a FHIR-enabled application.  The patient has a FHIR-enabled application.
 
 The provider has a relationship with the CP, but not with the CBO.  The use case assumes that the CP and the CBO have an established relationship.
-The provider may request to have the service delivered by a specific CBO.   The CP may not accept the referra, be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
+The provider may request to have the service delivered by a specific CBO.   The CP may not accept the referral, be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
 
 ##### Indirect Referral With Direct Light CBO - Detailed View
 {% include img.html img="DetailedIndirectReferralLight.svg" caption="Figure 3: Detailed Indirect Referral Light" %}
@@ -356,7 +356,7 @@ Here we provide a detailed view of an interaction between a patient application 
 | 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) |
 | 2 |  Patient  | Get DocumentReference | [DocumentReference] |
 | 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) with status changed |
-| 4 |  Patient | Update Task (completed ) | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) with status changed |
+| 4 |  Patient | Update Task (completed) | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) with status changed |
 {:.grid}
 
 
