@@ -12,6 +12,4 @@ Usage: #example
 * effectiveDateTime = "2020-09-10T21:56:54.671Z"
 * issued = "2020-09-10T21:56:54.671Z"
 * valueCodeableConcept = $loinc#LA19952-3 "At risk"
-* derivedFrom[0].reference = "Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion1Example"
-* derivedFrom[+].reference = "Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion2Example"
-* derivedFrom[+].reference = "QuestionnaireResponse/SDOHCC-QuestionnaireResponseHungerVitalSignExample"   /// NEW
+* derivedFrom[0].reference = "QuestionnaireResponse/SDOHCC-QuestionnaireResponseHungerVitalSignExample"   /// NEW
