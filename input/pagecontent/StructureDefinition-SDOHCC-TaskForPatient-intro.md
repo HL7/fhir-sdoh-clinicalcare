@@ -34,8 +34,9 @@ The allowed state transitions are defined graphically in the state diagram below
 | `in-progress` | In Progress | The task has been started but is not yet complete | Patient App |
 | `completed` | Completed | The task has been completed. |  Patient App|
 | `cancelled`  |Cancelled  | The task was not completed | Requester or Patient App |
-| `on-hold`  |On Hold | The task has been started but work has been paused. | |
+| `on-hold`  |On Hold | The task has been started but work has been paused. | Patient App |
 | `failed` | Failed | The task was attempted but could not be completed due to some error. |  Patient App|
+| `entered-in-error` | Entered in Error | The task should never have existed and is retained only because of the possibility it may have been used | Requester |
 {:.grid}
 
 ### Modification of fields
