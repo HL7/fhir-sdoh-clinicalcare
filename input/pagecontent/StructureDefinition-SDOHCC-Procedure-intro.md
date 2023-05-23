@@ -1,6 +1,6 @@
 
 ### Purpose
-SDOHCC Procedure is generally intended to represent a procedure performed to address an identified social risk or need (i.e., [SDOHCC Condition], [SDOHCC Observation Screening Response], [SDOHCC Observation Assessment]). SDOHCC Procedure can be based on an [SDOHCC ServiceRequest]  pertain to an [SDOHCC Goal], or be the output of an [SDOHCC Task For Referral Management]. See the [Data Modeling Framework] for more detail on the relationships between SDOHCC Procedure and the other profiles in this IG.
+SDOHCC Procedure is generally intended to represent a procedure performed to address an identified social risk or need (i.e., [SDOHCC Condition], [SDOHCC Observation Screening Response], [SDOHCC Observation Assessment]). SDOHCC Procedure can be based on an [SDOHCC ServiceRequest], pertain to an [SDOHCC Goal], or be the output of an [SDOHCC Task For Referral Management]. See the [Data Modeling Framework] for more detail on the relationships between SDOHCC Procedure and the other profiles in this IG.
 
 ### Usage
 
