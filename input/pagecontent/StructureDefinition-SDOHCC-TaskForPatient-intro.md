@@ -10,7 +10,7 @@ The table shows the types of tasks that can be assigned to the patient and the c
 
 |    Task Type     | Task.code             | Task.description | Task.input                  |  Task.output                                    |   Task.focus |
 | ------------------ | --------------------- | ---------------- | --------------------------- |------------------------------------------------ | ------ |
-| Questionnaire (FHIR)|  |  | questionnaire, questionnaire-category required | If present, questionnaire-response   | |
+| Questionnaire (FHIR)| `complete-questionnaire` |  | questionnaire, questionnaire-category required | If present, questionnaire-response   | |
 | Questionnaire (PDF)| `complete-questionnaire`  | | questionnaire-pdf, questionnaire-category required | If present, questionnaire-pdf-completed   | |
 | Questionnaire (URL)| `complete-questionnaire` | | questionnaire-url, questionnaire-category required |     | |
 | General Information  | `general-information` | required |        | If present, general-information-response |  |
