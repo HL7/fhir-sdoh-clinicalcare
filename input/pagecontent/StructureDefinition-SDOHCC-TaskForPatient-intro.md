@@ -10,10 +10,10 @@ The table shows the types of tasks that can be assigned to the patient and the c
 
 |    Task Type     | Task.code             | Task.description | Task.input                  |  Task.output                                    |   Task.focus |
 | ------------------ | --------------------- | ---------------- | --------------------------- |------------------------------------------------ | ------ |
-| Questionnaire (FHIR)| `complete-questionnaire` |  | questionnaire, questionnaire-category required | If present, questionnaire-response   | |
+| Questionnaire (FHIR)|  |  | questionnaire, questionnaire-category required | If present, questionnaire-response   | |
 | Questionnaire (PDF)| `complete-questionnaire`  | | questionnaire-pdf, questionnaire-category required | If present, questionnaire-pdf-completed   | |
 | Questionnaire (URL)| `complete-questionnaire` | | questionnaire-url, questionnaire-category required |     | |
-| General Information  | `general-information` | required |        | If present, general-information-response | The request is in Task.description |
+| General Information  | `general-information` | required |        | If present, general-information-response |  |
 | Make Contact Directions |  `make-contact` |  | at least one contact-entity is required | If present, chosen-contact |
 | Review Material | `review-material` | |  | | DocumentReference required. |
 {:.grid}

@@ -49,7 +49,7 @@ Description: "Profile for observations that represent question and answer pairs 
 * value[x] ^slicing.discriminator.type = #type
 * value[x] ^slicing.discriminator.path = "$this"
 * value[x] ^slicing.rules = #open
-* value[x] ^meaningWhenMissing = "Observation.value may be missing if the LOINC Normative Answer List for a LOINC code does not offer an adequate code for why an Observation.value may not be known. In this case, Observation.dataAbsentReason should be used in lieu of Observation.value"
+* value[x] ^comment = "An observation exists to have a value, though it might not if it is in error, if it represents a group of observations, or if it a reason for its omission is captured by Observation.dataAbsentReason."
 * value[x] ^requirements = "An observation exists to have a value, though it might not if it is in error, if it represents a group of observations, or if it a reason for its omission is captured by Observation.dataAbsentReason."
 * valueQuantity 0..1
 * valueQuantity only Quantity
@@ -58,7 +58,7 @@ Description: "Profile for observations that represent question and answer pairs 
 * valueCodeableConcept 0..1
 * valueCodeableConcept only CodeableConcept
 * valueCodeableConcept from LOINCCodes (preferred)
-* valueCodeableConcept ^comment = "An observation may have; 1) a single value here, 2) both a value and a set of related or component values, 3) only a set of related or component values, or 4) no value or components and an Observation.dataAbsentReason instead. If a value is present, the datatype for this element should be determined by Observation.code.  Observation.dataAbsentReason SHALL only be used in place of Observation.value if the answer list corresponding to the Observation.code does not allow conveying the appropriate reason why a ‘normal’ Observation.value is not known or available. For additional guidance, see the [Notes section](observation.html#notes) below."
+* valueCodeableConcept ^comment = "The allowed set of codes will be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value."
 * valueCodeableConcept ^binding.description = "This value set includes all LOINC codes"
 * dataAbsentReason MS
 * dataAbsentReason ^comment = "\"Null\" or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values. For a given LOINC question, if the LOINC answer list includes concepts such as 'unknown' or 'not available', they should be used for Observation.value. Where these concepts are not part of the value set for Observation.value, the Observation.dataAbsentReason can be used if necessary and appropriate."
