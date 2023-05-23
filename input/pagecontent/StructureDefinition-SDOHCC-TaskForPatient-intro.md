@@ -40,6 +40,6 @@ The allowed state transitions are defined graphically in the state diagram below
 {:.grid}
 
 ### Modification of fields
-In addition to a limited set of status values, the patient application is only permitted to modify a specific set of elements in responding to the task request.  These elements include: .status, .statusReason, and .output.  All other elements are outside of the scope of this IG. The patient application cannot modify the status of the referral task (SDOHCC Task For Referral Management), that can only be done by the requester and the performing or intermediary entity.
+In addition to a limited set of status values, the patient application is only permitted to modify a specific set of elements in responding to the task request.  These elements include: .status, .statusReason, and .output.  All other elements are outside of the scope of this IG. The patient application cannot modify the status of the referral task [SDOHCC Task For Referral Management], that can only be done by the requester and the performing or intermediary entity.
 
 {% include markdown-link-references.md %}
