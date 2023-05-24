@@ -44,9 +44,7 @@ This implementation guide includes a complete example of the [Hunger Vital Sign 
 * an [SDC HVS Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)
 * an [SDC HVS QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html)
 * a [StructureMap](StructureMap-SDOHCC-StructureMapHungerVitalSign.html) that takes the [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) and creates the appropriate [SDOHCC Observation Screening Response] and [SDOHCC Condition] instances
-* three [SDOHCC Observation Screening Response] instances used to record the questions and answers on the assessment instrument
-  * [Question 1](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion1Example.html)
-  * [Question 2](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion2Example.html)
+* one [SDOHCC Observation Screening Response] instance used to record the questions and answers on the assessment instrument
   * [Question 3](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example.html) (computed in the assessment instrument based on Questions 1 and 2)
 * a [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) that could be used to record the health concern based on the assessment instrument results
 
