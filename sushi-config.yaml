@@ -177,7 +177,7 @@ groups:
     - SDOHCC-ConditionHomelessExample
   HVS:
     name: Hunger Vital Sign Examples
-    description: The Hunger Vital Sign Observation Examples are examples of observations derived from a QuestionnaireResponse using a StructureMap
+    description: For the Hunger Vital Sign assessment instrument, these are examples of a Questionnaire, a QuestionnaireResponse, and a StructureMap, as well as of an Observation and Condition derived from the QuestionnaireResponse using the StructureMap.
     resources:
     - StructureMap/SDOHCC-StructureMapHungerVitalSign
     - SDOHCC-QuestionnaireHungerVitalSign
