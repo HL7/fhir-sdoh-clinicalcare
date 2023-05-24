@@ -141,8 +141,8 @@ groups:
     - SDOHCC-GroupSDOHPatientsForPayerExample
     - SDOHCC-HealthcareServiceTelecomAppointmentExample
     - SDOHCC-LocationExample
-    - SDOHCC-ObservationAssessmentInadequateFoodIntakeExample
     - SDOHCC-ObservationAssessmentSocialIsolationExample
+    - SDOHCC-ObservationAssessmentInadequateFoodIntakeExample
     - SDOHCC-ObservationAssessmentTransportTooExpensiveExample
     - SDOHCC-OrganizationClinicExample
     - SDOHCC-OrganizationCoordinationPlatformExample
@@ -155,18 +155,18 @@ groups:
     - SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample
     - SDOHCC-ServiceRequestSubreferralGardenProgramExample
     - SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample
-    - SDOHCC-TaskPatientMakeAppointmentCompletedExample
-    - SDOHCC-TaskPatientRiskQuestionnaireCompletedExample
     - SDOHCC-TaskPatientReviewInformationCompletedExample
-    - SDOHCC-TaskPatientInformationRequestCompletedExample
+    - SDOHCC-TaskPatientInformationRequestCompletedExample  
     - SDOHCC-TaskReferralManagementOrderFulfillmentAcceptedExample
     - SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample
     - SDOHCC-TaskReferralManagementOrderSubtaskAcceptedExample
     - SDOHCC-TaskReferralManagementOrderSubtaskCompletedExample
+    - SDOHCC-TaskPatientMakeAppointmentCompletedExample
+    - SDOHCC-TaskPatientRiskQuestionnaireCompletedExample
     - DocumentReferenceExample
   PRAPARE:
     name: PRAPARE Examples
-    description: The PRAPARE Observation Examples are examples of observations derived from a QuestionnaireResponse using a StructureMap
+    description: For the PRAPARE assessment instrument, these are examples of a Questionnaire, a QuestionnaireResponse, and a StructureMap, as well as of Observations and a Condition derived from the QuestionnaireResponse using the StructureMap.
     resources:
     - SDOHCC-QuestionnairePRAPARE
     - SDOHCC-QuestionnaireResponsePRAPAREExample
@@ -180,16 +180,16 @@ groups:
     name: Hunger Vital Sign Examples
     description: For the Hunger Vital Sign assessment instrument, these are examples of a Questionnaire, a QuestionnaireResponse, and a StructureMap, as well as of an Observation and Condition derived from the QuestionnaireResponse using the StructureMap.
     resources:
-    - StructureMap/SDOHCC-StructureMapHungerVitalSign
     - SDOHCC-QuestionnaireHungerVitalSign
     - SDOHCC-QuestionnaireResponseHungerVitalSignExample
+    - StructureMap/SDOHCC-StructureMapHungerVitalSign    
     - SDOHCC-ObservationResponseHungerVitalSignQuestion3Example
+    - SDOHCC-ConditionFoodInsecurityExample 
+    - SDOHCC-DeviceSoftwareExample       
     - SDOHCC-ConditionAsserterDeviceExample
-    - SDOHCC-ConditionFoodInsecurityExample
-    - SDOHCC-DeviceSoftwareExample
   NHANES:
     name: Social Connection and Isolation Panel (NHANES) Examples
-    description: These examples illustrate how an Observation grouping can use hasMember to link individual Observations from a questionnaire/panel in the case where the individual Observations do not reference QuestionnaireResponse.
+    description: For the NHANES assessment instrument, these are examples of Observations that were not created from a QuestionnaireResponse and, therefore, do not reference QuestionnaireResponse (via derivedFrom). Instead, the Observation grouping (via hasMember) links the NHANES assessment instrument to the Observations that resulted from it.
     resources:
     - SDOHCC-ObservationResponseNHANESGroupingExample
     - SDOHCC-ObservationResponseNHANESQuestion1Example
