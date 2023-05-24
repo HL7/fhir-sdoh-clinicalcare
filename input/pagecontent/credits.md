@@ -32,11 +32,6 @@ We would like to thank [CyncHealth](https://cynchealth.org/), the [Agency for He
 | Gail Shenk         | [MITRE](https://www.mitre.org/)[^1]                                                |
 {:.grid}
 
-
-The STU2.1 Update was developed using [FHIR Shorthand syntax](http://hl7.org/fhir/uv/shorthand/) and the [SUSHI tookit](https://fshschool.org/docs/sushi/). Generous guidance on FHIR Shorthand and SUSHI was provided by Chris Moesel.
-
-Capability statements were rendered with [tools](https://github.com/caspears/CapStatement) developed by Eric Haas and modified by Corey Spears, and additional [scripts](https://github.com/HL7/fhir-sdoh-clinicalcare/tree/master/capstmt).
-
 Our thanks to these and to the many others not explicitly listed who contributed their time, enthusiasm and expertise to this work.
 
 This implementation guide was created under the supervision and review of the [HL7 Patient Care Work Group](http://www.hl7.org/Special/committees/patientcare/index.cfm)
