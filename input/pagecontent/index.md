@@ -3,11 +3,11 @@
 Social determinants of health (SDOH) are the conditions in the environments where people are born, live, learn, work, play, worship, and age that affect a wide range of health, functioning, and quality-of-life outcomes and risks[^1]. They are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange coded content using the HL7 FHIR Standard for the following SDOH-focused care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions.  This IG addresses the need to gather SDOH information in multiple settings, share that information between stakeholders, and exchange referrals between organizations to address specific social risks and needs, all with appropriate patient consent.  In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research.
 
 
-This IG was developed by the [Gravity Project], which aims to build and promulgate consensus-driven social determinants of health (SDOH) data standards for health and social care interoperability and use among multi-stakeholders. The project and this implementation guide are focused on the U.S. environment.  This IG leverages content from the [US Core Implementation Guide]({{site.data.fhir.ver.uscore}}/index.html) and binds to US-specific terminology.  However, the basic constructs and interaction patterns may well be applicable outside the U.S.
+This IG was developed by the [Gravity Project], which aims to build and promulgate consensus-driven social determinants of health (SDOH) data standards for health and social care interoperability and use among multiple stakeholders. The project and this implementation guide are focused on the U.S. environment.  This IG leverages content from the [US Core Implementation Guide]({{site.data.fhir.ver.uscore}}/index.html) and binds to US-specific terminology.  However, the basic constructs and interaction patterns may well be applicable outside the U.S.
 
 The IG supports the following use cases:
 * 	Documenting SDOH data in conjunction with patient encounters with providers, payers, and community services
-*   Referring patients to address SDOH needs via an electronic workflow.  The referral framework includes support for intermediary organizations to manage service delivery, closed loop feedback to the ordering provider and direct engagement with the patient and their care-givers.
+*   Referring patients to address SDOH needs via an electronic workflow.  The referral framework includes support for intermediary organizations to manage service delivery, closed loop feedback to the ordering provider and direct engagement with the patient and their caregivers.
 * 	Identifying cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer)
 
 {% include img-med.html img="ConceptualFramework-orig.jpeg" caption="Figure 1: Conceptual Framework for SDOH Clinical Care" %}
@@ -20,12 +20,12 @@ There is nothing that prevents use of the IG for other referral sources and targ
 The activities supported by this IG include (see [Conceptual Framework](sdoh_clinical_care_scope.html) for more details)
   - Screening: This refers to activities where social risk data from individuals are initially captured, whether through a self-administered, provider-administered, or health plan-administered questionnaire. These activities may also be repeated at certain intervals to monitor changes in social risks.
   - Assessment/Diagnosis: These include activities where providers (clinical and community-based) and health plans analyze the data obtained through screening and interaction with the individual to determine their social risks and needs.
-  - Treatment/Interventions: These refer to actions undertaken by providers (clinical and community-based) and health plans to help address identified social risks and needs. These include referrals, case management, care planning, counseling and education, and provision of services and orders.
+  - Interventions: These refer to actions undertaken by providers (clinical and community-based) and health plans to help address identified social risks and needs. These include referrals, case management, care planning, counseling and education, and provision of services and orders.
 
 
-Currently, this IG is intended to support Patient Applications, Provider's Electronic Health Record (EHR) systems, Coordination Platforms that intermediate between Providers and Community Based SDOH Service providers, and Community Based SDOH Service Providers.  In the future payer systems and governmental systems will be supported. The IG establishes a framework for SDOH-related interventions including:
-* capture of survey data from validated instruments
-* mapping the responses from assessments into observations, conditions, and goals using SDOH-relevant value sets using established standards (see [Mapping QuestionnaireResponses to FHIR Resources](assessment_instrument_support.html#mapping-questionnaireresponses-to-fhir-resources))
+Currently, this IG is intended to support Patient Applications, Provider's Electronic Health Record (EHR) systems, Coordination Platforms that intermediate between Providers and Community Based Organizations that provide SDOH services. In the future payer systems and governmental systems will be supported. The IG establishes a framework for SDOH-related interventions including:
+* capture of  data from validated assessment instruments
+* mapping the responses from assessments to observations, conditions, and goals using SDOH-specific value sets using established standards (see [Mapping QuestionnaireResponses to FHIR Resources](assessment_instrument_support.html#mapping-questionnaireresponses-to-fhir-resources))
 * generating and monitoring referrals from providers and care coordinators for SDOH-related services provided by CBOs
 * capturing the results of the referrals as procedures
 
@@ -33,9 +33,9 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 
 | Implementation Guide | Version | Dependency |
 | -------------------- | ------- | ---------- |
-| [US Core](https://hl7.org/fhir/us/core/STU3.1.1/) | 3.1.1 | Where possible, all profiles in this IG are either derived from US Core 3.1.1 or aligned with that release and future releases as much as possible.  U.S. core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.  |
-| [Structured Document Capture (SDC)](http://hl7.org/fhir/uv/sdc/)| 3.0.0  | SDC is the basis for mapping QuestionnaireResponses into Observations and Conditions. SDC also provides guidance around how questionnaires can be created with support for score calculation, conditional behavior, specific rendering expectations, etc.   |
-| [Subscriptions R5 Backport](http://hl7.org/fhir/uv/subscriptions-backport) |1.1.0   | Subscriptions are recommended for monitoring completion of referrals  |
+| [US Core](https://hl7.org/fhir/us/core/STU3.1.1/) | 3.1.1 | Where possible, all profiles in this IG are either derived from US Core 3.1.1 or aligned with that release and future releases as much as possible.  U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.  |
+| [Structured Document Capture (SDC)](http://hl7.org/fhir/uv/sdc/)| 3.0.0  | SDC is the basis for mapping QuestionnaireResponses to Observations and Conditions. SDC also provides guidance around how questionnaires can be created with support for score calculation, conditional behavior, specific rendering expectations, etc.   |
+| [Subscriptions R5 Backport](http://hl7.org/fhir/uv/subscriptions-backport) |1.1.0   | Subscriptions are recommended for monitoring completion of referrals.  |
 |[Value Set Authority Center](https://vsac.nlm.nih.gov/) (VSAC)| 0.9.0   |    Gravity Project social risk data elements are published in [Value Set Authority Center](https://vsac.nlm.nih.gov/) (VSAC) value sets. The value sets can be identified by searching for "The Gravity Project" steward. You will need to create a free National Library of Medicine (NLM) account to access the value sets. Value sets will be updated bi-annually on June 30th and December 31st.   |
 {:.grid}
 
@@ -80,7 +80,7 @@ This IG contains a wealth of material targeting different audiences. Some sectio
 * [Examples](artifacts.html#examples):  This IG provides contextually relevant examples of all profiles.
 * [Referral Workflow](referral_workflow.html):  The management of referrals by providers to community-based organizations with different levels of FHIR capability and the assignment of tasks to Patients is described in detail.
 
-* [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html):   These profiles are included to promote their use and eventual incorporation into [US Core]({{site.data.fhir.ver.uscore}}/index.html).
+* [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html):   These profiles are included to test and promote their use and possible future incorporation into [US Core]({{site.data.fhir.ver.uscore}}/index.html).
 
 ----------------------------------------------------------------------------------------------------
 [^1]: [Healthy People 2030](https://health.gov/healthypeople/priority-areas/social-determinants-health)
