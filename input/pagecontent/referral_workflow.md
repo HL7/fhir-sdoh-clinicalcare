@@ -117,7 +117,7 @@ The [Patient Coordination](referral_workflow.html#patient-coordination-workflow)
 <tr>
 <td>6</td>
 <td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
-<td>Provider initiates a referral to the CBO or CP<sup><a href=#footnote1">1</a></sup></td>
+<td>Provider initiates a referral to the CBO or CP<sup><a href="#footnote1">1</a></sup></td>
 <td><ul><li><a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a></li><li><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a> </li></ul></td>
 <td>none</td>
 </tr>
