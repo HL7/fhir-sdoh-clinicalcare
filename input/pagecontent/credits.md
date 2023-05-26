@@ -28,8 +28,8 @@ We would like to thank [CyncHealth](https://cynchealth.org/), the [Agency for He
 | Bret Heale         | [Elimu](https://www.elimu.io/)                                                     |
 | Himali Saitwal     | [EMI Advisors, LLC](https://www.emiadvisors.net/)                                  |
 | Corey Spears       | MITRE[^1]                                                                          |
-| Saul A. Kravitz    | MITRE[^1]                                                                          |
-| Gail Shenk         | MITRE[^1]                                                                          |
+| Saul A. Kravitz    | MITRE                                                                              |
+| Gail Shenk         | MITRE                                                                              |
 {:.grid}
 
 Our thanks to these and to the many others not explicitly listed who contributed their time, enthusiasm and expertise to this work.
