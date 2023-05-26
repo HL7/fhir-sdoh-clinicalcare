@@ -3,8 +3,6 @@
 Task.status is the communication mechanism that indicates the status of the fulfillment of a referral or patient-assigned 'to-do' (e.g. requested, accepted, in progress or completed).
 Setting the status allows the initiator of the task to understand how (and if) it is progressing. The value sets for the [Referral Task](StructureDefinition-SDOHCC-TaskForReferralManagement.html) status and the [Patient Task](StructureDefinition-SDOHCC-TaskForPatient.html) status are different due to the purpose of the exchange between the requesting entity and the intermediary or performing entity [Referral Task](StructureDefinition-SDOHCC-TaskForReferralManagement.html) vs the exchange with the patient [Patient Task](StructureDefinition-SDOHCC-TaskForPatient.html).  See those profile pages for details.
 
-"StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management
-
 The guidance on this page details important concepts for implementation. See [Referral Workflow](referral_workflow.html)  to learn how the concepts fit into the overarching guidance.
 
 ### Checking Task Status
