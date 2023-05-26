@@ -44,7 +44,7 @@ This implementation guide includes a complete example of the [Hunger Vital Sign 
 * an [SDC HVS Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)
 * an [SDC HVS QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html)
 * a [StructureMap](StructureMap-SDOHCC-StructureMapHungerVitalSign.html) that takes the [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) and creates the appropriate [SDOHCC Observation Screening Response] and [SDOHCC Condition] instances
-* one [SDOHCC Observation Screening Response] instance used to record Question 3 on the assessment instrument (computed based on the answers to Questions 1 and 2)
+* one [SDOHCC Observation Screening Response] instance used to record [Question 3](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example.html) on the assessment instrument (computed based on the answers to Questions 1 and 2)
 * a [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) that could be used to record the health concern based on the assessment instrument results
 
 #### Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences (PRAPARE) Survey Example
