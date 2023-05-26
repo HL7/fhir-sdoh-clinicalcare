@@ -36,7 +36,7 @@ Our thanks to these and to the many others not explicitly listed who contributed
 
 This implementation guide was created under the supervision and review of the [HL7 Patient Care Work Group](http://www.hl7.org/Special/committees/patientcare/index.cfm)
 
-----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------
 [^1]: MITRE's participation in the development of STU2.1 was supported under contract to The Centers for Medicare & Medicaid Services, Office of Burden Reduction & Health Informatics.
 
 {% include markdown-link-references.md %}
