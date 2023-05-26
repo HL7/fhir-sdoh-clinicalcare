@@ -1,6 +1,6 @@
 ### Why Social Determinants of Health Matter
 
-The influence of social determinants on health outcomes is increasingly recognized in emerging payment reform programs, federal and state-based policies, and information technology initiatives.  ocial determinants of health (SDOH) are the conditions in the environments where people are born, live, learn, work, play, worship, and age that affect a wide range of health, functioning, and quality-of-life outcomes and risks[^1].
+The influence of social determinants on health outcomes is increasingly recognized in emerging payment reform programs, federal and state-based policies, and information technology initiatives.  Social determinants of health (SDOH) are the conditions in the environments where people are born, live, learn, work, play, worship, and age that affect a wide range of health, functioning, and quality-of-life outcomes and risks[^1].
 
 The growing awareness around SDOH has contributed to efforts to address actionable social risks through the health care delivery system.  Recommendations from national groups, including the [American Academy of Pediatrics](https://www.aap.org/), [American Academy of Family Physicians](https://www.aafp.org/), [Agency for Healthcare Research and Quality](https://www.ahrq.gov/), [National Quality Forum (NQF)](https://www.qualityforum.org/), and [Institute for Health Care Improvement](http://www.ihi.org/) underscore the various roles the health care system could play in helping to identify and address patients' social risks and needs.[^2]
 
