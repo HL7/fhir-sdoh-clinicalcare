@@ -9,14 +9,14 @@ The VSAC value set names align with the profiles in which they are used in this 
 | **Gravity VSAC value sent name includes:** | **Used with:**                                                                 |
 | ------------------------------------------ | ------------------------------------------------------------------------------ |
 | Diagnoses                                  | [SDOHCC Condition][SDOHCC Condition]                                           |
-| Procdures                                  | [SDOHCC Procedure][SDOHCC Procedure]                                           |
-| Sevice Requests                            | [SDOHCC Service Request][SDOHCC Service Request]                               |
+| Procedures                                 | [SDOHCC Procedure][SDOHCC Procedure]                                          |
+| Service Requests                           | [SDOHCC Service Request][SDOHCC Service Request]                              |
 | Goals                                      | [SDOHCC Goal][SDOHCC Goal]                                                     |
 | Assessments                                | [SDOHCC Observation Screening Response][SDOHCC Observation Screening Response] |
 {:.grid}
 
 
-In VSAC, for the above profiles (e.g., [SDOHCC Condition][SDOHCC Condition], code system-specific value sets are created for each domain (e.g., [Food Insecuirty Diagnoses ICD10CM](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.3/expansion/Latest), [Food Insecurity Diagnosis SNOMED CT](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.1/expansion/Latest)) and then grouped into domain-specific value sets (e.g., [Food Insecurity Diagnoses](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.17/expansion/Latest) for use as preferred value sets for a profile. Finally, the domain-specific value sets for each profile are grouped into a value set containing the values for all SDOH domains (e.g., [Social Determinants of Health Conditions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion/Latest)).
+In VSAC, for the above profiles (e.g., [SDOHCC Condition][SDOHCC Condition], code system-specific value sets are created for each domain (e.g., [Food Insecurity Diagnoses ICD10CM](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.3/expansion/Latest), [Food Insecurity Diagnosis SNOMED CT](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.1/expansion/Latest)) and then grouped into domain-specific value sets (e.g., [Food Insecurity Diagnoses](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.17/expansion/Latest) for use as preferred value sets for a profile. Finally, the domain-specific value sets for each profile are grouped into a value set containing the values for all SDOH domains (e.g., [Social Determinants of Health Conditions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion/Latest)).
 
 ### Example of Value Sets for Condition.code and their grouping in VSAC
 The figure below illustrates how value sets are used and grouped for Condition.code for the [SDOHCC Condition][SDOHCC Condition] profile.
