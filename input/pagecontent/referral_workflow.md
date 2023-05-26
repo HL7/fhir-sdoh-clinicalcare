@@ -38,7 +38,7 @@ The functional use cases in the table below describe the referral process, initi
 | [Direct Referral](referral_workflow.html#directreferral) | A referral between a referral source (e.g., provider) and a referral target (e.g., CBO) where both entities have FHIR server APIs and an intermediary (e.g., CP) is not involved in the referral.| ![providericon], ![patienticon], ![cboicon] |
 | [Direct Referral Light](referral_workflow.html#direct-referral-light) | A “light” version of the Direct Referral. A referral between a referral source (e.g., provider) and a referral target (e.g., CBO) where the referral source has a FHIR server API, the referral target does not have a FHIR server API but has an application that can access the referral source’s FHIR server API, and an intermediary (e.g., CP) is not involved in the referral.  | ![providericon], ![patienticon], ![cboicon]  |
 | [Indirect Referral](referral_workflow.html#indirectreferral) | A referral between a referral source (e.g., provider) and a referral target (e.g., a CBO) that involves an intermediary (e.g., a CP) and all entities have FHIR servers APIs.  | ![providericon], ![patienticon], ![cboicon]. ![cpicon] |
-| [Indirect Referral Light](referral_workflow.html#indirect-referral-with-direct-light-cbo) | A “light” version of the Indirect Referral. A referral between a referral source (e.g., provider) and a referral target (e.g., CBO) that involves an intermediary (e.g., a CP) where the referral source and intermediary have FHIR server APIs and the referral target does not have a FHIR server API but has an application that can access the intermediaries FHIR server API. | ![providericon], ![patienticon], ![cboicon]. ![cpicon] |
+| [Indirect Referral Light](referral_workflow.html#indirect-referral-light) | A “light” version of the Indirect Referral. A referral between a referral source (e.g., provider) and a referral target (e.g., CBO) that involves an intermediary (e.g., a CP) where the referral source and intermediary have FHIR server APIs and the referral target does not have a FHIR server API but has an application that can access the intermediaries FHIR server API. | ![providericon], ![patienticon], ![cboicon]. ![cpicon] |
 {:.grid}
 
 <div markdown="1" class="stu-note">
@@ -117,7 +117,7 @@ The [Patient Coordination](referral_workflow.html#patient-coordination-workflow)
 <tr>
 <td>6</td>
 <td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
-<td>Provider initiates a referral to the CBO or CP<sup><a href="#footnote1">1</a></sup></td>
+<td>Provider<sup><a href="#footnote1">1</a></sup> initiates a referral to the CBO or CP</td>
 <td><ul><li><a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a></li><li><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a> </li></ul></td>
 <td>none</td>
 </tr>
@@ -180,7 +180,7 @@ The [Patient Coordination](referral_workflow.html#patient-coordination-workflow)
 </tr>
 </tbody></table>
 
-[1] Although this workflow references provider as the referral source, the .requester element in the two profiles exchanged here allow other roles (e.g., care coordinator) and organizations (e.g., payer) to request a referral.
+<p>Although this workflow references provider as the referral source, the .requester element in the two profiles exchanged here allow other roles (e.g., care coordinator) and organizations (e.g., payer) to request a referral.<span id="footnote1"><sup><a href="footnote1">1</a></sup></span>.</p>
 
 #### Direct Referral
 <a name="directreferral"></a>
@@ -217,7 +217,7 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 #### Direct Referral Light
 In this use case, a provider works with a patient using a standardized assessment instrument to identify and prioritize social risks and needs, and then refers the patient to a CBO for help addressing those needs.  The CBO provides the requested support to the patient and the updated information is shared with the referring provider.
 
-The provider has a FHIR server API. Functionally, this differs from the [Direct Referral](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/referral_workflow.html#direct-referral) in that the CBO does not have a FHIR server API but has an application that can access a FHIR server API. As a result, the provider can’t push information to the CBO, but rather the CBO needs to pull information from the provider. At the conclusion of the referral, the CBO POSTS necessary information (e.g., Procedures) to the provider’s FHIR server API and updates the status and the linked resources of the Task.
+The provider has a FHIR server API. Functionally, this differs from the [Direct Referral](referral_workflow.html#direct-referral) in that the CBO does not have a FHIR server API but has an application that can access a FHIR server API. As a result, the provider can’t push information to the CBO, but rather the CBO needs to pull information from the provider. At the conclusion of the referral, the CBO POSTS necessary information (e.g., Procedures) to the provider’s FHIR server API and updates the status and the linked resources of the Task.
 
 The details of the FHIR-based exchanges are provided in the [following section](referral_workflow.html#direct-referral-detailed-view).
 
@@ -266,7 +266,7 @@ In the Indirect Referral, this IG assumes that the referral source does not have
 
 The patient is assessed by a provider and referred to a CP. The CP refers to a CBO to deliver the service. The provider and CP have FHIR server APIs. The CBO does not have a FHIR server API but has an application that can access a FHIR server API.
 
-This section differs from the [Indirect Referral](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/referral_workflow.html#indirect-referral-with-direct-cbo) in that the interactions between the CP and CBO follow the Direct Light paradigm. The CBO will maintain data on the CP’s FHIR server API. CBOs without their own FHIR server API will modify tasks directly on the CP’s FHIR server API.
+This section differs from the [Indirect Referral](referral_workflow.html#indirect-referral) in that the interactions between the CP and CBO follow the Direct Light paradigm. The CBO will maintain data on the CP’s FHIR server API. CBOs without their own FHIR server API will modify tasks directly on the CP’s FHIR server API.
 
 The provider has a relationship with the CP, but not with the CBO.  The use case assumes that the CP and the CBO have an established relationship.
 The provider may request to have the service delivered by a specific CBO.   The CP may not accept the referral, be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
