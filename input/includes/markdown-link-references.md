@@ -32,7 +32,6 @@
 [SDC Questionnaire]: https://hl7.org/fhir/us/sdc/sdc-questionnaire.html
 [StructureMap]: https://www.hl7.org/fhir/structuremap.html
 [Timing]: https://www.hl7.org/fhir/datatypes.html#timing
-[MITRE]: https://www.mitre.org
 
 <!--# Document Sections --> 
 [Referral Workflow]: referral_workflow.html
