@@ -13,7 +13,7 @@ Entities covered under a BAA may be able to receive Protected Health Information
 ### Statutes, Regulations, and Guiding Principles
 All implementations of the SDOH ClinicalCare FHIR Implementation Guide (IG)
 * **SHALL** meet all current relevant Federal and State statutes and regulations regarding security and privacy.
-* **SHALL** use applicable technical standards required by current regulations published by CMS and ONC (allowing for voluntary use through the the [Standards Version Advancement Process (SVAP)](https://www.healthit.gov/isa/standards-version-advancement-process#:~:text=ONC%20has%20established%20the%20voluntary,of%20Certification%20requirement%20(%C2%A7%20170.405))) unless an exception has been granted.
+* **SHALL** use applicable technical standards required by current regulations published by CMS and ONC (allowing for voluntary use through the [Standards Version Advancement Process (SVAP)](https://www.healthit.gov/isa/standards-version-advancement-process#:~:text=ONC%20has%20established%20the%20voluntary,of%20Certification%20requirement%20(%C2%A7%20170.405))) unless an exception has been granted.
 * **SHOULD** follow the [Gravity Project Data Principles](https://confluence.hl7.org/display/GRAV/Gravity+Data+Principles) when the final version is published.
 * **SHALL** support patient/member consent and/or treatment of sensitive information consistent with Federal and State statutes and regulations.
 * **SHOULD** support the consent and data sharing policies of trading partners involved in the exchange that are more protective so long as policies are consistent with or more restrictive than Federal and State statutes and regulations.
