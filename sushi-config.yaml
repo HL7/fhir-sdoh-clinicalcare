@@ -58,7 +58,7 @@ pages:
   checking_task_status.md:
     title: Checking Task Status
   connecting_applications_with_api_data_sources.md:
-    title: Connecting Applications With API Data Sources
+    title: Connecting Applications with API Data Sources
   gravity_terminology.md:
     title: Gravity Value Sets
   mustsupport_and_missing_data.md:
