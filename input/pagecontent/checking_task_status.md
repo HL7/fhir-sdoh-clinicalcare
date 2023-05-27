@@ -32,7 +32,7 @@ E.g.
 
 ```[base]/Task?owner=https://example.com/fhir/Organization/123&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
 or
-```[base]/Task?owner=https://example.com/fhir/Organization/456&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
+```[base]/Task?requester=https://example.com/fhir/Organization/456&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
 
 The time-stamp specified would be the search result returned from the last search.
 
