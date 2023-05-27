@@ -43,16 +43,24 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 
 | Implementation Guide |  Relationship  |
 | -------------------- |  ---------- |
-| [Human Services Directory](https://build.fhir.org/ig/HL7/FHIR-IG-Human-Services-Directory) | Can be used by a provider to identify referral targets for SDOH-related services  |
-| [National Healthcare Directory Exchange](http://hl7.org/fhir/us/directory-exchange)| A U.S. Office of the National Coordinator-sponsored IG supporting the exchange of directory information for a wide range of service providers and organizations |
-| [SmartApp Launch](http://hl7.org/fhir/smart-app-launch)  | Allows launching third party applications in the context of another system, including allowing the application to controlled access to patient information.  |
 | [Bidirectional Service eReferral (BSeR)](http://hl7.org/fhir/us/bser/)  | Whereas this IG orchestrates referrals using the FHIR query interface, BSeR bases referral management on the exchange of self-contained Bundles of FHIR resources.  Gravity is working with BSeR to align referral approaches. |
+| [Clinical Documentation Exchange (CDex)](http://hl7.org/fhir/us/davinci-cdex) | Allows payers to retrieve or solicit records from an EHR related to patients covered under their plans. May be used to allow payers retrieving SDOH-related information for quality measures or in support of contractual or other payment schemes. |
+| [Data Exchange for Quality Measures Implementation Guide](https://hl7.org/fhir/us/davinci-deqm/) | SDOH-related services will inevitably be included in quality measurement programs |
 | [DaVinci Prior Authorization Support](http://hl7.org/fhir/us/davinci-pas/) (PAS)|  Together with CRD and DTR, these three IGs (collectively known as the Da Vinci Burden Reduction IGs) provide support for prior authorization and other documentation capture and could be relevant for SDOH-related services. |
 | [DaVinci Coverage Requirements Discovery](http://hl7.org/fhir/us/davinci-crd/) (CRD) |  Together with PAS and DTR, these three IGs (collectively known as the Da Vinci Burden Reduction IGs) provide support for prior authorization and other documentation capture and could be relevant for SDOH-related services. |
 | [DaVinci Documentation Templates and Rules](http://hl7.org/fhir/us/davinci-dtr/) (DTR) | Together with PAS and CRD, these three IGs (collectively known as the Da Vinci Burden Reduction IGs) provide support for prior authorization and other documentation capture and could be relevant for SDOH-related services.  |
-| [Data Exchange for Quality Measures Implementation Guide](https://hl7.org/fhir/us/davinci-deqm/) | SDOH-related services will inevitably be included in quality measurement programs |
+| [Human Services Directory](https://build.fhir.org/ig/HL7/FHIR-IG-Human-Services-Directory) | Can be used by a provider to identify referral targets for SDOH-related services  |
+| [IHE FHIR Audit Event Query and Feed to ATNA](https://wiki.ihe.net/index.php/Audit_Trail_and_Node_Authentication) | For systems wishing to maintain robust audit records of changes and access to patient records (always a good idea), this IG defines standards for using FHIR to do so. (Note that this standard is only really relevant if there's a need for electronic sharing of audit records.) |
+| [National Healthcare Directory Exchange](http://hl7.org/fhir/us/directory-exchange)| A U.S. Office of the National Coordinator-sponsored IG supporting the exchange of directory information for a wide range of service providers and organizations |
+| [PACIO Cognitive Status](http://hl7.org/fhir/us/pacio-cs) | Defines standards for sharing information about a patient's cognitive capabilities and limitations, which may influence decisions about appropriate SDOH interventions. |
+| [PACIO Functional Status](http://hl7.org/fhir/us/pacio-fs) | Defines standards for sharing information about a patient's physical capabilities, which may influence decisions about appropriate SDOH interventions (e.g. with respect to transport). |
+| [Patient Contributed Data](http://www.hl7.org/documentcenter/public/ballots/2022SEP/downloads/HL7_PCD_R1_I1_2022SEP.pdf) | Defines guidance for incorporation of patient and caregiver-collected information into clinical records. |
 | [Physical Activity](https://hl7.org/fhir/us/physical-activity/) | This IG inherits functionality from the SDOH IG and uses a similar architectural approach to manage sharing of physical activity goals, referrals, and patient engagement. |
+| [Quality Measure Implementation Guide](http://hl7.org/fhir/us/cqfmeasures) | Defines standards for sharing clinical quality measures electronically, allowing defining and sharing measures related to SDOH evaluation and interventions. |
+| [SmartApp Launch](http://hl7.org/fhir/smart-app-launch)  | Allows launching third party applications in the context of another system, including allowing the application to controlled access to patient information.  |
 {:.grid}
+
+
 
 ### How to Read this IG
 

@@ -36,39 +36,9 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "status" : "active",
-  "compose" : {
-    "inactive" : true,
-    "include" : [{
-      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
-      "concept" : [{
-        "code" : "self-reported",
-        "display" : "Self Reported"
-      },
-      {
-        "code" : "reported-by-related-person",
-        "display" : "Reported By Related Person"
-      },
-      {
-        "code" : "administrative",
-        "display" : "Administrative"
-      },
-      {
-        "code" : "derived-specify",
-        "display" : "Derived Specify"
-      },
-      {
-        "code" : "other-specify",
-        "display" : "Other Specify"
-      },
-      {
-        "code" : "observed",
-        "display" : "Observed"
-      }]
-    }]
-  },
   "expansion" : {
-    "identifier" : "urn:uuid:fa9c2b8f-6063-4e8e-952a-851c349fce34",
-    "timestamp" : "2023-05-02T04:57:45.252Z",
+    "identifier" : "urn:uuid:f7750639-3850-4ebc-ae26-9f5293e0e2bc",
+    "timestamp" : "2023-05-27T02:07:39.066Z",
     "total" : 6,
     "parameter" : [{
       "name" : "limitedExpansion",
@@ -202,87 +172,9 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "status" : "active",
-  "compose" : {
-    "inactive" : true,
-    "include" : [{
-      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
-      "concept" : [{
-        "code" : "sdoh-category-unspecified",
-        "display" : "SDOH Category Unspecified"
-      },
-      {
-        "code" : "food-insecurity",
-        "display" : "Food Insecurity"
-      },
-      {
-        "code" : "housing-instability",
-        "display" : "Housing Instability"
-      },
-      {
-        "code" : "homelessness",
-        "display" : "Homelessness"
-      },
-      {
-        "code" : "inadequate-housing",
-        "display" : "Inadequate Housing"
-      },
-      {
-        "code" : "transportation-insecurity",
-        "display" : "Transportation Insecurity"
-      },
-      {
-        "code" : "financial-insecurity",
-        "display" : "Financial Insecurity"
-      },
-      {
-        "code" : "material-hardship",
-        "display" : "Material Hardship"
-      },
-      {
-        "code" : "educational-attainment",
-        "display" : "Educational Attainment"
-      },
-      {
-        "code" : "employment-status",
-        "display" : "Employment Status"
-      },
-      {
-        "code" : "veteran-status",
-        "display" : "Veteran Status"
-      },
-      {
-        "code" : "stress",
-        "display" : "Stress"
-      },
-      {
-        "code" : "social-connection",
-        "display" : "Social Connection"
-      },
-      {
-        "code" : "intimate-partner-violence",
-        "display" : "Intimate Partner Violence"
-      },
-      {
-        "code" : "elder-abuse",
-        "display" : "Elder Abuse"
-      },
-      {
-        "code" : "personal-health-literacy",
-        "display" : "Personal Health Literacy"
-      },
-      {
-        "code" : "health-insurance-coverage-status",
-        "display" : "Health Insurance Coverage Status"
-      },
-      {
-        "code" : "medical-cost-burden",
-        "display" : "Medical Cost Burden"
-      }]
-    }]
-  },
   "expansion" : {
-    "identifier" : "urn:uuid:6a855e6d-1949-42a1-af83-886c4ef3772d",
-    "timestamp" : "2023-05-02T04:57:45.486Z",
+    "identifier" : "urn:uuid:2c8873eb-38d5-4e4f-b22d-d5febdd0575f",
+    "timestamp" : "2023-05-27T02:07:39.660Z",
     "total" : 18,
     "parameter" : [{
       "name" : "limitedExpansion",
@@ -414,8 +306,8 @@ e: {
         "display" : "Personal Characteristics Questionnaire"
       },
       {
-        "code" : "other-questionnaire",
-        "display" : "Other Questionnaire"
+        "code" : "other-specify",
+        "display" : "Other Specify"
       }]
     }]
   }
@@ -424,35 +316,9 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "status" : "active",
-  "compose" : {
-    "inactive" : true,
-    "include" : [{
-      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
-      "concept" : [{
-        "code" : "risk-questionnaire",
-        "display" : "Risk Questionnaire"
-      },
-      {
-        "code" : "feedback-questionnaire",
-        "display" : "Feedback Questionnaire"
-      },
-      {
-        "code" : "application-questionnaire",
-        "display" : "Application Questionnaire"
-      },
-      {
-        "code" : "personal-characteristics-questionnaire",
-        "display" : "Personal Characteristics Questionnaire"
-      },
-      {
-        "code" : "other-questionnaire",
-        "display" : "Other Questionnaire"
-      }]
-    }]
-  },
   "expansion" : {
-    "identifier" : "urn:uuid:85ea01dd-ae83-4917-81c5-765b74e3904c",
-    "timestamp" : "2023-05-02T04:57:45.689Z",
+    "identifier" : "urn:uuid:b24e5a2c-4614-4bbb-86c6-414f70f15242",
+    "timestamp" : "2023-05-27T02:07:40.004Z",
     "total" : 5,
     "parameter" : [{
       "name" : "limitedExpansion",
@@ -488,8 +354,8 @@ e: {
     },
     {
       "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
-      "code" : "other-questionnaire",
-      "display" : "Other Questionnaire"
+      "code" : "other-specify",
+      "display" : "Other Specify"
     }]
   }
 },
@@ -521,27 +387,9 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "status" : "active",
-  "compose" : {
-    "inactive" : true,
-    "include" : [{
-      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
-      "concept" : [{
-        "code" : "make-contact",
-        "display" : "Make Contact"
-      },
-      {
-        "code" : "review-material",
-        "display" : "Review Material"
-      },
-      {
-        "code" : "general-information",
-        "display" : "General Information"
-      }]
-    }]
-  },
   "expansion" : {
-    "identifier" : "urn:uuid:3b6e2c17-f321-4904-ae16-1a018f49f6dd",
-    "timestamp" : "2023-05-02T04:57:45.877Z",
+    "identifier" : "urn:uuid:316fb807-6b3c-4fb1-9c27-635cc12a7453",
+    "timestamp" : "2023-05-27T02:07:40.316Z",
     "total" : 3,
     "parameter" : [{
       "name" : "limitedExpansion",

@@ -144,3 +144,150 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/task-status",
+      "concept" : [{
+        "code" : "ready"
+      },
+      {
+        "code" : "received"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:ed0eb74c-ef87-4279-b4b8-122dce2d237a",
+    "timestamp" : "2023-05-27T02:07:39.301Z",
+    "total" : 2,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/task-status|4.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/task-status",
+      "code" : "ready",
+      "display" : "Ready"
+    },
+    {
+      "system" : "http://hl7.org/fhir/task-status",
+      "code" : "received",
+      "display" : "Received"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/task-status",
+      "concept" : [{
+        "code" : "ready",
+        "display" : "Ready"
+      },
+      {
+        "code" : "in-progress",
+        "display" : "In Progress"
+      },
+      {
+        "code" : "completed",
+        "display" : "Completed"
+      },
+      {
+        "code" : "cancelled",
+        "display" : "Cancelled"
+      },
+      {
+        "code" : "on-hold",
+        "display" : "On Hold"
+      },
+      {
+        "code" : "failed",
+        "display" : "Failed"
+      },
+      {
+        "code" : "entered-in-error",
+        "display" : "Entered in Error"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:2b897cf7-afb2-488a-bb0c-547577f2103a",
+    "timestamp" : "2023-05-27T02:07:40.535Z",
+    "total" : 7,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/task-status|4.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/task-status",
+      "code" : "ready",
+      "display" : "Ready"
+    },
+    {
+      "system" : "http://hl7.org/fhir/task-status",
+      "code" : "in-progress",
+      "display" : "In Progress"
+    },
+    {
+      "system" : "http://hl7.org/fhir/task-status",
+      "code" : "completed",
+      "display" : "Completed"
+    },
+    {
+      "system" : "http://hl7.org/fhir/task-status",
+      "code" : "cancelled",
+      "display" : "Cancelled"
+    },
+    {
+      "system" : "http://hl7.org/fhir/task-status",
+      "code" : "on-hold",
+      "display" : "On Hold"
+    },
+    {
+      "system" : "http://hl7.org/fhir/task-status",
+      "code" : "failed",
+      "display" : "Failed"
+    },
+    {
+      "system" : "http://hl7.org/fhir/task-status",
+      "code" : "entered-in-error",
+      "display" : "Entered in Error"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

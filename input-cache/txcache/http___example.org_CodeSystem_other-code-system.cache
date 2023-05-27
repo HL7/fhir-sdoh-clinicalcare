@@ -21,3 +21,39 @@ v: {
   "class" : "UNKNOWN"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/other-code-system",
+  "code" : "social-connection",
+  "display" : "Social Connection"
+}, "valueSet" :null, "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "severity" : "error",
+  "error" : "The CodeSystem http://example.org/CodeSystem/other-code-system is unknown (from Tx-Server)",
+  "class" : "UNKNOWN"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/other-code-system",
+  "code" : "transportation-insecurity-financial",
+  "display" : "Transportation Insecurity Financial"
+}, "valueSet" :null, "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "severity" : "error",
+  "error" : "The CodeSystem http://example.org/CodeSystem/other-code-system is unknown (from Tx-Server)",
+  "class" : "UNKNOWN"
+}
+-------------------------------------------------------------------------------------
