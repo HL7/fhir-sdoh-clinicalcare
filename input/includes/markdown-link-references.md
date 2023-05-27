@@ -58,8 +58,8 @@
 [Must Support and Missing Data]: mustsupport_and_missing_data.html
 [VSAC]: https://vsac.nlm.nih.gov/
 [Patient Coordination Workflow]: referral_workflow.html#patient-coordination-workflow
-[Indirect Referral]: referral_workflow.html#indirect-referral-with-direct-cbo
-[Indirect Referral Light]: referral_workflow.html#indirect-referral-with-direct-light-cbo
+[Indirect Referral]: referral_workflow.html#indirect-referral
+[Indirect Referral Light]: referral_workflow.html#indirect-referral-light
 [Direct Referral]: referral_workflow.html#direct-referral
 [Direct Referral Light]: referral_workflow.html#direct-referral-light
 [Referral Workflow]: referral_workflow.html
