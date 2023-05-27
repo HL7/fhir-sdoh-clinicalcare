@@ -85,9 +85,14 @@ This topic allows for monitoring for newly created Tasks as well as updates to a
   </thead>
   <tbody>
     <tr>
-      <td>URL</td>
+      <td>url</td>
       <td>http://hl7.org/fhir/us/sdoh-clinicalcare/SubscriptionTopic/Task</td>
       <td>This is what will appear in <i>backport-topic-canonical</i> extension</td>
+    </tr>
+    <tr>
+      <td>version</td>
+      <td>{{site.data.fhir.igVer}}</td>
+      <td>The topic version is the same as the version of this IG release.  It can appear as part of the canonical reference with the URL if there is a need to be version-specific about the topic reference</td>
     </tr>
     <tr>
       <td>resourceTrigger.resourceType</td>
@@ -144,9 +149,14 @@ This topic allows for monitoring for changes to a ServiceRequest when an organiz
   </thead>
   <tbody>
     <tr>
-      <td>URL</td>
+      <td>url</td>
       <td>http://hl7.org/fhir/us/sdoh-clinicalcare/SubscriptionTopic/Servicerequest</td>
       <td>This is what will appear in <i>backport-topic-canonical</i> extension</td>
+    </tr>
+    <tr>
+      <td>version</td>
+      <td>{{site.data.fhir.igVer}}</td>
+      <td>The topic version is the same as the version of this IG release.  It can appear as part of the canonical reference with the URL if there is a need to be version-specific about the topic reference</td>
     </tr>
     <tr>
       <td>resourceTrigger.resourceType</td>
