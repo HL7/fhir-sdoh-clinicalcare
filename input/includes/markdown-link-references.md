@@ -4,6 +4,7 @@
 [Patient Stories]: https://confluence.hl7.org/display/GRAV/Patient+Stories
 [Gravity Confluence Technology Pages]: https://confluence.hl7.org/display/GRAV/Technical+Workstream+Dashboard
 [Gravity Project]:  https://confluence.hl7.org/display/GRAV/The+Gravity+Project
+[Use Cases]: https://confluence.hl7.org/display/GRAV/Gravity+Use+Case+Package
 
 <!-- # Other IGs -->
 [US Core Implementation Guide]: https://www.hl7.org/fhir/us/core/
@@ -32,7 +33,7 @@
 [StructureMap]: https://www.hl7.org/fhir/structuremap.html
 [Timing]: https://www.hl7.org/fhir/datatypes.html#timing
 
-<!--# Document Sections -->
+<!--# Document Sections --> 
 [Referral Workflow]: referral_workflow.html
 [Patient Workflow]: referral_workflow.html#patientworkflow
 [Assessment Instrument Support]: assessment_instrument_support.html
