@@ -180,7 +180,7 @@ The [Patient Coordination](referral_workflow.html#patient-coordination-workflow)
 </tr>
 </tbody></table>
 
-<p>Although this workflow references provider as the referral source, the requester element in the two profiles exchanged here allow other roles (e.g., care coordinator) and organizations (e.g., payer) to request a referral.<span id="footnote1"><sup><a href="#footnote1">1</a></sup></span>.</p>
+<p><span id="footnote1"><sup><a href="#footnote1">1</a></sup></span>Although this workflow references provider as the referral source, the requester element in the two profiles exchanged here allow other roles (e.g., care coordinator) and organizations (e.g., payer) to request a referral.</p>
 
 #### Direct Referral
 <a name="directreferral"></a>
