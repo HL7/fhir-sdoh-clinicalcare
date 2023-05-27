@@ -255,7 +255,12 @@ menu:
     Privacy and Security: privacy_and_security.html
     Must Support and Missing Data: mustsupport_and_missing_data.html
     Draft Specifications for Personal Characteristics:   draft_specifications_for_personal_characteristics.html
+  Support:
+    Project Home: https://confluence.hl7.org/display/GRAV
+    Help & Discussions: https://chat.fhir.org/#narrow/stream/233957-Gravity-sdoh-cc
     Downloads: downloads.html
+    US Core Spec: "{{site.data.fhir.ver.uscore}}"
+    FHIR R4 Spec: "{{site.data.fhir.path}}"
   Change History:
     STU2 Ballot Changes:  stu2_ballot_changes.html
     STU2 Publication Changes:  stu2_publication_changes.html
