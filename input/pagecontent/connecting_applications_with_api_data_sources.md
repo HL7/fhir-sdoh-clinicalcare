@@ -12,12 +12,15 @@ This section describes the initial connection of the Patient/Client application 
 
 1. Applications are registered with the appropriate referral platforms.
 2. On the first use of the application
-  * Patient/Client is provided a URL or a QR code.  The patient uses this information to either find the app and install it on their mobile device, or to launch an on-line application. The App authenticates the user using credentials known to or provided by the care provider (E.g. email address, DOB, registration code, etc.).
-  * Patient/Client establishes credentials (username/password) and uses them to authenticate.
-3. API URL and the tokens are stored in the application
+  * Patient/Client is provided a URL or a QR code.  The patient uses this information to either find the app and install it on their mobile device, or to launch an on-line application.  Optionally, the Patient/Client may be provided with a URL or code to identify the referral platform to the app.  Alternatively, the patient might select the clinic/facility from a list within the app.
+  * Once the user has provided the information needed to connect to the referral platform, or has selected the platform, the app will attempt to access the FHIR API of the referral platform and will be redirected based on the platform's [SMART App authentication process](https://www.hl7.org/fhir/smart-app-launch/app-launch.html#launch-app-standalone-launch).
+  * On this intial authentication, the user will not yet have authorization credentials and will need to create a new 'account'.  The authorization server will verify the user's identity using credentials known to or provided by the care provider (E.g. email address, DOB, registration code, etc.).
+  * Patient/Client establishes credentials (username/password) to be used in the future to authenticate the user to the application.
+3. The API URL (and possibly the username and password) are stored in the application
 4. When the patient/client authenticates to the application, on a timed schedule or on demand
-  * Application uses the URL and refresh token to obtain an access token
-5. Application queries for Tasks, ServiceRequests and other referenced data.
+  * Application authenticates or allows the user to authenticate to the Referral platform and receives an access token
+  * The application makes use of the access token and, if necessary, refresh token to maintain an authenticated connection
+5. Application queries for Tasks, ServiceRequests and other referenced data and/or updates Tasks and submits resources such as QuestionnaireResponses
 
 Note: steps 3-5 are repeated for each referral source
 
