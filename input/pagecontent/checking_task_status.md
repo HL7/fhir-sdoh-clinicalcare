@@ -43,7 +43,7 @@ If unassigned Tasks are possible - i.e., where the organization to perform the s
 The frequency of polling needs to be often enough to allow for timely response to changes, while not imposing too high a requirement on system performance. For Gravity, systems that use polling SHALL check for new/updated information at least once per business day and SHOULD check for information at least once per hour during normal hours of operation.  Systems SHOULD NOT query more often than every 15 minutes unless there is an urgent change they are monitoring for.
 #### Subscription
 In the subscription mechanism, instead of the client system regularly querying the server to see if there are new Tasks or changes to existing Tasks, the client creates a
-Subscription instance on the server that indicates that it wants to be notified about changes to Tasks and, in the Subscription, provides filters that describe what
+[Subscription]({{site.data.fhir.ver.sdohsub}}/StructureDefinition-backport-subscription.html) instance on the server that indicates that it wants to be notified about changes to Tasks and, in the Subscription, provides filters that describe what
 subset of Tasks it is interested in.  The server will then push notifications when there are new Tasks and the client can then query for the specific Tasks that have changed.
 
 This Gravity functionality is based on the [R5 Subscription backport](http://hl7.org/fhir/uv/subscriptions-backport) implementation guide.  This implementation guide
