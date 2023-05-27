@@ -23,7 +23,7 @@ The actors in the workflows are described in the table below.   The graphical ic
 | ----------  | ------------------ |
 | ![providericon] Provider  | Includes licensed providers and others that interact with the patient to assess social risk, set goals, and determine/recommend referrals.   |
 | ![cboicon] Community Based Organization (CBO)  | An organization that provides specific services to the community or to a targeted population within the community.   |
-| ![cpicon]  Coordination Platform (CP) | An intermediary between a Provider and a CBO that plays a role in facilitating the referral process and finding resources for at-risk individuals.   |
+| ![cpicon]  Coordination Platform (CP) | An intermediary between a provider and a CBO that plays a role in facilitating the referral process and finding resources for at-risk individuals.   |
 | ![patienticon] Patient   | A consumer, or client, who is the subject of the assessment, goals, referrals and services delivered. Use of the term in this IG does not necessarily imply a clinical context.   |
 | ![fhirserver] FHIR Server | A server that supports a FHIR API and can make FHIR API calls to other servers |
 | ![fhirapplication] FHIR-enabled Application | An application that can make FHIR API calls to a FHIR server, but does not itself support a FHIR API |
@@ -180,14 +180,14 @@ The [Patient Coordination](referral_workflow.html#patient-coordination-workflow)
 </tr>
 </tbody></table>
 
-<p>Although this workflow references provider as the referral source, the .requester element in the two profiles exchanged here allow other roles (e.g., care coordinator) and organizations (e.g., payer) to request a referral.<span id="footnote1"><sup><a href="footnote1">1</a></sup></span>.</p>
+<p>Although this workflow references provider as the referral source, the requester element in the two profiles exchanged here allow other roles (e.g., care coordinator) and organizations (e.g., payer) to request a referral.<span id="footnote1"><sup><a href="#footnote1">1</a></sup></span>.</p>
 
 #### Direct Referral
 <a name="directreferral"></a>
 
 In this use case, the patient is referred to a CBO for help addressing prioritized needs. The CBO accepts the referral, provides the requested support to the patient, and shares the updated information with the referring provider.
 
-The provider and the CBO have FHIR servers.  
+The provider and the CBO have FHIR server APIs.
 
 The example assumes that the provider has an existing relationship with the CBO.
 The CBO may not accept the referral or may be unable to perform the requested service.
@@ -245,7 +245,7 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 
 In this use case, a provider works with a patient using a standardized assessment instrument to identify and prioritize social risks and needs, and then refers the patient indirectly via a CP to a CBO for help addressing those needs.  The CP relays the referral to the CBO.  The CBO provides the requested support to the patient and the updated information is relayed back through the CP where it is shared with the referring provider.
 
-Functionally, this Indirect Referral is essentially two direct referrals (provider to CP, and CP to CBO) chained together.  The provider, CP, and CBO all have FHIR servers. 
+Functionally, this Indirect Referral is essentially two direct referrals (provider to CP, and CP to CBO) chained together.  The provider, CP, and CBO all have FHIR server APIs.
 
 The provider has a relationship with the CP, but not with the CBO.  The use case assumes that the CP and the CPO have an established relationship.
 The provider may request to have the service delivered by a specific CBO.   The CP may not accept the referral, be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
@@ -254,6 +254,8 @@ The provider may request to have the service delivered by a specific CBO.   The 
 The referral occurs in two separate interactions. The first is between the referral source and the intermediary and the second is between the intermediary and the referral target.
 
 In the Indirect Referral, this IG assumes that the referral source does not have the ability to communicate directly with the referral target. There may be multiple referral targets for responsibilities that will be determined and managed by the intermediary. 
+
+The intermediary SHALL support the following:
 
 1. Create a local copy of, or proxy, all relevant referenced resources from the referral source
 2. Create ServiceRequest(s) with ServiceRequest.intent value “filler-order” and ServiceRequest.basedOn references the original referral source ServiceRequest(s) 
@@ -273,7 +275,9 @@ The provider may request to have the service delivered by a specific CBO.   The 
 
 ##### Indirect Referral Light - Detailed View
 
-The referral occurs in two separate interactions. The first is between the referral source and the intermediary and the second is between the intermediary and the referral target. The intermediary SHALL support the following:
+The referral occurs in two separate interactions. The first is between the referral source and the intermediary and the second is between the intermediary and the referral target. 
+
+The intermediary SHALL support the following:
 
 1. Create a local copy of, or proxy, all relevant referenced resources from the referral source
 2. Create ServiceRequest(s) with ServiceRequest.intent value “filler-order” and ServiceRequest.basedOn references the original referral source ServiceRequest(s) 
