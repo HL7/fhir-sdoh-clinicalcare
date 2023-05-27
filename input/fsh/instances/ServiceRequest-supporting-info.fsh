@@ -15,3 +15,5 @@ Usage: #definition
 * expression = "ServiceRequest.supportingInfo"
 * xpath = "f:ServiceRequest/f:supportingInfo"
 * xpathUsage = #normal
+* multipleOr = true
+* multipleAnd = true

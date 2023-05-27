@@ -13,3 +13,5 @@ Usage: #definition
 * expression = "(Task.output.value as Reference)"
 * xpath = "f:Task/f:output/f:valueReference"
 * xpathUsage = #normal
+* multipleOr = true
+* multipleAnd = true
