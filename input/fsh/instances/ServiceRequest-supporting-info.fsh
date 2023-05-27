@@ -2,7 +2,6 @@ Instance: ServiceRequest-supporting-info
 InstanceOf: SearchParameter
 Title: "ServiceRequestSupportingInfo"
 Description: "Allows searching by the 'supportingInfo' references on a ServiceRequest.  Primarily used to support _include of the supportingInfo resources when retrieving a ServiceRequest."
-Description: "Any resources referenced by ServiceRequest.supportingInfo"
 Usage: #definition
 * url = "http://hl7.org/fhir/us/sdoh-clinicalcare/SearchParameter/ServiceRequest-supporting-info"
 * name = "ServiceRequestSupportingInfo"
