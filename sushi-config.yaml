@@ -79,9 +79,6 @@ pages:
     title: STU2.1 Publication Changes
   ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.md:
     title: SDOH Clinical Care ImplementationGuide Resource
-  FHIR_API_Examples.md:
-    title: FHIR API Examples
-
 
 groups:
   CapabilityStatements:
