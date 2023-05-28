@@ -1,4 +1,3 @@
-###  MustSupport and Missing Data
 
 Systems claiming to conform to a profile SHALL support the elements in a profile as defined below: This guide adopts the following definitions of MustSupport for all direct transactions between the Sending and Receiving Systems
 
