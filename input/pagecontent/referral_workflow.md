@@ -153,7 +153,7 @@ The [Patient Coordination](referral_workflow.html#patient-coordination-workflow)
 <td><img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
 <td>CBO or CP completes the requested action, updates the status of their work (task) to completed, and includes information on what was completed</td>
 <td><ul><li><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC ServiceRequest</a></li><li><a href="StructureDefinition-SDOHCC-Procedure.html">SDOHCC Procedure</a></li></ul></td>
-<td>missing</td>
+<td>none</td>
 </tr>
 <tr>
 <td>11</td>
@@ -169,7 +169,7 @@ The [Patient Coordination](referral_workflow.html#patient-coordination-workflow)
 <td><ul>
 <li><a href="StructureDefinition-SDOHCC-TaskForPatient.html">SDOHCCTaskForPatient</a></li>
 <li><a href="https://www.hl7.org/fhir/questionnaire.html">Questionnaire</a></li></ul></td>
-<td>missing</td>
+<td>none</td>
 </tr>
 <tr>
 <td>13</td>
