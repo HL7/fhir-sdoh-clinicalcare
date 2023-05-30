@@ -1,4 +1,4 @@
-The FHIR API Examples section is being provided as a foundation that will continue to be built upon and is not currently validated.
+The FHIR API Examples section is a draft set of examples and is not currently validated.  
 
 ### Direct Referral Workflow
 
