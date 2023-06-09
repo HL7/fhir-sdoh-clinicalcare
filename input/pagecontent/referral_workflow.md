@@ -331,9 +331,9 @@ Here we provide a detailed view of an interaction between a patient application 
 
 | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |
-| 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) |
-| 2 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) with status changed |
-| 3 |  Patient | Update Task (completed and .Output.value includes text of response) | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) with status changed |
+| 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientInformationRequestCompletedExample.html) |
+| 2 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientInformationRequestCompletedExample.html) with status changed |
+| 3 |  Patient | Update Task (completed and .Output.value includes text of response) | [Patient Task](Task-SDOHCC-TaskPatientInformationRequestCompletedExample.html) with status changed |
 {:.grid}
 
 #### Make Contact Request
@@ -358,10 +358,10 @@ Here we provide a detailed view of an interaction between a patient application 
 
 | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |
-| 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) |
+| 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientReviewInformationCompletedExample.html) |
 | 2 |  Patient  | Get DocumentReference | [DocumentReference] |
-| 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) with status changed |
-| 4 |  Patient | Update Task (completed) | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) with status changed |
+| 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientReviewInformationCompletedExample.html) with status changed |
+| 4 |  Patient | Update Task (completed) | [Patient Task](Task-SDOHCC-TaskPatientReviewInformationCompletedExample.html) with status changed |
 {:.grid}
 
 
