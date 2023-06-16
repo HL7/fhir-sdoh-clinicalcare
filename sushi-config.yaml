@@ -226,11 +226,10 @@ groups:
     - SDOHCC-ObservationRecordedSexGenderExample
     - SDOHCC-ObservationSexualOrientationExample
     - SDOHCC-RelatedPersonMotherExample
-Parameters:
+  Parameters:
     name: Terminology Parameters 
     resources: 
     - terminology-settings
-    
 
 menu:
   Home: index.html
