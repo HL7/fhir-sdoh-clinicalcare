@@ -1,9 +1,10 @@
 {
   "package-id" : "hl7.fhir.us.sdoh-clinicalcare",
-  "version" : "2.1.0",
+  "version" : "2.1.0-update",
   "milestone" : true,
-	"path": "http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.1",
+	"path": "http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.1.0-update",
   "status" : "trial-use",
+  "mode" : "milestone",
   "sequence" : "STU 2",
   "desc" : "STU 2.1 official release",
   "descmd" : "STU 2.1 official release.  See list of changes [here](http://hl7.org/fhir/us/sdoh-clinicalcare/STU2/stu2_changes.html)"
