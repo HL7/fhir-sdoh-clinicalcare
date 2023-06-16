@@ -59,7 +59,7 @@ Description: "Profile for SDOH-related tasks to be carried out by the patient or
 * input[Questionnaire].type ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * input[Questionnaire].type ^binding.extension.valueString = "TaskInputParameterType"
 * input[Questionnaire].type ^binding.strength = #example
-* input[Questionnaire].type ^binding.description = "Codes to identify types of input parameters.  These will typically be specific to a particular workflow.  The codes represent types of questionnaires that the patient might be asked to complete."
+* input[Questionnaire].type ^binding.description = "Codes to identify types of input parameters. These will typically be specific to a particular workflow. The codes represent types of questionnaires that the patient might be asked to complete."
 * input[Questionnaire].value[x] only canonical
 * input[Questionnaire].value[x] ^comment = "This references the SDC Base Questionnaire profile to allow the use of questionnaires (e.g. a patient satisfaction questionnaire) that are not SDOH screening questionnaires. However, for questionnaires that are intended to produce FHIR resources (e.g., Observations or Conditions), the SDC Extractable Questionnaire - StructureMap should be used."
 * input[Questionnaire].value[x] ^type.targetProfile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
