@@ -5,4 +5,6 @@ SDOH data is sensitive personal information with significant privacy and securit
 ### Usage
 See also [Patient Privacy and Consent](privacy_and_security.html#patient-privacy-and-consent).
 
+The consent can be provided as either an attachment or a reference.
+
 {% include markdown-link-references.md %}

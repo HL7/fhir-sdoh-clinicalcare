@@ -25,4 +25,4 @@ Description: "Profile for consent related to the release of Social Determinants 
 * organization 1..1 MS
 * organization only Reference(USCoreOrganizationProfile)
 * source[x] 1.. MS
-* source[x] only Attachment or Reference(Consent or Contract or USCoreDocumentReferenceProfile)
+* source[x] only Attachment or Reference(Consent or Contract or USCoreDocumentReferenceProfile or QuestionnaireResponse)
