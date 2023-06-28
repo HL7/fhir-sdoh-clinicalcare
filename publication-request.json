@@ -1,8 +1,8 @@
 {
   "package-id" : "hl7.fhir.us.sdoh-clinicalcare",
-  "version" : "2.1.0-update",
+  "version" : "2.1.0",
   "milestone" : true,
-	"path": "http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.1.0-update",
+	"path": "http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.1",
   "status" : "trial-use",
   "mode" : "milestone",
   "sequence" : "STU 2",
