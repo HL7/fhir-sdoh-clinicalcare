@@ -1,6 +1,6 @@
 status: draft
 title: SDOH Clinical Care
-version: 2.1.0-update
+version: 2.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
