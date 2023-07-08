@@ -364,15 +364,6 @@ group SetValueCodeableConcept(source src, target observation) {
   };
 }
 
-group SetValuesToComponents(source answerItem, source srcObservation, target observation) {
-  answerItem.answer as answer -&gt; observation.component as newComponent then {
-    answer -&gt; newComponent.value = create('CodeableConcept') as newCC then {
-      answer.value as coding -&gt; newCC.coding = coding as newCoding;
-      srcObservation.code as code -&gt;  newComponent.code = code;
-    } &quot;SetValuesToComponentsCC&quot;;
-  };
-}
-
 group SetObservationFullUrl(source observation: Observation, target entry)
 {
   observation.id as id -&gt; entry.fullUrl = append('http://hl7.org/fhir/us/sdoh-clinicalcare/Observation/', id);
@@ -515,7 +506,7 @@ group TransformGroupObservation(source src: questionnaireResponse, source bundle
     </div>
   </text>
   <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE"/>
-  <name value="SDOHCC-StructureMapPRAPARE"/>
+  <name value="SDOHCCStructureMapPRAPARE"/>
   <title value="SDOHCC StructureMap PRAPARE"/>
   <description value="A StructureMap instance that represents the resource that transforms specific questions and answers from the PRAPARE questionnaire represented in LOINC (code 93025-5) into their corresponding Observations and derived Conditions (health concerns)."/>
   <structure>
@@ -3645,87 +3636,6 @@ group TransformGroupObservation(source src: questionnaireResponse, source bundle
             <valueId value="coding"/>
           </parameter>
         </target>
-      </rule>
-    </rule>
-  </group>
-  <group>
-    <name value="SetValuesToComponents"/>
-    <typeMode value="none"/>
-    <input>
-      <name value="answerItem"/>
-      <mode value="source"/>
-    </input>
-    <input>
-      <name value="srcObservation"/>
-      <mode value="source"/>
-    </input>
-    <input>
-      <name value="observation"/>
-      <mode value="target"/>
-    </input>
-    <rule>
-      <name value="answer"/>
-      <source>
-        <context value="answerItem"/>
-        <element value="answer"/>
-        <variable value="answer"/>
-      </source>
-      <target>
-        <context value="observation"/>
-        <contextType value="variable"/>
-        <element value="component"/>
-        <variable value="newComponent"/>
-      </target>
-      <rule>
-        <name value="SetValuesToComponentsCC"/>
-        <source>
-          <context value="answer"/>
-        </source>
-        <target>
-          <context value="newComponent"/>
-          <contextType value="variable"/>
-          <element value="value"/>
-          <variable value="newCC"/>
-          <transform value="create"/>
-          <parameter>
-            <valueString value="CodeableConcept"/>
-          </parameter>
-        </target>
-        <rule>
-          <name value="value"/>
-          <source>
-            <context value="answer"/>
-            <element value="value"/>
-            <variable value="coding"/>
-          </source>
-          <target>
-            <context value="newCC"/>
-            <contextType value="variable"/>
-            <element value="coding"/>
-            <variable value="newCoding"/>
-            <transform value="copy"/>
-            <parameter>
-              <valueId value="coding"/>
-            </parameter>
-          </target>
-        </rule>
-        <rule>
-          <name value="code"/>
-          <source>
-            <context value="srcObservation"/>
-            <element value="code"/>
-            <variable value="code"/>
-          </source>
-          <target>
-            <context value="newComponent"/>
-            <contextType value="variable"/>
-            <element value="code"/>
-            <transform value="copy"/>
-            <parameter>
-              <valueId value="code"/>
-            </parameter>
-          </target>
-        </rule>
       </rule>
     </rule>
   </group>

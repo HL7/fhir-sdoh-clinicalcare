@@ -355,13 +355,6 @@ group SetValueCodeableConcept(source src, target observation) {
   };
 }
 
-group SetValuesToComponents(source answerItem, source srcObservation, target observation) {
-  answerItem.answer as answer -> observation.component as newComponent, newComponent.value = create('CodeableConcept') as newCC then {
-    answer.value as coding -> newCC.coding = coding as newCoding;
-    srcObservation.code as code ->  newComponent.code = code;
-  };
-}
-
 group SetObservationFullUrl(source observation: Observation, target entry)
 {
   observation.id as id -> entry.fullUrl = append('http://hl7.org/fhir/us/sdoh-clinicalcare/Observation/', id);
