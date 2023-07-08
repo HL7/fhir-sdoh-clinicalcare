@@ -5,15 +5,15 @@
   <text>
     <status value="additional"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <pre>/// name = &quot;SDOHCC-PRAPARE-Map&quot;
+      <pre>/// name = &quot;SDOHCCPRAPAREMap&quot;
 /// status = draft
+/// title = &quot;SDOHCC StructureMap PRAPARE&quot;
+/// description = &quot;A StructureMap instance that represents the resource that transforms specific questions and answers from the PRAPARE questionnaire represented in LOINC (code 93025-5) into their corresponding Observations and derived Conditions (health concerns).&quot;
 
-/// title = "SDOHCC StructureMap PRAPARE"
-/// description = "A StructureMap instance that represents the resource that transforms specific questions and answers from the PRAPARE questionnaire represented in LOINC (code 93025-5) into their corresponding Observations and derived Conditions (health concerns)."
 
 // This is a more complex example where the author has chosen to extract *all* answers to Observations and to create a grouping Observation
 
-map &quot;http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE&quot; = &quot;SDOHCCStructureMapPRAPARE&quot;
+map &quot;http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE&quot; = &quot;SDOHCCPRAPAREMap&quot;
 
 uses &quot;http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse&quot; alias questionnaireResponse as source
 uses &quot;http://hl7.org/fhir/StructureDefinition/Bundle&quot; as target

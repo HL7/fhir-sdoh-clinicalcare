@@ -59,9 +59,9 @@
 <artifact id="Observation/SDOHCC-ObservationRaceOMBPractitionerExample" key="Observation-SDOHCC-ObservationRacePractitionerExample" name="SDOHCC Observation Race OMB Practitioner Example"/>
 <artifact id="StructureDefinition/SDOHCC-ObservationRecordedSexGender" key="StructureDefinition-SDOHCC-ObservationRecordedSexGender" name="SDOHCC Observation Recorded Sex Gender"/>
 <artifact id="Observation/SDOHCC-ObservationRecordedSexGenderExample" key="Observation-SDOHCC-ObservationRecordedSexGenderExample" name="SDOHCC Observation Recorded Sex Gender Example"/>
-<artifact id="Observation/SDOHCC-ObservationResponseHungerVitalSignGroupingExample" key="Observation-SDOHCC-ObservationResponseHungerVitalSignGroupingExample" name="SDOHCC Observation Response Hunger Vital Sign Grouping Example"/>
-<artifact id="Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion1Example" key="Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion1Example" name="SDOHCC Observation Response Hunger Vital Sign Question 1 Example"/>
-<artifact id="Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion2Example" key="Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion2Example" name="SDOHCC Observation Response Hunger Vital Sign Question 2 Example"/>
+<artifact deprecated="true" id="Observation/SDOHCC-ObservationResponseHungerVitalSignGroupingExample" key="Observation-SDOHCC-ObservationResponseHungerVitalSignGroupingExample" name="SDOHCC Observation Response Hunger Vital Sign Grouping Example"/>
+<artifact deprecated="true" id="Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion1Example" key="Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion1Example" name="SDOHCC Observation Response Hunger Vital Sign Question 1 Example"/>
+<artifact deprecated="true" id="Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion2Example" key="Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion2Example" name="SDOHCC Observation Response Hunger Vital Sign Question 2 Example"/>
 <artifact id="Observation/SDOHCC-ObservationResponseHungerVitalSignQuestion3Example" key="Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example" name="SDOHCC Observation Response Hunger Vital Sign Question 3 Example"/>
 <artifact id="Observation/SDOHCC-ObservationResponseNHANESGroupingExample" key="Observation-SDOHCC-ObservationResponseNHANESGroupingExample" name="SDOHCC Observation Response NHANES Grouping Example"/>
 <artifact id="Observation/SDOHCC-ObservationResponseNHANESQuestion1Example" key="Observation-SDOHCC-ObservationResponseNHANESQuestion1Example" name="SDOHCC Observation Response NHANES Question 1 Example"/>
@@ -156,12 +156,12 @@
 <page key="artifacts" name="Artifacts Index"/>
 <page key="assessment_instrument_support" name="Assessment Instrument Support"/>
 <page key="checking_task_status" name="Checking Task Status"/>
-<page key="connecting_applications_with_api_data_sources" name="Connecting Applications With API Data Sources"/>
+<page key="connecting_applications_with_api_data_sources" name="Connecting Applications with API Data Sources"/>
 <page key="credits" name="Credits"/>
 <page key="downloads" name="Downloads"/>
 <page key="draft_specifications_for_race_and_ethnicity" name="Draft Specifications for Personal Characteristics"/>
 <page deprecated="true" key="exchange_workflow" name="Exchange Workflow"/>
-<page key="FHIR_API_Examples" name="FHIR API Examples"/>
+<page deprecated="true" key="FHIR_API_Examples" name="FHIR API Examples"/>
 <page deprecated="true" key="fhir_artifacts_overview" name="FHIR Artifacts Overview"/>
 <page deprecated="true" key="functional_use_cases" name="Functional Use Cases"/>
 <page key="glossary" name="Glossary"/>

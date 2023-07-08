@@ -1,4 +1,4 @@
-/// name = "SDOHCC-PRAPARE-Map"
+/// name = "SDOHCCPRAPAREMap"
 /// status = draft
 /// title = "SDOHCC StructureMap PRAPARE"
 /// description = "A StructureMap instance that represents the resource that transforms specific questions and answers from the PRAPARE questionnaire represented in LOINC (code 93025-5) into their corresponding Observations and derived Conditions (health concerns)."
@@ -6,7 +6,7 @@
 
 // This is a more complex example where the author has chosen to extract *all* answers to Observations and to create a grouping Observation
 
-map "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE" = "SDOHCC StructureMap PRAPARE"
+map "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapPRAPARE" = "SDOHCCPRAPAREMap"
 
 uses "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse" alias questionnaireResponse as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target

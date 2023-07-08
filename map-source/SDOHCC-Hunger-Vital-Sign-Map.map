@@ -1,7 +1,9 @@
-/// name = "SDOHCC-Hunger-Vital-Sign-Map"
+/// name = "SDOHCCHungerVitalSignMap"
 /// status = draft
+/// title = "SDOHCC StructureMap HungerVitalSign"
+/// description = "A StructureMap instance that represents the resource that transforms a specific question and answer from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9) into a corresponding Observation (SDOHCC Observation response Hunger Vital Sign Q3 Example) and derived Condition (SDOHCC Condition Food Insecurity Example)."
 
-map "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapHungerVitalSign" = "SDOHCCStructureMapHungerVitalSign"
+map "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapHungerVitalSign" = "SDOHCCHungerVitalSignMap"
 
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias questionnaireResponse as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias bundle as target
