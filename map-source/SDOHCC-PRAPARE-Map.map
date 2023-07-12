@@ -21,7 +21,7 @@ group sdohMapping(source src : questionnaireResponse, target bundle : Bundle) {
   src -> bundle.type = 'transaction' "bundleType";
     
   //for each answer item in the questionnareResponse, create an Observation and add it to the groupObservation
-  src.item as rootItem -> bundle.entry as entry then 
+  src.item as rootItem then 
     rootContent(src, rootItem, bundle);
 
   //create group observation containing all observations as hasMember
@@ -30,12 +30,12 @@ group sdohMapping(source src : questionnaireResponse, target bundle : Bundle) {
 }
 
 group rootContent(source qResponse: questionnaireResponse, source rootItem, target bundle) {
-  rootItem.item as groupItem -> bundle.entry as entry then 
+  rootItem.item as groupItem then 
     groupContent(qResponse, groupItem, bundle);
 }
 
 group groupContent(source qResponse: questionnaireResponse, source groupItem, target bundle) {
-  groupItem.item as answerItem -> bundle.entry as entry then
+  groupItem.item as answerItem then
     itemContent(qResponse, answerItem, bundle);
 }
 
