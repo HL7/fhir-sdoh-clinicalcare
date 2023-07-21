@@ -28,7 +28,7 @@ group sdohMapping(source src : questionnaireResponse, target bundle : Bundle) {
   src -&gt; bundle.type = 'transaction' &quot;bundleType&quot;;
     
   //for each answer item in the questionnareResponse, create an Observation and add it to the groupObservation
-  src.item as rootItem -&gt; bundle.entry as entry then 
+  src.item as rootItem then 
     rootContent(src, rootItem, bundle);
 
   //create group observation containing all observations as hasMember
@@ -37,12 +37,12 @@ group sdohMapping(source src : questionnaireResponse, target bundle : Bundle) {
 }
 
 group rootContent(source qResponse: questionnaireResponse, source rootItem, target bundle) {
-  rootItem.item as groupItem -&gt; bundle.entry as entry then 
+  rootItem.item as groupItem then 
     groupContent(qResponse, groupItem, bundle);
 }
 
 group groupContent(source qResponse: questionnaireResponse, source groupItem, target bundle) {
-  groupItem.item as answerItem -&gt; bundle.entry as entry then
+  groupItem.item as answerItem then
     itemContent(qResponse, answerItem, bundle);
 }
 
@@ -582,12 +582,6 @@ group TransformGroupObservation(source src: questionnaireResponse, source bundle
         <element value="item"/>
         <variable value="rootItem"/>
       </source>
-      <target>
-        <context value="bundle"/>
-        <contextType value="variable"/>
-        <element value="entry"/>
-        <variable value="entry"/>
-      </target>
       <dependent>
         <name value="rootContent"/>
         <variable value="src"/>
@@ -648,12 +642,6 @@ group TransformGroupObservation(source src: questionnaireResponse, source bundle
         <element value="item"/>
         <variable value="groupItem"/>
       </source>
-      <target>
-        <context value="bundle"/>
-        <contextType value="variable"/>
-        <element value="entry"/>
-        <variable value="entry"/>
-      </target>
       <dependent>
         <name value="groupContent"/>
         <variable value="qResponse"/>
@@ -685,12 +673,6 @@ group TransformGroupObservation(source src: questionnaireResponse, source bundle
         <element value="item"/>
         <variable value="answerItem"/>
       </source>
-      <target>
-        <context value="bundle"/>
-        <contextType value="variable"/>
-        <element value="entry"/>
-        <variable value="entry"/>
-      </target>
       <dependent>
         <name value="itemContent"/>
         <variable value="qResponse"/>
