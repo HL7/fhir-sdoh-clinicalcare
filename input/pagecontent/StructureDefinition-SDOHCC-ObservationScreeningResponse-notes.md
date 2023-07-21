@@ -157,11 +157,11 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Financial%20Insecurity%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Financial Insecurity Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.138/expansion/Latest">Panels</a></td>
-			<td>2.16.840.1.113762.1.4.1247.138</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.143/expansion/Latest">Panels</a></td>
+			<td>2.16.840.1.113762.1.4.1247.143</td>
 		</tr>
 		<tr>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/22.16.840.1.113762.1.4.1196.3483/expansion/Latest">Questions</a></td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.3483/expansion/Latest">Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1196.3483</td>
 		</tr>
 		<tr>
@@ -172,12 +172,12 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<tr>
 			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
 			<td rowspan="3">Observation.code</td>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.2.16.840.1.113762.1.4.1247.194/expansion/Latest">Panels and Questions</a></td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.194/expansion/Latest">Panels and Questions</a></td>
 			<td>2.16.840.1.113762.1.4.1247.194</td>
 			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Food%20Insecurity%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Food Insecurity Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.138/expansion/Latest">Panels</a></td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.127/expansion/Latest">Panels</a></td>
 			<td>2.16.840.1.113762.1.4.1247.127</td>
 		</tr>
 		<tr>
