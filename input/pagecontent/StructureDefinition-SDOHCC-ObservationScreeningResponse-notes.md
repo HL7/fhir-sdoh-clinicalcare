@@ -157,8 +157,8 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Financial%20Insecurity%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Financial Insecurity Assessment Instruments Codes</a></td>
 		</tr>
 		<tr>
-			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.143/expansion/Latest">Panels</a></td>
-			<td>2.16.840.1.113762.1.4.1247.143</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.138/expansion/Latest">Panels</a></td>
+			<td>2.16.840.1.113762.1.4.1247.138</td>
 		</tr>
 		<tr>
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.3483/expansion/Latest">Questions</a></td>
