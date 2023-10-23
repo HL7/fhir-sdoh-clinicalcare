@@ -8,6 +8,7 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * . ^short = "Detailed information about SDOH conditions, problems or diagnoses"
 * . ^definition = "For representation of SDOH conditions."
 * . ^comment = "Many of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths (e.g., to arrive at SDOH Conditions) are also possible.\r\n\r\nOne specific use for this profile is to represent a Health Concern that is either; 1) directly asserted based on the patient’s answer to a specific question from an SDOH screening questionnaire or 2) computed/generated based on the patient’s answers to multiple questions. The questions and answers from the screening questionnaire are also represented using SDC Questionnaire, SDC QuestionnaireResponse and SDOHCC Screening Response Observation."
+* insert OwningCommitteeExtension
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open

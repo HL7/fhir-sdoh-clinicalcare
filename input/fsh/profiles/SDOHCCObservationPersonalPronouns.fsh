@@ -7,6 +7,7 @@ Description: "Profile for observations about the pronouns and possessive adjecti
 * ^abstract = false
 * . ^definition = "For observations about the pronouns and possessive adjectives a person wishes to be addressed by."
 * . ^comment = "For observations about the personal pronouns of an individual."
+* insert OwningCommitteeExtension
 * code = $loinc#90778-2
 * value[x] 1..
 * value[x] from SDOHCCValueSetPronounsValue (preferred)

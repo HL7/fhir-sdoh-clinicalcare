@@ -6,6 +6,7 @@ Description: "Profile for observations that represent question and answer pairs 
 * . ^short = "SDOH screening questionnaire observations"
 * . ^definition = "For Observations derived from SDOH screening surveys/questionnaires."
 * . ^comment = "Used for simple observations such as education status, food insecurity observations, etc.  \r\nThis profile allows the representation of SDOH observations based on SDOH screening questionnaire responses (which can also be represented using SDC QuestionnaireResponse). \r\n\r\nMany of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."
+* insert OwningCommitteeExtension
 * status MS
 * status from SDOHCCValueSetObservationStatus (required)
 * status ^short = "final | corrected | entered-in-error | unknown"

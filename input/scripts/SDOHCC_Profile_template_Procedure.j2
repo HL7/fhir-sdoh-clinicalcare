@@ -1,0 +1,13 @@
+Profile: SDOHCC{{profile_name}}-{{domain['domain_code']}}
+Parent: SDOHCC{{profile_name}}
+{%- set id = 'SDOHCC-' ~profile_name ~ '-' ~ domain['domain_code'] %}
+Id: {{id[:64]}}
+Title: "SDOHCC {{profile_title}} - {{domain['domain_title']}}"
+Description: "Profile for Social Determinants of Health (SDOH) {{profile_title}} for the {{domain['domain_title']}} domain meant for computational use. Review the [Base SDOHCC{{profile_name}} profile](StructureDefinition-SDOHCC-{{profile_name}}.html) for the general requirements that explain usage of the profile with the domain."
+* insert OwningCommitteeExtension
+* category.coding[SDOH] = SDOHCCCodeSystemTemporaryCodes#{{domain['domain_code']}}
+{% for binding in domain['bindings'] -%}
+    {%- if binding['valueset'] != 'None' -%}
+        * {{binding['element']}} from {{binding['valueset']}} (required)
+    {%- endif -%}
+{%- endfor %}

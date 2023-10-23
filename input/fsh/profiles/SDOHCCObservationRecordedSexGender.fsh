@@ -9,6 +9,7 @@ Description: "Profile for observations about \"recorded sex and gender\" which, 
 * . ^short = "Observation about an individual's recorded sex or gender"
 * . ^definition = "For observations about \"recorded sex and gender\" which, in the past, have often been used interchangeably. In this context, sex is a biological construct and pertains to a person’s genetics, hormones, and anatomy."
 * . ^comment = "For observations about the recorded sex and gender of an individual."
+* insert OwningCommitteeExtension
 * code = $loinc#99502-7
 * value[x] 1..
 * value[x] from $LL6134-2 (preferred)

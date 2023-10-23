@@ -7,6 +7,7 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * . ^short = "Describes the intended SDOH-related objective(s) for a patient."
 * . ^definition = "For representation of SDOH goals."
 * . ^comment = "Many of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."
+* insert OwningCommitteeExtension
 * achievementStatus MS
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"

@@ -4,6 +4,7 @@ Id: SDOHCC-HealthcareService
 Title: "SDOHCC Healthcare Service"
 Description: "Profile that describes the means by which a healthcare service can be contacted."
 * ^status = #draft
+* insert OwningCommitteeExtension
 * active 1.. MS
 * active = true (exactly)
 * location only Reference(SDOHCCLocation)

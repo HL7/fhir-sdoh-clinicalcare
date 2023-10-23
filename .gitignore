@@ -1,5 +1,8 @@
+.DS_Store
+Thumbs.db
 /FHIR-us-sdoh-cc.xml
 temp
 template
 output
 /fsh-generated
+/input-cache

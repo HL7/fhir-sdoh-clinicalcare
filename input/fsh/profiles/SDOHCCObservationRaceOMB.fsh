@@ -10,6 +10,7 @@ Description: "Profile for race observations that use Office of Management and Bu
 * . ^short = "Race observation"
 * . ^definition = "For race observations that use Office of Management and Budget (OMB) race category codes and CDC race codes."
 * . ^comment = "For observations about the race of an individual."
+* insert OwningCommitteeExtension
 * code = $loinc#72826-1
 * value[x] ..0
 * dataAbsentReason MS

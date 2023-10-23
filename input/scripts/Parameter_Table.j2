@@ -1,0 +1,9 @@
+{%- set element='code' -%}
+| [`{{resource_type}}.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain - Profile | `{{resource_type}}.{{element}}` ValueSet | ValueSet OID |
+| ------ | -------------------- | ------------------------- | ------------ |
+{% for domain in domains %}
+    {%- set id = 'SDOHCC-' ~profile_name ~ '-' ~ domain['domain_code'] -%}
+    {%- set bindings = domain['bindings'] -%}
+| {{domain['domain_code']}}  | [{{domain['domain_title']}}](StructureDefinition-{{id[:64]}}.html) | [VSAC - {{bindings[0]['valueset_title']}} ]({{bindings[0]['valueset_browse']}}) | {{bindings[0]['valueset_oid']}} |
+{% endfor -%}
+{:.grid}

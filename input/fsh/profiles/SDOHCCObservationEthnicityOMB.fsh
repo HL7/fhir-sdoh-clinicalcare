@@ -9,6 +9,7 @@ Description: "Profile for ethnicity observations that use Office of Management a
 * . ^short = "Ethnicity observation"
 * . ^definition = "For ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes."
 * . ^comment = "Used for observations about the ethnicity of an individual."
+* insert OwningCommitteeExtension
 * code = $loinc#69490-1
 * value[x] ..0
 * dataAbsentReason from SDOHCCValueSetObservationDataAbsentReason (required)

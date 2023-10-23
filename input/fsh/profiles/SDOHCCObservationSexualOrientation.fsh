@@ -8,6 +8,7 @@ Description: "Profile for observations about the sexual orientation of an indivi
 * ^abstract = false
 * . ^short = "Observation about an individual's sexual orientation"
 * . ^comment = "For observations about the sexual orientation of an individual."
+* insert OwningCommitteeExtension
 * code = $loinc#76690-7
 * value[x] 1..
 * value[x] from $LL3323-4 (preferred)
