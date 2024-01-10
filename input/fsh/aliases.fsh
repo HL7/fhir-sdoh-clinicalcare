@@ -35,3 +35,4 @@ Alias: $LL6134-2 = http://loinc.org/vs/LL6134-2
 Alias: $v3-UnitsOfMeasureCaseSensitive = http://terminology.hl7.org/ValueSet/v3-UnitsOfMeasureCaseSensitive
 Alias: $LL3323-4 = http://loinc.org/vs/LL3323-4
 Alias: $WG-extension = http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+Alias: $add-binding = http://hl7.org/fhir/tools/StructureDefinition/additional-binding

@@ -1,9 +1,9 @@
 {%- set element='code' -%}
-| [`{{resource_type}}.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain - Profile | `{{resource_type}}.{{element}}` ValueSet | ValueSet OID |
+| [`{{resource_type}}.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain - Profile | `{{resource_type}}.{{element}}` ValueSet |
 | ------ | -------------------- | ------------------------- | ------------ |
 {% for domain in domains %}
     {%- set id = 'SDOHCC-' ~profile_name ~ '-' ~ domain['domain_code'] -%}
     {%- set bindings = domain['bindings'] -%}
-| {{domain['domain_code']}}  | [{{domain['domain_title']}}](StructureDefinition-{{id[:64]}}.html) | [VSAC - {{bindings[0]['valueset_title']}} ]({{bindings[0]['valueset_browse']}}) | {{bindings[0]['valueset_oid']}} |
+| {{domain['domain_code']}}  | <span class="copy-text">[{{domain['domain_title']}}](StructureDefinition-{{id[:64]}}.html)<button title="Click to copy profile URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/{{id[:64]}}"/></span> | <span class="copy-text">[VSAC - {{bindings[0]['valueset_title']}} ]({{bindings[0]['valueset_browse']}})<button title="Click to copy ValueSet URL" class="btn-copy" data-clipboard-text="http://cts.nlm.nih.gov/fhir/ValueSet/{{bindings[0]['valueset_oid']}}"/></span> |
 {% endfor -%}
 {:.grid}

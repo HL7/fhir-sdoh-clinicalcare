@@ -61,7 +61,11 @@ PARAMETER_TABLE_END = '\\[//\\]: # \\(End Parameter Table DO NOT REMOVE\\)'
 # Update yaml detailed profiles
 #   Add YAML group description for detailed profiles
 # Would need to create examples for each and every
-
+# !!!! Add constraints for each profile where it references a SDOHCC  profile. Will need to look at the original profile to find the reference-able profiles 
+# ServiceRequest, Procedure, Goal, Condition, Observation Screening Response
+# !!!! ServiceRequest may have references to resources that are outside of the domain.
+# !!!! For Observation Screening Response - current Observation.code is pointing to the answer list. Observation.code should be Questions and Panels (for observation grouping)
+# Grouping/Panel could represent several Categories, so we may want to separate out groupers. for groupers the 
 
 class bcolors:
     HEADER = '\033[95m'
@@ -122,7 +126,7 @@ def main():
     column = {}
     parameters = {}
     for domain in parameters_ws:
-        if row_index == 0: # Header
+        if row_index == 0: # Header Row
             column_index = 0
             while column_index < parameters_ws.max_column:
                 if domain[column_index].value != None:
@@ -146,7 +150,7 @@ def main():
                 else:
                     break
                 column_index = column_index + 1
-        else:
+        else: # Non Header Row
             column_index = profile_column_start
             while column_index < parameters_ws.max_column:
                 if domain[column_index].value != None:
@@ -169,7 +173,7 @@ def main():
                     
                     binding_details['domain_code'] = domain[column[DOMAIN_CODE]].value
                     binding_details['domain_title'] = domain[column[DOMAIN_DESCRIPTION]].value
-                    # binfinds was put in to an array in the event more than one binding change would be necessary
+                    # bindings was put in to an array in the event more than one binding change would be necessary
                     binding = {}
                     binding['element'] = element
                     binding['valueset'] = category_vs
@@ -249,7 +253,7 @@ def main():
                 #print("Writing profile SDOHCC" + profile['profile_name'] + "-" + domain['domain_code'] + " to file: " + detailed_profile_file_name)
                 with open(detailed_profile_file_name, 'w') as file:
                     file.write(rendered)
-                detailed_profile_list.append("SDOHCC" + profile['profile_name'] + "-" + domain['domain_code'])
+                detailed_profile_list.append("SDOHCC" + profile['profile_name'] + "_" + str(domain['domain_code']).replace("-", "_"))
         
         groups[DETAILED_PROFILE_GROUP_CODE]['resources'] = detailed_profile_list
                 #detailed_profile_file_name.write_text(rendered)
@@ -272,17 +276,22 @@ def main():
 
 def get_vs_title(vsac_apikey, category_vs_oid):
     print("Retrieving ValueSet " + category_vs_oid + " from VSAC.")
-    response = requests.get(VSAC_HOTSNAME + '/res/ValueSet/' + category_vs_oid, auth=('apikey', vsac_apikey))
-    if(response.status_code == 200):
-        json_data = json.loads(response.content)
-        print("Successfully ValueSet " + category_vs_oid + " from VSAC.")
-        return json_data['title']
-    else:
-        print(bcolors.BOLD + bcolors.FAIL + "Unable to retrieve ValueSet " + category_vs_oid + " from VSAC. The MD file will have to be edited manually." + bcolors.ENDC)
-        print(bcolors.BOLD + bcolors.FAIL + "Code: " + str(response.status_code) + " Reason: " + response.reason + bcolors.ENDC)
-        
-        return "Unable to retrieve ValueSet Title from VSAC"
-    
+    get_try = 1
+    while get_try <= 5:
+        try:
+            response = requests.get(VSAC_HOTSNAME + '/res/ValueSet/' + category_vs_oid, auth=('apikey', vsac_apikey), timeout=10)
+            if(response.status_code == 200):
+                json_data = json.loads(response.content)
+                print("Successfully ValueSet " + category_vs_oid + " from VSAC.")
+                return json_data['title']
+            else:
+                print(bcolors.BOLD + bcolors.FAIL + "Unable to retrieve ValueSet " + category_vs_oid + " from VSAC. The MD file will have to be edited manually." + bcolors.ENDC)
+                print(bcolors.BOLD + bcolors.FAIL + "Code: " + str(response.status_code) + " Reason: " + response.reason + bcolors.ENDC)
+        except requests.exceptions.Timeout:
+            print("Timed out")
+        get_try += 1
+
+    return "Unable to retrieve ValueSet Title from VSAC"
 
 def update_parameter_table(base_profile_id, table):
     md_file = PAGE_CONTENT_FOLDER + '/' + PROFILE_MD_FILE_PREFIX + base_profile_id + PROFILE_MD_FILE_INTRO_SUFFIX

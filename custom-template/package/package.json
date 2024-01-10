@@ -1,0 +1,11 @@
+﻿{
+  "name": "hl7.gravity.parameterized.template",
+  "version": "0.1",
+  "type": "fhir.template",
+  "license": "CC0-1.0",
+  "description": "Gravity SDOH Parameterized Profile Template",
+  "base": "hl7.gravity.template",
+  "dependencies": {
+    "hl7.gravity.template": "current"
+    }
+}

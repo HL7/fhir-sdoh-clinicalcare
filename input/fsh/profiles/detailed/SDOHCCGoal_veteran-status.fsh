@@ -1,4 +1,4 @@
-Profile: SDOHCCGoal-veteran-status
+Profile: SDOHCCGoal_veteran_status
 Parent: SDOHCCGoal
 Id: SDOHCC-Goal-veteran-status
 Title: "SDOHCC Goal - Veteran Status"
