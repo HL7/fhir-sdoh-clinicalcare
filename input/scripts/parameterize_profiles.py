@@ -277,7 +277,7 @@ def main():
 def get_vs_title(vsac_apikey, category_vs_oid):
     print("Retrieving ValueSet " + category_vs_oid + " from VSAC.")
     get_try = 1
-    while get_try <= 5:
+    while get_try <= 6:
         try:
             response = requests.get(VSAC_HOTSNAME + '/res/ValueSet/' + category_vs_oid, auth=('apikey', vsac_apikey), timeout=10)
             if(response.status_code == 200):

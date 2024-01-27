@@ -6,3 +6,6 @@ template
 output
 /fsh-generated
 /input-cache
+
+**/.index.db
+**/.index.json
