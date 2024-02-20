@@ -105,7 +105,7 @@ group TransformCondition(source src: QuestionnaireResponse, source bundle: Bundl
     src -> newCodeCC.coding = create('Coding') as newCoding2 then {
         src -> newCoding2.system = 'http://hl7.org/fhir/sid/icd-10-cm' "conditionCodeCodingSystemLackOfFood";
         src -> newCoding2.code = 'Z59.4' "conditionCodeCodingCodeLackOfFood";
-        src -> newCoding2.display = 'Lack of adequate food and safe drinking water' "conditionCodeCodingDisplayLackOfFood";
+        src -> newCoding2.display = 'Lack of adequate food' "conditionCodeCodingDisplayLackOfFood";
     } "conditionCodeCodingLackOfFood";
   } "conditionCode";
       

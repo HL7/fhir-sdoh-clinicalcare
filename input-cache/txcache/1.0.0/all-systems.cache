@@ -1,6 +1,0 @@
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSNOMEDCTCPTLOINCHCPCSII", "version": "1.0.0"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:2.16.840.1.113883.6.285"
-}
--------------------------------------------------------------------------------------

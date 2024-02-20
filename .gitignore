@@ -3,3 +3,6 @@ temp
 template
 output
 /fsh-generated
+
+**/.index.db
+**/.index.json

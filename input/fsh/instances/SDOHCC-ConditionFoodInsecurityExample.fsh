@@ -8,7 +8,7 @@ Usage: #example
 * category[0] = $condition-category#health-concern "Health Concern"
 * category[+] = $SDOHCC-CodeSystemTemporaryCodes#food-insecurity "Food Insecurity"
 * code.coding[0] = $sct#733423003 "Food insecurity"
-* code.coding[+] = $icd-10-cm#Z59.4 "Lack of adequate food and safe drinking water"
+* code.coding[+] = $icd-10-cm#Z59.4 "Lack of adequate food"
 * subject.reference = "Patient/pat-53234"
 * subject.display = "COLIN ABBAS"
 * onsetPeriod.start = "2019-08-18T12:31:35.123Z"

@@ -1,168 +1,9 @@
 -------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "inactive" : true,
-    "include" : [{
-      "system" : "urn:oid:2.16.840.1.113883.6.238",
-      "concept" : [{
-        "code" : "2135-2",
-        "display" : "Hispanic or Latino"
-      },
-      {
-        "code" : "2186-5",
-        "display" : "Not Hispanic or Latino"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "language" : "en",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:7d18e559-d3f3-4b24-ac2f-b2918137d919",
-    "timestamp" : "2022-10-25T13:45:19.187Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "version",
-      "valueUri" : "urn:oid:2.16.840.1.113883.6.238|3.1.1"
-    }],
-    "contains" : [{
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Hispanic or Latino"
-      }],
-      "system" : "urn:oid:2.16.840.1.113883.6.238",
-      "code" : "2135-2",
-      "display" : "Hispanic or Latino"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Note that this term remains in the table for completeness, even though within HL7, the notion of \"not otherwise coded\" term is deprecated."
-      }],
-      "system" : "urn:oid:2.16.840.1.113883.6.238",
-      "code" : "2186-5",
-      "display" : "Not Hispanic or Latino"
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "inactive" : true,
-    "include" : [{
-      "system" : "urn:oid:2.16.840.1.113883.6.238",
-      "concept" : [{
-        "code" : "1002-5",
-        "display" : "American Indian or Alaska Native"
-      },
-      {
-        "code" : "2028-9",
-        "display" : "Asian"
-      },
-      {
-        "code" : "2054-5",
-        "display" : "Black or African American"
-      },
-      {
-        "code" : "2076-8",
-        "display" : "Native Hawaiian or Other Pacific Islander"
-      },
-      {
-        "code" : "2106-3",
-        "display" : "White"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "language" : "en",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:29800083-9db3-4613-a6ce-6aac4f43aa28",
-    "timestamp" : "2022-10-18T12:42:01.342Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "version",
-      "valueUri" : "urn:oid:2.16.840.1.113883.6.238|3.1.1"
-    }],
-    "contains" : [{
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "American Indian or Alaska Native"
-      }],
-      "system" : "urn:oid:2.16.840.1.113883.6.238",
-      "code" : "1002-5",
-      "display" : "American Indian or Alaska Native"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Asian"
-      }],
-      "system" : "urn:oid:2.16.840.1.113883.6.238",
-      "code" : "2028-9",
-      "display" : "Asian"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Black or African American"
-      }],
-      "system" : "urn:oid:2.16.840.1.113883.6.238",
-      "code" : "2054-5",
-      "display" : "Black or African American"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Native Hawaiian or Other Pacific Islander"
-      }],
-      "system" : "urn:oid:2.16.840.1.113883.6.238",
-      "code" : "2076-8",
-      "display" : "Native Hawaiian or Other Pacific Islander"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "White"
-      }],
-      "system" : "urn:oid:2.16.840.1.113883.6.238",
-      "code" : "2106-3",
-      "display" : "White"
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
 {"code" : {
   "system" : "urn:oid:2.16.840.1.113883.6.238",
   "code" : "1002-5",
   "display" : "American Indian or Alaska Native"
-}, "valueSet" :null, "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
   "parameter" : [{
@@ -171,16 +12,23 @@ e: {
   }]
 }}####
 v: {
-  "severity" : "error",
-  "error" : "The CodeSystem urn:oid:2.16.840.1.113883.6.238 is unknown (from Tx-Server)",
-  "class" : "UNKNOWN"
+  "display" : "American Indian or Alaska Native",
+  "code" : "1002-5",
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "version" : "1.2",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "urn:oid:2.16.840.1.113883.6.238",
   "code" : "2106-3",
   "display" : "White"
-}, "valueSet" :null, "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
   "parameter" : [{
@@ -189,16 +37,23 @@ v: {
   }]
 }}####
 v: {
-  "severity" : "error",
-  "error" : "The CodeSystem urn:oid:2.16.840.1.113883.6.238 is unknown (from Tx-Server)",
-  "class" : "UNKNOWN"
+  "display" : "White",
+  "code" : "2106-3",
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "version" : "1.2",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "urn:oid:2.16.840.1.113883.6.238",
   "code" : "1102-3",
   "display" : "Cheyenne"
-}, "valueSet" :null, "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
   "parameter" : [{
@@ -207,16 +62,23 @@ v: {
   }]
 }}####
 v: {
-  "severity" : "error",
-  "error" : "The CodeSystem urn:oid:2.16.840.1.113883.6.238 is unknown (from Tx-Server)",
-  "class" : "UNKNOWN"
+  "display" : "Cheyenne",
+  "code" : "1102-3",
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "version" : "1.2",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "urn:oid:2.16.840.1.113883.6.238",
   "code" : "1088-4",
   "display" : "Cherokee"
-}, "valueSet" :null, "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
   "parameter" : [{
@@ -225,8 +87,15 @@ v: {
   }]
 }}####
 v: {
-  "severity" : "error",
-  "error" : "The CodeSystem urn:oid:2.16.840.1.113883.6.238 is unknown (from Tx-Server)",
-  "class" : "UNKNOWN"
+  "display" : "Cherokee",
+  "code" : "1088-4",
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "version" : "1.2",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
 }
 -------------------------------------------------------------------------------------
