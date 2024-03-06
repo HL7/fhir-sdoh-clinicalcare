@@ -7,6 +7,7 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * ^status = #draft
 * . ^short = "A request to fulfill an SDOH service request"
 * . ^comment = "For Tasks used in requesting fulfillment of an SDOHCC ServiceRequest (i.e. referral for service) and subsequently tracking and managing the fulfillment of that referral."
+* insert OwningCommitteeExtension
 * partOf ^slicing.discriminator[0].type = #profile
 * partOf ^slicing.discriminator[=].path = "resolve()"
 * partOf ^slicing.rules = #open

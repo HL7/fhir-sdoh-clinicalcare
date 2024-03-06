@@ -8,6 +8,7 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * . ^short = "Detailed information about SDOH conditions, problems or diagnoses"
 * . ^definition = "For representation of SDOH conditions."
 * . ^comment = "Many of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths (e.g., to arrive at SDOH Conditions) are also possible.\r\n\r\nOne specific use for this profile is to represent a Health Concern that is either; 1) directly asserted based on the patient’s answer to a specific question from an SDOH screening questionnaire or 2) computed/generated based on the patient’s answers to multiple questions. The questions and answers from the screening questionnaire are also represented using SDC Questionnaire, SDC QuestionnaireResponse and SDOHCC Screening Response Observation."
+* insert OwningCommitteeExtension
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
@@ -29,6 +30,29 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * code from USCoreConditionCode (required)
 * code ^requirements = "Code is required and must be selected from the bound value set."
 * code ^binding.description = "Valueset to describe the actual problem experienced by the patient"
+
+
+
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, educational-attainment, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.103)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, elder-abuse, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.63)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, employment-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.42)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, financial-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.108)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, food-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.17)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, health-insurance-coverage-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.148)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, personal-health-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.116)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, homelessness, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.18)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, housing-instability, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.24)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, inadequate-housing, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.48)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, intimate-partner-violence, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.84)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, material-hardship, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.35)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, medical-cost-burden, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.153)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, social-connection, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.81)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, stress, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.75)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.26)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.78)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, digital-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.224)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, digital-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.231)
+
 * bodySite ..0
 * subject ^definition = "Indicates the patient who the condition record is associated with."
 * subject ^requirements = "US Core Condition Profile restricts subject to patient."

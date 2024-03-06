@@ -22,7 +22,7 @@ Usage: #example
 * item.type = #group
 * item.required = false
 * item.item[0].linkId = "/93043-8"
-* item.item[=].code = $loinc#93043-8 "Personal characteristics"
+* item.item[=].code = $loinc#93043-8 "Personal characteristics [PRAPARE]"
 * item.item[=].text = "Personal characteristics"
 * item.item[=].type = #group
 * item.item[=].required = false
@@ -88,7 +88,7 @@ Usage: #example
 * item.item[=].item[=].answerOption[+].valueCoding = $loinc#LA30188-9 "Language other than English"
 * item.item[=].item[=].answerOption[+].valueCoding = $loinc#LA30122-8 "I choose not to answer this question"
 * item.item[+].linkId = "/93042-0"
-* item.item[=].code = $loinc#93042-0 "Family and home"
+* item.item[=].code = $loinc#93042-0 "Family and home [PRAPARE]"
 * item.item[=].text = "Family and home"
 * item.item[=].type = #group
 * item.item[=].required = false
@@ -133,7 +133,7 @@ Usage: #example
 * item.item[=].item[=].type = #string
 * item.item[=].item[=].required = false
 * item.item[+].linkId = "/93041-2"
-* item.item[=].code = $loinc#93041-2 "Money and resources"
+* item.item[=].code = $loinc#93041-2 "Money and resources [PRAPARE]"
 * item.item[=].text = "Money and resources"
 * item.item[=].type = #group
 * item.item[=].required = false
@@ -205,7 +205,7 @@ Usage: #example
 * item.item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item.item[=].item[=].extension.valueCodeableConcept.text = "Drop down"
 * item.item[=].item[=].linkId = "/93041-2/93030-5"
-* item.item[=].item[=].code = $loinc#93030-5 "Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?"
+* item.item[=].item[=].code = $loinc#93030-5 "Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living"
 * item.item[=].item[=].text = "Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?"
 * item.item[=].item[=].type = #choice
 * item.item[=].item[=].required = false
@@ -223,7 +223,7 @@ Usage: #example
 * item.item[=].item[=].answerOption[=].extension.valueString = "X"
 * item.item[=].item[=].answerOption[=].valueCoding = $loinc#LA30257-2 "Patient unable to respond"
 * item.item[+].linkId = "/93040-4"
-* item.item[=].code = $loinc#93040-4 "Social and emotional health"
+* item.item[=].code = $loinc#93040-4 "Social and emotional health [PRAPARE]"
 * item.item[=].text = "Social and emotional health"
 * item.item[=].type = #group
 * item.item[=].required = false
@@ -244,7 +244,7 @@ Usage: #example
 * item.item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item.item[=].item[=].extension.valueCodeableConcept.text = "Drop down"
 * item.item[=].item[=].linkId = "/93040-4/93038-8"
-* item.item[=].item[=].code = $loinc#93038-8 "Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?"
+* item.item[=].item[=].code = $loinc#93038-8 "Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled - how stressed are you?"
 * item.item[=].item[=].text = "Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?"
 * item.item[=].item[=].type = #choice
 * item.item[=].item[=].required = false
@@ -255,7 +255,7 @@ Usage: #example
 * item.item[=].item[=].answerOption[+].valueCoding = $loinc#LA13914-9 "Very much"
 * item.item[=].item[=].answerOption[+].valueCoding = $loinc#LA30122-8 "I choose not to answer this question"
 * item.item[+].linkId = "/93039-6"
-* item.item[=].code = $loinc#93039-6 "Optional additional questions"
+* item.item[=].code = $loinc#93039-6 "Optional additional questions [PRAPARE]"
 * item.item[=].text = "Optional additional questions"
 * item.item[=].type = #group
 * item.item[=].required = false

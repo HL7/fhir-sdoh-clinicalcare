@@ -4,6 +4,10 @@ Id: SDOHCC-HealthcareService
 Title: "SDOHCC Healthcare Service"
 Description: "Profile that describes the means by which a healthcare service can be contacted."
 * ^status = #draft
+// TODO need short and definition?
+//* . ^short = "Group of SDOH patients for a payer"
+//* . ^definition = "For aggregation of individuals with a common set of characteristics (i.e., the same payer and and any condition in the specified SDOH categories) to enable organizations with the appropriate permissions to easily retrieve information related to the cohort of individuals for which they have a common responsibility."
+* insert OwningCommitteeExtension
 * active 1.. MS
 * active = true (exactly)
 * location only Reference(SDOHCCLocation)

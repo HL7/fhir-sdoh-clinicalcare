@@ -28,6 +28,9 @@ The preferred value sets in the Table are hosted in the [NIH Value Set Authority
 | stress  | Stress | [VSAC -  Stress Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.75/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.75|
 | transportation-insecurity  | Transportation Insecurity | [VSAC -  Transportation Insecurity Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.26/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.26|
 | veteran-status  | Veteran Status | [VSAC -  Veteran Status Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.78/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.78|
+| digital-literacy	| Digital Literacy | [VSAC - Digital Literacy Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.224/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.224|
+| digital-access  | Digital Access | [VSAC -  Digital Access Diagnoses ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.231/expansion/Latest ) | 2.16.840.1.113762.1.4.1247.231|
+| sdoh-category-unspecified<br><br>**Note:** Use “sdoh-category-unspecified” for SDOH domains that are not specified in the [SDOHCC Category value set](ValueSet-SDOHCC-ValueSetSDOHCategory.html).<br><br>If desired, “Condition.category (SDOH): sdoh-category-unspecified” can be further specified with a domain not yet included in the [SDOHCC Category value set](ValueSet-SDOHCC-ValueSetSDOHCategory.html) by using category.text. | SDOH Category Unspecified | **Note:** For new SDOH domains, any Gravity value sets that are available in VSAC but not yet included in the IG can be found on the [Social Risk Terminology Value Sets](https://confluence.hl7.org/display/GRAV/Social+Risk+Terminology+Value+Sets) page on Confluence.|
 {:.grid}
 
 {% include markdown-link-references.md %}

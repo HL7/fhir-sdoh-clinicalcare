@@ -8,6 +8,7 @@ Description: "Profile for service requests that address Social Determinants of H
 * . ^short = "A request for a service to address an SDOH condition, observation or goal."
 * . ^definition = "For service requests that address SDOH conditions, observations or goals."
 * . ^comment = "Many of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."
+* insert OwningCommitteeExtension
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
@@ -44,6 +45,30 @@ Description: "Profile for service requests that address Social Determinants of H
 * code ^short = "What is being requested/ordered."
 * code ^definition = "A code that identifies a particular service (e.g., procedure) that has been requested."
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service."
+
+
+
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, educational-attainment, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.57)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, elder-abuse, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.68)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, employment-status, 	http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.60)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, financial-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.31)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, food-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.11)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, health-insurance-coverage-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.124)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, personal-health-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.119)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, homelessness, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.21)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, housing-instability, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.45)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, inadequate-housing, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.53)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, intimate-partner-violence, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.98)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, material-hardship, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.38)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, medical-cost-burden, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.123)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, social-connection, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.95)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, stress, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.92)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.28)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.91)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, digital-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.227)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, digital-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.236)
+
+
 * orderDetail ^slicing.discriminator.type = #pattern
 * orderDetail ^slicing.discriminator.path = "coding"
 * orderDetail ^slicing.rules = #open

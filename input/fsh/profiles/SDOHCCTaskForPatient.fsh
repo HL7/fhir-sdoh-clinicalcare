@@ -7,6 +7,7 @@ Description: "Profile for SDOH-related tasks to be carried out by the patient or
 * ^status = #draft
 * obeys SDOH-Task-1 and SDOH-Task-2 and SDOH-Task-3 and SDOH-Task-4 and SDOH-Task-5 and SDOH-Task-6 and SDOH-Task-7
 * . ^short = "A request to fulfill an SDOH questionnaire or service request"
+* insert OwningCommitteeExtension
 * partOf ^slicing.discriminator.type = #profile
 * partOf ^slicing.discriminator.path = "resolve()"
 * partOf ^slicing.rules = #open

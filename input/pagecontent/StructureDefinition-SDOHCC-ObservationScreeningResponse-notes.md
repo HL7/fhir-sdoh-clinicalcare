@@ -428,7 +428,47 @@ Key for the “ValueSet for” Column: For readability, the formal names of thes
 			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.184/expansion/Latest">Answers</a></td>
 			<td>2.16.840.1.113762.1.4.1247.184</td>
 		</tr>
-				<tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-digital-literacy">digital-literacy</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td>No Panels and Questions Yet Identified</td>
+			<td> none </td>
+			<td colspan="1" rowspan="4">No Digital Literacy Assessment Instruments Codes</td>
+		</tr>
+		<tr>
+			<td>No Panels Yet Identified</td>
+			<td> none </td>
+		</tr>
+		<tr>
+			<td>No Questions Yet Identified</td>
+			<td> none </td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td>No Answers Yet Identified</td>
+			<td> none </td>
+		</tr>
+		<tr>
+			<td rowspan="4"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-digital-access">digital-access</a></td>
+			<td rowspan="3">Observation.code</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.240/expansion/Latest">Panels and Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.240</td>
+			<td colspan="1" rowspan="4"><a href="https://confluence.hl7.org/download/attachments/97463504/Digital%20Access%20Assessment%20Instruments%20Codes_V1.xlsx?api=v2">Digital Access Assessment Instruments Codes</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.237/expansion/Latest">Panels</a></td>
+			<td>2.16.840.1.113762.1.4.1247.237</td>
+		</tr>
+		<tr>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.238/expansion/Latest">Questions</a></td>
+			<td>2.16.840.1.113762.1.4.1247.238</td>
+		</tr>
+		<tr>
+			<td>Observation.value</td>
+			<td><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.239/expansion/Latest">Answers</a></td>
+			<td>2.16.840.1.113762.1.4.1247.239</td>
+		</tr>
+		<tr>
 			<td><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified">sdoh-category-unspecified</a></td>
 			<td colspan="5" rowspan="1">Category-specific value sets not applicable</td>
 		</tr>
