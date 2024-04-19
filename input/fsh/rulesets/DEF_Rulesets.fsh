@@ -25,7 +25,7 @@ RuleSet: AdditionalBinding(profile, elementPath, usagePath, usageCategory, value
 * {elementPath} ^binding.extension[=].extension[=].valueUsageContext.code.system = Canonical({profile})
 * {elementPath} ^binding.extension[=].extension[=].valueUsageContext.code.code = #{usagePath}
 * {elementPath} ^binding.extension[=].extension[=].valueUsageContext.valueCodeableConcept = SDOHCCCodeSystemTemporaryCodes#{usageCategory} // This is not official display. Need to support display? "{profile} {usageCategory} ValueSet"
-* {elementPath} ^binding.extension[=].extension[=].valueUsageContext.valueCodeableConcept.text = "{profile} {usageCategory} ValueSet"
+//* {elementPath} ^binding.extension[=].extension[=].valueUsageContext.valueCodeableConcept.text = "{profile} {usageCategory} ValueSet"
 
 
 RuleSet: AdditionalBindingReq(profile, elementPath, usagePath, usageCategory, valueSet)
