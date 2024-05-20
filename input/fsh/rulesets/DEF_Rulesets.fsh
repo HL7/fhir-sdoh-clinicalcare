@@ -16,10 +16,10 @@ RuleSet: AdditionalBinding(profile, elementPath, usagePath, usageCategory, value
 * {elementPath} ^binding.extension[=].extension[+].url = "valueSet"
 * {elementPath} ^binding.extension[=].extension[=].valueCanonical = {valueSet}
 
-* {elementPath} ^binding.extension[=].extension[+].url = "documentation"
-* {elementPath} ^binding.extension[=].extension[=].valueMarkdown = "Use when `{usagePath}` = `{usageCategory}`"
-* {elementPath} ^binding.extension[=].extension[+].url = "shortDoco"
-* {elementPath} ^binding.extension[=].extension[=].valueString = "Use when `{usagePath}` = `{usageCategory}`"
+//* {elementPath} ^binding.extension[=].extension[+].url = "documentation"
+//* {elementPath} ^binding.extension[=].extension[=].valueMarkdown = "Use when `{usagePath}` = `{usageCategory}`"
+//* {elementPath} ^binding.extension[=].extension[+].url = "shortDoco"
+//* {elementPath} ^binding.extension[=].extension[=].valueString = "Use when `{usagePath}` = `{usageCategory}`"
 
 * {elementPath} ^binding.extension[=].extension[+].url = "usage"
 * {elementPath} ^binding.extension[=].extension[=].valueUsageContext.code.system = Canonical({profile})
@@ -37,8 +37,8 @@ RuleSet: AdditionalBindingReq(profile, elementPath, usagePath, usageCategory, va
 
 //* {elementPath} ^binding.extension[=].extension[+].url = "documentation"
 //* {elementPath} ^binding.extension[=].extension[=].valueMarkdown = "Use when `{usagePath}` = `{usageCategory}`"
-* {elementPath} ^binding.extension[=].extension[+].url = "shortDoco"
-* {elementPath} ^binding.extension[=].extension[=].valueString = "Use when `{usagePath}` = `{usageCategory}`"
+//* {elementPath} ^binding.extension[=].extension[+].url = "shortDoco"
+//* {elementPath} ^binding.extension[=].extension[=].valueString = "Use when `{usagePath}` = `{usageCategory}`"
 
 * {elementPath} ^binding.extension[=].extension[+].url = "usage"
 * {elementPath} ^binding.extension[=].extension[=].valueUsageContext.code.system = Canonical({profile})
