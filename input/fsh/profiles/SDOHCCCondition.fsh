@@ -51,7 +51,7 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * insert AdditionalBinding(SDOHCCCondition, code, Condition.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.26)
 * insert AdditionalBinding(SDOHCCCondition, code, Condition.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.78)
 * insert AdditionalBinding(SDOHCCCondition, code, Condition.category, digital-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.224)
-* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, digital-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.231)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, digital-access, N/A)
 
 * bodySite ..0
 * subject ^definition = "Indicates the patient who the condition record is associated with."
