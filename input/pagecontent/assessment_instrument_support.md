@@ -112,6 +112,29 @@ Table 2 below provides guidance for Questionnaire.code and Questionnaire.item fo
 |**Non-Standardized Assessment Instrument with Standardized Questions**: This assessment instrument combines questions from one or more Standardized Assessment Instruments. <u>This assessment instrument is not LOINC-encoded</u> but all its questions and answers are LOINC-encoded. | AHC HRSN Screening Tool (Core Questions) + selected questions from AHC HRSN Supplemental Questions | Questionnaire.code is a non-LOINC (e.g., local) code since the assessment instrument is not LOINC-encoded. Questionnaire.item(s) are the LOINC codes for the questions (from the standardized assessment instruments) that have been combined into a non-standardized instrument.|
 |**Non-Standardized Assessment Instrument with Standardized and Non-standardized Questions**: This assessment instrument combines questions from a Standardized Assessment Instrument with some non-LOINC encoded questions. <u>This assessment instrument is not LOINC-encoded.</u> Some questions and answers are LOINC-encoded. <u>Some questions and answers are not LOINC-encoded.</u> | AHC HRSN Screening Tool (Core Questions) + selected non-LOINC encoded (e.g., local) questions | Questionnaire.code is a non-LOINC (e.g., local) code since the assessment instrument is not LOINC-encoded. Questionnaire.item(s) are the LOINC codes (for the questions from the standardized assessment instrument) and the non-LOINC (e.g., local) codes for questions that are not from a standardized, LOINC-encoded instrument.|
 
+<table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
+<thead>
+<tr>
+<th>Assesment Instrument Composition (what it compromises)</th>
+<th>Example</th>
+<th>Guidance for Questionnaire</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><b>Standardized Assessment Instrument</b>: This is a single (LOINC-encoded) assessment instrument in its entirety. This assessment instrument is LOINC-encoded, and all questions and answers are LOINC-encoded.</td>
+<td>AHC HRSN Screening Tool (Core Questions)</td>
+<td>Questionnaire.code is the LOINC code (panel code) for the standardized assessment instrument. Questionnaire.item(s) are the LOINC codes for all questions on the standardized assessment instrument.</td></tr>
+<tr>
+<td><b>Non-Standardized Assessment Instrument with Standardized Questions</b>: This assessment instrument combines questions from one or more Standardized Assessment Instruments. <u>This assessment instrument is not LOINC-encoded</u> but all its questions and answers are LOINC-encoded.</td>
+<td>AHC HRSN Screening Tool (Core Questions) + selected questions from AHC HRSN Supplemental Questions</td>
+<td>Questionnaire.code is a non-LOINC (e.g., local) code since the assessment instrument is not LOINC-encoded. Questionnaire.item(s) are the LOINC codes for the questions (from the standardized assessment instruments) that have been combined into a non-standardized instrument.</td></tr>
+<tr>
+<td><b>Non-Standardized Assessment Instrument with Standardized and Non-standardized Questions</b>: This assessment instrument combines questions from a Standardized Assessment Instrument with some non-LOINC encoded questions. <u>This assessment instrument is not LOINC-encoded.</u> Some questions and answers are LOINC-encoded. <u>Some questions and answers are not LOINC-encoded.</u></td>
+<td>AHC HRSN Screening Tool (Core Questions) + selected non-LOINC encoded (e.g., local) questions</td>
+<td>Questionnaire.code is a non-LOINC (e.g., local) code since the assessment instrument is not LOINC-encoded. Questionnaire.item(s) are the LOINC codes (for the questions from the standardized assessment instrument) and the non-LOINC (e.g., local) codes for questions that are not from a standardized, LOINC-encoded instrument.</td></tr>
+</tbody>
+
+
 #### Additional Guidance on SDOHCC Observation Screening Response Elements
 
 This section provides guidance on Observation.category and Observation.interpretation in the context of their use in the [SDOHCC Observation Screening Response] profile.
