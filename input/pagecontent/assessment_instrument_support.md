@@ -106,12 +106,6 @@ Table 2 below provides guidance for Questionnaire.code and Questionnaire.item fo
 
 **Table 2**: Guidance on Questionnaire elements based on the composition of the assessment instrument
 
-| Assesment Instrument Composition (what it compromises)    |  Example | Guidance for Questionnaire    |
-| -------- | ---------- | -------- |
-| **Standardized Assessment Instrument**: This is a single (LOINC-encoded) assessment instrument in its entirety. This assessment instrument is LOINC-encoded, and all questions and answers are LOINC-encoded. | AHC HRSN Screening Tool (Core Questions)| Questionnaire.code is the LOINC code (panel code) for the standardized assessment instrument. Questionnaire.item(s) are the LOINC codes for all questions on the standardized assessment instrument.|
-|**Non-Standardized Assessment Instrument with Standardized Questions**: This assessment instrument combines questions from one or more Standardized Assessment Instruments. <u>This assessment instrument is not LOINC-encoded</u> but all its questions and answers are LOINC-encoded. | AHC HRSN Screening Tool (Core Questions) + selected questions from AHC HRSN Supplemental Questions | Questionnaire.code is a non-LOINC (e.g., local) code since the assessment instrument is not LOINC-encoded. Questionnaire.item(s) are the LOINC codes for the questions (from the standardized assessment instruments) that have been combined into a non-standardized instrument.|
-|**Non-Standardized Assessment Instrument with Standardized and Non-standardized Questions**: This assessment instrument combines questions from a Standardized Assessment Instrument with some non-LOINC encoded questions. <u>This assessment instrument is not LOINC-encoded.</u> Some questions and answers are LOINC-encoded. <u>Some questions and answers are not LOINC-encoded.</u> | AHC HRSN Screening Tool (Core Questions) + selected non-LOINC encoded (e.g., local) questions | Questionnaire.code is a non-LOINC (e.g., local) code since the assessment instrument is not LOINC-encoded. Questionnaire.item(s) are the LOINC codes (for the questions from the standardized assessment instrument) and the non-LOINC (e.g., local) codes for questions that are not from a standardized, LOINC-encoded instrument.|
-
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
 <thead>
 <tr>
