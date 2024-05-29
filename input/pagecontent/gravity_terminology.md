@@ -1,9 +1,22 @@
-### Gravity Terminology Development
-For each SDOH domain/category (e.g., food insecurity, transportation insecurity), the Gravity Project has developed value sets to be used as preferred value sets for the [SDOHCC Observation Screening Response][SDOHCC Observation Screening Response], [SDOHCC Condition][SDOHCC Condition], [SDOHCC Service Request][SDOHCC Service Request], [SDOHCC Procedure][SDOHCC Procedure], and [SDOHCC Goal][SDOHCC Goal] profiles. For each of these profiles, the minimum value set bindings are specified in the profile. Additional guidance on the use of the Gravity-vetted, preferred value sets is provided in the Usage or Notes section of each profile.
 
-Gravity Project value sets are published in the National Institutes of Health (NIH) [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) where they can be accessed by creating a free National Library of Medicine (NLM) account and refining the search by “Steward: The Gravity Project”. Hyperlinks to the VSAC value sets can also be found [here](https://confluence.hl7.org/display/GRAV/Gravity+Terminology+Value+Sets) on the Gravity Project Confluence site.
+Gravity Project develops and maintains SDOH-related value sets that are published in the National Institutes of Health (NIH) [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) where they can be accessed by creating a free National Library of Medicine (NLM) account and refining the search by “Steward: The Gravity Project”. Hyperlinks to the VSAC value sets can also be found [here](https://confluence.hl7.org/display/GRAV/Gravity+Terminology+Value+Sets) on the Gravity Project Confluence site. This section describes how these value sets are used in the SDOHCC profiles and the process for developing the value sets in VSAC.
 
-### Gravity Value Set Structure
+### Additional Bindings for SDOH Domain-specific Value Sets
+
+The [SDOHCC Observation Screening Response][SDOHCC Observation Screening Response], [SDOHCC Condition][SDOHCC Condition], [SDOHCC Service Request][SDOHCC Service Request], [SDOHCC Procedure][SDOHCC Procedure], and [SDOHCC Goal][SDOHCC Goal] profiles have additional bindings for Observation.code, Observation.value, Condition.code, ServiceRequest.code, Procedure.code, and Goal.description respectively. The additional bindings are to SDOH domain-specific value sets  (e.g., for Food Insecurity, Inadequate Housing, etc.) which are determined by the value of the profile’s .category element (selected from [SDOHCC ValueSet SDOH Category]).
+
+#### Additional Binding Example for the SDOHCC Condition Profile
+
+For the [SDOHCC Condition] profile, Condition.code has a binding to [US Core Condition Code](http://hl7.org/fhir/us/core/STU3.1.1/ValueSet-us-core-condition-code.html) (required). However, if Condition.category is ‘food-insecurity’, Condition.code has an additional binding to [Food Insecurity Diagnoses](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.17/expansion) (a Gravity-authored value set in VSAC).
+
+Excerpt from [SDOHCC Condition] :
+
+{% include img-med.html img="SDOHConditionExample.png" %}
+
+### Gravity Project Value Set Development Process
+
+#### Gravity Project Value Set Naming
+
 The VSAC value set names align with the profiles in which they are used in this IG as follows: 
   
 | **Gravity VSAC value sent name includes:** | **Used with:**                                                                 |
@@ -15,15 +28,176 @@ The VSAC value set names align with the profiles in which they are used in this 
 | Assessments                                | [SDOHCC Observation Screening Response][SDOHCC Observation Screening Response] |
 {:.grid}
 
+#### Steps for Gravity Project Value Set Creation in VSAC
 
-In VSAC, for the above profiles (e.g., [SDOHCC Condition][SDOHCC Condition], code system-specific value sets are created for each domain (e.g., [Food Insecurity Diagnoses ICD10CM](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.3/expansion/Latest), [Food Insecurity Diagnosis SNOMED CT](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.1/expansion/Latest)) and then grouped into domain-specific value sets (e.g., [Food Insecurity Diagnoses](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.17/expansion/Latest) for use as preferred value sets for a profile. Finally, the domain-specific value sets for each profile are grouped into a value set containing the values for all SDOH domains (e.g., [Social Determinants of Health Conditions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion/Latest)).
+The steps below outline Gravity’s general process for value set creation in VSAC. For each step, the examples show the process for Condition.code for the [SDOHCC Condition] profile.
 
-### Example of Value Sets for Condition.code and their grouping in VSAC
-The figure below illustrates how value sets are used and grouped for Condition.code for the [SDOHCC Condition][SDOHCC Condition] profile.
-* 	The minimum value set bindings specified in the profile for Condition.code (i.e., to [US Core Condition Code]({{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html))
-*   The preferred value set bindings for Condition.code and their grouping structure in VSAC are shown in the green box. (For additional guidance on these preferred value sets for SDOHCC Condition, see [Usage](StructureDefinition-SDOHCC-Condition.html#usage))
+1. Value sets are created that are specific for:
 
-{% include img-med.html img="VSACValueSet.svg" caption="Example of VSAC SDOH Grouping Value Set for Condition.Code" %}
+* SDOH domain (category) – e.g., Food insecurity, Transportation Insecurity.
+* Profile – e.g., Condition (Diagnoses), Procedure
+* Code system – e.g., ICD-10-CM, SNOMED CT, LOINC, CPT, HCPCS
 
+The value sets created in Step 1 do not bind to SDOHCC profile elements. In step 2, they are grouped into value sets that bind to SDOHCC profile elements.
+
+**Example 1**: 
+
+<table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
+<thead>
+   <tr>
+      <th>VSAC Value Set Name</th>
+      <th>SDOH Domain</th>
+      <th>Bound to Profile</th>
+      <th>Code System</th>
+   </tr>
+</thead>
+<tbody>
+   <tr>
+      <td>Food Insecurity Diagnoses ICD-10 CM</td>
+      <td>Food Insecurity</td>
+      <td>N/A</td>
+      <td>ICD-10 CM</td>
+   </tr>
+   <tr>
+      <td>Food Insecurity Diagnosis SNOMED CT</td>
+      <td>Food Insecurity</td>
+      <td>N/A</td>
+      <td>SNOMED CT</td>
+   </tr>
+   <tr>
+      <td>Transportation Insecurity Diagnoses ICD-10 CM</td>
+      <td>Transportation Insecurity</td>
+      <td>N/A</td>
+      <td>ICD-10 CM</td>
+   </tr>
+   <tr>
+      <td>Transportation Insecurity Diagnoses SNOMED CT</td>
+      <td>Transportation Insecurity</td>
+      <td>N/A</td>
+      <td>SNOMED CT</td>
+   </tr>
+   <tr>
+      <td>Inadequate Housing Diagnoses ICD-10 CM</td>
+      <td>Inadequate Housing</td>
+      <td>N/A</td>
+      <td>ICD-10 CM</td>
+   </tr>
+   <tr>
+      <td>Inadequate Housing Diagnoses SNOMED CT</td>
+      <td>Inadequate Housing</td>
+      <td>N/A</td>
+      <td>SNOMED CT</td>
+   </tr>
+   <tr>
+      <td>Additional SDOH domain-specific value sets…</td>
+      <td></td>
+      <td></td>
+      <td></td>
+   </tr>
+</tbody>
+</table>
+
+2. Value sets created in Step 1 are grouped into value sets that are only specific for:
+
+* SDOH domain (category) – e.g., Food insecurity, Transportation Insecurity
+* Profile – e.g., Condition (Diagnoses), Procedure
+
+These value sets bind to SDOHCC profile elements via an Additional Bindings table.  For example, the value sets in the first column below are in the Additional Bindings table for Condition.code for SDOHCC Condition. (See image in Additional Bindings for SDOH Domain-specific Value Sets).
+
+**Example 2**:
+
+<table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
+<thead>
+   <tr>
+      <th>VSAC Value Set Name</th>
+      <th>SDOH Domain</th>
+      <th>Bound to Profile</th>
+      <th>Contains VSAC Value Sets</th>
+   </tr>
+</thead>
+<tbody>
+   <tr>
+      <td>Food Insecurity Diagnoses</td>
+      <td>Food Insecurity</td>
+      <td>SDOHCC Condition</td>
+      <td>Food Insecurity Diagnoses ICD-10 CM<br>Food Insecurity Diagnosis SNOMED CT</td>
+   </tr>
+   <tr>
+      <td>Transportation Insecurity Diagnoses</td>
+      <td>Transportation Insecurity</td>
+      <td>SDOHCC Condition</td>
+      <td>Transportation Insecurity Diagnoses ICD-10 CM<br>Transportation Insecurity Diagnoses SNOMED CT
+</td>
+   </tr>
+   <tr>
+      <td>Inadequate Housing Diagnoses</td>
+      <td>Inadequate Housing</td>
+      <td>SDOHCC Condition</td>
+      <td>Inadequate Housing Diagnoses ICD-10 CM<br>Inadequate Housing Diagnoses SNOMED CT
+</td>
+   </tr>
+   <tr>
+      <td>Additional SDOH domain-specific value sets…</td>
+      <td></td>
+      <td></td>
+      <td></td>
+   </tr>
+</tbody>
+</table>
+
+3. Value sets created in Step 2 are grouped into SDOH grouping value sets that are only specific for:
+
+* Profile – e.g., Condition (Diagnoses), Procedure
+
+These value sets are not used in the SDOHCC profiles. However, they are referenced in the Screening and Assessments section of the US Core Implementation Guide which provides the following guidance with respect to these Gravity SDOH grouping value sets: “<it>These grouped value sets are narrower subsets of the value sets allowed in the respective US Core Profiles. However, when recording SDOH data US Core Profiles, servers **SHOULD** use them.</it>”
+
+**Example 3**:
+
+<table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
+<thead>
+   <tr>
+      <th>VSAC Value Set Name</th>
+      <th>Used with Profile</th>
+      <th>Contains VSAC Value Sets</th>
+   </tr>
+</thead>
+<tbody>
+   <tr>
+      <td>Social Determinants of Health Conditions</td>
+      <td>US Core Condition</td>
+      <td>Food Insecurity Diagnoses<br>
+      Transportation Insecurity Diagnoses<br>
+      Inadequate Housing Diagnoses<br>
+      Digital Literacy Diagnoses<br>
+      Elder Abuse Diagnoses<br>
+      Financial Insecurity Diagnoses<br>
+      Health Insurance Coverage Status Diagnoses<br>
+      Health Literacy Diagnoses<br>
+      Homelessness Diagnoses<br>
+      Inadequate Housing Diagnoses<br>
+      Intimate Partner Violence Diagnoses<br>
+      Less Than High School Education Diagnoses<br>
+      Material Hardship Diagnoses<br>
+      Medical Cost Burden Diagnoses<br>
+      Social Connection Diagnoses<br>
+      Stress Diagnoses<br>
+      Unemployment Diagnoses<br>
+      Utility Insecurity Diagnoses<br>
+      Veteran Status Diagnoses<br>
+      <br>
+      <b>Note</b>: Value sets for new SDOH domains will be added as they are created in VSAC.</td>
+   </tr>
+</tbody>
+</table>
+
+##### Table - Gravity VSAC Value Set Development Process for SDOHCC Condition
+
+This table summarizes the Gravity VSAC value set development process. Gravity-authored VSAC value sets are shown in the first three columns. Value sets in green are bound to Condition.code for the [SDOHCC Condition] profile.
+
+{% include img-med.html img="VSACValueSets-ConditionExample.png" %}
+
+-------------------------------------------------------------
+
+<sup>1</sup>Gravity-authored SDOH value sets can be accessed by creating a free National Library of Medicine (NLM) account and then refining the search to “Steward: The Gravity Project”.
 
  {% include markdown-link-references.md %}
