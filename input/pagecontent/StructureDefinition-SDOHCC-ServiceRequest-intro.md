@@ -9,7 +9,7 @@ Rather than offer a separate ServiceRequest profile for each SDOH category (also
 
 The preferred value sets in the Table are hosted in the [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/). The [Social Determinants of Health Service Requests Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion) in VSAC is a grouper value set containing all members of the VSAC Value Sets below. The Gravity Project plans to continue to work with the HL7 Vocabulary WG to determine how best to represent and validate these preferred, category-specific value sets.
 
-| [`ServiceRequest.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | `ServiceRequest.code` ValueSet | ValueSet OID |
+<!--| [`ServiceRequest.category`](ValueSet-SDOHCC-ValueSetSDOHCategory.html) | Domain | `ServiceRequest.code` ValueSet | ValueSet OID |
 | ------ | -------------------- | ------------------------- | ------------ |
 | educational-attainment  | Educational Attainment | [VSAC -  Less than high school education ServiceRequests ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.57/expansion/Latest ) |2.16.840.1.113762.1.4.1247.57|
 | elder-abuse  | Elder Abuse | [VSAC -  Elder Abuse ServiceRequests ]( https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.68/expansion/Latest ) |2.16.840.1.113762.1.4.1247.68|
@@ -36,6 +36,6 @@ The preferred value sets in the Table are hosted in the [NIH Value Set Authority
 
 
 | sdoh-category-unspecified<br><br>**Note:** Use “sdoh-category-unspecified” for SDOH domains that are not specified in the [SDOHCC Category value set](ValueSet-SDOHCC-ValueSetSDOHCategory.html).<br><br>If desired, ServiceRequest.category (SDOH): sdoh-category-unspecified” can be further specified with a domain not yet included in the [SDOHCC Category value set](ValueSet-SDOHCC-ValueSetSDOHCategory.html) by using category.text. | SDOH Category Unspecified | **Note:** For new SDOH domains, any Gravity value sets that are available in VSAC but not yet included in the IG can be found on the [Social Risk Terminology Value Sets](https://confluence.hl7.org/display/GRAV/Social+Risk+Terminology+Value+Sets) page on Confluence.|
-{:.grid}
+{:.grid} -->
 
 {% include markdown-link-references.md %}
