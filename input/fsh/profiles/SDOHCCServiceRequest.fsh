@@ -50,7 +50,7 @@ Description: "Profile for service requests that address Social Determinants of H
 
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, educational-attainment, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.57)
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, elder-abuse, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.68)
-* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, employment-status, 	http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.60)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, employment-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.60)
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, financial-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.31)
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, food-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.11)
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, health-insurance-coverage-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.124)
@@ -67,7 +67,7 @@ Description: "Profile for service requests that address Social Determinants of H
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.91)
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, digital-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.227)
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, digital-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.236)
-* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, sdoh-category-unspecified, N/A)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code)
 
 
 * orderDetail ^slicing.discriminator.type = #pattern

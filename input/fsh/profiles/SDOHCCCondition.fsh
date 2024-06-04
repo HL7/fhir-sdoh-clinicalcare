@@ -52,7 +52,7 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * insert AdditionalBinding(SDOHCCCondition, code, Condition.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.78)
 * insert AdditionalBinding(SDOHCCCondition, code, Condition.category, digital-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.224)
 * insert AdditionalBinding(SDOHCCCondition, code, Condition.category, digital-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.231)
-* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, sdoh-category-unspecified, N/A)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code)
 
 
 * bodySite ..0

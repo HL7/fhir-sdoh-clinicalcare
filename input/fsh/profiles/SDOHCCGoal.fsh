@@ -40,9 +40,9 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * insert AdditionalBinding(SDOHCCGoal, description, Goal.category, stress, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.86)
 * insert AdditionalBinding(SDOHCCGoal, description, Goal.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.163)
 * insert AdditionalBinding(SDOHCCGoal, description, Goal.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.90)
-* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, digital-literacy, N/A)
-* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, digital-access, N/A)
-* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, sdoh-category-unspecified, N/A)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, digital-literacy, http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, digital-access, http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, sdoh-category-unspecified, http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT)
 
 
 
