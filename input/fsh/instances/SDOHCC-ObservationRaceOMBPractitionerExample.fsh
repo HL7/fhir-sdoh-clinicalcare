@@ -5,10 +5,9 @@ Description: "An example of a race Observation that uses a FHIR extension on Obs
 Usage: #example
 //* category = $SDOHCC-CodeSystemTemporaryCodes#personal-characteristic "Personal Characteristic"
 //* code = $loinc#72826-1 "Race OMB.1997"
-* extension.url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.subject"
-* extension.valueReference.reference = "Practitioner/SDOHCC-PractitionerDrJanWaterExample"
-* extension.valueReference.display = "Dr Jan Water"
 * status = #final
+* subject.reference = "Patient/pat-53234"
+* subject.display = "COLIN ABBAS"
 * effectiveDateTime = "2022-04-10T23:56:54.671Z"
 * performer.reference = "Practitioner/SDOHCC-PractitionerDrJanWaterExample"
 * performer.display = "Dr Jan Water"

@@ -52,7 +52,7 @@
   <workgroup key="pher" webcode="pher" name="Public Health" listserv="pher@lists.HL7.org/"/>
   <workgroup key="pubs" webcode="publishing" name="Publishing" listserv="es@lists.HL7.org/"/>
   <workgroup key="security" webcode="secure" name="Security" listserv="security@lists.HL7.org/"/>
-  <workgroup key="soa" webcode="soa" name="Service Oriented Architecture" listserv="soa@lists.HL7.org/"/>
+  <workgroup key="soa" webcode="soa" name="Orchestration, Services, and Architecture" listserv="soa@lists.HL7.org/"/>
   <workgroup key="sd" webcode="structure" name="Structured Documents" listserv="strucdoc@lists.HL7.org/"/>
   <workgroup key="sgb" name="Standards Governance Board" deprecated="true"/>
   <workgroup key="templates" name="Templates" deprecated="true"/>
