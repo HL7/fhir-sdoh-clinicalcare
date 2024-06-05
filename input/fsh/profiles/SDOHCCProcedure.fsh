@@ -64,8 +64,9 @@ Description: "Profile for interventions that address Social Determinants of Heal
 * insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, stress, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.87)
 * insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.27)
 * insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.90)
-* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, digital-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.27)
-* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, digital-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.90)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, digital-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.226)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, digital-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.235)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, utility-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.247)
 * insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code)
 
 

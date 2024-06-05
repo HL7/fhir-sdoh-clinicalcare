@@ -21,7 +21,7 @@ Advantages of using a standardized social risk assessment instrument include:
 
 ### Representing Assessment Instrument Data Using Standardized Code Systems
 
-Gravity-authored, SDOH domain-specific value sets are hosted in the National Institutes of Health (NIH) [Value Set Authority Center (VSAC)] and used with the [SDOHCC Observation Screening Response], [SDOHCC Condition], [SDOHCC Procedure], [SDOHCC ServiceRequest] and [SDOHCC Goal] profiles.
+Gravity-authored, SDOH domain-specific value sets are hosted in the National Institutes of Health (NIH) [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) and used with the [SDOHCC Observation Screening Response], [SDOHCC Condition], [SDOHCC Procedure], [SDOHCC ServiceRequest] and [SDOHCC Goal] profiles.
 
 As Gravity develops content for SDOH domains, Gravity evaluates domain-specific questions from nationally recognized assessment instruments. For assessment instrument coding, Gravity uses LOINC. The LOINC-encoded assessment instruments, from which Gravity has chosen one or more (but not necessarily all) questions, are included in the [Social Determinants of Health Screening Assessments](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.126/expansion/Latest) grouping value set in VSAC.
 
@@ -29,11 +29,11 @@ Questions from LOINC-encoded assessment instruments that meet Gravity’s vettin
 
 ### Representing Assessment Instrument Data in a FHIR Format
 
-Implementers should have a plan to present assessment instrument data in a computable FHIR format. The FHIR [QuestionnaireResponse] and [Observation] resources can each be used to present data captured in an assessment instrument.
+Implementers should have a plan to present assessment instrument data in a computable FHIR format. The FHIR [QuestionnaireResponse] and [Observation](https://build.fhir.org/observation.html) resources can each be used to present data captured in an assessment instrument.
 
 #### Representing Assessment Instrument Data with QuestionnaireResponse and Observation
 
-[QuestionnaireResponse] and [Observation] can present data from completed assessment instruments that has been captured in a structured, codified format (e.g., electronic forms). Best practice is to capture and share [QuestionnaireResponse] and [Observation]. However, decisions as to whether to use one or both resources may be influenced by the use case and the format of the structured data coming from the data sources (e.g., hospitals, health information exchanges (HIEs), social care networks (SCNs), and qualified health information organizations (QHIOs)). Gravity uses the [SDC QuestionnaireResponse] and [SDOHCC Observation Screening Response] profiles.
+[QuestionnaireResponse] and [Observation](https://build.fhir.org/observation.html) can present data from completed assessment instruments that has been captured in a structured, codified format (e.g., electronic forms). Best practice is to capture and share [QuestionnaireResponse] and [Observation](https://build.fhir.org/observation.html). However, decisions as to whether to use one or both resources may be influenced by the use case and the format of the structured data coming from the data sources (e.g., hospitals, health information exchanges (HIEs), social care networks (SCNs), and qualified health information organizations (QHIOs)). Gravity uses the [SDC QuestionnaireResponse] and [SDOHCC Observation Screening Response] profiles.
 
 ##### Benefits of using QuestionnaireResponse to represent assessment instrument data
 
@@ -45,7 +45,7 @@ Benefits of using [QuestionnaireResponse] to represent assessment instrument dat
 
 ##### Benefits of using Observation to represent assessment instrument data
 
-Benefits of using [Observation] to represent individual question-answer pairs from an assessment instrument include:
+Benefits of using [Observation](https://build.fhir.org/observation.html) to represent individual question-answer pairs from an assessment instrument include:
 
 * Observation is supported by most EMR systems and is one of the most mature FHIR resources.
 * Observation is better suited than QuestionnaireResponse to support use cases that require querying the assessment instrument data. 
@@ -180,7 +180,7 @@ Additional guidance related to Observation.category for [SDOHCC Observation Scre
 * Some Observations may be assigned only one value for Observation.category (from [SDOHCC ValueSet SDOH Category]) while others may be assigned more than one value. 
 * When categorizing an Observation that represents a Q-A pair, Gravity recommends that the SDOH domain(s) be assigned based on the question <u>and its complete allowed set of answers</u> on an assessment instrument. 
 
-Examples for using Observation.category to tag Observations by SDOH domain are provided below. The examples are based on the Accountable Health Communities Health-Related Social Needs Screening Tool (AHC HRSN Screening Tool).<sup>1</sup>
+Examples for using Observation.category to tag Observations by SDOH domain are provided below. The examples are based on the Accountable Health Communities Health-Related Social Needs Screening Tool (AHC HRSN Screening Tool) or the AHC HRSN Screening Tool Supplemental Questions.<sup>1</sup>
 
 **Example 1**: When a question and its complete answer set address only one SDOH domain, an Observation using the question for Observation.code should have only one value for Observation.category.
 
@@ -233,7 +233,7 @@ Examples for using Observation.category to tag Observations by SDOH domain are p
 
 * The above question and the set of answer choices provides information about a possible HRSN related to Food Insecurity.
 * Although Observation.value: LA28398-8 (Never true) does not indicate a HRSN, the Observation still provides information about Food Insecurity. 
-* Therefore, regardless of the answer chosen, Gravity recommends using Observation.category: [food-insecurity] for an Observation from the AHC HRSC Screening Tool with Observation.code: 88122-7.
+* Therefore, regardless of the answer chosen, Gravity recommends using Observation.category: [food-insecurity](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity) for an Observation from the AHC HRSC Screening Tool with Observation.code: 88122-7.
 
 **Example 2**: When a question and its complete answer set address more than one SDOH domain, an Observation using the question for Observation.code may have more than one value for Observation.category.
 
@@ -308,10 +308,10 @@ Examples for using Observation.category to tag Observations by SDOH domain are p
    </thead>
    <tbody>
       <tr>
-         <td>In the past 12 months has the electric, gas, oil, or water company threatened to shut off services in your home?</td>
-         <td>96779-4</td>
+         <td>Because of a physical, mental, or emotional condition, do you have difficulty doing errands alone such as visiting a doctor's office or shopping?</td>
+         <td>69861-3</td>
          <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified">sdoh-category-unspecified</a></td>
-         <td>Utility Insecurity</td>
+         <td>Disability Status</td>
       </tr>
    </tbody>
    <thead>
@@ -324,29 +324,23 @@ Examples for using Observation.category to tag Observations by SDOH domain are p
    </thead>
    <tbody>
       <tr>
-         <td>I have a steady place to live</td>
-         <td>LA31993-1</td>
+         <td>Yes</td>
+         <td>LA33-6</td>
          <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified">sdoh-category-unspecified</a></td>
-         <td>Utility Insecurity</td>
+         <td>Disability Status</td>
       </tr>
       <tr>
-         <td>I have a place to live today, but I am worried about losing it in the future</td>
-         <td>LA31994-9</td>
+         <td>No</td>
+         <td>LA32-8</td>
          <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified">sdoh-category-unspecified</a></td>
-         <td>Utility Insecurity</td>
-      </tr>
-      <tr>
-         <td>I do not have a steady place to live (I am temporarily staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park</td>
-         <td>LA31995-6</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified">sdoh-category-unspecified</a></td>
-         <td>Utility Insecurity</td>
+         <td>Disability Status</td>
       </tr>
    </tbody>
 </table>
 
-* The question and answer set above address Utility Insecurity.
-* As of April 2024, Gravity Project is working on Utility Insecurity, but the domain is not fully developed. Therefore, ‘utility-insecurity’ is not in the value set for Observation.category.
-* In this case, Gravity recommends using Observation.category: [sdoh-category-unspecified](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified) for any Observation with Observation.code: 96779-4 and “category.text: Utility Insecurity” can be used to further specify the domain.
+* The question and answer set above address Disability Status.
+* As of June 2024, Gravity Project has not yet started on Disability Status as a domain. Therefore, ‘disability-status’ is not in the value set for Observation.category.
+* In this case, Gravity recommends using Observation.category: [sdoh-category-unspecified](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified) for any Observation with Observation.code: 69861-3 and “category.text: Disability Status” can be used to further specify the domain.
 
 ##### Flagging Observations for a possible HRSN need using Observation.interpretation
 
@@ -592,7 +586,11 @@ In addition to representing Observation instances, [SDOHCC Observation Screening
 
 If a QuestionnaireResponse has been created for the assessment instrument, Observation Grouping, while not prohibited, is generally redundant since the member Observations can directly reference QuestionnaireResponse (via derivedFrom) for assessment instrument context.
 
-Observation Grouping is most useful when a QuestionnaireResponse has not been created. For an Observation Grouping example, see [SDOHCC Observation Response NHANES Grouping Example].
+Observation Grouping is most useful when a QuestionnaireResponse has not been created. For an Observation Grouping example, see [SDOHCC Observation Response NHANES Grouping Example](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/Observation-SDOHCC-ObservationResponseNHANESGroupingExample.html)
+
+----------
+
+.
 
 For several of the common ways in which implementors may compose assessment instruments, Table 3 provides guidance for Observation.code and Observation.member for an Observation Grouping.
 
