@@ -1,4 +1,4 @@
-Instance: SDOHCC-ObservationAssessmentSocialIsolationExample
+/*Instance: SDOHCC-ObservationAssessmentSocialIsolationExample
 InstanceOf: SDOHCCObservationAssessment
 Title: "SDOHCC Observation Assessment Social Isolation Example"
 Description: "An example of a social isolation Observation that is not necessarily derived only from a screening survey. This observation involves additional assessment (e.g., by a provider, payer, etc.). This example also includes an Observation.category (i.e., Social Connection) that, at the time the example was added to the IG, was not yet in the “SDOHCC ValueSet SDOH Category”. The example illustrates that categorization is possible using category codes that may not yet be included in the SDOHCC ValueSet SDOH Category (which will continue to be expanded as the Gravity Project continues to develop SDOH terminology content)."
@@ -13,3 +13,4 @@ Usage: #example
 * performer.reference = "Practitioner/SDOHCC-PractitionerDrJanWaterExample"
 * performer.display = "Dr Jan Water"
 * valueBoolean = true
+*/

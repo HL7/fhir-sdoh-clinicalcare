@@ -1,6 +1,7 @@
 Alias: $loinc = http://loinc.org
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+Alias: $v3-ObsInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $consentscope = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $consentpolicycodes = http://terminology.hl7.org/CodeSystem/consentpolicycodes

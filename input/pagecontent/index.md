@@ -25,7 +25,7 @@ The activities supported by this IG include (see [Conceptual Framework](sdoh_cli
 
 Currently, this IG is intended to support Patient Applications, Provider's Electronic Health Record (EHR) systems, Coordination Platforms that intermediate between Providers, and Community Based Organizations that provide SDOH services. In the future payer systems and governmental systems will be supported. The IG establishes a framework for SDOH-related interventions including:
 * capture of  data from validated assessment instruments
-* mapping the responses from assessments to observations, conditions, and goals using SDOH-specific value sets using established standards (see [Mapping QuestionnaireResponses to FHIR Resources](assessment_instrument_support.html#mapping-questionnaireresponses-to-fhir-resources))
+* mapping the responses from assessments to observations, conditions, and goals using SDOH-specific value sets using established standards (see [Assessment Instrument Support](assessment_instrument_support.html#using-structuremap-to-generate-observations-or-conditions-from-questionnaireresponse))
 * generating and monitoring referrals from providers and care coordinators for SDOH-related services provided by CBOs
 * capturing the results of the referrals as procedures
 

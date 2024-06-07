@@ -41,7 +41,7 @@ Benefits of using [QuestionnaireResponse] to represent assessment instrument dat
 
 * QuestionnaireResponse is better suited to support use cases that require access to the format of the original assessment instrument.
 * QuestionnaireResponse is always based on a FHIR [Questionnaire] and preserves the Questionnaire’s structure and complexity to provide a fully contextualized view of a completed Questionnaire. For example, QuestionnaireResponse allows the precise capture of the assessment instrument version, the exact text of the questions and answers, the order of presentation, multiple choice answer options, and whether questions were skipped. 
-* Question-answer pairs in QuestionnaireResponse can be automatically transformed to FHIR Observations using [StructureMap](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/assessment_instrument_support.html#using-structuremap-to-generate-observations-or-conditions-from-questionnaireresponse) and the [SDC Implementation Guide](https://build.fhir.org/ig/HL7/sdc/).
+* Question-answer pairs in QuestionnaireResponse can be automatically transformed to FHIR Observations using [StructureMap](assessment_instrument_support.html#using-structuremap-to-generate-observations-or-conditions-from-questionnaireresponse) and the [SDC Implementation Guide](https://build.fhir.org/ig/HL7/sdc/).
 
 ##### Benefits of using Observation to represent assessment instrument data
 
@@ -201,8 +201,8 @@ Examples for using Observation.category to tag Observations by SDOH domain are p
    <tbody>
       <tr>
          <td>Within the past 12 months, you worried that your food would run out before you got money to buy more</td>
-         <td>88122-7</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;">88122-7</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
       </tr>
    </tbody>
    <thead>
@@ -215,25 +215,25 @@ Examples for using Observation.category to tag Observations by SDOH domain are p
    <tbody>
       <tr>
          <td>Often true</td>
-         <td>LA28397-0</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;">LA28397-0</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
       </tr>
       <tr>
          <td>Sometimes true</td>
-         <td>LA6729-3</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;">LA6729-3</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
       </tr>
       <tr>
          <td>Never true</td>
-         <td>LA28398-8</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;">LA28398-8</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
       </tr>
    </tbody>
 </table>
 
 * The above question and the set of answer choices provides information about a possible HRSN related to Food Insecurity.
 * Although Observation.value: LA28398-8 (Never true) does not indicate a HRSN, the Observation still provides information about Food Insecurity. 
-* Therefore, regardless of the answer chosen, Gravity recommends using Observation.category: [food-insecurity](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity) for an Observation from the AHC HRSC Screening Tool with Observation.code: 88122-7.
+* Therefore, regardless of the answer chosen, Gravity recommends using Observation.category: [food-insecurity](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity) for an Observation from the AHC HRSC Screening Tool with Observation.code: 88122-7.
 
 **Example 2**: When a question and its complete answer set address more than one SDOH domain, an Observation using the question for Observation.code may have more than one value for Observation.category.
 
@@ -254,8 +254,8 @@ Examples for using Observation.category to tag Observations by SDOH domain are p
    <tbody>
       <tr>
          <td>What is your living situation today?</td>
-         <td>71802-3</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness, </a><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></td>
+         <td><span style="white-space: nowrap;">71802-3</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness</a></span>, <span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></span></td>
       </tr>
    </tbody>
    <thead>
@@ -268,18 +268,18 @@ Examples for using Observation.category to tag Observations by SDOH domain are p
    <tbody>
       <tr>
          <td>I have a steady place to live</td>
-         <td>LA31993-1</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness, </a><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></td>
+         <td><span style="white-space: nowrap;">LA31993-1</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness</a></span>, <span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></span></td>
       </tr>
       <tr>
          <td>I have a place to live today, but I am worried about losing it in the future</td>
-         <td>LA31994-9</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness, </a><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></td>
+         <td><span style="white-space: nowrap;">LA31994-9</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness</a></span>, <span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></span></td>
       </tr>
       <tr>
          <td>I do not have a steady place to live (I am temporarily staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park</td>
-         <td>LA31995-6</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness, </a><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></td>
+         <td><span style="white-space: nowrap;">LA31995-6</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness</a></span>, <span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></span></td>
       </tr>
    </tbody>
 </table>
@@ -287,9 +287,9 @@ Examples for using Observation.category to tag Observations by SDOH domain are p
 * The above question and the set of answer choices provides information about a possible HRSN related to Housing Instability or Homelessness. 
 * Although Observation.value: LA31993-1 (I have a steady place to live) does not indicate a HRSN, the Observation still provides information about Homelessness and Housing Instability. 
 * Observation.value: LA31994-9 (I have a place to live today, but I am worried about losing it in the future) provides information about Housing Instability but also shows that the individual is not experiencing Homelessness.
-* Regardless of the answer chosen, Gravity recommends using [homelessness](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness) AND [housing-instability](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability) for Observation.category for any Observation with Observation.code: 71802-3.
+* Regardless of the answer chosen, Gravity recommends using [homelessness](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness) AND [housing-instability](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability) for Observation.category for any Observation with Observation.code: 71802-3.
 
-**Example 3**: Since Gravity Project terminology development for SDOH domains is an ongoing process, some domains may not yet be represented in the [SDOHCC ValueSet SDOH Category] value set. When a question and its complete answer set address an SDOH domain that is not represented in the Observation.category value set, use Observation.category: [sdoh-category-unspecified](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified). If desired, Observationcategory.text can be used to further specify the domain.
+**Example 3**: Since Gravity Project terminology development for SDOH domains is an ongoing process, some domains may not yet be represented in the [SDOHCC ValueSet SDOH Category] value set. When a question and its complete answer set address an SDOH domain that is not represented in the Observation.category value set, use Observation.category: [sdoh-category-unspecified](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified). If desired, Observationcategory.text can be used to further specify the domain.
 
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
    <thead>
@@ -309,8 +309,8 @@ Examples for using Observation.category to tag Observations by SDOH domain are p
    <tbody>
       <tr>
          <td>Because of a physical, mental, or emotional condition, do you have difficulty doing errands alone such as visiting a doctor's office or shopping?</td>
-         <td>69861-3</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified">sdoh-category-unspecified</a></td>
+         <td><span style="white-space: nowrap;">69861-3</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified">sdoh-category-unspecified</a></span></td>
          <td>Disability Status</td>
       </tr>
    </tbody>
@@ -325,14 +325,14 @@ Examples for using Observation.category to tag Observations by SDOH domain are p
    <tbody>
       <tr>
          <td>Yes</td>
-         <td>LA33-6</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified">sdoh-category-unspecified</a></td>
+         <td><span style="white-space: nowrap;">LA33-6</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified">sdoh-category-unspecified</a></span></td>
          <td>Disability Status</td>
       </tr>
       <tr>
          <td>No</td>
-         <td>LA32-8</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified">sdoh-category-unspecified</a></td>
+         <td><span style="white-space: nowrap;">LA32-8</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified">sdoh-category-unspecified</a></span></td>
          <td>Disability Status</td>
       </tr>
    </tbody>
@@ -340,7 +340,7 @@ Examples for using Observation.category to tag Observations by SDOH domain are p
 
 * The question and answer set above address Disability Status.
 * As of June 2024, Gravity Project has not yet started on Disability Status as a domain. Therefore, ‘disability-status’ is not in the value set for Observation.category.
-* In this case, Gravity recommends using Observation.category: [sdoh-category-unspecified](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified) for any Observation with Observation.code: 69861-3 and “category.text: Disability Status” can be used to further specify the domain.
+* In this case, Gravity recommends using Observation.category: [sdoh-category-unspecified](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified) for any Observation with Observation.code: 69861-3 and “category.text: Disability Status” can be used to further specify the domain.
 
 ##### Flagging Observations for a possible HRSN need using Observation.interpretation
 
@@ -372,8 +372,8 @@ Examples for using Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/
    <tbody>
       <tr>
          <td>Within the past 12 months, you worried that your food would run out before you got money to buy more</td>
-         <td>88122-7</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;">88122-7</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
       </tr>
    </tbody>
    <thead>
@@ -387,20 +387,21 @@ Examples for using Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/
    <tbody>
       <tr>
          <td>Often true</td>
-         <td>LA28397-0</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;">LA28397-0</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
          <td><a href= "https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
       </tr>
       <tr>
          <td>Sometimes true</td>
-         <td>LA6729-3</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;">LA6729-3</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
          <td><a href= "https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
       </tr>
       <tr>
          <td>Never true</td>
-         <td>LA28398-8</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;">LA28398-8</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
+         <td></td>
       </tr>
    </tbody>
 </table>
@@ -426,8 +427,8 @@ In the example below, Observation.category has two SDOH codes because the questi
    <tbody>
       <tr>
          <td>What is your living situation today?</td>
-         <td>71802-3</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness, </a><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></td>
+         <td><span style="white-space: nowrap;">71802-3</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness</a></span>, <span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></span></td>
       </tr>
    </tbody>
    <thead>
@@ -441,19 +442,20 @@ In the example below, Observation.category has two SDOH codes because the questi
    <tbody>
       <tr>
          <td>I have a steady place to live</td>
-         <td>LA31993-1</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness, </a><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></td>
+         <td><span style="white-space: nowrap;">LA31993-1</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness</a></span>, <span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></span></td>
+         <td></td>
       </tr>
       <tr>
          <td>I have a place to live today, but I am worried about losing it in the future</td>
-         <td>LA31994-9</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness, </a><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></td>
+         <td><span style="white-space: nowrap;">LA31994-9</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness</a></span>, <span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></span></td>
          <td><a href= "https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
       </tr>
       <tr>
          <td>I do not have a steady place to live (I am temporarily staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park</td>
-         <td>LA31995-6</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness, </a><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></td>
+         <td><span style="white-space: nowrap;">LA31995-6</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness</a></span>, <span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></span></td>
          <td><a href= "https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
       </tr>
    </tbody>
@@ -478,8 +480,8 @@ In the example below, Observation.category has two SDOH codes because the questi
    <tbody>
       <tr>
          <td>Within the past 12 months, you worried that your food would run out before you got money to buy more</td>
-         <td>88122-7</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;">88122-7</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
       </tr>
    </tbody>
    <thead>
@@ -493,20 +495,20 @@ In the example below, Observation.category has two SDOH codes because the questi
    <tbody>
       <tr>
          <td>Often true</td>
-         <td>LA28397-0</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;">LA28397-0</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
          <td></td>
       </tr>
       <tr>
          <td>Sometimes true</td>
-         <td>LA6729-3</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;">LA6729-3</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
          <td></td>
       </tr>
       <tr>
          <td>Never true</td>
-         <td>LA28398-8</td>
-         <td><a href= "https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;">LA28398-8</span></td>
+         <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
          <td>OMIT</td>
       </tr>
    </tbody>
@@ -531,8 +533,8 @@ In the example below, Observation.category has two SDOH codes because the questi
    <tbody>
       <tr>
          <td>Within the past 12 months, you worried that your food would run out before you got money to buy more</td>
-         <td>88122-7</td>
-         <td><a href="https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;">88122-7</span></td>
+         <td><span style="white-space: nowrap;"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
       </tr>
    </tbody>
    <thead>
@@ -546,20 +548,20 @@ In the example below, Observation.category has two SDOH codes because the questi
    <tbody>
       <tr>
          <td>Often true</td>
-         <td>LA28397-0</td>
-         <td><a href="https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;">LA28397-0</span></td>
+         <td><span style="white-space: nowrap;"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
          <td></td>
       </tr>
       <tr>
          <td>Sometimes true</td>
-         <td>LA6729-3</td>
-         <td><a href="https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;">LA6729-3</span></td>
+         <td><span style="white-space: nowrap;"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
          <td></td>
       </tr>
       <tr>
          <td>Never true</td>
-         <td>LA28398-8</td>
-         <td><a href="https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;">LA28398-8</span></td>
+         <td><span style="white-space: nowrap;"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
          <td></td>
       </tr>
    </tbody>
@@ -575,7 +577,7 @@ In the example below, Observation.category has two SDOH codes because the questi
       <tr>
          <td>No Answer</td>
          <td><a href="https://hl7.org/fhir/R4/codesystem-data-absent-reason.html#data-absent-reason-unknown">unknown</a> (or subtype)</td>
-         <td><a href="https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></td>
+         <td><span style="white-space: nowrap;"><a href="CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
          <td>OMIT</td>
       </tr>
    </tbody>
@@ -586,17 +588,74 @@ In addition to representing Observation instances, [SDOHCC Observation Screening
 
 If a QuestionnaireResponse has been created for the assessment instrument, Observation Grouping, while not prohibited, is generally redundant since the member Observations can directly reference QuestionnaireResponse (via derivedFrom) for assessment instrument context.
 
-Observation Grouping is most useful when a QuestionnaireResponse has not been created. For an Observation Grouping example, see [SDOHCC Observation Response NHANES Grouping Example](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/Observation-SDOHCC-ObservationResponseNHANESGroupingExample.html)
-
-----------
-
-.
+Observation Grouping is most useful when a QuestionnaireResponse has not been created. For an Observation Grouping example, see [SDOHCC Observation Response NHANES Grouping Example](Observation-SDOHCC-ObservationResponseNHANESGroupingExample.html).
 
 For several of the common ways in which implementors may compose assessment instruments, Table 3 provides guidance for Observation.code and Observation.member for an Observation Grouping.
 
 **Table 3**: Guidance on Observation Grouping based on the composition of the assessment instrument
 
-INSERT TABLE
+<table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
+   <tbody>
+      <tr>
+         <td>
+         <strong>Assessment Instrument Composition </strong><strong>(what it comprises)</strong>
+         </td>
+         <td>
+            <strong>Example</strong>
+         </td>
+         <td>
+            <strong>Recommendations for Observation Screening Response Grouping</strong>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><strong>Standardized Assessment Instrument:</strong> This is a single (LOINC-encoded) assessment instrument in its entirety.</p>
+            <p>This assessment instrument is LOINC-encoded, and all questions and answers are LOINC-encoded.</p>
+         </td>
+         <td>
+            AHC HRSN Screening Tool (Core Questions)
+         </td>
+         <td>
+            <ol>
+               <li>Observation.code is the LOINC code (panel code) for the assessment instrument.</li>
+               <li>Observation.member references all Observations generated from the assessment instrument.</li>
+               <li>All member Observations have LOINC codes for Observation.code and Observation.value (where applicable).</li>
+            </ol>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><strong>Non-Standardized Assessment Instrument with Standardized Questions: </strong>This assessment instrument combines questions from one or more Standardized Assessment Instruments.</p>
+            <p>This assessment instrument is not LOINC-encoded but all its questions and answers are LOINC-encoded.</p>
+         </td>
+         <td>
+            AHC HRSN Screening Tool (Core Questions) + selected questions from AHC HRSN Supplemental Questions
+         </td>
+         <td>
+            <ol>
+               <li>Observation.code is a non-LOINC (e.g., local) code since the assessment instrument is not represented in LOINC.</li>
+               <li>Observation.member references all Observations generated from the assessment instrument. All member Observations have LOINC codes for Observation.code and Observation.value (where applicable).</li>
+            </ol>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><strong>Non-Standardized Assessment Instrument with Standardized and Non-standardized Questions</strong>: This assessment instrument combines questions from a Standardized Assessment Instrument with some non-LOINC encoded questions.</p>
+            <p>This assessment instrument is not LOINC-encoded. Some questions and answers are LOINC-encoded. Some questions and answers are not LOINC-encoded.</p>
+         </td>
+         <td>
+            AHC HRSN Screening Tool (Core Questions) + selected non-LOINC encoded (e.g., local) questions
+         </td>
+         <td>
+            <ol>
+               <li>Observation.code is a non-LOINC (e.g., local) code since the assessment instrument is not represented in LOINC.</li>
+               <li>Observation.member references all Observations generated from the assessment instrument. Some member Observations have a LOINC code for Observation.code and Observation.value.</li>
+            </ol>
+         </td>
+      </tr>
+   </tbody>
+</table>
+
 
 ### Using StructureMap to Generate Observations or Conditions from QuestionnaireResponse
 
@@ -660,8 +719,8 @@ This IG provides examples of the FHIR artifacts mentioned above for the followin
 
 This IG includes a complete example of the [Hunger Vital Sign (HVS)](https://loinc.org/88121-9/)<sup>2</sup> assessment instrument including:
 
-* a [SDC HVS Questionnaire](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/STU2.2/Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)
-* a [SDC HVS QuestionnaireResponse](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/STU2.2/QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html)
+* a [SDC HVS Questionnaire](branches/STU2.2/Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)
+* a [SDC HVS QuestionnaireResponse](branches/STU2.2/QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html)
 * a [StructureMap] that takes the [QuestionnaireResponse] and creates the appropriate [SDOHCC Observation Screening Response] and [SDOHCC Condition] instances
 * a [SDOHCC Observation Screening Response] instance used to record Question 3 on the assessment instrument (computed based on the answers to Questions 1 and 2)
 * a [SDOHCC Condition] instance that could be used to record the health concern based on the assessment instrument results
@@ -670,17 +729,17 @@ This IG includes a complete example of the [Hunger Vital Sign (HVS)](https://loi
 
 This IG includes a partial example of the [PRAPARE](https://loinc.org/93025-5/)<sup>3</sup> assessment instrument including:
 
-* a [SDC PRAPARE Questionnaire](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/STU2.2/Questionnaire-SDOHCC-QuestionnairePRAPARE.html)
-* a [SDC PRAPARE Questionnaire Response](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/STU2.2/QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html)
+* a [SDC PRAPARE Questionnaire](branches/STU2.2/Questionnaire-SDOHCC-QuestionnairePRAPARE.html)
+* a [SDC PRAPARE Questionnaire Response](branches/STU2.2/QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html)
 * a [StructureMap] that takes the [QuestionnaireResponse] and creates the appropriate [SDOHCC Observation Screening Response] and [SDOHCC Condition] instances
 * multiple [SDOHCC Observation Screening Response] instances used to record some of the question and answers on the assessment instrument (not all questions are provided in these examples)
-    * [Employment Status](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/Observation-SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample.html)
-    * [Housing Status](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/Observation-SDOHCC-ObservationResponsePRAPAREHousingStatusExample.html)
-    * [Child Care Need](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/Observation-SDOHCC-ObservationResponsePRAPAREChildCareNeedExample.html)
-    * [Clothing Need](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/Observation-SDOHCC-ObservationResponsePRAPAREClothingNeedExample.html)
+    * [Employment Status](Observation-SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample.html)
+    * [Housing Status](Observation-SDOHCC-ObservationResponsePRAPAREHousingStatusExample.html)
+    * [Child Care Need](Observation-SDOHCC-ObservationResponsePRAPAREChildCareNeedExample.html)
+    * [Clothing Need](Observation-SDOHCC-ObservationResponsePRAPAREClothingNeedExample.html)
 * two [SDOHCC Condition] instances to record the health concerns based on the results of the assessment instrument
-    * [Unemployed](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/Condition-SDOHCC-ConditionUnemployedExample.html)
-    * [Homeless](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/branches/STU2.2/Condition-SDOHCC-ConditionHomelessExample.html)
+    * [Unemployed](Condition-SDOHCC-ConditionUnemployedExample.html)
+    * [Homeless](branches/STU2.2/Condition-SDOHCC-ConditionHomelessExample.html)
 
 ----------------------------------------------------------------------------------------------------
 

@@ -21,7 +21,6 @@
 [SDOHCC-LocationExample]: Location-SDOHCC-LocationExample.html
 [SDOHCCObservationAssessment]: StructureDefinition-SDOHCC-ObservationAssessment.html
 [SDOHCC-ObservationAssessmentInadequateFoodIntakeExample]: Observation-SDOHCC-ObservationAssessmentInadequateFoodIntakeExample.html
-[SDOHCC-ObservationAssessmentSocialIsolationExample]: Observation-SDOHCC-ObservationAssessmentSocialIsolationExample.html
 [SDOHCC-ObservationAssessmentTransportTooExpensiveExample]: Observation-SDOHCC-ObservationAssessmentTransportTooExpensiveExample.html
 [SDOHCCObservationEthnicityOMB]: StructureDefinition-SDOHCC-ObservationEthnicityOMB.html
 [SDOHCC-ObservationEthnicityOMBExample]: Observation-SDOHCC-ObservationEthnicityOMBExample.html

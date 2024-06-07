@@ -44,7 +44,6 @@ SDOHCC-GroupSDOHPatientsForPayerExample                        Instance    insta
 SDOHCC-HealthcareServiceTelecomAppointmentExample              Instance    instances/SDOHCC-HealthcareServiceTelecomAppointmentExample.fsh
 SDOHCC-LocationExample                                         Instance    instances/SDOHCC-LocationExample.fsh
 SDOHCC-ObservationAssessmentInadequateFoodIntakeExample        Instance    instances/SDOHCC-ObservationAssessmentInadequateFoodIntakeExample.fsh
-SDOHCC-ObservationAssessmentSocialIsolationExample             Instance    instances/SDOHCC-ObservationAssessmentSocialIsolationExample.fsh
 SDOHCC-ObservationAssessmentTransportTooExpensiveExample       Instance    instances/SDOHCC-ObservationAssessmentTransportTooExpensiveExample.fsh
 SDOHCC-ObservationEthnicityOMBExample                          Instance    instances/SDOHCC-ObservationEthnicityOMBExample.fsh
 SDOHCC-ObservationGenderIdentityExample                        Instance    instances/SDOHCC-ObservationGenderIdentityExample.fsh

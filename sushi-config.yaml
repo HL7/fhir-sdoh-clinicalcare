@@ -147,7 +147,7 @@ groups:
     - SDOHCC-GroupSDOHPatientsForPayerExample
     - SDOHCC-HealthcareServiceTelecomAppointmentExample
     - SDOHCC-LocationExample
-    - SDOHCC-ObservationAssessmentSocialIsolationExample
+    #- SDOHCC-ObservationAssessmentSocialIsolationExample
     - SDOHCC-ObservationAssessmentInadequateFoodIntakeExample
     - SDOHCC-ObservationAssessmentTransportTooExpensiveExample
     - SDOHCC-OrganizationClinicExample
