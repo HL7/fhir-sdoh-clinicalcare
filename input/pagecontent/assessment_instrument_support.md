@@ -677,7 +677,7 @@ Prior to using SDC StructureMap to generate Conditions from QuestionnaireRespons
 
 #### Additional Detailed Technical Guidance for StructureMap
 
-The StructureMap resource examples in this IG are generated using the [FHIR Mapping Language](http://hl7.org/fhir/R4/mapping-language.html). This language is then used to generate the StructureMap instances. Authoring the maps in a textual language is much simpler than attempting to craft the XML or JSON StructureMap instances directly. The mapping language also works regardless of the syntax used for the QuestionnaireResponse, i.e., it works the same for JSON, XML and RDF instances.
+The StructureMap resource examples in this IG are generated using the [FHIR Mapping Language]({{site.data.fhir.path}}mapping-language.html). This language is then used to generate the StructureMap instances. Authoring the maps in a textual language is much simpler than attempting to craft the XML or JSON StructureMap instances directly. The mapping language also works regardless of the syntax used for the QuestionnaireResponse, i.e., it works the same for JSON, XML and RDF instances.
 
 Instructions and tutorials on how to use the FHIR Mapping Language to convert and transform resources are found [here](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Mapping+Language). This page also includes references to existing open-source implementations that are capable of compiling mapping language instances into FHIR StructureMaps as well as being able to ‘execute’ maps - i.e., convert a QuestionnaireResponse into a transaction Bundle of other resources. Implementers are encouraged to leverage one of these existing community-developed implementations rather than creating their own. This will save work and minimize the likelihood of introducing implementation-specific errors into the transformation process.
 
@@ -719,8 +719,8 @@ This IG provides examples of the FHIR artifacts mentioned above for the followin
 
 This IG includes a complete example of the [Hunger Vital Sign (HVS)](https://loinc.org/88121-9/)<sup>2</sup> assessment instrument including:
 
-* a [SDC HVS Questionnaire](branches/STU2.2/Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)
-* a [SDC HVS QuestionnaireResponse](branches/STU2.2/QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html)
+* a [SDC HVS Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)
+* a [SDC HVS QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html)
 * a [StructureMap] that takes the [QuestionnaireResponse] and creates the appropriate [SDOHCC Observation Screening Response] and [SDOHCC Condition] instances
 * a [SDOHCC Observation Screening Response] instance used to record Question 3 on the assessment instrument (computed based on the answers to Questions 1 and 2)
 * a [SDOHCC Condition] instance that could be used to record the health concern based on the assessment instrument results
@@ -729,8 +729,8 @@ This IG includes a complete example of the [Hunger Vital Sign (HVS)](https://loi
 
 This IG includes a partial example of the [PRAPARE](https://loinc.org/93025-5/)<sup>3</sup> assessment instrument including:
 
-* a [SDC PRAPARE Questionnaire](branches/STU2.2/Questionnaire-SDOHCC-QuestionnairePRAPARE.html)
-* a [SDC PRAPARE Questionnaire Response](branches/STU2.2/QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html)
+* a [SDC PRAPARE Questionnaire](Questionnaire-SDOHCC-QuestionnairePRAPARE.html)
+* a [SDC PRAPARE Questionnaire Response](QuestionnaireResponse-SDOHCC-QuestionnaireResponsePRAPAREExample.html)
 * a [StructureMap] that takes the [QuestionnaireResponse] and creates the appropriate [SDOHCC Observation Screening Response] and [SDOHCC Condition] instances
 * multiple [SDOHCC Observation Screening Response] instances used to record some of the question and answers on the assessment instrument (not all questions are provided in these examples)
     * [Employment Status](Observation-SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample.html)
@@ -739,7 +739,7 @@ This IG includes a partial example of the [PRAPARE](https://loinc.org/93025-5/)<
     * [Clothing Need](Observation-SDOHCC-ObservationResponsePRAPAREClothingNeedExample.html)
 * two [SDOHCC Condition] instances to record the health concerns based on the results of the assessment instrument
     * [Unemployed](Condition-SDOHCC-ConditionUnemployedExample.html)
-    * [Homeless](branches/STU2.2/Condition-SDOHCC-ConditionHomelessExample.html)
+    * [Homeless](Condition-SDOHCC-ConditionHomelessExample.html)
 
 ----------------------------------------------------------------------------------------------------
 
@@ -747,6 +747,6 @@ This IG includes a partial example of the [PRAPARE](https://loinc.org/93025-5/)<
 
 <sup>2</sup> Hunger Vital Sign™ Hager, E. R., Quigg, A. M., Black, M. M., Coleman, S. M., Heeren, T., Rose-Jacobs, R., Cook, J. T., Ettinger de Cuba, S. A., Casey, P. H., Chilton, M., Cutts, D. B., Meyers A. F., Frank, D. A. (2010). [Development and Validity of a 2-Item Screen to Identify Families at Risk for Food Insecurity](https://childrenshealthwatch.org/wp-content/uploads/EH_Pediatrics_2010.pdf). Pediatrics, 126(1), 26-32. doi:10.1542/peds.2009-3146.  
 
-<sup>3</sup> Protocol for Responding to and Assessing Patients’ Assets, Risks and Experiences (PRAPARE®) and its resources are proprietary information of the National Association of Community Health Centers (NACHC). For more information, visit [www.nachc.org/prapare](www.nachc.org/prapare). The example is included with permission.
+<sup>3</sup> Protocol for Responding to and Assessing Patients’ Assets, Risks and Experiences (PRAPARE®) and its resources are proprietary information of the National Association of Community Health Centers (NACHC). For more information, visit [https://www.nachc.org/resource/prapare/](https://www.nachc.org/resource/prapare/). The example is included with permission.
 
 {% include markdown-link-references.md %}

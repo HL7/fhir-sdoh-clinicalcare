@@ -55,8 +55,8 @@ For the purposes of this IG, there will be no need for 'topic discovery' as ther
 ServiceRequest](#servicerequest-topic).  While neither of these topics are unique to the Gravity IG, because no standard topics have yet been defined for US Core, this IG will define the needed
 topics here.  In the future, these topics may be subsumed into general-purpose topics defined by US Core and/or the FHIR core specification.
 
-As well, Provider and CBO systems MAY choose to allow CBOs and Patient systems receiving notifications by email or SMS to configure their subscriptions out-of-band (i.e.
-without needing to POST a Subscription resource to create a subscription or PUT a Subscription to update the email or SMS location to send notifications to.
+As well, Provider and CBO systems MAY choose to allow CBOs and Patient systems receiving notifications by email or SMS to configure their subscriptions out-of-band (i.e.,
+without needing to POST a Subscription resource to create a subscription or PUT a Subscription to update the email or SMS location to send notifications to).
 
 Servers supporting subscription SHALL support the rest-hook and e-mail channel mechanism.  They MAY support the SMS channel mechanism (see below).  When acting as subscription clients, EHRs, CPs and FHIR Server-enabled CBOs SHALL support rest-hook.  Patient and FHIR-Application Enabled CBOs will typically receive notifications via e-mail or SMS.  In this case, the notification goes to a user rather than to the system and the user triggers their system to retrieve the records by opening their application.  Servers SHALL support both JSON and XML and clients SHALL support at least one of these.  Client and server SHALL support id-only, though they may  also support other content approaches.  The id-only approach means that the id of the Task or ServiceRequest that was updated or created will be provided.  The client will then perform a read or a query to
 retrieve the specified record(s) specified in the subscription notification. E.g.

@@ -31,7 +31,7 @@ develops terminology resources that are published via the [Value Set Authority C
 
 The [Pilot Workstream](https://confluence.hl7.org/display/GRAV/Gravity+Project+Pilots+Affinity+Group+Home) works with partners to test and provide feedback on the Gravity-developed Terminology Resources and FHIR IG specifications.
 
-{% include img-medsmall.html img="GravityProject.png" caption="Figure 2: Gravity Project Workstreams" %}
+{% include img.html img="GravityProject.png" caption="Figure 2: Gravity Project Workstreams" %}
 
 For more information about Gravity see the Gravity Project [website](https://thegravityproject.net/) or [confluence site](https://confluence.hl7.org/display/GRAV/The+Gravity+Project).
 

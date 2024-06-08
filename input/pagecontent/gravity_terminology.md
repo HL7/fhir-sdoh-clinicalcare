@@ -1,5 +1,5 @@
 
-Gravity Project develops and maintains SDOH-related value sets that are published in the National Institutes of Health (NIH) [NIH Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) where they can be accessed by creating a free National Library of Medicine (NLM) account and refining the search by “Steward: The Gravity Project”. Hyperlinks to the VSAC value sets can also be found [here](https://confluence.hl7.org/display/GRAV/Gravity+Terminology+Value+Sets) on the Gravity Project Confluence site. This section describes how these value sets are used in the SDOHCC profiles and the process for developing the value sets in VSAC.
+Gravity Project develops and maintains SDOH-related value sets that are published in the National Institutes of Health (NIH) [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/).  Hyperlinks to the Gravity Project VSAC value sets can also be found [here](https://confluence.hl7.org/display/GRAV/Social+Risk+Terminology+Value+Sets?preview=/97463504/161062739/Assessment_Instruments_Spreadsheet_Guidance_V1.pdf) on the Gravity Project Confluence site. This section describes how these value sets are used in the SDOHCC profiles and the process for developing the value sets in VSAC.
 
 ### Additional Bindings for SDOH Domain-specific Value Sets
 
@@ -7,7 +7,7 @@ The [SDOHCC Observation Screening Response][SDOHCC Observation Screening Respons
 
 #### Additional Binding Example for the SDOHCC Condition Profile
 
-For the [SDOHCC Condition] profile, Condition.code has a binding to [US Core Condition Code](http://hl7.org/fhir/us/core/STU3.1.1/ValueSet-us-core-condition-code.html) (required). However, if Condition.category is ‘food-insecurity’, Condition.code has an additional binding to [Food Insecurity Diagnoses](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.17/expansion) (a Gravity-authored value set in VSAC).
+For the [SDOHCC Condition] profile, Condition.code has a binding to [US Core Condition Code]({{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html) (required). However, if Condition.category is ‘food-insecurity’, Condition.code has an additional binding to [Food Insecurity Diagnoses](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.17/expansion) (a Gravity-authored value set in VSAC).
 
 Excerpt from [SDOHCC Condition] :
 
@@ -17,13 +17,13 @@ Excerpt from [SDOHCC Condition] :
 
 #### Gravity Project Value Set Naming
 
-The VSAC value set names align with the profiles in which they are used in this IG as follows: 
+Gravity-authored VSAC value sets include a term in their name that indicate the SDOHCC profile they are used with as follows:
   
-| **Gravity VSAC value sent name includes:** | **Used with:**                                                                 |
+| **Gravity VSAC value set name includes:**  | **Used with:**                                                                 |
 | ------------------------------------------ | ------------------------------------------------------------------------------ |
 | Diagnoses                                  | [SDOHCC Condition][SDOHCC Condition]                                           |
-| Procedures                                 | [SDOHCC Procedure][SDOHCC Procedure]                                          |
-| Service Requests                           | [SDOHCC Service Request][SDOHCC Service Request]                              |
+| Procedures                                 | [SDOHCC Procedure][SDOHCC Procedure]                                           |
+| Service Requests                           | [SDOHCC Service Request][SDOHCC Service Request]                               |
 | Goals                                      | [SDOHCC Goal][SDOHCC Goal]                                                     |
 | Assessments                                | [SDOHCC Observation Screening Response][SDOHCC Observation Screening Response] |
 {:.grid}
@@ -32,7 +32,7 @@ The VSAC value set names align with the profiles in which they are used in this 
 
 The steps below outline Gravity’s general process for value set creation in VSAC. For each step, the examples show the process for Condition.code for the [SDOHCC Condition] profile.
 
-1. Value sets are created that are specific for:
+<p>1. Value sets are created that are specific for:</p>
 
 * SDOH domain (category) – e.g., Food insecurity, Transportation Insecurity.
 * Profile – e.g., Condition (Diagnoses), Procedure
@@ -53,10 +53,10 @@ The value sets created in Step 1 do not bind to SDOHCC profile elements. In step
 </thead>
 <tbody>
    <tr>
-      <td>Food Insecurity Diagnoses ICD-10 CM</td>
+      <td>Food Insecurity Diagnoses ICD10CM</td>
       <td>Food Insecurity</td>
       <td>N/A</td>
-      <td>ICD-10 CM</td>
+      <td>ICD-10-CM</td>
    </tr>
    <tr>
       <td>Food Insecurity Diagnosis SNOMED CT</td>
@@ -65,10 +65,10 @@ The value sets created in Step 1 do not bind to SDOHCC profile elements. In step
       <td>SNOMED CT</td>
    </tr>
    <tr>
-      <td>Transportation Insecurity Diagnoses ICD-10 CM</td>
+      <td>Transportation Insecurity Diagnoses ICD10CM</td>
       <td>Transportation Insecurity</td>
       <td>N/A</td>
-      <td>ICD-10 CM</td>
+      <td>ICD-10-CM</td>
    </tr>
    <tr>
       <td>Transportation Insecurity Diagnoses SNOMED CT</td>
@@ -77,10 +77,10 @@ The value sets created in Step 1 do not bind to SDOHCC profile elements. In step
       <td>SNOMED CT</td>
    </tr>
    <tr>
-      <td>Inadequate Housing Diagnoses ICD-10 CM</td>
+      <td>Inadequate Housing Diagnoses ICD10CM</td>
       <td>Inadequate Housing</td>
       <td>N/A</td>
-      <td>ICD-10 CM</td>
+      <td>ICD-10-CM</td>
    </tr>
    <tr>
       <td>Inadequate Housing Diagnoses SNOMED CT</td>
@@ -97,7 +97,7 @@ The value sets created in Step 1 do not bind to SDOHCC profile elements. In step
 </tbody>
 </table>
 
-2. Value sets created in Step 1 are grouped into value sets that are only specific for:
+<p>2. Value sets created in Step 1 are grouped into value sets that are only specific for:</p>
 
 * SDOH domain (category) – e.g., Food insecurity, Transportation Insecurity
 * Profile – e.g., Condition (Diagnoses), Procedure
@@ -120,20 +120,20 @@ These value sets bind to SDOHCC profile elements via an Additional Bindings tabl
       <td>Food Insecurity Diagnoses</td>
       <td>Food Insecurity</td>
       <td>SDOHCC Condition</td>
-      <td>Food Insecurity Diagnoses ICD-10 CM<br>Food Insecurity Diagnosis SNOMED CT</td>
+      <td>Food Insecurity Diagnoses ICD10CM<br>Food Insecurity Diagnosis SNOMED CT</td>
    </tr>
    <tr>
       <td>Transportation Insecurity Diagnoses</td>
       <td>Transportation Insecurity</td>
       <td>SDOHCC Condition</td>
-      <td>Transportation Insecurity Diagnoses ICD-10 CM<br>Transportation Insecurity Diagnoses SNOMED CT
+      <td>Transportation Insecurity Diagnoses ICD10CM<br>Transportation Insecurity Diagnoses SNOMED CT
 </td>
    </tr>
    <tr>
       <td>Inadequate Housing Diagnoses</td>
       <td>Inadequate Housing</td>
       <td>SDOHCC Condition</td>
-      <td>Inadequate Housing Diagnoses ICD-10 CM<br>Inadequate Housing Diagnoses SNOMED CT
+      <td>Inadequate Housing Diagnoses ICD10CM<br>Inadequate Housing Diagnoses SNOMED CT
 </td>
    </tr>
    <tr>
@@ -145,7 +145,7 @@ These value sets bind to SDOHCC profile elements via an Additional Bindings tabl
 </tbody>
 </table>
 
-3. Value sets created in Step 2 are grouped into SDOH grouping value sets that are only specific for:
+<p>3. Value sets created in Step 2 are grouped into SDOH grouping value sets that are only specific for:</p>
 
 * Profile – e.g., Condition (Diagnoses), Procedure
 

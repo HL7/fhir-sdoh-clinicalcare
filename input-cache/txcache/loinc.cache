@@ -16,7 +16,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -40,7 +39,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -64,7 +62,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -88,7 +85,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -182,7 +178,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -206,7 +201,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -230,7 +224,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -254,7 +247,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -278,7 +270,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -302,7 +293,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -326,7 +316,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -350,7 +339,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -376,7 +364,6 @@ v: {
   "error" : "The provided code 'http://loinc.org#5792-7' was not found in the value set 'http://loinc.org/vs/LL6134-2'",
   "class" : "UNKNOWN",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -417,7 +404,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -442,7 +428,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -467,7 +452,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -492,7 +476,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -517,7 +500,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -542,7 +524,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -567,7 +548,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -592,7 +572,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -617,7 +596,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -642,7 +620,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -667,7 +644,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -692,7 +668,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -717,7 +692,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -742,7 +716,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -767,7 +740,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -792,7 +764,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -817,7 +788,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -842,7 +812,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -867,7 +836,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -892,7 +860,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -917,7 +884,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -942,7 +908,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -967,7 +932,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -992,7 +956,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1017,7 +980,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1042,7 +1004,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1067,7 +1028,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1092,7 +1052,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1117,7 +1076,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1142,7 +1100,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1167,7 +1124,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1192,7 +1148,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1217,7 +1172,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1242,7 +1196,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1267,7 +1220,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1292,7 +1244,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1317,7 +1268,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1342,7 +1292,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1367,7 +1316,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1392,7 +1340,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1417,7 +1364,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1442,7 +1388,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1467,7 +1412,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1492,7 +1436,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1517,7 +1460,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1542,7 +1484,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1567,7 +1508,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1592,7 +1532,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1617,7 +1556,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1642,7 +1580,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1667,7 +1604,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1692,7 +1628,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1717,7 +1652,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1742,7 +1676,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1767,7 +1700,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1792,7 +1724,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1817,7 +1748,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1842,7 +1772,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1867,7 +1796,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1892,7 +1820,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1917,7 +1844,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1942,7 +1868,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1967,7 +1892,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -1992,7 +1916,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2017,7 +1940,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2042,7 +1964,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2067,7 +1988,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2092,7 +2012,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2117,7 +2036,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2142,7 +2060,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2167,7 +2084,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2192,7 +2108,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2217,7 +2132,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2242,7 +2156,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2267,7 +2180,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2292,7 +2204,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2317,7 +2228,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2342,7 +2252,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2367,7 +2276,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2392,7 +2300,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2417,7 +2324,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2442,7 +2348,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2467,7 +2372,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2492,7 +2396,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2517,7 +2420,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2541,7 +2443,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2566,7 +2467,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2590,7 +2490,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2615,7 +2514,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2639,7 +2537,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2664,7 +2561,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2688,7 +2584,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2713,7 +2608,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2737,7 +2631,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2762,7 +2655,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2786,7 +2678,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2811,7 +2702,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2835,7 +2725,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2859,7 +2748,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2883,7 +2771,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2908,7 +2795,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2932,7 +2818,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2956,7 +2841,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -2981,7 +2865,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3006,7 +2889,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3030,7 +2912,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3055,7 +2936,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3091,7 +2971,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3116,7 +2995,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3140,7 +3018,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3165,7 +3042,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3189,7 +3065,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3214,7 +3089,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3238,7 +3112,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3263,7 +3136,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3287,7 +3159,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3312,7 +3183,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3336,7 +3206,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3361,7 +3230,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3385,7 +3253,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3410,7 +3277,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3434,7 +3300,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3459,7 +3324,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3483,7 +3347,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3508,7 +3371,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3532,7 +3394,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3557,7 +3418,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3581,7 +3441,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3606,7 +3465,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3630,7 +3488,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3655,7 +3512,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3679,7 +3535,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3704,7 +3559,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3728,7 +3582,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3753,7 +3606,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3789,7 +3641,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3897,7 +3748,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -3918,6 +3768,29 @@ v: {
 v: {
   "display" : "Sexual orientation",
   "code" : "76690-7",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA29518-0"
+}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetPronounsValue--0", "version": "2.2.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "he/him/his/his/himself",
+  "code" : "LA29518-0",
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
