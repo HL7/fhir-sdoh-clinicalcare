@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Fri, May 31, 2024 19:35+0000 for FHIR v6.0.0-cibuild 
+  Generated on Fri, Jun 14, 2024 04:47+0000 for FHIR v6.0.0-cibuild 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="6.0.0-cibuild">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -18089,7 +18089,7 @@ The duration (usually in minutes) could also be provided to indicate the length 
         <xs:sequence>
           <xs:element name="type" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The type of extra detail provided in the value.</xs:documentation>
+              <xs:documentation xml:lang="en">The name of extra detail provided in the value. This element is the tag for the value. Where a simple string is used for the tag name, use the CodeableConcept.display element.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:choice minOccurs="1" maxOccurs="1" >
@@ -32053,6 +32053,11 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">This list of codes represents the main clinical acts, such as a colonoscopy or an appendectomy, being documented. In some cases, the event is inherent in the type Code, such as a &quot;History and Physical Report&quot; in which the procedure being documented is necessarily a &quot;History and Physical&quot; act.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="related" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Any other resource this document reference was created or to which the creation of this record is tightly associated.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="bodySite" minOccurs="0" maxOccurs="unbounded" type="CodeableReference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The anatomic structures included in the document.</xs:documentation>
@@ -32073,7 +32078,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The time period over which the service that is described by the document was provided.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="date" minOccurs="0" maxOccurs="1" type="instant">
+          <xs:element name="date" minOccurs="0" maxOccurs="1" type="dateTime">
             <xs:annotation>
               <xs:documentation xml:lang="en">When the document reference was created.</xs:documentation>
            </xs:annotation>
@@ -39480,7 +39485,7 @@ See guidance around (not) making local changes to elements [here](canonicalresou
         <xs:sequence>
           <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A unique identifier assigned to this imaging selection.</xs:documentation>
+              <xs:documentation xml:lang="en">Unique identifiers assigned to this imaging selection.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="status" minOccurs="1" maxOccurs="1" type="ImagingSelectionStatus">
@@ -39510,7 +39515,7 @@ See guidance around (not) making local changes to elements [here](canonicalresou
           </xs:element>
           <xs:element name="performer" type="ImagingSelection.Performer" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Selector of the instances – human or machine.</xs:documentation>
+              <xs:documentation xml:lang="en">Selectors of the instances – human or machine.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="basedOn" minOccurs="0" maxOccurs="unbounded" type="Reference">
@@ -39518,19 +39523,14 @@ See guidance around (not) making local changes to elements [here](canonicalresou
               <xs:documentation xml:lang="en">A list of the diagnostic requests that resulted in this imaging selection being performed.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="studyUid" minOccurs="0" maxOccurs="1" type="id">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The Study Instance UID for the DICOM Study from which the images were selected.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
           <xs:element name="derivedFrom" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The imaging study from which the imaging selection is made.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="endpoint" minOccurs="0" maxOccurs="unbounded" type="Reference">
+          <xs:element name="studyUid" minOccurs="0" maxOccurs="1" type="id">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The network service providing retrieval access to the selected images, frames, etc. See implementation notes for information about using DICOM endpoints.</xs:documentation>
+              <xs:documentation xml:lang="en">The Study Instance UID for the DICOM Study from which the images were selected.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="seriesUid" minOccurs="0" maxOccurs="1" type="id">
@@ -39548,14 +39548,19 @@ See guidance around (not) making local changes to elements [here](canonicalresou
               <xs:documentation xml:lang="en">The Frame of Reference UID identifying the coordinate system that conveys spatial and/or temporal information for the selected images or frames.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="bodySite" minOccurs="0" maxOccurs="1" type="CodeableReference">
+          <xs:element name="bodySite" minOccurs="0" maxOccurs="unbounded" type="CodeableReference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The anatomic structures examined. See DICOM Part 16 Annex L (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM to SNOMED-CT mappings.</xs:documentation>
+              <xs:documentation xml:lang="en">The anatomic structures examined. See [DICOM Part 16 Annex L](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM to SNOMED-CT mappings.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="focus" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The actual focus of an observation when it is not the patient of record representing something or someone associated with the patient such as a spouse, parent, fetus, or donor. For example, fetus observations in a mother's record.  The focus of an observation could also be an existing condition,  an intervention, the subject's diet,  another observation of the subject,  or a body structure such as tumor or implanted device.   An example use case would be using the Observation resource to capture whether the mother is trained to change her child's tracheostomy tube. In this example, the child is the patient of record and the mother is the focus.</xs:documentation>
+              <xs:documentation xml:lang="en">The actual focus of an imaging selection when it is another imaging selection resource and not the patient of record.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="endpoint" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The network services providing retrieval access to the selected images, frames, etc. See implementation notes for information about using DICOM endpoints.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="instance" type="ImagingSelection.Instance" minOccurs="0" maxOccurs="unbounded">
@@ -39586,7 +39591,7 @@ See guidance around (not) making local changes to elements [here](canonicalresou
           </xs:element>
           <xs:element name="actor" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Author – human or machine.</xs:documentation>
+              <xs:documentation xml:lang="en">Author - human or machine.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -39618,17 +39623,17 @@ See guidance around (not) making local changes to elements [here](canonicalresou
           <xs:element name="subset" minOccurs="0" maxOccurs="unbounded" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">Selected subset of the SOP Instance. The content and format of the subset item is determined by the SOP Class of the selected instance.
-       May be one of:
-       - A list of frame numbers selected from a multiframe SOP Instance.
-       - A list of Content Item Observation UID values selected from a DICOM SR or other structured document SOP Instance.
-       - A list of segment numbers selected from a segmentation SOP Instance.
-       - A list of Region of Interest (ROI) numbers selected from a radiotherapy structure set SOP Instance.</xs:documentation>
+May be one of:
+- A list of frame numbers selected from a multiframe SOP Instance.
+- A list of Content Item Observation UID values selected from a DICOM SR or other structured document SOP Instance.
+- A list of segment numbers selected from a segmentation SOP Instance.
+- A list of Region of Interest (ROI) numbers selected from a radiotherapy structure set SOP Instance.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="imageRegion2D" type="ImagingSelection.ImageRegion2D" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Each imaging selection instance or frame list might includes an image region, specified by a region type and a set of 2D coordinates.
-       If the parent imagingSelection.instance contains a subset element of type frame, the image region applies to all frames in the subset list.</xs:documentation>
+If the parent imagingSelection.instance contains a subset element of type frame, the image region applies to all frames in the subset list.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -39650,7 +39655,7 @@ See guidance around (not) making local changes to elements [here](canonicalresou
           <xs:element name="coordinate" minOccurs="1" maxOccurs="unbounded" type="decimal">
             <xs:annotation>
               <xs:documentation xml:lang="en">The coordinates describing the image region. Encoded as a set of (column, row) pairs that denote positions in the selected image / frames specified with sub-pixel resolution.
-       The origin at the TLHC of the TLHC pixel is 0.0\0.0, the BRHC of the TLHC pixel is 1.0\1.0, and the BRHC of the BRHC pixel is the number of columns\rows in the image / frames. The values must be within the range 0\0 to the number of columns\rows in the image / frames.</xs:documentation>
+The origin at the TLHC of the TLHC pixel is 0.0\0.0, the BRHC of the TLHC pixel is 1.0\1.0, and the BRHC of the BRHC pixel is the number of columns\rows in the image / frames. The values must be within the range 0\0 to the number of columns\rows in the image / frames.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -39688,6 +39693,11 @@ See guidance around (not) making local changes to elements [here](canonicalresou
       <xs:enumeration value="entered-in-error">
         <xs:annotation>
           <xs:documentation xml:lang="en">Entered in Error</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="inactive">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Inactive</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="unknown">
@@ -39899,7 +39909,7 @@ See guidance around (not) making local changes to elements [here](canonicalresou
           </xs:element>
           <xs:element name="bodySite" minOccurs="0" maxOccurs="1" type="CodeableReference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The anatomic structures examined. See DICOM Part 16 Annex L (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM to SNOMED-CT mappings. The bodySite may indicate the laterality of body part imaged; if so, it shall be consistent with any content of ImagingStudy.series.laterality.</xs:documentation>
+              <xs:documentation xml:lang="en">The anatomic structures examined. See [DICOM Part 16 Annex L](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM to SNOMED-CT mappings. The bodySite may indicate the laterality of body part imaged; if so, it shall be consistent with any content of ImagingStudy.series.laterality.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="laterality" minOccurs="0" maxOccurs="1" type="CodeableConcept">
@@ -46200,7 +46210,7 @@ See guidance around (not) making local changes to elements [here](canonicalresou
           </xs:element>
           <xs:element name="definition" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A reference to a knowledge resource that provides more information about this medication.</xs:documentation>
+              <xs:documentation xml:lang="en">A reference to a knowledge resource that provides more information about this medication. This element can be used to help with Cross Border use cases and separately it may also be useful if someone needs to drill into more medication specific information.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -46354,9 +46364,9 @@ See guidance around (not) making local changes to elements [here](canonicalresou
             <xs:annotation>
               <xs:documentation xml:lang="en">A specific date/time or interval of time during which the administration took place (or did not take place). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.</xs:documentation>
             </xs:annotation>
-            <xs:element name="occurenceDateTime" type="dateTime"/>
-            <xs:element name="occurencePeriod" type="Period"/>
-            <xs:element name="occurenceTiming" type="Timing"/>
+            <xs:element name="occurrenceDateTime" type="dateTime"/>
+            <xs:element name="occurrencePeriod" type="Period"/>
+            <xs:element name="occurrenceTiming" type="Timing"/>
           </xs:choice>
           <xs:element name="recorded" minOccurs="0" maxOccurs="1" type="dateTime">
             <xs:annotation>
@@ -46626,7 +46636,7 @@ See guidance around (not) making local changes to elements [here](canonicalresou
           </xs:element>
           <xs:element name="recorded" minOccurs="0" maxOccurs="1" type="dateTime">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The date (and maybe time) when the dispense activity started if whenPrepared or whenHandedOver is not populated.</xs:documentation>
+              <xs:documentation xml:lang="en">The date the occurrence of the MedicationDispense was first captured in the system.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="whenPrepared" minOccurs="0" maxOccurs="1" type="dateTime">
@@ -46813,22 +46823,22 @@ See guidance around (not) making local changes to elements [here](canonicalresou
               <xs:documentation xml:lang="en">A code that specifies this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="status" minOccurs="0" maxOccurs="1" type="MedicationKnowledgeStatusCodes">
+          <xs:element name="status" minOccurs="0" maxOccurs="1" type="PublicationStatus">
             <xs:annotation>
               <xs:documentation xml:lang="en">A code to indicate if the medication referred to by this MedicationKnowledge is in active use within the drug database or inventory system. The status refers to the validity about the information of the medication and not to its medicinal properties.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="author" minOccurs="0" maxOccurs="1" type="Reference">
+          <xs:element name="author" minOccurs="0" maxOccurs="1" type="ContactDetail">
             <xs:annotation>
               <xs:documentation xml:lang="en">The creator or owner of the knowledge or information about the medication.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="intendedJurisdiction" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+          <xs:element name="jurisdiction" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Lists the jurisdictions that this medication knowledge was written for.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="name" minOccurs="0" maxOccurs="unbounded" type="string">
+          <xs:element name="name" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">All of the names for a medication, for example, the name(s) given to a medication in different countries.  For example, acetaminophen and paracetamol or salbutamol and albuterol.</xs:documentation>
            </xs:annotation>
@@ -47368,36 +47378,6 @@ See guidance around (not) making local changes to elements [here](canonicalresou
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="MedicationKnowledgeStatusCodesEnum">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="active">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Active</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="entered-in-error">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Entered in Error</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="inactive">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Inactive</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="MedicationKnowledgeStatusCodes">
-    <xs:annotation>
-      <xs:documentation xml:lang="en"></xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="MedicationKnowledgeStatusCodesEnum" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:element name="MedicationRequest" type="MedicationRequest">
     <xs:annotation>
       <xs:documentation xml:lang="en">An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called &quot;MedicationRequest&quot; rather than &quot;MedicationPrescription&quot; or &quot;MedicationOrder&quot; to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.</xs:documentation>
@@ -47799,18 +47779,14 @@ See guidance around (not) making local changes to elements [here](canonicalresou
     <xs:annotation>
       <xs:documentation xml:lang="en">A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. 
 
-The primary difference between a medicationstatement and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationstatement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
-
-The MedicationStatement resource was previously called MedicationStatement.</xs:documentation>
+The primary difference between a medicationstatement and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationstatement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:complexType name="MedicationStatement">
     <xs:annotation>
       <xs:documentation xml:lang="en">A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. 
 
-The primary difference between a medicationstatement and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationstatement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
-
-The MedicationStatement resource was previously called MedicationStatement.</xs:documentation>
+The primary difference between a medicationstatement and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationstatement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -47912,9 +47888,7 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
     <xs:annotation>
       <xs:documentation xml:lang="en">A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. 
 
-The primary difference between a medicationstatement and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationstatement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
-
-The MedicationStatement resource was previously called MedicationStatement.</xs:documentation>
+The primary difference between a medicationstatement and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationstatement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -49309,12 +49283,12 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
   </xs:complexType>
   <xs:element name="NutritionIntake" type="NutritionIntake">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A record of food or fluid that is being consumed by a patient.   A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food or fluid in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.</xs:documentation>
+      <xs:documentation xml:lang="en">A record of intake by a patient.  A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food (i.e. solid and/or liquid), breastmilk, infant formula, supplements, enteral formula now or has consumed it in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:complexType name="NutritionIntake">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A record of food or fluid that is being consumed by a patient.   A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food or fluid in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.</xs:documentation>
+      <xs:documentation xml:lang="en">A record of intake by a patient.  A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food (i.e. solid and/or liquid), breastmilk, infant formula, supplements, enteral formula now or has consumed it in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -49362,7 +49336,7 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
           </xs:element>
           <xs:element name="subject" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The person, animal or group who is/was consuming the food or fluid.</xs:documentation>
+              <xs:documentation xml:lang="en">The person, animal or group who is/was consuming the food (i.e. solid and/or liquid).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="encounter" minOccurs="0" maxOccurs="1" type="Reference">
@@ -49372,7 +49346,7 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
           </xs:element>
           <xs:choice minOccurs="0" maxOccurs="1" >
             <xs:annotation>
-              <xs:documentation xml:lang="en">The interval of time during which it is being asserted that the patient is/was consuming the food or fluid.</xs:documentation>
+              <xs:documentation xml:lang="en">The interval of time during which it is being asserted that the patient is/was consuming the food (i.e. solid and/or liquid).</xs:documentation>
             </xs:annotation>
             <xs:element name="occurrenceDateTime" type="dateTime"/>
             <xs:element name="occurrencePeriod" type="Period"/>
@@ -49384,19 +49358,19 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
           </xs:element>
           <xs:choice minOccurs="0" maxOccurs="1" >
             <xs:annotation>
-              <xs:documentation xml:lang="en">The person or organization that provided the information about the consumption of this food or fluid. Note: Use derivedFrom when a NutritionIntake is derived from other resources.</xs:documentation>
+              <xs:documentation xml:lang="en">Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth.  It may also indicate the source of the intake record.</xs:documentation>
             </xs:annotation>
             <xs:element name="reportedBoolean" type="boolean"/>
             <xs:element name="reportedReference" type="Reference"/>
           </xs:choice>
-          <xs:element name="consumedItem" type="NutritionIntake.ConsumedItem" minOccurs="1" maxOccurs="unbounded">
+          <xs:element name="nutritionItem" type="NutritionIntake.NutritionItem" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">What food or fluid product or item was consumed.</xs:documentation>
+              <xs:documentation xml:lang="en">The nutrition product intended for consumption and/or infusion.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="ingredientLabel" type="NutritionIntake.IngredientLabel" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Total nutrient amounts for the whole meal, product, serving, etc.</xs:documentation>
+              <xs:documentation xml:lang="en">Nutrients and/or energey contained in product, serving, etc.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="performer" type="NutritionIntake.Performer" minOccurs="0" maxOccurs="unbounded">
@@ -49416,7 +49390,7 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
           </xs:element>
           <xs:element name="reason" minOccurs="0" maxOccurs="unbounded" type="CodeableReference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A reason, Condition or observation for why the food or fluid is /was consumed.</xs:documentation>
+              <xs:documentation xml:lang="en">A reason, Condition or observation for why the food (i.e. solid and/or liquid) is /was consumed.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
@@ -49428,23 +49402,39 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="NutritionIntake.ConsumedItem">
+  <xs:complexType name="NutritionIntake.NutritionItem">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A record of food or fluid that is being consumed by a patient.   A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food or fluid in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.</xs:documentation>
+      <xs:documentation xml:lang="en">A record of intake by a patient.  A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food (i.e. solid and/or liquid), breastmilk, infant formula, supplements, enteral formula now or has consumed it in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="type" minOccurs="1" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates what a category of item that was consumed: e.g., food, fluid, enteral, etc.</xs:documentation>
+              <xs:documentation xml:lang="en">Indicates what a category of item that is intended to be consumed: e.g., food (i.e. solid and/or liquid), breastmilk, infant formula, supplements, enteral formula.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="nutritionProduct" minOccurs="1" maxOccurs="1" type="CodeableReference">
+          <xs:element name="nutritionProduct" minOccurs="0" maxOccurs="1" type="CodeableReference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Identifies the food or fluid product that was consumed. This is potentially a link to a resource representing the details of the food product (TBD) or a simple attribute carrying a code that identifies the food from a known list of foods.</xs:documentation>
+              <xs:documentation xml:lang="en">Identifies the food (i.e. solid and/or liquid) product that is to be consumed. This is potentially a link to a resource representing the details of the food product or a simple attribute carrying a code that identifies the food from a known list of foods.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="consumedItem" type="NutritionIntake.ConsumedItem" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Schedule of consumption.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="NutritionIntake.ConsumedItem">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">A record of intake by a patient.  A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food (i.e. solid and/or liquid), breastmilk, infant formula, supplements, enteral formula now or has consumed it in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
           <xs:element name="schedule" minOccurs="0" maxOccurs="1" type="Timing">
             <xs:annotation>
               <xs:documentation xml:lang="en">Scheduled frequency of consumption.</xs:documentation>
@@ -49452,7 +49442,7 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
           </xs:element>
           <xs:element name="amount" minOccurs="0" maxOccurs="1" type="Quantity">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Quantity of the specified food.</xs:documentation>
+              <xs:documentation xml:lang="en">Quantity of the specified food (i.e. solid and/or liquid) .</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="rate" minOccurs="0" maxOccurs="1" type="Quantity">
@@ -49462,7 +49452,7 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
           </xs:element>
           <xs:element name="notConsumed" minOccurs="0" maxOccurs="1" type="boolean">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Indicator when a patient is in a setting where it is helpful to know if food was not consumed, such as it was refused, held (as in tube feedings), or otherwise not provided. If a consumption is being recorded from an app, such as MyFitnessPal, this indicator will likely not be used.</xs:documentation>
+              <xs:documentation xml:lang="en">Indicator that the nutrition item was not consumed, such as it was refused, held (e.g., tube feedings), or otherwise not provided. If a consumption is being recorded from an app, such as MyFitnessPal, this indicator will likely not be used.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="notConsumedReason" minOccurs="0" maxOccurs="1" type="CodeableConcept">
@@ -49476,7 +49466,7 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
   </xs:complexType>
   <xs:complexType name="NutritionIntake.IngredientLabel">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A record of food or fluid that is being consumed by a patient.   A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food or fluid in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.</xs:documentation>
+      <xs:documentation xml:lang="en">A record of intake by a patient.  A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food (i.e. solid and/or liquid), breastmilk, infant formula, supplements, enteral formula now or has consumed it in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -49497,7 +49487,7 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
   </xs:complexType>
   <xs:complexType name="NutritionIntake.Performer">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A record of food or fluid that is being consumed by a patient.   A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food or fluid in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.</xs:documentation>
+      <xs:documentation xml:lang="en">A record of intake by a patient.  A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food (i.e. solid and/or liquid), breastmilk, infant formula, supplements, enteral formula now or has consumed it in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -49611,22 +49601,22 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
           </xs:element>
           <xs:element name="foodPreferenceModifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">This modifier is used to convey order-specific modifiers about the type of food that should be given. These can be derived from patient allergies, intolerances, or preferences such as Halal, Vegan or Kosher. This modifier applies to the entire nutrition order inclusive of the oral diet, nutritional supplements and enteral formula feedings.</xs:documentation>
+              <xs:documentation xml:lang="en">This modifier is used to convey order-specific modifiers about the type of food (i.e. solid and/or liquid) that should be given. These can be derived from patient allergies, intolerances, or preferences such as Halal, Vegan or Kosher. This modifier applies to the entire nutrition order inclusive of the oral diet, nutritional supplements and enteral formula feedings.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="excludeFoodModifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">This modifier is used to convey Order-specific modifier about the type of oral food or oral fluids that should not be given. These can be derived from patient allergies, intolerances, or preferences such as No Red Meat, No Soy or No Wheat or  Gluten-Free.  While it should not be necessary to repeat allergy or intolerance information captured in the referenced AllergyIntolerance resource in the excludeFoodModifier, this element may be used to convey additional specificity related to foods that should be eliminated from the patient’s diet for any reason.  This modifier applies to the entire nutrition order inclusive of the oral diet, nutritional supplements and enteral formula feedings.</xs:documentation>
+              <xs:documentation xml:lang="en">This modifier is used to convey Order-specific modifier about the type of oral food  (i.e. solid and/or liquid) that should not be given. These can be derived from patient allergies, intolerances, or preferences such as No Red Meat, No Soy or No Wheat or  Gluten-Free.  While it should not be necessary to repeat allergy or intolerance information captured in the referenced AllergyIntolerance resource in the excludeFoodModifier, this element may be used to convey additional specificity related to foods that should be eliminated from the patient’s diet for any reason.  This modifier applies to the entire nutrition order inclusive of the oral diet, nutritional supplements and enteral formula feedings.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="outsideFoodAllowed" minOccurs="0" maxOccurs="1" type="boolean">
             <xs:annotation>
-              <xs:documentation xml:lang="en">This modifier is used to convey whether a food item is allowed to be brought in by the patient and/or family.  If set to true, indicates that the receiving system does not need to supply the food item.</xs:documentation>
+              <xs:documentation xml:lang="en">This modifier is used to convey whether a food item, brought in by the patient, family, and/or caregiver, can be consumed by the patient.  If set to true, indicates that the receiving system does not need to supply the food item.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="oralDiet" type="NutritionOrder.OralDiet" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Diet given orally in contrast to enteral (tube) feeding.</xs:documentation>
+              <xs:documentation xml:lang="en">Diet given orally that may include texture modification, such as International Dysphagia Diet Standardisation Initiative Framework - Slightly Thick Level 1 drinks and Minced and International Dysphagia Diet Standardisation Initiative Framework - Minced and Moist Level 5 food as well as, for example, Decreased potassium diet (ie, nutrient modification), Halal diet (ie, cultural modification), and/or Low microbial diet (eg, other modification).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="supplement" type="NutritionOrder.Supplement" minOccurs="0" maxOccurs="unbounded">
@@ -49639,9 +49629,14 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
               <xs:documentation xml:lang="en">Feeding provided through the gastrointestinal tract via a tube, catheter, or stoma that delivers nutrition distal to the oral cavity.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="additive" type="NutritionOrder.Additive" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates modular components to be provided in addition or mixed with the oral diet, supplement, and/or enteral feeding.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Comments made about the {{title}} by the requester, performer, subject or other participants.</xs:documentation>
+              <xs:documentation xml:lang="en">Comments made about the nutrition order by the requester, performer, subject or other participants.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -49667,22 +49662,22 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
           </xs:element>
           <xs:element name="nutrient" type="NutritionOrder.Nutrient" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Class that defines the quantity and type of nutrient modifications (for example carbohydrate, fiber or sodium) required for the oral diet.</xs:documentation>
+              <xs:documentation xml:lang="en">Defines the quantity and the nutrient modified (for example carbohydrate, fiber or sodium) in the oral diet.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="texture" type="NutritionOrder.Texture" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Class that describes any texture modifications required for the patient to safely consume various types of solid foods.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="fluidConsistencyType" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The required consistency (e.g. honey-thick, nectar-thick, thin, thickened.) of liquids or fluids served to the patient.</xs:documentation>
+              <xs:documentation xml:lang="en">Class that describes any texture modifications in addition to the oral diet type required for the patient to safely consume various types of foods (i.e. solid and/or liquid).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="instruction" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">Free text or additional instructions or information pertaining to the oral diet.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="caloricDensity" minOccurs="0" maxOccurs="1" type="Quantity">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The amount of energy (calories or kilojoules) that the oral diet should provide.  For example, an infant formula feeding of 30 ounces of 20 kcal/ounce (67 kcal/100 mL) formula per day.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -49703,12 +49698,12 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
           </xs:element>
           <xs:element name="asNeeded" minOccurs="0" maxOccurs="1" type="boolean">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates whether the product is only taken when needed within a specific dosing schedule.</xs:documentation>
+              <xs:documentation xml:lang="en">Indicates whether the diet is only taken when needed within a specific administration schedule.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="asNeededFor" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates whether the product is only taken based on a precondition for taking the product.</xs:documentation>
+              <xs:documentation xml:lang="en">Indicates whether the diet is only taken based on a precondition for taking the diet.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -49745,12 +49740,12 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
         <xs:sequence>
           <xs:element name="modifier" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Any texture modifications (for solid foods) that should be made, e.g. easy to chew, chopped, ground, and pureed.</xs:documentation>
+              <xs:documentation xml:lang="en">Texture modifications in the addition to the oral diet type that should be made, e.g. easy to chew, chopped, ground, and pureed.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="foodType" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The food type(s) (e.g. meats, all foods)  that the texture modification applies to.  This could be all foods types.</xs:documentation>
+              <xs:documentation xml:lang="en">The food (i.e. solid and/or liquid) type(s) (e.g. meats, all foods)  that the texture modification applies to.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -49787,6 +49782,11 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
           <xs:element name="instruction" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">Free text or additional instructions or information pertaining to the oral supplement.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="caloricDensity" minOccurs="0" maxOccurs="1" type="Quantity">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The amount of energy (calories or kilojoules) that the supplement should provide per specified volume, typically per ml or fluid oz.  For example, a patient may required a supplement that provides 24 calories per fluid ounce.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -49826,14 +49826,14 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="baseFormulaType" minOccurs="0" maxOccurs="1" type="CodeableReference">
+          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableReference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The type of enteral or infant formula such as an adult standard formula with fiber or a soy-based infant formula.</xs:documentation>
+              <xs:documentation xml:lang="en">The type of adult or pediatric enteral feeding such as an adult standard formula with fiber or a soy-based infant feeding.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="baseFormulaProductName" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="productName" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The product or brand name of the enteral or infant formula product such as &quot;ACME Adult Standard Formula&quot;.</xs:documentation>
+              <xs:documentation xml:lang="en">The product or brand name of the enteral feeding product such as &quot;ACME Adult Standard Formula&quot;.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="deliveryDevice" minOccurs="0" maxOccurs="unbounded" type="CodeableReference">
@@ -49841,14 +49841,9 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
               <xs:documentation xml:lang="en">The intended type of device that is to be used for the administration of the enteral formula.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="additive" type="NutritionOrder.Additive" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates modular components to be provided in addition or mixed with the base formula.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
           <xs:element name="caloricDensity" minOccurs="0" maxOccurs="1" type="Quantity">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The amount of energy (calories) that the formula should provide per specified volume, typically per mL or fluid oz.  For example, an infant may require a formula that provides 24 calories per fluid ounce or an adult may require an enteral formula that provides 1.5 calorie/mL.</xs:documentation>
+              <xs:documentation xml:lang="en">The amount of energy (calories or kilojoules) that the feeding should provide per specified volume, typically per mL or fluid oz.  For example, an infant may require a formula that provides 24 calories per fluid ounce or an adult may require an enteral formula that provides 1.5 calorie/mL.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="routeOfAdministration" minOccurs="0" maxOccurs="1" type="CodeableConcept">
@@ -49858,43 +49853,17 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
           </xs:element>
           <xs:element name="administration" type="NutritionOrder.Administration" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Formula administration instructions as structured data.  This repeating structure allows for changing the administration rate or volume over time for both bolus and continuous feeding.  An example of this would be an instruction to increase the rate of continuous feeding every 2 hours.</xs:documentation>
+              <xs:documentation xml:lang="en">Formula feeding administration instructions as structured data.  This repeating structure allows for changing the administration rate or volume over time for both bolus and continuous feeding.  An example of this would be an instruction to increase the rate of continuous feeding every 2 hours.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="maxVolumeToDeliver" minOccurs="0" maxOccurs="1" type="Quantity">
+          <xs:element name="maxVolumeToAdminister" minOccurs="0" maxOccurs="1" type="Quantity">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The maximum total quantity of formula that may be administered to a subject over the period of time, e.g. 1440 mL over 24 hours.</xs:documentation>
+              <xs:documentation xml:lang="en">The maximum total quantity of formula feeding that may be administered to a subject over the period of time, e.g. 1440 mL over 24 hours.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="administrationInstruction" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
               <xs:documentation xml:lang="en">Free text formula administration, feeding instructions or additional instructions or information.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="NutritionOrder.Additive">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableReference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates the type of modular component such as protein, carbohydrate, fat or fiber to be provided in addition to or mixed with the base formula.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="productName" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The product or brand name of the type of modular component to be added to the formula.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="Quantity">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The amount of additive to be given in addition or to be mixed in with the base formula.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -49910,17 +49879,17 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
         <xs:sequence>
           <xs:element name="schedule" type="NutritionOrder.Schedule2" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Schedule information for an enteral formula.</xs:documentation>
+              <xs:documentation xml:lang="en">Schedule information for an enteral feeding.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="Quantity">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The volume of formula to provide to the patient per the specified administration schedule.</xs:documentation>
+              <xs:documentation xml:lang="en">The volume of formula feeding to provide to the patient per the specified administration schedule.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:choice minOccurs="0" maxOccurs="1" >
             <xs:annotation>
-              <xs:documentation xml:lang="en">The rate of administration of formula via a feeding pump, e.g. 60 mL per hour, according to the specified schedule.</xs:documentation>
+              <xs:documentation xml:lang="en">The rate of administration of formula feeding via a feeding pump, e.g. 60 mL per hour, according to the specified schedule.</xs:documentation>
             </xs:annotation>
             <xs:element name="rateQuantity" type="Quantity"/>
             <xs:element name="rateRatio" type="Ratio"/>
@@ -49938,17 +49907,43 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
         <xs:sequence>
           <xs:element name="timing" minOccurs="0" maxOccurs="unbounded" type="Timing">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The time period and frequency at which the enteral formula should be given.  The enteral formula should be given for the combination of all schedules if more than one schedule is present.</xs:documentation>
+              <xs:documentation xml:lang="en">The time period and frequency at which the enteral feeding should be given.  The enteral feeding should be given for the combination of all schedules if more than one schedule is present.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="asNeeded" minOccurs="0" maxOccurs="1" type="boolean">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates whether the enteral formula is only taken when needed within a specific dosing schedule.</xs:documentation>
+              <xs:documentation xml:lang="en">Indicates whether the enteral feeding is only taken when needed within a specific dosing schedule.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="asNeededFor" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates whether the enteral formula is only taken based on a precondition for taking the enteral formula.</xs:documentation>
+              <xs:documentation xml:lang="en">Indicates whether the enteral feeding is only taken based on a precondition for taking the enteral feeding.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="NutritionOrder.Additive">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="modularType" minOccurs="0" maxOccurs="1" type="CodeableReference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates the type of modular component such as protein, carbohydrate, fat or fiber to be provided in addition to or mixed with the oral diet, supplement, and/or enteral feeding.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="productName" minOccurs="0" maxOccurs="1" type="string">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The product or brand name of the type of modular additive to be added to the oral diet, supplement, and/or enteral feeding.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="Quantity">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The amount of additive to be given in addition or to be mixed in with the oral diet, supplement, and/or enteral feeding.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -49970,7 +49965,7 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
         <xs:sequence>
           <xs:element name="code" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The code assigned to the product, for example a USDA NDB number, a USDA FDC ID number, or a Langual code.</xs:documentation>
+              <xs:documentation xml:lang="en">A code that specifies the product or a textual description if no code is available. This could be such codes as a USDA Branded Food Products Database number, a USDA Food Data Central (FDC) ID number, Universal Product Code (UPC), a Langual code, or a country specific food database code.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="status" minOccurs="1" maxOccurs="1" type="NutritionProductStatus">
@@ -49980,7 +49975,7 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
           </xs:element>
           <xs:element name="category" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Nutrition products can have different classifications - according to its nutritional properties, preparation methods, etc.</xs:documentation>
+              <xs:documentation xml:lang="en">Nutrition products fall into various categories based on their composition (e.g., Fruit and Grain, Vegetables) or form (e.g., Beverages).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="manufacturer" minOccurs="0" maxOccurs="unbounded" type="Reference">
@@ -49991,6 +49986,11 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
           <xs:element name="nutrient" type="NutritionProduct.Nutrient" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The product's nutritional information expressed by the nutrients.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="ingredientSummary" minOccurs="0" maxOccurs="1" type="markdown">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The textual description of the ingredients in the product.  For example, the following is a concatenated list of the ingredients for a peanut butter would read 'ROASTED PEANUTS, SUGAR, HYDROGENATED VEGETABLE OIL (COTTONSEED, SOYBEAN AND RAPESEED OIL) TO PREVENT SEPARATION, SALT'.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="ingredient" type="NutritionProduct.Ingredient" minOccurs="0" maxOccurs="unbounded">
@@ -50029,16 +50029,18 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="item" minOccurs="0" maxOccurs="1" type="CodeableReference">
+          <xs:element name="item" minOccurs="1" maxOccurs="1" type="CodeableReference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The (relevant) nutrients in the product.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="amount" minOccurs="0" maxOccurs="unbounded" type="Ratio">
+          <xs:choice minOccurs="0" maxOccurs="1" >
             <xs:annotation>
-              <xs:documentation xml:lang="en">The amount of nutrient expressed in one or more units: X per pack / per serving / per dose.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
+              <xs:documentation xml:lang="en">The amount of nutrient expressed in one or more units, either X per pack / per serving / per dose or X amount.</xs:documentation>
+            </xs:annotation>
+            <xs:element name="amountRatio" type="Ratio"/>
+            <xs:element name="amountQuantity" type="Quantity"/>
+          </xs:choice>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -50055,11 +50057,13 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
               <xs:documentation xml:lang="en">The ingredient contained in the product.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="amount" minOccurs="0" maxOccurs="unbounded" type="Ratio">
+          <xs:choice minOccurs="0" maxOccurs="1" >
             <xs:annotation>
               <xs:documentation xml:lang="en">The amount of ingredient that is in the product.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
+            </xs:annotation>
+            <xs:element name="amountRatio" type="Ratio"/>
+            <xs:element name="amountQuantity" type="Quantity"/>
+          </xs:choice>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -50110,7 +50114,7 @@ The MedicationStatement resource was previously called MedicationStatement.</xs:
           </xs:element>
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The name for the specific product.</xs:documentation>
+              <xs:documentation xml:lang="en">The name or brand for the specific product.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="lotNumber" minOccurs="0" maxOccurs="1" type="string">
