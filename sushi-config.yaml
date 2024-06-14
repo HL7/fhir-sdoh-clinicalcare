@@ -67,7 +67,7 @@ pages:
   connecting_applications_with_api_data_sources.md:
     title: Connecting Applications with API Data Sources
   gravity_terminology.md:
-    title: Gravity Value Sets
+    title: Gravity Project Value Sets
   mustsupport_and_missing_data.md:
     title: Must Support and Missing Data
   privacy_and_security.md:
@@ -252,7 +252,7 @@ menu:
     Referral Workflow:  referral_workflow.html
     Checking Task Status: checking_task_status.html
     Connecting Applications With API Data Sources: connecting_applications_with_api_data_sources.html
-    Gravity Value Sets: gravity_terminology.html
+    Gravity Project Value Sets: gravity_terminology.html
   FHIR Artifacts and Examples:
     Capability Statements: artifacts.html#capability-statements
     Profiles: artifacts.html#profiles

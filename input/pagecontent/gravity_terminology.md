@@ -1,5 +1,5 @@
 
-Gravity Project develops and maintains SDOH-related value sets that are published in the National Institutes of Health (NIH) [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/).  Hyperlinks to the Gravity Project VSAC value sets can also be found [here](https://confluence.hl7.org/display/GRAV/Social+Risk+Terminology+Value+Sets?preview=/97463504/161062739/Assessment_Instruments_Spreadsheet_Guidance_V1.pdf) on the Gravity Project Confluence site. This section describes how these value sets are used in the SDOHCC profiles and the process for developing the value sets in VSAC.
+Gravity Project develops and maintains SDOH-related value sets that are published in the National Institutes of Health (NIH) [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/).  Hyperlinks to the Gravity Project VSAC value sets can also be found [here](https://confluence.hl7.org/display/GRAV/Social+Risk+Terminology+Value+Sets) on the Gravity Project Confluence site. This section describes how these value sets are used in the SDOHCC profiles and the process for developing the value sets in VSAC.
 
 ### Additional Bindings for SDOH Domain-specific Value Sets
 
@@ -165,25 +165,28 @@ These value sets are not used in the SDOHCC profiles. However, they are referenc
    <tr>
       <td>Social Determinants of Health Conditions</td>
       <td>US Core Condition</td>
-      <td>Food Insecurity Diagnoses<br>
-      Transportation Insecurity Diagnoses<br>
-      Inadequate Housing Diagnoses<br>
+      <td>
+      Digital Access Diagnoses<br>
       Digital Literacy Diagnoses<br>
+      Less than high school education Diagnoses<br>
       Elder Abuse Diagnoses<br>
+      Unemployment Diagnoses<br>
       Financial Insecurity Diagnoses<br>
+      Food Insecurity Diagnoses<br>
       Health Insurance Coverage Status Diagnoses<br>
-      Health Literacy Diagnoses<br>
       Homelessness Diagnoses<br>
+      Housing Instability Diagnoses<br>
       Inadequate Housing Diagnoses<br>
       Intimate Partner Violence Diagnoses<br>
-      Less Than High School Education Diagnoses<br>
       Material Hardship Diagnoses<br>
       Medical Cost Burden Diagnoses<br>
+      Health Literacy Diagnoses<br>
       Social Connection Diagnoses<br>
       Stress Diagnoses<br>
-      Unemployment Diagnoses<br>
+      Transportation Insecurity Diagnoses<br>
       Utility Insecurity Diagnoses<br>
       Veteran Status Diagnoses<br>
+
       <br>
       <b>Note</b>: Value sets for new SDOH domains will be added as they are created in VSAC.</td>
    </tr>

@@ -52,7 +52,7 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * insert AdditionalBinding(SDOHCCCondition, code, Condition.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.26, extensible)
 * insert AdditionalBinding(SDOHCCCondition, code, Condition.category, utility-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.243, extensible)
 * insert AdditionalBinding(SDOHCCCondition, code, Condition.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.78, extensible)
-* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code, preferred)
+* insert AdditionalBinding(SDOHCCCondition, code, Condition.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code, required)
 
 
 * bodySite ..0
