@@ -10,7 +10,7 @@ We would like to thank [CyncHealth](https://cynchealth.org/), the [Agency for He
 | Corey Smith        | [AMA](https://www.ama-assn.org/)                                                   |
 | Monique van Berkum | [AMA ](https://www.ama-assn.org/)                                                  |
 | James Shalaby      | [Elimu](https://www.elimu.io/)                                                     |
-| Lloyd McKenzie     | [Gevity](https://www.gevityinc.com/)/[Accenture](https://www.accenture.com)        |
+| Lloyd McKenzie     | [Dogwood Health Consulting](https://dogwoodhealthconsulting.com/)                  |
 | Joee Garcia        | [Gevity](https://www.gevityinc.com/)/[Accenture](https://www.accenture.com)        |
 | Lisa Nelson        | [MaxMD ](https://www.maxmddirect.com/)                                             |
 | Matt Elrod         | [MaxMD](https://www.maxmddirect.com/)                                              |
@@ -27,7 +27,8 @@ We would like to thank [CyncHealth](https://cynchealth.org/), the [Agency for He
 | Natasha Kreisle    | [MaxMD](https://www.maxmddirect.com/)                                              |
 | Bret Heale         | [Elimu](https://www.elimu.io/)                                                     |
 | Himali Saitwal     | [EMI Advisors, LLC](https://www.emiadvisors.net/)                                  |
-| Corey Spears       | [MITRE](https://www.mitre.org)                                                     |
+| Corey Spears       | [Lantana Consulting Group](https://www.lantanagroup.com/)                          |
+| Aaron Nusstein     | [Lantana Consulting Group](https://www.lantanagroup.com/)                          |
 | Saul A. Kravitz    | [MITRE](https://www.mitre.org)                                                     |
 | Gail Shenk         | [MITRE](https://www.mitre.org)                                                     |
 {:.grid}
