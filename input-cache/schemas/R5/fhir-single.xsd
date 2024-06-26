@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Fri, Jun 14, 2024 04:47+0000 for FHIR v6.0.0-cibuild 
+  Generated on Mon, Jun 17, 2024 18:39+0000 for FHIR v6.0.0-cibuild 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="6.0.0-cibuild">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -54250,7 +54250,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:element name="organization" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The organization where the Practitioner is available to perform the roles associated.</xs:documentation>
+              <xs:documentation xml:lang="en">The organization where this role is available.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="code" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
