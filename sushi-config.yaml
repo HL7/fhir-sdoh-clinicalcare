@@ -23,7 +23,7 @@ dependencies:
     id: sdohsub
   us.nlm.vsac:
     uri: "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"
-    version: 0.18.0
+    version: latest
     id: vsac
   hl7.fhir.extensions.r5:
     version: 4.0.1
