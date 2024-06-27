@@ -28,7 +28,7 @@ dependencies:
   hl7.fhir.extensions.r5:
     version: 4.0.1
 parameters:
-  show-inherited-invariants: false
+  show-inherited-invariants: true
   jira-code: sdoh-cc
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
 
