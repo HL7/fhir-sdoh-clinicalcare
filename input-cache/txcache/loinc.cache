@@ -14,7 +14,7 @@ v: {
   "display" : "Ethnicity OMB.1997",
   "code" : "69490-1",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -37,7 +37,7 @@ v: {
   "display" : "Gender identity",
   "code" : "76691-5",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -57,10 +57,10 @@ v: {
   }]
 }}####
 v: {
-  "display" : "Personal pronoun Reported",
+  "display" : "Personal pronouns - Reported",
   "code" : "90778-2",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -83,7 +83,7 @@ v: {
   "display" : "Race OMB.1997",
   "code" : "72826-1",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -117,8 +117,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:84065f6e-4abf-4328-ac88-145f13a80bf5",
-    "timestamp" : "2024-02-17T00:29:57.839Z",
+    "identifier" : "urn:uuid:9a0b0aa0-beb6-4f4e-98e9-14d507883600",
+    "timestamp" : "2024-06-04T22:10:12.774Z",
     "total" : 3,
     "offset" : 0,
     "parameter" : [{
@@ -135,11 +135,11 @@ e: {
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.74"
+      "valueUri" : "http://loinc.org|2.77"
     },
     {
       "name" : "version",
-      "valueUri" : "http://loinc.org|2.74"
+      "valueUri" : "http://loinc.org|2.77"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -164,7 +164,7 @@ e: {
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA29518-0"
-}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
   "parameter" : [{
@@ -176,7 +176,7 @@ v: {
   "display" : "he/him/his/his/himself",
   "code" : "LA29518-0",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -187,7 +187,7 @@ v: {
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA29519-8"
-}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
   "parameter" : [{
@@ -199,7 +199,7 @@ v: {
   "display" : "she/her/her/hers/herself",
   "code" : "LA29519-8",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -210,7 +210,7 @@ v: {
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA29520-6"
-}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
   "parameter" : [{
@@ -222,7 +222,7 @@ v: {
   "display" : "they/them/their/theirs/themselves",
   "code" : "LA29520-6",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -245,7 +245,7 @@ v: {
   "display" : "Ethnicity OMB.1997",
   "code" : "69490-1",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -268,7 +268,7 @@ v: {
   "display" : "Gender identity",
   "code" : "76691-5",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -291,7 +291,7 @@ v: {
   "display" : "Personal pronouns - Reported",
   "code" : "90778-2",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -314,7 +314,7 @@ v: {
   "display" : "Race OMB.1997",
   "code" : "72826-1",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -337,7 +337,7 @@ v: {
   "display" : "Recorded sex or gender",
   "code" : "99502-7",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -402,7 +402,7 @@ v: {
   "display" : "Sexual orientation",
   "code" : "76690-7",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -413,7 +413,7 @@ v: {
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "88122-7",
-  "display" : "(I/We) worried whether (my/our) food would run out before (I/we) got money to buy more."
+  "display" : "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]"
 }, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
@@ -426,7 +426,7 @@ v: {
   "display" : "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]",
   "code" : "88122-7",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -450,7 +450,7 @@ v: {
   "display" : "Often true",
   "code" : "LA28397-0",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -474,7 +474,7 @@ v: {
   "display" : "Sometimes true",
   "code" : "LA6729-3",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -498,7 +498,7 @@ v: {
   "display" : "Never true",
   "code" : "LA28398-8",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -522,7 +522,7 @@ v: {
   "display" : "Don't know/refused",
   "code" : "LA15775-2",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -533,7 +533,7 @@ v: {
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "88123-5",
-  "display" : "The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more."
+  "display" : "Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]"
 }, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
@@ -546,7 +546,7 @@ v: {
   "display" : "Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]",
   "code" : "88123-5",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -570,7 +570,7 @@ v: {
   "display" : "Food insecurity risk [HVS]",
   "code" : "88124-3",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -594,7 +594,7 @@ v: {
   "display" : "At risk",
   "code" : "LA19952-3",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -618,7 +618,7 @@ v: {
   "display" : "No risk",
   "code" : "LA19983-8",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -642,7 +642,1759 @@ v: {
   "display" : "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
   "code" : "93025-5",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "93043-8",
+  "display" : "Personal characteristics [PRAPARE]"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Personal characteristics [PRAPARE]",
+  "code" : "93043-8",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "56051-6",
+  "display" : "Hispanic or Latino"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Hispanic or Latino",
+  "code" : "56051-6",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA33-6",
+  "display" : "Yes"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Yes",
+  "code" : "LA33-6",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA32-8",
+  "display" : "No"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "No",
+  "code" : "LA32-8",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30122-8",
+  "display" : "I choose not to answer this question"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "I choose not to answer this question",
+  "code" : "LA30122-8",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "32624-9",
+  "display" : "Race"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Race",
+  "code" : "32624-9",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA6156-9",
+  "display" : "Asian"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Asian",
+  "code" : "LA6156-9",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA14045-1",
+  "display" : "Native Hawaiian"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Native Hawaiian",
+  "code" : "LA14045-1",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30187-1",
+  "display" : "Pacific Islander"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Pacific Islander",
+  "code" : "LA30187-1",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA14042-8",
+  "display" : "Black/African American"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Black/African American",
+  "code" : "LA14042-8",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA4457-3",
+  "display" : "White"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "White",
+  "code" : "LA4457-3",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA4-4",
+  "display" : "American Indian/Alaskan Native"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "American Indian/Alaskan Native",
+  "code" : "LA4-4",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA46-8",
+  "display" : "Other"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Other",
+  "code" : "LA46-8",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "93035-4",
+  "display" : "Has season or migrant farm work been your or your family's main source of income at any point in past 2 years [PRAPARE]"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Has season or migrant farm work been your or your family's main source of income at any point in past 2 years [PRAPARE]",
+  "code" : "93035-4",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "93034-7",
+  "display" : "Discharged from the U.S. Armed Forces"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Discharged from the U.S. Armed Forces",
+  "code" : "93034-7",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "54899-0",
+  "display" : "Preferred language"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Preferred language",
+  "code" : "54899-0",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA43-5",
+  "display" : "English"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "English",
+  "code" : "LA43-5",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30188-9",
+  "display" : "Language other than English"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Language other than English",
+  "code" : "LA30188-9",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "93042-0",
+  "display" : "Family and home [PRAPARE]"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Family and home [PRAPARE]",
+  "code" : "93042-0",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "63512-8",
+  "display" : "How many people are living or staying at this address [#]"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "How many people are living or staying at this address [#]",
+  "code" : "63512-8",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "71802-3",
+  "display" : "Housing status"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Housing status",
+  "code" : "71802-3",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30189-7",
+  "display" : "I have housing"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "I have housing",
+  "code" : "LA30189-7",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30190-5",
+  "display" : "I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)",
+  "code" : "LA30190-5",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "93033-9",
+  "display" : "Are you worried about losing your housing [PRAPARE]"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Are you worried about losing your housing [PRAPARE]",
+  "code" : "93033-9",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "56799-0",
+  "display" : "Address"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Address",
+  "code" : "56799-0",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "93041-2",
+  "display" : "Money and resources [PRAPARE]"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Money and resources [PRAPARE]",
+  "code" : "93041-2",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "82589-3",
+  "display" : "Highest level of educ"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Highest level of education",
+  "code" : "82589-3",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30191-3",
+  "display" : "Less than high school degree"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Less than high school degree",
+  "code" : "LA30191-3",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30192-1",
+  "display" : "High school diploma or GED"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "High school diploma or GED",
+  "code" : "LA30192-1",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30193-9",
+  "display" : "More than high school"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "More than high school",
+  "code" : "LA30193-9",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "67875-5",
+  "display" : "Employment status current"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Employment status - current",
+  "code" : "67875-5",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA17956-6",
+  "display" : "Unemployed"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Unemployed",
+  "code" : "LA17956-6",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30138-4",
+  "display" : "Part-time or temporary work"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Part-time or temporary work",
+  "code" : "LA30138-4",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30136-8",
+  "display" : "Full-time work"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Full-time work",
+  "code" : "LA30136-8",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30137-6",
+  "display" : "Otherwise unemployed but not seeking work (ex: student, retired, disabled, unpaid primary care giver)"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Otherwise unemployed but not seeking work (ex: student, retired, disabled, unpaid primary care giver)",
+  "code" : "LA30137-6",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "76437-3",
+  "display" : "Primary insurance"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Primary insurance",
+  "code" : "76437-3",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30194-7",
+  "display" : "None/uninsured"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "None/uninsured",
+  "code" : "LA30194-7",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA17849-3",
+  "display" : "Medicaid"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Medicaid",
+  "code" : "LA17849-3",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30195-4",
+  "display" : "CHIP Medicaid"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "CHIP Medicaid",
+  "code" : "LA30195-4",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA15652-3",
+  "display" : "Medicare"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Medicare",
+  "code" : "LA15652-3",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30196-2",
+  "display" : "Other public insurance (not CHIP)"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Other public insurance (not CHIP)",
+  "code" : "LA30196-2",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30197-0",
+  "display" : "Other public insurance (CHIP)"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Other public insurance (CHIP)",
+  "code" : "LA30197-0",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA6350-8",
+  "display" : "Private insurance"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Private insurance",
+  "code" : "LA6350-8",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "63586-2",
+  "display" : "What was your best estimate of the total income of all family members from all sources, before taxes, in last year [PhenX]"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "What was your best estimate of the total income of all family members from all sources, before taxes, in last year [PhenX]",
+  "code" : "63586-2",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "93031-3",
+  "display" : "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]",
+  "code" : "93031-3",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30125-1",
+  "display" : "Food"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Food",
+  "code" : "LA30125-1",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30126-9",
+  "display" : "Clothing"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Clothing",
+  "code" : "LA30126-9",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30124-4",
+  "display" : "Utilities"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Utilities",
+  "code" : "LA30124-4",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30127-7",
+  "display" : "Child care"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Child care",
+  "code" : "LA30127-7",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30128-5",
+  "display" : "Medicine or Any Health Care (Medical, Dental, Mental Health, Vision)"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Medicine or Any Health Care (Medical, Dental, Mental Health, Vision)",
+  "code" : "LA30128-5",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30129-3",
+  "display" : "Phone"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Phone",
+  "code" : "LA30129-3",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "93030-5",
+  "display" : "Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living",
+  "code" : "93030-5",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30133-5",
+  "display" : "Yes, it has kept me from medical appointments or from getting my medications"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Yes, it has kept me from medical appointments or from getting my medications",
+  "code" : "LA30133-5",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30134-3",
+  "display" : "Yes, it has kept me from non-medical meetings, appointments, work, or from getting things that I need"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Yes, it has kept me from non-medical meetings, appointments, work, or from getting things that I need",
+  "code" : "LA30134-3",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30257-2",
+  "display" : "Patient unable to respond"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Patient unable to respond",
+  "code" : "LA30257-2",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "93040-4",
+  "display" : "Social and emotional health [PRAPARE]"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Social and emotional health [PRAPARE]",
+  "code" : "93040-4",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "93029-7",
+  "display" : "How often do you see or talk to people that you care about and feel close to [PRAPARE]"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "How often do you see or talk to people that you care about and feel close to [PRAPARE]",
+  "code" : "93029-7",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA27722-0",
+  "display" : "Less than once a week"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Less than once a week",
+  "code" : "LA27722-0",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30130-1",
+  "display" : "1 or 2 times a week"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "1 or 2 times a week",
+  "code" : "LA30130-1",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30131-9",
+  "display" : "3 to 5 times a week"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "3 to 5 times a week",
+  "code" : "LA30131-9",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA30132-7",
+  "display" : "5 or more times a week"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "5 or more times a week",
+  "code" : "LA30132-7",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "93038-8",
+  "display" : "Stress level"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Stress level",
+  "code" : "93038-8",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA6568-5",
+  "display" : "Not at all"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Not at all",
+  "code" : "LA6568-5",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA13863-8",
+  "display" : "A little bit"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "A little bit",
+  "code" : "LA13863-8",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA13909-9",
+  "display" : "Somewhat"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Somewhat",
+  "code" : "LA13909-9",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA13902-4",
+  "display" : "Quite a bit"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Quite a bit",
+  "code" : "LA13902-4",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA13914-9",
+  "display" : "Very much"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Very much",
+  "code" : "LA13914-9",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "93039-6",
+  "display" : "Optional additional questions [PRAPARE]"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Optional additional questions [PRAPARE]",
+  "code" : "93039-6",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "93028-9",
+  "display" : "Have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility in past 1 year [PRAPARE]"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility in past 1 year [PRAPARE]",
+  "code" : "93028-9",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "93027-1",
+  "display" : "Are you a refugee"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Are you a refugee",
+  "code" : "93027-1",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "93026-3",
+  "display" : "Do you feel physically and emotionally safe where you currently live [PRAPARE]"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Do you feel physically and emotionally safe where you currently live [PRAPARE]",
+  "code" : "93026-3",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA14072-5",
+  "display" : "Unsure"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Unsure",
+  "code" : "LA14072-5",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "76501-6",
+  "display" : "Within the last year, have you been afraid of your partner or ex-partner"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "Within the last year, have you been afraid of your partner or ex-partner",
+  "code" : "76501-6",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -666,7 +2418,7 @@ v: {
   "display" : "Food insecurity risk [HVS]",
   "code" : "88124-3",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -689,31 +2441,7 @@ v: {
   "display" : "Food insecurity risk [HVS]",
   "code" : "88124-3",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "88124-3",
-  "display" : "Food insecurity risk [HVS]"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Food insecurity risk [HVS]",
-  "code" : "88124-3",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -737,7 +2465,7 @@ v: {
   "display" : "At risk",
   "code" : "LA19952-3",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -760,31 +2488,7 @@ v: {
   "display" : "At risk",
   "code" : "LA19952-3",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "LA19952-3",
-  "display" : "At risk"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "At risk",
-  "code" : "LA19952-3",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -808,7 +2512,7 @@ v: {
   "display" : "Housing status",
   "code" : "71802-3",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -831,31 +2535,7 @@ v: {
   "display" : "Housing status",
   "code" : "71802-3",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "71802-3",
-  "display" : "Housing status"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Housing status",
-  "code" : "71802-3",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -879,7 +2559,7 @@ v: {
   "display" : "I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)",
   "code" : "LA30190-5",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -902,31 +2582,7 @@ v: {
   "display" : "I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)",
   "code" : "LA30190-5",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "LA30190-5",
-  "display" : "I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)",
-  "code" : "LA30190-5",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -950,7 +2606,7 @@ v: {
   "display" : "Employment status - current",
   "code" : "67875-5",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -973,31 +2629,7 @@ v: {
   "display" : "Employment status - current",
   "code" : "67875-5",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "67875-5",
-  "display" : "Employment status - current"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Employment status - current",
-  "code" : "67875-5",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1021,7 +2653,7 @@ v: {
   "display" : "Unemployed",
   "code" : "LA17956-6",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1044,31 +2676,7 @@ v: {
   "display" : "Unemployed",
   "code" : "LA17956-6",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "LA17956-6",
-  "display" : "Unemployed"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Unemployed",
-  "code" : "LA17956-6",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1092,7 +2700,7 @@ v: {
   "display" : "No risk",
   "code" : "LA19983-8",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1115,30 +2723,7 @@ v: {
   "display" : "Ethnicity OMB.1997",
   "code" : "69490-1",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "69490-1"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Ethnicity OMB.1997",
-  "code" : "69490-1",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1161,30 +2746,7 @@ v: {
   "display" : "Gender identity",
   "code" : "76691-5",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "76691-5"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Gender identity",
-  "code" : "76691-5",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1207,30 +2769,7 @@ v: {
   "display" : "Personal pronouns - Reported",
   "code" : "90778-2",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "90778-2"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Personal pronouns - Reported",
-  "code" : "90778-2",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1254,7 +2793,7 @@ v: {
   "display" : "he/him/his/his/himself",
   "code" : "LA29518-0",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1277,7 +2816,7 @@ v: {
   "display" : "he/him/his/his/himself",
   "code" : "LA29518-0",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1300,30 +2839,7 @@ v: {
   "display" : "Race OMB.1997",
   "code" : "72826-1",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "72826-1"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Race OMB.1997",
-  "code" : "72826-1",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1347,7 +2863,7 @@ v: {
   "display" : "Race OMB.1997",
   "code" : "72826-1",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1371,7 +2887,7 @@ v: {
   "display" : "Recorded sex or gender",
   "code" : "99502-7",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1394,31 +2910,7 @@ v: {
   "display" : "Recorded sex or gender",
   "code" : "99502-7",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "99502-7",
-  "display" : "Recorded sex or gender"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Recorded sex or gender",
-  "code" : "99502-7",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1442,7 +2934,7 @@ v: {
   "display" : "M",
   "code" : "LA15170-6",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1477,7 +2969,7 @@ v: {
   "display" : "M",
   "code" : "LA15170-6",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1487,62 +2979,8 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "LA15170-6",
-  "display" : "M"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "LIST",
-        "op" : "=",
-        "value" : "LL6134-2"
-      }]
-    }]
-  }
-}, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "M",
-  "code" : "LA15170-6",
-  "severity" : "error",
-  "error" : "The provided code 'http://loinc.org#LA15170-6 ('M')' was not found in the value set 'http://loinc.org/vs/LL6134-2'",
-  "class" : "UNKNOWN",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome",
-  "issue" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
-      "valueUrl" : "http://tx.fhir.org/r4"
-    }],
-    "severity" : "error",
-    "code" : "code-invalid",
-    "details" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-        "code" : "not-in-vs"
-      }],
-      "text" : "The provided code 'http://loinc.org#LA15170-6 ('M')' was not found in the value set 'http://loinc.org/vs/LL6134-2'"
-    },
-    "location" : ["Coding.code"],
-    "expression" : ["Coding.code"]
-  }]
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
   "code" : "63503-7",
-  "display" : "Are you now married, widowed, divorced, separated, never married or living with a partner?"
+  "display" : "Marital status [NHANES]"
 }, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
@@ -1555,7 +2993,7 @@ v: {
   "display" : "Marital status [NHANES]",
   "code" : "63503-7",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1578,31 +3016,7 @@ v: {
   "display" : "Marital status [NHANES]",
   "code" : "63503-7",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "63503-7",
-  "display" : "Are you now married, widowed, divorced, separated, never married or living with a partner?"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Marital status [NHANES]",
-  "code" : "63503-7",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1626,7 +3040,7 @@ v: {
   "display" : "Married",
   "code" : "LA48-4",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1649,31 +3063,7 @@ v: {
   "display" : "Married",
   "code" : "LA48-4",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "LA48-4",
-  "display" : "Married"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Married",
-  "code" : "LA48-4",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1684,7 +3074,7 @@ v: {
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "76508-1",
-  "display" : "In a typical week, how many times do you talk on the telephone with family, friends, or neighbors?"
+  "display" : "In a typical week, how many times do you talk on the telephone with family, friends, or neighbors [NHANES III]"
 }, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
@@ -1697,7 +3087,7 @@ v: {
   "display" : "In a typical week, how many times do you talk on the telephone with family, friends, or neighbors [NHANES III]",
   "code" : "76508-1",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1720,31 +3110,7 @@ v: {
   "display" : "In a typical week, how many times do you talk on the telephone with family, friends, or neighbors [NHANES III]",
   "code" : "76508-1",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "76508-1",
-  "display" : "In a typical week, how many times do you talk on the telephone with family, friends, or neighbors?"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "In a typical week, how many times do you talk on the telephone with family, friends, or neighbors [NHANES III]",
-  "code" : "76508-1",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1755,7 +3121,7 @@ v: {
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "76509-9",
-  "display" : "How often do you get together with friends or relatives?"
+  "display" : "How often do you get together with friends or relatives [NHANES III]"
 }, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
@@ -1768,7 +3134,7 @@ v: {
   "display" : "How often do you get together with friends or relatives [NHANES III]",
   "code" : "76509-9",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1791,31 +3157,7 @@ v: {
   "display" : "How often do you get together with friends or relatives [NHANES III]",
   "code" : "76509-9",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "76509-9",
-  "display" : "How often do you get together with friends or relatives?"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "How often do you get together with friends or relatives [NHANES III]",
-  "code" : "76509-9",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1826,7 +3168,7 @@ v: {
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "76510-7",
-  "display" : "How often do you attend church or religious services?"
+  "display" : "How often do you attend church or religious services [NHANES]"
 }, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
@@ -1839,7 +3181,7 @@ v: {
   "display" : "How often do you attend church or religious services [NHANES]",
   "code" : "76510-7",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1862,31 +3204,7 @@ v: {
   "display" : "How often do you attend church or religious services [NHANES]",
   "code" : "76510-7",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "76510-7",
-  "display" : "How often do you attend church or religious services?"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "How often do you attend church or religious services [NHANES]",
-  "code" : "76510-7",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1897,7 +3215,7 @@ v: {
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "76511-5",
-  "display" : "Do you belong to any clubs or organizations such as church groups unions, fraternal or athletic groups, or school groups?"
+  "display" : "Do you belong to any clubs or organizations such as church groups unions, fraternal or athletic groups, or school groups [NHANES III]"
 }, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
@@ -1910,7 +3228,7 @@ v: {
   "display" : "Do you belong to any clubs or organizations such as church groups unions, fraternal or athletic groups, or school groups [NHANES III]",
   "code" : "76511-5",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1933,31 +3251,7 @@ v: {
   "display" : "Do you belong to any clubs or organizations such as church groups unions, fraternal or athletic groups, or school groups [NHANES III]",
   "code" : "76511-5",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "76511-5",
-  "display" : "Do you belong to any clubs or organizations such as church groups unions, fraternal or athletic groups, or school groups?"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Do you belong to any clubs or organizations such as church groups unions, fraternal or athletic groups, or school groups [NHANES III]",
-  "code" : "76511-5",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -1981,7 +3275,7 @@ v: {
   "display" : "Yes",
   "code" : "LA33-6",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2004,31 +3298,7 @@ v: {
   "display" : "Yes",
   "code" : "LA33-6",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "LA33-6",
-  "display" : "Yes"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Yes",
-  "code" : "LA33-6",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2052,7 +3322,7 @@ v: {
   "display" : "Social isolation score [NHANES]",
   "code" : "76512-3",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2075,31 +3345,7 @@ v: {
   "display" : "Social isolation score [NHANES]",
   "code" : "76512-3",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "76512-3",
-  "display" : "Social isolation score [NHANES]"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Social isolation score [NHANES]",
-  "code" : "76512-3",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2123,7 +3369,7 @@ v: {
   "display" : "Social connection and isolation panel",
   "code" : "76506-5",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2146,31 +3392,7 @@ v: {
   "display" : "Social connection and isolation panel",
   "code" : "76506-5",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "76506-5",
-  "display" : "Social Connection and Isolation Panel"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Social connection and isolation panel",
-  "code" : "76506-5",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2194,7 +3416,7 @@ v: {
   "display" : "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]",
   "code" : "93031-3",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2217,31 +3439,7 @@ v: {
   "display" : "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]",
   "code" : "93031-3",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "93031-3",
-  "display" : "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]",
-  "code" : "93031-3",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2265,7 +3463,7 @@ v: {
   "display" : "Child care",
   "code" : "LA30127-7",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2288,31 +3486,7 @@ v: {
   "display" : "Child care",
   "code" : "LA30127-7",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "LA30127-7",
-  "display" : "Child care"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Child care",
-  "code" : "LA30127-7",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2336,7 +3510,7 @@ v: {
   "display" : "Clothing",
   "code" : "LA30126-9",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2359,31 +3533,7 @@ v: {
   "display" : "Clothing",
   "code" : "LA30126-9",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "LA30126-9",
-  "display" : "Clothing"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Clothing",
-  "code" : "LA30126-9",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2407,7 +3557,7 @@ v: {
   "display" : "Sexual orientation",
   "code" : "76690-7",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2430,31 +3580,7 @@ v: {
   "display" : "Sexual orientation",
   "code" : "76690-7",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "76690-7",
-  "display" : "Sexual orientation"
-}, "url": "http://hl7.org/fhir/ValueSet/observation-codes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Sexual orientation",
-  "code" : "76690-7",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2478,7 +3604,7 @@ v: {
   "display" : "Homosexual",
   "code" : "LA22875-1",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2513,43 +3639,7 @@ v: {
   "display" : "Homosexual",
   "code" : "LA22875-1",
   "system" : "http://loinc.org",
-  "version" : "2.74",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "LA22875-1",
-  "display" : "Homosexual"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "LIST",
-        "op" : "=",
-        "value" : "LL3323-4"
-      }]
-    }]
-  }
-}, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Homosexual",
-  "code" : "LA22875-1",
-  "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2597,8 +3687,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:b1d3daa0-dad4-4544-a643-0ab4bc6e3ef6",
-    "timestamp" : "2024-02-17T00:31:24.574Z",
+    "identifier" : "urn:uuid:5e2ae990-cfd4-4cf8-a0a0-ecb26690e221",
+    "timestamp" : "2024-06-04T22:12:40.243Z",
     "total" : 3,
     "offset" : 0,
     "parameter" : [{
@@ -2615,11 +3705,11 @@ e: {
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.74"
+      "valueUri" : "http://loinc.org|2.77"
     },
     {
       "name" : "version",
-      "valueUri" : "http://loinc.org|2.74"
+      "valueUri" : "http://loinc.org|2.77"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -2653,10 +3743,10 @@ e: {
   }]
 }}####
 v: {
-  "display" : "Recorded sex/gender",
+  "display" : "Recorded sex or gender",
   "code" : "99502-7",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"
@@ -2679,7 +3769,30 @@ v: {
   "display" : "Sexual orientation",
   "code" : "76690-7",
   "system" : "http://loinc.org",
-  "version" : "2.74",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA29518-0"
+}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetPronounsValue--0", "version": "2.2.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "he/him/his/his/himself",
+  "code" : "LA29518-0",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
   "issues" : {
   "resourceType" : "OperationOutcome"

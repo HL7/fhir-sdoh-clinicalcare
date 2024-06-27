@@ -11,4 +11,6 @@ Usage: #example
 * subject.reference = "Patient/pat-53234"
 * subject.display = "COLIN ABBAS"
 * effectiveDateTime = "2021-05-10T21:56:54.671Z"
+* performer.reference = "Practitioner/SDOHCC-PractitionerDrJanWaterExample"
+* performer.display = "Dr Jan Water"
 * valueBoolean = true

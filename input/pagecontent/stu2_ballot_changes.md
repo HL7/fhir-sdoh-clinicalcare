@@ -32,17 +32,17 @@ Adopted US Core Value Sets [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233)
 
 *  [FHIR-34243](https://jira.hl7.org/browse/FHIR-34243)
 
-*  Condition: from [Condition/Problem/Diagnosis Codes](http://hl7.org/fhir/R4/valueset-condition-code.html) to [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html)
-*  ServiceRequest: from [Procedure Codes (SNOMED CT)](http://hl7.org/fhir/R4/valueset-procedure-code.html) to [US Core Procedure Codes](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-procedure-code.html)
+*  Condition: from [Condition/Problem/Diagnosis Codes]({{site.data.fhir.path}}valueset-condition-code.html) to [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html)
+*  ServiceRequest: from [Procedure Codes (SNOMED CT)]({{site.data.fhir.path}}valueset-procedure-code.html) to [US Core Procedure Codes](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-procedure-code.html)
 *  Procedure: from SDOHCC ValueSet SNOMEDCT CPT LOINC HCPCSII to [US Core Procedure Codes](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-procedure-code.html)
 
 
 
 Removed Values Sets (no longer required) [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233)
 
-* [SDOHCC ValueSet HCPCSII](http://hl7.org/fhir/us/sdoh-clinicalcare/STU1/ValueSet-SDOHCC-ValueSetHCPCSII.html)
-* [SDOHCC ValueSet ICD10CM](http://hl7.org/fhir/us/sdoh-clinicalcare/STU1/ValueSet-SDOHCC-ValueSetICD10CM.html)
-* [SDOHCC ValueSet SNOMEDCT CPT LOINC HCPCSII](http://hl7.org/fhir/us/sdoh-clinicalcare/STU1/ValueSet-SDOHCC-ValueSetSNOMEDCTCPTLOINCHCPCSII.html)
+* [SDOHCC ValueSet HCPCSII](https://hl7.org/fhir/us/sdoh-clinicalcare/STU1/ValueSet-SDOHCC-ValueSetHCPCSII.html)
+* [SDOHCC ValueSet ICD10CM](https://hl7.org/fhir/us/sdoh-clinicalcare/STU1/ValueSet-SDOHCC-ValueSetICD10CM.html)
+* [SDOHCC ValueSet SNOMEDCT CPT LOINC HCPCSII](https://hl7.org/fhir/us/sdoh-clinicalcare/STU1/ValueSet-SDOHCC-ValueSetSNOMEDCTCPTLOINCHCPCSII.html)
 
 
 
@@ -135,16 +135,16 @@ New Draft Observation Profiles for Race and Ethnicity
 
 Removed
 
-* [SDOHCC Task](http://hl7.org/fhir/us/sdoh-clinicalcare/STU1/StructureDefinition-SDOHCC-Task.html) [FHIR-34237](https://jira.hl7.org/browse/FHIR-34237)
+* [SDOHCC Task](https://hl7.org/fhir/us/sdoh-clinicalcare/STU1/StructureDefinition-SDOHCC-Task.html) [FHIR-34237](https://jira.hl7.org/browse/FHIR-34237)
 
 ### CapabilityStatements
 
 Changed name and updated content
 
-* From [SDOH Clinical Care Coordination Platform](http://hl7.org/fhir/us/sdoh-clinicalcare/STU1/CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html) to [SDOHCC Coordination Platform Capability Statement](CapabilityStatement-SDOHCC-CoordinationPlatform.html)
-* From [SDOH Clinical Care Referral Recipient - Light](http://hl7.org/fhir/us/sdoh-clinicalcare/STU1/CapabilityStatement-SDOH-ClinicalCareReferralRecipientLight.html) to [SDOHCC Referral Recipient - Light](CapabilityStatement-SDOHCC-ReferralRecipientLight.html)
-* From [SDOH Clinical Care Referral Recipient](http://hl7.org/fhir/us/sdoh-clinicalcare/STU1/CapabilityStatement-SDOH-ClinicalCareReferralRecipient.html) to [SDOHCC Referral Recipient](CapabilityStatement-SDOHCC-ReferralRecipient.html)
-* From [SDOH Clinical Care Referral Source](http://hl7.org/fhir/us/sdoh-clinicalcare/STU1/CapabilityStatement-SDOH-ClinicalCareReferralSource.html) to  [SDOHCC Referral Source](CapabilityStatement-SDOHCC-ReferralSource.html)
+* From [SDOH Clinical Care Coordination Platform](https://hl7.org/fhir/us/sdoh-clinicalcare/STU1/CapabilityStatement-SDOH-ClinicalCareCoordinationPlatform.html) to [SDOHCC Coordination Platform Capability Statement](CapabilityStatement-SDOHCC-CoordinationPlatform.html)
+* From [SDOH Clinical Care Referral Recipient - Light](https://hl7.org/fhir/us/sdoh-clinicalcare/STU1/CapabilityStatement-SDOH-ClinicalCareReferralRecipientLight.html) to [SDOHCC Referral Recipient - Light](CapabilityStatement-SDOHCC-ReferralRecipientLight.html)
+* From [SDOH Clinical Care Referral Recipient](https://hl7.org/fhir/us/sdoh-clinicalcare/STU1/CapabilityStatement-SDOH-ClinicalCareReferralRecipient.html) to [SDOHCC Referral Recipient](CapabilityStatement-SDOHCC-ReferralRecipient.html)
+* From [SDOH Clinical Care Referral Source](https://hl7.org/fhir/us/sdoh-clinicalcare/STU1/CapabilityStatement-SDOH-ClinicalCareReferralSource.html) to  [SDOHCC Referral Source](CapabilityStatement-SDOHCC-ReferralSource.html)
 
 Added CapabilityStatement
 

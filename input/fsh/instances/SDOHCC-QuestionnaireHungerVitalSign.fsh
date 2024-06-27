@@ -35,8 +35,8 @@ Usage: #example
 * item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item[=].extension.valueCodeableConcept.text = "Drop down"
 * item[=].linkId = "/88122-7"
-* item[=].code = $loinc#88122-7 "(I/We) worried whether (my/our) food would run out before (I/we) got money to buy more."
-* item[=].text = "(I/We) worried whether (my/our) food would run out before (I/we) got money to buy more."
+* item[=].code = $loinc#88122-7 "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]"
+* item[=].text = "Within the past 12 months we worried whether our food would run out before we got money to buy more."
 * item[=].type = #choice
 * item[=].required = false
 * item[=].answerOption[0].valueCoding = $loinc#LA28397-0 "Often true"
@@ -47,8 +47,8 @@ Usage: #example
 * item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item[=].extension.valueCodeableConcept.text = "Drop down"
 * item[=].linkId = "/88123-5"
-* item[=].code = $loinc#88123-5 "The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more."
-* item[=].text = "The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more."
+* item[=].code = $loinc#88123-5 "Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]"
+* item[=].text = "Within the past 12 months the food we bought just didn't last and we didn't have money to get more"
 * item[=].type = #choice
 * item[=].required = false
 * item[=].answerOption[0].valueCoding = $loinc#LA28397-0 "Often true"

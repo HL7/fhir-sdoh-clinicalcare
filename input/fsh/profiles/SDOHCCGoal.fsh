@@ -7,6 +7,7 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * . ^short = "Describes the intended SDOH-related objective(s) for a patient."
 * . ^definition = "For representation of SDOH goals."
 * . ^comment = "Many of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."
+* insert OwningCommitteeExtension
 * achievementStatus MS
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
@@ -20,6 +21,31 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * description from SDOHCCValueSetLOINCSNOMEDCT (preferred)
 * description ^comment = "If no code is available, use CodeableConcept.text.\r\n\r"
 * description ^binding.description = "Codes providing the details of a particular goal.  In many systems, only the text element will be used."
+
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, digital-access, http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT, preferred)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, digital-literacy, http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT, preferred)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, educational-attainment, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.55, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, elder-abuse, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.65, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, employment-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.70, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, financial-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.30, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, food-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.16, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, health-insurance-coverage-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.121, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, homelessness, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.159, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, housing-instability, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.161, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, inadequate-housing, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.50, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, intimate-partner-violence, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.100, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, material-hardship, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.37, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, medical-cost-burden, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.120, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, personal-health-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.117, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, social-connection, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.89, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, stress, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.86, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.163, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, utility-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.245, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.214, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, sdoh-category-unspecified, http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT, preferred)
+
+
+
 * subject ^definition = "Identifies the patient for whom the goal is being established."
 * target.measure from LOINCCodes (preferred)
 * target.measure ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"

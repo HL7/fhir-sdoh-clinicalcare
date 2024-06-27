@@ -1,9 +1,9 @@
 status: draft
 title: SDOH Clinical Care
-version: 2.1.0
+version: 2.2.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: STU 2.1
+releaseLabel: STU 2.2
 canonical: http://hl7.org/fhir/us/sdoh-clinicalcare
 FSHOnly: false
 applyExtensionMetadataToRoot: false
@@ -22,8 +22,8 @@ dependencies:
     version: 0.1.0
     id: sdohsub
   us.nlm.vsac:
-    uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
-    version: 0.9.0
+    uri: "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"
+    version: latest
     id: vsac
   hl7.fhir.extensions.r5:
     version: 4.0.1
@@ -67,7 +67,7 @@ pages:
   connecting_applications_with_api_data_sources.md:
     title: Connecting Applications with API Data Sources
   gravity_terminology.md:
-    title: Gravity Value Sets
+    title: Gravity Project Value Sets
   mustsupport_and_missing_data.md:
     title: Must Support and Missing Data
   privacy_and_security.md:
@@ -147,7 +147,7 @@ groups:
     - SDOHCC-GroupSDOHPatientsForPayerExample
     - SDOHCC-HealthcareServiceTelecomAppointmentExample
     - SDOHCC-LocationExample
-    - SDOHCC-ObservationAssessmentSocialIsolationExample
+    #- SDOHCC-ObservationAssessmentSocialIsolationExample
     - SDOHCC-ObservationAssessmentInadequateFoodIntakeExample
     - SDOHCC-ObservationAssessmentTransportTooExpensiveExample
     - SDOHCC-OrganizationClinicExample
@@ -252,7 +252,7 @@ menu:
     Referral Workflow:  referral_workflow.html
     Checking Task Status: checking_task_status.html
     Connecting Applications With API Data Sources: connecting_applications_with_api_data_sources.html
-    Gravity Value Sets: gravity_terminology.html
+    Gravity Project Value Sets: gravity_terminology.html
   FHIR Artifacts and Examples:
     Capability Statements: artifacts.html#capability-statements
     Profiles: artifacts.html#profiles

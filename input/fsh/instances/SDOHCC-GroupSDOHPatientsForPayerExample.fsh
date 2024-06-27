@@ -7,7 +7,8 @@ Usage: #example
 * type = #person
 * actual = true
 //* characteristic[category].code = $SDOHCC-CodeSystemTemporaryCodes#sdoh-condition-category "Current Condition Category From SDOH Category"
-* characteristic[HasSDOHCondition].valueReference.reference = "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory"
+//* characteristic[HasSDOHCondition].valueReference.reference = "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory"
+* characteristic[HasSDOHCondition].valueReference.reference = Canonical(SDOHCCValueSetSDOHCategory)
 * characteristic[HasSDOHCondition].exclude = false
 //* characteristic[+].code = $SDOHCC-CodeSystemTemporaryCodes#payer-coverage "Coverage By Payer Organization"
 * characteristic[HasPayer].exclude = false

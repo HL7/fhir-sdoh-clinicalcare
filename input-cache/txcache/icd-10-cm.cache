@@ -2,7 +2,7 @@
 {"code" : {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "code" : "Z59.4",
-  "display" : "Lack of adequate food and safe drinking water"
+  "display" : "Lack of adequate food"
 }, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
@@ -14,29 +14,12 @@
 v: {
   "display" : "Lack of adequate food",
   "code" : "Z59.4",
-  "severity" : "error",
-  "error" : "Wrong Display Name 'Lack of adequate food and safe drinking water' for http://hl7.org/fhir/sid/icd-10-cm#Z59.4. Valid display is 'Lack of adequate food' (for the language(s) '--')",
-  "class" : "UNKNOWN",
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
   "issues" : {
-  "resourceType" : "OperationOutcome",
-  "issue" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
-      "valueUrl" : "http://tx.fhir.org/r4"
-    }],
-    "severity" : "error",
-    "code" : "invalid",
-    "details" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-        "code" : "invalid-display"
-      }],
-      "text" : "Wrong Display Name 'Lack of adequate food and safe drinking water' for http://hl7.org/fhir/sid/icd-10-cm#Z59.4. Valid display is 'Lack of adequate food' (for the language(s) '--')"
-    },
-    "location" : ["CodeableConcept.coding[1].display"],
-    "expression" : ["CodeableConcept.coding[1].display"]
-  }]
+  "resourceType" : "OperationOutcome"
 }
 
 }
@@ -58,6 +41,7 @@ v: {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -82,6 +66,7 @@ v: {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -105,6 +90,7 @@ v: {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -129,6 +115,7 @@ v: {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -149,30 +136,6 @@ v: {
 v: {
   "display" : "Unemployment, unspecified",
   "code" : "Z56.0",
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "version" : "2024",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.4",
-  "display" : "Lack of adequate food"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Lack of adequate food",
-  "code" : "Z59.4",
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",

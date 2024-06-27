@@ -48,28 +48,3 @@ v: {
 
 }
 -------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://nucc.org/provider-taxonomy",
-  "code" : "207Q00000X",
-  "display" : "Family Medicine Physician"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Family Medicine Physician",
-  "code" : "207Q00000X",
-  "system" : "http://nucc.org/provider-taxonomy",
-  "version" : "22.1",
-  "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------

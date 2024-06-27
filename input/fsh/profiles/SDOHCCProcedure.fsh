@@ -8,6 +8,7 @@ Description: "Profile for interventions that address Social Determinants of Heal
 * . ^short = "An action that addresses an SDOH condition, observation, or goal."
 * . ^definition = "For procedures that address SDOH conditions, SDOH observations, or SDOH goals."
 * . ^comment = "Many of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."
+* insert OwningCommitteeExtension
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
@@ -41,7 +42,34 @@ Description: "Profile for interventions that address Social Determinants of Heal
 * category.coding[SDOH] ^binding.description = "Codes for high-level SDOH categories."
 * code from USCoreProcedureCodes (required)
 * code ^definition = "The specific procedure that is performed. Use text if the exact nature of the procedure cannot be coded."
-* code ^binding.description = "Codes describing the type of  Procedure"
+* code ^binding.description = "Codes describing the type of Procedure"
+
+
+
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, digital-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.235, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, digital-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.226, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, educational-attainment, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.56, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, elder-abuse, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.67, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, employment-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.59, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, financial-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.32, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, food-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.7, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, health-insurance-coverage-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.125, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, homelessness, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.20, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, housing-instability, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.44, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, inadequate-housing, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.52, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, intimate-partner-violence, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.97, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, material-hardship, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.39, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, medical-cost-burden, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.122, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, personal-health-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.118, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, social-connection, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.94, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, stress, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.87, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.27, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, utility-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.247, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.90, extensible)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code, required)
+
+
+
 * performed[x] ^requirements = "NOTE: dateTime should be Must Support, but currenlty tooling does not support this."
 * reasonCode ^comment = "Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used. Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure.\r\n\r\nInformation represented by Procedure.reasonCode may overlap significantly with information represented by Procedure.reasonReference. Multiple approaches to representing the same information may negatively impact interoperability. Therefore, where similar information could be provided by either Procedure.reasonCode or Procedure.reasonReference, it is recommended that Procedure.reasonReference be used to provide a reason for why a procedure was performed."
 * reasonReference ^slicing.discriminator.type = #profile

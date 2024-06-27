@@ -1,6 +1,7 @@
 Alias: $loinc = http://loinc.org
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+Alias: $v3-ObsInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $consentscope = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $consentpolicycodes = http://terminology.hl7.org/CodeSystem/consentpolicycodes
@@ -34,3 +35,5 @@ Alias: $2.16.840.1.113883.3.2074.1.1.3 = http://cts.nlm.nih.gov/fhir/ValueSet/2.
 Alias: $LL6134-2 = http://loinc.org/vs/LL6134-2
 Alias: $v3-UnitsOfMeasureCaseSensitive = http://terminology.hl7.org/ValueSet/v3-UnitsOfMeasureCaseSensitive
 Alias: $LL3323-4 = http://loinc.org/vs/LL3323-4
+Alias: $WG-extension = http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+Alias: $add-binding = http://hl7.org/fhir/tools/StructureDefinition/additional-binding

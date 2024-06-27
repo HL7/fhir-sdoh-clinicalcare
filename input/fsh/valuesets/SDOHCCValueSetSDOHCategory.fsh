@@ -28,3 +28,6 @@ Description: "Codes that represent Social Determinants of Health (SDOH) domains.
 * SDOHCCCodeSystemTemporaryCodes#personal-health-literacy "Personal Health Literacy"
 * SDOHCCCodeSystemTemporaryCodes#health-insurance-coverage-status "Health Insurance Coverage Status"
 * SDOHCCCodeSystemTemporaryCodes#medical-cost-burden "Medical Cost Burden"
+* SDOHCCCodeSystemTemporaryCodes#digital-literacy "Digital Literacy"
+* SDOHCCCodeSystemTemporaryCodes#digital-access "Digital Access"
+* SDOHCCCodeSystemTemporaryCodes#utility-insecurity "Utility Insecurity"

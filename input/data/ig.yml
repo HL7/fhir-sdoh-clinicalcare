@@ -182,7 +182,7 @@ groups:
     - SDOHCC-HealthcareServiceTelecomAppointmentExample
     - SDOHCC-LocationExample
     - SDOHCC-ObservationAssessmentInadequateFoodIntakeExample
-    - SDOHCC-ObservationAssessmentSocialIsolationExample
+    #- SDOHCC-ObservationAssessmentSocialIsolationExample
     - SDOHCC-ObservationAssessmentTransportTooExpensiveExample
     - SDOHCC-OrganizationClinicExample
     - SDOHCC-OrganizationCoordinationPlatformExample

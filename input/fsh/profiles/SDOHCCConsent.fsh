@@ -6,6 +6,7 @@ Description: "Profile for consent related to the release of Social Determinants 
 * ^status = #draft
 * . ^definition = "A record of a healthcare consumer’s choices related to the release of SDOH information to non-HIPAA covered organizations."
 * . ^comment = "Providers should consider including standard language to inform the patient that disclosure of their information to entities which are not HIPAA covered entities are no longer protected under the HIPAA Privacy Rule but may be protected by FTC Consumer Protection rules."
+* insert OwningCommitteeExtension
 * status MS
 * status ^comment = "This element is labeled as a modifier because the status contains the codes rejected and entered-in-error that mark the Consent as not currently valid. \r\n\r\nIn general, when being exchanged with a community-based organization, Consent.status should reference the value “active”."
 * scope MS

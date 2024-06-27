@@ -8,6 +8,7 @@ Description: "Profile for Social Determinants of Health (SDOH) observations that
 * . ^short = "SDOH assessment observation"
 * . ^definition = "For SDOH observations derived from assessment of the individual."
 * . ^comment = "For representation of SDOH observations that involve assessment (e.g., by a provider or payer) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Observation Screening Response).\r\n\r\nMany of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."
+* insert OwningCommitteeExtension
 * status MS
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"

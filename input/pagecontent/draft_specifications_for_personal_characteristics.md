@@ -35,7 +35,7 @@ Value sets for the draft personal characteristics profiles are based on existing
 
 The personal characteristic profiles adhere to the following consistent structure with respect to handling [null flavors](https://www.hl7.org/fhir/v3/NullFlavor/cs.html):
 
-* Race and Ethnicity – These profiles allow more than one Observation.component.value in order to allow race or ethnicity to be expressed with high-level codes, and/or more detailed level codes, and/or as a string. Null values (e.g., unknown, asked-declined, etc.) apply to all assertions about race or ethnicity regardless of granularity. For this reason, null values cannot be captured as part of individual components and are instead captured as a single element using Observation.dataAbsentReason. As a consequence, the value sets for Observation.component.value. have been modified to exclude null value concepts. Thus, for R/E, the value sets for Observation.component.value are the same as those defined in the [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient) extensions with the exception that null flavors are represented using dataAbsentReason.
+* Race and Ethnicity – These profiles allow more than one Observation.component.value in order to allow race or ethnicity to be expressed with high-level codes, and/or more detailed level codes, and/or as a string. Null values (e.g., unknown, asked-declined, etc.) apply to all assertions about race or ethnicity regardless of granularity. For this reason, null values cannot be captured as part of individual components and are instead captured as a single element using Observation.dataAbsentReason. As a consequence, the value sets for Observation.component.value. have been modified to exclude null value concepts. Thus, for R/E, the value sets for Observation.component.value are the same as those defined in the [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) extensions with the exception that null flavors are represented using dataAbsentReason.
 
 * Sexual Orientation, Gender Identity, Recorded Sex and Gender, Personal Pronouns - These profiles allow only one Observation.value. Therefore, null value concepts are allowed in the value set for Observation.value.
 
@@ -45,13 +45,13 @@ The value set for Observation.method may also change as feedback is solicited an
 
 The personal characteristic observations can be used to document not only personal characteristics of the patient but also of other actors (i.e., a practitioner or a related person such as a caretaker) who interact with the patient. Collection and use of personal characteristics data for a practitioner or related person should be treated with the same safeguards as for the patient.
 
-#### Guidance for Personal Characteristics (e.g., R/E) that are also included as extensions on [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient)
+#### Guidance for Personal Characteristics (e.g., R/E) that are also included as extensions on [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html)
 
-If there are one or more race observations, each with one or more races expressed, and the referenced [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient) uses the [race extension ](http://hl7.org/fhir/us/core/StructureDefinition-us-core-race.html) to express one or more races, then the [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient) race value(s) SHALL match the race value(s) of at least one of the race observations.
+If there are one or more race observations, each with one or more races expressed, and the referenced [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) uses the [race extension ]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-race.html) to express one or more races, then the [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) race value(s) SHALL match the race value(s) of at least one of the race observations.
 
-If there are one or more ethnicity observations, and the referenced [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient) uses the [ethnicity extension](http://hl7.org/fhir/us/core/StructureDefinition-us-core-ethnicity.html), then the [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient) ethnicity SHALL match the ethnicity of at least one of the ethnicity observations.
+If there are one or more ethnicity observations, and the referenced [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) uses the [ethnicity extension]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-ethnicity.html), then the [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) ethnicity SHALL match the ethnicity of at least one of the ethnicity observations.
 
-Similar guidance may be required as additional personal characteristic extensions are added to [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient).
+Similar guidance may be required as additional personal characteristic extensions are added to [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html).
 
 ### Recommendations for Collection and Reporting of Personal Characteristics
 
@@ -75,7 +75,7 @@ There is a possibility that either or both the US Core Patient profile and Perso
 
 ​	the transmitter (e.g. provider, payer, etc.) that provided the information.
 
-Additional guidance is provided in the [US Core 3.1.1 Basic Provenance Guidance](http://hl7.org/fhir/us/core/STU3.1.1/basic-provenance.html).
+Additional guidance is provided in the [US Core 3.1.1 Basic Provenance Guidance]({{site.data.fhir.ver.uscore}}/basic-provenance.html).
 
 
 ### Testing Draft Specifications
@@ -86,7 +86,7 @@ Please test the draft personal characteristic profiles and provide feedback on a
 
 ### US Core Intent
 
-If draft specification testing establishes that they are appropriate for exchanging personal characteristics data, the intent is that the profiles will be presented to [Cross Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm) with the request that they be included in the next version of the [US Core Specification](http://hl7.org/fhir/us/core/).
+If draft specification testing establishes that they are appropriate for exchanging personal characteristics data, the intent is that the profiles will be presented to [Cross Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm) with the request that they be included in the next version of the [US Core Specification]({{site.data.fhir.ver.uscore}}/).
 
 Three potential outcomes from the review of the approaches to handling personal characteristics include, but are not limited to:
 

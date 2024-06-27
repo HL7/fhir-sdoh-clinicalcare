@@ -35,6 +35,31 @@ Description: "Profile for observations that represent question and answer pairs 
 * code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * code ^binding.extension.valueString = "ObservationCode"
 * code ^binding.description = "Codes identifying names of simple observations."
+
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, digital-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.238, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, digital-literacy, http://hl7.org/fhir/ValueSet/observation-codes, required)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, educational-attainment, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.199, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, elder-abuse, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.191, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, employment-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.205, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, financial-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.193, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, food-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.194, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, health-insurance-coverage-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1196.3519, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, homelessness, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.196, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, housing-instability, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.197, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, inadequate-housing, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1196.3520, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, intimate-partner-violence, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.198, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, material-hardship, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.200, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, medical-cost-burden, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.201, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, personal-health-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.195, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, social-connection, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.202, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, stress, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.203, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.204, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, utility-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.249, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.192, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, sdoh-category-unspecified, http://hl7.org/fhir/ValueSet/observation-codes, required)
+
+
+
 * subject 1.. MS
 * subject only Reference(USCorePatientProfile)
 * subject ^comment = "Cardinality is 1..1."
@@ -60,6 +85,30 @@ Description: "Profile for observations that represent question and answer pairs 
 * valueCodeableConcept from LOINCCodes (preferred)
 * valueCodeableConcept ^comment = "The allowed set of codes will be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value."
 * valueCodeableConcept ^binding.description = "This value set includes all LOINC codes"
+
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, digital-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.239, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, digital-literacy, http://hl7.org/fhir/ValueSet/observation-codes, preferred)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, educational-attainment, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.179, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, elder-abuse, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.190, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, employment-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.183, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, financial-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.173, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, food-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.174, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, health-insurance-coverage-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.185, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, homelessness, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.176, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, housing-instability, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.178, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, inadequate-housing, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1196.3520, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, intimate-partner-violence, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.209, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, material-hardship, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.180, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, medical-cost-burden, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.187, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, personal-health-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.175, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, social-connection, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.210, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, stress, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.181, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.182, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, utility-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.250, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.184, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, sdoh-category-unspecified, http://hl7.org/fhir/ValueSet/observation-codes, preferred)
+
+
 * dataAbsentReason MS
 * dataAbsentReason ^comment = "\"Null\" or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values. For a given LOINC question, if the LOINC answer list includes concepts such as 'unknown' or 'not available', they should be used for Observation.value. Where these concepts are not part of the value set for Observation.value, the Observation.dataAbsentReason can be used if necessary and appropriate."
 * bodySite ..0

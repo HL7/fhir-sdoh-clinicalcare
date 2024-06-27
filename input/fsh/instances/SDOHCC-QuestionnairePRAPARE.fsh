@@ -22,7 +22,7 @@ Usage: #example
 * item.type = #group
 * item.required = false
 * item.item[0].linkId = "/93043-8"
-* item.item[=].code = $loinc#93043-8 "Personal characteristics"
+* item.item[=].code = $loinc#93043-8 "Personal characteristics [PRAPARE]"
 * item.item[=].text = "Personal characteristics"
 * item.item[=].type = #group
 * item.item[=].required = false
@@ -30,8 +30,8 @@ Usage: #example
 * item.item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item.item[=].item[=].extension.valueCodeableConcept.text = "Drop down"
 * item.item[=].item[=].linkId = "/93043-8/56051-6"
-* item.item[=].item[=].code = $loinc#56051-6 "Do you consider yourself Hispanic/Latino?"
-* item.item[=].item[=].text = "Do you consider yourself Hispanic/Latino?"
+* item.item[=].item[=].code = $loinc#56051-6 "Hispanic or Latino"
+* item.item[=].item[=].text = "Hispanic or Latino"
 * item.item[=].item[=].type = #choice
 * item.item[=].item[=].required = false
 * item.item[=].item[=].answerOption[0].valueCoding = $loinc#LA33-6 "Yes"
@@ -58,8 +58,8 @@ Usage: #example
 * item.item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item.item[=].item[=].extension.valueCodeableConcept.text = "Drop down"
 * item.item[=].item[=].linkId = "/93043-8/93035-4"
-* item.item[=].item[=].code = $loinc#93035-4 "At any point in the past 2 years, has season or migrant farm work been your or your family's main source of income?"
-* item.item[=].item[=].text = "At any point in the past 2 years, has season or migrant farm work been your or your family's main source of income?"
+* item.item[=].item[=].code = $loinc#93035-4 "Has season or migrant farm work been your or your family's main source of income at any point in past 2 years [PRAPARE]"
+* item.item[=].item[=].text = "Has season or migrant farm work been your or your family's main source of income at any point in past 2 years?"
 * item.item[=].item[=].type = #choice
 * item.item[=].item[=].required = false
 * item.item[=].item[=].answerOption[0].valueCoding = $loinc#LA33-6 "Yes"
@@ -69,7 +69,7 @@ Usage: #example
 * item.item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item.item[=].item[=].extension.valueCodeableConcept.text = "Drop down"
 * item.item[=].item[=].linkId = "/93043-8/93034-7"
-* item.item[=].item[=].code = $loinc#93034-7 "Have you been discharged from the armed forces of the United States?"
+* item.item[=].item[=].code = $loinc#93034-7 "Discharged from the U.S. Armed Forces"
 * item.item[=].item[=].text = "Have you been discharged from the armed forces of the United States?"
 * item.item[=].item[=].type = #choice
 * item.item[=].item[=].required = false
@@ -88,14 +88,14 @@ Usage: #example
 * item.item[=].item[=].answerOption[+].valueCoding = $loinc#LA30188-9 "Language other than English"
 * item.item[=].item[=].answerOption[+].valueCoding = $loinc#LA30122-8 "I choose not to answer this question"
 * item.item[+].linkId = "/93042-0"
-* item.item[=].code = $loinc#93042-0 "Family and home"
+* item.item[=].code = $loinc#93042-0 "Family and home [PRAPARE]"
 * item.item[=].text = "Family and home"
 * item.item[=].type = #group
 * item.item[=].required = false
 * item.item[=].item[0].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
 * item.item[=].item[=].extension.valueCoding = $unitsofmeasure#{#} "{#}"
 * item.item[=].item[=].linkId = "/93042-0/63512-8"
-* item.item[=].item[=].code = $loinc#63512-8 "How many people are living or staying at this address?"
+* item.item[=].item[=].code = $loinc#63512-8 "How many people are living or staying at this address [#]"
 * item.item[=].item[=].text = "How many people are living or staying at this address?"
 * item.item[=].item[=].type = #integer
 * item.item[=].item[=].required = false
@@ -120,7 +120,7 @@ Usage: #example
 * item.item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item.item[=].item[=].extension.valueCodeableConcept.text = "Drop down"
 * item.item[=].item[=].linkId = "/93042-0/93033-9"
-* item.item[=].item[=].code = $loinc#93033-9 "Are you worried about losing your housing?"
+* item.item[=].item[=].code = $loinc#93033-9 "Are you worried about losing your housing [PRAPARE]"
 * item.item[=].item[=].text = "Are you worried about losing your housing?"
 * item.item[=].item[=].type = #choice
 * item.item[=].item[=].required = false
@@ -133,7 +133,7 @@ Usage: #example
 * item.item[=].item[=].type = #string
 * item.item[=].item[=].required = false
 * item.item[+].linkId = "/93041-2"
-* item.item[=].code = $loinc#93041-2 "Money and resources"
+* item.item[=].code = $loinc#93041-2 "Money and resources [PRAPARE]"
 * item.item[=].text = "Money and resources"
 * item.item[=].type = #group
 * item.item[=].required = false
@@ -180,7 +180,7 @@ Usage: #example
 * item.item[=].item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
 * item.item[=].item[=].extension.valueCoding = $unitsofmeasure#/a "/a"
 * item.item[=].item[=].linkId = "/93041-2/63586-2"
-* item.item[=].item[=].code = $loinc#63586-2 "What was your best estimate of the total income of all family members from all sources, before taxes, in last year?"
+* item.item[=].item[=].code = $loinc#63586-2 "What was your best estimate of the total income of all family members from all sources, before taxes, in last year [PhenX]"
 * item.item[=].item[=].text = "What was your best estimate of the total income of all family members from all sources, before taxes, in last year?"
 * item.item[=].item[=].type = #decimal
 * item.item[=].item[=].required = false
@@ -188,7 +188,7 @@ Usage: #example
 * item.item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item.item[=].item[=].extension.valueCodeableConcept.text = "Drop down"
 * item.item[=].item[=].linkId = "/93041-2/93031-3"
-* item.item[=].item[=].code = $loinc#93031-3 "In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?"
+* item.item[=].item[=].code = $loinc#93031-3 "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]"
 * item.item[=].item[=].text = "In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?"
 * item.item[=].item[=].type = #choice
 * item.item[=].item[=].required = false
@@ -205,7 +205,7 @@ Usage: #example
 * item.item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item.item[=].item[=].extension.valueCodeableConcept.text = "Drop down"
 * item.item[=].item[=].linkId = "/93041-2/93030-5"
-* item.item[=].item[=].code = $loinc#93030-5 "Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?"
+* item.item[=].item[=].code = $loinc#93030-5 "Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living"
 * item.item[=].item[=].text = "Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?"
 * item.item[=].item[=].type = #choice
 * item.item[=].item[=].required = false
@@ -223,7 +223,7 @@ Usage: #example
 * item.item[=].item[=].answerOption[=].extension.valueString = "X"
 * item.item[=].item[=].answerOption[=].valueCoding = $loinc#LA30257-2 "Patient unable to respond"
 * item.item[+].linkId = "/93040-4"
-* item.item[=].code = $loinc#93040-4 "Social and emotional health"
+* item.item[=].code = $loinc#93040-4 "Social and emotional health [PRAPARE]"
 * item.item[=].text = "Social and emotional health"
 * item.item[=].type = #group
 * item.item[=].required = false
@@ -231,7 +231,7 @@ Usage: #example
 * item.item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item.item[=].item[=].extension.valueCodeableConcept.text = "Drop down"
 * item.item[=].item[=].linkId = "/93040-4/93029-7"
-* item.item[=].item[=].code = $loinc#93029-7 "How often do you see or talk to people that you care about and feel close to (For example: talking to friends on the phone, visiting friends or family, going to church or club meetings)?"
+* item.item[=].item[=].code = $loinc#93029-7 "How often do you see or talk to people that you care about and feel close to [PRAPARE]"
 * item.item[=].item[=].text = "How often do you see or talk to people that you care about and feel close to (For example: talking to friends on the phone, visiting friends or family, going to church or club meetings)?"
 * item.item[=].item[=].type = #choice
 * item.item[=].item[=].required = false
@@ -244,7 +244,7 @@ Usage: #example
 * item.item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item.item[=].item[=].extension.valueCodeableConcept.text = "Drop down"
 * item.item[=].item[=].linkId = "/93040-4/93038-8"
-* item.item[=].item[=].code = $loinc#93038-8 "Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?"
+* item.item[=].item[=].code = $loinc#93038-8 "Stress level"
 * item.item[=].item[=].text = "Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?"
 * item.item[=].item[=].type = #choice
 * item.item[=].item[=].required = false
@@ -255,7 +255,7 @@ Usage: #example
 * item.item[=].item[=].answerOption[+].valueCoding = $loinc#LA13914-9 "Very much"
 * item.item[=].item[=].answerOption[+].valueCoding = $loinc#LA30122-8 "I choose not to answer this question"
 * item.item[+].linkId = "/93039-6"
-* item.item[=].code = $loinc#93039-6 "Optional additional questions"
+* item.item[=].code = $loinc#93039-6 "Optional additional questions [PRAPARE]"
 * item.item[=].text = "Optional additional questions"
 * item.item[=].type = #group
 * item.item[=].required = false
@@ -263,7 +263,7 @@ Usage: #example
 * item.item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item.item[=].item[=].extension.valueCodeableConcept.text = "Drop down"
 * item.item[=].item[=].linkId = "/93039-6/93028-9"
-* item.item[=].item[=].code = $loinc#93028-9 "In the past year, have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility?"
+* item.item[=].item[=].code = $loinc#93028-9 "Have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility in past 1 year [PRAPARE]"
 * item.item[=].item[=].text = "In the past year, have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility?"
 * item.item[=].item[=].type = #choice
 * item.item[=].item[=].required = false
@@ -274,7 +274,7 @@ Usage: #example
 * item.item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item.item[=].item[=].extension.valueCodeableConcept.text = "Drop down"
 * item.item[=].item[=].linkId = "/93039-6/93027-1"
-* item.item[=].item[=].code = $loinc#93027-1 "Are you a refugee?"
+* item.item[=].item[=].code = $loinc#93027-1 "Are you a refugee"
 * item.item[=].item[=].text = "Are you a refugee?"
 * item.item[=].item[=].type = #choice
 * item.item[=].item[=].required = false
@@ -285,7 +285,7 @@ Usage: #example
 * item.item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item.item[=].item[=].extension.valueCodeableConcept.text = "Drop down"
 * item.item[=].item[=].linkId = "/93039-6/93026-3"
-* item.item[=].item[=].code = $loinc#93026-3 "Do you feel physically and emotionally safe where you currently live?"
+* item.item[=].item[=].code = $loinc#93026-3 "Do you feel physically and emotionally safe where you currently live [PRAPARE]"
 * item.item[=].item[=].text = "Do you feel physically and emotionally safe where you currently live?"
 * item.item[=].item[=].type = #choice
 * item.item[=].item[=].required = false
@@ -297,7 +297,7 @@ Usage: #example
 * item.item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item.item[=].item[=].extension.valueCodeableConcept.text = "Drop down"
 * item.item[=].item[=].linkId = "/93039-6/76501-6"
-* item.item[=].item[=].code = $loinc#76501-6 "Within the last year, have you been afraid of your partner or ex-partner?"
+* item.item[=].item[=].code = $loinc#76501-6 "Within the last year, have you been afraid of your partner or ex-partner"
 * item.item[=].item[=].text = "Within the last year, have you been afraid of your partner or ex-partner?"
 * item.item[=].item[=].type = #choice
 * item.item[=].item[=].required = false
