@@ -22,13 +22,13 @@ dependencies:
     version: 0.1.0
     id: sdohsub
   us.nlm.vsac:
-    uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
-    version: 0.9.0
+    uri: "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"
+    version: latest
     id: vsac
   hl7.fhir.extensions.r5:
     version: 4.0.1
 parameters:
-  show-inherited-invariants: false
+  show-inherited-invariants: true
   jira-code: sdoh-cc
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
 
