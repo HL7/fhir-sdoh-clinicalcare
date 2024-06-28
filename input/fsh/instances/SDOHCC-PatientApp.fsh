@@ -6,7 +6,7 @@ Usage: #definition
 * url = "http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOHCC-PatientApp"
 * name = "SDOHCC_PatientApp"
 * title = "SDOHCC Patient Application"
-* status = #draft
+* status = #active
 * date = "2021-06"
 * description = "This resource describes the required and desired behavior of systems acting as apps for patients and care-givers who need to monitor progress on SDOH referrals and may need to take actions such as filling out forms, booking appointments, etc."
 * purpose = "These systems will not expose their own FHIR interfaces, but will monitor information available from other FHIR servers - be it [referral sources](CapabilityStatement-SDOHCC-ReferralSource.html), [coordination platforms](CapabilityStatement-SDOHCC-CoordinationPlatform.html) or [referral recipients](CapabilityStatement-SDOHCC-ReferralRecipient.html).  They will primarily monitor and update Task resources as well as the resources referenced by those Tasks."

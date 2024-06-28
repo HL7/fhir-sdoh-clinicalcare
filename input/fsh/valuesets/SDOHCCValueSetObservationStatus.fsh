@@ -2,7 +2,7 @@ ValueSet: SDOHCCValueSetObservationStatus
 Id: SDOHCC-ValueSetObservationStatus
 Title: "SDOHCC ValueSet Observation Status"
 Description: "Codes for the status of a screening response observation."
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * ObservationStatus#final "Final"
 * ObservationStatus#corrected "Corrected"

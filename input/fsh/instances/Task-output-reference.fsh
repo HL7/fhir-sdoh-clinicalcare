@@ -4,7 +4,7 @@ Title: "TaskOutputReference"
 Description: "Allows searching by the 'output' values of a Task with a type of Reference.  Primarily used to support _include of the outputs when retrieving a Task."
 Usage: #definition
 * name = "TaskOutputReference"
-* status = #draft
+* status = #active
 * description = "The value of any outputs of type 'Reference'"
 * experimental = false
 * code = #output

@@ -2,7 +2,7 @@ ValueSet: SDOHCCValueSetObservationDerivedFromIdType
 Id: SDOHCC-ValueSetObservationDerivedFromIdType
 Title: "SDOHCC ValueSet Observation DerivedFrom IdType"
 Description: "Codes for identifiers of target resources from which recorded sex or gender information can be derived."
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * $v2-0203#BCT "Birth Certificate"
 * $v2-0203#DL "Driver's license number"

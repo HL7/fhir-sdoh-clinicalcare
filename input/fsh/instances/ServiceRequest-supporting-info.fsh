@@ -5,7 +5,7 @@ Description: "Allows searching by the 'supportingInfo' references on a ServiceRe
 Usage: #definition
 * url = "http://hl7.org/fhir/us/sdoh-clinicalcare/SearchParameter/ServiceRequest-supporting-info"
 * name = "ServiceRequestSupportingInfo"
-* status = #draft
+* status = #active
 * experimental = false
 * contact.telecom.system = #url
 * description = "Any resources referenced by ServiceRequest.supportingInfo"

@@ -6,7 +6,7 @@ Usage: #definition
 * url = "http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOHCC-ReferralSource"
 * name = "SDOHCC_ReferralSource"
 * title = "SDOHCC Referral Source"
-* status = #draft
+* status = #active
 * date = "2021-06"
 * description = "This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral sources'.  These are typically EHR or Payer systems that initiate the process of identifying patients with SDOH needs and requesting appropriate services."
 * purpose = "Because systems that originate requests for service may sometimes also be recipients of requests for service, the requirements include 'SHOULD' expectations to also accept and process requests from other systems.  The referral source may either interact directly with a [Referral Recipient](CapabilityStatement-SDOHCC-ReferralRecipient.html) or will interact through an intermediary [Coordination Platform](CapabilityStatement-SDOHCC-CoordinationPlatform.html).  Responsibilities of Referral Sources include capturing information from a patient in the form of QuestionnaireResponses, Observations, Conditions and Goals as well as creating the ServiceRequest instances that refer patients for needed services and the Tasks that initiate fulfillment of those referrals."

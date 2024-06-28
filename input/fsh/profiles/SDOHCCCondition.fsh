@@ -3,7 +3,7 @@ Parent: USCoreCondition
 Id: SDOHCC-Condition
 Title: "SDOHCC Condition"
 Description: "Profile for Social Determinants of Health (SDOH) conditions."
-* ^status = #draft
+* ^status = #active
 * obeys SDOH-Con-1
 * . ^short = "Detailed information about SDOH conditions, problems or diagnoses"
 * . ^definition = "For representation of SDOH conditions."

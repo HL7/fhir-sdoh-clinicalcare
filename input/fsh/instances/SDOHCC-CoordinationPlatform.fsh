@@ -6,7 +6,7 @@ Usage: #definition
 * url = "http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOHCC-CoordinationPlatform"
 * name = "SDOHCC_CoordinationPlatform"
 * title = "SDOHCC Coordination Platform"
-* status = #draft
+* status = #active
 * date = "2021-06"
 * description = "This resource describes the required and desired behavior of systems acting as SDOH clinical care 'coordination platforms' (CPs)."
 * purpose = "CPs are intermediaries who take on responsibility for managing SDOH referrals and ensuring they are executed by appropriate service delivery organizations.  These systems must respond to referral fulfillment Tasks received from [Clinical Care Referral Sources](CapabilityStatement-SDOHCC-ReferralSource.html) and also the initiation and management of referral fulfillment Tasks subsequently directed out to [Referral Recipients](CapabilityStatement-SDOHCC-ReferralRecipient.html).  They may also take on some of the diagnostic work, including having patients or care-givers complete questionnaires, extract relevant observations and preliminary findings and work with patients to define goals."

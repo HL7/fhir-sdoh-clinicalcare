@@ -2,7 +2,7 @@ ValueSet: SDOHCCValueSetTaskCode
 Id: SDOHCC-ValueSetTaskCode
 Title: "SDOHCC ValueSet Task Code"
 Description: "Codes for the general action a task involves."
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * SDOHCCCodeSystemTemporaryCodes#make-contact "Make Contact"
 * SDOHCCCodeSystemTemporaryCodes#review-material "Review Material"

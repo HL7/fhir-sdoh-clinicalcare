@@ -4,7 +4,7 @@ Id: SDOHCC-ServiceRequest
 Title: "SDOHCC ServiceRequest"
 Description: "Profile for service requests that address Social Determinants of Health."
 
-* ^status = #draft
+* ^status = #active
 * . ^short = "A request for a service to address an SDOH condition, observation or goal."
 * . ^definition = "For service requests that address SDOH conditions, observations or goals."
 * . ^comment = "Many of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."
