@@ -1,7 +1,4 @@
 == Suppressed Messages ==
-
-
-
 # US Core Variance Warnings
 # WARNING: US Core Variance - https://jira.hl7.org/browse/FHIR-46114 - Variance renewal for SDOH Clinical Care ServiceRequest
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest').baseDefinition: US FHIR Usage rules require that all profiles on ServiceRequest derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
@@ -108,3 +105,4 @@ INFORMATION: Resource: This resource could usefully have an OID assigned (OIDs a
 
 # INFORMATION: Current release is guidance only. Will look at creating a THO URL, or move to THO or VSAC in a future major release
 INFORMATION: CodeSystem/SDOHCC-CodeSystemTemporaryCodes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+

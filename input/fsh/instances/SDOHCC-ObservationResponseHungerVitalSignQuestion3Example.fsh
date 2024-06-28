@@ -12,8 +12,6 @@ Usage: #example
 * effectiveDateTime = "2020-09-10T21:56:54.671Z"
 * performer.reference = "Patient/pat-53234"
 * performer.display = "COLIN ABBAS"
-//* performer.reference = "Practitioner/SDOHCC-PractitionerDrJanWaterExample"
-//* performer.display = "Dr Jan Water"
 * issued = "2020-09-10T21:56:54.671Z"
 * valueCodeableConcept = $loinc#LA19952-3 "At risk"
 * derivedFrom[0].reference = "QuestionnaireResponse/SDOHCC-QuestionnaireResponseHungerVitalSignExample"   /// NEW
