@@ -1,1 +1,15 @@
 == Suppressed Messages ==
+
+#Not assigning a variable is intended here
+INFORMATION: StructureMap/SDOHCC-StructureMapHungerVitalSign: StructureMap.group[0].rule[3].source[0]: The source statement doesn''t assign a variable to the source - check that this is what is intended 
+
+
+# The following issues are addressed by an exception granted by the Cross-Group Projects work group (Jira tickets: https://jira.hl7.org/browse/FHIR-46114; https://jira.hl7.org/browse/FHIR-46117; https://jira.hl7.org/browse/FHIR-46118; https://jira.hl7.org/browse/FHIR-46121; https://jira.hl7.org/browse/FHIR-46124; https://jira.hl7.org/browse/FHIR-46126)
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationPersonalCharacteristic').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationPersonalPronouns').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRecordedSexGender').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicityOMB').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles.
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationGenderIdentity').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition').baseDefinition: US FHIR Usage rules require that all profiles on Condition derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process. Comparison with US Core Condition Encounter Diagnosis Profile. Comparison with US Core Condition Problems and Health Concerns Profile
+
