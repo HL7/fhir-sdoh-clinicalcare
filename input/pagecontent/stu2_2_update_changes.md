@@ -7,7 +7,7 @@
 * [FHIR-46250](https://jira.hl7.org/browse/FHIR-46250) - Update Descriptions for Condition, Goal, OSR, ServiceRequest and Task Profiles
 * [FHIR-46251](https://jira.hl7.org/browse/FHIR-46251) - Hyperlink QA
 
-
+ 
 
 
 
