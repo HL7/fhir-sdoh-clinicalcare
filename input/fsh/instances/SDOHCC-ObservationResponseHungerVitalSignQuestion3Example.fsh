@@ -10,8 +10,8 @@ Usage: #example
 * subject.reference = "Patient/pat-53234"
 * subject.display = "COLIN ABBAS"
 * effectiveDateTime = "2020-09-10T21:56:54.671Z"
-* performer.reference = "Practitioner/SDOHCC-PractitionerDrJanWaterExample"
-* performer.display = "Dr Jan Water"
+* performer.reference = "Patient/pat-53234"
+* performer.display = "COLIN ABBAS"
 * issued = "2020-09-10T21:56:54.671Z"
 * valueCodeableConcept = $loinc#LA19952-3 "At risk"
 * derivedFrom[0].reference = "QuestionnaireResponse/SDOHCC-QuestionnaireResponseHungerVitalSignExample"   /// NEW

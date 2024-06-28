@@ -3,7 +3,7 @@ Parent: Group
 Id: SDOHCC-Group
 Title: "SDOHCC Group"
 Description: "Profile for identifying groups of patients who have a Social Determinants of Health (SDOH) condition and are members of a specific payer organization."
-* ^status = #draft
+* ^status = #active
 * . ^short = "Group of SDOH patients for a payer"
 * . ^definition = "For aggregation of individuals with a common set of characteristics (i.e., the same payer and and any condition in the specified SDOH categories) to enable organizations with the appropriate permissions to easily retrieve information related to the cohort of individuals for which they have a common responsibility."
 * insert OwningCommitteeExtension

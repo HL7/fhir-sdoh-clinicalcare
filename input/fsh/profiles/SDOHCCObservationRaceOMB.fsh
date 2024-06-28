@@ -4,7 +4,7 @@ Id: SDOHCC-ObservationRaceOMB
 Title: "SDOHCC Observation Race OMB"
 Description: "Profile for race observations that use Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only.  For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
 
-* ^status = #draft
+* ^status = #active
 * ^abstract = false
 * obeys SDOH-Race-1
 * . ^short = "Race observation"

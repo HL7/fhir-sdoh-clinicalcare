@@ -6,7 +6,7 @@ Usage: #definition
 * url = "http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOHCC-ReferralRecipientLight"
 * name = "SDOHCC_ReferralRecipientLight"
 * title = "SDOHCC Referral Recipient - Light"
-* status = #draft
+* status = #active
 * date = "2021-06"
 * description = "This resource describes the required and desired behavior of systems acting as 'light-weight' SDOH clinical care 'referral recipients'."
 * purpose = "These systems fit into the SDOH care workflow in the same manner as ['regular' Referral Recipients](CapabilityStatement-SDOHCC-ReferralRecipient.html), however they have simpler interface requirements reflecting the inability of the systems to store data locally and/or expose a FHIR service allowing access to that data.  'Light' referral recipients are not expected to expose any FHIR restful services.  Instead, they act as clients, querying for tasks on the initiating [Referral Sources](CapabilityStatement-SDOHCC-ReferralSource.html) or [Coordination Platforms](CapabilityStatement-SDOHCC-CoordinationPlatform.html) and creating any resulting Procedure records within the server they received the request from."

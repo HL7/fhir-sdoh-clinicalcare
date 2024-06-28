@@ -3,7 +3,7 @@ Parent: Observation
 Id: SDOHCC-ObservationAssessment
 Title: "SDOHCC Observation Assessment"
 Description: "Profile for Social Determinants of Health (SDOH) observations that involve assessment (e.g., by a provider, payer, etc.) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation)."
-* ^status = #draft
+* ^status = #active
 * ^abstract = false
 * . ^short = "SDOH assessment observation"
 * . ^definition = "For SDOH observations derived from assessment of the individual."

@@ -4,7 +4,7 @@ Id: SDOHCC-ObservationSexualOrientation
 Title: "SDOHCC Observation Sexual Orientation"
 Description: "Profile for observations about the sexual orientation of an individual. This profile is intended for draft use only. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
 
-* ^status = #draft
+* ^status = #active
 * ^abstract = false
 * . ^short = "Observation about an individual's sexual orientation"
 * . ^comment = "For observations about the sexual orientation of an individual."

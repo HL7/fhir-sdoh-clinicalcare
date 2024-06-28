@@ -2,7 +2,7 @@ ValueSet: SDOHCCValueSetSDOHCategory
 Id: SDOHCC-ValueSetSDOHCategory
 Title: "SDOHCC ValueSet SDOH Category"
 Description: "Codes that represent Social Determinants of Health (SDOH) domains."
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * ^date = "2020-12-14T04:01:34+00:00"
 * ^publisher = "HL7 International - Patient Care WG"

@@ -4,7 +4,7 @@ Id: SDOHCC-TaskForReferralManagement
 Title: "SDOHCC Task For Referral Management"
 Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceRequest (i.e. referral for service) and subsequently tracking and managing the fulfillment of that referral."
 
-* ^status = #draft
+* ^status = #active
 * . ^short = "A request to fulfill an SDOH service request"
 * . ^comment = "For Tasks used in requesting fulfillment of an SDOHCC ServiceRequest (i.e. referral for service) and subsequently tracking and managing the fulfillment of that referral."
 * insert OwningCommitteeExtension

@@ -5,7 +5,7 @@ Description: "A local code system defined within the context of the SDOH-CC IG."
 * ^status = #active
 * ^content = #complete
 * ^version = "0.1.0"
-* ^experimental = true
+* ^experimental = false
 * ^purpose = "The purpose of this code system is to enable temporary codes to be assigned to concepts that are needed to document SDOH-related data elements defined by the Gravity Project community and concepts that are needed to facilitate the use of FHIR to exchange data as required in the use cases covered by this IG.  After the IG has been sufficiently tested through HL7 Connectathons and the coded concepts have been confirmed as fit for the intended purpose, and consensus on the use of the codes has been confirmed through the HL7 Ballot process, the temporary codes will be replaced with coded concepts established within nationally recognized, open code systems.  The replacement of temporary codes with permanent codes is intended to happen in a future version of the IG."
 * ^copyright = "(c) 2020 HL7.org"
 * ^caseSensitive = true
