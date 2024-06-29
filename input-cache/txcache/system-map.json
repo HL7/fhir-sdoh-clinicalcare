@@ -1,0 +1,54 @@
+{
+  "systems" : [
+    {
+      "system" : "http://example.org/CodeSystem/other-code-system",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "authoritative" : ["http://tx.fhir.org/r4"],
+      "candidates" : []
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "http://loinc.org",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    }
+  ]
+}

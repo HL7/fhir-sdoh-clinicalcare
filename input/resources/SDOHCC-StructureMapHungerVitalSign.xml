@@ -29,7 +29,7 @@ group sdohMapping(source src : questionnaireResponse, target bundle : Bundle) {
     TransformObservation(src, answerItem3, observation3, entry); 
 
   //create condition if answer to third question is &quot;At Risk&quot;
-  src.item where linkId = '/88124-3' and answer.value.code ='LA19952-3' -&gt; bundle.entry as entry, entry.resource = create('Condition') as condition then
+  src.item as answerItem4 where linkId = '/88124-3' and answer.value.code ='LA19952-3' -&gt; bundle.entry as entry, entry.resource = create('Condition') as condition then
     TransformCondition(src, bundle, condition, entry);
 }
 
@@ -141,9 +141,7 @@ group SetConditionFullUrl(source condition: Condition, target entry)
     </div>
   </text>
   <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapHungerVitalSign"/>
-  <name value="SDOHCCStructureMapHungerVitalSign"/>
-  <title value="SDOHCC StructureMap HungerVitalSign"/>
-  <description value="A StructureMap instance that represents the resource that transforms a specific question and answer from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9) into a corresponding Observation (SDOHCC Observation response Hunger Vital Sign Q3 Example) and derived Condition (SDOHCC Condition Food Insecurity Example)."/>
+  <name value="SDOHCCHungerVitalSignMap"/>
   <structure>
     <url value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"/>
     <mode value="source"/>
@@ -249,6 +247,7 @@ group SetConditionFullUrl(source condition: Condition, target entry)
       <source>
         <context value="src"/>
         <element value="item"/>
+        <variable value="answerItem4"/>
         <condition value="(linkId = '/88124-3') and (answer.value.code = 'LA19952-3')"/>
       </source>
       <target>

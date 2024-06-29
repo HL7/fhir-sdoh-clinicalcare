@@ -22,7 +22,7 @@ group sdohMapping(source src : questionnaireResponse, target bundle : Bundle) {
     TransformObservation(src, answerItem3, observation3, entry); 
 
   //create condition if answer to third question is "At Risk"
-  src.item where linkId = '/88124-3' and answer.value.code ='LA19952-3' -> bundle.entry as entry, entry.resource = create('Condition') as condition then
+  src.item as answerItem4 where linkId = '/88124-3' and answer.value.code ='LA19952-3' -> bundle.entry as entry, entry.resource = create('Condition') as condition then
     TransformCondition(src, bundle, condition, entry);
 }
 
