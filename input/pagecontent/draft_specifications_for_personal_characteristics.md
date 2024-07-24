@@ -31,7 +31,7 @@ There are seven personal characteristic Observation profiles included in this IG
 
 #### Value Sets for Personal Characteristics
 
-Value sets for the draft personal characteristics profiles are based on existing value sets (e.g., US Core, Gender Harmony Project, VSAC, USCDI, etc.) and may change as feedback is solicited and other value sets are developed (e.g., the Gender Harmony Project value sets).
+Value sets for the draft personal characteristics profiles are based on existing value sets (e.g., US Core, Gender Harmony Project, VSAC, USCDI, etc.) and may change as feedback is solicited and other value sets are developed (e.g., the Gender Harmony Project value sets). 
 
 The personal characteristic profiles adhere to the following consistent structure with respect to handling [null flavors](https://www.hl7.org/fhir/v3/NullFlavor/cs.html):
 

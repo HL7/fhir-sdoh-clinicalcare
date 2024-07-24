@@ -90,7 +90,7 @@ This IG contains a wealth of material targeting different audiences. Some sectio
 
 * [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html):   These profiles are included to test and promote their use and possible future incorporation into [US Core]({{site.data.fhir.ver.uscore}}/index.html).
 
-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
 [^1]: [Healthy People 2030](https://health.gov/healthypeople/priority-areas/social-determinants-health)
 
 {% include markdown-link-references.md %}

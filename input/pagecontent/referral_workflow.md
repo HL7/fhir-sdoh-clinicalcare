@@ -298,7 +298,7 @@ The intermediary SHALL support the following:
 This implementation guide supports additional interactions with a patient/client application (on a smartphone or portal) including:
 
 | Functional Use Case       |  Task.code            |  Description                         | Actors           |
-| ------------------------- | --------------------- | ------------------------------------ | ---------------- |
+| ------------------------- | ----------------------- | ------------------------------------ | ---------------- |
 | [Complete Questionnaire Request](referral_workflow.html#complete-questionnaire-request)|  `complete-questionnaire` | Requesting party (e.g., provider, CBO, or CP) asks a patient to complete a questionnaire. This functionality can be used to assess social risks, inform service qualification or application, indicate reasons for cancellation, or determine the patient’s view of their interaction with the CBO and whether the service provided met their needs. | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |
 | [General Information Request](referral_workflow.html#general-information-request)|  `general-information-request` | Requesting party sends a patient a free text question and receives a free text response.  | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |
 | [Make Contact Request](referral_workflow.html#make-contact-request)|   `make-contact-directions` | Requesting party provides contact information for the CBO (in cases where the patient does not want the CBO to initiate contact). | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |

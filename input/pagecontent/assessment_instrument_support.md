@@ -697,7 +697,7 @@ For more information on StructureMap (e.g., [Designing Questionnaires to support
 
 ### Process for Implementing Assessment Instruments
 
-In summary, the process followed by this IG for implementing assessment instruments vetted by Gravity is summarized below. The process can also be applied to other assessment instruments.
+In summary, the process followed by this IG for implementing assessment instruments vetted by Gravity is summarized below. The process can also be applied to other assessment instruments. 
 
 * **Use a LOINC-encoded assessment instrument**: [LOINC Components](https://loinc.org/kb/faq/structure/) and [LOINC Answer](https://loinc.org/forums/topic/answer-lists/) Lists standardize the coding and facilitate leveraging the open-source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms).
 * **Convert the LOINC-encoded assessment instrument to an [SDC Questionnaire]**: The open-source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms) supports this step by rendering input forms based on FHIR [Questionnaire] for web-based applications and can be used to build and edit FHIR Questionnaires. For some assessment instruments, this step may include establishing calculation logic to define the result of some questions as a function of answers to other questions (e.g., where one or more question determines an answer to another “question” (not directly answered by the patient) as in Hunger Vital Sign Question 3).

@@ -45,11 +45,11 @@ The frequency of polling needs to be often enough to allow for timely response t
 In the subscription mechanism, instead of the client system regularly querying the server to see if there are new Tasks or changes to existing Tasks, the client creates a
 [Subscription]({{site.data.fhir.ver.sdohsub}}/StructureDefinition-backport-subscription.html) instance on the server that indicates that it wants to be notified about changes to Tasks and, in the Subscription, provides filters that describe what
 subset of Tasks it is interested in.  The server will then push notifications when there are new Tasks and the client can then query for the specific Tasks that have changed.
-
+ 
 This Gravity functionality is based on the [R5 Subscription backport](http://hl7.org/fhir/uv/subscriptions-backport) implementation guide.  This implementation guide
 allows pre-adoption of the FHIR R5 topic-based subscription approach in R4 implementations and is the subscription approach that most U.S. EHR vendors have agreed to
 support.  Implementers of this Gravity IG who choose to support Subscription must comply with the Subscription Backport IG for the purpose of monitoring Tasks and, if
-necessary, ServiceRequests.
+necessary, ServiceRequests. 
 
 For the purposes of this IG, there will be no need for 'topic discovery' as there are only two topics of interest - one for [monitoring Task](#task-topic) and one for [monitoring
 ServiceRequest](#servicerequest-topic).  While neither of these topics are unique to the Gravity IG, because no standard topics have yet been defined for US Core, this IG will define the needed
