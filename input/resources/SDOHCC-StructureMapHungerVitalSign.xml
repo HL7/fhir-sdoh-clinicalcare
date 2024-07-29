@@ -142,6 +142,7 @@ group SetConditionFullUrl(source condition: Condition, target entry)
   </text>
   <url value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapHungerVitalSign"/>
   <name value="SDOHCCHungerVitalSignMap"/>
+  <description value= "A StructureMap instance that represents the resource that transforms a specific question and answer from the LOINC Hunger Vital Sign [HVS] questionnaire (LOINC code 88121-9) into a corresponding Observation (SDOHCC Observation response Hunger Vital Sign Q3 Example) and derived Condition (SDOHCC Condition Food Insecurity Example)"/>
   <structure>
     <url value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"/>
     <mode value="source"/>

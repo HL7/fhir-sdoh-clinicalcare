@@ -5,7 +5,7 @@ Description: "An example of a transportation Observation that is not necessarily
 Usage: #example
 //* category[0] = $observation-category#social-history "Social History"
 * category[SDOH].coding[0] = $SDOHCC-CodeSystemTemporaryCodes#transportation-insecurity "Transportation Insecurity"
-* category[SDOH].coding[+] = $other-code-system#transportation-insecurity-financial "Transportation Insecurity Financial"
+* category[SDOH].coding[+] = SDOHCC-CodeSystemTemporaryCodes#financial-insecurity "Financial Insecurity"
 * status = #final
 * code = $sct#160695008 "Transport too expensive"
 * subject.reference = "Patient/pat-53234"
