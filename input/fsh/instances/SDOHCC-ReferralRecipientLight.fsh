@@ -738,13 +738,13 @@ Usage: #definition
 * rest.resource[=].operation[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].operation[=].extension.valueCode = #SHOULD
 * rest.resource[=].operation[=].name = "status"
-* rest.resource[=].operation[=].definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/Backport-subscription-status"
+* rest.resource[=].operation[=].definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"
 * rest.resource[=].operation[=].documentation = "Necessary for systems supporting subscriptions to ensure that the subscription is functioning properly and to check for errors"
-* rest.resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].operation[=].extension.valueCode = #MAY
-* rest.resource[=].operation[=].name = "topic-list"
-* rest.resource[=].operation[=].definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/Backport-subscriptiontopic-list"
-* rest.resource[=].operation[=].documentation = "Allows discovery of what subscription topics the systems supports - needed for systems that aren't pre-configured to be aware of what topics are available for use."
+//* rest.resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+//* rest.resource[=].operation[=].extension.valueCode = #MAY
+//* rest.resource[=].operation[=].name = "topic-list"
+//* rest.resource[=].operation[=].definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/Backport-subscriptiontopic-list"
+//* rest.resource[=].operation[=].documentation = "Allows discovery of what subscription topics the systems supports - needed for systems that aren't pre-configured to be aware of what topics are available for use."
 * rest.resource[+].type = #Task
 * rest.resource[=].supportedProfile[0] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"
 * rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"
