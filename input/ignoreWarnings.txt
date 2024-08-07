@@ -8,7 +8,7 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalca
 
 # WARNING: US Core Variance - https://jira.hl7.org/browse/FHIR-46126 - Variance renewal for SDOH Clinical Care Observation Assessment
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
-
+ 
 # WARNING: US Core Variance - https://jira.hl7.org/browse/FHIR-46118 - Variance renewal for SDOH Clinical Care Condition (Is based on US Core, but on a profile that does not exist in the latest US Core version)
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition').baseDefinition: US FHIR Usage rules require that all profiles on Condition derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
 
