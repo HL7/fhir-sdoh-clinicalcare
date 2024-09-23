@@ -1,5 +1,5 @@
 Profile: SDOHCCServiceRequest
-Parent: ServiceRequest
+Parent: USCoreServiceRequestProfile
 Id: SDOHCC-ServiceRequest
 Title: "SDOHCC ServiceRequest"
 Description: "Profile for service requests that address Social Determinants of Health."
@@ -29,7 +29,7 @@ Description: "Profile for service requests that address Social Determinants of H
 * status ^comment = "The status is generally fully in the control of the requester - they determine whether the order is draft or active and, after it has been activated, competed, cancelled or suspended. States relating to the activities of the performer are reflected on either the corresponding event (see [Event Pattern](event.html) for general discussion) or using the [Task](task.html) resource.\r\n\r\nWhile all values are currently allowed, there may be a constraint on the values in future releases based on implementation feedback."
 * intent MS
 * intent ^comment = "This element is labeled as a modifier because the intent alters when and how the resource is actually applicable. While all values are currently allowed, there may be a contraint on the values in future releases based on implementation feedback."
-* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^definition = "A code that classifies the service for searching, sorting and display purposes (e.g., Education)."
@@ -76,12 +76,12 @@ Description: "Profile for service requests that address Social Determinants of H
 * orderDetail contains SubjectContactDetail 0..1 MS
 * orderDetail[SubjectContactDetail] = $SDOHCC-CodeSystemTemporaryCodes#contacting-subject-prohibited
 * orderDetail[SubjectContactDetail] ^requirements = "Allows flagging of a service request where the subject of the request explictly designates that they do not want to be contacted (e.g., in domestic violence cases where contact may place subject at risk)."
-* subject only Reference(Group or USCorePatientProfile or USCoreLocation)
+* subject only Reference(USCorePatientProfile)
 * subject MS
 * occurrence[x] MS
 * occurrence[x] ^requirements = "NOTE: dateTime should be Must Support, but currenlty tooling does not support this."
 * authoredOn MS
-* requester only Reference(RelatedPerson or Device or USCorePractitionerRoleProfile or USCorePractitionerProfile or USCorePatientProfile or USCoreOrganizationProfile)
+* requester only Reference(USCoreRelatedPersonProfile or Device or USCorePractitionerRoleProfile or USCorePractitionerProfile or USCorePatientProfile or USCoreOrganizationProfile)
 * requester MS
 * performer only Reference(HealthcareService or Device or RelatedPerson or USCorePatientProfile or USCorePractitionerProfile or USCorePractitionerRoleProfile or USCoreOrganizationProfile or USCoreCareTeam)
 * performer MS

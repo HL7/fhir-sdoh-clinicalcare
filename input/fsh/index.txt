@@ -92,7 +92,9 @@ SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample  Instance    insta
 SDOHCC-TaskReferralManagementOrderSubtaskAcceptedExample       Instance    instances/SDOHCC-TaskReferralManagementOrderSubtaskAcceptedExample.fsh
 SDOHCC-TaskReferralManagementOrderSubtaskCompletedExample      Instance    instances/SDOHCC-TaskReferralManagementOrderSubtaskCompletedExample.fsh
 SDOHCCCodeSystemTemporaryCodes                                 CodeSystem  codesystems/SDOHCCCodeSystemTemporaryCodes.fsh
-SDOHCCCondition                                                Profile     profiles/SDOHCCCondition.fsh
+SDOHCCCondition						       Profile	   profiles/SDOHCCCondition.fsh
+SDOHCCConditionEncounterDiagnosis                              Profile     profiles/SDOHCCConditionEncounterDiagnosis.fsh
+SDOHCCConditionProblemsHealthConcerns                          Profile     profiles/SDOHCCConditionProblemsHealthConcerns.fsh
 SDOHCCConditionAlt                                             Profile     profiles/SDOHCCConditionAlt.fsh
 SDOHCCConsent                                                  Profile     profiles/SDOHCCConsent.fsh
 SDOHCCExtensionConditionAsserter                               Extension   extensions/SDOHCCExtensionConditionAsserter.fsh

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/sdoh-clinicalcare/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare" defaultVersion="2.1.0" defaultWorkgroup="pc" gitUrl="https://github.com/HL7/fhir-sdoh-clinicalcare" url="http://hl7.org/fhir/us/sdoh-clinicalcare">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/sdoh-clinicalcare/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare" defaultVersion="2.2.0" defaultWorkgroup="pc" gitUrl="https://github.com/HL7/fhir-sdoh-clinicalcare" url="http://hl7.org/fhir/us/sdoh-clinicalcare">
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare"/>
+<version code="2.2.0" url="http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.2"/>
 <version code="2.1.0" url="http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.1"/>
 <version code="2.0.0" url="http://hl7.org/fhir/us/sdoh-clinicalcare/STU2"/>
 <version code="1.1.0" url="http://hl7.org/fhir/us/sdoh-clinicalcare/2022Jan"/>
@@ -41,7 +42,7 @@
 <artifact id="Location/SDOHCC-LocationExample" key="Location-SDOHCC-LocationExample" name="SDOHCC Location Example"/>
 <artifact id="StructureDefinition/SDOHCC-ObservationAssessment" key="StructureDefinition-SDOHCC-ObservationAssessment" name="SDOHCC Observation Assessment"/>
 <artifact id="Observation/SDOHCC-ObservationAssessmentInadequateFoodIntakeExample" key="Observation-SDOHCC-ObservationAssessmentInadequateFoodIntakeExample" name="SDOHCC Observation Assessment Inadequate Food Intake Example"/>
-<artifact id="Observation/SDOHCC-ObservationAssessmentSocialIsolationExample" key="Observation-SDOHCC-ObservationAssessmentSocialIsolationExample" name="SDOHCC Observation Assessment Social Isolation Example"/>
+<artifact deprecated="true" id="Observation/SDOHCC-ObservationAssessmentSocialIsolationExample" key="Observation-SDOHCC-ObservationAssessmentSocialIsolationExample" name="SDOHCC Observation Assessment Social Isolation Example"/>
 <artifact id="Observation/SDOHCC-ObservationAssessmentTransportTooExpensiveExample" key="Observation-SDOHCC-ObservationAssessmentTransportTooExpensiveExample" name="SDOHCC Observation Assessment Transport Too Expensive Example"/>
 <artifact id="StructureDefinition/SDOHCC-ObservationEthnicityOMB" key="StructureDefinition-SDOHCC-ObservationEthnicity" name="SDOHCC Observation Ethnicity OMB"/>
 <artifact id="Observation/SDOHCC-ObservationEthnicityOMBExample" key="Observation-SDOHCC-ObservationEthnicityExample" name="SDOHCC Observation Ethnicity OMB Example"/>
@@ -111,9 +112,7 @@
 <artifact deprecated="true" id="ServiceRequest/SDOHCC-ServiceRequest-HungerVitalSign-Example-1" key="ServiceRequest-SDOHCC-ServiceRequest-HungerVitalSign-Example-1" name="SDOHCC ServiceRequest HungerVitalSign Example 1"/>
 <artifact id="ServiceRequest/SDOHCC-ServiceRequestSubreferralGardenProgramExample" key="ServiceRequest-SDOHCC-ServiceRequestSubreferralGardenProgramExample" name="SDOHCC ServiceRequest Subreferral Garden Program Example"/>
 <artifact id="ServiceRequest/SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample" key="ServiceRequest-SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample" name="SDOHCC ServiceRequest Subreferral Summer Food Program Example"/>
-<artifact id="StructureMap/SDOHCC-StructureMapHungerVitalSign" key="StructureMap-SDOHCC-StructureMapHungerVitalSign" name="SDOHCC StructureMap HungerVitalSign"/>
 <artifact deprecated="true" id="StructureMap/SDOHCC-StructureMap-HungerVitalSignMapper-1" key="StructureMap-SDOHCC-StructureMap-HungerVitalSignMapper-1" name="SDOHCC StructureMap HungerVitalSignMapper 1"/>
-<artifact id="StructureMap/SDOHCC-StructureMapPRAPARE" key="StructureMap-SDOHCC-StructureMapPRAPARE" name="SDOHCC StructureMap PRAPARE"/>
 <artifact deprecated="true" id="StructureDefinition/SDOHCC-Task-Base-1" key="StructureDefinition-SDOHCC-Task-Base-1" name="SDOHCC Task Base 1"/>
 <artifact id="StructureDefinition/SDOHCC-TaskForPatient" key="StructureDefinition-SDOHCC-TaskForPatient" name="SDOHCC Task For Patient"/>
 <artifact id="StructureDefinition/SDOHCC-TaskForReferralManagement" key="StructureDefinition-SDOHCC-Task" name="SDOHCC Task For Referral Management"/>
@@ -147,6 +146,8 @@
 <artifact id="ValueSet/SDOHCC-ValueSetTaskPriority" key="ValueSet-SDOHCC-ValueSetTaskPriority" name="SDOHCC ValueSet Task Priority"/>
 <artifact id="ValueSet/SDOHCC-ValueSetTaskStatus" key="ValueSet-SDOHCC-ValueSetTaskStatus" name="SDOHCC ValueSet Task Status"/>
 <artifact id="Observation/SDOHCC-ObservationRaceOMBMotherExample" key="Observation-SDOHCC-ObservationRaceOMBMotherExample" name="SDOHCC-Observation Race OMB Mother Example"/>
+<artifact id="StructureMap/SDOHCC-StructureMapHungerVitalSign" key="StructureMap-SDOHCC-StructureMapHungerVitalSign" name="SDOHCCHungerVitalSignMap"/>
+<artifact id="StructureMap/SDOHCC-StructureMapPRAPARE" key="StructureMap-SDOHCC-StructureMapPRAPARE" name="SDOHCCPRAPAREMap"/>
 <artifact id="SearchParameter/ServiceRequest-supporting-info" key="SearchParameter-ServiceRequest-supporting-info" name="ServiceRequestSupportingInfo"/>
 <artifact id="SearchParameter/Task-output-reference" key="SearchParameter-Task-output-reference" name="TaskOutputReference"/>
 <artifact id="Parameters/terminology-settings" key="Parameters-terminology-settings" name="terminology-settings"/>
@@ -166,7 +167,7 @@
 <page deprecated="true" key="functional_use_cases" name="Functional Use Cases"/>
 <page key="glossary" name="Glossary"/>
 <page deprecated="true" key="gravity_background" name="Gravity Background"/>
-<page key="gravity_terminology" name="Gravity Value Sets"/>
+<page key="gravity_terminology" name="Gravity Project Value Sets"/>
 <page deprecated="true" key="homePage" name="Home Page"/>
 <page key="index" name="IG Home"/>
 <page deprecated="true" key="mapping_instructions" name="Mapping Instructions"/>
@@ -182,6 +183,7 @@
 <page key="stu2_ballot_changes" name="STU2 Ballot Changes"/>
 <page key="stu2_changes" name="STU2 Publication Changes"/>
 <page key="stu2_1_update_changes" name="STU2.1 Publication Changes"/>
+<page key="stu2_2_update_changes" name="STU2.2 Publication Changes"/>
 <page deprecated="true" key="support_for_multiple_domains" name="Support for Multiple Domains"/>
 <page deprecated="true" key="survey_instrument_support" name="Survey Instrument Support"/>
 <page deprecated="true" key="synchronizing_applications_with_api_data_sources" name="Synchronizing Applications with API Data Sources"/>

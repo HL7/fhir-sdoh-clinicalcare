@@ -1,7 +1,7 @@
-Profile: SDOHCCCondition
-Parent: Condition
-Id: SDOHCC-Condition
-Title: "SDOHCC Condition"
+Profile: SDOHCCConditionEncounterDiagnosis
+Parent: USCoreConditionEncounterDiagnosisProfile
+Id: SDOHCC-Condition-Encounter-Diagnosis
+Title: "SDOHCC Condition - Encounter Diagnosis"
 Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * ^status = #active
 * obeys SDOH-Con-1

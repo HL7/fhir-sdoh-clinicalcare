@@ -1,9 +1,9 @@
 status: active
 title: SDOH Clinical Care
-version: 2.2.0
+version: 3.0.0-draft
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: STU 2.2
+releaseLabel: STU 3 Draft
 canonical: http://hl7.org/fhir/us/sdoh-clinicalcare
 FSHOnly: false
 applyExtensionMetadataToRoot: false
@@ -11,7 +11,7 @@ id: hl7.fhir.us.sdoh-clinicalcare
 name: Sdohclinicalcare
 dependencies:
   hl7.fhir.us.core:
-    version: 3.1.1
+    version: 6.1.0
     uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
     id: uscore
   hl7.fhir.uv.sdc:
@@ -104,7 +104,6 @@ groups:
   Profiles:
     name: Profiles
     resources:
-      - SDOHCCCondition
       - SDOHCCConsent
       - SDOHCCGoal
       - SDOHCCGroup
@@ -116,6 +115,15 @@ groups:
       - SDOHCCServiceRequest
       - SDOHCCTaskForPatient
       - SDOHCCTaskForReferralManagement
+  Profiles - US Core 6.1.0:
+    name: Profiles - US Core 6.1.0
+    resources:
+      - SDOHCCConditionEncounterDiagnosis
+      - SDOHCCConditionProblemsHealthConcerns
+  Profiles - US Core 3.1.1:
+    name: Profiles - US Core 3.1.1
+    resources:
+      - SDOHCCCondition
   ValueSets:
     name: Value Sets
     resources:

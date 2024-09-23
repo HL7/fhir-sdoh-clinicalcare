@@ -18,7 +18,7 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * category[SDOH] ^definition = "An SDOH category assigned to the goal."
 * category[SDOH] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a goal. It is recommended that SDOH category codes be used to facilitate searching for SDOH-related goals."
 * category[SDOH] ^binding.description = "Codes for high-level SDOH categories."
-* description from SDOHCCValueSetLOINCSNOMEDCT (preferred)
+* description from USCoreGoalCodes (extensible)
 * description ^comment = "If no code is available, use CodeableConcept.text.\r\n\r"
 * description ^binding.description = "Codes providing the details of a particular goal.  In many systems, only the text element will be used."
 

@@ -1,5 +1,5 @@
 Profile: SDOHCCObservationScreeningResponse
-Parent: Observation
+Parent: USCoreSimpleObservationProfile
 Id: SDOHCC-ObservationScreeningResponse
 Title: "SDOHCC Observation Screening Response"
 Description: "Profile for observations that represent question and answer pairs from Social Determinants of Health (SDOH) screening instruments."
@@ -11,7 +11,7 @@ Description: "Profile for observations that represent question and answer pairs 
 * status ^short = "final | corrected | entered-in-error | unknown"
 * status ^definition = "The status of the observation value."
 * status ^requirements = "Further constrained to values that are relevant for SDOH."
-* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^requirements = "To identify that an SDOH observation screening response  is derived from an SDOH questionnaire, the “social-history” and “survey” codes are required."
@@ -67,7 +67,7 @@ Description: "Profile for observations that represent question and answer pairs 
 * effective[x] only dateTime or Period
 * effective[x] ^definition = "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the \"physiologically relevant time\"."
 * effective[x] ^comment = "At least a date should be present unless this observation is a historical report."
-* performer only Reference(RelatedPerson or USCorePatientProfile or USCorePractitionerProfile or USCorePractitionerRoleProfile or USCoreOrganizationProfile or USCoreCareTeam)
+* performer only Reference(USCoreRelatedPersonProfile or USCorePatientProfile or USCorePractitionerProfile or USCorePractitionerRoleProfile or USCoreOrganizationProfile or USCoreCareTeam)
 * performer MS
 * performer ^requirements = "Some questions on an SDOH screening questionnaire are not answered directly (e.g., asserted) by the individual completing the questionnaire. Rather, the answer to some questions (e.g., the Hunger Vital Sign 88124-3 “Food insecurity risk”) may be derived from answers to one or more other questions. For an Observation Screening Response  that is derived, as opposed to answered directly, Observation.performer should not be specified."
 * value[x] MS
@@ -96,7 +96,7 @@ Description: "Profile for observations that represent question and answer pairs 
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, health-insurance-coverage-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.185, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, homelessness, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.176, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, housing-instability, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.177, extensible)
-* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, inadequate-housing, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1196.178, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, inadequate-housing, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.178, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, intimate-partner-violence, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.209, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, material-hardship, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.180, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, valueCodeableConcept, Observation.category, medical-cost-burden, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.187, extensible)
@@ -114,14 +114,14 @@ Description: "Profile for observations that represent question and answer pairs 
 * bodySite ..0
 * specimen ..0
 * hasMember ^definition = "References the child observations of a grouping observation."
-* derivedFrom only Reference(DocumentReference or QuestionnaireResponse or Observation)
+* derivedFrom only Reference(USCoreDocumentReferenceProfile or USCoreQuestionnaireResponseProfile or Observation)
 * derivedFrom ^definition = "The target resource represents a QuestionnaireResponse or other Observation from which the value of this Observation was inferred or calculated."
 * derivedFrom MS
 * insert SliceReferenceOnProfile(derivedFrom)
 * derivedFrom contains SupportedDerivedFrom 0..* MS
 * derivedFrom ^definition = "The target resource represents a QuestionnaireResponse or other Observation from which the value of this Observation was inferred or calculated."
 * derivedFrom ^comment = "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value."
-* derivedFrom[SupportedDerivedFrom] only Reference(SDOHCCObservationScreeningResponse or SDCQuestionnaireResponse)
+* derivedFrom[SupportedDerivedFrom] only Reference(SDOHCCObservationScreeningResponse or USCoreQuestionnaireResponseProfile)
 * derivedFrom[SupportedDerivedFrom] ^short = "Related questionnaire responses or observations that the observation is made from"
 * derivedFrom[SupportedDerivedFrom] ^definition =  "The types of 'derivedFrom' resources that must be supported by implementations conforming to this IG"
 * derivedFrom[SupportedDerivedFrom] ^requirements = "Allows traceability (and context) for Observations derived from a QuestionnaireResponse and also establishes links for observations that were calculated or inferred based on other Observations (e.g. for calculated scores)."

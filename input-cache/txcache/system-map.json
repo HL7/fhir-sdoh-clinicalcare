@@ -1,13 +1,13 @@
 {
   "systems" : [
     {
-      "system" : "http://example.org/CodeSystem/other-code-system",
-      "authoritative" : [],
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "authoritative" : ["http://tx.fhir.org/r4"],
       "candidates" : []
     },
     {
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "authoritative" : ["http://tx.fhir.org/r4"],
+      "system" : "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes",
+      "authoritative" : [],
       "candidates" : []
     },
     {
@@ -41,6 +41,11 @@
       "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
     },
     {
+      "system" : "http://nucc.org/provider-taxonomy",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    },
+    {
       "system" : "http://snomed.info/sct",
       "authoritative" : [],
       "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
@@ -49,6 +54,41 @@
       "system" : "http://unitsofmeasure.org",
       "authoritative" : [],
       "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "https://www.usps.com/",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    },
+    {
+      "system" : "urn:ietf:bcp:47",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166:-2",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    },
+    {
+      "system" : "urn:oid:2.16.840.1.113883.6.238",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    },
+    {
+      "system" : "urn:oid:2.16.840.1.113883.6.238|3.1.1",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
     }
   ]
 }
