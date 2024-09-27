@@ -115,12 +115,12 @@ groups:
       - SDOHCCServiceRequest
       - SDOHCCTaskForPatient
       - SDOHCCTaskForReferralManagement
-  Profiles - US Core 6.1.0:
+  ProfilesUsCore610:
     name: Profiles - US Core 6.1.0
     resources:
       - SDOHCCConditionEncounterDiagnosis
       - SDOHCCConditionProblemsHealthConcerns
-  Profiles - US Core 3.1.1:
+  ProfilesUsCore311:
     name: Profiles - US Core 3.1.1
     resources:
       - SDOHCCCondition
