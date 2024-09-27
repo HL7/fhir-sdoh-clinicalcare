@@ -8,7 +8,7 @@ Usage: #example
 * status = #final
 * code = $loinc#93031-3 "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]"
 * subject.reference = "Patient/pat-53234"
-* subject.display = "COLIN ABBAS"
+//* subject.display = "COLIN ABBAS"
 * effectiveDateTime = "2021-04-26T13:56:33.747Z"
 * issued = "2021-04-26T13:56:33.747Z"
 * performer.reference = "Patient/pat-53234"

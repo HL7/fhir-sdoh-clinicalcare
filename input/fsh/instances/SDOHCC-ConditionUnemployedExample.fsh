@@ -10,7 +10,7 @@ Usage: #example
 * code.coding[0] = $sct#73438004 "Unemployed"
 * code.coding[+] = $icd-10-cm#Z56.0 "Unemployment, unspecified"
 * subject.reference = "Patient/pat-53234"
-* subject.display = "COLIN ABBAS"
+//* subject.display = "COLIN ABBAS"
 * onsetPeriod.start = "2021-04-26T13:56:33.747Z"
 * asserter.reference = "Patient/pat-53234"
 * asserter.display = "COLIN ABBAS"

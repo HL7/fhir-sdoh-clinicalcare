@@ -9,7 +9,7 @@ Usage: #example
 * status = #final
 * code = $sct#160695008 "Transport too expensive"
 * subject.reference = "Patient/pat-53234"
-* subject.display = "COLIN ABBAS"
+//* subject.display = "COLIN ABBAS"
 * effectiveDateTime = "2021-05-10T21:56:54.671Z"
 * performer.reference = "Practitioner/SDOHCC-PractitionerDrJanWaterExample"
 * performer.display = "Dr Jan Water"

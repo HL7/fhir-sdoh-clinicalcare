@@ -6,7 +6,7 @@ RuleSet: NHANESCommon
 * status = #final
 * code = $loinc#76506-5 "Social Connection and Isolation Panel"
 * subject.reference = "Patient/pat-53234"
-* subject.display = "COLIN ABBAS"
+//* subject.display = "COLIN ABBAS"
 * effectiveDateTime = "2020-09-10T21:56:54.671Z"
 * performer.reference = "Practitioner/SDOHCC-PractitionerDrJanWaterExample"
 * performer.display = "Dr Jan Water"

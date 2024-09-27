@@ -7,7 +7,7 @@ Usage: #example
 * scope = $consentscope#patient-privacy "Privacy Consent"
 * category[IDSCL] = $v3-ActCode#IDSCL "information disclosure"
 * patient.reference = "Patient/pat-53234"
-* patient.display = "Colin Abbas"
+//* patient.display = "Colin Abbas"
 * dateTime = "2021-05-01"
 * organization.reference = "Organization/SDOHCC-OrganizationPayerExample"
 * sourceAttachment.contentType = #application/pdf

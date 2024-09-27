@@ -8,7 +8,7 @@ Usage: #example
 * status = #final
 * code = $loinc#88124-3 "Food insecurity risk [HVS]"
 * subject.reference = "Patient/pat-53234"
-* subject.display = "COLIN ABBAS"
+//* subject.display = "COLIN ABBAS"
 * effectiveDateTime = "2020-09-10T21:56:54.671Z"
 * performer.reference = "Patient/pat-53234"
 * performer.display = "COLIN ABBAS"

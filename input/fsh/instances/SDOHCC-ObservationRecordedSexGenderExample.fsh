@@ -7,7 +7,7 @@ Usage: #example
 * code = $loinc#99502-7 "Recorded sex or gender"
 * status = #final
 * subject.reference = "Patient/pat-53234"
-* subject.display = "COLIN ABBAS"
+//* subject.display = "COLIN ABBAS"
 * effectiveDateTime = "2022-04-10T23:56:54.671Z"
 * performer.reference = "Organization/SDOHCC-OrganizationClinicExample"
 * performer.display = "Better Health Clinic"

@@ -10,7 +10,7 @@ Usage: #example
 * code.coding[0] = $sct#32911000 "Homeless"
 * code.coding[+] = $icd-10-cm#Z59.0 "Homelessness"
 * subject.reference = "Patient/pat-53234"
-* subject.display = "COLIN ABBAS"
+//* subject.display = "COLIN ABBAS"
 * onsetPeriod.start = "2021-04-26T13:56:33.747Z"
 * asserter.reference = "Patient/pat-53234"
 * asserter.display = "COLIN ABBAS"
