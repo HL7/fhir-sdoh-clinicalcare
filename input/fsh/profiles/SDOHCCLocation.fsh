@@ -1,5 +1,5 @@
 Profile: SDOHCCLocation
-Parent: USCoreLocation
+Parent: USCoreLocationProfile
 Id: SDOHCC-Location
 Title: "SDOHCC Location"
 Description: "Profile that describes address information for a healthcare service."

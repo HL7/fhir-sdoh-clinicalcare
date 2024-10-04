@@ -11,7 +11,7 @@ id: hl7.fhir.us.sdoh-clinicalcare
 name: Sdohclinicalcare
 dependencies:
   hl7.fhir.us.core:
-    version: 6.1.0
+    version: 7.0.0
     uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
     id: uscore
   hl7.fhir.uv.sdc:
