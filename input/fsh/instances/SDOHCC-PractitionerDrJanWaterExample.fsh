@@ -4,7 +4,7 @@ Title: "SDOHCC Practitioner Dr Jan Water Example"
 Description: "An example of a Practitioner. This example is used as the referenced practitioner in other IG examples."
 Usage: #example
 * identifier[0].system = "http://hl7.org/fhir/sid/us-npi"
-* identifier[=].value = "1111111111"
+* identifier[=].value = "9941339100"
 * identifier[+].system = "http://www.deerland.org/practitioners"
 * identifier[=].value = "24242"
 * active = true

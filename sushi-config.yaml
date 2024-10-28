@@ -104,6 +104,7 @@ groups:
   Profiles:
     name: Profiles
     resources:
+      - SDOHCCCondition
       - SDOHCCConsent
       - SDOHCCGoal
       - SDOHCCGroup
@@ -115,15 +116,15 @@ groups:
       - SDOHCCServiceRequest
       - SDOHCCTaskForPatient
       - SDOHCCTaskForReferralManagement
-  ProfilesUsCore610:
-    name: Profiles - US Core 6.1.0
-    resources:
-      - SDOHCCConditionEncounterDiagnosis
-      - SDOHCCConditionProblemsHealthConcerns
-  ProfilesUsCore311:
-    name: Profiles - US Core 3.1.1
-    resources:
-      - SDOHCCCondition
+#  ProfilesUsCore610:
+#    name: Profiles - US Core 6.1.0
+#   resources:
+#      - SDOHCCConditionEncounterDiagnosis
+#      - SDOHCCConditionProblemsHealthConcerns
+#  ProfilesUsCore311:
+#    name: Profiles - US Core 3.1.1
+#    resources:
+#      - SDOHCCCondition
   ValueSets:
     name: Value Sets
     resources:

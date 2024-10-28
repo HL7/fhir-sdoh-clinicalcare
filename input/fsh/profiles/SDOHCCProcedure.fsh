@@ -125,15 +125,4 @@ Description: "Performed SHALL be present if the status is 'completed' or 'in-pro
 * severity = #error
 * expression = "(status='completed' or status='in-progress') implies performed.exists()"
 
-// WARNING: The following Mapping may be incomplete since the original USCoreProcedureProfile
-// StructureDefinition was missing the mapping entry for argonaut-dq-dstu2.
-// Please review this and add the following properties as necessary: Target, Title, Description
-Mapping: argonaut-dq-dstu2
-Id: argonaut-dq-dstu2
-Source: SDOHCCProcedure
-* -> "Procedure"
-* status -> "Procedure.status"
-* code -> "Procedure.code"
-* subject -> "Procedure.subject"
-* performed[x] -> "Procedure.performed[x]"
 

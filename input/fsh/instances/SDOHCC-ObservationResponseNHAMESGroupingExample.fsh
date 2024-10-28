@@ -1,7 +1,9 @@
 
 RuleSet: NHANESCommon
-* category[SocialHistory] = $observation-category#social-history "Social History"
-* category[Survey] = $observation-category#survey "Survey"
+//* category[SocialHistory] = $observation-category#social-history "Social History"
+//* category[Survey] = $observation-category#survey "Survey"
+* category[survey] = $observation-category#survey "Survey"
+* category[screening-assessment] = USCoreCategory#sdoh "SDOH"
 * category[SDOH] = $SDOHCC-CodeSystemTemporaryCodes#social-connection "Social Connection"
 * status = #final
 * code = $loinc#76506-5 "Social Connection and Isolation Panel"

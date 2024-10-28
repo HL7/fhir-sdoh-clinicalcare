@@ -3,7 +3,9 @@ InstanceOf: SDOHCCObservationScreeningResponse
 Title: "SDOHCC Observation Response PRAPARE Employment Status Example"
 Description: "An example of a screening response Observation that represents a question and answer related to employment status from the PRAPARE questionnaire represented in LOINC."
 Usage: #example
-* category[Survey] = $observation-category#survey "Survey"
+//* category[Survey] = $observation-category#survey "Survey"
+* category[survey] = $observation-category#survey "Survey"
+* category[screening-assessment] = USCoreCategory#sdoh "SDOH"
 * category[SDOH] = $SDOHCC-CodeSystemTemporaryCodes#employment-status "Employment Status"
 * status = #final
 * code = $loinc#67875-5 "Employment status - current"

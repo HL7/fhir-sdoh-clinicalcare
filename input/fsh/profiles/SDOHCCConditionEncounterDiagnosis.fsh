@@ -1,4 +1,4 @@
-Profile: SDOHCCConditionEncounterDiagnosis
+/*Profile: SDOHCCConditionEncounterDiagnosis
 Parent: USCoreConditionEncounterDiagnosisProfile
 Id: SDOHCC-Condition-Encounter-Diagnosis
 Title: "SDOHCC Condition - Encounter Diagnosis"
@@ -87,3 +87,4 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * evidence.detail[SupportedDetail] ^definition = "Links to other relevant information."
 //* evidence.detail[SupportedDetail] ^requirements = "When a condition is based on one or more SDOH observations that were generated from questionnaire responses, Condition.evidence.detail should reference instances that comply with the SDOHCC Screening Response Observation. However, references to other instance types are also possible."
 * evidence.detail[SupportedDetail] ^requirements = "When a condition is based on one or more SDOH observations that were generated from questionnaire responses, Condition.evidence.detail should reference instances that comply with the SDOHCC Observation Screening Response or SDC Questionnaire Response. However, references to other instance types are also possible."
+*/
