@@ -8931,7 +8931,6 @@ v: {
   "error" : "No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'; The provided code 'http://loinc.org#63503-7 ('Marital status [NHANES]')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'",
   "class" : "UNKNOWN",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -8990,7 +8989,6 @@ v: {
   "error" : "No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'; The provided code 'http://loinc.org#76508-1 ('In a typical week, how many times do you talk on the telephone with family, friends, or neighbors [NHANES III]')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'",
   "class" : "UNKNOWN",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -9049,7 +9047,6 @@ v: {
   "error" : "No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'; The provided code 'http://loinc.org#76509-9 ('How often do you get together with friends or relatives [NHANES III]')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'",
   "class" : "UNKNOWN",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -9108,7 +9105,6 @@ v: {
   "error" : "No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'; The provided code 'http://loinc.org#76510-7 ('How often do you attend church or religious services [NHANES]')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'",
   "class" : "UNKNOWN",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -9167,7 +9163,6 @@ v: {
   "error" : "No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'; The provided code 'http://loinc.org#76511-5 ('Do you belong to any clubs or organizations such as church groups unions, fraternal or athletic groups, or school groups [NHANES III]')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'",
   "class" : "UNKNOWN",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -9226,7 +9221,6 @@ v: {
   "error" : "No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'; The provided code 'http://loinc.org#76512-3 ('Social isolation score [NHANES]')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'",
   "class" : "UNKNOWN",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -9285,7 +9279,6 @@ v: {
   "error" : "No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'; The provided code 'http://loinc.org#76506-5 ('Social Connection and Isolation Panel')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'",
   "class" : "UNKNOWN",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -9344,7 +9337,6 @@ v: {
   "error" : "No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'; The provided code 'http://loinc.org#93031-3 ('Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'",
   "class" : "UNKNOWN",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -9379,6 +9371,30 @@ v: {
       "text" : "No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0'"
     }
   }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA29518-0"
+}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetPronounsValue--0", "version": "2.3.0-draft", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  }]
+}}####
+v: {
+  "display" : "he/him/his/his/himself",
+  "code" : "LA29518-0",
+  "system" : "http://loinc.org",
+  "version" : "2.78",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
 }
 
 }

@@ -1,9 +1,9 @@
 status: active
 title: SDOH Clinical Care
-version: 3.0.0-draft
+version: 2.3.0-draft
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: STU 3 Draft
+releaseLabel: STU 2.3 Draft
 canonical: http://hl7.org/fhir/us/sdoh-clinicalcare
 FSHOnly: false
 applyExtensionMetadataToRoot: false
