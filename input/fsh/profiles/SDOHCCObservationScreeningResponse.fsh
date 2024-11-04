@@ -35,19 +35,25 @@ Description: "Profile for observations that represent question and answer pairs 
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category contains
+    SocialHistory 1..1 MS and
     survey 1..1 MS and
     screening-assessment 0..* MS and
     SDOH 0..* MS
+
 * category[survey] = $observation-category#survey
 * category[survey] ^requirements = "Used for filtering if the observation is an assessment or screening."
 * category[screening-assessment] from USCoreScreeningAssessmentObservationCategory (required)
 * category[screening-assessment] ^definition = "Categories that a provider may use in their workflow to classify that this Observation is related to a USCDI Health Status/Assessments Data Class."
 * category[screening-assessment] ^requirements = "Used for filtering the type of screening or assessment observation."
-* category[screening-assessment] ^binding.description = "Note that other codes are permitted"
+//* category[screening-assessment] ^binding.description = "Note that other codes are permitted"
 
+    
 
 
 // SDOH CC Domain Category Slice
+* category[SocialHistory] = $observation-category#social-history
+* category[SocialHistory] ^requirements = "Used for filtering social history observations."
+
 * category[SDOH] from SDOHCCValueSetSDOHCategory (required)
 * category[SDOH] ^short = "e.g., food-insecurity | transportation-insecurity"
 * category[SDOH] ^definition = "An SDOH category assigned to the observation."
@@ -57,6 +63,8 @@ Description: "Profile for observations that represent question and answer pairs 
 
 
 * code MS
+//* code from USCoreSurveyCodes (preferred)
+
 //* code from $us-core-survey-codes (preferred)  US Core requirement, changing to SDOH CC requirement
 // SDOH CC
 * code from LOINCCodes (required)
@@ -94,7 +102,7 @@ Description: "Profile for observations that represent question and answer pairs 
 
 // US Core 7.0.0
 * subject 1.. MS
-* subject only Reference(USCorePatientProfile or Group or Device or USCoreLocationProfile)
+/* subject only Reference(USCorePatientProfile or Group or Device or USCoreLocationProfile)
 * subject ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * subject ^type[=].targetProfile[=].extension.valueBoolean = true
 * subject ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
@@ -103,11 +111,12 @@ Description: "Profile for observations that represent question and answer pairs 
 * subject ^type[=].targetProfile[=].extension.valueBoolean = false
 * subject ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * subject ^type[=].targetProfile[=].extension.valueBoolean = false
-
+*/
 
 
 // SDOH CC
-* subject ^comment = "Cardinality is 1..1."
+//* subject ^comment = "Cardinality is 1..1."
+* subject only Reference(USCorePatientProfile)
 
 
 
@@ -180,6 +189,8 @@ Description: "Profile for observations that represent question and answer pairs 
 //* value[x] ^slicing.rules = #open
 //* value[x] ^comment = "An observation exists to have a value, though it might not if it is in error, if it represents a group of observations, or if a reason for its omission is captured by Observation.dataAbsentReason."
 * value[x] ^requirements = "An observation exists to have a value, though it might not if it is in error, if it represents a group of observations, or if it a reason for its omission is captured by Observation.dataAbsentReason."
+// TODO, make sure this rendeers appropriately
+* valueString MS
 
 * valueQuantity MS
 //* valueQuantity only Quantity

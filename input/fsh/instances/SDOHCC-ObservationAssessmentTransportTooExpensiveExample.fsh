@@ -4,6 +4,7 @@ Title: "SDOHCC Observation Assessment Transport Too Expensive Example"
 Description: "An example of a transportation Observation that is not necessarily derived only from a screening survey. This observation involves additional assessment (e.g., by a provider, payer, etc.). This example also includes an Observation.category (i.e., Transportation Insecurity) that is included in the “SDOHCC ValueSet SDOH Category”. Additionally, a subcategory of Transportation Insecurity (i.e., Transportation Insecurity Financial) is included to illustrate that it is possible to further subcategorize a “SDOHCC ValueSet SDOH Category” code with a code that is not in the ValueSet."
 Usage: #example
 //* category[0] = $observation-category#social-history "Social History"
+* category[SocialHistory] = $observation-category#social-history "Social History"
 * category[SDOH].coding[0] = $SDOHCC-CodeSystemTemporaryCodes#transportation-insecurity "Transportation Insecurity"
 * category[SDOH].coding[+] = SDOHCC-CodeSystemTemporaryCodes#financial-insecurity "Financial Insecurity"
 * status = #final

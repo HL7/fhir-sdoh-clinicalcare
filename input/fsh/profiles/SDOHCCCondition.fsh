@@ -4,6 +4,14 @@ Id: SDOHCC-Condition
 Title: "SDOHCC Condition"
 Description: "Profile for Social Determinants of Health (SDOH) conditions."
 
+
+// TODO Add narrative rehgarding the difference between the screening assessment category of SDOH (broader) and the SDOH Categories with SDOH unspecified. May need help from 
+// TODO do a check with STU 2.2, making sure I didn'yt accidentally reduce the requirements like I did with types onset and abatement
+// TODO do cross US Core version analysis with looking at invariants
+
+// TODO Add ticket for MS on Condition.category:SDOH to make the change in this version
+// TODO Add a ticket to consider adding Group as a possible Condition.subject
+
 // SDOH CC
 * obeys SDOH-Con-1
 * . ^short = "Detailed information about SDOH conditions, problems or diagnoses"
@@ -44,23 +52,31 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * category ^slicing.rules = #open
 * category ^short = "category codes"
 * category contains
-    encounter-diagnosis 0..* MS and
+    encounter-diagnosis 0..1 MS and
     problem-or-health-concern 0..* MS and
     screening-assessment 0..* MS and
     SDOH 0..*
 
 // TODO need to supplort slicing that either encounter diagnosis or "healthconcern orproblem list item" is required (through an invariant)
-* category[encounter-diagnosis] =  ConditionCategoryCodes#encounter-diagnosis
-* category[encounter-diagnosis] ^short = "problem-list-item | health-concern"
-* category[encounter-diagnosis] ^binding.description = "Note that other codes are permitted"
+
+* category[encounter-diagnosis] = ConditionCategoryCodes#encounter-diagnosis
+
+//* category[encounter-diagnosis] ^binding.description = "Note that other codes are permitted"
+
+// TODO Make sure the full sub element pattern shows up like in   https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-condition-encounter-diagnosis.html
+
+
 * category[problem-or-health-concern] from USCoreProblemOrHealthConcern (required)
 * category[problem-or-health-concern] ^short = "problem-list-item | health-concern"
-* category[problem-or-health-concern] ^binding.description = "Note that other codes are permitted"
+//* category[problem-or-health-concern] ^binding.description = "Note that other codes are permitted"
+
+
+
 * category[screening-assessment] from USCoreScreeningAssessmentConditionCategory (required)
 * category[screening-assessment] ^short = "USCDI Health Status/Assessments Data Class"
 * category[screening-assessment] ^definition = "Categories that a provider may use in their workflow to classify that this Condition is related to a USCDI Health Status/Assessments Data Class."
 * category[screening-assessment] ^requirements = "Used for filtering condition"
-* category[screening-assessment] ^binding.description = "Note that other codes are permitted"
+//* category[screening-assessment] ^binding.description = "Note that other codes are permitted"
 
 
 
@@ -115,15 +131,22 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 
 * bodySite ..0
 
-
+* subject MS
+* subject only Reference(USCorePatientProfile)
+* encounter MS
+* encounter only Reference(USCoreEncounterProfile)
 
 // US Core 7.0.0
-* subject only Reference(USCorePatientProfile or Group)
-* subject MS
-* subject ^type.targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* subject ^type.targetProfile[=].extension.valueBoolean = true
-* subject ^type.targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* subject ^type.targetProfile[=].extension.valueBoolean = false
+//* subject MS
+//* subject only Reference(USCorePatientProfile or Group)
+
+//* subject ^type.targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+//* subject ^type.targetProfile[=].extension.valueBoolean = true
+//* subject ^type.targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+//* subject ^type.targetProfile[=].extension.valueBoolean = false
+
+
+
 * onset[x] only dateTime or Age or Period or Range or string
 * onset[x] MS
 * onset[x] ^type.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
@@ -134,6 +157,29 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * abatement[x] ^type.extension.valueBoolean = true
 
 
+
+/*
+// US Core 7.0.0
+* subject only Reference(USCorePatientProfile)
+* subject MS
+* subject ^type.targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type.targetProfile[=].extension.valueBoolean = true
+* subject ^type.targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type.targetProfile[=].extension.valueBoolean = false
+
+* encounter MS
+* encounter only Reference(USCoreEncounterProfile)
+
+* onset[x] only dateTime or Period
+* onset[x] MS
+* onset[x] ^type.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* onset[x] ^type.extension.valueBoolean = true
+* abatement[x] only dateTime or Period
+* abatement[x] MS
+* abatement[x] ^type.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* abatement[x] ^type.extension.valueBoolean = true
+
+*/
 
 // SDOH CC
 * abatement[x] ^definition = "The estimated or actual dateTime or Period that the condition resolved or went into remission. This is called \"abatement\" because of the many overloaded connotations associated with \"remission\" or \"resolution\"."

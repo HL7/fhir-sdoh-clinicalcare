@@ -85,6 +85,8 @@ Description: "Profile for service requests that address Social Determinants of H
 //* encounter only Reference(USCoreEncounterProfile)
 //* encounter MS
 //* occurrence[x] MS
+
+// TODO - Need to get the occurence dateTime as MS
 //* occurrence[x] ^requirements = "NOTE: dateTime should be Must Support, but currenlty tooling does not support this."
 * occurrence[x] only Period or dateTime or Timing
 * occurrence[x] ^type.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
