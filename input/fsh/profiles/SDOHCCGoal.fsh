@@ -22,8 +22,8 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * description ^comment = "If no code is available, use CodeableConcept.text.\r\n\r"
 * description ^binding.description = "Codes providing the details of a particular goal.  In many systems, only the text element will be used."
 
-* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, digital-access, http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT, preferred)
-* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, digital-literacy, http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT, preferred)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, digital-access, http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description, preferred)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, digital-literacy, http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description, preferred)
 * insert AdditionalBinding(SDOHCCGoal, description, Goal.category, educational-attainment, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.55, extensible)
 * insert AdditionalBinding(SDOHCCGoal, description, Goal.category, elder-abuse, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.65, extensible)
 * insert AdditionalBinding(SDOHCCGoal, description, Goal.category, employment-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.70, extensible)
@@ -42,7 +42,7 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * insert AdditionalBinding(SDOHCCGoal, description, Goal.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.163, extensible)
 * insert AdditionalBinding(SDOHCCGoal, description, Goal.category, utility-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.245, extensible)
 * insert AdditionalBinding(SDOHCCGoal, description, Goal.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.214, extensible)
-* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, sdoh-category-unspecified, http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT, preferred)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description, preferred)
 
 
 
@@ -59,7 +59,7 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * addresses contains SupportedAddresses 0..* MS
 * addresses[SupportedAddresses] only Reference(SDOHCCCondition or SDOHCCObservationScreeningResponse or SDOHCCObservationAssessment)
 * addresses[SupportedAddresses] ^requirements = "When a goal addresses SDOH screening response observations generated from a survey/questionnaire, SDOH assessment observations, or SDOH conditions, Goal.addresses should reference instances that comply with the SDOHCC Observation Screening Response, SDOHCC Condition, or SDOHCC Observation Assessment profiles. However, references to other instance types are also possible."
-* outcomeCode from SDOHCCValueSetLOINCSNOMEDCT (preferred)
+* outcomeCode from USCoreGoalCodes (preferred)
 * outcomeCode ^comment = "Note that this should not duplicate the goal status.\r\n\r\nInformation represented by Goal.outcomeCode may overlap significantly with information represented by Goal.outcomeReference. Multiple approaches to representing the same information may negatively impact interoperability. Therefore, where there is significant overlap in information provided by Goal.outcomeCode and Goal.outcomeReference, it is recommended that Goal.outcomeReference should be used to provide details of goal outcomes.\r\n\r"
 * outcomeCode ^binding.description = "The result of the goal; e.g., \"Food security\", \"Has access to a car \"."
 * outcomeReference ^slicing.discriminator.type = #profile
