@@ -147,11 +147,11 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 
 
 
-* onset[x] only dateTime or Age or Period or Range or string
+* onset[x] only dateTime or Period
 * onset[x] MS
 * onset[x] ^type.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * onset[x] ^type.extension.valueBoolean = true
-* abatement[x] only dateTime or Age or Period or Range or string
+* abatement[x] only dateTime or Period
 * abatement[x] MS
 * abatement[x] ^type.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * abatement[x] ^type.extension.valueBoolean = true
