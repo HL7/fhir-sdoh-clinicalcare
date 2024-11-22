@@ -1,5 +1,5 @@
 Profile: SDOHCCObservationPersonalCharacteristic
-Parent: Observation
+Parent: USCoreSimpleObservationProfile
 Id: SDOHCC-ObservationPersonalCharacteristic
 Title: "SDOHCC Observation Personal Characteristic"
 Description: "Defines constraints that represent the minimum requirement for personal characteristic observations which are observations that are usually self-attested but may be attested to on behalf of the subject and are generally only verifiable by the source of attestation (e.g., race, ethnicity, sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex). This profile is intended for draft use only.  For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
@@ -9,7 +9,7 @@ Description: "Defines constraints that represent the minimum requirement for per
 * . ^short = "Personal characteristic observation"
 * . ^definition = "Defines constraints that represent the minimum requirement for personal characteristic observations which are observations that are usually self-attested but may be attested to on behalf of the subject (e.g., for a minor or incapable subject) and are generally only verifiable by the source of attestation (e.g., race, ethnicity, sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex)."
 * . ^mustSupport = false
-* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.type = #pattern
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains $extension-Observation.subject named OtherSubject 0..1 MS
@@ -22,7 +22,7 @@ Description: "Defines constraints that represent the minimum requirement for per
 * status ^short = "final | corrected | entered-in-error | unknown"
 * status ^definition = "The status of the observation value."
 * status ^requirements = "Further constrained to values that are relevant for personal characteristic observations."
-* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category contains PersonalCharacteristic 1..1 MS
@@ -51,6 +51,6 @@ Description: "Defines constraints that represent the minimum requirement for per
 * bodySite ..0
 * specimen ..0
 * referenceRange ..0
-* derivedFrom only Reference(DocumentReference or QuestionnaireResponse or Observation)
+* derivedFrom only Reference(USCoreDocumentReferenceProfile or USCoreQuestionnaireResponseProfile or Observation)
 * derivedFrom MS
 * derivedFrom ^condition[0] = "SDOH-Obs-3"
