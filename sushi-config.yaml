@@ -14,6 +14,20 @@ dependencies:
     version: 7.0.0
     uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
     id: uscore
+    reason: |
+      Defines USCDI v4 EHR expectations on a range of resources that will be passed to and/or systems supporting the Social Determinants of Health Clinical Care Implementation Guide. The profiles of this guide directly inherit from this version.   \n
+  hl7.fhir.us.core.v610:
+    version: 6.1.0
+    uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
+    id: uscore6
+    reason: |
+      Defines USCDI v3 EHR expectations on a range of resources that will be passed to and/or systems supporting the Social Determinants of Health Clinical Care Implementation Guide. The profiles of this guide largely comply with the requirements of this version. Several constraints that were reduced in US Core 7 were not adopted. Profile pages provide additional compliance guidance. \n
+  hl7.fhir.us.core.v311:
+    version: 3.1.1
+    uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
+    id: uscore3
+    reason: |
+      Defines USCDI v1 EHR expectations on a range of resources that will be passed to and/or systems supporting the Social Determinants of Health Clinical Care Implementation Guide. The profiles of this guide comply with the requirements of this version. Profile pages provide additional compliance guidance. \n
   hl7.fhir.uv.sdc:
     version: 3.0.0
     uri: "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc" 
