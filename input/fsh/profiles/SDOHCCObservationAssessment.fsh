@@ -45,7 +45,7 @@ Description: "Profile for Social Determinants of Health (SDOH) observations that
 
 
 // SDOH CC
-* code from LOINCCodes (preferred)
+* code from SDOHCCValueSetLOINCSNOMEDCT (preferred)
 * code ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\nAs the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set binding strength may change and may be refined to codes (including LOINC and SNOMED) that pertain to SDOH categories."
 
 

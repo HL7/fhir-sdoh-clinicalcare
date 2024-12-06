@@ -47,6 +47,8 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 
 
 * subject ^definition = "Identifies the patient for whom the goal is being established."
+* subject only Reference(USCorePatientProfile)
+
 * target.measure from LOINCCodes (preferred)
 * target.measure ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * target.measure ^binding.extension.valueString = "GoalTargetMeasure"

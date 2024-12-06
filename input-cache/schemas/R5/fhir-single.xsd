@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Fri, Nov 22, 2024 12:02+0000 for FHIR v6.0.0-ballot2 
+  Generated on Tue, Dec 3, 2024 22:56+0000 for FHIR v6.0.0-ballot2 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="6.0.0-ballot2">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -21958,7 +21958,7 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">Used to express the reason for or classification of the title.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="language" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="language" minOccurs="0" maxOccurs="1" type="code">
             <xs:annotation>
               <xs:documentation xml:lang="en">Used to express the specific language of the title.</xs:documentation>
            </xs:annotation>
@@ -21984,7 +21984,7 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">Used to express the reason for or classification of the abstract.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="language" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="language" minOccurs="0" maxOccurs="1" type="code">
             <xs:annotation>
               <xs:documentation xml:lang="en">Used to express the specific language of the abstract.</xs:documentation>
            </xs:annotation>
@@ -22127,7 +22127,7 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">The date the article was last revised or updated in the database.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="language" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+          <xs:element name="language" minOccurs="0" maxOccurs="unbounded" type="code">
             <xs:annotation>
               <xs:documentation xml:lang="en">The language or languages in which this form of the article is published.</xs:documentation>
            </xs:annotation>
@@ -27293,6 +27293,11 @@ of the resource representation.</xs:documentation>
           <xs:element name="decision" minOccurs="0" maxOccurs="1" type="ConsentProvisionType">
             <xs:annotation>
               <xs:documentation xml:lang="en">Action to take - permit or deny - as default.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="provisionReference" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Alternate for the provision structure using the Permission resource.  Only one of Permission and .provision may be used in a resource.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="provision" type="Consent.Provision" minOccurs="0" maxOccurs="unbounded">
@@ -32974,6 +32979,11 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           <xs:documentation xml:lang="en">Active</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="limited">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Limited</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="suspended">
         <xs:annotation>
           <xs:documentation xml:lang="en">Suspended</xs:documentation>
@@ -34619,6 +34629,46 @@ See guidance around (not) making local changes to elements [here](canonicalresou
               <xs:documentation xml:lang="en">A grouping for ordinal or polychotomous variables.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="conditional" minOccurs="0" maxOccurs="1" type="Expression">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The context, situation, or parameters within which the variable is observed.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="classifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Classification of the variable.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="dataStorage" type="EvidenceVariable.DataStorage" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">How the data element is organized and where the data element (expressing the value of the variable) is found in the dataset.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="timing" minOccurs="0" maxOccurs="1" type="RelativeTime">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">When the variable is observed in relation to a reference point in time defined by context or event.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="period" minOccurs="0" maxOccurs="1" type="Period">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">When the variable is observed in relation to calendar dates and times.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="constraint" type="EvidenceVariable.Constraint" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Limit on acceptability of data used to express values of the variable.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="missingDataMeaning" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A method or transformation applied for missing data.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="unacceptableDataHandling" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A method or transformation applied for data that does not match required patterns.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -34644,6 +34694,98 @@ See guidance around (not) making local changes to elements [here](canonicalresou
             <xs:element name="valueRange" type="Range"/>
             <xs:element name="valueReference" type="Reference"/>
           </xs:choice>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="EvidenceVariable.DataStorage">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">The EvidenceVariable resource describes an element that knowledge (Evidence) is about.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="datatype" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The type of data used to express values of the variable.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="path" minOccurs="0" maxOccurs="1" type="string">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The mapping (order of elements) to reach the element containing the  data element in the dataset.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="EvidenceVariable.Constraint">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">The EvidenceVariable resource describes an element that knowledge (Evidence) is about.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="conditional" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">When this constraint applies.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="minimumQuantity" minOccurs="0" maxOccurs="1" type="Quantity">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The lowest permissible value of the variable, used with variables that have a number-based datatype (with or without units).</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="maximumQuantity" minOccurs="0" maxOccurs="1" type="Quantity">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The highest permissible value of the variable, used with variables that have a number-based datatype (with or without units).</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="earliestDateTime" minOccurs="0" maxOccurs="1" type="dateTime">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The earliest permissible value of the variable, used with variables that have a date/time-based datatype.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="latestDateTime" minOccurs="0" maxOccurs="1" type="dateTime">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The latest permissible value of the variable, used with variables that have a date/time-based datatype.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="minimumStringLength" minOccurs="0" maxOccurs="1" type="unsignedInt">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The lowest number of characters allowed for a value of the variable, used with variables that have a string-based datatype.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="maximumStringLength" minOccurs="0" maxOccurs="1" type="positiveInt">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The highest number of characters allowed for a value of the variable, used with variables that have a string-based datatype.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="code" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A rule, such as a format or other expectation, for the data values.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="expression" minOccurs="0" maxOccurs="1" type="Expression">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A rule, such as a format or other expectation, for the data values, expressed as an Expression.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="expectedValueSet" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">List of anticipated values used to express value of the variable, used with variables that have a codeable concept-based datatype.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="expectedUnitsValueSet" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">List of anticipated values used to express units for the value of the variable, used with variables that have a Quantity-based datatype.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="anyValueAllowed" minOccurs="0" maxOccurs="1" type="boolean">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Whether the value expressed for a variable is allowed to not be restricted to the expected value set.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -43189,12 +43331,12 @@ The origin at the TLHC of the TLHC pixel is 0.0\0.0, the BRHC of the TLHC pixel 
   </xs:complexType>
   <xs:element name="InsurancePlan" type="InsurancePlan">
     <xs:annotation>
-      <xs:documentation xml:lang="en">Details about an insurance plan.</xs:documentation>
+      <xs:documentation xml:lang="en">InsurancePlan describes the costs to the subscriber or beneficiary associated with benefits, as well as additional information about the offering, such as who administers the plan, a coverage area, contact information, etc.  The specific benefits covered by the plan are described in the `InsuranceProduct` referenced in `InsurancePlan.product`.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:complexType name="InsurancePlan">
     <xs:annotation>
-      <xs:documentation xml:lang="en">Details about an insurance plan.</xs:documentation>
+      <xs:documentation xml:lang="en">InsurancePlan describes the costs to the subscriber or beneficiary associated with benefits, as well as additional information about the offering, such as who administers the plan, a coverage area, contact information, etc.  The specific benefits covered by the plan are described in the `InsuranceProduct` referenced in `InsurancePlan.product`.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -43241,7 +43383,7 @@ The origin at the TLHC of the TLHC pixel is 0.0\0.0, the BRHC of the TLHC pixel 
   </xs:complexType>
   <xs:complexType name="InsurancePlan.GeneralCost">
     <xs:annotation>
-      <xs:documentation xml:lang="en">Details about an insurance plan.</xs:documentation>
+      <xs:documentation xml:lang="en">InsurancePlan describes the costs to the subscriber or beneficiary associated with benefits, as well as additional information about the offering, such as who administers the plan, a coverage area, contact information, etc.  The specific benefits covered by the plan are described in the `InsuranceProduct` referenced in `InsurancePlan.product`.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -43272,7 +43414,7 @@ The origin at the TLHC of the TLHC pixel is 0.0\0.0, the BRHC of the TLHC pixel 
   </xs:complexType>
   <xs:complexType name="InsurancePlan.SpecificCost">
     <xs:annotation>
-      <xs:documentation xml:lang="en">Details about an insurance plan.</xs:documentation>
+      <xs:documentation xml:lang="en">InsurancePlan describes the costs to the subscriber or beneficiary associated with benefits, as well as additional information about the offering, such as who administers the plan, a coverage area, contact information, etc.  The specific benefits covered by the plan are described in the `InsuranceProduct` referenced in `InsurancePlan.product`.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -43293,7 +43435,7 @@ The origin at the TLHC of the TLHC pixel is 0.0\0.0, the BRHC of the TLHC pixel 
   </xs:complexType>
   <xs:complexType name="InsurancePlan.Benefit">
     <xs:annotation>
-      <xs:documentation xml:lang="en">Details about an insurance plan.</xs:documentation>
+      <xs:documentation xml:lang="en">InsurancePlan describes the costs to the subscriber or beneficiary associated with benefits, as well as additional information about the offering, such as who administers the plan, a coverage area, contact information, etc.  The specific benefits covered by the plan are described in the `InsuranceProduct` referenced in `InsurancePlan.product`.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -43314,7 +43456,7 @@ The origin at the TLHC of the TLHC pixel is 0.0\0.0, the BRHC of the TLHC pixel 
   </xs:complexType>
   <xs:complexType name="InsurancePlan.Cost">
     <xs:annotation>
-      <xs:documentation xml:lang="en">Details about an insurance plan.</xs:documentation>
+      <xs:documentation xml:lang="en">InsurancePlan describes the costs to the subscriber or beneficiary associated with benefits, as well as additional information about the offering, such as who administers the plan, a coverage area, contact information, etc.  The specific benefits covered by the plan are described in the `InsuranceProduct` referenced in `InsurancePlan.product`.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -52927,7 +53069,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:choice minOccurs="0" maxOccurs="1" >
             <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates whether the patient is part of a multiple (boolean) or indicates the actual birth order (integer).  This count is relative to the total of live births and fetal losses.</xs:documentation>
+              <xs:documentation xml:lang="en">Indicates whether the patient is part of a multiple (boolean) or indicates the actual birth order (integer).  This count is relative to the total of live births and fetal losses, which MAY be tracked in the `patient-multipleBirthTotal` extension.The boolean option for this property can also be used to track that there are known to be multiple fetuses prior to birth.</xs:documentation>
             </xs:annotation>
             <xs:element name="multipleBirthBoolean" type="boolean"/>
             <xs:element name="multipleBirthInteger" type="integer"/>
@@ -55042,6 +55184,11 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           <xs:element name="organization" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The organization where this role is available.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="network" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The network in which the PractitionerRole provides the role's services (if defined) at the indicated locations (if defined).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="code" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
