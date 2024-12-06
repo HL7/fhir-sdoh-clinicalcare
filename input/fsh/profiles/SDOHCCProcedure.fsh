@@ -4,6 +4,18 @@ Id: SDOHCC-Procedure
 Title: "SDOHCC Procedure"
 Description: "Profile for interventions that address Social Determinants of Health."
 
+// SDOH CC
+* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.path = "url"
+* extension ^slicing.rules = #open
+* extension contains $resource-pertainsToGoal named pertainsToGoal 0..* MS
+* extension[pertainsToGoal] ^short = "Pertains to SDOH goal"
+* extension[pertainsToGoal] ^definition = "Indicates that the resource is related to either the measurement, achievement or progress towards the referenced goal.  For example, a Procedure to provide food vouchers pertainsToGoal of achieving food security."
+* extension[pertainsToGoal] ^requirements = "Indicates that the procedure is related to the referenced SDOHCC Goal."
+* extension[pertainsToGoal].value[x] only Reference(SDOHCCGoal)
+* extension[pertainsToGoal].value[x] MS
+* extension[pertainsToGoal].value[x] ^definition = "Value of extension must reference a Goal resource."
+* extension[pertainsToGoal].value[x] ^requirements = "Indicates that the procedure is related to the referenced SDOHCC Goal."
 
 // US Core 7.0.0
 //* basedOn only Reference($us-core-careplan or $us-core-servicerequest)
@@ -49,7 +61,7 @@ Description: "Profile for interventions that address Social Determinants of Heal
 
 // US Core 7.0.0
 * code 1.. MS
-//* code from $us-core-procedure-code (preferred)
+* code from USCoreProcedureCodes (required) // code from $us-core-procedure-code (preferred)
 * code ^binding.extension.extension[0].url = "purpose"
 * code ^binding.extension.extension[=].valueCode = #current
 * code ^binding.extension.extension[+].url = "valueSet"
@@ -62,6 +74,7 @@ Description: "Profile for interventions that address Social Determinants of Heal
 /*
 // SDOH CC
 * code from USCoreProcedureCodes (required)
+*/
 * code ^definition = "The specific procedure that is performed. Use text if the exact nature of the procedure cannot be coded."
 
 * insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, digital-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.235, extensible)
@@ -130,7 +143,7 @@ Description: "Profile for interventions that address Social Determinants of Heal
 * reasonReference[SupportedReasonReference] ^comment = "Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used.  Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure."
 * reasonReference[SupportedReasonReference] ^requirements = "When a procedure is justified by one or more SDOH conditions or observations, Procedure.reasonReference should reference instances that comply with the SDOHCC Condition profile, or one of the SDOHCC Observation profiles. However, references to other instance types are also possible."
 
-*/
+
 
 // US Core 7.0.0
 Invariant: us-core-7
