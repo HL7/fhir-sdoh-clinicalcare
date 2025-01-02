@@ -10,302 +10,319 @@ applyExtensionMetadataToRoot: false
 id: hl7.fhir.us.sdoh-clinicalcare
 name: Sdohclinicalcare
 dependencies:
-  hl7.fhir.us.core:
-    version: 7.0.0
-    uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
-    id: uscore
-    reason: |
-      Defines USCDI v4 EHR expectations on a range of resources that will be passed to and/or systems supporting the Social Determinants of Health Clinical Care Implementation Guide. The profiles of this guide directly inherit from this version.   \n
-  hl7.fhir.us.core.v610:
-    version: 6.1.0
-    uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
-    id: uscore6
-    reason: |
-      Defines USCDI v3 EHR expectations on a range of resources that will be passed to and/or systems supporting the Social Determinants of Health Clinical Care Implementation Guide. The profiles of this guide largely comply with the requirements of this version. Several constraints that were reduced in US Core 7 were not adopted. Profile pages provide additional compliance guidance. \n
-  hl7.fhir.us.core.v311:
-    version: 3.1.1
-    uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
-    id: uscore3
-    reason: |
-      Defines USCDI v1 EHR expectations on a range of resources that will be passed to and/or systems supporting the Social Determinants of Health Clinical Care Implementation Guide. The profiles of this guide comply with the requirements of this version. Profile pages provide additional compliance guidance. \n
-  hl7.fhir.uv.sdc:
-    version: 3.0.0
-    uri: "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc" 
-    id: sdc
-  hl7.fhir.uv.subscriptions-backport.r4:
-    version: 1.1.0
-    uri: "http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"
-    id: sdohsub
-  us.nlm.vsac:
-    uri: "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"
-    version: 0.19.0
-    id: vsac
-  hl7.fhir.us.davinci-hrex:
-#   uri: "http://hl7.org/fhir/us/davinci-hrex"
-    version: current
-    id: hrex
-#   reason: |
-#    Defines common conformance rules across all Da Vinci IGs, as well as additional constraints and profiles beyond U.S. Core
-  hl7.fhir.extensions.r5:
-    version: 4.0.1
+    hl7.fhir.us.core:
+        version: 7.0.0
+        uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
+        id: uscore
+        reason: |
+            Defines USCDI v4 EHR expectations on a range of resources that will be passed to and/or systems supporting the Social Determinants of Health Clinical Care Implementation Guide. The profiles of this guide directly inherit from this version.   \n
+    hl7.fhir.us.core.v610:
+        version: 6.1.0
+        uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
+        id: uscore6
+        reason: |
+            Defines USCDI v3 EHR expectations on a range of resources that will be passed to and/or systems supporting the Social Determinants of Health Clinical Care Implementation Guide. The profiles of this guide largely comply with the requirements of this version. Several constraints that were reduced in US Core 7 were not adopted. Profile pages provide additional compliance guidance. \n
+    hl7.fhir.us.core.v311:
+        version: 3.1.1
+        uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
+        id: uscore3
+        reason: |
+            Defines USCDI v1 EHR expectations on a range of resources that will be passed to and/or systems supporting the Social Determinants of Health Clinical Care Implementation Guide. The profiles of this guide comply with the requirements of this version. Profile pages provide additional compliance guidance. \n
+    hl7.fhir.uv.sdc:
+        version: 3.0.0
+        uri: "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+        id: sdc
+    hl7.fhir.uv.subscriptions-backport.r4:
+        version: 1.1.0
+        uri: "http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"
+        id: sdohsub
+    us.nlm.vsac:
+        uri: "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"
+        version: 0.19.0
+        id: vsac
+    hl7.fhir.us.davinci-hrex:
+        #   uri: "http://hl7.org/fhir/us/davinci-hrex"
+        version: current
+        id: hrex
+        #   reason: |
+        #    Defines common conformance rules across all Da Vinci IGs, as well as additional constraints and profiles beyond U.S. Core
+    hl7.fhir.extensions.r5:
+        version: 4.0.1
 parameters:
-  show-inherited-invariants: true
-  jira-code: sdoh-cc
-  path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
-
+    show-inherited-invariants: true
+    jira-code: sdoh-cc
+    path-expansion-params: '../../exp-params.json' #path is relative to [base]/fsh-generated/resources
+    
+    
 extension:
-  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  #<<< must include a http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension that identifies the workgroup responsible for the IG. This is the authoritative element.
-    valueCode: pc  # <<< The value must be the code for the workgroup
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg #<<< must include a http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension that identifies the workgroup responsible for the IG. This is the authoritative element.
+    valueCode: pc # <<< The value must be the code for the workgroup
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
-
+    
+    
 license: CC0-1.0
 publisher:
-  name: HL7 International / Patient Care
-  url: http://www.hl7.org/Special/committees/patientcare
-  email: patientcare@lists.hl7.org
+    name: HL7 International / Patient Care
+    url: http://www.hl7.org/Special/committees/patientcare
+    email: patientcare@lists.hl7.org
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
-description: This HL7 Implementation Guide (IG) defines how to exchange Social Determinants of Health (SDOH) content defined by the Gravity Project using the HL7 FHIR standard..
+description: This HL7 Implementation Guide (IG) defines how to exchange Social Determinants
+    of Health (SDOH) content defined by the Gravity Project using the HL7 FHIR standard..
 pages:
-  index.md:
-    title: IG Home
-  sdoh_challenges_gravity.md:
-    title: SDOH and the Gravity Project
-  sdoh_clinical_care_scope.md:
-    title: SDOH Clinical Care Background
-  technical_background.md:
-    title: Technical Background
-  glossary.md:
-    title: Glossary
-  credits.md:
-    title: Credits
-  assessment_instrument_support.md:
-    title: Assessment Instrument Support
-  referral_workflow.md:
-    title: Referral Workflow
-  checking_task_status.md:
-    title: Checking Task Status
-  connecting_applications_with_api_data_sources.md:
-    title: Connecting Applications with API Data Sources
-  gravity_terminology.md:
-    title: Gravity Project Value Sets
-  mustsupport_and_missing_data.md:
-    title: Must Support and Missing Data
-  privacy_and_security.md:
-    title: Privacy and Security
-  artifacts.html:
-    title: Artifacts Index
-  draft_specifications_for_personal_characteristics.md:
-    title: Draft Specifications for Personal Characteristics
-  downloads.md:
-    title: Downloads
-  stu2_ballot_changes.md:
-    title: STU2 Ballot Changes
-  stu2_publication_changes.md:
-    title: STU2 Publication Changes
-  stu2_1_update_changes.md:
-    title: STU2.1 Publication Changes
-  stu2_2_update_changes.md:
-    title: STU2.2 Publication Changes
-  ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.md:
-    title: SDOH Clinical Care ImplementationGuide Resource
-  # FHIR_API_Examples.md:
-  #   title: FHIR API Examples
-    
+    index.md:
+        title: IG Home
+    sdoh_challenges_gravity.md:
+        title: SDOH and the Gravity Project
+    sdoh_clinical_care_scope.md:
+        title: SDOH Clinical Care Background
+    technical_background.md:
+        title: Technical Background
+    glossary.md:
+        title: Glossary
+    credits.md:
+        title: Credits
+    assessment_instrument_support.md:
+        title: Assessment Instrument Support
+    referral_workflow.md:
+        title: Referral Workflow
+    checking_task_status.md:
+        title: Checking Task Status
+    connecting_applications_with_api_data_sources.md:
+        title: Connecting Applications with API Data Sources
+    gravity_terminology.md:
+        title: Gravity Project Value Sets
+    mustsupport_and_missing_data.md:
+        title: Must Support and Missing Data
+    privacy_and_security.md:
+        title: Privacy and Security
+    artifacts.html:
+        title: Artifacts Index
+    draft_specifications_for_personal_characteristics.md:
+        title: Draft Specifications for Personal Characteristics
+    downloads.md:
+        title: Downloads
+    stu2_ballot_changes.md:
+        title: STU2 Ballot Changes
+    stu2_publication_changes.md:
+        title: STU2 Publication Changes
+    stu2_1_update_changes.md:
+        title: STU2.1 Publication Changes
+    stu2_2_update_changes.md:
+        title: STU2.2 Publication Changes
+    ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.md:
+        title: SDOH Clinical Care ImplementationGuide Resource
+        # FHIR_API_Examples.md:
+        #   title: FHIR API Examples
+
+        
 groups:
-  CapabilityStatements:
-    name: Capability Statements
-    resources:
-      - SDOHCC-CoordinationPlatform
-      - SDOHCC-ReferralRecipientLight
-      - SDOHCC-ReferralRecipient
-      - SDOHCC-ReferralSource
-      - SDOHCC-PatientApp
-  Profiles:
-    name: Profiles
-    resources:
-      - SDOHCCCondition
-      - SDOHCCConsent
-      - SDOHCCGoal
-      - SDOHCCGroup
-      - SDOHCCHealthcareService
-      - SDOHCCLocation
-      - SDOHCCObservationAssessment
-      - SDOHCCObservationScreeningResponse
-      - SDOHCCProcedure
-      - SDOHCCServiceRequest
-      - SDOHCCTaskForPatient
-      - SDOHCCTaskForReferralManagement
-#  ProfilesUsCore610:
-#    name: Profiles - US Core 6.1.0
-#   resources:
-#      - SDOHCCConditionEncounterDiagnosis
-#      - SDOHCCConditionProblemsHealthConcerns
-#  ProfilesUsCore311:
-#    name: Profiles - US Core 3.1.1
-#    resources:
-#      - SDOHCCCondition
-  ValueSets:
-    name: Value Sets
-    resources:
-      #- SDOHCCValueSetLOINCSNOMEDCT
-      - SDOHCCValueSetObservationStatus
-      - SDOHCCValueSetSDOHCategory
-      - SDOHCCValueSetSDOHQuestionnaireCategory
-      - SDOHCCValueSetReferralTaskStatus
-      - SDOHCCValueSetTaskCode
-      - SDOHCCValueSetTaskPriority
-      - SDOHCCValueSetTaskStatus
-  CodeSystems:
-    name: Code Systems
-    resources:
-      - SDOHCCCodeSystemTemporaryCodes
-  Extensions:
-    name: Extensions
-    resources:
-      - SDOHCCExtensionHealthcareServiceTelecomAppointment
-  SearchParameters:
-    name: Search Parameters
-    resources:
-      - ServiceRequest-supporting-info
-      - Task-output-reference
-  Examples:
-    name: Examples
-    resources:
-    - pat-53234
-    - SDOHCC-ConditionUnemployedExample
-    - SDOHCC-ConsentInformationDisclosureExample
-    - SDOHCC-GoalFoodSecurityExample
-    - SDOHCC-GroupSDOHPatientsForPayerExample
-    - SDOHCC-HealthcareServiceTelecomAppointmentExample
-    - SDOHCC-LocationExample
-    #- SDOHCC-ObservationAssessmentSocialIsolationExample
-    - SDOHCC-ObservationAssessmentInadequateFoodIntakeExample
-    - SDOHCC-ObservationAssessmentTransportTooExpensiveExample
-    - SDOHCC-OrganizationClinicExample
-    - SDOHCC-OrganizationCoordinationPlatformExample
-    - SDOHCC-OrganizationPayerExample
-    - SDOHCC-PractitionerDrJanWaterExample
-    - SDOHCC-PractitionerRoleDrJanWaterExample
-    - SDOHCC-ProcedureFoodPantryApplicationAssistanceExample
-    - SDOHCC-ProcedureProvisionOfFoodExample
-    - SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample
-    - SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample
-    - SDOHCC-ServiceRequestSubreferralGardenProgramExample
-    - SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample
-    - SDOHCC-TaskPatientReviewInformationCompletedExample
-    - SDOHCC-TaskPatientInformationRequestCompletedExample  
-    - SDOHCC-TaskReferralManagementOrderFulfillmentAcceptedExample
-    - SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample
-    - SDOHCC-TaskReferralManagementOrderSubtaskAcceptedExample
-    - SDOHCC-TaskReferralManagementOrderSubtaskCompletedExample
-    - SDOHCC-TaskPatientMakeAppointmentCompletedExample
-    - SDOHCC-TaskPatientRiskQuestionnaireCompletedExample
-    - DocumentReferenceExample
-  PRAPARE:
-    name: PRAPARE Examples
-    description: For the PRAPARE assessment instrument, these are examples of a Questionnaire, a QuestionnaireResponse, and a StructureMap, as well as of Observations and a Condition derived from the QuestionnaireResponse using the StructureMap.
-    resources:
-    - SDOHCC-QuestionnairePRAPARE
-    - SDOHCC-QuestionnaireResponsePRAPAREExample
-    - StructureMap/SDOHCC-StructureMapPRAPARE
-    - SDOHCC-ObservationResponsePRAPAREChildCareNeedExample
-    - SDOHCC-ObservationResponsePRAPAREClothingNeedExample
-    - SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample
-    - SDOHCC-ObservationResponsePRAPAREHousingStatusExample
-    - SDOHCC-ConditionHomelessExample
-  HVS:
-    name: Hunger Vital Sign Examples
-    description: For the Hunger Vital Sign assessment instrument, these are examples of a Questionnaire, a QuestionnaireResponse, and a StructureMap, as well as of an Observation and Condition derived from the QuestionnaireResponse using the StructureMap.
-    resources:
-    - SDOHCC-QuestionnaireHungerVitalSign
-    - SDOHCC-QuestionnaireResponseHungerVitalSignExample
-    - StructureMap/SDOHCC-StructureMapHungerVitalSign    
-    - SDOHCC-ObservationResponseHungerVitalSignQuestion3Example
-    - SDOHCC-ConditionFoodInsecurityExample 
-    - SDOHCC-DeviceSoftwareExample       
-    - SDOHCC-ConditionAsserterDeviceExample
-  NHANES:
-    name: Social Connection and Isolation Panel (NHANES) Examples
-    description: For the NHANES assessment instrument, these are examples of Observations that were not created from a QuestionnaireResponse and, therefore, do not reference QuestionnaireResponse (via derivedFrom). Instead, the Observation grouping (via hasMember) links the NHANES assessment instrument to the Observations that resulted from it.
-    resources:
-    - SDOHCC-ObservationResponseNHANESGroupingExample
-    - SDOHCC-ObservationResponseNHANESQuestion1Example
-    - SDOHCC-ObservationResponseNHANESQuestion2Example
-    - SDOHCC-ObservationResponseNHANESQuestion3Example
-    - SDOHCC-ObservationResponseNHANESQuestion4Example
-    - SDOHCC-ObservationResponseNHANESQuestion5Example
-    - SDOHCC-ObservationResponseNHANESQuestion6Example
-  DraftArtifacts:
-    name: Draft Artifacts for Personal Characteristic Observations
-    resources:
-      - SDOHCCObservationEthnicityOMB
-      - SDOHCCObservationGenderIdentity
-      - SDOHCCObservationPersonalCharacteristic
-      - SDOHCCObservationPersonalPronouns
-      - SDOHCCObservationRaceOMB
-      - SDOHCCObservationRecordedSexGender
-      - SDOHCCObservationSexualOrientation
-      - SDOHCCExtensionConditionAsserter
-      - SDOHCCValueSetObservationDataAbsentReason
-      - SDOHCCValueSetObservationDerivedFromIdType
-      - SDOHCCValueSetObservationMethod
-      - SDOHCCValueSetOMBEthnicityCategories
-      - SDOHCCValueSetOMBRaceCategories
-      - SDOHCCValueSetPronounsValue
-  DraftArtifactsExamples:
-    name: Examples of Draft Artifacts for Personal Characteristic Observations
-    resources:
-    - SDOHCC-ObservationEthnicityOMBExample
-    - SDOHCC-ObservationGenderIdentityExample
-    - SDOHCC-ObservationPersonalPronounsExample
-    - SDOHCC-ObservationRaceOMBExample
-    - SDOHCC-ObservationRaceOMBMotherExample
-    - SDOHCC-ObservationRaceOMBPractitionerExample
-    - SDOHCC-ObservationRecordedSexGenderExample
-    - SDOHCC-ObservationSexualOrientationExample
-    - SDOHCC-RelatedPersonMotherExample
-  Parameters:
-    name: Terminology Parameters 
-    resources: 
-    - terminology-settings
-
+    CapabilityStatements:
+        name: Capability Statements
+        resources:
+          - SDOHCC-CoordinationPlatform
+          - SDOHCC-ReferralRecipientLight
+          - SDOHCC-ReferralRecipient
+          - SDOHCC-ReferralSource
+          - SDOHCC-PatientApp
+    Profiles:
+        name: Profiles
+        resources:
+          - SDOHCCCondition
+          - SDOHCCConsent
+          - SDOHCCGoal
+          - SDOHCCGroup
+          - SDOHCCHealthcareService
+          - SDOHCCLocation
+          - SDOHCCObservationAssessment
+          - SDOHCCObservationScreeningResponse
+          - SDOHCCPractitionerRole
+          - SDOHCCProcedure
+          - SDOHCCServiceRequest
+          - SDOHCCTaskForPatient
+          - SDOHCCTaskForReferralManagement
+        #  ProfilesUsCore610:
+        #    name: Profiles - US Core 6.1.0
+        #   resources:
+        #      - SDOHCCConditionEncounterDiagnosis
+        #      - SDOHCCConditionProblemsHealthConcerns
+        #  ProfilesUsCore311:
+        #    name: Profiles - US Core 3.1.1
+        #    resources:
+        #      - SDOHCCCondition
+    ValueSets:
+        name: Value Sets
+        resources:
+            #- SDOHCCValueSetLOINCSNOMEDCT
+              - SDOHCCValueSetObservationStatus
+              - SDOHCCValueSetSDOHCategory
+              - SDOHCCValueSetSDOHQuestionnaireCategory
+              - SDOHCCValueSetReferralTaskStatus
+              - SDOHCCValueSetTaskCode
+              - SDOHCCValueSetTaskPriority
+              - SDOHCCValueSetTaskStatus
+    CodeSystems:
+        name: Code Systems
+        resources:
+          - SDOHCCCodeSystemTemporaryCodes
+    Extensions:
+        name: Extensions
+        resources:
+          - SDOHCCExtensionHealthcareServiceTelecomAppointment
+    SearchParameters:
+        name: Search Parameters
+        resources:
+          - ServiceRequest-supporting-info
+          - Task-output-reference
+    Examples:
+        name: Examples
+        resources:
+          - pat-53234
+          - SDOHCC-ConditionUnemployedExample
+          - SDOHCC-ConsentInformationDisclosureExample
+          - SDOHCC-GoalFoodSecurityExample
+          - SDOHCC-GroupSDOHPatientsForPayerExample
+          - SDOHCC-HealthcareServiceTelecomAppointmentExample
+          - SDOHCC-LocationExample
+          - #- SDOHCC-ObservationAssessmentSocialIsolationExample
+            SDOHCC-ObservationAssessmentInadequateFoodIntakeExample
+          - SDOHCC-ObservationAssessmentTransportTooExpensiveExample
+          - SDOHCC-OrganizationClinicExample
+          - SDOHCC-OrganizationCoordinationPlatformExample
+          - SDOHCC-OrganizationPayerExample
+          - SDOHCC-PractitionerDrJanWaterExample
+          - SDOHCC-PractitionerRoleDrJanWaterExample
+          - SDOHCC-ProcedureFoodPantryApplicationAssistanceExample
+          - SDOHCC-ProcedureProvisionOfFoodExample
+          - SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample
+          - SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample
+          - SDOHCC-ServiceRequestSubreferralGardenProgramExample
+          - SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample
+          - SDOHCC-TaskPatientReviewInformationCompletedExample
+          - SDOHCC-TaskPatientInformationRequestCompletedExample
+          - SDOHCC-TaskReferralManagementOrderFulfillmentAcceptedExample
+          - SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample
+          - SDOHCC-TaskReferralManagementOrderSubtaskAcceptedExample
+          - SDOHCC-TaskReferralManagementOrderSubtaskCompletedExample
+          - SDOHCC-TaskPatientMakeAppointmentCompletedExample
+          - SDOHCC-TaskPatientRiskQuestionnaireCompletedExample
+          - DocumentReferenceExample
+    PRAPARE:
+        name: PRAPARE Examples
+        description: For the PRAPARE assessment instrument, these are examples of
+            a Questionnaire, a QuestionnaireResponse, and a StructureMap, as well
+            as of Observations and a Condition derived from the QuestionnaireResponse
+            using the StructureMap.
+        resources:
+          - SDOHCC-QuestionnairePRAPARE
+          - SDOHCC-QuestionnaireResponsePRAPAREExample
+          - StructureMap/SDOHCC-StructureMapPRAPARE
+          - SDOHCC-ObservationResponsePRAPAREChildCareNeedExample
+          - SDOHCC-ObservationResponsePRAPAREClothingNeedExample
+          - SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample
+          - SDOHCC-ObservationResponsePRAPAREHousingStatusExample
+          - SDOHCC-ConditionHomelessExample
+    HVS:
+        name: Hunger Vital Sign Examples
+        description: For the Hunger Vital Sign assessment instrument, these are examples
+            of a Questionnaire, a QuestionnaireResponse, and a StructureMap, as well
+            as of an Observation and Condition derived from the QuestionnaireResponse
+            using the StructureMap.
+        resources:
+          - SDOHCC-QuestionnaireHungerVitalSign
+          - SDOHCC-QuestionnaireResponseHungerVitalSignExample
+          - StructureMap/SDOHCC-StructureMapHungerVitalSign
+          - SDOHCC-ObservationResponseHungerVitalSignQuestion3Example
+          - SDOHCC-ConditionFoodInsecurityExample
+          - SDOHCC-DeviceSoftwareExample
+          - SDOHCC-ConditionAsserterDeviceExample
+    NHANES:
+        name: Social Connection and Isolation Panel (NHANES) Examples
+        description: For the NHANES assessment instrument, these are examples of Observations
+            that were not created from a QuestionnaireResponse and, therefore, do
+            not reference QuestionnaireResponse (via derivedFrom). Instead, the Observation
+            grouping (via hasMember) links the NHANES assessment instrument to the
+            Observations that resulted from it.
+        resources:
+          - SDOHCC-ObservationResponseNHANESGroupingExample
+          - SDOHCC-ObservationResponseNHANESQuestion1Example
+          - SDOHCC-ObservationResponseNHANESQuestion2Example
+          - SDOHCC-ObservationResponseNHANESQuestion3Example
+          - SDOHCC-ObservationResponseNHANESQuestion4Example
+          - SDOHCC-ObservationResponseNHANESQuestion5Example
+          - SDOHCC-ObservationResponseNHANESQuestion6Example
+    DraftArtifacts:
+        name: Draft Artifacts for Personal Characteristic Observations
+        resources:
+          - SDOHCCObservationEthnicityOMB
+          - SDOHCCObservationGenderIdentity
+          - SDOHCCObservationPersonalCharacteristic
+          - SDOHCCObservationPersonalPronouns
+          - SDOHCCObservationRaceOMB
+          - SDOHCCObservationRecordedSexGender
+          - SDOHCCObservationSexualOrientation
+          - SDOHCCExtensionConditionAsserter
+          - SDOHCCValueSetObservationDataAbsentReason
+          - SDOHCCValueSetObservationDerivedFromIdType
+          - SDOHCCValueSetObservationMethod
+          - SDOHCCValueSetOMBEthnicityCategories
+          - SDOHCCValueSetOMBRaceCategories
+          - SDOHCCValueSetPronounsValue
+    DraftArtifactsExamples:
+        name: Examples of Draft Artifacts for Personal Characteristic Observations
+        resources:
+          - SDOHCC-ObservationEthnicityOMBExample
+          - SDOHCC-ObservationGenderIdentityExample
+          - SDOHCC-ObservationPersonalPronounsExample
+          - SDOHCC-ObservationRaceOMBExample
+          - SDOHCC-ObservationRaceOMBMotherExample
+          - SDOHCC-ObservationRaceOMBPractitionerExample
+          - SDOHCC-ObservationRecordedSexGenderExample
+          - SDOHCC-ObservationSexualOrientationExample
+          - SDOHCC-RelatedPersonMotherExample
+    Parameters:
+        name: Terminology Parameters
+        resources:
+          - terminology-settings
+        
+        
 menu:
-  Home: index.html
-  Table of Contents:  toc.html
-  Background:
-    SDOH Data Interoperability: sdoh_challenges_gravity.html
-    SDOH Clinical Care Background: sdoh_clinical_care_scope.html
-    Technical Background : technical_background.html
-    Glossary: glossary.html
-    Credits: credits.html
-  Implementation Guidance:
-    Assessment Instrument Support: assessment_instrument_support.html
-    Referral Workflow:  referral_workflow.html
-    Checking Task Status: checking_task_status.html
-    Connecting Applications With API Data Sources: connecting_applications_with_api_data_sources.html
-    Gravity Project Value Sets: gravity_terminology.html
-  FHIR Artifacts and Examples:
-    Capability Statements: artifacts.html#capability-statements
-    Profiles: artifacts.html#profiles
-    Value Sets: artifacts.html#value-sets
-    Code Systems: artifacts.html#code-systems
-    Examples: artifacts.html#examples
-    Complete Listing: artifacts.html
-    # FHIR API Examples: FHIR_API_Examples.html
-  Specifications:
-    Privacy and Security: privacy_and_security.html
-    Must Support and Missing Data: mustsupport_and_missing_data.html
-    Draft Specifications for Personal Characteristics:   draft_specifications_for_personal_characteristics.html
-  Support:
-    Project Home: https://confluence.hl7.org/display/GRAV
-    Help & Discussions: https://chat.fhir.org/#narrow/stream/233957-Gravity-sdoh-cc
-    Downloads: downloads.html
-    US Core Spec: "{{site.data.fhir.ver.uscore}}"
-    FHIR R4 Spec: "{{site.data.fhir.path}}"
-  Change History:
-    STU2 Ballot Changes:  stu2_ballot_changes.html
-    STU2 Publication Changes:  stu2_publication_changes.html
-    STU2.1 Update Changes: stu2_1_update_changes.html
-    STU2.2 Update Changes: stu2_2_update_changes.html
-
+    Home: index.html
+    Table of Contents: toc.html
+    Background:
+        SDOH Data Interoperability: sdoh_challenges_gravity.html
+        SDOH Clinical Care Background: sdoh_clinical_care_scope.html
+        Technical Background: technical_background.html
+        Glossary: glossary.html
+        Credits: credits.html
+    Implementation Guidance:
+        Assessment Instrument Support: assessment_instrument_support.html
+        Referral Workflow: referral_workflow.html
+        Checking Task Status: checking_task_status.html
+        Connecting Applications With API Data Sources: connecting_applications_with_api_data_sources.html
+        Gravity Project Value Sets: gravity_terminology.html
+    FHIR Artifacts and Examples:
+        Capability Statements: artifacts.html#capability-statements
+        Profiles: artifacts.html#profiles
+        Value Sets: artifacts.html#value-sets
+        Code Systems: artifacts.html#code-systems
+        Examples: artifacts.html#examples
+        Complete Listing: artifacts.html
+        # FHIR API Examples: FHIR_API_Examples.html
+    Specifications:
+        Privacy and Security: privacy_and_security.html
+        Must Support and Missing Data: mustsupport_and_missing_data.html
+        Draft Specifications for Personal Characteristics: draft_specifications_for_personal_characteristics.html
+    Support:
+        Project Home: https://confluence.hl7.org/display/GRAV
+        Help & Discussions: https://chat.fhir.org/#narrow/stream/233957-Gravity-sdoh-cc
+        Downloads: downloads.html
+        US Core Spec: "{{site.data.fhir.ver.uscore}}"
+        FHIR R4 Spec: "{{site.data.fhir.path}}"
+    Change History:
+        STU2 Ballot Changes: stu2_ballot_changes.html
+        STU2 Publication Changes: stu2_publication_changes.html
+        STU2.1 Update Changes: stu2_1_update_changes.html
+        STU2.2 Update Changes: stu2_2_update_changes.html
+        
+        

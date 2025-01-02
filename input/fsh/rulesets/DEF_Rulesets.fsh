@@ -20,3 +20,11 @@ RuleSet: AdditionalBinding(profile, elementPath, usagePath, usageCategory, value
 * {elementPath} ^binding.extension[=].extension[=].valueUsageContext.code.code = #{usagePath}
 * {elementPath} ^binding.extension[=].extension[=].valueUsageContext.valueCodeableConcept = SDOHCCCodeSystemTemporaryCodes#{usageCategory} // This is not official display. Need to support display? "{profile} {usageCategory} ValueSet"
 * {elementPath} ^binding.extension[=].extension[=].valueUsageContext.valueCodeableConcept.text = "{usageCategory}"
+
+RuleSet: AdditionalBindingPractitionerRole(elementPath, binding, valueSet)
+//* obeys hrex-pr-1
+* {elementPath} ^binding.extension[+].url = $additional-binding
+* {elementPath} ^binding.extension[=].extension[0].url = "purpose"
+* {elementPath} ^binding.extension[=].extension[=].valueCode = #{binding}
+* {elementPath} ^binding.extension[=].extension[+].url = "valueSet"
+* {elementPath} ^binding.extension[=].extension[=].valueCanonical = {valueSet}

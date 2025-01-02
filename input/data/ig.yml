@@ -108,6 +108,7 @@ groups:
       - SDOHCCLocation
       - SDOHCCObservationAssessment
       - SDOHCCObservationScreeningResponse
+      - SDOHCCPractitionerRole
       - SDOHCCProcedure
       - SDOHCCServiceRequest
       - SDOHCCTaskForPatient
