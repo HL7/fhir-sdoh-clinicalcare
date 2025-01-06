@@ -64,7 +64,7 @@ Description: "Profile for service requests that address Social Determinants of H
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, inadequate-housing, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.53, extensible)
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, incarceration-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.261, extensible)
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, intimate-partner-violence, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.98, extensible)
-* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, language-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.269, extensible)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, language-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.269, extensible)
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, material-hardship, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.38, extensible)
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, medical-cost-burden, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.123, extensible)
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, personal-health-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.119, extensible)
