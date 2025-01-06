@@ -134,12 +134,6 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * insert AdditionalBinding(SDOHCCCondition, code, Condition.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code, required)
 
 
-
-2.16.840.1.113762.1.4.1247.258
-
-
-
-
 * bodySite ..0
 
 * subject MS
