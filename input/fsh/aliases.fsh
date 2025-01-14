@@ -39,3 +39,4 @@ Alias: $WG-extension = http://hl7.org/fhir/StructureDefinition/structuredefiniti
 Alias: $add-binding = http://hl7.org/fhir/tools/StructureDefinition/additional-binding
 Alias: $additional-binding = http://hl7.org/fhir/tools/StructureDefinition/additional-binding
 Alias: $compliesWithProfile = http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile
+Alias: $ScreeningAssessmentObservationCategory = http://hl7.org/fhir/us/core/CodeSystem/us-core-category

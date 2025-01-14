@@ -117,7 +117,7 @@ groups:
     name: Value Sets
     description: Value Sets
     resources:
-      #- SDOHCCValueSetLOINCSNOMEDCT
+      - SDOHCCValueSetLOINCSNOMEDCT
       - SDOHCCValueSetObservationDataAbsentReason
       - SDOHCCValueSetObservationDerivedFromIdType
       - SDOHCCValueSetObservationMethod

@@ -17,13 +17,13 @@ Description: "Profile for Social Determinants of Health (SDOH) observations that
 * category ^slicing.rules = #open
 * category contains
     // us-core 0..* MS and
-    SocialHistory 1..1 MS and
+    // SocialHistory 1..1 MS and
     SDOH 0..* MS
 // * category[us-core] from USCoreSimpleObservationCategory (required)
 // * category[us-core] ^min = 0
-// * category[us-core] ^binding.description = "Note that other codes are permitted"
-* category[SocialHistory] = $observation-category#social-history
-* category[SocialHistory] ^requirements = "Used for filtering that this is a social history observation."
+* category[us-core] = $ScreeningAssessmentObservationCategory#sdoh
+// * category[SocialHistory] = $observation-category#social-history
+// * category[SocialHistory] ^requirements = "Used for filtering that this is a social history observation."
 * category[SDOH] from SDOHCCValueSetSDOHCategory (required)
 * category[SDOH] ^short = "e.g., food-insecurity | transportation-insecurity"
 * category[SDOH] ^definition = "An SDOH category assigned to the observation."

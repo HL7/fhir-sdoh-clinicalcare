@@ -153,7 +153,7 @@ groups:
     ValueSets:
         name: Value Sets
         resources:
-            #- SDOHCCValueSetLOINCSNOMEDCT
+              - SDOHCCValueSetLOINCSNOMEDCT
               - SDOHCCValueSetObservationStatus
               - SDOHCCValueSetSDOHCategory
               - SDOHCCValueSetSDOHQuestionnaireCategory
