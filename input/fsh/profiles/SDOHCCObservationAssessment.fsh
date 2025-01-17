@@ -30,7 +30,7 @@ Description: "Profile for Social Determinants of Health (SDOH) observations that
 * category[SDOH] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to an observation. It is recommended that SDOH category codes be used to facilitate searching for SDOH observations."
 * category[SDOH] ^binding.description = "Codes for high-level SDOH categories."
 * code MS
-* code from USCoreSurveyCodes (preferred)
+* code from SDOHCCValueSetLOINCSNOMEDCT (preferred)
 * code ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\nAs the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set binding strength may change and may be refined to codes (including LOINC and SNOMED) that pertain to SDOH categories."
 * subject 1.. MS
 * subject only Reference(USCorePatientProfile or Group)
