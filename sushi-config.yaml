@@ -36,18 +36,23 @@ dependencies:
         version: 1.1.0
         uri: "http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"
         id: sdohsub
+    
+    hl7.terminology.r4:
+        version: 6.1.0
+        
     us.nlm.vsac:
         uri: "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"
-        version: 0.19.0
+        version: 0.21.0
         id: vsac
     hl7.fhir.us.davinci-hrex:
         #   uri: "http://hl7.org/fhir/us/davinci-hrex"
-        version: current
+        version: 1.1.0
         id: hrex
         #   reason: |
         #    Defines common conformance rules across all Da Vinci IGs, as well as additional constraints and profiles beyond U.S. Core
     hl7.fhir.extensions.r5:
-        version: 4.0.1
+        version: 5.1.0
+
 parameters:
     show-inherited-invariants: true
     jira-code: sdoh-cc
