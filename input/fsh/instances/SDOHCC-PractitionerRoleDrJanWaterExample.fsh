@@ -1,5 +1,5 @@
 Instance: SDOHCC-PractitionerRoleDrJanWaterExample
-InstanceOf: USCorePractitionerRoleProfile
+InstanceOf: SDOHCCPractitionerRole
 Title: "SDOHCC Practitioner Role Dr Jan Water Example"
 Description: "An example of a family medicine physician PractitionerRole. This example is used as the referenced practitioner role in other IG examples."
 Usage: #example

@@ -31,3 +31,5 @@ Description: "Codes that represent Social Determinants of Health (SDOH) domains.
 * SDOHCCCodeSystemTemporaryCodes#digital-literacy "Digital Literacy"
 * SDOHCCCodeSystemTemporaryCodes#digital-access "Digital Access"
 * SDOHCCCodeSystemTemporaryCodes#utility-insecurity "Utility Insecurity"
+* SDOHCCCodeSystemTemporaryCodes#incarceration-status "Incarceration Status"
+* SDOHCCCodeSystemTemporaryCodes#language-access "Language Access"
