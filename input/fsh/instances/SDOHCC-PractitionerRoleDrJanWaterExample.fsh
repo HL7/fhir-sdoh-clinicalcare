@@ -8,7 +8,8 @@ Usage: #example
 * active = true
 * practitioner = Reference(SDOHCC-PractitionerDrJanWaterExample) "Dr Jan Water"
 * organization = Reference(SDOHCC-OrganizationClinicExample) "Better Health Clinic"
-* code = $provider-taxonomy#207Q00000X "Family Medicine Physician"
+* code[0] = $provider-taxonomy#207Q00000X "Family Medicine Physician"
+* code[+] = $sct#62247001 "Family medicine specialist (occupation)"
 * telecom[0].system = #phone
 * telecom[=].value = "639 442 6719"
 * telecom[=].use = #work
