@@ -147,7 +147,7 @@ Description: "Profile for observations that represent question and answer pairs 
 * derivedFrom ^extension.url = "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement"
 * derivedFrom ^extension.valueBoolean = true
 * derivedFrom ^short = "ADDITIONAL USCDI: Related Observation(s) or other resource the observation is made from"
-* derivedFrom[SupportedDerivedFrom] only Reference(SDOHCCObservationScreeningResponse or USCoreQuestionnaireResponseProfile)
+* derivedFrom[SupportedDerivedFrom] only Reference(SDOHCCObservationScreeningResponse)
 * derivedFrom[SupportedDerivedFrom] ^short = "Related questionnaire responses or observations that the observation is made from"
 * derivedFrom[SupportedDerivedFrom] ^definition =  "The types of 'derivedFrom' resources that must be supported by implementations conforming to this IG"
 * derivedFrom[SupportedDerivedFrom] ^requirements = "Allows traceability (and context) for Observations derived from a QuestionnaireResponse and also establishes links for observations that were calculated or inferred based on other Observations (e.g. for calculated scores)."
