@@ -35,9 +35,8 @@ Description: "Profile for service requests that address Social Determinants of H
 * category ^slicing.rules = #open
 * category ^definition = "A code that classifies the service for searching, sorting and display purposes (e.g., Education)."
 //* category contains us-core 0..* MS
-//* category[us-core] from USCoreServiceRequestCategoryCodes (required)
 //* category[us-core] ^binding.description = "Note that other codes are permitted"
-* category contains SDOH 0..* MS
+* category contains SDOH 1..* MS
 * category[SDOH] from SDOHCCValueSetSDOHCategory (required)
 * category[SDOH] ^short = "e.g., food-insecurity | transportation-insecurity"
 * category[SDOH] ^definition = "An SDOH category assigned to the requested service."

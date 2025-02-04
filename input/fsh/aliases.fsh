@@ -40,3 +40,4 @@ Alias: $add-binding = http://hl7.org/fhir/tools/StructureDefinition/additional-b
 Alias: $additional-binding = http://hl7.org/fhir/tools/StructureDefinition/additional-binding
 Alias: $compliesWithProfile = http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile
 Alias: $ScreeningAssessmentObservationCategory = http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+Alias: $ScreeningAssessmentConditionCategory = http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-condition-category

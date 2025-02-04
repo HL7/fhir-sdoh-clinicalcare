@@ -16,11 +16,12 @@ Description: "Profile for Social Determinants of Health (SDOH) observations that
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category contains
-    // us-core 0..* MS and
+    // us-core 1..1 MS and
     // SocialHistory 1..1 MS and
     SDOH 0..* MS
 // * category[us-core] from USCoreSimpleObservationCategory (required)
 // * category[us-core] ^min = 0
+* category[us-core] 1..1 MS
 * category[us-core] = $ScreeningAssessmentObservationCategory#sdoh
 // * category[SocialHistory] = $observation-category#social-history
 // * category[SocialHistory] ^requirements = "Used for filtering that this is a social history observation."
