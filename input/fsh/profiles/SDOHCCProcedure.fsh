@@ -34,7 +34,10 @@ Description: "Profile for interventions that address Social Determinants of Heal
 * basedOn[SupportedBasedOn] ^short = "An SDOH service request or US Core Care Plan for this procedure"
 * basedOn[SupportedBasedOn] ^definition = "A reference to an SDOHCC service request or US Core Care Plan that contains details of the request for this procedure."
 * basedOn[SupportedBasedOn] ^requirements = "When a procedure is based on an SDOH ServiceRequest, Procedure.basedOn should reference instances that comply with the SDOHCC ServiceRequest profile and when a procedure is based on a SDOH Care Plan, Procedure.basedOn should reference instances that comply with the US Core Care Plan profile. However, references to other instance types are also possible."
-
+* basedOn[SupportedBasedOn] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* basedOn[SupportedBasedOn] ^type[=].targetProfile[=].extension.valueBoolean = true
+* basedOn[SupportedBasedOn] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* basedOn[SupportedBasedOn] ^type[=].targetProfile[=].extension.valueBoolean = false
 
 
 
@@ -144,7 +147,12 @@ Description: "Profile for interventions that address Social Determinants of Heal
 * reasonReference[SupportedReasonReference] only Reference(SDOHCCCondition or SDOHCCObservationScreeningResponse or SDOHCCObservationAssessment)
 * reasonReference[SupportedReasonReference] ^comment = "Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used.  Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure."
 * reasonReference[SupportedReasonReference] ^requirements = "When a procedure is justified by one or more SDOH conditions or observations, Procedure.reasonReference should reference instances that comply with the SDOHCC Condition profile, or one of the SDOHCC Observation profiles. However, references to other instance types are also possible."
-
+* reasonReference[SupportedReasonReference] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
+* reasonReference[SupportedReasonReference] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
+* reasonReference[SupportedReasonReference] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
 
 
 // US Core 7.0.0

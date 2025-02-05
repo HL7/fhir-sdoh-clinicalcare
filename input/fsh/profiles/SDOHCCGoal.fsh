@@ -63,6 +63,12 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * addresses contains SupportedAddresses 0..* MS
 * addresses[SupportedAddresses] only Reference(SDOHCCCondition or SDOHCCObservationScreeningResponse or SDOHCCObservationAssessment)
 * addresses[SupportedAddresses] ^requirements = "When a goal addresses SDOH screening response observations generated from a survey/questionnaire, SDOH assessment observations, or SDOH conditions, Goal.addresses should reference instances that comply with the SDOHCC Observation Screening Response, SDOHCC Condition, or SDOHCC Observation Assessment profiles. However, references to other instance types are also possible."
+* addresses[SupportedAddresses] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* addresses[SupportedAddresses] ^type[=].targetProfile[=].extension.valueBoolean = true
+* addresses[SupportedAddresses] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* addresses[SupportedAddresses] ^type[=].targetProfile[=].extension.valueBoolean = true
+* addresses[SupportedAddresses] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* addresses[SupportedAddresses] ^type[=].targetProfile[=].extension.valueBoolean = true
 * outcomeCode from USCoreGoalCodes (preferred)
 * outcomeCode ^comment = "Note that this should not duplicate the goal status.\r\n\r\nInformation represented by Goal.outcomeCode may overlap significantly with information represented by Goal.outcomeReference. Multiple approaches to representing the same information may negatively impact interoperability. Therefore, where there is significant overlap in information provided by Goal.outcomeCode and Goal.outcomeReference, it is recommended that Goal.outcomeReference should be used to provide details of goal outcomes.\r\n\r"
 * outcomeCode ^binding.description = "The result of the goal; e.g., \"Food security\", \"Has access to a car \"."
@@ -73,3 +79,7 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * outcomeReference contains SupportedOutcomeReference 0..* MS
 * outcomeReference[SupportedOutcomeReference] only Reference(SDOHCCObservationScreeningResponse or SDOHCCObservationAssessment)
 * outcomeReference[SupportedOutcomeReference] ^requirements = "When a goal outcome can be represented by SDOH screening response observations or SDOH assessment observations, Goal.outcome should reference instances that comply with the SDOHCC Observation Screening Response or SDOHCC Observation Assessment profiles. However, references to other instance types are also possible."
+* outcomeReference[SupportedOutcomeReference] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* outcomeReference[SupportedOutcomeReference] ^type[=].targetProfile[=].extension.valueBoolean = true
+* outcomeReference[SupportedOutcomeReference] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* outcomeReference[SupportedOutcomeReference] ^type[=].targetProfile[=].extension.valueBoolean = true

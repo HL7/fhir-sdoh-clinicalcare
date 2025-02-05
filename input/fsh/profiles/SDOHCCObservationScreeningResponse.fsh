@@ -152,6 +152,9 @@ Description: "Profile for observations that represent question and answer pairs 
 * derivedFrom[SupportedDerivedFrom] ^definition =  "The types of 'derivedFrom' resources that must be supported by implementations conforming to this IG"
 * derivedFrom[SupportedDerivedFrom] ^requirements = "Allows traceability (and context) for Observations derived from a QuestionnaireResponse and also establishes links for observations that were calculated or inferred based on other Observations (e.g. for calculated scores)."
 * derivedFrom[SupportedDerivedFrom] ^comment = "Additional derivation targets (as supported by the underlying Observation resource) are allowed, but there is no expectation that implementers of this IG will pay attention to them."
+* derivedFrom[SupportedDerivedFrom] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* derivedFrom[SupportedDerivedFrom] ^type[=].targetProfile[=].extension.valueBoolean = true
+
 * insert SliceReferenceOnProfile(hasMember)
 * hasMember only Reference(USCoreObservationScreeningAssessmentProfile or QuestionnaireResponse or MolecularSequence)
 * hasMember contains SupportedHasMember 0..* MS
@@ -163,6 +166,8 @@ Description: "Profile for observations that represent question and answer pairs 
 * hasMember[SupportedHasMember] ^definition = "This is the set of child observations that are expected to be supported by SDOH implementations."
 * hasMember[SupportedHasMember] ^requirements = "Provides context to the child observations of \"in what instrument/panel was this information collected\", which is critical in situations where the child observations do not have derivedFrom relationships to a QuestionnaireResponse."
 * hasMember[SupportedHasMember] ^comment = "Other types of observations or resources can still be sent, but SDOH systems aren't required to pay attention to them."
+* hasMember[SupportedHasMember] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* hasMember[SupportedHasMember] ^type[=].targetProfile[=].extension.valueBoolean = true
 
 // Invariant: us-core-2
 // Description: "If there is no component or hasMember element then either a value[x] or a data absent reason must be present"

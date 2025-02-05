@@ -13,6 +13,10 @@ Description: "Profile for SDOH-related tasks to be carried out by the patient or
 * partOf ^slicing.rules = #open
 * partOf contains SupportedPartOf 0..* MS
 * partOf[SupportedPartOf] only Reference(SDOHCCTaskForReferralManagement or SDOHCCTaskForPatient)
+* partOf[SupportedPartOf] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* partOf[SupportedPartOf] ^type[=].targetProfile[=].extension.valueBoolean = true
+
+
 * status MS
 * status from SDOHCCValueSetTaskStatus (required)
 * status ^comment = "For further details on Task.status see [Checking Task Status](checking_task_status.html)."

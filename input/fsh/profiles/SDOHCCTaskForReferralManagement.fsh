@@ -14,6 +14,9 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * partOf contains SupportedPartOf 0..* MS
 * partOf[SupportedPartOf] only Reference(SDOHCCTaskForReferralManagement)
 * partOf[SupportedPartOf] ^requirements = "Allows an organization (e.g., a Coordination Platform) to create a Task, based on an SDOHCC Task from a referral source, to pass on to another organization (e.g., a  Community Based Organization)."
+* partOf[SupportedPartOf] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* partOf[SupportedPartOf] ^type[=].targetProfile[=].extension.valueBoolean = true
+
 * status MS
 * status ^comment = "Note that FHIR strings SHALL NOT exceed 1MB in size. For further details on Task.status see [Checking Task Status](checking_task_status.html)."
 * statusReason MS

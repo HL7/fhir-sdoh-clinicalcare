@@ -212,8 +212,14 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * evidence.detail[SupportedDetail] ^definition = "Links to other relevant information."
 //* evidence.detail[SupportedDetail] ^requirements = "When a condition is based on one or more SDOH observations that were generated from questionnaire responses, Condition.evidence.detail should reference instances that comply with the SDOHCC Screening Response Observation. However, references to other instance types are also possible."
 * evidence.detail[SupportedDetail] ^requirements = "When a condition is based on one or more SDOH observations that were generated from questionnaire responses, Condition.evidence.detail should reference instances that comply with the SDOHCC Observation Screening Response or SDC Questionnaire Response. However, references to other instance types are also possible."
-
-
+* evidence.detail[SupportedDetail] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* evidence.detail[SupportedDetail] ^type[=].targetProfile[=].extension.valueBoolean = true
+* evidence.detail[SupportedDetail] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* evidence.detail[SupportedDetail] ^type[=].targetProfile[=].extension.valueBoolean = true
+* evidence.detail[SupportedDetail] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* evidence.detail[SupportedDetail] ^type[=].targetProfile[=].extension.valueBoolean = true
+* evidence.detail[SupportedDetail] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* evidence.detail[SupportedDetail] ^type[=].targetProfile[=].extension.valueBoolean = true
 
 // US Core 7.0.0
 * recordedDate MS

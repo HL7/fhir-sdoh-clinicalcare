@@ -25,6 +25,9 @@ Description: "Profile for service requests that address Social Determinants of H
 * basedOn contains SupportedBasedOn 0..* MS
 * basedOn[SupportedBasedOn] only Reference(SDOHCCServiceRequest)
 * basedOn[SupportedBasedOn] ^requirements = "Allows an organization (e.g., a Coordination Platform) to create a ServiceRequest for another organization (e.g., a Community Based Organization) based on a SDOHCC ServiceRequest from a referral source (e.g., a provider or a payor involved in care management)."
+* basedOn[SupportedBasedOn] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* basedOn[SupportedBasedOn] ^type[=].targetProfile[=].extension.valueBoolean = true
+
 //* status MS
 * status ^comment = "The status is generally fully in the control of the requester - they determine whether the order is draft or active and, after it has been activated, competed, cancelled or suspended. States relating to the activities of the performer are reflected on either the corresponding event (see [Event Pattern](event.html) for general discussion) or using the [Task](task.html) resource.\r\n\r\nWhile all values are currently allowed, there may be a constraint on the values in future releases based on implementation feedback."
 //* intent MS
@@ -116,6 +119,13 @@ Description: "Profile for service requests that address Social Determinants of H
 * reasonReference[SupportedReasonReference] only Reference(SDOHCCCondition or SDOHCCObservationScreeningResponse or SDOHCCObservationAssessment)
 * reasonReference[SupportedReasonReference] ^comment = "This element represents why the referral is being made and may be used to decide how the service will be performed, or even if it will be performed at all.    To be as specific as possible,  a reference to  *Observation* or *Condition* should be used if available.  Otherwise when referencing  *DiagnosticReport*  it should contain a finding  in `DiagnosticReport.conclusion` and/or `DiagnosticReport.conclusionCode`.   When using a reference to *DocumentReference*, the target document should contain clear findings language providing the relevant reason for this service request.  Use the CodeableConcept text element in `ServiceRequest.reasonCode` if the data is free (uncoded) text."
 * reasonReference[SupportedReasonReference] ^requirements = "When a service request is justified by one or more SDOH conditions or observations, ServiceRequest.reasonReference should reference instances that comply with the SDOHCC Condition profile, or one of the SDOHCC Observation profiles. However, references to other instance types are also possible."
+* reasonReference[SupportedReasonReference] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
+* reasonReference[SupportedReasonReference] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
+* reasonReference[SupportedReasonReference] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
+
 * supportingInfo ^slicing.discriminator.type = #profile
 * supportingInfo ^slicing.discriminator.path = "resolve()"
 * supportingInfo ^slicing.rules = #open
@@ -123,5 +133,7 @@ Description: "Profile for service requests that address Social Determinants of H
 * supportingInfo contains SupportedSupportingInfo 0..* MS
 * supportingInfo[SupportedSupportingInfo] only Reference(SDOHCCConsent)
 * supportingInfo[SupportedSupportingInfo] ^requirements = "When a service request is supported by a SDOH consent, ServiceRequest.supportingInfo should reference instances that comply with the SDOHCC Consent profile. However, references to other instance types are also possible."
+* supportingInfo[SupportedSupportingInfo] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* supportingInfo[SupportedSupportingInfo] ^type[=].targetProfile[=].extension.valueBoolean = true
 * specimen ..0
 * bodySite ..0
