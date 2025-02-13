@@ -15,6 +15,8 @@ Description: "Profile for SDOH-related tasks to be carried out by the patient or
 * partOf[SupportedPartOf] only Reference(SDOHCCTaskForReferralManagement or SDOHCCTaskForPatient)
 * partOf[SupportedPartOf] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * partOf[SupportedPartOf] ^type[=].targetProfile[=].extension.valueBoolean = true
+* partOf[SupportedPartOf] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* partOf[SupportedPartOf] ^type[=].targetProfile[=].extension.valueBoolean = true
 
 
 * status MS

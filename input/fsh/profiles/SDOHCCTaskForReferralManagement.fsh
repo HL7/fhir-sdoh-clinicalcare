@@ -50,7 +50,10 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * output[PerformedActivityReference].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
 * output[PerformedActivityReference].valueReference only Reference(SDOHCCProcedure)
 * output[PerformedActivityReference].valueReference 1..1 MS
+* output[PerformedActivityReference].valueReference ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* output[PerformedActivityReference].valueReference ^type[=].targetProfile[=].extension.valueBoolean = true
 * output[PerformedActivityCode].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
 * output[PerformedActivityCode].valueCodeableConcept from USCoreProcedureCodes (required)
 * output[PerformedActivityCode].valueCodeableConcept 1..1 MS
+
 * status from SDOHCCValueSetReferralTaskStatus (required)

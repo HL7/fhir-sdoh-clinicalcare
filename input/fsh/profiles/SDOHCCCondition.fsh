@@ -61,6 +61,7 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 // TODO need to supplort slicing that either encounter diagnosis or "healthconcern orproblem list item" is required (through an invariant)
 
 * category[encounter-diagnosis] = ConditionCategoryCodes#encounter-diagnosis
+* category[encounter-diagnosis] ^short = "encounter-diagnosis"
 //* category[encounter-diagnosis] ^condition = "SDOH-Con-2"
 
 //* category[encounter-diagnosis] ^binding.description = "Note that other codes are permitted"
@@ -74,7 +75,8 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 
 
 
-* category[screening-assessment] = $ScreeningAssessmentObservationCategory#sdoh
+* category[screening-assessment] = USCoreCategory#sdoh
+* category[screening-assessment] from USCoreScreeningAssessmentConditionCategory (required)
 * category[screening-assessment] ^short = "USCDI Health Status/Assessments Data Class"
 * category[screening-assessment] ^definition = "Categories that a provider may use in their workflow to classify that this Condition is related to a USCDI Health Status/Assessments Data Class."
 * category[screening-assessment] ^requirements = "Used for filtering condition"
