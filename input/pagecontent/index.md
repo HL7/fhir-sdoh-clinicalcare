@@ -39,6 +39,8 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 |[Value Set Authority Center](https://vsac.nlm.nih.gov/) (VSAC)| 0.9.0   |    Gravity Project social risk data elements are published in [Value Set Authority Center](https://vsac.nlm.nih.gov/) (VSAC) value sets. The value sets can be identified by searching for "The Gravity Project" steward. You will need to create a free National Library of Medicine (NLM) account to access the value sets. Value sets will be updated bi-annually on June 30th and December 31st.   |
 {:.grid}
 
+{% include dependency-table-nontech.xhtml %}
+
 ### Relationships to Other IGs
 
 | Implementation Guide |  Relationship  |
