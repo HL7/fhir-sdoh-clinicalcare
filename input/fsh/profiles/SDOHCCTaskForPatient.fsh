@@ -49,7 +49,7 @@ Description: "Profile for SDOH-related tasks to be carried out by the patient or
 * for only Reference(USCorePatientProfile)
 * authoredOn 1.. MS
 * requester 1.. MS
-* requester only Reference(USCorePractitionerRoleProfile or USCoreOrganizationProfile)
+* requester only Reference(SDOHCCPractitionerRole or USCoreOrganizationProfile)
 * owner 1.. MS
 * owner only Reference(USCorePatientProfile or RelatedPerson)
 * input ^slicing.discriminator.type = #pattern
@@ -85,7 +85,7 @@ Description: "Profile for SDOH-related tasks to be carried out by the patient or
 * input[Contact] ^condition[0] = "SDOH-Task-4"
 * input[Contact].type = $SDOHCC-CodeSystemTemporaryCodes#contact-entity
 * input[Contact].type ^comment = "When Task.code is \"make-contact\", \"contact-entity\" is used for Task.input.type to indicate that the task owner should contact one of the healthcare services represented in Task.input.value."
-* input[Contact].value[x] only Reference(SDOHCCHealthcareService or USCorePractitionerRoleProfile or USCorePractitionerProfile or USCoreOrganizationProfile)
+* input[Contact].value[x] only Reference(SDOHCCHealthcareService or SDOHCCPractitionerRole or USCorePractitionerProfile or USCoreOrganizationProfile)
 * output ^slicing.discriminator.type = #pattern
 * output ^slicing.discriminator.path = "type"
 * output ^slicing.rules = #open
