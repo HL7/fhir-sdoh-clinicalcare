@@ -6,6 +6,7 @@ Usage: #example
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#unconfirmed "Unconfirmed"
 * category[0] = $condition-category#health-concern "Health Concern"
+* category[+] = $ScreeningAssessmentObservationCategory#sdoh "SDOH"
 * category[+] = $SDOHCC-CodeSystemTemporaryCodes#homelessness "Homelessness"
 * code.coding[0] = $sct#32911000 "Homeless"
 * code.coding[+] = $icd-10-cm#Z59.0 "Homelessness"

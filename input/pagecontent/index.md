@@ -31,14 +31,13 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 
 ### Dependencies on Other IGs
 
-| Implementation Guide | Version | Dependency |
+<!-- | Implementation Guide | Version | Dependency |
 | -------------------- | ------- | ---------- |
 | [US Core](https://hl7.org/fhir/us/core/STU3.1.1/) | 3.1.1 | Where possible, all profiles in this IG are either derived from US Core 3.1.1 or aligned with that release and future releases as much as possible.  U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.  |
 | [Structured Document Capture (SDC)](http://hl7.org/fhir/uv/sdc/)| 3.0.0  | SDC is the basis for mapping QuestionnaireResponses to Observations and Conditions. SDC also provides guidance around how questionnaires can be created with support for score calculation, conditional behavior, specific rendering expectations, etc.   |
 | [Subscriptions R5 Backport](http://hl7.org/fhir/uv/subscriptions-backport) |1.1.0   | Subscriptions are recommended for monitoring completion of referrals.  |
 |[Value Set Authority Center](https://vsac.nlm.nih.gov/) (VSAC)| 0.9.0   |    Gravity Project social risk data elements are published in [Value Set Authority Center](https://vsac.nlm.nih.gov/) (VSAC) value sets. The value sets can be identified by searching for "The Gravity Project" steward. You will need to create a free National Library of Medicine (NLM) account to access the value sets. Value sets will be updated bi-annually on June 30th and December 31st.   |
-{:.grid}
-
+{:.grid} -->
 {% include dependency-table-nontech.xhtml %}
 
 ### Relationships to Other IGs
