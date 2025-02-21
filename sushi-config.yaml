@@ -32,11 +32,14 @@ dependencies:
         version: 3.0.0
         uri: "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
         id: sdc
+        reason: |
+            SDC is the basis for mapping QuestionnaireResponses to Observations and Conditions. SDC also provides guidance around how questionnaires can be created with support for score calculation, conditional behavior, specific rendering expectations, etc.
     hl7.fhir.uv.subscriptions-backport.r4:
         version: 1.1.0
         uri: "http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"
         id: sdohsub
-    
+        reason: |
+            Subscriptions are recommended for monitoring completion of referrals.
     hl7.terminology.r4:
         version: 6.1.0
         
@@ -44,6 +47,8 @@ dependencies:
         uri: "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"
         version: 0.21.0
         id: vsac
+        reason: |
+            Gravity Project social risk data elements are published in Value Set Authority Center (VSAC) value sets. The value sets can be identified by searching for "The Gravity Project" steward. You will need to create a free National Library of Medicine (NLM) account to access the value sets. Value sets will be updated bi-annually on June 30th and December 31st.  
     hl7.fhir.extensions.r5:
         version: 5.1.0
 
