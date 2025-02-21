@@ -7,7 +7,7 @@ Description: "Profile for observations that represent question and answer pairs 
 * . ^short = "SDOH screening questionnaire observations"
 * . ^definition = "For Observations derived from SDOH screening surveys/questionnaires."
 * . ^comment = "Used for simple observations such as education status, food insecurity observations, etc.  \r\nThis profile allows the representation of SDOH observations based on SDOH screening questionnaire responses (which can also be represented using SDC QuestionnaireResponse). \r\n\r\nMany of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."
-* obeys us-core-2
+// * obeys us-core-2
 * status MS
 * status from SDOHCCValueSetObservationStatus (required)
 * status ^short = "final | corrected | entered-in-error | unknown"
@@ -169,11 +169,11 @@ Description: "Profile for observations that represent question and answer pairs 
 * hasMember[SupportedHasMember] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * hasMember[SupportedHasMember] ^type[=].targetProfile[=].extension.valueBoolean = true
 
-Invariant: us-core-2
-Description: "If there is no component or hasMember element then either a value[x] or a data absent reason must be present"
-* severity = #error
-* expression = "(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())"
-* xpath = "exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)"
+// Invariant: us-core-2
+// Description: "If there is no component or hasMember element then either a value[x] or a data absent reason must be present"
+// * severity = #error
+// * expression = "(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())"
+// * xpath = "exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)"
 
 // Invariant: us-core-1
 // Description: "Datetime must be at least to day."

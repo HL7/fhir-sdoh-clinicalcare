@@ -99,9 +99,9 @@ Description: "Profile for service requests that address Social Determinants of H
 * occurrence[x] ^type[=].extension.valueBoolean = true
 
 //* authoredOn MS
-* requester only Reference(USCoreRelatedPersonProfile or Device or USCorePractitionerRoleProfile or USCorePractitionerProfile or USCorePatientProfile or USCoreOrganizationProfile)
+* requester only Reference(USCoreRelatedPersonProfile or Device or SDOHCCPractitionerRole or USCorePractitionerProfile or USCorePatientProfile or USCoreOrganizationProfile)
 //* requester MS
-* performer only Reference(HealthcareService or Device or RelatedPerson or USCorePatientProfile or USCorePractitionerProfile or USCorePractitionerRoleProfile or USCoreOrganizationProfile or USCoreCareTeam)
+* performer only Reference(HealthcareService or Device or RelatedPerson or USCorePatientProfile or USCorePractitionerProfile or SDOHCCPractitionerRole or USCoreOrganizationProfile or USCoreCareTeam)
 * performer MS
 //* reasonCode from USCoreConditionCodes (extensible)
 //* reasonCode ^extension.url = "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement"

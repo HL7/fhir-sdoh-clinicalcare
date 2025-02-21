@@ -15,28 +15,31 @@ dependencies:
         uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
         id: uscore
         reason: |
-            Defines USCDI v4 EHR expectations on a range of resources that will be passed to and/or systems supporting the Social Determinants of Health Clinical Care Implementation Guide. The profiles of this guide directly inherit from this version.   \n
+            Defines USCDI v4 EHR expectations on a range of resources that will be passed to and/or systems supporting the Social Determinants of Health Clinical Care Implementation Guide. The profiles of this guide directly inherit from this version.
     hl7.fhir.us.core.v610:
         version: 6.1.0
         uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
         id: uscore6
         reason: |
-            Defines USCDI v3 EHR expectations on a range of resources that will be passed to and/or systems supporting the Social Determinants of Health Clinical Care Implementation Guide. The profiles of this guide largely comply with the requirements of this version. Several constraints that were reduced in US Core 7 were not adopted. Profile pages provide additional compliance guidance. \n
+            Defines USCDI v3 EHR expectations on a range of resources that will be passed to and/or systems supporting the Social Determinants of Health Clinical Care Implementation Guide. The profiles of this guide largely comply with the requirements of this version. Several constraints that were reduced in US Core 7 were not adopted. Profile pages provide additional compliance guidance.
     hl7.fhir.us.core.v311:
         version: 3.1.1
         uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
         id: uscore3
         reason: |
-            Defines USCDI v1 EHR expectations on a range of resources that will be passed to and/or systems supporting the Social Determinants of Health Clinical Care Implementation Guide. The profiles of this guide comply with the requirements of this version. Profile pages provide additional compliance guidance. \n
+            Defines USCDI v1 EHR expectations on a range of resources that will be passed to and/or systems supporting the Social Determinants of Health Clinical Care Implementation Guide. The profiles of this guide comply with the requirements of this version. Profile pages provide additional compliance guidance.
     hl7.fhir.uv.sdc:
         version: 3.0.0
         uri: "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
         id: sdc
+        reason: |
+            SDC is the basis for mapping QuestionnaireResponses to Observations and Conditions. SDC also provides guidance around how questionnaires can be created with support for score calculation, conditional behavior, specific rendering expectations, etc.
     hl7.fhir.uv.subscriptions-backport.r4:
         version: 1.1.0
         uri: "http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"
         id: sdohsub
-    
+        reason: |
+            Subscriptions are recommended for monitoring completion of referrals.
     hl7.terminology.r4:
         version: 6.1.0
         
@@ -44,6 +47,8 @@ dependencies:
         uri: "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"
         version: 0.21.0
         id: vsac
+        reason: |
+            Gravity Project social risk data elements are published in Value Set Authority Center (VSAC) value sets. The value sets can be identified by searching for "The Gravity Project" steward. You will need to create a free National Library of Medicine (NLM) account to access the value sets. Value sets will be updated bi-annually on June 30th and December 31st.  
     hl7.fhir.extensions.r5:
         version: 5.1.0
 

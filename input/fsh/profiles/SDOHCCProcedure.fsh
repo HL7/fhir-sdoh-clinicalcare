@@ -106,12 +106,10 @@ Description: "Profile for interventions that address Social Determinants of Heal
 
 
 // US Core 7.0.0
-* subject only Reference(USCorePatientProfile or Group)
+* subject only Reference(USCorePatientProfile)
 * subject MS
 * subject ^type.targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * subject ^type.targetProfile[=].extension.valueBoolean = true
-* subject ^type.targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* subject ^type.targetProfile[=].extension.valueBoolean = false
 * encounter only Reference(USCoreEncounterProfile)
 * encounter MS
 * encounter ^short = "Encounter associated with the procedure"

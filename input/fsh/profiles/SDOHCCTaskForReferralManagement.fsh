@@ -36,7 +36,7 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * for only Reference(RelatedPerson or Group or USCorePatientProfile)
 * authoredOn 1.. MS
 * requester 1.. MS
-* requester only Reference(USCorePractitionerRoleProfile or USCoreOrganizationProfile)
+* requester only Reference(SDOHCCPractitionerRole or USCoreOrganizationProfile)
 * owner MS
 * owner ^requirements = "This element is Must Support. However, it is not mandatory in order to allow a task to be created without an owner so that one of a potential group of performers can elect to \"own\" the task (e.g., an 'open' request for fulfillment is set and anyone capable of filling the order can claim it.)"
 * output ^slicing.discriminator[0].type = #pattern

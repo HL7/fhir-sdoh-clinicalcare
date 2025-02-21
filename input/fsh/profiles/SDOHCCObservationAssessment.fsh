@@ -8,6 +8,7 @@ Description: "Profile for Social Determinants of Health (SDOH) observations that
 * . ^short = "SDOH assessment observation"
 * . ^definition = "For SDOH observations derived from assessment of the individual."
 * . ^comment = "For representation of SDOH observations that involve assessment (e.g., by a provider or payer) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Observation Screening Response).\r\n\r\nMany of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."
+* obeys us-core-2
 * insert OwningCommitteeExtension
 
 * status MS
@@ -51,6 +52,11 @@ Description: "Profile for Social Determinants of Health (SDOH) observations that
 * derivedFrom ^definition = "US Core Observations, DocumentReference, QuestionnaireResponse or other resource from which this observation value is derived."
 * derivedFrom ^mustSupport = false
 
+Invariant: us-core-2
+Description: "If there is no component or hasMember element then either a value[x] or a data absent reason must be present"
+* severity = #error
+* expression = "(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())"
+* xpath = "exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)"
 
 // US Core 7.0.0
 // * status MS
