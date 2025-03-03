@@ -5,8 +5,8 @@ Description: "An example of a screening response Observation that represents Foo
 Usage: #example
 //* category[Survey] = $observation-category#survey "Survey"
 * category[survey] = $observation-category#survey "Survey"
-* category[screening-assessment] = USCoreCategory#sdoh "SDOH"
-* category[SDOH] = $SDOHCC-CodeSystemTemporaryCodes#food-insecurity "Food Insecurity"
+* category[screening-assessment][sdoh] = USCoreCategory#sdoh "SDOH"
+* category[SDOHCC] = $SDOHCC-CodeSystemTemporaryCodes#food-insecurity "Food Insecurity"
 * status = #final
 * code = $loinc#88124-3 "Food insecurity risk [HVS]"
 * subject.reference = "Patient/pat-53234"

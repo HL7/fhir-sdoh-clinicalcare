@@ -5,9 +5,9 @@ Description: "An example of a food insecurity Condition (a health concern) that 
 Usage: #example
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#unconfirmed "Unconfirmed"
-* category[0] = $condition-category#health-concern "Health Concern"
-* category[+] = $ScreeningAssessmentObservationCategory#sdoh "SDOH"
-* category[+] = $SDOHCC-CodeSystemTemporaryCodes#food-insecurity "Food Insecurity"
+* category[screening-assessment] = $condition-category#health-concern "Health Concern"
+* category[screening-assessment][sdoh] = $ScreeningAssessmentObservationCategory#sdoh "SDOH"
+* category[SDOHCC] = $SDOHCC-CodeSystemTemporaryCodes#food-insecurity "Food Insecurity"
 * code.coding[0] = $sct#733423003 "Food insecurity"
 * code.coding[+] = $icd-10-cm#Z59.4 "Lack of adequate food"
 * subject.reference = "Patient/pat-53234"

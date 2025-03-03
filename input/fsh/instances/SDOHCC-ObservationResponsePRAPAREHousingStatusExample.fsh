@@ -5,8 +5,8 @@ Description: "An example of a screening response Observation that represents a q
 Usage: #example
 //* category[Survey] = $observation-category#survey "Survey"
 * category[survey] = $observation-category#survey "Survey"
-* category[screening-assessment] = USCoreCategory#sdoh "SDOH"
-* category[SDOH] = $SDOHCC-CodeSystemTemporaryCodes#homelessness "Homelessness"
+* category[screening-assessment][sdoh] = USCoreCategory#sdoh "SDOH"
+* category[SDOHCC] = $SDOHCC-CodeSystemTemporaryCodes#homelessness "Homelessness"
 * status = #final
 * code = $loinc#71802-3 "Housing status"
 * subject.reference = "Patient/pat-53234"

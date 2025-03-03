@@ -3,8 +3,8 @@ RuleSet: NHANESCommon
 //* category[SocialHistory] = $observation-category#social-history "Social History"
 //* category[Survey] = $observation-category#survey "Survey"
 * category[survey] = $observation-category#survey "Survey"
-* category[screening-assessment] = USCoreCategory#sdoh "SDOH"
-* category[SDOH] = $SDOHCC-CodeSystemTemporaryCodes#social-connection "Social Connection"
+* category[screening-assessment][sdoh] = USCoreCategory#sdoh "SDOH"
+* category[SDOHCC] = $SDOHCC-CodeSystemTemporaryCodes#social-connection "Social Connection"
 * status = #final
 * code = $loinc#76506-5 "Social Connection and Isolation Panel"
 * subject.reference = "Patient/pat-53234"
@@ -22,6 +22,7 @@ because QuestionnaireResponse is not referenced by the 6 individual Observations
 this example illustrates how the 6 Observations from the panel can be linked in an Observation grouping."
 Usage: #example
 * insert NHANESCommon
+* category[screening-assessment][sdoh] = USCoreCategory#sdoh "SDOH"
 * code = $loinc#76506-5 "Social Connection and Isolation Panel"
 * hasMember[SupportedHasMember][0].reference = "Observation/SDOHCC-ObservationResponseNHANESQuestion1Example"
 * hasMember[SupportedHasMember][+].reference = "Observation/SDOHCC-ObservationResponseNHANESQuestion2Example"

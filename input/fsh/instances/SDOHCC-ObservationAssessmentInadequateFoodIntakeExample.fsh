@@ -5,7 +5,8 @@ Description: "An example of an inadequate food intake Observation that is not ne
 Usage: #example
 //* category[0] = $observation-category#social-history "Social History"
 // * category[SocialHistory] = $observation-category#social-history "Social History"
-* category[SDOH] = $SDOHCC-CodeSystemTemporaryCodes#food-insecurity "Food Insecurity"
+* category[us-core][sdoh] = USCoreCategory#sdoh "SDOH"
+* category[SDOHCC] = $SDOHCC-CodeSystemTemporaryCodes#food-insecurity "Food Insecurity"
 * status = #final
 * code = $sct#699653008 "Inadequate oral food intake for physiological needs"
 * subject.reference = "Patient/pat-53234"
