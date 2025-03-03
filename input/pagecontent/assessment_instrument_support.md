@@ -344,16 +344,16 @@ Examples for using Observation.category to tag Observations by SDOH domain are p
 
 ##### Flagging Observations for a possible HRSN need using Observation.interpretation
 
-Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) (Positive) can be used to flag Observations for which the Q-A pair might represent a HRSN.
+Observation.interpretation: [POS]({{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) (Positive) can be used to flag Observations for which the Q-A pair might represent a HRSN.
 
 Additional guidance related to Observation.interpretation for [SDOHCC Observation Screening Response] : 
 
-* The meaning of Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) should be evaluated in conjunction with “Observation.category: SDOH domain”. If the author of an assessment instrument provides guidance that a specific Q-A pair might represent a HRSN, Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) can be used to flag the need for follow-up by a provider or qualified health professional (QHP) to further evaluate for a HRSN in the SDOH domain(s) specified by Observation.category.
-* Gravity does not advise using Observation.interpretation: [NEG](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html) (Negative). Assessment instruments are generally designed so that certain answers indicate a possible HRSN. Assessment instrument authors generally do not state that certain Q-A pairs rule out a HRSN. 
+* The meaning of Observation.interpretation: [POS]({{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) should be evaluated in conjunction with “Observation.category: SDOH domain”. If the author of an assessment instrument provides guidance that a specific Q-A pair might represent a HRSN, Observation.interpretation: [POS]({{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) can be used to flag the need for follow-up by a provider or qualified health professional (QHP) to further evaluate for a HRSN in the SDOH domain(s) specified by Observation.category.
+* Gravity does not advise using Observation.interpretation: [NEG]({{site.data.fhir.path}}v3/ObservationInterpretation/cs.html) (Negative). Assessment instruments are generally designed so that certain answers indicate a possible HRSN. Assessment instrument authors generally do not state that certain Q-A pairs rule out a HRSN. 
 * When an answer (Observation.value) does not indicate a possible HRSN, Observation.interpretation should be omitted.
-Examples for using Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) and understanding its meaning in conjunction with Observation.category are provided below. The examples are based on the AHC HRSN Screening Tool which provides guidance that specific answers might indicate an unmet health-related social need.
+Examples for using Observation.interpretation: [POS]({{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) and understanding its meaning in conjunction with Observation.category are provided below. The examples are based on the AHC HRSN Screening Tool which provides guidance that specific answers might indicate an unmet health-related social need.
 
-**Example 4**: When Observation.category identifies only one SDOH domain, Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) can be used to flag that the Observation should be followed-up by a provider or QHP to confirm a HRSN or risk in that SDOH domain (e.g., Food Insecurity).
+**Example 4**: When Observation.category identifies only one SDOH domain, Observation.interpretation: [POS]({{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) can be used to flag that the Observation should be followed-up by a provider or QHP to confirm a HRSN or risk in that SDOH domain (e.g., Food Insecurity).
 
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
    <thead>
@@ -389,13 +389,13 @@ Examples for using Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/
          <td>Often true</td>
          <td><span style="white-space: nowrap;">LA28397-0</span></td>
          <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
-         <td><a href= "https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
+         <td><a href= "{{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
       </tr>
       <tr>
          <td>Sometimes true</td>
          <td><span style="white-space: nowrap;">LA6729-3</span></td>
          <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
-         <td><a href= "https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
+         <td><a href= "{{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
       </tr>
       <tr>
          <td>Never true</td>
@@ -406,7 +406,7 @@ Examples for using Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/
    </tbody>
 </table>
 
-**Example 5**: When Observation.category identifies more than one SDOH domain, Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) can be used to flag the Observation as positive for a possible HRSN in at least one of the selected SDOH categories. However, in this case, determining which SDOH category is positive for the identified HRSN requires further evaluation of the answer (Observation.value).
+**Example 5**: When Observation.category identifies more than one SDOH domain, Observation.interpretation: [POS]({{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) can be used to flag the Observation as positive for a possible HRSN in at least one of the selected SDOH categories. However, in this case, determining which SDOH category is positive for the identified HRSN requires further evaluation of the answer (Observation.value).
 
 In the example below, Observation.category has two SDOH codes because the question and its complete set of answers address Housing Instability and Homelessness. However, by [definition](https://confluence.hl7.org/display/GRAV/Terminology+Workstream), Housing Instability and Homelessness cannot exist concurrently. In this case, Observation.value: LA31995-6 indicates that the Observation is positive for a possible Housing Instability HRSN and Observation.value: LA31994-9 indicates that the Observation is positive for a possible Homelessness HRSN.
 
@@ -450,18 +450,18 @@ In the example below, Observation.category has two SDOH codes because the questi
          <td>I have a place to live today, but I am worried about losing it in the future</td>
          <td><span style="white-space: nowrap;">LA31994-9</span></td>
          <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness</a></span>, <span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></span></td>
-         <td><a href= "https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
+         <td><a href= "{{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
       </tr>
       <tr>
          <td>I do not have a steady place to live (I am temporarily staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park</td>
          <td><span style="white-space: nowrap;">LA31995-6</span></td>
          <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness</a></span>, <span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></span></td>
-         <td><a href= "https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
+         <td><a href= "{{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
       </tr>
    </tbody>
 </table>
 
-**Example 6**: Gravity does not advise using Observation.interpretation: [NEG](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html) (Negative) unless a provider or QHP has evaluated the individual and ruled out the HRSN. Regardless of SDOH Observation.category, when an answer (Observation.value) is provided that does not indicate a HRSN, Observation.interpretation should be omitted.
+**Example 6**: Gravity does not advise using Observation.interpretation: [NEG]({{site.data.fhir.path}}v3/ObservationInterpretation/cs.html) (Negative) unless a provider or QHP has evaluated the individual and ruled out the HRSN. Regardless of SDOH Observation.category, when an answer (Observation.value) is provided that does not indicate a HRSN, Observation.interpretation should be omitted.
 
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
    <thead>
