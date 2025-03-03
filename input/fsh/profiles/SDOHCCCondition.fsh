@@ -48,15 +48,15 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 
 * category ^condition = "SDOH-Con-2"
 
-* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^short = "category codes"
 * category contains
     encounter-diagnosis 0..1 MS and
     problem-or-health-concern 0..* MS and
-    screening-assessment 1..1 MS and
-    SDOH 0..*
+    screening-assessment 0..* MS and
+    SDOHCC 0..*
 
 // TODO need to supplort slicing that either encounter diagnosis or "healthconcern orproblem list item" is required (through an invariant)
 
@@ -75,7 +75,7 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 
 
 
-* category[screening-assessment] = USCoreCategory#sdoh
+//* category[screening-assessment] = USCoreCategory#sdoh
 * category[screening-assessment] from USCoreScreeningAssessmentConditionCategory (required)
 * category[screening-assessment] ^short = "USCDI Health Status/Assessments Data Class"
 * category[screening-assessment] ^definition = "Categories that a provider may use in their workflow to classify that this Condition is related to a USCDI Health Status/Assessments Data Class."
@@ -84,12 +84,27 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 
 
 
+
+* category[screening-assessment] ^slicing.discriminator.type = #value
+* category[screening-assessment] ^slicing.discriminator.path = "$this"
+* category[screening-assessment] ^slicing.rules = #open
+* category[screening-assessment] ^short = "sdoh category codes"
+* category[screening-assessment] contains
+    sdoh 1..1 MS
+
+
+* category[screening-assessment][sdoh] = USCoreCategory#sdoh
+* category[screening-assessment][sdoh] from USCoreScreeningAssessmentConditionCategory (required)
+* category[screening-assessment][sdoh] ^short = "screening-assessment code of 'sdoh' required and others allowed as part of 'screening-assessment' slice."
+
+
+
 // SDOH CC
-* category[SDOH] from SDOHCCValueSetSDOHCategory (required)
-* category[SDOH] ^short = "e.g., food-insecurity | transportation-insecurity"
-* category[SDOH] ^definition = "An SDOH category assigned to the condition."
-* category[SDOH] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a condition. It is recommended that SDOH category codes be used to facilitate searching for SDOH conditions."
-* category[SDOH] ^binding.description = "Codes for high-level SDOH categories."
+* category[SDOHCC] from SDOHCCValueSetSDOHCategory (required)
+* category[SDOHCC] ^short = "e.g., food-insecurity | transportation-insecurity"
+* category[SDOHCC] ^definition = "An SDOH category assigned to the condition."
+* category[SDOHCC] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a condition. It is recommended that SDOH category codes be used to facilitate searching for SDOH conditions."
+* category[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
 
 
 

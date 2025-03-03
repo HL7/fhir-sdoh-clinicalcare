@@ -54,12 +54,12 @@ Description: "Profile for interventions that address Social Determinants of Heal
 * category.coding ^slicing.discriminator.type = #value
 * category.coding ^slicing.discriminator.path = "$this"
 * category.coding ^slicing.rules = #open
-* category.coding contains SDOH 0..1 MS
-* category.coding[SDOH] from SDOHCCValueSetSDOHCategory (required)
-* category.coding[SDOH] ^short = "e.g., food-insecurity | transportation-insecurity"
-* category.coding[SDOH] ^definition = "An SDOH category assigned to the procedure."
-* category.coding[SDOH] ^requirements = "Allows for alternative encodings within a code system, and translations to other code systems.  \r\nCodes from this value set can be used to assign an SDOH category (e.g., food-insecurity, transportation-insecurity, etc.) to a procedure. It is recommended that SDOH category codes be used to facilitate searching for SDOH procedures that address SDOH conditions, observations, service requests, or goals."
-* category.coding[SDOH] ^binding.description = "Codes for high-level SDOH categories."
+* category.coding contains SDOHCC 0..1 MS
+* category.coding[SDOHCC] from SDOHCCValueSetSDOHCategory (required)
+* category.coding[SDOHCC] ^short = "e.g., food-insecurity | transportation-insecurity"
+* category.coding[SDOHCC] ^definition = "An SDOH category assigned to the procedure."
+* category.coding[SDOHCC] ^requirements = "Allows for alternative encodings within a code system, and translations to other code systems.  \r\nCodes from this value set can be used to assign an SDOH category (e.g., food-insecurity, transportation-insecurity, etc.) to a procedure. It is recommended that SDOH category codes be used to facilitate searching for SDOH procedures that address SDOH conditions, observations, service requests, or goals."
+* category.coding[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
 
 
 // US Core 7.0.0

@@ -12,12 +12,12 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
-* category contains SDOH 0..* MS
-* category[SDOH] from SDOHCCValueSetSDOHCategory (required)
-* category[SDOH] ^short = "e.g., food-insecurity | transportation-insecurity"
-* category[SDOH] ^definition = "An SDOH category assigned to the goal."
-* category[SDOH] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a goal. It is recommended that SDOH category codes be used to facilitate searching for SDOH-related goals."
-* category[SDOH] ^binding.description = "Codes for high-level SDOH categories."
+* category contains SDOHCC 0..* MS
+* category[SDOHCC] from SDOHCCValueSetSDOHCategory (required)
+* category[SDOHCC] ^short = "e.g., food-insecurity | transportation-insecurity"
+* category[SDOHCC] ^definition = "An SDOH category assigned to the goal."
+* category[SDOHCC] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a goal. It is recommended that SDOH category codes be used to facilitate searching for SDOH-related goals."
+* category[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
 * description from USCoreGoalCodes (extensible)
 * description ^comment = "If no code is available, use CodeableConcept.text.\r\n\r"
 * description ^binding.description = "Codes providing the details of a particular goal.  In many systems, only the text element will be used."

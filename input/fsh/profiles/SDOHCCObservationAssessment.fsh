@@ -12,25 +12,39 @@ Description: "Profile for Social Determinants of Health (SDOH) observations that
 * insert OwningCommitteeExtension
 
 * status MS
-* category 1.. MS
-* category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
+//* category 1.. MS
+//* category ^slicing.discriminator.type = #pattern
+//* category ^slicing.discriminator.path = "$this"
+//* category ^slicing.rules = #open
 * category contains
-    // us-core 1..1 MS and
+    //us-core 1..1 MS and
     // SocialHistory 1..1 MS and
-    SDOH 0..* MS
-// * category[us-core] from USCoreSimpleObservationCategory (required)
-// * category[us-core] ^min = 0
-* category[us-core] 1..1 MS
-* category[us-core] = $ScreeningAssessmentObservationCategory#sdoh
+    SDOHCC 0..* MS
+
+
+
+* category[us-core] ^slicing.discriminator.type = #pattern
+* category[us-core] ^slicing.discriminator.path = "$this"
+* category[us-core] ^slicing.rules = #open
+* category[us-core] ^short = "sdoh category code"
+* category[us-core] contains 
+    sdoh 1..1 MS
+
+
+
+* category[us-core][sdoh] = USCoreCategory#sdoh
+* category[us-core][sdoh] from USCoreSimpleObservationCategory (required)
+* category[us-core][sdoh] ^short = "us-core code of 'sdoh' required and others allowed as part of 'us-core' slice."
+
+
+
 // * category[SocialHistory] = $observation-category#social-history
 // * category[SocialHistory] ^requirements = "Used for filtering that this is a social history observation."
-* category[SDOH] from SDOHCCValueSetSDOHCategory (required)
-* category[SDOH] ^short = "e.g., food-insecurity | transportation-insecurity"
-* category[SDOH] ^definition = "An SDOH category assigned to the observation."
-* category[SDOH] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to an observation. It is recommended that SDOH category codes be used to facilitate searching for SDOH observations."
-* category[SDOH] ^binding.description = "Codes for high-level SDOH categories."
+* category[SDOHCC] from SDOHCCValueSetSDOHCategory (required)
+* category[SDOHCC] ^short = "e.g., food-insecurity | transportation-insecurity"
+* category[SDOHCC] ^definition = "An SDOH category assigned to the observation."
+* category[SDOHCC] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to an observation. It is recommended that SDOH category codes be used to facilitate searching for SDOH observations."
+* category[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
 * code MS
 * code from SDOHCCValueSetLOINCSNOMEDCT (preferred)
 * code ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\nAs the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set binding strength may change and may be refined to codes (including LOINC and SNOMED) that pertain to SDOH categories."

@@ -39,12 +39,12 @@ Description: "Profile for service requests that address Social Determinants of H
 * category ^definition = "A code that classifies the service for searching, sorting and display purposes (e.g., Education)."
 //* category contains us-core 0..* MS
 //* category[us-core] ^binding.description = "Note that other codes are permitted"
-* category contains SDOH 1..* MS
-* category[SDOH] from SDOHCCValueSetSDOHCategory (required)
-* category[SDOH] ^short = "e.g., food-insecurity | transportation-insecurity"
-* category[SDOH] ^definition = "An SDOH category assigned to the requested service."
-* category[SDOH] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a service request. It is recommended that SDOH category codes be used to facilitate searching for service requests that address SDOH conditions, observations, or goals."
-* category[SDOH] ^binding.description = "Codes for high-level SDOH categories."
+* category contains SDOHCC 1..* MS
+* category[SDOHCC] from SDOHCCValueSetSDOHCategory (required)
+* category[SDOHCC] ^short = "e.g., food-insecurity | transportation-insecurity"
+* category[SDOHCC] ^definition = "An SDOH category assigned to the requested service."
+* category[SDOHCC] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a service request. It is recommended that SDOH category codes be used to facilitate searching for service requests that address SDOH conditions, observations, or goals."
+* category[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
 * priority MS
 //* code 1.. MS
 * code from USCoreProcedureCodes (required)

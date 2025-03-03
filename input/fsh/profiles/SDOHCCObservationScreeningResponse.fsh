@@ -20,11 +20,23 @@ Description: "Profile for observations that represent question and answer pairs 
 * category ^requirements = "To identify that an SDOH observation screening response  is derived from an SDOH questionnaire, the “social-history” and “survey” codes are required."
 * category contains
     // survey 1..1 MS and
-    // screening-assessment 1..1 MS and
     // SocialHistory 1..1 MS and
-    SDOH 0..* MS
-* category[screening-assessment] 1..1 MS
-* category[screening-assessment] = $ScreeningAssessmentObservationCategory#sdoh
+    SDOHCC 0..* MS
+
+* category[screening-assessment] ^slicing.discriminator.type = #pattern
+* category[screening-assessment] ^slicing.discriminator.path = "$this"
+* category[screening-assessment] ^slicing.rules = #open
+* category[screening-assessment] ^short = "sdoh category code"
+* category[screening-assessment] contains
+    sdoh 1..1 MS
+
+
+
+* category[screening-assessment][sdoh] = $ScreeningAssessmentObservationCategory#sdoh
+* category[screening-assessment][sdoh] from USCoreScreeningAssessmentObservationCategory (required)
+* category[screening-assessment][sdoh] ^short = "screening-assessment code of 'sdoh' required and others allowed as part of 'screening-assessment' slice."
+
+
 // * category[SocialHistory] = $observation-category#social-history
 // * category[SocialHistory] ^requirements = "Used for filtering social history observations."
 // * category[Survey] = $observation-category#survey
@@ -32,11 +44,11 @@ Description: "Profile for observations that represent question and answer pairs 
 // * category[screening-assessment] from USCoreScreeningAssessmentObservationCategory (required)
 // * category[screening-assessment] ^definition = "Categories that a provider may use in their workflow to classify that this Observation is related to a USCDI Health Status/Assessments Data Class."
 // * category[screening-assessment] ^requirements = "Used for filtering the type of screening or assessment observation."
-* category[SDOH] from SDOHCCValueSetSDOHCategory (required)
-* category[SDOH] ^short = "e.g., food-insecurity | transportation-insecurity"
-* category[SDOH] ^definition = "An SDOH category assigned to the observation."
-* category[SDOH] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to an observation. It is recommended that SDOH category codes be used to facilitate searching for SDOH observations."
-* category[SDOH] ^binding.description = "Codes for high-level SDOH categories."
+* category[SDOHCC] from SDOHCCValueSetSDOHCategory (required)
+* category[SDOHCC] ^short = "e.g., food-insecurity | transportation-insecurity"
+* category[SDOHCC] ^definition = "An SDOH category assigned to the observation."
+* category[SDOHCC] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to an observation. It is recommended that SDOH category codes be used to facilitate searching for SDOH observations."
+* category[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
 * code MS
 * code from USCoreSurveyCodes (required)
 * code ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation."
