@@ -227,7 +227,6 @@ v: {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -251,7 +250,6 @@ v: {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -276,7 +274,6 @@ v: {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -300,7 +297,6 @@ v: {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -325,7 +321,6 @@ v: {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -349,10 +344,23 @@ v: {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
 
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm"
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from http://tx.fhir.org/r4: The value set '' expansion has too many codes to display (>10000)"
 }
 -------------------------------------------------------------------------------------

@@ -3,5 +3,15 @@
   "http://loinc.org/vs/LL6134-2" : null,
   "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1196.178" : null,
   "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.253" : null,
-  "http://loinc.org/vs/LL3323-4" : null
+  "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.266" : null,
+  "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.257" : null,
+  "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.268" : null,
+  "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.258" : null,
+  "http://cts.nlm.nih.gov/fhir/ValueSet//2.16.840.1.113762.1.4.1247.272" : null,
+  "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.269" : null,
+  "http://loinc.org/vs/LL3323-4" : null,
+  "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.271" : null,
+  "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.260" : null,
+  "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.261" : null,
+  "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.262" : null
 }
