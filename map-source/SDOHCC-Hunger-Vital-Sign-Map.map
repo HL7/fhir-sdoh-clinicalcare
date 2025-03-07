@@ -17,7 +17,7 @@ group sdohMapping(source src : questionnaireResponse, target bundle : Bundle) {
   src -> bundle.id = 'SDOHCC-BundleHungerVitalSignExample' "bundleId";
   src -> bundle.type = 'transaction' "bundleType";
 
-  //for each 'key' answer item in the questionnareResponse, create an Observation
+  //for each 'key' answer item in the questionnaireResponse, create an Observation
   src.item as answerItem3 where linkId = '/88124-3' -> bundle.entry as entry, entry.resource = create('Observation') as observation3 then 
     TransformObservation(src, answerItem3, observation3, entry); 
 

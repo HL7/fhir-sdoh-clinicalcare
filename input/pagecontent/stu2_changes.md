@@ -79,7 +79,7 @@ Updated Profiles (FHIR-34236)
 
 * [SDOHCC Condition](StructureDefinition-SDOHCC-Condition.html) (FHIR-34243)
 
-- - Changed Condition.code value set to use [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html) value set.
+- - Changed `Condition.code` value set to use [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html) value set.
 
 - - Added guidance on use of SDOH value sets
 
@@ -166,7 +166,7 @@ Added CapabilityStatement
 * [STU2 Changes](stu2_changes.html) – this page
 * Functional Use Cases – added Patient/Client use case (FHIR-34255) (FHIR-34255)
 * Support for Multiple Domains – added support for VSAC group value sets (FHIR-34236)
-* Exchange Workflow] – added new workflow for Patient/Client and CBO applications (FHIR-34255) (FHIR-34256)
+* Exchange Workflow – added new workflow for Patient/Client and CBO applications (FHIR-34255) (FHIR-34256)
 * Synchronizing Applications with API Data Sources -- new (FHIR-34255)
 * FHIR Artifacts Overview – updated to refer to new or changed artifacts
 * [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)-- new (FHIR-34339)

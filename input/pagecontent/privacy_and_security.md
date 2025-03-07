@@ -8,7 +8,7 @@ Entities covered under a BAA may be able to receive Protected Health Information
 
  In this version of the IG, we are providing a [profile of the FHIR Consent resource][SDOHCCConsent]  that can be exchanged between a [Covered Entity](https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html) and a [Business Associate (BA)](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html) when the patient has authorized the BA to release their information to a non-HIPAA covered entity.  The BA can use the provided consent in lieu of obtaining consent directly from the patient, reducing burden on the patient and BA.  Exchanging the consent obtained by the referring party is therefore a convenience, not a requirement.  While this is not a complete treatment of the issues related to consent, it is a starting point to test the viability of exchanging consent information.
 
- The Consent is referenced indirectly (via ServiceRequest) from the [SDOHCC Task For Referral Management] that is exchanged as part of the referral, and can be retrieved by the referral recipient through FHIR queries.   These relationships are shown in [Data Modeling Framework].
+ The Consent is referenced indirectly (via ServiceRequest) from the [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html) that is exchanged as part of the referral, and can be retrieved by the referral recipient through FHIR queries.   These relationships are shown in [Data Modeling Framework](sdoh_clinical_care_scope.html#data-modeling-framework).
 
 ### Statutes, Regulations, and Guiding Principles
 All implementations of the SDOH ClinicalCare FHIR Implementation Guide (IG)
@@ -30,7 +30,7 @@ As of May 2020, ONC has elected to not require either Data Labeling or Consent D
 
 At present there is no explicit regulatory requirement for the use of these technologies.
 
-However, to meet the statutes, regulations, and guiding principles above, consent directives and security labels MAY be considered and used.
+However, to meet the statutes, regulations, and guiding principles above, consent directives and security labels **MAY** be considered and used.
 
 Organizations which plan to take advantage of these additional capabilities are responsible for negotiating support for these mechanisms between trading partners. The FHIR implementation guide defining the recommended standard is the [FHIR Data Segmentation for Privacy IG](http://hl7.org/fhir/uv/security-label-ds4p/).
 

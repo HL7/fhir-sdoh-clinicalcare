@@ -1,11 +1,11 @@
 
-Systems claiming to conform to a profile SHALL support the elements in a profile as defined below: This guide adopts the following definitions of MustSupport for all direct transactions between the Sending and Receiving Systems
+Systems claiming to conform to a profile **SHALL** support the elements in a profile as defined below: This guide adopts the following definitions of MustSupport for all direct transactions between the Sending and Receiving Systems
 
 **All Sending Systems**
 
 Sending Systems are defined as: 1) Provider Systems, 2) Payer Systems, and 3) Coordination Platforms
 * The Sending System **SHALL** provide the capability for the user to enter, select, or otherwise cause to be populated all elements marked as MustSupport.
-* The Sending System **SHALL** populate all elements with a MustSupport flag if the information exists and patient consent and receiver permissions allow.  A system SHALL be able to demonstrate transmission of all MustSupport elements.
+* The Sending System **SHALL** populate all elements with a MustSupport flag if the information exists and patient consent and receiver permissions allow.  A system **SHALL** be able to demonstrate transmission of all MustSupport elements.
 * The Sending System **SHALL NOT** include a data element in the resource instance if the cardinality is 0..n and the information for that particular data element is not present.
 * Where elements have a lower cardinality of one or more, instances complying with those profiles **SHALL** include the element. Where the profile includes explicit support for an extension, such as [dataAbsentReason], then the extension may be sent without providing a value or child elements.  If no extension is explicitly defined in the profile then, unless the profile is derived from US Core (which has laxer rules), the expectation in this IG is that the element **SHALL** have a value or standard child elements and sending an extension instead is not compliant.
 

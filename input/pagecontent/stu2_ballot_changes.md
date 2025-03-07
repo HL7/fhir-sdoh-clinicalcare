@@ -82,7 +82,7 @@ Updated Profiles [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233)
 
 * [SDOHCC Condition](StructureDefinition-SDOHCC-Condition.html) [FHIR-34243](https://jira.hl7.org/browse/FHIR-34243)
 
-- - Changed Condition.code value set to use [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html) value set.
+- - Changed `Condition.code` value set to use [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html) value set.
 
 - - Added guidance on use of SDOH value sets
 
@@ -158,7 +158,7 @@ Added CapabilityStatement
 * Support for Multiple Domains – added support for VSAC group value sets [FHIR-34236](https://jira.hl7.org/browse/FHIR-34236)
 * Exchange Workflow – added new workflow for Patient/Client and CBO applications [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255), [FHIR-34256](https://jira.hl7.org/browse/FHIR-34256)
 * [Connecting Applications with API Data Sources](connecting_applications_with_api_data_sources.html) -- new [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255)
-* FHIR Artifacts Overview[artifacts.html] – updated to refer to new or changed artifacts
+* [FHIR Artifacts Overview](artifacts.html) – updated to refer to new or changed artifacts
 * [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)-- new [FHIR-34339](https://jira.hl7.org/browse/FHIR-34239)
 
 

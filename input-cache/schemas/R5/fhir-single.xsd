@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Sat, Mar 1, 2025 06:05+0000 for FHIR v6.0.0-ballot2 
+  Generated on Thu, Mar 6, 2025 19:46+0000 for FHIR v6.0.0-ballot2 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="6.0.0-ballot2">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -5216,573 +5216,6 @@
     <xs:complexContent>
        <xs:extension base="Element">
          <xs:attribute name="value" type="NoteTypeEnum" use="optional"/>
-       </xs:extension>
-     </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="FinancialResourceStatusCodesEnum">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="DELETE_MULTIPLE_MATCHES">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Error: Multiple matches exist for the conditional delete</xs:documentation>
-          <xs:documentation xml:lang="nl">Fout: er is meer dan één resultaat voor de conditionele delete</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_AUTH_REQUIRED">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">You must authenticate before you can use this service</xs:documentation>
-          <xs:documentation xml:lang="it">Autenticazione richiesta prima di usare questo servizio</xs:documentation>
-          <xs:documentation xml:lang="pl">Wymagana autentykacja przed użyciem tego serwisu</xs:documentation>
-          <xs:documentation xml:lang="fr">Vous devez être authentifié avant de pouvoir utiliser ce service</xs:documentation>
-          <xs:documentation xml:lang="nl">U moet zich authenticeren voor gebruik van deze service</xs:documentation>
-          <xs:documentation xml:lang="zh">使用此服务前需认证</xs:documentation>
-          <xs:documentation xml:lang="es">Debe autenticarse antes de poder usar este servicio</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_BAD_FORMAT">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Bad Syntax: &quot;%s&quot; must be a %s'</xs:documentation>
-          <xs:documentation xml:lang="ru">Неверный синтакс: &quot;%s&quot; должен быть %s</xs:documentation>
-          <xs:documentation xml:lang="it">Sintassi Errata: &quot;%s&quot; deve essere un %s'</xs:documentation>
-          <xs:documentation xml:lang="pl">Błąd składni: &quot;%s&quot; powinno być %s'</xs:documentation>
-          <xs:documentation xml:lang="fr">Erreur de Syntaxe : &quot;%s&quot; doit être un %s</xs:documentation>
-          <xs:documentation xml:lang="nl">Verkeerde syntax: &quot;%s&quot; moet een %s zijn</xs:documentation>
-          <xs:documentation xml:lang="zh">句法错误: &quot;%s&quot; 必须是一个 %s'</xs:documentation>
-          <xs:documentation xml:lang="es">Sintaxis Incorrecta: &quot;%s&quot; debe de ser un %s'</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_BAD_SYNTAX">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Bad Syntax in %s</xs:documentation>
-          <xs:documentation xml:lang="ru">Неверный синтакс: %s</xs:documentation>
-          <xs:documentation xml:lang="it">Sintassi errata in %s</xs:documentation>
-          <xs:documentation xml:lang="pl">Błąd składni w %s</xs:documentation>
-          <xs:documentation xml:lang="fr">Erreur de Syntaxe dans %s</xs:documentation>
-          <xs:documentation xml:lang="nl">Verkeerde syntax in %s</xs:documentation>
-          <xs:documentation xml:lang="zh">%s 中句法错误</xs:documentation>
-          <xs:documentation xml:lang="es">Sintaxis Incorrecta en %s</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_CANT_PARSE_CONTENT">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Unable to parse feed (entry content type = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="it">Impossibile effettuare il parsing del feed (tipo del contenuto della entry = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="pl">Błąd parsowania (typ zawartości wejściowej = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="fr">Impossible d'analyser le flux (type de contenu de l'entrée = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="nl">Kan feed niet verwerken (contenttype inhoud = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="zh">无法解析feed (条目的内容类型 = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="es">No se pudo parsear el feed (el tipo de contenido de la entry = &quot;%s&quot;)</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_CANT_PARSE_ROOT">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Unable to parse feed (root element name = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="ru">Не удалось разобрать данные (корневой элемент = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="it">Impossibile effettuare il parsing del feed (nome elemento root = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="pl">Błąd parsowania (nazwa elementu root = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="fr">Impossible d'analyser le flux (nom de l'élément racine = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="nl">Kan feed niet verwerken (rootelementnaam = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="zh">无法解析feed (根元素名 = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="es">No se pudo parsear el feed (nombre del elemento raiz = &quot;%s&quot;)</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_CREATED">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">New resource created</xs:documentation>
-          <xs:documentation xml:lang="nl">Nieuwe resource gemaakt</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_DATE_FORMAT">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">The Date value %s is not in the correct format (Xml Date Format required)</xs:documentation>
-          <xs:documentation xml:lang="ru">Значение Date %s в неверном формате (требуется Xml Date формат)</xs:documentation>
-          <xs:documentation xml:lang="it">Il valore %s per la data non è nel formato corretto (richiesto il Formato Data        Xml)</xs:documentation>
-          <xs:documentation xml:lang="pl">Niepoprawny format wartości daty %s (wymagany format XML)</xs:documentation>
-          <xs:documentation xml:lang="fr">Le format de la date %s est incorrect (format Date Xml attendu)</xs:documentation>
-          <xs:documentation xml:lang="nl">De Datum-waarde %s heeft niet de juiste structuur (Xml Date vereist)</xs:documentation>
-          <xs:documentation xml:lang="zh">日期的值 %s 格式不正确 (要求是Xml Date格式)</xs:documentation>
-          <xs:documentation xml:lang="es">El valor de la fecha %s no está en el formato correcto (se requiere un formato        de fecha Xml)</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_DELETED">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">This resource has been deleted</xs:documentation>
-          <xs:documentation xml:lang="ru">Данный ресурс был удалён</xs:documentation>
-          <xs:documentation xml:lang="it">Questa risorsa è stata cancellata</xs:documentation>
-          <xs:documentation xml:lang="pl">Ten zasób został usunięty</xs:documentation>
-          <xs:documentation xml:lang="fr">La ressource a été supprimée</xs:documentation>
-          <xs:documentation xml:lang="nl">Deze resource is verwijderd</xs:documentation>
-          <xs:documentation xml:lang="zh">该资源已删除</xs:documentation>
-          <xs:documentation xml:lang="es">Este recurso ha sido borrado</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_DELETED_DONE">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Resource deleted</xs:documentation>
-          <xs:documentation xml:lang="ru">Ресурс удалён</xs:documentation>
-          <xs:documentation xml:lang="it">Risorsa cancellata</xs:documentation>
-          <xs:documentation xml:lang="pl">Zasób usunięto</xs:documentation>
-          <xs:documentation xml:lang="fr">Ressource supprimée</xs:documentation>
-          <xs:documentation xml:lang="nl">Resource verwijderd</xs:documentation>
-          <xs:documentation xml:lang="zh">资源已删除</xs:documentation>
-          <xs:documentation xml:lang="es">Recurso borrado</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_DELETED_ID">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">The resource &quot;%s&quot; has been deleted</xs:documentation>
-          <xs:documentation xml:lang="ru">Ресурс &quot;%s&quot; был удалён</xs:documentation>
-          <xs:documentation xml:lang="it">La risorsa &quot;%s&quot; è stata eliminata</xs:documentation>
-          <xs:documentation xml:lang="pl">Zasób &quot;%s&quot; został usunięty</xs:documentation>
-          <xs:documentation xml:lang="fr">La ressource &quot;%s&quot; a été supprimée</xs:documentation>
-          <xs:documentation xml:lang="nl">De resource &quot;%s&quot; is verwijderd</xs:documentation>
-          <xs:documentation xml:lang="zh">资源 &quot;%s&quot; 已被删除</xs:documentation>
-          <xs:documentation xml:lang="es">El recurso &quot;%s&quot; ha sido borrado</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_DUPLICATE_ID">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Duplicate Id %s for resource type %s</xs:documentation>
-          <xs:documentation xml:lang="ru">Дублирующий Id %s для типа ресурса %s</xs:documentation>
-          <xs:documentation xml:lang="it">Id %s duplicato per il tipo di risorsa %s</xs:documentation>
-          <xs:documentation xml:lang="pl">Zdublowany identyfikator %s dla zasobu typu %s</xs:documentation>
-          <xs:documentation xml:lang="fr">Id %s en double pour le type de ressource %s</xs:documentation>
-          <xs:documentation xml:lang="nl">Duplicaat-id %s voor resourcetype %s</xs:documentation>
-          <xs:documentation xml:lang="zh">ID %s 重复（资源类型 %s）</xs:documentation>
-          <xs:documentation xml:lang="es">Id %s duplicada para el recurso de tipo %s</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_ERROR_PARSING">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Error parsing resource Xml (%s)</xs:documentation>
-          <xs:documentation xml:lang="ru">Ошибка синтаксического разбора ресурса Xml (%s)</xs:documentation>
-          <xs:documentation xml:lang="it">Errore nel parsing della risorsa Xml (%s)</xs:documentation>
-          <xs:documentation xml:lang="pl">Błąd w trakcie parsowania zasobu XML (%s)</xs:documentation>
-          <xs:documentation xml:lang="fr">Erreur d'analyse de la ressource Xml (%s)</xs:documentation>
-          <xs:documentation xml:lang="nl">Fout in verwerking resource Xml (%s)</xs:documentation>
-          <xs:documentation xml:lang="zh">解析资源Xml时出错 (%s)</xs:documentation>
-          <xs:documentation xml:lang="es">Error parseando el recurso Xml (%s)</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_ID_INVALID">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Id &quot;%s&quot; has an invalid character &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="ru">Id &quot;%s&quot; содержит недопустимые символы &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="it">L''Id &quot;%s&quot; ha un carattere non valido: &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="pl">Identyfikator &quot;%s&quot; zawiera niepoprawny znak &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="fr">Id &quot;%s&quot; possède un caractère invalide &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="nl">Id &quot;%s&quot; heeft een ongeldig teken &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="zh">ID &quot;%s&quot; 带有非法字符: &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="es">El Id &quot;%s&quot; contiene el caracter inválido &quot;%s&quot;</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_ID_TOO_LONG">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Id &quot;%s&quot; too long (length limit 36)</xs:documentation>
-          <xs:documentation xml:lang="ru">Недопустимая длина Id &quot;%s&quot; (ограничение 36)</xs:documentation>
-          <xs:documentation xml:lang="it">Id &quot;%s&quot; troppo lunga (limite di lunghezza: 36)</xs:documentation>
-          <xs:documentation xml:lang="pl">Identyfikator &quot;%s&quot; jest zbyt długi (limit długości 36)</xs:documentation>
-          <xs:documentation xml:lang="fr">Id &quot;%s&quot; trop long (la longueur limite est 36)</xs:documentation>
-          <xs:documentation xml:lang="nl">Id &quot;%s&quot; te lang (max lengte 36)</xs:documentation>
-          <xs:documentation xml:lang="zh">Id &quot;%s&quot; 过长 (长度限制: 36)</xs:documentation>
-          <xs:documentation xml:lang="es">El Id &quot;%s&quot; es demasiado largo (limite de longitud: 36)</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_INVALID_ID">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Id not accepted</xs:documentation>
-          <xs:documentation xml:lang="ru">Id не принято</xs:documentation>
-          <xs:documentation xml:lang="it">Id non accettato</xs:documentation>
-          <xs:documentation xml:lang="pl">Identyfikator nie zaakceptowany</xs:documentation>
-          <xs:documentation xml:lang="fr">Id non accepté</xs:documentation>
-          <xs:documentation xml:lang="nl">Id niet geaccepteerd</xs:documentation>
-          <xs:documentation xml:lang="zh">Id不被接受</xs:documentation>
-          <xs:documentation xml:lang="es">Id no aceptada</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_JSON_OBJECT">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Json Source for a resource should start with an object</xs:documentation>
-          <xs:documentation xml:lang="ru">Json Source для ресурса должен начинаться с объекта</xs:documentation>
-          <xs:documentation xml:lang="it">Il sorgente Json di una risorsa dovrebbe iniziare con un oggetto</xs:documentation>
-          <xs:documentation xml:lang="pl">Źródło json dla zasobu powinno rozpoczynać się od obiektu</xs:documentation>
-          <xs:documentation xml:lang="fr">La source Json pour une ressource doit commencer par un objet</xs:documentation>
-          <xs:documentation xml:lang="nl">Json Source van een resource moeten beginnen met een object</xs:documentation>
-          <xs:documentation xml:lang="zh">资源的Json源应以一个object开始</xs:documentation>
-          <xs:documentation xml:lang="es">La fuente Json para un recurso debería empezar con un objeto</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_LOCAL_FAIL">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Unable to resolve local reference to resource %s</xs:documentation>
-          <xs:documentation xml:lang="ru">Невозможно определить локальную ссылку на ресурс %s</xs:documentation>
-          <xs:documentation xml:lang="it">Impossibile risolvere il riferimento locale alla risorsa %s</xs:documentation>
-          <xs:documentation xml:lang="pl">Zasób wskazywany przez loklaną referencję %s nie został odnaleziony</xs:documentation>
-          <xs:documentation xml:lang="fr">Impossible de résourdre la référence locale à la ressource %s</xs:documentation>
-          <xs:documentation xml:lang="nl">De resource met lokale referentie %s is niet gevonden</xs:documentation>
-          <xs:documentation xml:lang="zh">无法解析对资源 %s 的本地引用</xs:documentation>
-          <xs:documentation xml:lang="es">Imposible resolver la referencia al recurso %s</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_NO_EXIST">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Resource Id &quot;%s&quot; does not exist</xs:documentation>
-          <xs:documentation xml:lang="ru">Ресурс Id &quot;%s&quot; не существует</xs:documentation>
-          <xs:documentation xml:lang="it">La risorsa con Id &quot;%s&quot; non esiste</xs:documentation>
-          <xs:documentation xml:lang="pl">Zasób o identyfikatorze &quot;%s&quot; nie istnieje</xs:documentation>
-          <xs:documentation xml:lang="fr">La ressource avec l'Id &quot;%s&quot; n'existe pas</xs:documentation>
-          <xs:documentation xml:lang="nl">Resource-id &quot;%s&quot; bestaat niet</xs:documentation>
-          <xs:documentation xml:lang="zh">资源Id &quot;%s&quot;不存在</xs:documentation>
-          <xs:documentation xml:lang="es">El recurso con Id &quot;%s&quot; no existe</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_NO_MATCH">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">No Resource found matching the query &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="it">Nessuna Risorsa soddisfa la query &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="nl">Geen resource gevonden met query &quot;%s&quot;</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_NO_MODULE">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">No module could be found to handle the request &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="ru">Модуль для обработки запроса &quot;%s&quot; не найден</xs:documentation>
-          <xs:documentation xml:lang="it">Impossibile trovare un modulo per gestire la richiesta &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="pl">Nie można odnaleźć modułu, aby obsłużyć żądanie &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="fr">Aucun module disponible pour traiter la requête &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="nl">Er kon geen module worden gevonden om verzoek &quot;%s&quot; te verwerken</xs:documentation>
-          <xs:documentation xml:lang="zh">无法找到处理请求&quot;%s&quot;的模块</xs:documentation>
-          <xs:documentation xml:lang="es">No se encontró un modulo que gestione la petición &quot;%s&quot;</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_NO_SUMMARY">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">No Summary for this resource</xs:documentation>
-          <xs:documentation xml:lang="ru">Отсутствует Summary для данного ресурса</xs:documentation>
-          <xs:documentation xml:lang="it">Nessun riepilogo per questa risorsa</xs:documentation>
-          <xs:documentation xml:lang="pl">Brak podsumowania (Summary) dla tego zasobu</xs:documentation>
-          <xs:documentation xml:lang="fr">Aucun résumé disponible pour cette ressource</xs:documentation>
-          <xs:documentation xml:lang="nl">Geen samenvatting voor deze resource</xs:documentation>
-          <xs:documentation xml:lang="zh">该资源无summary</xs:documentation>
-          <xs:documentation xml:lang="es">No existe un resumen para este recurso</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_OP_NOT_ALLOWED">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Operation %s not allowed for resource %s (due to local configuration)</xs:documentation>
-          <xs:documentation xml:lang="ru">Операция %s недопустима для ресурса %s (по причине локальной конфигурации)</xs:documentation>
-          <xs:documentation xml:lang="it">Operazione %s non consentita per la risorsa %s (a causa di configurazioni locali)</xs:documentation>
-          <xs:documentation xml:lang="pl">Niedozwolona operacja %s dla zasobu %s (ze względu na lokalną konfigurację)</xs:documentation>
-          <xs:documentation xml:lang="fr">L'opération %s n'est pas permise pour la ressource %s (à cause de la configuration        locale)</xs:documentation>
-          <xs:documentation xml:lang="nl">Bewerking %s niet toegestaan voor resource %s (vanwege lokale configuratie)</xs:documentation>
-          <xs:documentation xml:lang="zh">操作 %s 不允许，对于资源 %s (由于本地配置)</xs:documentation>
-          <xs:documentation xml:lang="es">Operación %s no permitida para el recurso %s (debido a la configuración local)</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_PARAM_CHAINED">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Unknown chained parameter name &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="ru">Неизвестое вложенное наименование параметра &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="it">Nome di parametro concatenato sconosciuto: &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="pl">Nieznana nazwa parametru powiązanego &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="fr">Nom du paramètre chainé inconnu : &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="nl">Onbekende geschakelde parameternaam &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="zh">未知的链式参数名: &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="es">Nombre de parametro encadenado desconocido: &quot;%s&quot;</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_PARAM_INVALID">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Parameter &quot;%s&quot; content is invalid</xs:documentation>
-          <xs:documentation xml:lang="it">Il contenuto del Parametro &quot;%s&quot; non è valido</xs:documentation>
-          <xs:documentation xml:lang="nl">Waarde van parameter &quot;%s&quot; is ongeldig</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_PARAM_MODIFIER_INVALID">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Parameter &quot;%s&quot; modifier is invalid</xs:documentation>
-          <xs:documentation xml:lang="nl">Modifier van parameter &quot;%s&quot; is ongeldig</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_PARAM_NO_REPEAT">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Parameter &quot;%s&quot; is not allowed to repeat</xs:documentation>
-          <xs:documentation xml:lang="ru">Параметр &quot;%s&quot; не может быть повторён</xs:documentation>
-          <xs:documentation xml:lang="it">Non � consentito ripetere il parametro &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="pl">Parametr &quot;%s&quot; nie może zostać powtórzony</xs:documentation>
-          <xs:documentation xml:lang="fr">Le paramètre &quot;%s&quot; ne peut pas être répété</xs:documentation>
-          <xs:documentation xml:lang="nl">Parameter &quot;%s&quot; mag niet herhalen</xs:documentation>
-          <xs:documentation xml:lang="zh">参数&quot;%s&quot;不可重复</xs:documentation>
-          <xs:documentation xml:lang="es">No se permite la repetición del parámetro &quot;%s&quot;</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_PARAM_UNKNOWN">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Parameter &quot;%s&quot; not understood</xs:documentation>
-          <xs:documentation xml:lang="ru">Параметр &quot;%s&quot; не понят</xs:documentation>
-          <xs:documentation xml:lang="it">Parametro &quot;%s&quot; non riconosciuto</xs:documentation>
-          <xs:documentation xml:lang="pl">Niezrozumiały parametr &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="fr">Paramètre &quot;%s&quot; non reconnu</xs:documentation>
-          <xs:documentation xml:lang="nl">Parameter &quot;%s&quot; onbekend</xs:documentation>
-          <xs:documentation xml:lang="zh">无法理解参数&quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="es">Parámetro &quot;%s&quot; no reconocido</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_REMOTE_FAIL">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Unable to resolve local reference to resource %s</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_RESOURCE_EXAMPLE_PROTECTED">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Resources with identity &quot;example&quot; cannot be deleted (for testing/training      purposes)</xs:documentation>
-          <xs:documentation xml:lang="ru">Ресурс с идентификатором &quot;example&quot; не может быть удалён (для случаев        тестирования/обучения)</xs:documentation>
-          <xs:documentation xml:lang="it">Le Risorse aventi l'identità &quot;example&quot; non possono essere cancellate        (per finalità di test/formazione)</xs:documentation>
-          <xs:documentation xml:lang="pl">Zasoby oznaczone jako &quot;example&quot; nie mogą zostać usunięte (dla celów testów/szkoleń)</xs:documentation>
-          <xs:documentation xml:lang="fr">Les ressources ayant l'identité &quot;example&quot; ne peuvent pas être supprimées        (utilisées pour les tests/formations)</xs:documentation>
-          <xs:documentation xml:lang="nl">Resources met identiteit &quot;voorbeeld&quot; kunnen niet worden verwijderd (ten        behoeve van testen/training)</xs:documentation>
-          <xs:documentation xml:lang="zh">以&quot;example&quot; 为ID的资源不能被删除 (用于测试/培训)</xs:documentation>
-          <xs:documentation xml:lang="es">Recursos con la identidad &quot;example&quot; no pueden ser borrados (son usados        para pruebas/entrenamiento)</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_RESOURCE_ID_FAIL">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">unable to allocate resource id</xs:documentation>
-          <xs:documentation xml:lang="ru">невозможно выделить идентификатор ресурса</xs:documentation>
-          <xs:documentation xml:lang="it">impossibile allocare l''id della risorsa</xs:documentation>
-          <xs:documentation xml:lang="pl">nie można nadać identyfikatora zasobu</xs:documentation>
-          <xs:documentation xml:lang="fr">impossible d'allouer l'id de la ressource</xs:documentation>
-          <xs:documentation xml:lang="nl">kan geen resource-id reserveren</xs:documentation>
-          <xs:documentation xml:lang="zh">无法分配资源ID</xs:documentation>
-          <xs:documentation xml:lang="es">imposible encontrar el id del recurso</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_RESOURCE_ID_MISMATCH">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Resource Id Mismatch</xs:documentation>
-          <xs:documentation xml:lang="fr">Problème de correspondance d'Id de la Ressource</xs:documentation>
-          <xs:documentation xml:lang="nl">Resource ID's komen niet overeen</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_RESOURCE_ID_MISSING">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Resource Id Missing</xs:documentation>
-          <xs:documentation xml:lang="it">Id della Risorsa mancante</xs:documentation>
-          <xs:documentation xml:lang="fr">Id de la Ressource manquante</xs:documentation>
-          <xs:documentation xml:lang="nl">Resource ID ontbreekt</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_RESOURCE_NOT_ALLOWED">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Not allowed to submit a resource for this operation</xs:documentation>
-          <xs:documentation xml:lang="ru">Для данной операции отправка ресурса недопустима</xs:documentation>
-          <xs:documentation xml:lang="it">Non è consentito sottomettere una risorsa per questa operazione</xs:documentation>
-          <xs:documentation xml:lang="pl">Nie można zgłosić zasobu dla tej operacji</xs:documentation>
-          <xs:documentation xml:lang="fr">Non autorisé à soumettre une ressource pour cette opération</xs:documentation>
-          <xs:documentation xml:lang="nl">Niet toegestaan om een resource in te dienen voor deze bewerking</xs:documentation>
-          <xs:documentation xml:lang="zh">该操作不允许提交资源</xs:documentation>
-          <xs:documentation xml:lang="es">No se permite el envío de un recurso para esta operación</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_RESOURCE_REQUIRED">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">A resource is required</xs:documentation>
-          <xs:documentation xml:lang="ru">Требуется ресурс</xs:documentation>
-          <xs:documentation xml:lang="it">E'' richiesta una risorsa</xs:documentation>
-          <xs:documentation xml:lang="pl">Zasób jest wymagany</xs:documentation>
-          <xs:documentation xml:lang="fr">Une ressource est requise</xs:documentation>
-          <xs:documentation xml:lang="nl">Een resource is verplicht</xs:documentation>
-          <xs:documentation xml:lang="zh">必须提供一个资源</xs:documentation>
-          <xs:documentation xml:lang="es">Se requiere un recurso</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_RESOURCE_TYPE_MISMATCH">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Resource Type Mismatch</xs:documentation>
-          <xs:documentation xml:lang="ru">Несоответствие типа ресурса</xs:documentation>
-          <xs:documentation xml:lang="it">Tipo Risorsa non corrispondente</xs:documentation>
-          <xs:documentation xml:lang="pl">Niepoprawny typ zasobu</xs:documentation>
-          <xs:documentation xml:lang="fr">Type de ressource incorrect</xs:documentation>
-          <xs:documentation xml:lang="nl">Verkeerd resourcetype</xs:documentation>
-          <xs:documentation xml:lang="zh">资源类型不匹配</xs:documentation>
-          <xs:documentation xml:lang="es">Los Tipos de los recursos no coinciden</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_SORT_UNKNOWN">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Unknown sort parameter name &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="ru">Неизвестное имя параметра сортировки &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="it">Nome del parametro di ordinamento &quot;%s&quot; non riconosciuto</xs:documentation>
-          <xs:documentation xml:lang="pl">Nieznany parametr sortowania &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="fr">Nom du paramètre de tri inconnu &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="nl">Onbekende parameternaam &quot;%s&quot; voor sortering</xs:documentation>
-          <xs:documentation xml:lang="zh">未知的排序参数名称&quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="es">Nombre del parámetro de ordenación &quot;%s&quot; desconocido</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_TRANSACTION_DUPLICATE_ID">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Duplicate Identifier in transaction: %s</xs:documentation>
-          <xs:documentation xml:lang="ru">Дублирующий идентификатор в транзакции: %s</xs:documentation>
-          <xs:documentation xml:lang="pl">Zdublowany identyfikator w transakcji: %s</xs:documentation>
-          <xs:documentation xml:lang="fr">Identifiant en double dans la transaction : %s</xs:documentation>
-          <xs:documentation xml:lang="nl">Dubbele identificatie in transactie: %s</xs:documentation>
-          <xs:documentation xml:lang="zh">事务中存在重复Id: %s</xs:documentation>
-          <xs:documentation xml:lang="es">Identificador duplicado en la transacción: %s</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_TRANSACTION_MISSING_ID">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Missing Identifier in transaction - an entry.id must be provided</xs:documentation>
-          <xs:documentation xml:lang="ru">Отсутствует идентификатор в транзакции - требуется entry.id</xs:documentation>
-          <xs:documentation xml:lang="pl">Brak identyfikatora w transakcji - należy podać entry.id</xs:documentation>
-          <xs:documentation xml:lang="fr">Identifiant manquant dans la transaction - un élément entry.id doit être fourni</xs:documentation>
-          <xs:documentation xml:lang="nl">Ontbrekende identificatie in transactie - entry.id is verplicht</xs:documentation>
-          <xs:documentation xml:lang="zh">事务中缺少Id - 必须提供一个entry.id</xs:documentation>
-          <xs:documentation xml:lang="es">Identificador de la transacción no encontrado - se debe proporcionar un entry.id</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_UNHANDLED_NODE_TYPE">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Unhandled xml node type &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="ru">Не обработанный xml узел &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="it">Tipo di nodo Xml non gestito &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="pl">Nieobsługiwany typ węzła XML &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="fr">Type de noeud xml &quot;%s&quot; non traité</xs:documentation>
-          <xs:documentation xml:lang="nl">Kan xml nodetype &quot;%s&quot; niet verwerken</xs:documentation>
-          <xs:documentation xml:lang="zh">未处理的XML节点类型&quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="es">Tipo de nodo Xml no soportado &quot;%s&quot;</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_UNKNOWN_CONTENT">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Unknown Content (%s) at %s</xs:documentation>
-          <xs:documentation xml:lang="ru">Неизвестный контент (%s) в %s</xs:documentation>
-          <xs:documentation xml:lang="it">Contenuto Sconosciuto (%s) at %s</xs:documentation>
-          <xs:documentation xml:lang="pl">Nieznana zawartość (%s) dla %s</xs:documentation>
-          <xs:documentation xml:lang="fr">Contenu inconnu (%s) à %s</xs:documentation>
-          <xs:documentation xml:lang="nl">Onbekende content (%s) at %s</xs:documentation>
-          <xs:documentation xml:lang="zh">未知内容 (%s) 位于 %s</xs:documentation>
-          <xs:documentation xml:lang="es">Contenido desconocido (%s) en %s</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_UNKNOWN_OPERATION">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">unknown FHIR http operation</xs:documentation>
-          <xs:documentation xml:lang="ru">неизвестная операция FHIR http</xs:documentation>
-          <xs:documentation xml:lang="it">operazione http FHIR sconosciuta</xs:documentation>
-          <xs:documentation xml:lang="pl">nieznana operacja FHIR http</xs:documentation>
-          <xs:documentation xml:lang="fr">operation http FHIR inconnue</xs:documentation>
-          <xs:documentation xml:lang="nl">onbekende FHIR http operation</xs:documentation>
-          <xs:documentation xml:lang="zh">未知的FHIR HTTP操作</xs:documentation>
-          <xs:documentation xml:lang="es">Operación http FHIR desconocida</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_UNKNOWN_TYPE">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Resource Type &quot;%s&quot; not recognised</xs:documentation>
-          <xs:documentation xml:lang="ru">Тип ресурса &quot;%s&quot; не распознан</xs:documentation>
-          <xs:documentation xml:lang="it">Tipo di Risorsa &quot;%s&quot; non riconosciuto</xs:documentation>
-          <xs:documentation xml:lang="pl">Nie rozpoznany typ zasobu: &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="fr">Type de ressource &quot;%s&quot; non reconnu</xs:documentation>
-          <xs:documentation xml:lang="nl">Resourcetype &quot;%s&quot; niet herkend</xs:documentation>
-          <xs:documentation xml:lang="zh">资源类型&quot;%s&quot;未识别</xs:documentation>
-          <xs:documentation xml:lang="es">Tipo de Recurso &quot;%s&quot; no reconocido</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_UPDATED">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">existing resource updated</xs:documentation>
-          <xs:documentation xml:lang="ru">существующий ресурс обновлён</xs:documentation>
-          <xs:documentation xml:lang="it">risorsa esistente aggiornata</xs:documentation>
-          <xs:documentation xml:lang="pl">uaktualniono istniejący zasób</xs:documentation>
-          <xs:documentation xml:lang="fr">ressource existante mise à jour</xs:documentation>
-          <xs:documentation xml:lang="nl">bestaande resource updated</xs:documentation>
-          <xs:documentation xml:lang="zh">已有资源被更新</xs:documentation>
-          <xs:documentation xml:lang="es">Recurso existente actualizado</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_VERSION_AWARE">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Version aware updates are required for this resource</xs:documentation>
-          <xs:documentation xml:lang="ru">Для данного ресурса необходимы обновления с учётом версии</xs:documentation>
-          <xs:documentation xml:lang="it">Questa risorsa richiede aggiornamenti per versione</xs:documentation>
-          <xs:documentation xml:lang="pl">Uaktualnienia zakładające wersjonowanie są wymagane dla tego zasobu</xs:documentation>
-          <xs:documentation xml:lang="fr">Des mises à jour en relation avec la version sont requises pour cette ressource</xs:documentation>
-          <xs:documentation xml:lang="nl">Versie-bewuste updates zijn vereist voor deze resource</xs:documentation>
-          <xs:documentation xml:lang="zh">该资源的更新必须针对版本</xs:documentation>
-          <xs:documentation xml:lang="es">Este recurso requiere actualizaciones en base a versiones</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_VERSION_AWARE_CONFLICT">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Update Conflict (server current version = &quot;%s&quot;, client version referenced      = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="ru">Конфликт обновления (текущая версия сервера = &quot;%s&quot;, указанная версия        клиента = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="it">Conflitto nell''aggiornamento (attuale = &quot;%s&quot;, quotato = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="pl">Konflikt podczas uaktualnienia (obecna wersja na serwerze = &quot;%s&quot;, wersja        wskazana przez klienta = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="fr">Conflit de mise à jour (version courante du serveur = &quot;%s&quot;, version référencée        du client = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="nl">Updateconflict (huidige serverversie = &quot;%s&quot;, opgegeven clientversie =        &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="zh">更新冲突 (服务器当前版本 = &quot;%s&quot;, 客户端引用的版本 = &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="es">Conflicto de actualizaciones (versión actual del servidor = &quot;%s&quot;, versión        del cliente referenciada = &quot;%s&quot;)</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_VERSION_AWARE_URL">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Version specific URL not recognised</xs:documentation>
-          <xs:documentation xml:lang="ru">URL для указанной версии не распознан</xs:documentation>
-          <xs:documentation xml:lang="it">URL specifico alla versione non riconosciuto</xs:documentation>
-          <xs:documentation xml:lang="pl">Nie rozpoznany URL specyficzny dla wersji</xs:documentation>
-          <xs:documentation xml:lang="fr">URL spécifique à une version non reconnue</xs:documentation>
-          <xs:documentation xml:lang="nl">Versie-specifieke URL niet herkend</xs:documentation>
-          <xs:documentation xml:lang="zh">未识别特定版本的URL</xs:documentation>
-          <xs:documentation xml:lang="es">URL especifica de la versión no reconocida</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MSG_WRONG_NS">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">This does not appear to be a FHIR element or resource (wrong namespace &quot;%s&quot;)</xs:documentation>
-          <xs:documentation xml:lang="nl">Dit lijkt geen FHIR element of resource te zijn (verkeerde namespace &quot;%s&quot;)</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="SEARCH_MULTIPLE">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Error: Multiple matches exist for %s search parameters &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="ru">Ошибка: множественные совпадения для %s с параметрами поиска &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="it">Errore: Trovate corrispondenze multiple per %s parametri di ricerca &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="pl">Błąd: Istnieją wielokrotne dopasowania dla %s parametrów wyszukiwania &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="fr">Erreur : Plusieurs correspondances existent pour ce paramètre de recherche %s</xs:documentation>
-          <xs:documentation xml:lang="nl">Fout: er is meer dan één resultaat voor %s zoekparameters &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="zh">错误: 对于 %s 搜索的参数 &quot;%s&quot;存在多个匹配</xs:documentation>
-          <xs:documentation xml:lang="es">Error: Multiples ocurrencias existen para %s parametros de búsqueda &quot;%s&quot;</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="SEARCH_NONE">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Error: no processable search found for %s search parameters &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="ru">Ошибка: обрабатываемых результатов поиска для %s с параметрами поиска &quot;%s&quot;        не найдено</xs:documentation>
-          <xs:documentation xml:lang="it">Errore: non è stato trovato alcun parametro di ricerca processabile per %s parametri        di ricerca &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="pl">Błąd: Niewykonalne wyszukiwanie dla %s parametrów wyszukiwania &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="fr">Erreur : aucune recherche trouvée pour les paramètres %s &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="nl">Fout: geen verwerkbare zoekactie gevonden voor %s zoekparameters &quot;%s&quot;</xs:documentation>
-          <xs:documentation xml:lang="zh">错误: 对%s搜索参数&quot;%s&quot;未找到可处理的搜索</xs:documentation>
-          <xs:documentation xml:lang="es">Error: no se encontro una búsqueda apropiada para %s parametros de búsqueda &quot;%s&quot;</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="UPDATE_MULTIPLE_MATCHES">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Error: Multiple matches exist for the conditional update</xs:documentation>
-          <xs:documentation xml:lang="nl">Fout: er is meer dan één resultaat voor de conditionele update</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="FinancialResourceStatusCodes">
-    <xs:annotation>
-      <xs:documentation xml:lang="en"></xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-       <xs:extension base="Element">
-         <xs:attribute name="value" type="FinancialResourceStatusCodesEnum" use="optional"/>
        </xs:extension>
      </xs:complexContent>
   </xs:complexType>
@@ -13578,7 +13011,7 @@ If a pattern[x] is declared on a repeating element, the pattern applies to all r
         <xs:sequence>
           <xs:element name="discriminator" type="ElementDefinition.Discriminator" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Designates which child elements are used to discriminate between the slices when processing an instance. If one or more discriminators are provided, the value of the child elements in the instance data SHALL completely distinguish which slice the element in the resource matches based on the allowed values for those elements in each of the slices.</xs:documentation>
+              <xs:documentation xml:lang="en">Designates which child elements are used to discriminate between the slices when processing an instance. If one or more discriminators are provided, the values of the child elements in the instance data SHALL completely distinguish which slice the element in the resource matches based on the allowed values for those elements in each of the slices.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element name="description" type="string" minOccurs="0" maxOccurs="1">
@@ -16238,11 +15671,6 @@ A coverage may only be responsible for specific types of charges, and the sequen
               <xs:documentation xml:lang="en">A reference to additional documentation about the actor, but description and documentation.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="capabilities" minOccurs="0" maxOccurs="1" type="canonical">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The capability statement for the actor (if the concept is applicable).</xs:documentation>
-           </xs:annotation>
-          </xs:element>
           <xs:element name="baseDefinition" minOccurs="0" maxOccurs="unbounded" type="canonical">
             <xs:annotation>
               <xs:documentation xml:lang="en">An ActorDefinition that is a super-type of this actor.  This actor inherits all of the obligations that apply to the referenced actor definition and can be used wherever the referenced ActorDefinition can.</xs:documentation>
@@ -18805,7 +18233,7 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:element name="total" minOccurs="0" maxOccurs="1" type="unsignedInt">
             <xs:annotation>
-              <xs:documentation xml:lang="en">If a set of search matches, this is the (potentially estimated) total number of entries of type 'match' across all pages in the search.  It does not include search.mode = 'include' or 'outcome' entries and it does not provide a count of the number of entries in the Bundle.</xs:documentation>
+              <xs:documentation xml:lang="en">If a set of search matches or a history, this is the (potentially estimated) total number of entries of type 'match' across all pages in the search.  It does not include search.mode = 'include' or 'outcome' entries and it does not provide a count of the number of entries in the Bundle.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="link" type="Bundle.Link" minOccurs="0" maxOccurs="unbounded">
@@ -18867,10 +18295,12 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:element name="fullUrl" minOccurs="0" maxOccurs="1" type="uri">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The Absolute URL for the resource. Except for transactions and batches, each entry in a Bundle must have a fullUrl. The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. Even when not required, fullUrl MAY be set to a urn:uuid to allow referencing entries in a transaction. The fullUrl can be an arbitrary URI and is not limited to urn:uuid, urn:oid, http, and https. The fullUrl element SHALL have a value except when: 
-* invoking a create
-* invoking or responding to an operation where the body is not a single identified resource
-* invoking or returning the results of a search or history operation.</xs:documentation>
+              <xs:documentation xml:lang="en">The Absolute URL for the resource. Except for transactions and batches, each entry in a Bundle must have a fullUrl. The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. Even when not required, fullUrl MAY be set to a urn:uuid to allow referencing entries in a transaction. The fullUrl can be an arbitrary URI and is not limited to urn:uuid, urn:oid, http, and https. The fullUrl element SHALL have a value unless:
+* the Bundle is a batch or transaction request or response AND
+* the entry is
+    * invoking a create
+  * invoking or responding to an operation where the body is not a single identified resource
+  * invoking or returning the results of a search or history operation.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="resource" minOccurs="0" maxOccurs="1" type="ResourceContainer">
@@ -19924,6 +19354,11 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate capability statement instances.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="actorDefinition" minOccurs="0" maxOccurs="unbounded" type="canonical">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">ActorDefinitions to describe the specific sets of functionality supported by (or that should be supported by) systems (via obligations).</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="jurisdiction" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">A legal or geographic region in which the capability statement is intended to be used.</xs:documentation>
@@ -19974,7 +19409,7 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">The version of the FHIR specification that this CapabilityStatement describes (which SHALL be the same as the FHIR version of the CapabilityStatement itself). There is no default value.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="format" minOccurs="1" maxOccurs="unbounded" type="code">
+          <xs:element name="format" minOccurs="1" maxOccurs="unbounded" type="SupplementedMimeTypes">
             <xs:annotation>
               <xs:documentation xml:lang="en">A list of the formats supported by this implementation using their content types.</xs:documentation>
            </xs:annotation>
@@ -23455,6 +22890,41 @@ of the resource representation.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="Element">
         <xs:attribute name="value" type="UseEnum" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="FinancialResourceStatusCodesEnum">
+    <xs:restriction base="code-primitive">
+      <xs:enumeration value="active">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Active</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cancelled">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Cancelled</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="draft">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Draft</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="entered-in-error">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Entered in Error</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="FinancialResourceStatusCodes">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="FinancialResourceStatusCodesEnum" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -39373,7 +38843,7 @@ For example, it is possible for a 'family' Group to be a performer of an Observa
             <xs:annotation>
               <xs:documentation xml:lang="en">Number of occurrences meeting the characteristic.</xs:documentation>
             </xs:annotation>
-            <xs:element name="instancesQuantity" type="Quantity"/>
+            <xs:element name="instancesUnsignedInt" type="unsignedInt"/>
             <xs:element name="instancesRange" type="Range"/>
           </xs:choice>
           <xs:choice minOccurs="0" maxOccurs="1" >
@@ -39482,6 +38952,26 @@ For example, it is possible for a 'family' Group to be a performer of an Observa
       <xs:enumeration value="specimen">
         <xs:annotation>
           <xs:documentation xml:lang="en">Specimen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="medication">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Medication</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="substance">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Substance</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="biologicallyDerivedProduct">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">BiologicallyDerivedProduct</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="nutritionProduct">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">NutritionProduct</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
@@ -49227,9 +48717,9 @@ The primary difference between a medicationstatement and a medicationadministrat
               <xs:documentation xml:lang="en">The structural topology of the molecular entity. For sequences (e.g., DNA), this could specify 'linear' and 'circular'. More complex entities might be branched or have a quaternary structure.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="memberState" minOccurs="0" maxOccurs="unbounded" type="Reference">
+          <xs:element name="member" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Reserved for future profiles (e.g., haplotype, genotype).</xs:documentation>
+              <xs:documentation xml:lang="en">Constituents of an aggregate molecular concept (e.g., haplotype, genotype).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="location" type="MolecularDefinition.Location" minOccurs="0" maxOccurs="unbounded">
@@ -49261,11 +48751,6 @@ The primary difference between a medicationstatement and a medicationadministrat
           <xs:element name="cytobandLocation" type="MolecularDefinition.CytobandLocation" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">A location on a sequence, defined using cytobands.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="featureLocation" minOccurs="0" maxOccurs="unbounded" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Reserved and possibly deprecated.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -52203,6 +51688,11 @@ Reflex | Repeat | Re-run.</xs:documentation>
               <xs:documentation xml:lang="en">Whether the operation affects state. Side effects such as producing audit trail entries do not count as 'affecting  state'.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="synchronicity" minOccurs="0" maxOccurs="1" type="OperationSynchronicityControl">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates that this operation must always be handled as synchronous or asynchronous, or that the server must provide both options, and clients can choose.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="code" minOccurs="1" maxOccurs="1" type="code">
             <xs:annotation>
               <xs:documentation xml:lang="en">The label that is recommended to be used in the URL for this operation. In some cases, servers may need to use a different CapabilityStatement operation.name to differentiate between multiple SearchParameters that happen to have the same code.</xs:documentation>
@@ -52284,7 +51774,7 @@ Reflex | Repeat | Re-run.</xs:documentation>
               <xs:documentation xml:lang="en">If present, indicates that the parameter applies when the operation is being invoked at the specified level.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="min" minOccurs="1" maxOccurs="1" type="integer">
+          <xs:element name="min" minOccurs="1" maxOccurs="1" type="unsignedInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">The minimum number of times this parameter SHALL appear in the request or response.</xs:documentation>
            </xs:annotation>
@@ -52478,6 +51968,36 @@ Reflex | Repeat | Re-run.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="Element">
         <xs:attribute name="value" type="OperationKindEnum" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="OperationSynchronicityControlEnum">
+    <xs:restriction base="code-primitive">
+      <xs:enumeration value="synchronous">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Synchronous</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="asynchronous">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Asynchronous</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="either">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">System</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="OperationSynchronicityControl">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="OperationSynchronicityControlEnum" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -53916,7 +53436,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
         <xs:sequence>
           <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A unique identifier assigned to this permisssion.</xs:documentation>
+              <xs:documentation xml:lang="en">A unique identifier assigned to this permission.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="status" minOccurs="1" maxOccurs="1" type="PermissionStatus">
@@ -53986,6 +53506,11 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
+          <xs:element name="import" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">This rule is expressed in another Permission resource.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="type" minOccurs="0" maxOccurs="1" type="ConsentProvisionType">
             <xs:annotation>
               <xs:documentation xml:lang="en">deny | permit.</xs:documentation>
@@ -57480,7 +57005,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:element name="reference" minOccurs="0" maxOccurs="unbounded" type="url">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A reference to another artifact that created this set of requirements. This could be a Profile, etc., or external regulation, or business requirements expressed elsewhere.</xs:documentation>
+              <xs:documentation xml:lang="en">A reference to another artifact that created this set of requirements. This could be a profile, etc., or external regulation, or business requirements expressed elsewhere. This URI is intended to point to a specific web page for an artifact, not a canonical URL.  If pointing to HL7 specifications, it is best to point to the version-specific URL.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="actor" type="Requirements.Actor" minOccurs="0" maxOccurs="unbounded">
@@ -57583,12 +57108,12 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:element name="satisfiedBy" minOccurs="0" maxOccurs="unbounded" type="url">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A reference to another artifact that satisfies this requirement. This could be a Profile, extension, or an element in one of those, or a CapabilityStatement, OperationDefinition, SearchParameter, CodeSystem(/code), ValueSet, Libary etc.</xs:documentation>
+              <xs:documentation xml:lang="en">A reference to another artifact that satisfies this requirement. This could be a profile, extension, or an element in one of those, or a CapabilityStatement, OperationDefinition, SearchParameter, CodeSystem(/code), ValueSet, Libary etc.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="reference" minOccurs="0" maxOccurs="unbounded" type="url">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A reference to another artifact that created this requirement. This could be a Profile, etc., or external regulation, or business requirements expressed elsewhere.</xs:documentation>
+              <xs:documentation xml:lang="en">A reference to another artifact that created this requirement. This could be a profile, etc., or external regulation, or business requirements expressed elsewhere. This URI is intended to point to a specific web page for an artifact, not a canonical URL.  If pointing to HL7 specifications, it is best to point to the version-specific URL.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="source" minOccurs="0" maxOccurs="unbounded" type="Reference">
@@ -60465,7 +59990,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
               <xs:documentation xml:lang="en">Type or variable this rule applies to.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="min" minOccurs="0" maxOccurs="1" type="integer">
+          <xs:element name="min" minOccurs="0" maxOccurs="1" type="unsignedInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">Specified minimum cardinality for the element. This is optional; if present, it acts an implicit check on the input content.</xs:documentation>
            </xs:annotation>
@@ -65776,12 +65301,12 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
               <xs:documentation xml:lang="en">The description would be used by test engines for tracking and reporting purposes.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="accept" minOccurs="0" maxOccurs="1" type="code">
+          <xs:element name="accept" minOccurs="0" maxOccurs="1" type="SupplementedMimeTypes">
             <xs:annotation>
               <xs:documentation xml:lang="en">The mime-type to use for RESTful operation in the 'Accept' header.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="contentType" minOccurs="0" maxOccurs="1" type="code">
+          <xs:element name="contentType" minOccurs="0" maxOccurs="1" type="SupplementedMimeTypes">
             <xs:annotation>
               <xs:documentation xml:lang="en">The mime-type to use for RESTful operation in the 'Content-Type' header.</xs:documentation>
            </xs:annotation>
@@ -65903,7 +65428,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
               <xs:documentation xml:lang="en">XPath or JSONPath expression to evaluate against the source fixture. When compareToSourceId is defined, either compareToSourceExpression or compareToSourcePath must be defined, but not both.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="contentType" minOccurs="0" maxOccurs="1" type="code">
+          <xs:element name="contentType" minOccurs="0" maxOccurs="1" type="SupplementedMimeTypes">
             <xs:annotation>
               <xs:documentation xml:lang="en">The mime-type contents to compare against the request or response message 'Content-Type' header.</xs:documentation>
            </xs:annotation>

@@ -1,7 +1,7 @@
 This section describes the interactions between the actors in an SDOH referral starting both at a high-level and at the level of FHIR API calls.   First, a high-level overview of the interactions is provided.  This description abstracts technical details and should be accessible to the non-technical reader.
-For the sake of simplicity, only relationships critical to the Referral Workflow are provided. (For additional details on task status updates see [Checking Task Status], and  on relationships between profiles see [Data Modeling Framework].)
+For the sake of simplicity, only relationships critical to the Referral Workflow are provided. (For additional details on task status updates see [Checking Task Status], and  on relationships between profiles see [Data Modeling Framework](sdoh_clinical_care_scope.html#data-modeling-framework).)
 
-The use cases here relate to the Gravity [Use Cases].  Implementers will benefit from looking at the detailed technical description of the exchange work flow for each use case, as well as the [Capability Statements] associated with each workflow and the [conformance artifacts](artifacts.html) generally.
+The use cases here relate to the Gravity [Use Cases].  Implementers will benefit from looking at the detailed technical description of the exchange work flow for each use case, as well as the [Capability Statements](artifacts.html#capability-statements) associated with each workflow and the [conformance artifacts](artifacts.html) generally.
 
 ### General Workflow
 
@@ -73,7 +73,7 @@ The [Patient Coordination](referral_workflow.html#patient-coordination-workflow)
 <td><ul>
 <li><a href="StructureDefinition-SDOHCC-TaskForPatient.html">SDOHCC Task For Patient</a></li>
 <li><a href="https://www.hl7.org/fhir/questionnaire.html">Questionnaire</a></li>
-<li><a href="https://www.hl7.org/fhir/questionnaireresponse.html">QuestionnareResponse</a></li></ul></td>
+<li><a href="https://www.hl7.org/fhir/questionnaireresponse.html">QuestionnaireResponse</a></li></ul></td>
 <td>none</td>
 </tr>
 <tr>
@@ -255,7 +255,7 @@ The referral occurs in two separate interactions. The first is between the refer
 
 In the Indirect Referral, this IG assumes that the referral source does not have the ability to communicate directly with the referral target. There may be multiple referral targets for responsibilities that will be determined and managed by the intermediary. 
 
-The intermediary SHALL support the following:
+The intermediary **SHALL** support the following:
 
 1. Create a local copy of, or proxy, all relevant referenced resources from the referral source
 2. Create ServiceRequest(s) with ServiceRequest.intent value “filler-order” and ServiceRequest.basedOn references the original referral source ServiceRequest(s) 
@@ -277,7 +277,7 @@ The provider may request to have the service delivered by a specific CBO.   The 
 
 The referral occurs in two separate interactions. The first is between the referral source and the intermediary and the second is between the intermediary and the referral target. 
 
-The intermediary SHALL support the following:
+The intermediary **SHALL** support the following:
 
 1. Create a local copy of, or proxy, all relevant referenced resources from the referral source
 2. Create ServiceRequest(s) with ServiceRequest.intent value “filler-order” and ServiceRequest.basedOn references the original referral source ServiceRequest(s) 
@@ -288,11 +288,11 @@ The intermediary SHALL support the following:
 
 #### Additional Guidance on Referrals
 
-1. Parties SHOULD use polling if one or both of the parties is unable to support the subscription model (see notes on the [Checking Task Status](checking_task_status.html) page).
-2. The receiving party for the referral SHOULD use the batch query process to request periodic updates of referenced resources.
+1. Parties **SHOULD** use polling if one or both of the parties is unable to support the subscription model (see notes on the [Checking Task Status](checking_task_status.html) page).
+2. The receiving party for the referral **SHOULD** use the batch query process to request periodic updates of referenced resources.
 3. The above system flows do not define the handling of all possible scenarios. Exchange scenarios may include refusing the referral, canceling the referral by either party, and error conditions that may occur when using RESTful exchanges.  It is up to each party to follow the current best practice in managing the state of the referral.
-4. The referral source SHOULD set the Task.status to “requested”. 
-5. The referral target SHOULD update Task.status as it moves through the workflow.
+4. The referral source **SHOULD** set the Task.status to “requested”. 
+5. The referral target **SHOULD** update Task.status as it moves through the workflow.
 
 ### Patient Coordination Workflow
 This implementation guide supports additional interactions with a patient/client application (on a smartphone or portal) including:

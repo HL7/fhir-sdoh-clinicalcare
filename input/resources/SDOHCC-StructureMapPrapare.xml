@@ -27,7 +27,7 @@ group sdohMapping(source src : questionnaireResponse, target bundle : Bundle) {
   src -&gt; bundle.id = 'SDOHCC-BundlePRAPAREExample' &quot;bundleId&quot;;
   src -&gt; bundle.type = 'transaction' &quot;bundleType&quot;;
     
-  //for each answer item in the questionnareResponse, create an Observation and add it to the groupObservation
+  //for each answer item in the questionnaireResponse, create an Observation and add it to the groupObservation
   src.item as rootItem then 
     rootContent(src, rootItem, bundle);
 
