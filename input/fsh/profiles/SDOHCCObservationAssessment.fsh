@@ -12,12 +12,12 @@ Description: "Profile for Social Determinants of Health (SDOH) observations that
 * insert OwningCommitteeExtension
 
 * status MS
-//* category 1.. MS
+* category 2.. MS
 //* category ^slicing.discriminator.type = #pattern
 //* category ^slicing.discriminator.path = "$this"
 //* category ^slicing.rules = #open
 * category contains
-    //us-core 1..1 MS and
+    // us-core 1..1 MS and
     // SocialHistory 1..1 MS and
     SDOHCC 0..* MS
 

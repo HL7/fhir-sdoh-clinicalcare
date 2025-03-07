@@ -12,6 +12,9 @@ Additionally, some SDOH domains may not yet be represented in [SDOHCC ValueSet S
 
 For more information on the correlation between `Condition.category` and the domain-specific value sets in Additional Bindings for `Condition.code`, see [Gravity Project Value Sets](gravity_terminology.html#gravity-project-value-sets).
 
+### US Core Conformance
+
+US Core 6.1.0 and beyond profiles two Condition profiles: Encounter Diagnosis Condition Profile and Problems and Health Concerns Condition profile. The primary difference between these two profiles is in the Condition.category data element, where each profile requires different values to determine the category of the Condition resource. Instances derived from the SDOHCC Condition profile will be conformant to one of the US Core Condition profiles. Condition.category **SHALL** be one of encounter-diagnosis, problem-list-item, or health-concern.
 
 <!--Rather than offer a separate Condition profile for each SDOH category (also called domain – e.g., food insecurity, transportation insecurity), this profile can support any SDOH category. For `Condition.code`, the minimum value set bindings are specified in the profile. Additionally, based on the code selected for the optional `Condition.category` slice, the Table below provides the Gravity-vetted, preferred value sets for `Condition.code`. Where a preferred value set contains a code to describe a needed concept, servers **SHOULD** use that code.
 

@@ -13,7 +13,7 @@ Description: "Profile for observations that represent question and answer pairs 
 * status ^short = "final | corrected | entered-in-error | unknown"
 * status ^definition = "The status of the observation value."
 * status ^requirements = "Further constrained to values that are relevant for SDOH."
-* category MS
+* category 3..* MS
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
