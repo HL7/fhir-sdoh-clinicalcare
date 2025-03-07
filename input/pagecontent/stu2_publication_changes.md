@@ -20,7 +20,7 @@
 
 #### Task Instructions
 
-- [FHIR-37480](https://jira.hl7.org/browse/FHIR-37480)	Add Task.output slice to allow patient to indicate their "chosen-contact"
+- [FHIR-37480](https://jira.hl7.org/browse/FHIR-37480)	Add `Task.output` slice to allow patient to indicate their "chosen-contact"
 - [FHIR-35750](https://jira.hl7.org/browse/FHIR-35750)	Suggest more robust requirements around using Task for patient Communications
 - [FHIR-35634](https://jira.hl7.org/browse/FHIR-35634)	Clarify SDOH Task distinction
 - [FHIR-35746](https://jira.hl7.org/browse/FHIR-35746)	Be clear on what the patient can change in Task
@@ -44,11 +44,11 @@
 - [FHIR-34999](https://jira.hl7.org/browse/FHIR-34999)	Adding R/E Observations to the Structured Definitions without indicating they are draft will cause implementation confusion
 - [FHIR-35691](https://jira.hl7.org/browse/FHIR-35691)	"Unknown" is not appropriate as an observation method
 - [FHIR-34878](https://jira.hl7.org/browse/FHIR-34878)	Need to consider Provenance when R/E Extensions and Observation Resource is used for R/E
-- [FHIR-35327](https://jira.hl7.org/browse/FHIR-35327)	For Observation.method value set, add guidance related to use of "observed"
-- [FHIR-35325](https://jira.hl7.org/browse/FHIR-35325)	For Observation.method value set, clarify the definition of "reported-by-related-person" and add guidance related to use of "self-reported" and "reported-by-related-person"
+- [FHIR-35327](https://jira.hl7.org/browse/FHIR-35327)	For `Observation.method` value set, add guidance related to use of "observed"
+- [FHIR-35325](https://jira.hl7.org/browse/FHIR-35325)	For `Observation.method` value set, clarify the definition of "reported-by-related-person" and add guidance related to use of "self-reported" and "reported-by-related-person"
 - [FHIR-35206](https://jira.hl7.org/browse/FHIR-35206)	Patient Application Client CapabilityStatement does not include Observation therefore patients will not be able to Read nor search for R/E Observation Profiles
 - [FHIR-35715](https://jira.hl7.org/browse/FHIR-35715)	Unclear what adhoc and adhocresponse are - please clarify
-- [FHIR-35370](https://jira.hl7.org/browse/FHIR-35370)	For Observation.method value set, add guidance related to use of "observed".
+- [FHIR-35370](https://jira.hl7.org/browse/FHIR-35370)	For `Observation.method` value set, add guidance related to use of "observed".
 - [FHIR-35375](https://jira.hl7.org/browse/FHIR-35375)	Add a challenge related to the sensitivity of SDOH data
   - Updated the [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html) page and referenced artifacts
 
@@ -71,8 +71,8 @@
 
 #### Structure Definitions
 
-- [FHIR-34891](https://jira.hl7.org/browse/FHIR-34891)	Please relax Goal.Achievement cardinality to 0..1 to align with goals that are proposed or planned
-  - changed goal.achievement cardinality to 0..1
+- [FHIR-34891](https://jira.hl7.org/browse/FHIR-34891)	Please relax `Goal.achievement` cardinality to 0..1 to align with goals that are proposed or planned
+  - changed `goal.achievement` cardinality to 0..1
 - [FHIR-35369](https://jira.hl7.org/browse/FHIR-35369)	Streamline representation of SDOH screening instruments
   - based on US Core decision, change grouping observation to have individual observations for multiple selection questions
 

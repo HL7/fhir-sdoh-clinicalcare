@@ -35,11 +35,11 @@ Value sets for the draft personal characteristics profiles are based on existing
 
 The personal characteristic profiles adhere to the following consistent structure with respect to handling [null flavors](https://www.hl7.org/fhir/v3/NullFlavor/cs.html):
 
-* Race and Ethnicity – These profiles allow more than one Observation.component.value in order to allow race or ethnicity to be expressed with high-level codes, and/or more detailed level codes, and/or as a string. Null values (e.g., unknown, asked-declined, etc.) apply to all assertions about race or ethnicity regardless of granularity. For this reason, null values cannot be captured as part of individual components and are instead captured as a single element using Observation.dataAbsentReason. As a consequence, the value sets for Observation.component.value. have been modified to exclude null value concepts. Thus, for R/E, the value sets for Observation.component.value are the same as those defined in the [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) extensions with the exception that null flavors are represented using dataAbsentReason.
+* Race and Ethnicity – These profiles allow more than one `Observation.component.value` in order to allow race or ethnicity to be expressed with high-level codes, and/or more detailed level codes, and/or as a string. Null values (e.g., unknown, asked-declined, etc.) apply to all assertions about race or ethnicity regardless of granularity. For this reason, null values cannot be captured as part of individual components and are instead captured as a single element using `Observation.dataAbsentReason`. As a consequence, the value sets for `Observation.component.value`. have been modified to exclude null value concepts. Thus, for R/E, the value sets for `Observation.component.value` are the same as those defined in the [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) extensions with the exception that null flavors are represented using `Observation.dataAbsentReason`.
 
-* Sexual Orientation, Gender Identity, Recorded Sex and Gender, Personal Pronouns - These profiles allow only one Observation.value. Therefore, null value concepts are allowed in the value set for Observation.value.
+* Sexual Orientation, Gender Identity, Recorded Sex and Gender, Personal Pronouns - These profiles allow only one`Observation.value`. Therefore, null value concepts are allowed in the value set for `Observation.value`.
 
-The value set for Observation.method may also change as feedback is solicited and/or according to policy (e.g., at the organizational, state, or federal level). For further detail on method, see Recommendations for Collection and Reporting of Personal Characteristics.
+The value set for `Observation.method` may also change as feedback is solicited and/or according to policy (e.g., at the organizational, state, or federal level). For further detail on method, see Recommendations for Collection and Reporting of Personal Characteristics.
 
 #### Guidance for Personal Characteristics of a Related Person or Practitioner
 
@@ -80,7 +80,7 @@ Additional guidance is provided in the [US Core 3.1.1 Basic Provenance Guidance]
 
 ### Testing Draft Specifications
 
-Please test the draft personal characteristic profiles and provide feedback on any changes that are necessary to support the exchange of this data. Please pay specific attention to the value sets for the characteristics (via Observation.value and Observation.component.value), the value set for collection method (via Observation.method), and the approach for specifying the data’s source (via Observation.performer [Reference](https://www.hl7.org/fhir/references.html#Reference)).
+Please test the draft personal characteristic profiles and provide feedback on any changes that are necessary to support the exchange of this data. Please pay specific attention to the value sets for the characteristics (via `Observation.value` and `Observation.component.value`), the value set for collection method (via `Observation.method`), and the approach for specifying the data’s source (via `Observation.performer` [Reference](https://www.hl7.org/fhir/references.html#Reference)).
 
 *Note: The draft specifications for personal characteristics should not be cited in regulations without further testing and balloting as part of a specific IG or as an update to US Core.*
 

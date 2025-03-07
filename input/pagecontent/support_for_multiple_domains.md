@@ -1,5 +1,5 @@
 ### Rationale
-It is difficult to capture in the IG the full extent of the terminology inter-dependencies. Rather than build hundreds of profiles we have chosen to enumerate the relationships between value choice between dependent data elements. For example, in Observation when the SDOH category is ‘EducationalAttainment’ there is a specific subset of values  that can be used for the Observation.code. Within VSAC and our additional documentation we have tried to make these relationships clear.
+It is difficult to capture in the IG the full extent of the terminology inter-dependencies. Rather than build hundreds of profiles we have chosen to enumerate the relationships between value choice between dependent data elements. For example, in Observation when the SDOH category is ‘EducationalAttainment’ there is a specific subset of values  that can be used for the `Observation.code`. Within VSAC and our additional documentation we have tried to make these relationships clear.
 
 We expect implementers to review the terminology documents below and implement logic to validate or use the correct term pairings. Again, we chose to not create hundreds of FHIR profiles with the pairings, as the logic is straightforward (e.g. if SDOH category X then code uses values from set Y) and redundant. Our tables of dependencies can be used to create lookup tables for validation or profile creation. By choosing to not create hundreds of profiles we have sought to both simplify and free implementers to use their own means to implement the required logic.
 
@@ -37,7 +37,7 @@ Servers  **SHOULD** use the following SDOH value sets when a code exists that de
 
 The Figure below illustrates how the SDOH group value set is structured for the  Condition Profile. When recording SDOH data, servers **SHOULD** use the SDOH value sets
 
- **Example of VSAC SDOH Group Value Set for Condition.Code**
+ **Example of VSAC SDOH Group Value Set for `Condition.Code`**
 
 <table><tr><td><img src="VSACValueSet.jpg" /></td></tr></table>
 
@@ -47,13 +47,13 @@ The following SDOH profile elements  **SHOULD** use values from the associated V
 | ------------------------------------------------------------ | ------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | =================                                            | ===============     | ==================                                           | +................................................................................................................+ |
 | [SDOHCCCondition](StructureDefinition-SDOHCC-Condition.html) | `Condition.code`      | [US Core Condition Code]({{site.data.fhir.ver.uscore}}/ValueSet/us-core-condition-code) | [Social Determinants of Health Conditions Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion) |
-| [SDOHCCGoal](StructureDefinition-SDOHCC-Goal.html)           | Goal.description    | [US Core Goal Codes]({{site.data.fhir.ver.uscore}}/ValueSet-us-core-goal-description.html) | [Social Determinants of Health Goals Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion) |
-| [SDOHCCServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) | ServiceRequest.code | [US Core Procedure Codes]({{site.data.fhir.ver.uscore}}/ValueSet/us-core-procedure-code) | [Social Determinants of Health Service Requests Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion) |
-| [SDOHCCProcedure](StructureDefinition-SDOHCC-Procedure.html) | Procedure.code      | [US Core Procedure Codes]({{site.data.fhir.ver.uscore}}/ValueSet/us-core-procedure-code) | [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion) |
+| [SDOHCCGoal](StructureDefinition-SDOHCC-Goal.html)           | `Goal.description`    | [US Core Goal Codes]({{site.data.fhir.ver.uscore}}/ValueSet-us-core-goal-description.html) | [Social Determinants of Health Goals Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion) |
+| [SDOHCCServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) | `ServiceRequest.code` | [US Core Procedure Codes]({{site.data.fhir.ver.uscore}}/ValueSet/us-core-procedure-code) | [Social Determinants of Health Service Requests Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion) |
+| [SDOHCCProcedure](StructureDefinition-SDOHCC-Procedure.html) | `Procedure.code`      | [US Core Procedure Codes]({{site.data.fhir.ver.uscore}}/ValueSet/us-core-procedure-code) | [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion) |
 
 ### Support for external terminologies for ServiceRequest and Procedure
 
-If implementers of this IG wish to use terminologies that are not part of the required value sets for specific elements that have a type of CodableConcept (such as ServiceRequest.code and Procedure.code) they may include a specific Coding that specifies a system (URL that is defined and supported by the terminology author) as well as the specific code (define in the terminology) as long as the meaning of the code is a concept that is logically the same as, or contained in the concept, of the required code.
+If implementers of this IG wish to use terminologies that are not part of the required value sets for specific elements that have a type of CodableConcept (such as `ServiceRequest.code` and `Procedure.code`) they may include a specific Coding that specifies a system (URL that is defined and supported by the terminology author) as well as the specific code (define in the terminology) as long as the meaning of the code is a concept that is logically the same as, or contained in the concept, of the required code.
 
 The following is an example for a ServiceRequest or Procedure where the external terminology
 
