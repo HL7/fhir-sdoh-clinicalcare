@@ -5,7 +5,7 @@ Description: "An example of a screening response Observation that represents a q
 Usage: #example
 //* category[Survey] = $observation-category#survey "Survey"
 * category[survey] = $observation-category#survey "Survey"
-* category[screening-assessment][sdoh] = USCoreCategory#sdoh "SDOH"
+* category[screening-assessment] = USCoreCategory#sdoh "SDOH"
 * category[SDOHCC] = $SDOHCC-CodeSystemTemporaryCodes#material-hardship "Material Hardship"
 * status = #final
 * code = $loinc#93031-3 "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]"

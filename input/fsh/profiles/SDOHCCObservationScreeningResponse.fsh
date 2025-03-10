@@ -8,33 +8,20 @@ Description: "Profile for observations that represent question and answer pairs 
 * . ^definition = "For Observations derived from SDOH screening surveys/questionnaires."
 * . ^comment = "Used for simple observations such as education status, food insecurity observations, etc.  \r\nThis profile allows the representation of SDOH observations based on SDOH screening questionnaire responses (which can also be represented using SDC QuestionnaireResponse). \r\n\r\nMany of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."
 // * obeys us-core-2
+* obeys SDOH-Obs-4
 * status MS
 * status from SDOHCCValueSetObservationStatus (required)
 * status ^short = "final | corrected | entered-in-error | unknown"
 * status ^definition = "The status of the observation value."
 * status ^requirements = "Further constrained to values that are relevant for SDOH."
-* category 3..* MS
-* category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
-* category ^requirements = "To identify that an SDOH observation screening response  is derived from an SDOH questionnaire, the “social-history” and “survey” codes are required."
+* category 2..* MS
 * category contains
     // survey 1..1 MS and
     // SocialHistory 1..1 MS and
     SDOHCC 0..* MS
 
-* category[screening-assessment] ^slicing.discriminator.type = #pattern
-* category[screening-assessment] ^slicing.discriminator.path = "$this"
-* category[screening-assessment] ^slicing.rules = #open
-* category[screening-assessment] ^short = "sdoh category code"
-* category[screening-assessment] contains
-    sdoh 1..1 MS
-
-
-
-* category[screening-assessment][sdoh] = $ScreeningAssessmentObservationCategory#sdoh
-* category[screening-assessment][sdoh] from USCoreScreeningAssessmentObservationCategory (required)
-* category[screening-assessment][sdoh] ^short = "screening-assessment code of 'sdoh' required and others allowed as part of 'screening-assessment' slice."
+* category[screening-assessment] 1..*
+* category[screening-assessment] ^condition = "SDOH-Obs-4"
 
 
 // * category[SocialHistory] = $observation-category#social-history

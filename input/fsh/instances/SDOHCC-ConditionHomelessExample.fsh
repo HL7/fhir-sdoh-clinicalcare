@@ -5,8 +5,8 @@ Description: "An example of a homelessness Condition (a health concern) that is 
 Usage: #example
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#unconfirmed "Unconfirmed"
-* category[screening-assessment] = $condition-category#health-concern "Health Concern"
-* category[screening-assessment][sdoh] = $ScreeningAssessmentObservationCategory#sdoh "SDOH"
+* category[screening-assessment][+] = $condition-category#health-concern "Health Concern"
+* category[screening-assessment][+] = $ScreeningAssessmentObservationCategory#sdoh "SDOH"
 * category[SDOHCC] = $SDOHCC-CodeSystemTemporaryCodes#homelessness "Homelessness"
 * code.coding[0] = $sct#32911000 "Homeless"
 * code.coding[+] = $icd-10-cm#Z59.0 "Homelessness"

@@ -5,7 +5,7 @@ Description: "An example of a screening response Observation that represents the
 results of the 5 questions."
 Usage: #example
 * insert NHANESCommon
-* category[screening-assessment][sdoh] = USCoreCategory#sdoh "SDOH"
+
 * code = $loinc#76512-3	"Social isolation score [NHANES]"
 * valueQuantity.value = 4
 * valueQuantity.unit = "{Number}"

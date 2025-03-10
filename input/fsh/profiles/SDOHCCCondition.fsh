@@ -13,7 +13,7 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 // TODO Add a ticket to consider adding Group as a possible Condition.subject
 
 // SDOH CC
-* obeys SDOH-Con-1 and SDOH-Con-2
+* obeys SDOH-Con-1 and SDOH-Con-2 and SDOH-Con-3
 * . ^short = "Detailed information about SDOH conditions, problems or diagnoses"
 * . ^definition = "For representation of SDOH conditions."
 * . ^comment = "Many of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths (e.g., to arrive at SDOH Conditions) are also possible.\r\n\r\nOne specific use for this profile is to represent a Health Concern that is either; 1) directly asserted based on the patient’s answer to a specific question from an SDOH screening questionnaire or 2) computed/generated based on the patient’s answers to multiple questions. The questions and answers from the screening questionnaire are also represented using SDC Questionnaire, SDC QuestionnaireResponse and SDOHCC Screening Response Observation."
@@ -46,6 +46,8 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 // US Core 7.0.0
 * category 2.. MS
 
+
+
 * category ^condition = "SDOH-Con-2"
 
 * category ^slicing.discriminator.type = #value
@@ -77,25 +79,12 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 
 //* category[screening-assessment] = USCoreCategory#sdoh
 * category[screening-assessment] from USCoreScreeningAssessmentConditionCategory (required)
-* category[screening-assessment] ^short = "USCDI Health Status/Assessments Data Class"
+* category[screening-assessment] ^short = "USCDI Health Status/Assessments Data Class. Requires at least a category code 'sdoh'"
 * category[screening-assessment] ^definition = "Categories that a provider may use in their workflow to classify that this Condition is related to a USCDI Health Status/Assessments Data Class."
 * category[screening-assessment] ^requirements = "Used for filtering condition"
+* category[screening-assessment] ^condition = "SDOH-Con-3"
 //* category[screening-assessment] ^binding.description = "Note that other codes are permitted"
 
-
-
-
-* category[screening-assessment] ^slicing.discriminator.type = #value
-* category[screening-assessment] ^slicing.discriminator.path = "$this"
-* category[screening-assessment] ^slicing.rules = #open
-* category[screening-assessment] ^short = "sdoh category codes"
-* category[screening-assessment] contains
-    sdoh 1..1 MS
-
-
-* category[screening-assessment][sdoh] = USCoreCategory#sdoh
-* category[screening-assessment][sdoh] from USCoreScreeningAssessmentConditionCategory (required)
-* category[screening-assessment][sdoh] ^short = "screening-assessment code of 'sdoh' required and others allowed as part of 'screening-assessment' slice."
 
 
 
@@ -330,3 +319,4 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * evidence.detail[SupportedDetail] ^requirements = "When a condition is based on one or more SDOH observations that were generated from questionnaire responses, Condition.evidence.detail should reference instances that comply with the SDOHCC Observation Screening Response or SDC Questionnaire Response. However, references to other instance types are also possible."
 
 */
+

@@ -8,35 +8,17 @@ Description: "Profile for Social Determinants of Health (SDOH) observations that
 * . ^short = "SDOH assessment observation"
 * . ^definition = "For SDOH observations derived from assessment of the individual."
 * . ^comment = "For representation of SDOH observations that involve assessment (e.g., by a provider or payer) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Observation Screening Response).\r\n\r\nMany of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."
-* obeys us-core-2
+* obeys us-core-2 and SDOH-Obs-4
 * insert OwningCommitteeExtension
 
 * status MS
-* category 2.. MS
-//* category ^slicing.discriminator.type = #pattern
-//* category ^slicing.discriminator.path = "$this"
-//* category ^slicing.rules = #open
 * category contains
-    // us-core 1..1 MS and
-    // SocialHistory 1..1 MS and
     SDOHCC 0..* MS
 
+* category[us-core] 1..*
 
-
-* category[us-core] ^slicing.discriminator.type = #pattern
-* category[us-core] ^slicing.discriminator.path = "$this"
-* category[us-core] ^slicing.rules = #open
-* category[us-core] ^short = "sdoh category code"
-* category[us-core] contains 
-    sdoh 1..1 MS
-
-
-
-* category[us-core][sdoh] = USCoreCategory#sdoh
-* category[us-core][sdoh] from USCoreSimpleObservationCategory (required)
-* category[us-core][sdoh] ^short = "us-core code of 'sdoh' required and others allowed as part of 'us-core' slice."
-
-
+* category[us-core] ^short = "Requires at least a category code 'sdoh'"
+* category[us-core] ^condition = "SDOH-Obs-4"
 
 // * category[SocialHistory] = $observation-category#social-history
 // * category[SocialHistory] ^requirements = "Used for filtering that this is a social history observation."
@@ -66,11 +48,7 @@ Description: "Profile for Social Determinants of Health (SDOH) observations that
 * derivedFrom ^definition = "US Core Observations, DocumentReference, QuestionnaireResponse or other resource from which this observation value is derived."
 * derivedFrom ^mustSupport = false
 
-Invariant: us-core-2
-Description: "If there is no component or hasMember element then either a value[x] or a data absent reason must be present"
-* severity = #error
-* expression = "(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())"
-* xpath = "exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)"
+
 
 // US Core 7.0.0
 // * status MS

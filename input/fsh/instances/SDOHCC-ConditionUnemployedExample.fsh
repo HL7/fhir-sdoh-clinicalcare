@@ -5,8 +5,8 @@ Description: "An example of a Condition (a health concern) that is based on an O
 Usage: #example
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#unconfirmed "Unconfirmed"
-* category[screening-assessment] = $condition-category#health-concern "Health Concern"
-* category[screening-assessment][sdoh] = $ScreeningAssessmentObservationCategory#sdoh "SDOH"
+* category[screening-assessment][+] = $condition-category#health-concern "Health Concern"
+* category[screening-assessment][+] = $ScreeningAssessmentObservationCategory#sdoh "SDOH"
 * category[SDOHCC] = $SDOHCC-CodeSystemTemporaryCodes#employment-status "Employment Status"
 * code.coding[0] = $sct#73438004 "Unemployed"
 * code.coding[+] = $icd-10-cm#Z56.0 "Unemployment, unspecified"
