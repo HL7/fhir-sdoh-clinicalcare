@@ -169,16 +169,17 @@ This section provides guidance on `Observation.category` and `Observation.interp
 
 ##### Categorizing Observations by SDOH domain(s) using `Observation.category`  
 
-`Observation.category` has two, fixed category codes (survey and social-history) to indicate that a Q-A pair captured as an Observation represents an assessment (survey) related to social history. 
 
-Additionally, `Observation.category` has a binding to [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) which has values to categorize an Observation by SDOH domain(s) (e.g., Food Insecurity. Housing Instability, etc.). The additional guidance and examples below are for `Observation.category` values from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html).
+`Observation.category` **SHALL** have two category codes (survey and sdoh) to indicate that a Q-A pair captured as an Observation represents an assessment (survey) related to a social determinant of health.
 
-Additional guidance related to `Observation.category` for [SDOHCC Observation Screening Response] :
+Optionally, `Observation.category` also has a binding to [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) which has values to categorize an Observation by SDOH domain(s) (e.g., Food Insecurity. Housing Instability, etc.).
 
-* “`Observation.category`: SDOH domain” (e.g., Food Insecurity) means that the Observation addresses a health-related social need (HRSN) in the specified SDOH domain.
-* “`Observation.category`: SDOH domain” does not mean that the Observation confirms a HRSN in the specified SDOH domain. 
-* Some Observations may be assigned only one value for `Observation.category` (from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html)) while others may be assigned more than one value. 
-* When categorizing an Observation that represents a Q-A pair, Gravity recommends that the SDOH domain(s) be assigned based on the question <u>and its complete allowed set of answers</u> on an assessment instrument. 
+When `Observation.category` for [SDOHCC Observation Screening Response](StructureDefinition-SDOHCC-ObservationScreeningResponse.html) is a value from SDOHCC ValueSet SDOH Category:
+
+* It indicates that the Observation addresses a health-related social need (HRSN) in the specified SDOH domain (e.g., food-insecurity).
+* It does not mean that the Observation confirms a HRSN in the specified SDOH domain.
+* It may have one or more values from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) for `Observation.category`.
+* Gravity recommends that the SDOH domain(s) from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) be based on the assessment instrument's question and its complete set of allowed answers (which may be from one or more SDOH domains).
 
 Examples for using `Observation.category` to tag Observations by SDOH domain are provided below. The examples are based on the Accountable Health Communities Health-Related Social Needs Screening Tool (AHC HRSN Screening Tool) or the AHC HRSN Screening Tool Supplemental Questions.<sup>1</sup>
 
@@ -235,7 +236,7 @@ Examples for using `Observation.category` to tag Observations by SDOH domain are
 * Although `Observation.value`: LA28398-8 (Never true) does not indicate a HRSN, the Observation still provides information about Food Insecurity. 
 * Therefore, regardless of the answer chosen, Gravity recommends using `Observation.category`: [food-insecurity](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity) for an Observation from the AHC HRSC Screening Tool with `Observation.code`: 88122-7.
 
-**Example 2**: When a question and its complete answer set address more than one SDOH domain, an Observation using the question for `Observation.code` may have more than one value for `Observation.category`.
+**Example 2**: When a question and its complete answer set address more than one SDOH domain, an Observation using the question for `Observation.code` may have more than one SDOH domain value for `Observation.category`.
 
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
    <thead>
