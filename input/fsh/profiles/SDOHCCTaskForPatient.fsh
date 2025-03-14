@@ -47,11 +47,17 @@ Description: "Profile for SDOH-related tasks to be carried out by the patient or
 * focus ^condition[0] = "SDOH-Task-3"
 * for 1.. MS
 * for only Reference(USCorePatientProfile)
+* for ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* for ^type[=].targetProfile[=].extension.valueBoolean = true
 * authoredOn 1.. MS
 * requester 1.. MS
 * requester only Reference(SDOHCCPractitionerRole or USCoreOrganizationProfile)
 * owner 1.. MS
 * owner only Reference(USCorePatientProfile or RelatedPerson)
+* owner ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* owner ^type[=].targetProfile[=].extension.valueBoolean = true
+* owner ^type[=].targetProfile[=].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* owner ^type[=].targetProfile[=].extension.valueBoolean = false
 * input ^slicing.discriminator.type = #pattern
 * input ^slicing.discriminator.path = "type"
 * input ^slicing.rules = #open

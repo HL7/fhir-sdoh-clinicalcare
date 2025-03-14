@@ -15,19 +15,19 @@ dependencies:
         uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
         id: uscore
         reason: |
-            Where possible, all profiles in this IG are either derived from US Core 7.0.0 or aligned with that release and future releases as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.
+            All profiles in this IG are derived from US Core 7.0.0 as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.
     hl7.fhir.us.core.v610:
         version: 6.1.0
         uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
         id: uscore6
         reason: |
-            Where possible, all profiles in this IG are either derived from US Core 6.1.0 or aligned with that release and future releases as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.
+            All profiles in this IG are aligned with US Core 6.1.0 as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.
     hl7.fhir.us.core.v311:
         version: 3.1.1
         uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
         id: uscore3
         reason: |
-            Where possible, all profiles in this IG are either derived from US Core 3.1.1 or aligned with that release and future releases as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.    
+            All profiles in this IG are aligned with US Core 3.1.1 as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.    
     hl7.fhir.uv.sdc:
         version: 3.0.0
         uri: "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
@@ -46,6 +46,8 @@ dependencies:
         uri: http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/hl7.fhir.us.davinci-hrex
         version: 1.1.0
         id: hrex
+        reason: |
+            This guide links out to concept maps published in Da Vinci HRex for Provider Role codes.
     us.nlm.vsac:
         uri: "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"
         version: 0.21.0
@@ -176,6 +178,7 @@ groups:
         name: Extensions
         resources:
           - SDOHCCExtensionHealthcareServiceTelecomAppointment
+          - SDOHCCExtensionConditionAsserter
     SearchParameters:
         name: Search Parameters
         resources:
@@ -268,7 +271,6 @@ groups:
           - SDOHCCObservationRaceOMB
           - SDOHCCObservationRecordedSexGender
           - SDOHCCObservationSexualOrientation
-          - SDOHCCExtensionConditionAsserter
           - SDOHCCValueSetObservationDataAbsentReason
           - SDOHCCValueSetObservationDerivedFromIdType
           - SDOHCCValueSetObservationMethod
@@ -287,10 +289,10 @@ groups:
           - SDOHCC-ObservationRecordedSexGenderExample
           - SDOHCC-ObservationSexualOrientationExample
           - SDOHCC-RelatedPersonMotherExample
-    Parameters:
-        name: Terminology Parameters
-        resources:
-          - terminology-settings
+ #   Parameters:
+ #       name: Terminology Parameters
+ #      resources:
+ #        - terminology-settings
         
         
 menu:

@@ -146,6 +146,8 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 
 * subject MS
 * subject only Reference(USCorePatientProfile)
+* subject ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type[=].targetProfile[=].extension.valueBoolean = true
 * encounter MS
 * encounter only Reference(USCoreEncounterProfile)
 

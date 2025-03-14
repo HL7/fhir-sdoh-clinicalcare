@@ -34,6 +34,12 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * focus only Reference(SDOHCCServiceRequest)
 * for 1.. MS
 * for only Reference(RelatedPerson or Group or USCorePatientProfile)
+* for ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* for ^type[=].targetProfile[=].extension.valueBoolean = false
+* for ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* for ^type[=].targetProfile[=].extension.valueBoolean = false
+* for ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* for ^type[=].targetProfile[=].extension.valueBoolean = true
 * authoredOn 1.. MS
 * requester 1.. MS
 * requester only Reference(SDOHCCPractitionerRole or USCoreOrganizationProfile)
