@@ -4,11 +4,11 @@ Title: "SDOHCC Referral Recipient Capability Statement"
 Description: "This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral recipients'."
 Usage: #definition
 * url = "http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOHCC-ReferralRecipient"
-* name = "SDOHCC_ReferralRecipient"
 * title = "SDOHCC Referral Recipient"
+* description = "This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral recipients'.  These are typically community-based organizations that can provide services such as food bank access, housing remediation, etc."
+* name = "SDOHCC_ReferralRecipient"
 * status = #active
 * date = "2021-06"
-* description = "This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral recipients'.  These are typically community-based organizations that can provide services such as food bank access, housing remediation, etc."
 * purpose = "In some cases, a referral recipient might actually further refer the patient to a downstream service provider through non-FHIR means.  In such cases, the system is still treated as a 'referral recipient' rather than a [Coordination Platform](CapabilityStatement-SDOHCC-CoordinationPlatform.html) because, from a FHIR interface perspective, the referral process 'stops' with that system.  Referral recipients must be able to receive or monitor for Tasks issued by [Referral Sources](CapabilityStatement-SDOHCC-ReferralSource.html) and [Coordination Platforms](CapabilityStatement-SDOHCC-CoordinationPlatform.html).  They must also be able to respond to access the ServiceRequest representing the referral pointed to by the Task and any relevant information referenced by the referral, update the Task with their acceptance or rejection of the referral, and finally provide information about what interventions were actually performed using the Procedure resource.\\n\\n There are actually two types of referral recipients defined in this implementation guide.  This CapabilityStatement describes the expected behavior of more sophisticated service delivery systems that are capable of exposing a FHIR service and persisting Tasks and Procedures in their own environment.  A separate set of interface expectations is defined for ['Light' Referral Recipients](CapabilityStatement-SDOHCC-ReferralRecipientLight.html) that are not capable of exposing an endpoint and where the Task and any resulting Procedures must be stored in the requesting system's database."
 * kind = #requirements
 * fhirVersion = #4.0.1
@@ -735,16 +735,11 @@ Usage: #definition
 * rest[=].resource[=].interaction[=].extension.valueCode = #MAY
 * rest[=].resource[=].interaction[=].code = #update
 * rest[=].resource[=].interaction[=].documentation = "Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id) typically to cancel a request for fulfillment"
-* rest[=].resource[=].operation[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].operation[=].extension.valueCode = #SHOULD
-* rest[=].resource[=].operation[=].name = "status"
-* rest[=].resource[=].operation[=].definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"
-* rest[=].resource[=].operation[=].documentation = "Necessary for systems supporting subscriptions to ensure that the subscription is functioning properly and to check for errors"
-//* rest[=].resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-//* rest[=].resource[=].operation[=].extension.valueCode = #MAY
-//* rest[=].resource[=].operation[=].name = "topic-list"
-//* rest[=].resource[=].operation[=].definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/Backport-subscriptiontopic-list"
-//* rest[=].resource[=].operation[=].documentation = "Allows discovery of what subscription topics the systems supports - needed for systems that aren't pre-configured to be aware of what topics are available for use."
+* rest[=].resource[=].operation.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].operation.extension.valueCode = #SHOULD
+* rest[=].resource[=].operation.name = "status"
+* rest[=].resource[=].operation.definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"
+* rest[=].resource[=].operation.documentation = "Necessary for systems supporting subscriptions to ensure that the subscription is functioning properly and to check for errors"
 * rest[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].interaction.extension.valueCode = #SHOULD
 * rest[=].interaction.code = #batch
@@ -800,16 +795,11 @@ Usage: #definition
 * rest[=].resource[=].interaction[=].extension.valueCode = #MAY
 * rest[=].resource[=].interaction[=].code = #update
 * rest[=].resource[=].interaction[=].documentation = "Allows upstream systems to revise existing subscriptions - to adjust delivery target, to add additional tasks to monitor (if subscribing by id), etc."
-* rest[=].resource[=].operation[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].operation[=].extension.valueCode = #SHOULD
-* rest[=].resource[=].operation[=].name = "status"
-* rest[=].resource[=].operation[=].definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"
-* rest[=].resource[=].operation[=].documentation = "Allows upstream systems to verify their subscription is functioning properly and to check for errors"
-//* rest[=].resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-//* rest[=].resource[=].operation[=].extension.valueCode = #MAY
-//* rest[=].resource[=].operation[=].name = "topic-list"
-//* rest[=].resource[=].operation[=].definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/Backport-subscriptiontopic-list"
-//* rest[=].resource[=].operation[=].documentation = "Allows upstream systems to discover of what subscription topics this system supports - needed for systems that aren't pre-configured to be aware of what topics are available for use."
+* rest[=].resource[=].operation.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].operation.extension.valueCode = #SHOULD
+* rest[=].resource[=].operation.name = "status"
+* rest[=].resource[=].operation.definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"
+* rest[=].resource[=].operation.documentation = "Allows upstream systems to verify their subscription is functioning properly and to check for errors"
 * rest[=].resource[+].type = #Task
 * rest[=].resource[=].supportedProfile[0] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"
 * rest[=].resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"

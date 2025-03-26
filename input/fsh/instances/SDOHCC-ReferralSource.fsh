@@ -4,11 +4,11 @@ Title: "SDOHCC Referral Source Capability Statement"
 Description: "This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral sources'."
 Usage: #definition
 * url = "http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOHCC-ReferralSource"
-* name = "SDOHCC_ReferralSource"
 * title = "SDOHCC Referral Source"
+* description = "This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral sources'.  These are typically EHR or Payer systems that initiate the process of identifying patients with SDOH needs and requesting appropriate services."
+* name = "SDOHCC_ReferralSource"
 * status = #active
 * date = "2021-06"
-* description = "This resource describes the required and desired behavior of systems acting as SDOH clinical care 'referral sources'.  These are typically EHR or Payer systems that initiate the process of identifying patients with SDOH needs and requesting appropriate services."
 * purpose = "Because systems that originate requests for service may sometimes also be recipients of requests for service, the requirements include 'SHOULD' expectations to also accept and process requests from other systems.  The referral source may either interact directly with a [Referral Recipient](CapabilityStatement-SDOHCC-ReferralRecipient.html) or will interact through an intermediary [Coordination Platform](CapabilityStatement-SDOHCC-CoordinationPlatform.html).  Responsibilities of Referral Sources include capturing information from a patient in the form of QuestionnaireResponses, Observations, Conditions and Goals as well as creating the ServiceRequest instances that refer patients for needed services and the Tasks that initiate fulfillment of those referrals."
 * kind = #requirements
 * fhirVersion = #4.0.1
@@ -472,7 +472,7 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #PractitionerRole
-* rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
+* rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-practitionerrole"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "For referral sources that receive referrals from upstream systems, used to access information about an PractitionerRole that is the requester or intended performer of a ServiceRequest"
@@ -852,16 +852,11 @@ Usage: #definition
 * rest[=].resource[=].interaction[=].extension.valueCode = #MAY
 * rest[=].resource[=].interaction[=].code = #update
 * rest[=].resource[=].interaction[=].documentation = "Needed to allow the requester to update a subscription - to adjust delivery target, to add additional tasks to monitor (if subscribing by id) typically to cancel a request for fulfillment"
-* rest[=].resource[=].operation[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].operation[=].extension.valueCode = #SHOULD
-* rest[=].resource[=].operation[=].name = "status"
-* rest[=].resource[=].operation[=].definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"
-* rest[=].resource[=].operation[=].documentation = "Necessary for systems supporting subscriptions to ensure that the subscription is functioning properly and to check for errors"
-//* rest[=].resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-//* rest[=].resource[=].operation[=].extension.valueCode = #MAY
-//* rest[=].resource[=].operation[=].name = "topic-list"
-//* rest[=].resource[=].operation[=].definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/Backport-subscriptiontopic-list"
-//* rest[=].resource[=].operation[=].documentation = "Allows discovery of what subscription topics the systems supports - needed for systems that aren't pre-configured to be aware of what topics are available for use."
+* rest[=].resource[=].operation.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].operation.extension.valueCode = #SHOULD
+* rest[=].resource[=].operation.name = "status"
+* rest[=].resource[=].operation.definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"
+* rest[=].resource[=].operation.documentation = "Necessary for systems supporting subscriptions to ensure that the subscription is functioning properly and to check for errors"
 * rest[=].resource[+].type = #Task
 * rest[=].resource[=].supportedProfile[0] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"
 * rest[=].resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"
@@ -1509,7 +1504,7 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #PractitionerRole
-* rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
+* rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-practitionerrole"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "Used to allow downstream systems to access to information about an PractitionerRole that is the requester or intended performer of a ServiceRequest"
@@ -1915,16 +1910,11 @@ Usage: #definition
 * rest[=].resource[=].interaction[=].extension.valueCode = #MAY
 * rest[=].resource[=].interaction[=].code = #update
 * rest[=].resource[=].interaction[=].documentation = "Allows upstream systems to revise existing subscriptions - to adjust delivery target, to add additional tasks to monitor (if subscribing by id), etc."
-* rest[=].resource[=].operation[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].operation[=].extension.valueCode = #SHOULD
-* rest[=].resource[=].operation[=].name = "status"
-* rest[=].resource[=].operation[=].definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"
-* rest[=].resource[=].operation[=].documentation = "Allows upstream systems to verify their subscription is functioning properly and to check for errors"
-//* rest[=].resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-//* rest[=].resource[=].operation[=].extension.valueCode = #MAY
-//* rest[=].resource[=].operation[=].name = "topic-list"
-//* rest[=].resource[=].operation[=].definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/Backport-subscriptiontopic-list"
-//* rest[=].resource[=].operation[=].documentation = "Allows upstream systems to discover of what subscription topics this system supports - needed for systems that aren't pre-configured to be aware of what topics are available for use."
+* rest[=].resource[=].operation.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].operation.extension.valueCode = #SHOULD
+* rest[=].resource[=].operation.name = "status"
+* rest[=].resource[=].operation.definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"
+* rest[=].resource[=].operation.documentation = "Allows upstream systems to verify their subscription is functioning properly and to check for errors"
 * rest[=].resource[+].type = #Task
 * rest[=].resource[=].supportedProfile[0] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"
 * rest[=].resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"
