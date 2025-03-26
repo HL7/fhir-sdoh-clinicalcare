@@ -15,7 +15,7 @@ dependencies:
         uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
         id: uscore
         reason: |
-            All profiles in this IG are derived from US Core 7.0.0 as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.
+            All profiles in this IG are derived from US Core 7.0.0. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.
     hl7.fhir.us.core.v610:
         version: 6.1.0
         uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
