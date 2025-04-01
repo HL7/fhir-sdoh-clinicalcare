@@ -1,5 +1,5 @@
 Profile: SDOHCCServiceRequest
-Parent: USCoreServiceRequestProfile
+Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest|7.0.0
 Id: SDOHCC-ServiceRequest
 Title: "SDOHCC ServiceRequest"
 Description: "Profile for service requests that address Social Determinants of Health."
@@ -25,8 +25,9 @@ Description: "Profile for service requests that address Social Determinants of H
 * basedOn contains SupportedBasedOn 0..* MS
 * basedOn[SupportedBasedOn] only Reference(SDOHCCServiceRequest)
 * basedOn[SupportedBasedOn] ^requirements = "Allows an organization (e.g., a Coordination Platform) to create a ServiceRequest for another organization (e.g., a Community Based Organization) based on a SDOHCC ServiceRequest from a referral source (e.g., a provider or a payor involved in care management)."
-* basedOn[SupportedBasedOn] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* basedOn[SupportedBasedOn] ^type[=].targetProfile[=].extension.valueBoolean = true
+// For STU3 consideration
+// * basedOn[SupportedBasedOn] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * basedOn[SupportedBasedOn] ^type[=].targetProfile[=].extension.valueBoolean = true
 
 //* status MS
 * status ^comment = "The status is generally fully in the control of the requester - they determine whether the order is draft or active and, after it has been activated, competed, cancelled or suspended. States relating to the activities of the performer are reflected on either the corresponding event (see [Event Pattern](event.html) for general discussion) or using the [Task](task.html) resource.\r\n\r\nWhile all values are currently allowed, there may be a constraint on the values in future releases based on implementation feedback."
@@ -47,7 +48,7 @@ Description: "Profile for service requests that address Social Determinants of H
 * category[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
 * priority MS
 //* code 1.. MS
-* code from USCoreProcedureCodes (required)
+* code from USCoreProcedureCodes|7.0.0 (required)
 //* code ^short = "What is being requested/ordered."
 //* code ^definition = "A code that identifies a particular service (e.g., procedure) that has been requested."
 //* code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service."
@@ -75,16 +76,16 @@ Description: "Profile for service requests that address Social Determinants of H
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.28, extensible)
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, utility-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.252, extensible)
 * insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.91, extensible)
-* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code, required)
+* insert AdditionalBinding(SDOHCCServiceRequest, code, ServiceRequest.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|7.0.0, required)
 
 
-* orderDetail ^slicing.discriminator.type = #pattern
+* orderDetail ^slicing.discriminator.type = #value
 * orderDetail ^slicing.discriminator.path = "coding"
 * orderDetail ^slicing.rules = #open
 * orderDetail contains SubjectContactDetail 0..1 MS
 * orderDetail[SubjectContactDetail] = $SDOHCC-CodeSystemTemporaryCodes#contacting-subject-prohibited
 * orderDetail[SubjectContactDetail] ^requirements = "Allows flagging of a service request where the subject of the request explictly designates that they do not want to be contacted (e.g., in domestic violence cases where contact may place subject at risk)."
-* subject only Reference(Group or USCorePatientProfile or USCoreLocationProfile)
+* subject only Reference(Group or USCorePatientProfile|7.0.0 or USCoreLocationProfile|7.0.0)
 //* subject MS
 //* encounter only Reference(USCoreEncounterProfile)
 //* encounter MS
@@ -99,9 +100,9 @@ Description: "Profile for service requests that address Social Determinants of H
 * occurrence[x] ^type[=].extension.valueBoolean = true
 
 //* authoredOn MS
-* requester only Reference(USCoreRelatedPersonProfile or Device or SDOHCCPractitionerRole or USCorePractitionerProfile or USCorePatientProfile or USCoreOrganizationProfile)
+* requester only Reference(USCoreRelatedPersonProfile|7.0.0 or Device or SDOHCCPractitionerRole or USCorePractitionerProfile|7.0.0 or USCorePatientProfile|7.0.0 or USCoreOrganizationProfile|7.0.0)
 //* requester MS
-* performer only Reference(HealthcareService or Device or RelatedPerson or USCorePatientProfile or USCorePractitionerProfile or SDOHCCPractitionerRole or USCoreOrganizationProfile or USCoreCareTeam)
+* performer only Reference(HealthcareService or Device or RelatedPerson or USCorePatientProfile|7.0.0 or USCorePractitionerProfile|7.0.0 or SDOHCCPractitionerRole or USCoreOrganizationProfile|7.0.0 or USCoreCareTeam|7.0.0)
 * performer MS
 //* reasonCode from USCoreConditionCodes (extensible)
 //* reasonCode ^extension.url = "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement"
@@ -119,12 +120,13 @@ Description: "Profile for service requests that address Social Determinants of H
 * reasonReference[SupportedReasonReference] only Reference(SDOHCCCondition or SDOHCCObservationScreeningResponse or SDOHCCObservationAssessment)
 * reasonReference[SupportedReasonReference] ^comment = "This element represents why the referral is being made and may be used to decide how the service will be performed, or even if it will be performed at all.    To be as specific as possible,  a reference to  *Observation* or *Condition* should be used if available.  Otherwise when referencing  *DiagnosticReport*  it should contain a finding  in `DiagnosticReport.conclusion` and/or `DiagnosticReport.conclusionCode`.   When using a reference to *DocumentReference*, the target document should contain clear findings language providing the relevant reason for this service request.  Use the CodeableConcept text element in `ServiceRequest.reasonCode` if the data is free (uncoded) text."
 * reasonReference[SupportedReasonReference] ^requirements = "When a service request is justified by one or more SDOH conditions or observations, ServiceRequest.reasonReference should reference instances that comply with the SDOHCC Condition profile, or one of the SDOHCC Observation profiles. However, references to other instance types are also possible."
-* reasonReference[SupportedReasonReference] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
-* reasonReference[SupportedReasonReference] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
-* reasonReference[SupportedReasonReference] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
+// For STU3 consideration
+// * reasonReference[SupportedReasonReference] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
+// * reasonReference[SupportedReasonReference] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
+// * reasonReference[SupportedReasonReference] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
 
 * supportingInfo ^slicing.discriminator.type = #profile
 * supportingInfo ^slicing.discriminator.path = "resolve()"
@@ -133,7 +135,8 @@ Description: "Profile for service requests that address Social Determinants of H
 * supportingInfo contains SupportedSupportingInfo 0..* MS
 * supportingInfo[SupportedSupportingInfo] only Reference(SDOHCCConsent)
 * supportingInfo[SupportedSupportingInfo] ^requirements = "When a service request is supported by a SDOH consent, ServiceRequest.supportingInfo should reference instances that comply with the SDOHCC Consent profile. However, references to other instance types are also possible."
-* supportingInfo[SupportedSupportingInfo] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* supportingInfo[SupportedSupportingInfo] ^type[=].targetProfile[=].extension.valueBoolean = true
+// For STU3 consideration
+// * supportingInfo[SupportedSupportingInfo] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * supportingInfo[SupportedSupportingInfo] ^type[=].targetProfile[=].extension.valueBoolean = true
 * specimen ..0
 * bodySite ..0

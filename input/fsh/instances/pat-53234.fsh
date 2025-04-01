@@ -1,5 +1,5 @@
 Instance: pat-53234
-InstanceOf: USCorePatientProfile
+InstanceOf: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|7.0.0
 Title: "Patient Colin Abbas Example"
 Description: "An example of a patient. This example is used as the referenced patient in other examples in this IG."
 Usage: #example

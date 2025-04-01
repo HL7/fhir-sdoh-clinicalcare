@@ -11,7 +11,7 @@ There is growing awareness that social risks negatively impact health outcomes a
 * Housing instability factors into lower treatment adherence
 * Transportation barriers result in missed appointments, delayed care, and lower medication compliance
 
-Addressing SDOH is a primary approach to achieving health equity. See National Center for HIV, Viral Hepatitis, STD, and TB Prevention (NCHHSTP) Social Determinants of Health, [Frequently Asked Questions](https://www.cdc.gov/nchhstp/socialdeterminants/faq.html)
+Addressing SDOH is a primary approach to achieving health equity. See National Center for HIV, Viral Hepatitis, STD, and TB Prevention (NCHHSTP) Social Determinants of Health, [Frequently Asked Questions](https://www.cdc.gov/health-disparities-hiv-std-tb-hepatitis/about/social-determinants-of-health.html?CDC_AAref_Val=https://www.cdc.gov/nchhstp/socialdeterminants/faq.html)
 
 These national calls to action for health care systems have spurred innovations, including a wide range of social risk assessment instruments and practice-based interventions.   Some of these innovations have helped to reduce social risks, improve outcomes, and lower costs.   The experimentation in this area has been bolstered by new value-based payment models and accountable care organizations (ACOs), which together offer financial incentives to advance coordinated care between medical and social service organizations and other organizations directly connected to patients.
 ### Challenges of SDOH Data Interoperability
@@ -26,8 +26,8 @@ Based on the growing collection of social risk data in health care systems, an i
 ### Gravity Project Overview
 The [Gravity Project](https://thegravityproject.net/) was initiated by the [Social Interventions Research and Evaluation Network (SIREN)](https://chc.ucsf.edu/siren) with support from the [Robert Wood Johnson Foundation](https://www.rwjf.org/).   The Gravity Project mission is to create and maintain a consensus-building community to expand available SDOH Core Data for Interoperability and accelerate standards-based information exchange by using HL7 FHIR. The Gravity Project aims to standardize SDOH-related codes to facilitate the use of social determinants of health-related data in patient care, care coordination between the health and human services sectors, population health management, value-based payment, and clinical research.
 
-The Gravity Project currently has three workstreams as shown in the figure below.  The [Terminology Workstream](https://confluence.hl7.org/display/GRAV/Terminology+Workstream+Dashboard)
-develops terminology resources that are published via the [Value Set Authority Center (VSAC)][VSAC] that support capture of SDOH-related data.  The [Technical Workstream](https://confluence.hl7.org/display/GRAV/Technical+Workstream+Dashboard) developed this FHIR Implementation Guide (IG) and coordinates with other FHIR IG development projects.
+The Gravity Project currently has three workstreams as shown in the figure below.  The [Terminology Workstream](https://confluence.hl7.org/spaces/GRAV/pages/91994234/Terminology+Workstream)
+develops terminology resources that are published via the [Value Set Authority Center (VSAC)][VSAC] that support capture of SDOH-related data.  The [Technical Workstream](https://confluence.hl7.org/spaces/GRAV/pages/66922000/Technical+Workstream) developed this FHIR Implementation Guide (IG) and coordinates with other FHIR IG development projects.
 
 The [Implementation Workstream](https://confluence.hl7.org/display/GRAV/Implementation+Workstream) works with partners to test and provide feedback on the Gravity-developed Terminology Resources and FHIR IG specifications.
 

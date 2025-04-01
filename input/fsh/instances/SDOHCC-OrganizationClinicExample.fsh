@@ -1,5 +1,5 @@
 Instance: SDOHCC-OrganizationClinicExample
-InstanceOf: USCoreOrganizationProfile
+InstanceOf: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|7.0.0
 Title: "SDOHCC Organization Clinic Example"
 Description: "An example of a clinic Organization. This example is used as the referenced organization in other IG examples."
 Usage: #example

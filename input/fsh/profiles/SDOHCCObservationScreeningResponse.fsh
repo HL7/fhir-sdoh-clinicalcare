@@ -1,5 +1,5 @@
 Profile: SDOHCCObservationScreeningResponse
-Parent: USCoreObservationScreeningAssessmentProfile
+Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|7.0.0
 Id: SDOHCC-ObservationScreeningResponse
 Title: "SDOHCC Observation Screening Response"
 Description: "Profile for observations that represent question and answer pairs from Social Determinants of Health (SDOH) screening instruments."
@@ -37,7 +37,7 @@ Description: "Profile for observations that represent question and answer pairs 
 * category[SDOHCC] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to an observation. It is recommended that SDOH category codes be used to facilitate searching for SDOH observations."
 * category[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
 * code MS
-* code from USCoreSurveyCodes (required)
+* code from USCoreSurveyCodes|7.0.0 (required)
 * code ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation."
 * code ^requirements = "Knowing what kind of observation is being made is essential to understanding the observation.\r\n\r\nThe Gravity implemenation guide restricts questionnaire/survey observations to LOINC to move the industry to the use of LOINC panels/surveys (structures that are not available in other terminology systems) to standardize the coding of SDOH related risk assessment instruments. In addition, USCDI and US Core have standardized on the use of LOINC to represent Observations in general."
 * code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
@@ -45,7 +45,7 @@ Description: "Profile for observations that represent question and answer pairs 
 * code ^binding.description = "Codes identifying names of simple observations."
 
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, digital-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.240, extensible)
-* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, digital-literacy, http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes, required)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, digital-literacy, http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0, required)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, educational-attainment, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.199, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, elder-abuse, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.191, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, employment-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.205, extensible)
@@ -55,7 +55,7 @@ Description: "Profile for observations that represent question and answer pairs 
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, homelessness, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.196, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, housing-instability, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.197, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, inadequate-housing, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1196.3520, extensible)
-* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, incarceration-status, http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes, required)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, incarceration-status, http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0, required)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, intimate-partner-violence, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.198, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, language-access, http://cts.nlm.nih.gov/fhir/ValueSet//2.16.840.1.113762.1.4.1247.272, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, material-hardship, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.200, extensible)
@@ -66,12 +66,12 @@ Description: "Profile for observations that represent question and answer pairs 
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.204, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, utility-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.251, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.192, extensible)
-* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes, required)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0, required)
 
 
 
 * subject 1.. MS
-* subject only Reference(USCorePatientProfile)
+* subject only Reference(USCorePatientProfile|7.0.0)
 * subject ^comment = "Cardinality is 1..1."
 * effective[x] 1.. MS
 * effective[x] only dateTime or Period
@@ -82,7 +82,7 @@ Description: "Profile for observations that represent question and answer pairs 
 * effective[x] ^type[=].extension.valueBoolean = true
 // * effective[x] ^condition[0] = "us-core-1"
 
-* performer only Reference(USCoreRelatedPersonProfile or USCorePatientProfile or USCorePractitionerProfile or SDOHCCPractitionerRole or USCoreOrganizationProfile or USCoreCareTeam)
+* performer only Reference(USCoreRelatedPersonProfile|7.0.0 or USCorePatientProfile|7.0.0 or USCorePractitionerProfile|7.0.0 or SDOHCCPractitionerRole or USCoreOrganizationProfile|7.0.0 or USCoreCareTeam|7.0.0)
 * performer MS
 * performer ^requirements = "Some questions on an SDOH screening questionnaire are not answered directly (e.g., asserted) by the individual completing the questionnaire. Rather, the answer to some questions (e.g., the Hunger Vital Sign 88124-3 “Food insecurity risk”) may be derived from answers to one or more other questions. For an Observation Screening Response  that is derived, as opposed to answered directly, Observation.performer should not be specified."
 * performer ^comment = "Some questions on questionnaires are not answered directly (e.g., asserted) by the individual completing the questionnaire, but are derived from answers to one or more other questions. For types of answers, `Observation.performer` should not be specified and `Observation.derivedFrom` should reference the relevant Screening Response Observation(s)."
@@ -136,7 +136,7 @@ Description: "Profile for observations that represent question and answer pairs 
 * bodySite ..0
 * specimen ..0
 * hasMember ^definition = "References the child observations of a grouping observation."
-* derivedFrom only Reference(USCoreDocumentReferenceProfile or USCoreQuestionnaireResponseProfile or USCoreObservationScreeningAssessmentProfile)
+* derivedFrom only Reference(USCoreDocumentReferenceProfile|7.0.0 or USCoreQuestionnaireResponseProfile|7.0.0 or USCoreObservationScreeningAssessmentProfile)
 * derivedFrom ^definition = "The target resource represents a QuestionnaireResponse or other Observation from which the value of this Observation was inferred or calculated."
 * derivedFrom MS
 * insert SliceReferenceOnProfile(derivedFrom)
@@ -151,8 +151,9 @@ Description: "Profile for observations that represent question and answer pairs 
 * derivedFrom[SupportedDerivedFrom] ^definition =  "The types of 'derivedFrom' resources that must be supported by implementations conforming to this IG"
 * derivedFrom[SupportedDerivedFrom] ^requirements = "Allows traceability (and context) for Observations derived from a QuestionnaireResponse and also establishes links for observations that were calculated or inferred based on other Observations (e.g. for calculated scores)."
 * derivedFrom[SupportedDerivedFrom] ^comment = "Additional derivation targets (as supported by the underlying Observation resource) are allowed, but there is no expectation that implementers of this IG will pay attention to them."
-* derivedFrom[SupportedDerivedFrom] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* derivedFrom[SupportedDerivedFrom] ^type[=].targetProfile[=].extension.valueBoolean = true
+// For STU3 consideration
+// * derivedFrom[SupportedDerivedFrom] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * derivedFrom[SupportedDerivedFrom] ^type[=].targetProfile[=].extension.valueBoolean = true
 
 * insert SliceReferenceOnProfile(hasMember)
 * hasMember only Reference(USCoreObservationScreeningAssessmentProfile or QuestionnaireResponse or MolecularSequence)
@@ -165,8 +166,9 @@ Description: "Profile for observations that represent question and answer pairs 
 * hasMember[SupportedHasMember] ^definition = "This is the set of child observations that are expected to be supported by SDOH implementations."
 * hasMember[SupportedHasMember] ^requirements = "Provides context to the child observations of \"in what instrument/panel was this information collected\", which is critical in situations where the child observations do not have derivedFrom relationships to a QuestionnaireResponse."
 * hasMember[SupportedHasMember] ^comment = "Other types of observations or resources can still be sent, but SDOH systems aren't required to pay attention to them."
-* hasMember[SupportedHasMember] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* hasMember[SupportedHasMember] ^type[=].targetProfile[=].extension.valueBoolean = true
+// For STU3 consideration
+// * hasMember[SupportedHasMember] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * hasMember[SupportedHasMember] ^type[=].targetProfile[=].extension.valueBoolean = true
 
 // Invariant: us-core-2
 // Description: "If there is no component or hasMember element then either a value[x] or a data absent reason must be present"

@@ -30,14 +30,15 @@ Description: "Profile for interventions that address Social Determinants of Heal
 * basedOn ^slicing.discriminator.path = "resolve()"
 * basedOn ^slicing.rules = #open
 * basedOn contains SupportedBasedOn 0..* MS
-* basedOn[SupportedBasedOn] only Reference(SDOHCCServiceRequest or USCoreCarePlanProfile)
+* basedOn[SupportedBasedOn] only Reference(SDOHCCServiceRequest or USCoreCarePlanProfile|7.0.0)
 * basedOn[SupportedBasedOn] ^short = "An SDOH service request or US Core Care Plan for this procedure"
 * basedOn[SupportedBasedOn] ^definition = "A reference to an SDOHCC service request or US Core Care Plan that contains details of the request for this procedure."
 * basedOn[SupportedBasedOn] ^requirements = "When a procedure is based on an SDOH ServiceRequest, Procedure.basedOn should reference instances that comply with the SDOHCC ServiceRequest profile and when a procedure is based on a SDOH Care Plan, Procedure.basedOn should reference instances that comply with the US Core Care Plan profile. However, references to other instance types are also possible."
-* basedOn[SupportedBasedOn] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* basedOn[SupportedBasedOn] ^type[=].targetProfile[=].extension.valueBoolean = true
-* basedOn[SupportedBasedOn] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* basedOn[SupportedBasedOn] ^type[=].targetProfile[=].extension.valueBoolean = false
+// For STU3 consideration
+// * basedOn[SupportedBasedOn] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * basedOn[SupportedBasedOn] ^type[=].targetProfile[=].extension.valueBoolean = true
+// * basedOn[SupportedBasedOn] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * basedOn[SupportedBasedOn] ^type[=].targetProfile[=].extension.valueBoolean = false
 
 
 
@@ -64,11 +65,11 @@ Description: "Profile for interventions that address Social Determinants of Heal
 
 // US Core 7.0.0
 * code 1.. MS
-* code from USCoreProcedureCodes (required) // code from $us-core-procedure-code (preferred)
+* code from USCoreProcedureCodes|7.0.0 (required) // code from $us-core-procedure-code (preferred)
 * code ^binding.extension.extension[0].url = "purpose"
 * code ^binding.extension.extension[=].valueCode = #current
 * code ^binding.extension.extension[+].url = "valueSet"
-* code ^binding.extension.extension[=].valueCanonical = "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code"
+* code ^binding.extension.extension[=].valueCanonical = "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|7.0.0"
 * code ^binding.extension.extension[+].url = "documentation"
 * code ^binding.extension.extension[=].valueMarkdown = "US Core uses the current additional binding from FHIR R5 for this coded element for more flexibility when exchanging legacy and text-only data."
 * code ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
@@ -102,15 +103,16 @@ Description: "Profile for interventions that address Social Determinants of Heal
 * insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.27, extensible)
 * insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, utility-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.247, extensible)
 * insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.90, extensible)
-* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code, required)
+* insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|7.0.0, required)
 
 
 // US Core 7.0.0
-* subject only Reference(USCorePatientProfile)
+* subject only Reference(USCorePatientProfile|7.0.0)
 * subject MS
-* subject ^type.targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* subject ^type.targetProfile[=].extension.valueBoolean = true
-* encounter only Reference(USCoreEncounterProfile)
+// For STU3 consideration
+// * subject ^type.targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * subject ^type.targetProfile[=].extension.valueBoolean = true
+* encounter only Reference(USCoreEncounterProfile|7.0.0)
 * encounter MS
 * encounter ^short = "Encounter associated with the procedure"
 * performed[x] only dateTime or Period or string or Age or Range
@@ -127,7 +129,7 @@ Description: "Profile for interventions that address Social Determinants of Heal
 //* performed[x] ^requirements = "NOTE: dateTime should be Must Support, but currenlty tooling does not support this."
 * reasonCode ^comment = "Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used. Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure.\r\n\r\nInformation represented by Procedure.reasonCode may overlap significantly with information represented by Procedure.reasonReference. Multiple approaches to representing the same information may negatively impact interoperability. Therefore, where similar information could be provided by either Procedure.reasonCode or Procedure.reasonReference, it is recommended that Procedure.reasonReference be used to provide a reason for why a procedure was performed."
 
-* reasonCode from USCoreConditionCodes (extensible)
+* reasonCode from USCoreConditionCodes|7.0.0 (extensible)
 //* reasonCode ^extension[0].url = "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement"
 //* reasonCode ^extension[=].valueBoolean = true
 //* reasonCode ^short = "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Coded reason procedure performed"
@@ -145,12 +147,13 @@ Description: "Profile for interventions that address Social Determinants of Heal
 * reasonReference[SupportedReasonReference] only Reference(SDOHCCCondition or SDOHCCObservationScreeningResponse or SDOHCCObservationAssessment)
 * reasonReference[SupportedReasonReference] ^comment = "Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used.  Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure."
 * reasonReference[SupportedReasonReference] ^requirements = "When a procedure is justified by one or more SDOH conditions or observations, Procedure.reasonReference should reference instances that comply with the SDOHCC Condition profile, or one of the SDOHCC Observation profiles. However, references to other instance types are also possible."
-* reasonReference[SupportedReasonReference] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
-* reasonReference[SupportedReasonReference] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
-* reasonReference[SupportedReasonReference] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
+// For STU3 consideration
+// * reasonReference[SupportedReasonReference] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
+// * reasonReference[SupportedReasonReference] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
+// * reasonReference[SupportedReasonReference] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * reasonReference[SupportedReasonReference] ^type[=].targetProfile[=].extension.valueBoolean = true
 
 
 // US Core 7.0.0

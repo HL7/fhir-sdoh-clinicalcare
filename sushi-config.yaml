@@ -41,7 +41,7 @@ dependencies:
         reason: |
             Subscriptions are recommended for monitoring completion of referrals.
     hl7.terminology.r4:
-        version: 6.1.0
+        version: 6.2.0
     hl7.fhir.us.davinci-hrex:
         uri: http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/hl7.fhir.us.davinci-hrex
         version: 1.1.0
@@ -68,6 +68,8 @@ extension:
     valueCode: pc # <<< The value must be the code for the workgroup
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2
     
     
 license: CC0-1.0

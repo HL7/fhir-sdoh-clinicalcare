@@ -1,5 +1,5 @@
 Instance: SDOHCC-PractitionerDrJanWaterExample
-InstanceOf: USCorePractitionerProfile
+InstanceOf: http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0
 Title: "SDOHCC Practitioner Dr Jan Water Example"
 Description: "An example of a Practitioner. This example is used as the referenced practitioner in other IG examples."
 Usage: #example

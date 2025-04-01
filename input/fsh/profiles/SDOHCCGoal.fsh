@@ -1,5 +1,5 @@
 Profile: SDOHCCGoal
-Parent: USCoreGoalProfile
+Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal|7.0.0
 Id: SDOHCC-Goal
 Title: "SDOHCC Goal"
 Description: "Profile for goals that address Social Determinants of Health (SDOH)."
@@ -18,7 +18,7 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * category[SDOHCC] ^definition = "An SDOH category assigned to the goal."
 * category[SDOHCC] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a goal. It is recommended that SDOH category codes be used to facilitate searching for SDOH-related goals."
 * category[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
-* description from USCoreGoalCodes (extensible)
+* description from USCoreGoalCodes|7.0.0 (extensible)
 * description ^comment = "If no code is available, use CodeableConcept.text.\r\n\r"
 * description ^binding.description = "Codes providing the details of a particular goal.  In many systems, only the text element will be used."
 
@@ -44,12 +44,12 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * insert AdditionalBinding(SDOHCCGoal, description, Goal.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.163, extensible)
 * insert AdditionalBinding(SDOHCCGoal, description, Goal.category, utility-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.245, extensible)
 * insert AdditionalBinding(SDOHCCGoal, description, Goal.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.214, extensible)
-* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description, extensible)
+* insert AdditionalBinding(SDOHCCGoal, description, Goal.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description|7.0.0, extensible)
 
 
 
 * subject ^definition = "Identifies the patient for whom the goal is being established."
-* subject only Reference(USCorePatientProfile)
+* subject only Reference(USCorePatientProfile|7.0.0)
 
 * target.measure from LOINCCodes (preferred)
 * target.measure ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
@@ -63,13 +63,14 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * addresses contains SupportedAddresses 0..* MS
 * addresses[SupportedAddresses] only Reference(SDOHCCCondition or SDOHCCObservationScreeningResponse or SDOHCCObservationAssessment)
 * addresses[SupportedAddresses] ^requirements = "When a goal addresses SDOH screening response observations generated from a survey/questionnaire, SDOH assessment observations, or SDOH conditions, Goal.addresses should reference instances that comply with the SDOHCC Observation Screening Response, SDOHCC Condition, or SDOHCC Observation Assessment profiles. However, references to other instance types are also possible."
-* addresses[SupportedAddresses] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* addresses[SupportedAddresses] ^type[=].targetProfile[=].extension.valueBoolean = true
-* addresses[SupportedAddresses] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* addresses[SupportedAddresses] ^type[=].targetProfile[=].extension.valueBoolean = true
-* addresses[SupportedAddresses] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* addresses[SupportedAddresses] ^type[=].targetProfile[=].extension.valueBoolean = true
-* outcomeCode from USCoreGoalCodes (preferred)
+// For STU3 consideration
+// * addresses[SupportedAddresses] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * addresses[SupportedAddresses] ^type[=].targetProfile[=].extension.valueBoolean = true
+// * addresses[SupportedAddresses] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * addresses[SupportedAddresses] ^type[=].targetProfile[=].extension.valueBoolean = true
+// * addresses[SupportedAddresses] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * addresses[SupportedAddresses] ^type[=].targetProfile[=].extension.valueBoolean = true
+* outcomeCode from USCoreGoalCodes|7.0.0 (preferred)
 * outcomeCode ^comment = "Note that this should not duplicate the goal status.\r\n\r\nInformation represented by Goal.outcomeCode may overlap significantly with information represented by Goal.outcomeReference. Multiple approaches to representing the same information may negatively impact interoperability. Therefore, where there is significant overlap in information provided by Goal.outcomeCode and Goal.outcomeReference, it is recommended that Goal.outcomeReference should be used to provide details of goal outcomes.\r\n\r"
 * outcomeCode ^binding.description = "The result of the goal; e.g., \"Food security\", \"Has access to a car \"."
 * outcomeReference ^slicing.discriminator.type = #profile
@@ -79,7 +80,8 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * outcomeReference contains SupportedOutcomeReference 0..* MS
 * outcomeReference[SupportedOutcomeReference] only Reference(SDOHCCObservationScreeningResponse or SDOHCCObservationAssessment)
 * outcomeReference[SupportedOutcomeReference] ^requirements = "When a goal outcome can be represented by SDOH screening response observations or SDOH assessment observations, Goal.outcome should reference instances that comply with the SDOHCC Observation Screening Response or SDOHCC Observation Assessment profiles. However, references to other instance types are also possible."
-* outcomeReference[SupportedOutcomeReference] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* outcomeReference[SupportedOutcomeReference] ^type[=].targetProfile[=].extension.valueBoolean = true
-* outcomeReference[SupportedOutcomeReference] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* outcomeReference[SupportedOutcomeReference] ^type[=].targetProfile[=].extension.valueBoolean = true
+// For STU3 consideration
+// * outcomeReference[SupportedOutcomeReference] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * outcomeReference[SupportedOutcomeReference] ^type[=].targetProfile[=].extension.valueBoolean = true
+// * outcomeReference[SupportedOutcomeReference] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * outcomeReference[SupportedOutcomeReference] ^type[=].targetProfile[=].extension.valueBoolean = true

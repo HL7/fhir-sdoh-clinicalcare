@@ -29,7 +29,7 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 * generating and monitoring referrals from providers and care coordinators for SDOH-related services provided by CBOs
 * capturing the results of the referrals as procedures
 
-### Dependencies on Other IGs
+### Dependencies
 
 <!-- | Implementation Guide | Version | Dependency |
 | -------------------- | ------- | ---------- |

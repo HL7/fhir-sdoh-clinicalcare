@@ -13,10 +13,11 @@ Description: "Profile for SDOH-related tasks to be carried out by the patient or
 * partOf ^slicing.rules = #open
 * partOf contains SupportedPartOf 0..* MS
 * partOf[SupportedPartOf] only Reference(SDOHCCTaskForReferralManagement or SDOHCCTaskForPatient)
-* partOf[SupportedPartOf] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* partOf[SupportedPartOf] ^type[=].targetProfile[=].extension.valueBoolean = true
-* partOf[SupportedPartOf] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* partOf[SupportedPartOf] ^type[=].targetProfile[=].extension.valueBoolean = true
+// For STU3 consideration
+// * partOf[SupportedPartOf] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * partOf[SupportedPartOf] ^type[=].targetProfile[=].extension.valueBoolean = true
+// * partOf[SupportedPartOf] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * partOf[SupportedPartOf] ^type[=].targetProfile[=].extension.valueBoolean = true
 
 
 * status MS
@@ -46,19 +47,21 @@ Description: "Profile for SDOH-related tasks to be carried out by the patient or
 * focus MS
 * focus ^condition[0] = "SDOH-Task-3"
 * for 1.. MS
-* for only Reference(USCorePatientProfile)
-* for ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* for ^type[=].targetProfile[=].extension.valueBoolean = true
+* for only Reference(USCorePatientProfile|7.0.0)
+// For STU3 consideration
+// * for ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * for ^type[=].targetProfile[=].extension.valueBoolean = true
 * authoredOn 1.. MS
 * requester 1.. MS
-* requester only Reference(SDOHCCPractitionerRole or USCoreOrganizationProfile)
+* requester only Reference(SDOHCCPractitionerRole or USCoreOrganizationProfile|7.0.0)
 * owner 1.. MS
-* owner only Reference(USCorePatientProfile or RelatedPerson)
-* owner ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* owner ^type[=].targetProfile[=].extension.valueBoolean = true
-* owner ^type[=].targetProfile[=].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* owner ^type[=].targetProfile[=].extension.valueBoolean = false
-* input ^slicing.discriminator.type = #pattern
+* owner only Reference(USCorePatientProfile|7.0.0 or RelatedPerson)
+// For STU3 consideration
+// * owner ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * owner ^type[=].targetProfile[=].extension.valueBoolean = true
+// * owner ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * owner ^type[=].targetProfile[=].extension.valueBoolean = false
+* input ^slicing.discriminator.type = #value
 * input ^slicing.discriminator.path = "type"
 * input ^slicing.rules = #open
 * input contains
@@ -78,7 +81,7 @@ Description: "Profile for SDOH-related tasks to be carried out by the patient or
 * input[Questionnaire].value[x] ^type.targetProfile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * input[QuestionnairePDF] ^condition[0] = "SDOH-Task-1"
 * input[QuestionnairePDF].type = $SDOHCC-CodeSystemTemporaryCodes#questionnaire-pdf
-* input[QuestionnairePDF].value[x] only Reference(USCoreDocumentReferenceProfile)
+* input[QuestionnairePDF].value[x] only Reference(USCoreDocumentReferenceProfile|7.0.0)
 * input[QuestionnaireURL] ^condition[0] = "SDOH-Task-1"
 * input[QuestionnaireURL].type = $SDOHCC-CodeSystemTemporaryCodes#questionnaire-url
 * input[QuestionnaireURL].value[x] only url
@@ -91,8 +94,8 @@ Description: "Profile for SDOH-related tasks to be carried out by the patient or
 * input[Contact] ^condition[0] = "SDOH-Task-4"
 * input[Contact].type = $SDOHCC-CodeSystemTemporaryCodes#contact-entity
 * input[Contact].type ^comment = "When Task.code is \"make-contact\", \"contact-entity\" is used for Task.input.type to indicate that the task owner should contact one of the healthcare services represented in Task.input.value."
-* input[Contact].value[x] only Reference(SDOHCCHealthcareService or SDOHCCPractitionerRole or USCorePractitionerProfile or USCoreOrganizationProfile)
-* output ^slicing.discriminator.type = #pattern
+* input[Contact].value[x] only Reference(SDOHCCHealthcareService or SDOHCCPractitionerRole or USCorePractitionerProfile|7.0.0 or USCoreOrganizationProfile|7.0.0)
+* output ^slicing.discriminator.type = #value
 * output ^slicing.discriminator.path = "type"
 * output ^slicing.rules = #open
 * output ^condition[0] = "SDOH-Task-2"
@@ -115,7 +118,7 @@ Description: "Profile for SDOH-related tasks to be carried out by the patient or
 * output[QuestionnairePDFCompleted] ^condition[+] = "SDOH-Task-6"
 * output[QuestionnairePDFCompleted] ^condition[+] = "SDOH-Task-7"
 * output[QuestionnairePDFCompleted].type = $SDOHCC-CodeSystemTemporaryCodes#questionnaire-pdf-completed
-* output[QuestionnairePDFCompleted].value[x] only Reference(USCoreDocumentReferenceProfile)
+* output[QuestionnairePDFCompleted].value[x] only Reference(USCoreDocumentReferenceProfile|7.0.0)
 * output[GeneralInformationResponse] ^condition[0] = "SDOH-Task-2"
 * output[GeneralInformationResponse] ^condition[+] = "SDOH-Task-7"
 * output[GeneralInformationResponse] ^condition[+] = "SDOH-Task-6"

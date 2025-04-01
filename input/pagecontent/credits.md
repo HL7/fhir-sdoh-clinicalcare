@@ -7,7 +7,7 @@ We would like to thank [CyncHealth](https://cynchealth.org/), the [Agency for He
 | **Name**           | **Organization**                                                                   |
 | ------------------ | ----------------------------------------------------------------------------------- |
 | Robert Dieterle    | [EnableCare LLC](http://www.enablecare.us/)                                        |
-| Corey Smith        | [AMA](https://www.ama-assn.org/)                                                   |
+| Corey Smith        | [Gravity Project Technical Director](https://confluence.hl7.org/display/GRAV/Project+Team)                                                   |
 | Monique van Berkum | [AMA ](https://www.ama-assn.org/)                                                  |
 | James Shalaby      | [Elimu](https://www.elimu.io/)                                                     |
 | Lloyd McKenzie     | [Dogwood Health Consulting](https://dogwoodhealthconsulting.com/)                  |

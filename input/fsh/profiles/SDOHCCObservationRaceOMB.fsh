@@ -18,7 +18,7 @@ Description: "Profile for race observations that use Office of Management and Bu
 * method 1.. MS
 * method from SDOHCCValueSetObservationMethod (extensible)
 * method ^binding.description = "Methods for personal characteristic observations."
-* component ^slicing.discriminator[0].type = #pattern
+* component ^slicing.discriminator[0].type = #value
 * component ^slicing.discriminator[=].path = "code"
 * component ^slicing.discriminator[+].type = #type
 * component ^slicing.discriminator[=].path = "value"
@@ -56,7 +56,7 @@ Description: "Profile for race observations that use Office of Management and Bu
 * component[DetailedRace].code MS
 * component[DetailedRace].value[x] 1.. MS
 * component[DetailedRace].value[x] only CodeableConcept
-* component[DetailedRace].value[x] from DetailedRace (required)
+* component[DetailedRace].value[x] from DetailedRace|7.0.0 (required)
 * component[DetailedRace].value[x] ^short = "Detailed race codes"
 * component[DetailedRace].value[x] ^binding.description = "CDC race codes that further specify the 5 OMB race category codes"
 * component[DetailedRace].dataAbsentReason ..0
