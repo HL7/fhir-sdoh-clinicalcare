@@ -1,5 +1,5 @@
 Instance: SDOHCC-OrganizationPayerExample
-InstanceOf: USCoreOrganizationProfile
+InstanceOf: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|7.0.0
 Title: "SDOHCC Organization Payer Example"
 Description: "An example of a payer organization. This example is used as the referenced organization in other SDOHCC examples."
 Usage: #example

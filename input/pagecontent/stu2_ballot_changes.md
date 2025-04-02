@@ -82,7 +82,7 @@ Updated Profiles [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233)
 
 * [SDOHCC Condition](StructureDefinition-SDOHCC-Condition.html) [FHIR-34243](https://jira.hl7.org/browse/FHIR-34243)
 
-- - Changed Condition.code value set to use [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html) value set.
+- - Changed `Condition.code` value set to use [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html) value set.
 
 - - Added guidance on use of SDOH value sets
 
@@ -92,29 +92,29 @@ Updated Profiles [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233)
 
 * * Added guidance on use of SDOH value sets in VSAC
 
-- - Make Goal.value due date MS
+- - Make `Goal.value` due date MS
 
 
 
 
 * [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html) [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233), [FHIR-34242](https://jira.hl7.org/browse/FHIR-34242)
 
-- - Procedure.code -- added reference to [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-procedure-code.html) value set [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233)
+- - `Procedure.code` -- added reference to [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-procedure-code.html) value set [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233)
 
-- - Procedure.code.coding -- added slice for example of social services taxonomy (e.g. 211 LA) as Must Support
+- - `Procedure.code.coding` -- added slice for example of social services taxonomy (e.g. 211 LA) as Must Support
 
 
 
 * [SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) [FHIR-34246](https://jira.hl7.org/browse/FHIR-34246), [FHIR-34233](https://jira.hl7.org/browse/FHIR-34233), [FHIR-34242](https://jira.hl7.org/browse/FHIR-34242)
 
-* * ServiceRequest.status –- updated guidance
+* * `ServiceRequest.status` –- updated guidance
 
-* * ServiceRequest.code -- removed slices and added reference to US Core Procedure value set
+* * `ServiceRequest.code` -- removed slices and added reference to US Core Procedure value set
 
-* * ServiceRequest.code.coding -- added slice for example of social services taxonomy (e.g. 211 LA) as Must Support
+* * `ServiceRequest.code.coding` -- added slice for example of social services taxonomy (e.g. 211 LA) as Must Support
 
-* * ServiceRequest.reasonReference – added guidance
-* * ServiceRequest.orderDetail -- added order detail to indicate that the service organization is not to call the patient/client
+* * `ServiceRequest.reasonReference` – added guidance
+* * `ServiceRequest.orderDetail` -- added order detail to indicate that the service organization is not to call the patient/client
 
 
 Added new profiles
@@ -158,7 +158,7 @@ Added CapabilityStatement
 * Support for Multiple Domains – added support for VSAC group value sets [FHIR-34236](https://jira.hl7.org/browse/FHIR-34236)
 * Exchange Workflow – added new workflow for Patient/Client and CBO applications [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255), [FHIR-34256](https://jira.hl7.org/browse/FHIR-34256)
 * [Connecting Applications with API Data Sources](connecting_applications_with_api_data_sources.html) -- new [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255)
-* FHIR Artifacts Overview[artifacts.html] – updated to refer to new or changed artifacts
+* [FHIR Artifacts Overview](artifacts.html) – updated to refer to new or changed artifacts
 * [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)-- new [FHIR-34339](https://jira.hl7.org/browse/FHIR-34239)
 
 

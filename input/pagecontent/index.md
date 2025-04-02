@@ -29,15 +29,18 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 * generating and monitoring referrals from providers and care coordinators for SDOH-related services provided by CBOs
 * capturing the results of the referrals as procedures
 
-### Dependencies on Other IGs
+### Dependencies
 
-| Implementation Guide | Version | Dependency |
+<!-- | Implementation Guide | Version | Dependency |
 | -------------------- | ------- | ---------- |
 | [US Core](https://hl7.org/fhir/us/core/STU3.1.1/) | 3.1.1 | Where possible, all profiles in this IG are either derived from US Core 3.1.1 or aligned with that release and future releases as much as possible.  U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.  |
 | [Structured Document Capture (SDC)](http://hl7.org/fhir/uv/sdc/)| 3.0.0  | SDC is the basis for mapping QuestionnaireResponses to Observations and Conditions. SDC also provides guidance around how questionnaires can be created with support for score calculation, conditional behavior, specific rendering expectations, etc.   |
 | [Subscriptions R5 Backport](http://hl7.org/fhir/uv/subscriptions-backport) |1.1.0   | Subscriptions are recommended for monitoring completion of referrals.  |
 |[Value Set Authority Center](https://vsac.nlm.nih.gov/) (VSAC)| 0.9.0   |    Gravity Project social risk data elements are published in [Value Set Authority Center](https://vsac.nlm.nih.gov/) (VSAC) value sets. The value sets can be identified by searching for "The Gravity Project" steward. You will need to create a free National Library of Medicine (NLM) account to access the value sets. Value sets will be updated bi-annually on June 30th and December 31st.   |
-{:.grid}
+{:.grid} -->
+{% include dependency-table-nontech.xhtml %}
+
+The Gravity SDOH Clinical Care IG is dependent on the [US Core 3.1.1 (FHIR R4)](http://hl7.org/fhir/us/core/STU3.1.1), [US Core 6.1.0 (FHIR R4)](http://hl7.org/fhir/us/core/STU6.1) and [US Core 7.0.0 (FHIR R4)](http://hl7.org/fhir/us/core/STU7) implementation guides. US Core 3.1.1 is supported for those systems limited to  [United States Core Data for Interoperability (USCDI) v1](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi) capabilities. US Core 6.1.0 is for upcoming regulatory requirements mandating support fo [USCDI v3](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi#uscdi-v3). US Core 7.0.0 is to enable support for proposed regulations mandating support for  [USCDI v4](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi#uscdi-v4). The SDOHCC profiles can be used to create instances that are valid with all three US Core releases.
 
 ### Relationships to Other IGs
 
@@ -49,7 +52,7 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 | [DaVinci Prior Authorization Support](http://hl7.org/fhir/us/davinci-pas/) (PAS)|  Together with CRD and DTR, these three IGs (collectively known as the Da Vinci Burden Reduction IGs) provide support for prior authorization and other documentation capture and could be relevant for SDOH-related services. |
 | [DaVinci Coverage Requirements Discovery](http://hl7.org/fhir/us/davinci-crd/) (CRD) |  Together with PAS and DTR, these three IGs (collectively known as the Da Vinci Burden Reduction IGs) provide support for prior authorization and other documentation capture and could be relevant for SDOH-related services. |
 | [DaVinci Documentation Templates and Rules](http://hl7.org/fhir/us/davinci-dtr/) (DTR) | Together with PAS and CRD, these three IGs (collectively known as the Da Vinci Burden Reduction IGs) provide support for prior authorization and other documentation capture and could be relevant for SDOH-related services.  |
-| [Human Services Directory](https://build.fhir.org/ig/HL7/FHIR-IG-Human-Services-Directory) | Can be used by a provider to identify referral targets for SDOH-related services  |
+| [Human Services Directory](https://hl7.org/fhir/us/hsds/FHIR-IG-Human-Services-Directory) | Can be used by a provider to identify referral targets for SDOH-related services  |
 | [IHE FHIR Audit Event Query and Feed to ATNA](https://wiki.ihe.net/index.php/Audit_Trail_and_Node_Authentication) | For systems wishing to maintain robust audit records of changes and access to patient records (always a good idea), this IG defines standards for using FHIR to do so. (Note that this standard is only really relevant if there's a need for electronic sharing of audit records.) |
 | [National Healthcare Directory Exchange](https://hl7.org/fhir/us/ndh/2023Sep/)| A U.S. Office of the National Coordinator-sponsored IG supporting the exchange of directory information for a wide range of service providers and organizations |
 | [PACIO Cognitive Status](http://hl7.org/fhir/us/pacio-cs) | Defines standards for sharing information about a patient's cognitive capabilities and limitations, which may influence decisions about appropriate SDOH interventions. |

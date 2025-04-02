@@ -29,11 +29,11 @@ Questions from LOINC-encoded assessment instruments that meet Gravity’s vettin
 
 ### Representing Assessment Instrument Data in a FHIR Format
 
-Implementers should have a plan to present assessment instrument data in a computable FHIR format. The FHIR [QuestionnaireResponse] and [Observation](https://build.fhir.org/observation.html) resources can each be used to present data captured in an assessment instrument.
+Implementers should have a plan to present assessment instrument data in a computable FHIR format. The FHIR QuestionnaireResponse and Observation resources can each be used to present data captured in an assessment instrument.
 
 #### Representing Assessment Instrument Data with QuestionnaireResponse and Observation
 
-[QuestionnaireResponse] and [Observation](https://build.fhir.org/observation.html) can present data from completed assessment instruments that has been captured in a structured, codified format (e.g., electronic forms). Best practice is to capture and share [QuestionnaireResponse] and [Observation](https://build.fhir.org/observation.html). However, decisions as to whether to use one or both resources may be influenced by the use case and the format of the structured data coming from the data sources (e.g., hospitals, health information exchanges (HIEs), social care networks (SCNs), and qualified health information organizations (QHIOs)). Gravity uses the [SDC QuestionnaireResponse] and [SDOHCC Observation Screening Response] profiles.
+[QuestionnaireResponse] and [Observation] can present data from completed assessment instruments that has been captured in a structured, codified format (e.g., electronic forms). Best practice is to capture and share [QuestionnaireResponse] and [Observation]. However, decisions as to whether to use one or both resources may be influenced by the use case and the format of the structured data coming from the data sources (e.g., hospitals, health information exchanges (HIEs), social care networks (SCNs), and qualified health information organizations (QHIOs)). Gravity uses the [SDC QuestionnaireResponse] and [SDOHCC Observation Screening Response] profiles.
 
 ##### Benefits of using QuestionnaireResponse to represent assessment instrument data
 
@@ -41,20 +41,20 @@ Benefits of using [QuestionnaireResponse] to represent assessment instrument dat
 
 * QuestionnaireResponse is better suited to support use cases that require access to the format of the original assessment instrument.
 * QuestionnaireResponse is always based on a FHIR [Questionnaire] and preserves the Questionnaire’s structure and complexity to provide a fully contextualized view of a completed Questionnaire. For example, QuestionnaireResponse allows the precise capture of the assessment instrument version, the exact text of the questions and answers, the order of presentation, multiple choice answer options, and whether questions were skipped. 
-* Question-answer pairs in QuestionnaireResponse can be automatically transformed to FHIR Observations using [StructureMap](assessment_instrument_support.html#using-structuremap-to-generate-observations-or-conditions-from-questionnaireresponse) and the [SDC Implementation Guide](https://build.fhir.org/ig/HL7/sdc/).
+* Question-answer pairs in QuestionnaireResponse can be automatically transformed to FHIR Observations using [StructureMap](assessment_instrument_support.html#using-structuremap-to-generate-observations-or-conditions-from-questionnaireresponse) and the [SDC Implementation Guide]({{site.data.fhir.path}}).
 
 ##### Benefits of using Observation to represent assessment instrument data
 
-Benefits of using [Observation](https://build.fhir.org/observation.html) to represent individual question-answer pairs from an assessment instrument include:
+Benefits of using Observation to represent individual question-answer pairs from an assessment instrument include:
 
 * Observation is supported by most EMR systems and is one of the most mature FHIR resources.
 * Observation is better suited than QuestionnaireResponse to support use cases that require querying the assessment instrument data. 
 * A question-answer pair represented as an Observation can be retrieved and exchanged independently.  
 * Observation has data elements to represent information that is not explicitly represented in QuestionnaireResponse. For example:
-    * Observation.category can be used to tag Observations by SDOH domain (e.g., Food Insecurity, Housing Instability) 
-    * Observation.interpretation can be used to flag Observations that might represent a health-related social need (HRSN). 
-    * Observation can also indicate relationships (e.g., Observation.derivedFrom) to other artifacts. For example, an Observation may be calculated or determined based on other Observations. 
-    * If assessment instrument context is needed, Observations generated from a QuestionnaireResponse can use Observation.derivedFrom to reference the QuestionnaireResponse.
+    * `Observation.category` can be used to tag Observations by SDOH domain (e.g., Food Insecurity, Housing Instability) 
+    * `Observation.interpretation` can be used to flag Observations that might represent a health-related social need (HRSN). 
+    * Observation can also indicate relationships (e.g., `Observation.derivedFrom`) to other artifacts. For example, an Observation may be calculated or determined based on other Observations. 
+    * If assessment instrument context is needed, Observations generated from a QuestionnaireResponse can use `Observation.derivedFrom` to reference the QuestionnaireResponse.
  
 **Table 1**: Guidance on QuestionnaireResponse (QR) and Observation Screening Response (OSR) based on Usage Needs
 
@@ -127,9 +127,9 @@ Benefits of using [Observation](https://build.fhir.org/observation.html) to repr
 
 #### Additional Guidance on Questionnaire and QuestionnaireResponse
 
-[Questionnaire] is a template (not specific to an individual) that, like [QuestionnaireResponse], is a precise representation of an assessment instrument. 
+Questionnaire is a template (not specific to an individual) that, like [QuestionnaireResponse]({{site.data.fhir.path}}questionnaireresponse.html), is a precise representation of an assessment instrument. 
 
-QuestionnaireResponse includes an individual’s responses and always references a [Questionnaire] via QuestionnaireResponse.questionnaire. This IG uses the [SDC QuestionnaireResponse] profile which references the [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html#root).
+QuestionnaireResponse includes an individual’s responses and always references a Questionnaire via `QuestionnaireResponse.questionnaire`. This IG uses the [SDC QuestionnaireResponse]({{site.data.fhir.ver.sdc}}/StructureDefinition-sdc-questionnaireresponse.html) profile which references the [SDC Base Questionnaire]({{site.data.fhir.ver.sdc}}/StructureDefinition-sdc-questionnaire.html#root).
 
 Table 2 below provides guidance for Questionnaire.code and Questionnaire.item for several scenarios of ways in which implementers may compose assessment instruments.
 
@@ -165,24 +165,25 @@ Table 2 below provides guidance for Questionnaire.code and Questionnaire.item fo
 
 #### Additional Guidance on SDOHCC Observation Screening Response Elements
 
-This section provides guidance on Observation.category and Observation.interpretation in the context of their use in the [SDOHCC Observation Screening Response] profile.
+This section provides guidance on `Observation.category` and `Observation.interpretation` in the context of their use in the [SDOHCC Observation Screening Response](StructureDefinition-SDOHCC-ObservationScreeningResponse.html) profile.
 
-##### Categorizing Observations by SDOH domain(s) using Observation.category  
+##### Categorizing Observations by SDOH domain(s) using `Observation.category`  
 
-Observation.category has two, fixed category codes (survey and social-history) to indicate that a Q-A pair captured as an Observation represents an assessment (survey) related to social history. 
 
-Additionally, Observation.category has a binding to [SDOHCC ValueSet SDOH Category] which has values to categorize an Observation by SDOH domain(s) (e.g., Food Insecurity. Housing Instability, etc.). The additional guidance and examples below are for Observation.category values from [SDOHCC ValueSet SDOH Category].
+`Observation.category` **SHALL** have two category codes (survey and sdoh) to indicate that a Q-A pair captured as an Observation represents an assessment (survey) related to a social determinant of health.
 
-Additional guidance related to Observation.category for [SDOHCC Observation Screening Response] :
+Optionally, `Observation.category` also has a binding to [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) which has values to categorize an Observation by SDOH domain(s) (e.g., Food Insecurity. Housing Instability, etc.).
 
-* “Observation.category: SDOH domain” (e.g., Food Insecurity) means that the Observation addresses a health-related social need (HRSN) in the specified SDOH domain.
-* “Observation.category: SDOH domain” does not mean that the Observation confirms a HRSN in the specified SDOH domain. 
-* Some Observations may be assigned only one value for Observation.category (from [SDOHCC ValueSet SDOH Category]) while others may be assigned more than one value. 
-* When categorizing an Observation that represents a Q-A pair, Gravity recommends that the SDOH domain(s) be assigned based on the question <u>and its complete allowed set of answers</u> on an assessment instrument. 
+When `Observation.category` for [SDOHCC Observation Screening Response](StructureDefinition-SDOHCC-ObservationScreeningResponse.html) is a value from SDOHCC ValueSet SDOH Category:
 
-Examples for using Observation.category to tag Observations by SDOH domain are provided below. The examples are based on the Accountable Health Communities Health-Related Social Needs Screening Tool (AHC HRSN Screening Tool) or the AHC HRSN Screening Tool Supplemental Questions.<sup>1</sup>
+* It indicates that the Observation addresses a health-related social need (HRSN) in the specified SDOH domain (e.g., food-insecurity).
+* It does not mean that the Observation confirms a HRSN in the specified SDOH domain.
+* It may have one or more values from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) for `Observation.category`.
+* Gravity recommends that the SDOH domain(s) from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) be based on the assessment instrument's question and its complete set of allowed answers (which may be from one or more SDOH domains).
 
-**Example 1**: When a question and its complete answer set address only one SDOH domain, an Observation using the question for Observation.code should have only one value for Observation.category.
+Examples for using `Observation.category` to tag Observations by SDOH domain are provided below. The examples are based on the Accountable Health Communities Health-Related Social Needs Screening Tool (AHC HRSN Screening Tool) or the AHC HRSN Screening Tool Supplemental Questions.<sup>1</sup>
+
+**Example 1**: When a question and its complete answer set address only one SDOH domain, an Observation using the question for `Observation.code` should have only one value for `Observation.category`.
 
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
    <thead>
@@ -232,10 +233,10 @@ Examples for using Observation.category to tag Observations by SDOH domain are p
 </table>
 
 * The above question and the set of answer choices provides information about a possible HRSN related to Food Insecurity.
-* Although Observation.value: LA28398-8 (Never true) does not indicate a HRSN, the Observation still provides information about Food Insecurity. 
-* Therefore, regardless of the answer chosen, Gravity recommends using Observation.category: [food-insecurity](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity) for an Observation from the AHC HRSC Screening Tool with Observation.code: 88122-7.
+* Although `Observation.value`: LA28398-8 (Never true) does not indicate a HRSN, the Observation still provides information about Food Insecurity. 
+* Therefore, regardless of the answer chosen, Gravity recommends using `Observation.category`: [food-insecurity](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity) for an Observation from the AHC HRSC Screening Tool with `Observation.code`: 88122-7.
 
-**Example 2**: When a question and its complete answer set address more than one SDOH domain, an Observation using the question for Observation.code may have more than one value for Observation.category.
+**Example 2**: When a question and its complete answer set address more than one SDOH domain, an Observation using the question for `Observation.code` may have more than one SDOH domain value for `Observation.category`.
 
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
    <thead>
@@ -285,11 +286,11 @@ Examples for using Observation.category to tag Observations by SDOH domain are p
 </table>
 
 * The above question and the set of answer choices provides information about a possible HRSN related to Housing Instability or Homelessness. 
-* Although Observation.value: LA31993-1 (I have a steady place to live) does not indicate a HRSN, the Observation still provides information about Homelessness and Housing Instability. 
-* Observation.value: LA31994-9 (I have a place to live today, but I am worried about losing it in the future) provides information about Housing Instability but also shows that the individual is not experiencing Homelessness.
-* Regardless of the answer chosen, Gravity recommends using [homelessness](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness) AND [housing-instability](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability) for Observation.category for any Observation with Observation.code: 71802-3.
+* Although `Observation.value`: LA31993-1 (I have a steady place to live) does not indicate a HRSN, the Observation still provides information about Homelessness and Housing Instability. 
+* `Observation.value`: LA31994-9 (I have a place to live today, but I am worried about losing it in the future) provides information about Housing Instability but also shows that the individual is not experiencing Homelessness.
+* Regardless of the answer chosen, Gravity recommends using [homelessness](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness) AND [housing-instability](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability) for `Observation.category` for any Observation with `Observation.code`: 71802-3.
 
-**Example 3**: Since Gravity Project terminology development for SDOH domains is an ongoing process, some domains may not yet be represented in the [SDOHCC ValueSet SDOH Category] value set. When a question and its complete answer set address an SDOH domain that is not represented in the Observation.category value set, use Observation.category: [sdoh-category-unspecified](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified). If desired, Observationcategory.text can be used to further specify the domain.
+**Example 3**: Since Gravity Project terminology development for SDOH domains is an ongoing process, some domains may not yet be represented in the [SDOHCC ValueSet SDOH Category] value set. When a question and its complete answer set address an SDOH domain that is not represented in the `Observation.category` value set, use `Observation.category`: [sdoh-category-unspecified](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified). If desired, Observationcategory.text can be used to further specify the domain.
 
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
    <thead>
@@ -339,21 +340,21 @@ Examples for using Observation.category to tag Observations by SDOH domain are p
 </table>
 
 * The question and answer set above address Disability Status.
-* As of June 2024, Gravity Project has not yet started on Disability Status as a domain. Therefore, ‘disability-status’ is not in the value set for Observation.category.
-* In this case, Gravity recommends using Observation.category: [sdoh-category-unspecified](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified) for any Observation with Observation.code: 69861-3 and “category.text: Disability Status” can be used to further specify the domain.
+* As of June 2024, Gravity Project has not yet started on Disability Status as a domain. Therefore, ‘disability-status’ is not in the value set for `Observation.category`.
+* In this case, Gravity recommends using `Observation.category`: [sdoh-category-unspecified](CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-sdoh-category-unspecified) for any Observation with `Observation.code`: 69861-3 and “category.text: Disability Status” can be used to further specify the domain.
 
-##### Flagging Observations for a possible HRSN need using Observation.interpretation
+##### Flagging Observations for a possible HRSN need using `Observation.interpretation`
 
-Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) (Positive) can be used to flag Observations for which the Q-A pair might represent a HRSN.
+`Observation.interpretation`: [POS]({{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) (Positive) can be used to flag Observations for which the Q-A pair might represent a HRSN.
 
-Additional guidance related to Observation.interpretation for [SDOHCC Observation Screening Response] : 
+Additional guidance related to `Observation.interpretation` for [SDOHCC Observation Screening Response](StructureDefinition-SDOHCC-ObservationScreeningResponse.html) : 
 
-* The meaning of Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) should be evaluated in conjunction with “Observation.category: SDOH domain”. If the author of an assessment instrument provides guidance that a specific Q-A pair might represent a HRSN, Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) can be used to flag the need for follow-up by a provider or qualified health professional (QHP) to further evaluate for a HRSN in the SDOH domain(s) specified by Observation.category.
-* Gravity does not advise using Observation.interpretation: [NEG](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html) (Negative). Assessment instruments are generally designed so that certain answers indicate a possible HRSN. Assessment instrument authors generally do not state that certain Q-A pairs rule out a HRSN. 
-* When an answer (Observation.value) does not indicate a possible HRSN, Observation.interpretation should be omitted.
-Examples for using Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) and understanding its meaning in conjunction with Observation.category are provided below. The examples are based on the AHC HRSN Screening Tool which provides guidance that specific answers might indicate an unmet health-related social need.
+* The meaning of `Observation.interpretation`: [POS]({{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) should be evaluated in conjunction with “`Observation.category`: SDOH domain”. If the author of an assessment instrument provides guidance that a specific Q-A pair might represent a HRSN, `Observation.interpretation`: [POS]({{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) can be used to flag the need for follow-up by a provider or qualified health professional (QHP) to further evaluate for a HRSN in the SDOH domain(s) specified by `Observation.category`.
+* Gravity does not advise using `Observation.interpretation`: [NEG]({{site.data.fhir.path}}v3/ObservationInterpretation/cs.html) (Negative). Assessment instruments are generally designed so that certain answers indicate a possible HRSN. Assessment instrument authors generally do not state that certain Q-A pairs rule out a HRSN. 
+* When an answer (`Observation.value`) does not indicate a possible HRSN, `Observation.interpretation` should be omitted.
+Examples for using `Observation.interpretation`: [POS]({{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) and understanding its meaning in conjunction with `Observation.category` are provided below. The examples are based on the AHC HRSN Screening Tool which provides guidance that specific answers might indicate an unmet health-related social need.
 
-**Example 4**: When Observation.category identifies only one SDOH domain, Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) can be used to flag that the Observation should be followed-up by a provider or QHP to confirm a HRSN or risk in that SDOH domain (e.g., Food Insecurity).
+**Example 4**: When `Observation.category` identifies only one SDOH domain, `Observation.interpretation`: [POS]({{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) can be used to flag that the Observation should be followed-up by a provider or QHP to confirm a HRSN or risk in that SDOH domain (e.g., Food Insecurity).
 
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
    <thead>
@@ -389,13 +390,13 @@ Examples for using Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/
          <td>Often true</td>
          <td><span style="white-space: nowrap;">LA28397-0</span></td>
          <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
-         <td><a href= "https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
+         <td><a href= "{{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
       </tr>
       <tr>
          <td>Sometimes true</td>
          <td><span style="white-space: nowrap;">LA6729-3</span></td>
          <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-food-insecurity">food-insecurity</a></span></td>
-         <td><a href= "https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
+         <td><a href= "{{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
       </tr>
       <tr>
          <td>Never true</td>
@@ -406,9 +407,9 @@ Examples for using Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/
    </tbody>
 </table>
 
-**Example 5**: When Observation.category identifies more than one SDOH domain, Observation.interpretation: [POS](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) can be used to flag the Observation as positive for a possible HRSN in at least one of the selected SDOH categories. However, in this case, determining which SDOH category is positive for the identified HRSN requires further evaluation of the answer (Observation.value).
+**Example 5**: When `Observation.category` identifies more than one SDOH domain, `Observation.interpretation`: [POS]({{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS) can be used to flag the Observation as positive for a possible HRSN in at least one of the selected SDOH categories. However, in this case, determining which SDOH category is positive for the identified HRSN requires further evaluation of the answer (`Observation.value`).
 
-In the example below, Observation.category has two SDOH codes because the question and its complete set of answers address Housing Instability and Homelessness. However, by [definition](https://confluence.hl7.org/display/GRAV/Terminology+Workstream), Housing Instability and Homelessness cannot exist concurrently. In this case, Observation.value: LA31995-6 indicates that the Observation is positive for a possible Housing Instability HRSN and Observation.value: LA31994-9 indicates that the Observation is positive for a possible Homelessness HRSN.
+In the example below, `Observation.category` has two SDOH codes because the question and its complete set of answers address Housing Instability and Homelessness. However, by [definition](https://confluence.hl7.org/display/GRAV/Terminology+Workstream), Housing Instability and Homelessness cannot exist concurrently. In this case, `Observation.value`: LA31995-6 indicates that the Observation is positive for a possible Housing Instability HRSN and `Observation.value`: LA31994-9 indicates that the Observation is positive for a possible Homelessness HRSN.
 
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
    <thead>
@@ -450,18 +451,18 @@ In the example below, Observation.category has two SDOH codes because the questi
          <td>I have a place to live today, but I am worried about losing it in the future</td>
          <td><span style="white-space: nowrap;">LA31994-9</span></td>
          <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness</a></span>, <span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></span></td>
-         <td><a href= "https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
+         <td><a href= "{{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
       </tr>
       <tr>
          <td>I do not have a steady place to live (I am temporarily staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park</td>
          <td><span style="white-space: nowrap;">LA31995-6</span></td>
          <td><span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-homelessness">homelessness</a></span>, <span style="white-space: nowrap;"><a href= "CodeSystem-SDOHCC-CodeSystemTemporaryCodes.html#SDOHCC-CodeSystemTemporaryCodes-housing-instability">housing-instability</a></span></td>
-         <td><a href= "https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
+         <td><a href= "{{site.data.fhir.path}}v3/ObservationInterpretation/cs.html#v3-ObservationInterpretation-POS">POS</a></td>
       </tr>
    </tbody>
 </table>
 
-**Example 6**: Gravity does not advise using Observation.interpretation: [NEG](https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html) (Negative) unless a provider or QHP has evaluated the individual and ruled out the HRSN. Regardless of SDOH Observation.category, when an answer (Observation.value) is provided that does not indicate a HRSN, Observation.interpretation should be omitted.
+**Example 6**: Gravity does not advise using `Observation.interpretation`: [NEG]({{site.data.fhir.path}}v3/ObservationInterpretation/cs.html) (Negative) unless a provider or QHP has evaluated the individual and ruled out the HRSN. Regardless of SDOH `Observation.category`, when an answer (`Observation.value`) is provided that does not indicate a HRSN, `Observation.interpretation` should be omitted.
 
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
    <thead>
@@ -514,7 +515,7 @@ In the example below, Observation.category has two SDOH codes because the questi
    </tbody>
 </table>
 
-**Example 7**: When a question is presented to an individual and none of the answers are selected, use Observation.dataAbsentReason: [unknown](https://hl7.org/fhir/R4/codesystem-data-absent-reason.html#data-absent-reason-unknown) (or a subtype), and Observation.interpretation should be omitted.
+**Example 7**: When a question is presented to an individual and none of the answers are selected, use `Observation.dataAbsentReason`: [unknown](https://hl7.org/fhir/R4/codesystem-data-absent-reason.html#data-absent-reason-unknown) (or a subtype), and `Observation.interpretation` should be omitted.
 
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
    <thead>
@@ -584,13 +585,13 @@ In the example below, Observation.category has two SDOH codes because the questi
 </table>
 
 #### Using Observation Screening Response to Group Observations
-In addition to representing Observation instances, [SDOHCC Observation Screening Response] can be used as an Observation Grouping to reference (via Observation.member) the Observation Screening Response instances that result from an individual completing an assessment instrument.
+In addition to representing Observation instances, [SDOHCC Observation Screening Response] can be used as an Observation Grouping to reference (via `Observation.member`) the Observation Screening Response instances that result from an individual completing an assessment instrument.
 
 If a QuestionnaireResponse has been created for the assessment instrument, Observation Grouping, while not prohibited, is generally redundant since the member Observations can directly reference QuestionnaireResponse (via derivedFrom) for assessment instrument context.
 
 Observation Grouping is most useful when a QuestionnaireResponse has not been created. For an Observation Grouping example, see [SDOHCC Observation Response NHANES Grouping Example](Observation-SDOHCC-ObservationResponseNHANESGroupingExample.html).
 
-For several of the common ways in which implementors may compose assessment instruments, Table 3 provides guidance for Observation.code and Observation.member for an Observation Grouping.
+For several of the common ways in which implementors may compose assessment instruments, Table 3 provides guidance for `Observation.code` and `Observation.member` for an Observation Grouping.
 
 **Table 3**: Guidance on Observation Grouping based on the composition of the assessment instrument
 
@@ -617,9 +618,9 @@ For several of the common ways in which implementors may compose assessment inst
          </td>
          <td>
             <ol>
-               <li>Observation.code is the LOINC code (panel code) for the assessment instrument.</li>
-               <li>Observation.member references all Observations generated from the assessment instrument.</li>
-               <li>All member Observations have LOINC codes for Observation.code and Observation.value (where applicable).</li>
+               <li>`Observation.code` is the LOINC code (panel code) for the assessment instrument.</li>
+               <li>`Observation.member` references all Observations generated from the assessment instrument.</li>
+               <li>All member Observations have LOINC codes for `Observation.code` and `Observation.value` (where applicable).</li>
             </ol>
          </td>
       </tr>
@@ -633,8 +634,8 @@ For several of the common ways in which implementors may compose assessment inst
          </td>
          <td>
             <ol>
-               <li>Observation.code is a non-LOINC (e.g., local) code since the assessment instrument is not represented in LOINC.</li>
-               <li>Observation.member references all Observations generated from the assessment instrument. All member Observations have LOINC codes for Observation.code and Observation.value (where applicable).</li>
+               <li>`Observation.code` is a non-LOINC (e.g., local) code since the assessment instrument is not represented in LOINC.</li>
+               <li>`Observation.member` references all Observations generated from the assessment instrument. All member Observations have LOINC codes for `Observation.code` and `Observation.value` (where applicable).</li>
             </ol>
          </td>
       </tr>
@@ -648,8 +649,8 @@ For several of the common ways in which implementors may compose assessment inst
          </td>
          <td>
             <ol>
-               <li>Observation.code is a non-LOINC (e.g., local) code since the assessment instrument is not represented in LOINC.</li>
-               <li>Observation.member references all Observations generated from the assessment instrument. Some member Observations have a LOINC code for Observation.code and Observation.value.</li>
+               <li>`Observation.code` is a non-LOINC (e.g., local) code since the assessment instrument is not represented in LOINC.</li>
+               <li>`Observation.member` references all Observations generated from the assessment instrument. Some member Observations have a LOINC code for `Observation.code` and `Observation.value`.</li>
             </ol>
          </td>
       </tr>
@@ -665,7 +666,7 @@ Ideally, in the future, a StructureMap instance could be provided by a Questionn
 
 #### Using StructureMap to Generate Observations
 
-This IG supports using SDC StructureMap to generate [SDOHCC Observation Screening Response] instances from QuestionnaireResponse. When using StructureMap to generate Observations from QuestionnaireResponse, rules to align Q-A pairs from a QuestionnaireResponse with Observation.code and Observation.value are generally straightforward. Additional rules, such as rules for assigning Observation.category or Observation.interpretation to a Q-A pair, may be more complex and would ideally be determined with input from assessment instrument authors. 
+This IG supports using SDC StructureMap to generate [SDOHCC Observation Screening Response] instances from QuestionnaireResponse. When using StructureMap to generate Observations from QuestionnaireResponse, rules to align Q-A pairs from a QuestionnaireResponse with `Observation.code` and `Observation.value` are generally straightforward. Additional rules, such as rules for assigning `Observation.category` or `Observation.interpretation` to a Q-A pair, may be more complex and would ideally be determined with input from assessment instrument authors. 
 
 #### Using StructureMap to Generate Conditions
 
@@ -693,7 +694,7 @@ Therefore, the overall process for supporting this transformation process is as 
 
 Note that the creation of the mapping file and compiled StructureMap only needs to be performed once per Questionnaire.
 
-For more information on StructureMap (e.g., [Designing Questionnaires to support data extraction](https://build.fhir.org/ig/HL7/sdc/extraction.html#designing-questionnaires-to-support-data-extraction)) and the StructureMap-based extraction mechanism (considerations, error handling and other details) please refer to the [Structured Data Capture Implementation Guide (SDC IG)](https://hl7.org/fhir/uv/sdc/STU3/extraction.html#structuremap-based-extraction).
+For more information on StructureMap (e.g., [Designing Questionnaires to support data extraction]({{site.data.fhir.ver.sdc}}/extraction.html#designing-questionnaires-to-support-data-extraction)) and the StructureMap-based extraction mechanism (considerations, error handling and other details) please refer to the [Structured Data Capture Implementation Guide (SDC IG)]({{site.data.fhir.ver.sdc}}/extraction.html#structuremap-based-extraction).
 
 ### Process for Implementing Assessment Instruments
 

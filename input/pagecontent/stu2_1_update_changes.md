@@ -17,11 +17,11 @@ This update is focused on improving the readability of the IG narrative content.
 
 * Included value set references in narrative for the multi-domain profiles (Condition, Goal, ServiceRequest, Procedure, and Observation)
 * Improved narrative in all Profiles
-* Abstract flag in [SDOHCCObservationAssessment] is now false - [FHIR-40460 ](https://jira.hl7.org/browse/FHIR-40460)
-* Corrected bindings for output procedures in [SDOHCCTaskForReferralManagement]   - [FHIR-40586](https://jira.hl7.org/browse/FHIR-40586)
+* Abstract flag in [SDOHCCObservationAssessment](StructureDefinition-SDOHCC-ObservationAssessment.html) is now false - [FHIR-40460 ](https://jira.hl7.org/browse/FHIR-40460)
+* Corrected bindings for output procedures in [SDOHCCTaskForReferralManagement](StructureDefinition-SDOHCC-TaskForReferralManagement.html)   - [FHIR-40586](https://jira.hl7.org/browse/FHIR-40586)
 * Added slice to to ObservationScreeningResponse.member to reference all observations that are members of the group [FHIR-40611](https://jira.hl7.org/browse/FHIR-40611)
 * Updated valuesets and state transition diagrams for  [SDOHCCTaskForReferralManagement].status and [SDOHCCTaskForPatient].status [FHIR-41199](https://jira.hl7.org/browse/FHIR-41199)
-* Remove abstract from [SDOHCCGroup] Profile. [FHIR-41198](https://jira.hl7.org/browse/FHIR-41198)
+* Remove abstract from [SDOHCCGroup](StructureDefinition-SDOHCC-Group.html) Profile. [FHIR-41198](https://jira.hl7.org/browse/FHIR-41198)
 
 
 ### CapabilityStatements

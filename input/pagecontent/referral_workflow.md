@@ -73,7 +73,7 @@ The [Patient Coordination](referral_workflow.html#patient-coordination-workflow)
 <td><ul>
 <li><a href="StructureDefinition-SDOHCC-TaskForPatient.html">SDOHCC Task For Patient</a></li>
 <li><a href="https://www.hl7.org/fhir/questionnaire.html">Questionnaire</a></li>
-<li><a href="https://www.hl7.org/fhir/questionnaireresponse.html">QuestionnareResponse</a></li></ul></td>
+<li><a href="https://www.hl7.org/fhir/questionnaireresponse.html">QuestionnaireResponse</a></li></ul></td>
 <td>none</td>
 </tr>
 <tr>
@@ -255,11 +255,11 @@ The referral occurs in two separate interactions. The first is between the refer
 
 In the Indirect Referral, this IG assumes that the referral source does not have the ability to communicate directly with the referral target. There may be multiple referral targets for responsibilities that will be determined and managed by the intermediary. 
 
-The intermediary SHALL support the following:
+The intermediary **SHALL** support the following:
 
 1. Create a local copy of, or proxy, all relevant referenced resources from the referral source
-2. Create ServiceRequest(s) with ServiceRequest.intent value “filler-order” and ServiceRequest.basedOn references the original referral source ServiceRequest(s) 
-3. Create Task(s) to be posted to the referral target(s) that reference the referral source Task(s) via Task.partOf
+2. Create ServiceRequest(s) with `ServiceRequest.intent` value “filler-order” and `ServiceRequest.basedOn` references the original referral source ServiceRequest(s) 
+3. Create Task(s) to be posted to the referral target(s) that reference the referral source Task(s) via `Task.partOf`
 4. If local copies of the referenced resources are maintained by the intermediary, the intermediary must subscribe or periodically query the referral source for updates to the referenced resources
 
 {% include img.html img="DetailedIndirectReferral.svg" caption="Figure 4: Detailed Indirect Referral" %}
@@ -277,27 +277,27 @@ The provider may request to have the service delivered by a specific CBO.   The 
 
 The referral occurs in two separate interactions. The first is between the referral source and the intermediary and the second is between the intermediary and the referral target. 
 
-The intermediary SHALL support the following:
+The intermediary **SHALL** support the following:
 
 1. Create a local copy of, or proxy, all relevant referenced resources from the referral source
-2. Create ServiceRequest(s) with ServiceRequest.intent value “filler-order” and ServiceRequest.basedOn references the original referral source ServiceRequest(s) 
-3. Create Task(s) to be queried by the referral target(s) that reference the referral source Task(s) via Task.partOf
+2. Create ServiceRequest(s) with `ServiceRequest.intent` value “filler-order” and `ServiceRequest.basedOn` references the original referral source ServiceRequest(s) 
+3. Create Task(s) to be queried by the referral target(s) that reference the referral source Task(s) via `Task.partOf`
 4. If local copies of the referenced resources are maintained by the intermediary, the intermediary must subscribe or periodically query the referral source for updates to the referenced resources
 
 {% include img.html img="DetailedIndirectReferralLight.svg" caption="Figure 5: Detailed Indirect Referral Light" %}
 
 #### Additional Guidance on Referrals
 
-1. Parties SHOULD use polling if one or both of the parties is unable to support the subscription model (see notes on the [Checking Task Status](checking_task_status.html) page).
-2. The receiving party for the referral SHOULD use the batch query process to request periodic updates of referenced resources.
+1. Parties **SHOULD** use polling if one or both of the parties is unable to support the subscription model (see notes on the [Checking Task Status](checking_task_status.html) page).
+2. The receiving party for the referral **SHOULD** use the batch query process to request periodic updates of referenced resources.
 3. The above system flows do not define the handling of all possible scenarios. Exchange scenarios may include refusing the referral, canceling the referral by either party, and error conditions that may occur when using RESTful exchanges.  It is up to each party to follow the current best practice in managing the state of the referral.
-4. The referral source SHOULD set the Task.status to “requested”. 
-5. The referral target SHOULD update Task.status as it moves through the workflow.
+4. The referral source **SHOULD** set the `Task.status` to “requested”. 
+5. The referral target **SHOULD** update `Task.status` as it moves through the workflow.
 
 ### Patient Coordination Workflow
 This implementation guide supports additional interactions with a patient/client application (on a smartphone or portal) including:
 
-| Functional Use Case       |  Task.code            |  Description                         | Actors           |
+| Functional Use Case       |  `Task.code`            |  Description                         | Actors           |
 | ------------------------- | ----------------------- | ------------------------------------ | ---------------- |
 | [Complete Questionnaire Request](referral_workflow.html#complete-questionnaire-request)|  `complete-questionnaire` | Requesting party (e.g., provider, CBO, or CP) asks a patient to complete a questionnaire. This functionality can be used to assess social risks, inform service qualification or application, indicate reasons for cancellation, or determine the patient’s view of their interaction with the CBO and whether the service provided met their needs. | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |
 | [General Information Request](referral_workflow.html#general-information-request)|  `general-information-request` | Requesting party sends a patient a free text question and receives a free text response.  | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |

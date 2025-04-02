@@ -24,7 +24,8 @@
   <workgroup key="dev" webcode="healthcaredevices" name="Devices" listserv="healthcaredevices@lists.HL7.org/"/>
   <workgroup key="ec" webcode="ec" name="Emergency Care" listserv="emergencycare@lists.HL7.org/"/>
   <workgroup key="ehr" webcode="ehr" name="Electronic Health Record" listserv="ehr@lists.HL7.org/"/>
-  <workgroup key="director" name="FHIR Director"/>
+  <workgroup key="ex" webcode="ec" name="Executive Committee" listserv="emergencycare@lists.HL7.org/"/>
+  <workgroup key="director" name="FHIR Director" listserv="fhir-director@hl7.org"/>
   <workgroup key="fgb" name="FHIR Governance Board" deprecated="true"/>
   <workgroup key="fhir-i" webcode="fiwg" name="FHIR Infrastructure" listserv="fhir@lists.HL7.org/"/>
   <workgroup key="fmg" webcode="fhirmg" name="FHIR Mgmt Group" listserv="fmg@lists.HL7.org/"/>
@@ -59,7 +60,7 @@
   <workgroup key="tsc" webcode="tsc" name="Technical Steering Committee"/>
   <workgroup key="tsmg" webcode="tsmanagement" name="Terminology Services Management Group" listserv="tsmg@lists.HL7.org/"/>
   <workgroup key="us-realm" webcode="usrealm" name="US Realm Task Force" deprecated="true"/>
-  <workgroup key="vocab" webcode="vocab" name="Terminology Infrastructure" listserv="ti@lists.HL7.org/"/>
+  <workgroup key="vocab" webcode="Vocab" name="Terminology Infrastructure" listserv="ti@lists.HL7.org/"/>
   <workgroup key="v2mg" webcode="v2management" name="V2 Mgmt Group" listserv="v2mgmtgrp@lists.HL7.org/"/>
   <workgroup key="eu" webcode="eu" name="HL7 Europe" listserv="europe@lists.hl7.org/"/>  
   <workgroup key="au-v2" webcode="au-v2" name="HL7 Australia V2" listserv="hl7v2wgballot@hl7.com.au"/>

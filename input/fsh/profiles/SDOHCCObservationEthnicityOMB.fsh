@@ -16,7 +16,7 @@ Description: "Profile for ethnicity observations that use Office of Management a
 * method 1.. MS
 * method from SDOHCCValueSetObservationMethod (extensible)
 * method ^binding.description = "Methods for personal characteristic observations."
-* component ^slicing.discriminator[0].type = #pattern
+* component ^slicing.discriminator[0].type = #value
 * component ^slicing.discriminator[=].path = "code"
 * component ^slicing.discriminator[+].type = #type
 * component ^slicing.discriminator[=].path = "value"
@@ -53,7 +53,7 @@ Description: "Profile for ethnicity observations that use Office of Management a
 * component[DetailedEthnicity].code MS
 * component[DetailedEthnicity].value[x] 1.. MS
 * component[DetailedEthnicity].value[x] only CodeableConcept
-* component[DetailedEthnicity].value[x] from DetailedEthnicity (required)
+* component[DetailedEthnicity].value[x] from DetailedEthnicity|20240606 (required)
 * component[DetailedEthnicity].value[x] ^binding.description = "CDC ethnicity codes that further specify the 2 OMB ethnicity category codes"
 * component[DetailedEthnicity].dataAbsentReason ..0
 * component[DetailedEthnicity].interpretation ..0

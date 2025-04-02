@@ -3,13 +3,13 @@ Gravity Project develops and maintains SDOH-related value sets that are publishe
 
 ### Additional Bindings for SDOH Domain-specific Value Sets
 
-The [SDOHCC Observation Screening Response][SDOHCC Observation Screening Response], [SDOHCC Condition][SDOHCC Condition], [SDOHCC Service Request][SDOHCC Service Request], [SDOHCC Procedure][SDOHCC Procedure], and [SDOHCC Goal][SDOHCC Goal] profiles have additional bindings for Observation.code, Observation.value, Condition.code, ServiceRequest.code, Procedure.code, and Goal.description respectively. The additional bindings are to SDOH domain-specific value sets  (e.g., for Food Insecurity, Inadequate Housing, etc.) which are determined by the value of the profile’s .category element (selected from [SDOHCC ValueSet SDOH Category]).
+The [SDOHCC Observation Screening Response](StructureDefinition-SDOHCC-ObservationScreeningResponse.html), [SDOHCC Condition](StructureDefinition-SDOHCC-Condition.html), [SDOHCC Service Request](StructureDefinition-SDOHCC-ServiceRequest.html), [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html), and [SDOHCC Goal](StructureDefinition-SDOHCC-Goal.html) profiles have additional bindings for `Observation.code`, `Observation.value`, `Condition.code`, `ServiceRequest.code`, `Procedure.code`, and `Goal.description` respectively. The additional bindings are to SDOH domain-specific value sets  (e.g., for Food Insecurity, Inadequate Housing, etc.) which are determined by the value of the profile’s .category element (selected from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html)).
 
 #### Additional Binding Example for the SDOHCC Condition Profile
 
-For the [SDOHCC Condition] profile, Condition.code has a binding to [US Core Condition Code]({{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html) (required). However, if Condition.category is ‘food-insecurity’, Condition.code has an additional binding to [Food Insecurity Diagnoses](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.17/expansion) (a Gravity-authored value set in VSAC).
+For the [SDOHCC Condition](StructureDefinition-SDOHCC-Condition.html) profile, `Condition.code` has a binding to [US Core Condition Code]({{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html) (required). However, if `Condition.category` is ‘food-insecurity’, `Condition.code` has an additional binding to [Food Insecurity Diagnoses](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.17/expansion) (a Gravity-authored value set in VSAC).
 
-Excerpt from [SDOHCC Condition] :
+Excerpt from [SDOHCC Condition](StructureDefinition-SDOHCC-Condition.html) :
 
 {% include img-med.html img="SDOHConditionExample.png" %}
 
@@ -21,16 +21,16 @@ Gravity-authored VSAC value sets include a term in their name that indicate the 
   
 | **Gravity VSAC value set name includes:**  | **Used with:**                                                                 |
 | ------------------------------------------ | ------------------------------------------------------------------------------ |
-| Diagnoses                                  | [SDOHCC Condition][SDOHCC Condition]                                           |
-| Procedures                                 | [SDOHCC Procedure][SDOHCC Procedure]                                           |
-| Service Requests                           | [SDOHCC Service Request][SDOHCC Service Request]                               |
-| Goals                                      | [SDOHCC Goal][SDOHCC Goal]                                                     |
-| Assessments                                | [SDOHCC Observation Screening Response][SDOHCC Observation Screening Response] |
+| Diagnoses                                  | [SDOHCC Condition][SDOHCC Condition](StructureDefinition-SDOHCC-Condition.html)                                           |
+| Procedures                                 | [SDOHCC Procedure][SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html)                                           |
+| Service Requests                           | [SDOHCC Service Request][SDOHCC Service Request](StructureDefinition-SDOHCC-ServiceRequest.html)                               |
+| Goals                                      | [SDOHCC Goal][SDOHCC Goal](StructureDefinition-SDOHCC-Goal.html)                                                     |
+| Assessments                                | [SDOHCC Observation Screening Response][SDOHCC Observation Screening Response](StructureDefinition-SDOHCC-ObservationScreeningResponse.html) |
 {:.grid}
 
 #### Steps for Gravity Project Value Set Creation in VSAC
 
-The steps below outline Gravity’s general process for value set creation in VSAC. For each step, the examples show the process for Condition.code for the [SDOHCC Condition] profile.
+The steps below outline Gravity’s general process for value set creation in VSAC. For each step, the examples show the process for `Condition.code` for the [SDOHCC Condition](StructureDefinition-SDOHCC-Condition.html) profile.
 
 <p>1. Value sets are created that are specific for:</p>
 
@@ -102,7 +102,7 @@ The value sets created in Step 1 do not bind to SDOHCC profile elements. In step
 * SDOH domain (category) – e.g., Food insecurity, Transportation Insecurity
 * Profile – e.g., Condition (Diagnoses), Procedure
 
-These value sets bind to SDOHCC profile elements via an Additional Bindings table.  For example, the value sets in the first column below are in the Additional Bindings table for Condition.code for SDOHCC Condition. (See image in Additional Bindings for SDOH Domain-specific Value Sets).
+These value sets bind to SDOHCC profile elements via an Additional Bindings table.  For example, the value sets in the first column below are in the Additional Bindings table for `Condition.code` for SDOHCC Condition. (See image in Additional Bindings for SDOH Domain-specific Value Sets).
 
 **Example 2**:
 
@@ -195,7 +195,7 @@ These value sets are not used in the SDOHCC profiles. However, they are referenc
 
 ##### Table - Gravity VSAC Value Set Development Process for SDOHCC Condition
 
-This table summarizes the Gravity VSAC value set development process. Gravity-authored VSAC value sets are shown in the first three columns. Value sets in green are bound to Condition.code for the [SDOHCC Condition] profile.
+This table summarizes the Gravity VSAC value set development process. Gravity-authored VSAC value sets are shown in the first three columns. Value sets in green are bound to `Condition.code` for the [SDOHCC Condition](StructureDefinition-SDOHCC-Condition.html) profile.
 
 {% include img-med.html img="VSACValueSets-ConditionExample.png" %}
 

@@ -79,7 +79,7 @@ Updated Profiles (FHIR-34236)
 
 * [SDOHCC Condition](StructureDefinition-SDOHCC-Condition.html) (FHIR-34243)
 
-- - Changed Condition.code value set to use [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html) value set.
+- - Changed `Condition.code` value set to use [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-condition-code.html) value set.
 
 - - Added guidance on use of SDOH value sets
 
@@ -89,30 +89,30 @@ Updated Profiles (FHIR-34236)
 
 * * Added guidance on use of SDOH value sets in VSAC
 
-- - Make Goal.value due date MS
+- - Make `Goal.value` due date MS
 
 
 
 
 * [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html) (FHIR-34233) (FHIR-34242)
 
-- - Procedure.code -- added reference to [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-procedure-code.html) value set (FHIR-34233)
+- - `Procedure.code` -- added reference to [US Core Condition Code](http://{{site.data.fhir.ver.uscore}}/ValueSet-us-core-procedure-code.html) value set (FHIR-34233)
 
-- - Procedure.code.coding -- added slice for example of social services taxonomy (e.g. 211 LA) as Must Support
+- - `Procedure.code.coding` -- added slice for example of social services taxonomy (e.g. 211 LA) as Must Support
 
 
 
 * [SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) (FHIR-34246) (FHIR-34233) (FHIR-34242)
 
-* * ServiceRequest.status –- updated guidance
+* * `ServiceRequest.status` –- updated guidance
 
-* * ServiceRequest.code -- removed slices and added reference to US Core Procedure value set
+* * `ServiceRequest.code` -- removed slices and added reference to US Core Procedure value set
 
-* * ServiceRequest.code.coding -- added slice for example of social services taxonomy (e.g. 211 LA) as Must Support
+* * `ServiceRequest.code.coding` -- added slice for example of social services taxonomy (e.g. 211 LA) as Must Support
 
-* * ServiceRequest.reasonReference – added guidance
+* * `ServiceRequest.reasonReference` – added guidance
 
-* * ServiceRequest.orderDetail -- added order detail to indicate that the service organization is not to call the patient/client
+* * `ServiceRequest.orderDetail` -- added order detail to indicate that the service organization is not to call the patient/client
 
 
 
@@ -166,7 +166,7 @@ Added CapabilityStatement
 * [STU2 Changes](stu2_changes.html) – this page
 * Functional Use Cases – added Patient/Client use case (FHIR-34255) (FHIR-34255)
 * Support for Multiple Domains – added support for VSAC group value sets (FHIR-34236)
-* Exchange Workflow] – added new workflow for Patient/Client and CBO applications (FHIR-34255) (FHIR-34256)
+* Exchange Workflow – added new workflow for Patient/Client and CBO applications (FHIR-34255) (FHIR-34256)
 * Synchronizing Applications with API Data Sources -- new (FHIR-34255)
 * FHIR Artifacts Overview – updated to refer to new or changed artifacts
 * [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)-- new (FHIR-34339)

@@ -5,4 +5,6 @@ Description: "Extension for allowing the asserter of a condition to be Device (t
 * ^status = #active
 * ^context.type = #element
 * ^context.expression = "Condition"
-* value[x] only Reference
+* value[x] 1..1
+* value[x] only Reference 
+* valueReference only Reference(Device)

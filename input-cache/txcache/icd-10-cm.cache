@@ -142,9 +142,8 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.819",
-  "display" : "Housing instability, housed unspecified"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "code" : "Z59.4"
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--4", "version": "6.1.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
   "parameter" : [{
@@ -153,12 +152,11 @@ v: {
   }]
 }}####
 v: {
-  "display" : "Housing instability, housed unspecified",
-  "code" : "Z59.819",
+  "display" : "Lack of adequate food",
+  "code" : "Z59.4",
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -167,8 +165,8 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.819"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--3", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "code" : "Z59.0"
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--4", "version": "6.1.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
   "parameter" : [{
@@ -177,12 +175,11 @@ v: {
   }]
 }}####
 v: {
-  "display" : "Housing instability, housed unspecified",
-  "code" : "Z59.819",
+  "display" : "Homelessness",
+  "code" : "Z59.0",
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -191,9 +188,8 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.00",
-  "display" : "Homelessness unspecified"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "code" : "Z56.0"
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--4", "version": "6.1.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
   "parameter" : [{
@@ -202,12 +198,11 @@ v: {
   }]
 }}####
 v: {
-  "display" : "Homelessness unspecified",
-  "code" : "Z59.00",
+  "display" : "Unemployment, unspecified",
+  "code" : "Z56.0",
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -216,8 +211,9 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.00"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--3", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "code" : "Z59.4",
+  "display" : "Lack of adequate food"
+}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
   "parameter" : [{
@@ -226,12 +222,11 @@ v: {
   }]
 }}####
 v: {
-  "display" : "Homelessness unspecified",
-  "code" : "Z59.00",
+  "display" : "Lack of adequate food",
+  "code" : "Z59.4",
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -240,9 +235,8 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.19",
-  "display" : "Other inadequate housing"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "code" : "Z59.4"
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--4", "version": "6.1.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
   "parameter" : [{
@@ -251,12 +245,11 @@ v: {
   }]
 }}####
 v: {
-  "display" : "Other inadequate housing",
-  "code" : "Z59.19",
+  "display" : "Lack of adequate food",
+  "code" : "Z59.4",
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -265,8 +258,9 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.19"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--3", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "code" : "Z59.0",
+  "display" : "Homelessness"
+}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
   "parameter" : [{
@@ -275,12 +269,11 @@ v: {
   }]
 }}####
 v: {
-  "display" : "Other inadequate housing",
-  "code" : "Z59.19",
+  "display" : "Homelessness",
+  "code" : "Z59.0",
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -289,9 +282,8 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.19",
-  "display" : "Other inadequate unspecified"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "code" : "Z59.0"
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--4", "version": "6.1.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
   "parameter" : [{
@@ -300,55 +292,11 @@ v: {
   }]
 }}####
 v: {
-  "display" : "Other inadequate housing",
-  "code" : "Z59.19",
-  "severity" : "error",
-  "error" : "Wrong Display Name 'Other inadequate unspecified' for http://hl7.org/fhir/sid/icd-10-cm#Z59.19. Valid display is 'Other inadequate housing' (for the language(s) '--')",
-  "class" : "UNKNOWN",
-  "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
-  "issues" : {
-  "resourceType" : "OperationOutcome",
-  "issue" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
-      "valueUrl" : "http://tx.fhir.org/r4"
-    }],
-    "severity" : "error",
-    "code" : "invalid",
-    "details" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-        "code" : "invalid-display"
-      }],
-      "text" : "Wrong Display Name 'Other inadequate unspecified' for http://hl7.org/fhir/sid/icd-10-cm#Z59.19. Valid display is 'Other inadequate housing' (for the language(s) '--')"
-    },
-    "location" : ["CodeableConcept.coding[1].display"],
-    "expression" : ["CodeableConcept.coding[1].display"]
-  }]
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.11",
-  "display" : "Inadequate housing environmental temperature"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Inadequate housing environmental temperature",
-  "code" : "Z59.11",
+  "display" : "Homelessness",
+  "code" : "Z59.0",
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -357,8 +305,9 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.11"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--3", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "code" : "Z56.0",
+  "display" : "Unemployment, unspecified"
+}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
   "parameter" : [{
@@ -367,12 +316,11 @@ v: {
   }]
 }}####
 v: {
-  "display" : "Inadequate housing environmental temperature",
-  "code" : "Z59.11",
+  "display" : "Unemployment, unspecified",
+  "code" : "Z56.0",
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -381,9 +329,8 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.41",
-  "display" : "Food insecurity"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "code" : "Z56.0"
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--4", "version": "6.1.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
   "resourceType" : "Parameters",
   "id" : "exp-params",
   "parameter" : [{
@@ -392,204 +339,28 @@ v: {
   }]
 }}####
 v: {
-  "display" : "Food insecurity",
-  "code" : "Z59.41",
+  "display" : "Unemployment, unspecified",
+  "code" : "Z56.0",
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "version" : "2024",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
 
 }
 -------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.41"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--3", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm"
+    }]
+  }
 }}####
-v: {
-  "display" : "Food insecurity",
-  "code" : "Z59.41",
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "version" : "2024",
-  "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.82",
-  "display" : "Transportation insecurity"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Transportation insecurity",
-  "code" : "Z59.82",
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "version" : "2024",
-  "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.82"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--3", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Transportation insecurity",
-  "code" : "Z59.82",
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "version" : "2024",
-  "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.89",
-  "display" : "Other problems related to housing and economic circumstancesinsecurity"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Other problems related to housing and economic circumstances",
-  "code" : "Z59.89",
-  "severity" : "error",
-  "error" : "Wrong Display Name 'Other problems related to housing and economic circumstancesinsecurity' for http://hl7.org/fhir/sid/icd-10-cm#Z59.89. Valid display is 'Other problems related to housing and economic circumstances' (for the language(s) '--')",
-  "class" : "UNKNOWN",
-  "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
-  "issues" : {
-  "resourceType" : "OperationOutcome",
-  "issue" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
-      "valueUrl" : "http://tx.fhir.org/r4"
-    }],
-    "severity" : "error",
-    "code" : "invalid",
-    "details" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-        "code" : "invalid-display"
-      }],
-      "text" : "Wrong Display Name 'Other problems related to housing and economic circumstancesinsecurity' for http://hl7.org/fhir/sid/icd-10-cm#Z59.89. Valid display is 'Other problems related to housing and economic circumstances' (for the language(s) '--')"
-    },
-    "location" : ["CodeableConcept.coding[0].display"],
-    "expression" : ["CodeableConcept.coding[0].display"]
-  }]
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.89"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--3", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Other problems related to housing and economic circumstances",
-  "code" : "Z59.89",
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "version" : "2024",
-  "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.12",
-  "display" : "Inadequate housing utilities"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Inadequate housing utilities",
-  "code" : "Z59.12",
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "version" : "2024",
-  "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "Z59.12"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--3", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Inadequate housing utilities",
-  "code" : "Z59.12",
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "version" : "2024",
-  "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
+e: {
+  "from-server" : true,
+  "error" : "Error from http://tx.fhir.org/r4: The value set '' expansion has too many codes to display (>10000)"
 }
 -------------------------------------------------------------------------------------

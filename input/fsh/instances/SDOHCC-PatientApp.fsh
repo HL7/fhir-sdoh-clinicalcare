@@ -4,11 +4,11 @@ Title: "SDOHCC Patient Application"
 Description: "This resource describes the required and desired behavior of systems acting as apps for patients and care-givers who need to monitor progress on SDOH referrals and may need to take actions such as filling out forms, booking appointments, etc."
 Usage: #definition
 * url = "http://hl7.org/fhir/us/sdoh-clinicalcare/CapabilityStatement/SDOHCC-PatientApp"
-* name = "SDOHCC_PatientApp"
 * title = "SDOHCC Patient Application"
+* description = "This resource describes the required and desired behavior of systems acting as apps for patients and care-givers who need to monitor progress on SDOH referrals and may need to take actions such as filling out forms, booking appointments, etc."
+* name = "SDOHCC_PatientApp"
 * status = #active
 * date = "2021-06"
-* description = "This resource describes the required and desired behavior of systems acting as apps for patients and care-givers who need to monitor progress on SDOH referrals and may need to take actions such as filling out forms, booking appointments, etc."
 * purpose = "These systems will not expose their own FHIR interfaces, but will monitor information available from other FHIR servers - be it [referral sources](CapabilityStatement-SDOHCC-ReferralSource.html), [coordination platforms](CapabilityStatement-SDOHCC-CoordinationPlatform.html) or [referral recipients](CapabilityStatement-SDOHCC-ReferralRecipient.html).  They will primarily monitor and update Task resources as well as the resources referenced by those Tasks."
 * kind = #requirements
 * fhirVersion = #4.0.1
@@ -19,7 +19,7 @@ Usage: #definition
 * rest.security.service = $restful-security-service#SMART-on-FHIR
 * rest.security.description = "Implementations must meet the general privacy & security requirements documented in [this implementation guide](privacy_and_security.html)."
 * rest.resource[0].type = #CareTeam
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
+* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam|7.0.0"
 * rest.resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest.resource[=].documentation = "For referral sources that receive referrals from upstream systems, used to access information about the intended performer of a ServiceRequest when the performer is a specific team of people.  Note: Conformance expectations for this resource are lower because CareTeam performers are expected to be uncommon in most SDOH uses"
@@ -209,7 +209,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest.resource[+].type = #DocumentReference
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|7.0.0"
 * rest.resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest.resource[=].documentation = "Used to retrieve a scanned or other form of document representing the text of a consent.  Also used for PDF forms."
@@ -357,7 +357,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest.resource[+].type = #Practitioner
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0"
 * rest.resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest.resource[=].documentation = "Used to access information about an Practitioner that is the requester or intended performer of a ServiceRequest"
@@ -383,7 +383,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest.resource[+].type = #PractitionerRole
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
+* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-practitionerrole"
 * rest.resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest.resource[=].documentation = "Used to access information about an PractitionerRole that is the requester or intended performer of a ServiceRequest"

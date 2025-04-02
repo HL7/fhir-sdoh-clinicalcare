@@ -1,12 +1,14 @@
 
 RuleSet: NHANESCommon
-* category[SocialHistory] = $observation-category#social-history "Social History"
-* category[Survey] = $observation-category#survey "Survey"
-* category[SDOH] = $SDOHCC-CodeSystemTemporaryCodes#social-connection "Social Connection"
+//* category[SocialHistory] = $observation-category#social-history "Social History"
+//* category[Survey] = $observation-category#survey "Survey"
+* category[survey] = $observation-category#survey "Survey"
+* category[screening-assessment] = USCoreCategory#sdoh "SDOH"
+* category[SDOHCC] = $SDOHCC-CodeSystemTemporaryCodes#social-connection "Social Connection"
 * status = #final
 * code = $loinc#76506-5 "Social Connection and Isolation Panel"
 * subject.reference = "Patient/pat-53234"
-* subject.display = "COLIN ABBAS"
+//* subject.display = "COLIN ABBAS"
 * effectiveDateTime = "2020-09-10T21:56:54.671Z"
 * performer.reference = "Practitioner/SDOHCC-PractitionerDrJanWaterExample"
 * performer.display = "Dr Jan Water"

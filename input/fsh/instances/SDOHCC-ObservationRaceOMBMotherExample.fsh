@@ -7,7 +7,7 @@ Usage: #example
 //* code = $loinc#72826-1 "Race OMB.1997"
 * status = #final
 * subject.reference = "Patient/pat-53234"
-* subject.display = "COLIN ABBAS"
+//* subject.display = "COLIN ABBAS"
 * focus.reference = "RelatedPerson/SDOHCC-RelatedPersonMotherExample"
 * focus.display = "Eve Everywoman"
 * effectiveDateTime = "2022-04-10T23:56:54.671Z"

@@ -9,5 +9,5 @@ Usage: #example
 * category[+] = $SDOHCC-CodeSystemTemporaryCodes#food-insecurity "Food Insecurity"
 * code = $sct#467771000124109 "Assistance with application for food pantry program"
 * subject.reference = "Patient/pat-53234"
-* subject.display = "COLIN ABBAS"
+//* subject.display = "COLIN ABBAS"
 * reasonReference.reference = "Condition/SDOHCC-ConditionFoodInsecurityExample"

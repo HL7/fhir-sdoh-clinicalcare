@@ -14,6 +14,10 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * partOf contains SupportedPartOf 0..* MS
 * partOf[SupportedPartOf] only Reference(SDOHCCTaskForReferralManagement)
 * partOf[SupportedPartOf] ^requirements = "Allows an organization (e.g., a Coordination Platform) to create a Task, based on an SDOHCC Task from a referral source, to pass on to another organization (e.g., a  Community Based Organization)."
+// For STU3 consideration
+// * partOf[SupportedPartOf] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * partOf[SupportedPartOf] ^type[=].targetProfile[=].extension.valueBoolean = true
+
 * status MS
 * status ^comment = "Note that FHIR strings SHALL NOT exceed 1MB in size. For further details on Task.status see [Checking Task Status](checking_task_status.html)."
 * statusReason MS
@@ -30,13 +34,20 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * focus 1.. MS
 * focus only Reference(SDOHCCServiceRequest)
 * for 1.. MS
-* for only Reference(RelatedPerson or Group or USCorePatientProfile)
+* for only Reference(RelatedPerson or Group or USCorePatientProfile|7.0.0)
+// For STU3 consideration
+// * for ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * for ^type[=].targetProfile[=].extension.valueBoolean = false
+// * for ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * for ^type[=].targetProfile[=].extension.valueBoolean = false
+// * for ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * for ^type[=].targetProfile[=].extension.valueBoolean = true
 * authoredOn 1.. MS
 * requester 1.. MS
-* requester only Reference(USCorePractitionerRoleProfile or USCoreOrganizationProfile)
+* requester only Reference(SDOHCCPractitionerRole or USCoreOrganizationProfile|7.0.0)
 * owner MS
 * owner ^requirements = "This element is Must Support. However, it is not mandatory in order to allow a task to be created without an owner so that one of a potential group of performers can elect to \"own\" the task (e.g., an 'open' request for fulfillment is set and anyone capable of filling the order can claim it.)"
-* output ^slicing.discriminator[0].type = #pattern
+* output ^slicing.discriminator[0].type = #value
 * output ^slicing.discriminator[=].path = "type"
 * output ^slicing.discriminator[+].type = #type
 * output ^slicing.discriminator[=].path = "value"
@@ -47,7 +58,11 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * output[PerformedActivityReference].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
 * output[PerformedActivityReference].valueReference only Reference(SDOHCCProcedure)
 * output[PerformedActivityReference].valueReference 1..1 MS
+// For STU3 consideration
+// * output[PerformedActivityReference].valueReference ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * output[PerformedActivityReference].valueReference ^type[=].targetProfile[=].extension.valueBoolean = true
 * output[PerformedActivityCode].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
-* output[PerformedActivityCode].valueCodeableConcept from USCoreProcedureCodes (required)
+* output[PerformedActivityCode].valueCodeableConcept from USCoreProcedureCodes|7.0.0 (required)
 * output[PerformedActivityCode].valueCodeableConcept 1..1 MS
+
 * status from SDOHCCValueSetReferralTaskStatus (required)

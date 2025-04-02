@@ -1,5 +1,5 @@
 Profile: SDOHCCObservationPersonalCharacteristic
-Parent: Observation
+Parent: USCoreSimpleObservationProfile|7.0.0
 Id: SDOHCC-ObservationPersonalCharacteristic
 Title: "SDOHCC Observation Personal Characteristic"
 Description: "Defines constraints that represent the minimum requirement for personal characteristic observations which are observations that are usually self-attested but may be attested to on behalf of the subject and are generally only verifiable by the source of attestation (e.g., race, ethnicity, sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex). This profile is intended for draft use only.  For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
@@ -16,13 +16,13 @@ Description: "Defines constraints that represent the minimum requirement for per
 * extension[OtherSubject] ^requirements = "This extension is adding only US Core Practitioner as an option for Observation.subject. When the subject is Practitioner, personal characteristics should be based on the attestation and consent of the practitioner."
 * extension[OtherSubject] ^condition[0] = "SDOH-Obs-1"
 * extension[OtherSubject].value[x] 1..
-* extension[OtherSubject].value[x] only Reference(USCorePractitionerProfile)
+* extension[OtherSubject].value[x] only Reference(USCorePractitionerProfile|7.0.0)
 * status MS
 * status from SDOHCCValueSetObservationStatus (required)
 * status ^short = "final | corrected | entered-in-error | unknown"
 * status ^definition = "The status of the observation value."
 * status ^requirements = "Further constrained to values that are relevant for personal characteristic observations."
-* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category contains PersonalCharacteristic 1..1 MS
@@ -34,7 +34,7 @@ Description: "Defines constraints that represent the minimum requirement for per
 * code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * code ^binding.extension.valueString = "ObservationCode"
 * code ^binding.description = "Codes identifying names of simple observations."
-* subject only Reference(USCorePatientProfile)
+* subject only Reference(USCorePatientProfile|7.0.0)
 * subject MS
 * subject ^condition[0] = "SDOH-Obs-1"
 * subject ^condition[+] = "SDOH-Obs-2"
@@ -51,6 +51,6 @@ Description: "Defines constraints that represent the minimum requirement for per
 * bodySite ..0
 * specimen ..0
 * referenceRange ..0
-* derivedFrom only Reference(DocumentReference or QuestionnaireResponse or Observation)
+* derivedFrom only Reference(USCoreDocumentReferenceProfile|7.0.0 or USCoreQuestionnaireResponseProfile|7.0.0 or Observation)
 * derivedFrom MS
 * derivedFrom ^condition[0] = "SDOH-Obs-3"

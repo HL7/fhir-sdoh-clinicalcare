@@ -15,7 +15,7 @@ Description: "Profile for identifying groups of patients who have a Social Deter
 * type ^requirements = "For this IG use case, this will only be used for a group of persons."
 * actual = true (exactly)
 * actual ^requirements = "Refers only to a specific group of real individuals."
-* characteristic ^slicing.discriminator.type = #pattern
+* characteristic ^slicing.discriminator.type = #value
 * characteristic ^slicing.discriminator.path = "code"
 * characteristic ^slicing.rules = #open
 * characteristic contains
@@ -34,7 +34,7 @@ Description: "Profile for identifying groups of patients who have a Social Deter
 * characteristic[HasPayer] ^requirements = "To identify members who are covered by a payer referenced by Group.characteristic.value[x]."
 * characteristic[HasPayer].code = $SDOHCC-CodeSystemTemporaryCodes#payer-coverage
 * characteristic[HasPayer].code MS
-* characteristic[HasPayer].value[x] only Reference(USCoreOrganizationProfile)
+* characteristic[HasPayer].value[x] only Reference(USCoreOrganizationProfile|7.0.0)
 * characteristic[HasPayer].value[x] MS
 * characteristic[HasPayer].exclude = false (exactly)
 * characteristic[HasPayer].exclude MS
