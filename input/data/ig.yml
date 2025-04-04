@@ -79,6 +79,10 @@ pages:
     title: STU2 Publication Changes
   stu2_1_update_changes.md:
     title: STU2.1 Publication Changes
+  stu2_2_update_changes.md:
+    title: STU2.2 Publication Changes
+  stu2_3_update_changes.md:
+    title: STU2.3 Publication Changes
   artifacts.html:
     title: Artifacts Index
   glossary.md:
@@ -253,3 +257,5 @@ menu:
     STU2 Ballot Changes:  stu2_ballot_changes.html
     STU2 Publication Changes:  stu2_publication_changes.html
     STU2.1 Update Changes: stu2_1_update_changes.html
+    STU2.2 Update Changes: stu2_2_update_changes.html
+    STU2.3 Update Changes: stu2_3_update_changes.html
