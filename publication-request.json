@@ -1,6 +1,6 @@
 {
     "package-id": "hl7.fhir.us.sdoh-clinicalcare",
-    "version": "2.3.0-draft",
+    "version": "2.3.0",
     "milestone": true,
     "path": "http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.3",
     "status": "trial-use",
