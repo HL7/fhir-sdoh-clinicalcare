@@ -303,11 +303,11 @@ Usage: #example
 * item.item[=].item[=].required = false
 * item.item[=].item[=].answerOption[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix"
 * item.item[=].item[=].answerOption[=].extension[=].valueString = "1"
-* item.item[=].item[=].answerOption[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
+* item.item[=].item[=].answerOption[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/itemWeight"
 * item.item[=].item[=].answerOption[=].extension[=].valueDecimal = 1
 * item.item[=].item[=].answerOption[=].valueCoding = $loinc#LA33-6 "Yes"
 * item.item[=].item[=].answerOption[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix"
 * item.item[=].item[=].answerOption[=].extension[=].valueString = "0"
-* item.item[=].item[=].answerOption[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
+* item.item[=].item[=].answerOption[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/itemWeight"
 * item.item[=].item[=].answerOption[=].extension[=].valueDecimal = 0
 * item.item[=].item[=].answerOption[=].valueCoding = $loinc#LA32-8 "No"

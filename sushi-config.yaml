@@ -4,7 +4,6 @@ version: 2.3.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: STU 2.3
-jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 canonical: http://hl7.org/fhir/us/sdoh-clinicalcare
 FSHOnly: false
 applyExtensionMetadataToRoot: false

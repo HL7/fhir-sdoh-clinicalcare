@@ -1,9 +1,9 @@
 Profile: SDOHCCObservationScreeningResponse
-Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|7.0.0
+Parent: USCoreObservationScreeningAssessmentProfile|7.0.0
 Id: SDOHCC-ObservationScreeningResponse
 Title: "SDOHCC Observation Screening Response"
 Description: "Profile for observations that represent question and answer pairs from Social Determinants of Health (SDOH) screening instruments."
-
+* ^baseDefinition = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|7.0.0"
 * . ^short = "SDOH screening questionnaire observations"
 * . ^definition = "For Observations derived from SDOH screening surveys/questionnaires."
 * . ^comment = "Used for simple observations such as education status, food insecurity observations, etc.  \r\nThis profile allows the representation of SDOH observations based on SDOH screening questionnaire responses (which can also be represented using SDC QuestionnaireResponse). \r\n\r\nMany of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."
@@ -57,7 +57,7 @@ Description: "Profile for observations that represent question and answer pairs 
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, inadequate-housing, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1196.3520, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, incarceration-status, http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0, required)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, intimate-partner-violence, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.198, extensible)
-* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, language-access, http://cts.nlm.nih.gov/fhir/ValueSet//2.16.840.1.113762.1.4.1247.272, extensible)
+* insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, language-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.272, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, material-hardship, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.200, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, medical-cost-burden, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.201, extensible)
 * insert AdditionalBinding(SDOHCCObservationScreeningResponse, code, Observation.category, personal-health-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.195, extensible)
@@ -135,11 +135,27 @@ Description: "Profile for observations that represent question and answer pairs 
 // * dataAbsentReason ^condition[0] = "us-core-2"
 * bodySite ..0
 * specimen ..0
+
 * hasMember ^definition = "References the child observations of a grouping observation."
-* derivedFrom only Reference(USCoreDocumentReferenceProfile|7.0.0 or USCoreQuestionnaireResponseProfile|7.0.0 or USCoreObservationScreeningAssessmentProfile)
+* insert SliceReferenceOnProfile(hasMember)
+* hasMember only Reference(USCoreObservationScreeningAssessmentProfile or QuestionnaireResponse or MolecularSequence)
+* hasMember contains SupportedHasMember 0..* MS
+* hasMember ^short = "References the child observations of a grouping observation"
+* hasMember ^definition = "Aggregate set of Observations that represent question answer pairs for both multi-question surveys, screenings, and assessments and multi-select questions."
+* hasMember ^comment = "This grouping element is used to represent surveys, screenings, and assessments that group several questions together or individual questions with  “check all that apply” responses. For example in the simplest case a flat multi-question survey where the \"panel\" observation is the survey instrument itself and instead of an `Observation.value` the `hasMember` element references other Observation that represent the individual questions answer pairs. When there is a heirarchical grouping of questions, the observation \"panels\" can be nested. Because surveys, screenings, and assessments can be arbitrarily complex structurally, not all structures can be represented using this Observation grouping pattern."
+* hasMember[SupportedHasMember] only Reference(SDOHCCObservationScreeningResponse)
+* hasMember[SupportedHasMember] ^short = "For an Observation Grouping, the Observations generated from an assessment instrument"
+* hasMember[SupportedHasMember] ^definition = "This is the set of child observations that are expected to be supported by SDOH implementations."
+* hasMember[SupportedHasMember] ^requirements = "Provides context to the child observations of \"in what instrument/panel was this information collected\", which is critical in situations where the child observations do not have derivedFrom relationships to a QuestionnaireResponse."
+* hasMember[SupportedHasMember] ^comment = "Other types of observations or resources can still be sent, but SDOH systems aren't required to pay attention to them."
+// For STU3 consideration
+// * hasMember[SupportedHasMember] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * hasMember[SupportedHasMember] ^type[=].targetProfile[=].extension.valueBoolean = true
+
 * derivedFrom ^definition = "The target resource represents a QuestionnaireResponse or other Observation from which the value of this Observation was inferred or calculated."
-* derivedFrom MS
 * insert SliceReferenceOnProfile(derivedFrom)
+* derivedFrom only Reference(USCoreDocumentReferenceProfile|7.0.0 or USCoreQuestionnaireResponseProfile|7.0.0 or USCoreObservationScreeningAssessmentProfile)
+* derivedFrom MS
 * derivedFrom contains SupportedDerivedFrom 0..* MS
 * derivedFrom ^definition = "The target resource represents a QuestionnaireResponse or other Observation from which the value of this Observation was inferred or calculated."
 * derivedFrom ^comment = "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value."
@@ -155,20 +171,6 @@ Description: "Profile for observations that represent question and answer pairs 
 // * derivedFrom[SupportedDerivedFrom] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 // * derivedFrom[SupportedDerivedFrom] ^type[=].targetProfile[=].extension.valueBoolean = true
 
-* insert SliceReferenceOnProfile(hasMember)
-* hasMember only Reference(USCoreObservationScreeningAssessmentProfile or QuestionnaireResponse or MolecularSequence)
-* hasMember contains SupportedHasMember 0..* MS
-* hasMember ^short = "References the child observations of a grouping observation"
-* hasMember ^definition = "Aggregate set of Observations that represent question answer pairs for both multi-question surveys, screenings, and assessments and multi-select questions."
-* hasMember ^comment = "This grouping element is used to represent surveys, screenings, and assessments that group several questions together or individual questions with  “check all that apply” responses. For example in the simplest case a flat multi-question survey where the \"panel\" observation is the survey instrument itself and instead of an `Observation.value` the `hasMember` element references other Observation that represent the individual questions answer pairs. When there is a heirarchical grouping of questions, the observation \"panels\" can be nested. Because surveys, screenings, and assessments can be arbitrarily complex structurally, not all structures can be represented using this Observation grouping pattern."
-* hasMember[SupportedHasMember] only Reference(SDOHCCObservationScreeningResponse)
-* hasMember[SupportedHasMember] ^short = "For an Observation Grouping, the Observations generated from an assessment instrument"
-* hasMember[SupportedHasMember] ^definition = "This is the set of child observations that are expected to be supported by SDOH implementations."
-* hasMember[SupportedHasMember] ^requirements = "Provides context to the child observations of \"in what instrument/panel was this information collected\", which is critical in situations where the child observations do not have derivedFrom relationships to a QuestionnaireResponse."
-* hasMember[SupportedHasMember] ^comment = "Other types of observations or resources can still be sent, but SDOH systems aren't required to pay attention to them."
-// For STU3 consideration
-// * hasMember[SupportedHasMember] ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-// * hasMember[SupportedHasMember] ^type[=].targetProfile[=].extension.valueBoolean = true
 
 // Invariant: us-core-2
 // Description: "If there is no component or hasMember element then either a value[x] or a data absent reason must be present"
