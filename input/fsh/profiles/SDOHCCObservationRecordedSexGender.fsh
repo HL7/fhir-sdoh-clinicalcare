@@ -11,7 +11,7 @@ Description: "Profile for observations about \"recorded sex and gender\" which, 
 * . ^comment = "For observations about the recorded sex and gender of an individual."
 * code = $loinc#99502-7
 * value[x] 1..
-* value[x] from $LL6134-2 (preferred)
+* value[x] from http://loinc.org/vs/LL6134-2 (preferred)
 * value[x] ^binding.description = "Codes for recorded sex and gender"
 * value[x].extension contains $data-absent-reason named DataAbsentReasonMasked 0..1
 * value[x].extension[DataAbsentReasonMasked] ^requirements = "“Masked” is never used for data capture, but \"masked\" is used to suppress information when data is exchanged. For this reason, other flavors of null are included in the value set for Observation.value, but “masked” can be captured here."

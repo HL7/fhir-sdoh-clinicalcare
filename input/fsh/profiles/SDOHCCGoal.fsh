@@ -4,6 +4,7 @@ Id: SDOHCC-Goal
 Title: "SDOHCC Goal"
 Description: "Profile for goals that address Social Determinants of Health (SDOH)."
 * ^status = #active
+* ^baseDefinition = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal|7.0.0"
 * . ^short = "Describes the intended SDOH-related objective(s) for a patient."
 * . ^definition = "For representation of SDOH goals."
 * . ^comment = "Many of the SDOHCC profiles reference one another. One flow supported by this IG is that QuestionnaireResponses result in Observations that can be used as evidence for Conditions that can lead to Goals, ServiceRequests and Procedures. However, alternatives paths are also possible."
