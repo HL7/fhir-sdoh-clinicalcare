@@ -57,8 +57,8 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * category contains
     encounter-diagnosis 0..1 MS and
     problem-or-health-concern 0..* MS and
-    screening-assessment 0..* MS and
-    SDOHCC 0..*
+    screening-assessment 1..* MS and
+    SDOHCC 0..* MS
 
 // TODO need to supplort slicing that either encounter diagnosis or "healthconcern orproblem list item" is required (through an invariant)
 

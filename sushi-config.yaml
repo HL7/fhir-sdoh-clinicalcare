@@ -15,7 +15,7 @@ dependencies:
         uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
         id: uscore
         reason: |
-            All profiles in this IG are derived from US Core 7.0.0. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.
+            All profiles in this IG are aligned with US Core 7.0.0. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.
     hl7.fhir.us.core.v610:
         version: 6.1.0
         uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
@@ -49,7 +49,7 @@ dependencies:
         reason: |
             This guide links out to concept maps published in Da Vinci HRex for Provider Role codes.
     us.nlm.vsac:
-        uri: "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"
+        uri: "http://fhir.org/packages/us.nlm.vsac"
         version: 0.21.0
         id: vsac
         reason: |
@@ -61,7 +61,7 @@ parameters:
     show-inherited-invariants: true
     jira-code: sdoh-cc
     path-expansion-params: '../../exp-params.json' #path is relative to [base]/fsh-generated/resources
-    
+    pin-canonicals: pin-multiples
     
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg #<<< must include a http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension that identifies the workgroup responsible for the IG. This is the authoritative element.

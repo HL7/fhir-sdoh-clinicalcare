@@ -1,58 +1,62 @@
 #!/bin/bash
-dlurl=https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.publisher.jar
-publisher_jar=org.hl7.fhir.publisher.jar
-input_cache_path=./input-cache/
-scriptdlroot="https://raw.githubusercontent.com/costateixeira/ig-publisher-scripts/main"
-build_bat_url="${scriptdlroot}/_build.bat"
-build_sh_url="${scriptdlroot}/_build.sh"
-update_bat_url=${scriptdlroot}/_updatePublisher.bat
-update_sh_url=${scriptdlroot}/_updatePublisher.sh
-gen_bat_url=${scriptdlroot}/_genonce.bat
-gen_sh_url=${scriptdlroot}/_genonce.sh
-gencont_bat_url=${scriptdlroot}/_gencontinuous.bat
-gencont_sh_url=${scriptdlroot}/_gencontinuous.sh
+pubsource=https://github.com/HL7/fhir-ig-publisher/releases/latest/download/
+publisher_jar=publisher.jar
+dlurl=$pubsource$publisher_jar
 
+input_cache_path=$PWD/input-cache/
 
-set -e
+scriptdlroot=https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main
+update_bat_url=$scriptdlroot/_updatePublisher.bat
+gen_bat_url=$scriptdlroot/_genonce.bat
+gencont_bat_url=$scriptdlroot/_gencontinuous.bat
+gencont_sh_url=$scriptdlroot/_gencontinuous.sh
+gen_sh_url=$scriptdlroot/_genonce.sh
+update_sh_url=$scriptdlroot/_updatePublisher.sh
+build_sh_url=$scriptdlroot/_build.sh
+build_bat_url=$scriptdlroot/_build.bat
+
+skipPrompts=false
+FORCE=false
+
 if ! type "curl" > /dev/null; then
 	echo "ERROR: Script needs curl to download latest IG Publisher. Please install curl."
 	exit 1
 fi
 
-FORCE=false
-
-while :; do
+while [ "$#" -gt 0 ]; do
     case $1 in
-        -f|--force) FORCE=true ;;
-        --)
-            shift
-            break
-            ;;
-        *) break
+    -f|--force)  FORCE=true ;;
+    -y|--yes)  skipPrompts=true ; FORCE=true ;;
+    *)  echo "Unknown parameter passed: $1.  Exiting"; exit 1 ;;
     esac
     shift
 done
 
-function update_scripts_prompt() {
-  read -p "Update scripts? (Y/N): " update_confirm
-  if [[ "$update_confirm" =~ ^[Yy]$ ]]; then
-    echo "Updating scripts..."
-    curl -L "$build_bat_url" -o "_build.new.bat" && mv "_build.new.bat" "_build.bat"
-    curl -L "$build_sh_url" -o "_build.new.sh" && mv "_build.new.sh" "_build.sh"
-    curl -L "$update_bat_url" -o "_updatePublisher.new.bat" && mv "_updatePublisher.new.bat" "_updatePublisher.bat"
-    curl -L "$update_sh_url" -o "_updatePublisher.new.sh" && mv "_updatePublisher.new.sh" "_updatePublisher.sh"
-    curl -L "$gen_bat_url" -o "_genonce.new.bat" && mv "_genonce.new.bat" "_genonce.bat"
-    curl -L "$gen_sh_url" -o "_genonce.new.sh" && mv "_genonce.new.sh" "_genonce.sh"
-    curl -L "$gencont_bat_url" -o "_gencontinuous.new.bat" && mv "_gencontinuous.new.bat" "_gencontinuous.bat"
-    curl -L "$gencont_sh_url" -o "_gencontinuous.new.sh" && mv "_gencontinuous.new.sh" "_gencontinuous.sh"
-    echo "Scripts updated."
-  else
-    echo "Skipped updating scripts."
+echo "Checking internet connection"
+curl -sSf tx.fhir.org > /dev/null
+
+if [ $? -ne 0 ] ; then
+  echo "Offline (or the terminology server is down), unable to update.  Exiting"
+  exit 1
+fi
+
+if [ ! -d "$input_cache_path" ] ; then
+  if [ $FORCE != true ]; then
+    echo "$input_cache_path does not exist"
+    message="create it?"
+    read -r -p "$message" response
+    else
+    response=y
   fi
-}
+fi
+
+if [[ $response =~ ^[yY].*$ ]] ; then
+  mkdir ./input-cache
+fi
 
 publisher="$input_cache_path$publisher_jar"
-if test -f "$publisher"; then
+
+if test -f "$publisher" ; then
 	echo "IG Publisher FOUND in input-cache"
 	jarlocation="$publisher"
 	jarlocationname="Input Cache"
@@ -66,29 +70,75 @@ else
 		jarlocationname="Parent Folder"
 		upgrade=true
 	else
-		echo IG Publisher NOT FOUND in input-cache or parent folder...
+		echo "IG Publisher NOT FOUND in input-cache or parent folder"
 		jarlocation=$input_cache_path$publisher_jar
 		jarlocationname="Input Cache"
 		upgrade=false
 	fi
 fi
 
-if [[ "$FORCE" != true ]]; then
-  if "$upgrade"; then
+if [[ $skipPrompts == false ]]; then
+
+  if [[ $upgrade == true ]]; then
     message="Overwrite $jarlocation? (Y/N) "
   else
     echo Will place publisher jar here: "$jarlocation"
     message="Ok (enter 'y' or 'Y' to continue, any other key to cancel)?"
   fi
   read -r -p "$message" response
-fi
-
-if [[ "$FORCE" ]] || [[ "$response" =~ ^([yY])$ ]]; then
-	echo "Downloading most recent publisher to $jarlocationname - it's ~100 MB, so this may take a bit"
-#	wget "https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.publisher.jar" -O "$jarlocation" 
-	curl $dlurl -o "$jarlocation" --create-dirs
-	update_scripts_prompt	
 else
-	echo cancel...
+  response=y
+fi
+if [[ $skipPrompts == true ]] || [[ $response =~ ^[yY].*$ ]]; then
+
+	echo "Downloading most recent publisher to $jarlocationname - it's ~100 MB, so this may take a bit"
+	curl -L $dlurl -o "$jarlocation" --create-dirs
+else
+	echo cancelled publisher update
 fi
 
+if [[ $skipPrompts != true ]]; then
+    message="Update scripts? (enter 'y' or 'Y' to continue, any other key to cancel)?"
+    read -r -p "$message" response
+  fi
+
+if [[ $skipPrompts == true ]] || [[ $response =~ ^[yY].*$ ]]; then
+  echo "Downloading most recent scripts "
+
+  curl -L $build_bat_url -o /tmp/_build.new
+  cp /tmp/_build.new _build.bat
+  rm /tmp/_build.new
+
+
+  curl -L $build_sh_url -o /tmp/_build.new
+  cp /tmp/_build.new _build.sh
+  chmod +x _build.sh
+  rm /tmp/_build.new
+
+  curl -L $update_bat_url -o /tmp/_updatePublisher.new
+  cp /tmp/_updatePublisher.new _updatePublisher.bat
+  rm /tmp/_updatePublisher.new
+
+  curl -L $gen_bat_url -o /tmp/_genonce.new
+  cp /tmp/_genonce.new _genonce.bat
+  rm /tmp/_genonce.new
+
+  curl -L $gencont_bat_url -o /tmp/_gencontinuous.new
+  cp /tmp/_gencontinuous.new _gencontinuous.bat
+  rm /tmp/_gencontinuous.new
+
+  curl -L $gencont_sh_url -o /tmp/_gencontinuous.new
+  cp /tmp/_gencontinuous.new _gencontinuous.sh
+  chmod +x _gencontinuous.sh
+  rm /tmp/_gencontinuous.new
+
+  curl -L $gen_sh_url -o /tmp/_genonce.new
+  cp /tmp/_genonce.new _genonce.sh
+  chmod +x _genonce.sh
+  rm  /tmp/_genonce.new
+
+  curl -L $update_sh_url -o /tmp/_updatePublisher.new
+  cp /tmp/_updatePublisher.new _updatePublisher.sh
+  chmod +x _updatePublisher.sh
+  rm /tmp/_updatePublisher.new
+fi

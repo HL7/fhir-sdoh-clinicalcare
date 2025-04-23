@@ -10,7 +10,7 @@ Description: "Profile for observations about the sexual orientation of an indivi
 * . ^comment = "For observations about the sexual orientation of an individual."
 * code = $loinc#76690-7
 * value[x] 1..
-* value[x] from $LL3323-4 (preferred)
+* value[x] from http://loinc.org/vs/LL3323-4 (preferred)
 * value[x] ^requirements = "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations. NOTE: This is a value set is for testing purposes only and will ultimately need to be aligned with vetted value sets where terms like “asexual” and “pansexual” may be included."
 * value[x] ^binding.description = "Codes for sexual orientation"
 * value[x].extension contains $data-absent-reason named DataAbsentReasonMasked 0..1

@@ -21,11 +21,11 @@ Gravity-authored VSAC value sets include a term in their name that indicate the 
   
 | **Gravity VSAC value set name includes:**  | **Used with:**                                                                 |
 | ------------------------------------------ | ------------------------------------------------------------------------------ |
-| Diagnoses                                  | [SDOHCC Condition][SDOHCC Condition](StructureDefinition-SDOHCC-Condition.html)                                           |
-| Procedures                                 | [SDOHCC Procedure][SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html)                                           |
-| Service Requests                           | [SDOHCC Service Request][SDOHCC Service Request](StructureDefinition-SDOHCC-ServiceRequest.html)                               |
-| Goals                                      | [SDOHCC Goal][SDOHCC Goal](StructureDefinition-SDOHCC-Goal.html)                                                     |
-| Assessments                                | [SDOHCC Observation Screening Response][SDOHCC Observation Screening Response](StructureDefinition-SDOHCC-ObservationScreeningResponse.html) |
+| Diagnoses                                  | [SDOHCC Condition](StructureDefinition-SDOHCC-Condition.html)                                           |
+| Procedures                                 | [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html)                                           |
+| Service Requests                           | [SDOHCC Service Request](StructureDefinition-SDOHCC-ServiceRequest.html)                               |
+| Goals                                      | [SDOHCC Goal](StructureDefinition-SDOHCC-Goal.html)                                                     |
+| Assessments                                | [SDOHCC Observation Screening Response](StructureDefinition-SDOHCC-ObservationScreeningResponse.html) |
 {:.grid}
 
 #### Steps for Gravity Project Value Set Creation in VSAC
@@ -177,7 +177,9 @@ These value sets are not used in the SDOHCC profiles. However, they are referenc
       Homelessness Diagnoses<br>
       Housing Instability Diagnoses<br>
       Inadequate Housing Diagnoses<br>
+      Incarceration Status Diagnoses<br>
       Intimate Partner Violence Diagnoses<br>
+      Language Access Diagnoses<br>
       Material Hardship Diagnoses<br>
       Medical Cost Burden Diagnoses<br>
       Health Literacy Diagnoses<br>

@@ -1,4 +1,4 @@
-This section describes standardized social risk assessment instruments, their benefits, and how to standardize their capture, coding and output leveraging work from the  [Regenstrief Institute](https://www.regenstrief.org/) and the [National Library of Medicine](https://www.nlm.nih.gov/) (NLM), [SDC Questionnaire], [SDC QuestionnaireResponse], and [StructureMap] to automate the creation of [SDOHCC Observation Screening Response] and [SDOHCC Condition] instances from [SDC QuestionnaireResponse].
+This section describes standardized social risk assessment instruments, their benefits, and how to standardize their capture, coding and output leveraging work from the  [Regenstrief Institute](https://www.regenstrief.org/) and the [National Library of Medicine](https://www.nlm.nih.gov/) (NLM), [SDC Questionnaire](https://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html), [SDC QuestionnaireResponse](https://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaireresponse.html), and [StructureMap] to automate the creation of [SDOHCC Observation Screening Response] and [SDOHCC Condition] instances from [SDC QuestionnaireResponse].
 
 ### Introduction to Social Care Assessment Instruments
 
@@ -41,7 +41,7 @@ Benefits of using [QuestionnaireResponse] to represent assessment instrument dat
 
 * QuestionnaireResponse is better suited to support use cases that require access to the format of the original assessment instrument.
 * QuestionnaireResponse is always based on a FHIR [Questionnaire] and preserves the Questionnaire’s structure and complexity to provide a fully contextualized view of a completed Questionnaire. For example, QuestionnaireResponse allows the precise capture of the assessment instrument version, the exact text of the questions and answers, the order of presentation, multiple choice answer options, and whether questions were skipped. 
-* Question-answer pairs in QuestionnaireResponse can be automatically transformed to FHIR Observations using [StructureMap](assessment_instrument_support.html#using-structuremap-to-generate-observations-or-conditions-from-questionnaireresponse) and the [SDC Implementation Guide]({{site.data.fhir.path}}).
+* Question-answer pairs in QuestionnaireResponse can be automatically transformed to FHIR Observations using [StructureMap](assessment_instrument_support.html#using-structuremap-to-generate-observations-or-conditions-from-questionnaireresponse) and the [SDC Implementation Guide](http://hl7.org/fhir/uv/sdc/STU3/extraction.html#structuremap-based-extraction).
 
 ##### Benefits of using Observation to represent assessment instrument data
 
@@ -700,7 +700,7 @@ For more information on StructureMap (e.g., [Designing Questionnaires to support
 
 In summary, the process followed by this IG for implementing assessment instruments vetted by Gravity is summarized below. The process can also be applied to other assessment instruments. 
 
-* **Use a LOINC-encoded assessment instrument**: [LOINC Components](https://loinc.org/kb/faq/structure/) and [LOINC Answer](https://loinc.org/forums/topic/answer-lists/) Lists standardize the coding and facilitate leveraging the open-source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms).
+* **Use a LOINC-encoded assessment instrument**: [LOINC Components](https://loinc.org/kb/faq/structure/) and [LOINC Answer](https://loinc.org/kb/users-guide/standardized-assessment-measures/) Lists standardize the coding and facilitate leveraging the open-source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms).
 * **Convert the LOINC-encoded assessment instrument to an [SDC Questionnaire]**: The open-source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms) supports this step by rendering input forms based on FHIR [Questionnaire] for web-based applications and can be used to build and edit FHIR Questionnaires. For some assessment instruments, this step may include establishing calculation logic to define the result of some questions as a function of answers to other questions (e.g., where one or more question determines an answer to another “question” (not directly answered by the patient) as in Hunger Vital Sign Question 3).
 * **Instantiate the [SDC Questionnaire]**: Using an appropriate application (e.g., the open-source NLM [FHIR SDC SMART App](https://lhcforms.nlm.nih.gov/sdc) create an [SDC QuestionnaireResponse]
 * **Develop translation logic to use [StructureMap]** (this logic should generally be provided by the assessment instrument steward) and a validation tool to generate the following resource instances from the [SDC QuestionnaireResponse]:

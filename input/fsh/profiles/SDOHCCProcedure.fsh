@@ -4,6 +4,7 @@ Id: SDOHCC-Procedure
 Title: "SDOHCC Procedure"
 Description: "Profile for interventions that address Social Determinants of Health."
 
+* obeys us-core-7
 // SDOH CC
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
