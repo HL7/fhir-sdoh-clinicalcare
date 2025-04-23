@@ -41,7 +41,7 @@ Description: "Profile for service requests that address Social Determinants of H
 * category ^definition = "A code that classifies the service for searching, sorting and display purposes (e.g., Education)."
 //* category contains us-core 0..* MS
 //* category[us-core] ^binding.description = "Note that other codes are permitted"
-* category contains SDOHCC 1..* MS
+* category contains SDOHCC 0..* MS
 * category[SDOHCC] from SDOHCCValueSetSDOHCategory (required)
 * category[SDOHCC] ^short = "e.g., food-insecurity | transportation-insecurity"
 * category[SDOHCC] ^definition = "An SDOH category assigned to the requested service."

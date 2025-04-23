@@ -21,6 +21,7 @@ Description: "Profile for observations that represent question and answer pairs 
     SDOHCC 0..* MS
 
 * category[screening-assessment] 1..*
+* category[screening-assessment] ^short = "Requires at least a category code 'sdoh'"
 * category[screening-assessment] ^condition = "SDOH-Obs-4"
 
 
