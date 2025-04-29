@@ -17,7 +17,7 @@ SET txoption=
 SET JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 
 IF EXIST "%input_cache_path%\%publisher_jar%" (
-	JAVA -Xmx12000m -jar "%input_cache_path%\%publisher_jar%" -ig . %txoption% %*
+	JAVA -Xmx15000m -jar "%input_cache_path%\%publisher_jar%" -ig . %txoption% %*
 ) ELSE If exist "..\%publisher_jar%" (
 	JAVA -jar "..\%publisher_jar%" -ig . %txoption% %*
 ) ELSE (
