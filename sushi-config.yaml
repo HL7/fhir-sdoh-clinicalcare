@@ -9,6 +9,21 @@ FSHOnly: false
 applyExtensionMetadataToRoot: false
 id: hl7.fhir.us.sdoh-clinicalcare
 name: Sdohclinicalcare
+
+parameters:
+    show-inherited-invariants: true
+    jira-code: sdoh-cc
+    path-expansion-params: '../../exp-params.json' #path is relative to [base]/fsh-generated/resources
+    pin-canonicals: pin-multiples
+    
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg #<<< must include a http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension that identifies the workgroup responsible for the IG. This is the authoritative element.
+    valueCode: pc # <<< The value must be the code for the workgroup
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: trial-use
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2
+
 dependencies:
     hl7.fhir.us.core:
         version: 7.0.0
@@ -49,7 +64,7 @@ dependencies:
         reason: |
             This guide links out to concept maps published in Da Vinci HRex for Provider Role codes.
     us.nlm.vsac:
-        uri: "http://fhir.org/packages/us.nlm.vsac"
+        uri: "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"
         version: 0.21.0
         id: vsac
         reason: |
@@ -57,21 +72,6 @@ dependencies:
     hl7.fhir.extensions.r5:
         version: 5.1.0
 
-parameters:
-    show-inherited-invariants: true
-    jira-code: sdoh-cc
-    path-expansion-params: '../../exp-params.json' #path is relative to [base]/fsh-generated/resources
-    pin-canonicals: pin-multiples
-    
-extension:
-  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg #<<< must include a http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension that identifies the workgroup responsible for the IG. This is the authoritative element.
-    valueCode: pc # <<< The value must be the code for the workgroup
-  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-    valueCode: trial-use
-  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-    valueInteger: 2
-    
-    
 license: CC0-1.0
 publisher:
     name: HL7 International / Patient Care
@@ -80,6 +80,7 @@ publisher:
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 description: This HL7 Implementation Guide (IG) defines how to exchange Social Determinants
     of Health (SDOH) content defined by the Gravity Project using the HL7 FHIR standard..
+
 pages:
     index.md:
         title: IG Home
