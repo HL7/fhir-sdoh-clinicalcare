@@ -15,7 +15,7 @@ The types of task occurrences that may be of interest include:
 <br>
 * A new Task has been assigned to the organization
 * A ServiceRequest associated with a Task assigned to the organization has been modified
-* A ServiceRequest associated with a Task assigned to the organization has been canceled
+* A ServiceRequest associated with a Task assigned to the organization has been cancelled
 
 **EHR systems (Provider)**
 <br>
@@ -137,7 +137,7 @@ This topic allows for monitoring for newly created Tasks as well as updates to a
 </table>
 
 ##### ServiceRequest topic
-This topic allows for monitoring for changes to a ServiceRequest when an organization is involved in fulfilling that request (e.g. to be aware if the request is suspended, canceled or otherwise modified).  The intent with this subscription is that the filter criteria will be updated regularly to refer to the specific ServiceRequest ids the organization is fulfilling.  Once fulfillment is complete, the ServiceRequest will no longer need to be monitored.
+This topic allows for monitoring for changes to a ServiceRequest when an organization is involved in fulfilling that request (e.g. to be aware if the request is suspended, cancelled or otherwise modified).  The intent with this subscription is that the filter criteria will be updated regularly to refer to the specific ServiceRequest ids the organization is fulfilling.  Once fulfillment is complete, the ServiceRequest will no longer need to be monitored.
 
 <table class="grid">
   <thead>
