@@ -27,31 +27,31 @@ extension:
 dependencies:
     hl7.fhir.us.core:
         version: 7.0.0
-        uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
+        uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
         id: uscore
         reason: |
             All profiles in this IG are aligned with US Core 7.0.0. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.
     hl7.fhir.us.core.v610:
         version: 6.1.0
-        uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
+        uri: http://hl7.org/fhir/us/core/v610/ImplementationGuide/hl7.fhir.us.core.v610
         id: uscore6
         reason: |
             All profiles in this IG are aligned with US Core 6.1.0 as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.
     hl7.fhir.us.core.v311:
         version: 3.1.1
-        uri: "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
+        uri: http://hl7.org/fhir/us/core/v311/ImplementationGuide/hl7.fhir.us.core.v311
         id: uscore3
         reason: |
             All profiles in this IG are aligned with US Core 3.1.1 as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.    
     hl7.fhir.uv.sdc:
         version: 3.0.0
-        uri: "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+        uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc
         id: sdc
         reason: |
             SDC is the basis for mapping QuestionnaireResponses to Observations and Conditions. SDC also provides guidance around how questionnaires can be created with support for score calculation, conditional behavior, specific rendering expectations, etc.
     hl7.fhir.uv.subscriptions-backport.r4:
         version: 1.1.0
-        uri: "http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"
+        uri: http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport
         id: sdohsub
         reason: |
             Subscriptions are recommended for monitoring completion of referrals.
@@ -64,7 +64,7 @@ dependencies:
         reason: |
             This guide links out to concept maps published in Da Vinci HRex for Provider Role codes.
     us.nlm.vsac:
-        uri: "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"
+        uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
         version: 0.21.0
         id: vsac
         reason: |
