@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/sdoh-clinicalcare/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare" defaultVersion="2.2.0" defaultWorkgroup="pc" gitUrl="https://github.com/HL7/fhir-sdoh-clinicalcare" url="http://hl7.org/fhir/us/sdoh-clinicalcare">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/sdoh-clinicalcare/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare" defaultVersion="2.3.0" defaultWorkgroup="pc" gitUrl="https://github.com/HL7/fhir-sdoh-clinicalcare" url="http://hl7.org/fhir/us/sdoh-clinicalcare">
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare"/>
-<version code="2.2.0" url="http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.2"/>
-<version code="2.1.0" url="http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.1"/>
-<version code="2.0.0" url="http://hl7.org/fhir/us/sdoh-clinicalcare/STU2"/>
-<version code="1.1.0" url="http://hl7.org/fhir/us/sdoh-clinicalcare/2022Jan"/>
-<version code="1.0.0" url="http://hl7.org/fhir/us/sdoh-clinicalcare/STU1"/>
+<version code="2.3.0" url="http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.3"/>
+<version code="2.2.0" deprecated="true" url="http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.2"/>
+<version code="2.1.0" deprecated="true" url="http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.1"/>
+<version code="2.0.0" deprecated="true" url="http://hl7.org/fhir/us/sdoh-clinicalcare/STU2"/>
+<version code="1.1.0" deprecated="true" url="http://hl7.org/fhir/us/sdoh-clinicalcare/2022Jan"/>
+<version code="1.0.0" deprecated="true" url="http://hl7.org/fhir/us/sdoh-clinicalcare/STU1"/>
 <version code="0.1.0" deprecated="true" url="http://hl7.org/fhir/us/sdoh-clinicalcare/2021Jan"/>
 <version code="0.0.4" deprecated="true"/>
 <version code="0.1" deprecated="true"/>
@@ -86,6 +87,7 @@
 <artifact id="CapabilityStatement/SDOHCC-PatientApp" key="CapabilityStatement-SDOHCC-PatientApp" name="SDOHCC Patient Application"/>
 <artifact id="Practitioner/SDOHCC-PractitionerDrJanWaterExample" key="Practitioner-SDOHCC-PractitionerDrJanWaterExample" name="SDOHCC Practitioner Dr Jan Water Example"/>
 <artifact id="PractitionerRole/SDOHCC-PractitionerRoleDrJanWaterExample" key="PractitionerRole-SDOHCC-PractitionerRoleDrJanWaterExample" name="SDOHCC Practitioner Role Dr Jan Water Example"/>
+<artifact id="StructureDefinition/SDOHCC-practitionerrole" key="StructureDefinition-SDOHCC-practitionerrole" name="SDOHCC PractitionerRole"/>
 <artifact id="StructureDefinition/SDOHCC-Procedure" key="StructureDefinition-SDOHCC-Procedure" name="SDOHCC Procedure"/>
 <artifact deprecated="true" id="StructureDefinition/SDOHCC-Procedure-Base-1" key="StructureDefinition-SDOHCC-Procedure-Base-1" name="SDOHCC Procedure Base 1"/>
 <artifact id="Procedure/SDOHCC-ProcedureFoodPantryApplicationAssistanceExample" key="Procedure-SDOHCC-ProcedureFoodPantryApplicationAssistanceExample" name="SDOHCC Procedure Food Pantry Application Assistance Example"/>
@@ -150,7 +152,7 @@
 <artifact id="StructureMap/SDOHCC-StructureMapPRAPARE" key="StructureMap-SDOHCC-StructureMapPRAPARE" name="SDOHCCPRAPAREMap"/>
 <artifact id="SearchParameter/ServiceRequest-supporting-info" key="SearchParameter-ServiceRequest-supporting-info" name="ServiceRequestSupportingInfo"/>
 <artifact id="SearchParameter/Task-output-reference" key="SearchParameter-Task-output-reference" name="TaskOutputReference"/>
-<artifact id="Parameters/terminology-settings" key="Parameters-terminology-settings" name="terminology-settings"/>
+<artifact deprecated="true" id="Parameters/terminology-settings" key="Parameters-terminology-settings" name="terminology-settings"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page deprecated="true" key="profiles" name="(profiles)"/>
@@ -184,9 +186,10 @@
 <page key="stu2_changes" name="STU2 Publication Changes"/>
 <page key="stu2_1_update_changes" name="STU2.1 Publication Changes"/>
 <page key="stu2_2_update_changes" name="STU2.2 Publication Changes"/>
+<page key="stu2_3_update_changes" name="STU2.3 Publication Changes"/>
 <page deprecated="true" key="support_for_multiple_domains" name="Support for Multiple Domains"/>
 <page deprecated="true" key="survey_instrument_support" name="Survey Instrument Support"/>
 <page deprecated="true" key="synchronizing_applications_with_api_data_sources" name="Synchronizing Applications with API Data Sources"/>
 <page key="toc" name="Table of Contents"/>
 <page key="technical_background" name="Technical Background"/>
-</specification>
+</specification> 
