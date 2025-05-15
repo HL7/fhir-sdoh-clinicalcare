@@ -47,6 +47,15 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * requester only Reference(SDOHCCPractitionerRole or USCoreOrganizationProfile|7.0.0)
 * owner MS
 * owner ^requirements = "This element is Must Support. However, it is not mandatory in order to allow a task to be created without an owner so that one of a potential group of performers can elect to \"own\" the task (e.g., an 'open' request for fulfillment is set and anyone capable of filling the order can claim it.)"
+
+* input ^slicing.discriminator.type = #value
+* input ^slicing.discriminator.path = "type"
+* input ^slicing.rules = #open
+* input contains
+    SocialCareProgram 0..1 MS
+* input[SocialCareProgram].type = $SDOHCC-CodeSystemTemporaryCodes#social-care-program
+* input[SocialCareProgram].value[x] only Reference(SDOHCC-HealthcareService)
+
 * output ^slicing.discriminator[0].type = #value
 * output ^slicing.discriminator[=].path = "type"
 * output ^slicing.discriminator[+].type = #type
@@ -54,7 +63,9 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * output ^slicing.rules = #open
 * output contains
     PerformedActivityReference 0..* MS and
-    PerformedActivityCode 0..* MS
+    PerformedActivityCode 0..* MS and
+    EnrollmentStatus-Option1 0..* MS and
+    EnrollmentStatus-Option2 0..* MS
 * output[PerformedActivityReference].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
 * output[PerformedActivityReference].valueReference only Reference(SDOHCCProcedure)
 * output[PerformedActivityReference].valueReference 1..1 MS
@@ -64,5 +75,10 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * output[PerformedActivityCode].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
 * output[PerformedActivityCode].valueCodeableConcept from USCoreProcedureCodes|7.0.0 (required)
 * output[PerformedActivityCode].valueCodeableConcept 1..1 MS
+* output[EnrollmentStatus-Option1].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
+* output[EnrollmentStatus-Option1].valueCodeableConcept from SDOHCCValueSetEnrollmentStatus (required)
+* output[EnrollmentStatus-Option1].valueCodeableConcept 1..1 MS
+* output[EnrollmentStatus-Option2].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
+* output[EnrollmentStatus-Option2].value[x] only Reference(SDOHCC-ObservationEnrollmentStatus)
 
 * status from SDOHCCValueSetReferralTaskStatus (required)

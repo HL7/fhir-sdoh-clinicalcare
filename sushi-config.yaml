@@ -1,6 +1,6 @@
 status: active
 title: SDOH Clinical Care
-version: 2.3.0
+version: 3.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: STU 2.3

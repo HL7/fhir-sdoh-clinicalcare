@@ -60,3 +60,10 @@ Description: "A local code system defined within the context of the SDOH-CC IG."
 * #other-specify "Other Specify" "The actual value is not a member of the set of permitted data values in the constrained value domain of a variable. Text should be used to further specify the value."
 * #personal-characteristic "Personal Characteristic" "Category for artifacts that pertain to a personal characteristic (characteristics that are usually self-attested but may be attested to on behalf of the subject and are generally only verifiable by the source of attestation (e.g., sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex))."
 * #chosen-contact "Chosen Contact" "Identifies the entity (e.g., a practitioner, organization, or service) that was contacted."
+
+// STU3 Temporary Codes
+* #social-care-program "Social Care Program" "Identifies the health care service and the social care program being referenced in a task."
+
+* #enrollment-status "Enrollment Status" "Determination of an individual's enrollment in a social care program."
+* #is-enrolled "Is Enrolled" "Identifies that an individual is enrolled in a social care program."
+* #is-not-enrolled "Is Not Enrolled" "Identifies that an individual is not enrolled in a social care program."
