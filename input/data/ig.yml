@@ -112,6 +112,7 @@ groups:
       - SDOHCCLocation
       - SDOHCCObservationAssessment
       - SDOHCCObservationScreeningResponse
+      - SDOHCCObservationEnrollmentStatus
       - SDOHCCPractitionerRole
       - SDOHCCProcedure
       - SDOHCCServiceRequest
