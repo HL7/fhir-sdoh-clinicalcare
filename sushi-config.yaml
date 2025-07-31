@@ -149,6 +149,7 @@ groups:
           - SDOHCCHealthcareService
           - SDOHCCLocation
           - SDOHCCObservationAssessment
+          - SDOHCCObservationEnrollmentStatus
           - SDOHCCObservationScreeningResponse
           - SDOHCCPractitionerRole
           - SDOHCCProcedure
@@ -184,6 +185,7 @@ groups:
         resources:
           - SDOHCCExtensionHealthcareServiceTelecomAppointment
           - SDOHCCExtensionConditionAsserter
+          - SDOHCCExtensionHealthcareServiceCapacityStatus
     SearchParameters:
         name: Search Parameters
         resources:
