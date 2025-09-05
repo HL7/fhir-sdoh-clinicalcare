@@ -9,5 +9,5 @@ Description: "Extension for flagging a HealthcareService.telecom as one the pati
 * . ^short = "Telecom is for making appointments"
 * . ^definition = "For flagging a HealthcareService.telecom as one the patient can use to make an appointment."
 * value[x] 1..
-* value[x] only boolean
-* value[x] = true (exactly)
+* value[x] only CodeableConcept
+* value[x] from SDOHCC-ValueSetCapacityStatus (extensible)
