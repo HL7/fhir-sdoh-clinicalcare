@@ -9,7 +9,7 @@ Description: "A local code system defined within the context of the SDOH-CC IG."
 * ^purpose = "The purpose of this code system is to enable temporary codes to be assigned to concepts that are needed to document SDOH-related data elements defined by the Gravity Project community and concepts that are needed to facilitate the use of FHIR to exchange data as required in the use cases covered by this IG.  After the IG has been sufficiently tested through HL7 Connectathons and the coded concepts have been confirmed as fit for the intended purpose, and consensus on the use of the codes has been confirmed through the HL7 Ballot process, the temporary codes will be replaced with coded concepts established within nationally recognized, open code systems.  The replacement of temporary codes with permanent codes is intended to happen in a future version of the IG."
 * ^copyright = "(c) 2020 HL7.org"
 * ^caseSensitive = true
-* ^count = 48
+* ^count = 56
 * #sdoh-category-unspecified "SDOH Category Unspecified" "Category for Social Determinant of Health artifacts that are not further specified with respect to category."
 * #food-insecurity "Food Insecurity" "Category for Social Determinant of Health artifacts that pertain to Food Insecurity (which is defined as: Uncertain, limited, or unstable access to food that is: adequate in quantity and in nutritional quality; culturally acceptable; safe and acquired in socially acceptable ways.) This SDOH category covers records relevant to circumstances that range from Food Insecurity to Food Security."
 * #housing-instability "Housing Instability" "Category for Social Determinant of Health artifacts that pertain to Housing Instability (which is defined as: Currently consistently housed, but experiencing any of the following circumstances in the past 12 months: being behind on rent or mortgage, multiple moves, or housing cost burden.) This SDOH category covers records relevant to circumstances that range from Housing Instability to Stably Housed."
@@ -69,3 +69,5 @@ Description: "A local code system defined within the context of the SDOH-CC IG."
 * #is-not-enrolled "Is Not Enrolled" "Identifies that an individual is not enrolled in a social care program."
 * #no-capacity "No Capacity" "Identifies that a social care program does not have capacity to care for an individual."
 * #capacity "Capacity" "Identifies that a social care program has capacity to care for an individual."
+* #assessment "Assessment" "Identifies that the type of service provided by an organization is a assessment service."
+* #program-support "Program Support" "Identifies that the type of service provided by an organization is a program support service."

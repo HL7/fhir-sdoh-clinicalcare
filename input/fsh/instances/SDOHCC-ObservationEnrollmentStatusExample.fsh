@@ -13,7 +13,6 @@ Usage: #example
 //* subject.display = "COLIN ABBAS"
 * valueCodeableConcept = $SDOHCC-CodeSystemTemporaryCodes#is-enrolled "Is Enrolled"
 * focus.reference = "HealthcareService/SDOHCC-SocialCareProgramExample"
-* effectivePeriod.start = "2025-05-21T21:56:54.671Z"
-* effectivePeriod.end = "2029-05-20T21:56:54.671Z"
+* effectiveDateTime = "2025-05-21T21:56:54.671Z"
 * performer.reference = "Practitioner/SDOHCC-PractitionerPatWilliamsMSWExample"
 * performer.display = "Pat Williams"

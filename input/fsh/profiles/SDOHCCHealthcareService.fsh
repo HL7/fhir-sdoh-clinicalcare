@@ -17,18 +17,22 @@ Description: "Profile that describes the means by which a healthcare service can
 * location MS
 * location ^requirements = "The location must support Location.address so that the patient knows potential addresses when booking an appointment."
 
-* category.coding MS
+* category.coding 0..* MS
 * category.coding ^slicing.discriminator.type = #value
 * category.coding ^slicing.discriminator.path = "$this"
 * category.coding ^slicing.rules = #open
-* category.coding contains SDOHCC 0..1 MS
+* category.coding contains 
+    ServiceCategory 1..1 MS and
+    SDOHCC 0..1 MS
+* category.coding[ServiceCategory] from SDOHCCValueSetServiceCategory (required)
 * category.coding[SDOHCC] from SDOHCCValueSetSDOHCategory (required)
 * category.coding[SDOHCC] ^short = "e.g., food-insecurity | transportation-insecurity"
 * category.coding[SDOHCC] ^definition = "An SDOH category assigned to the procedure."
 * category.coding[SDOHCC] ^requirements = "Allows for alternative encodings within a code system, and translations to other code systems.  \r\nCodes from this value set can be used to assign an SDOH category (e.g., food-insecurity, transportation-insecurity, etc.) to a procedure. It is recommended that SDOH category codes be used to facilitate searching for SDOH procedures that address SDOH conditions, observations, service requests, or goals."
 * category.coding[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
 
-* type MS
+* type from SDOHCCValueSetHealthcareServiceType (required)
+* type 1..* MS
 * name 1.. MS
 * telecom ^slicing.discriminator.type = #exists
 * telecom ^slicing.discriminator.path = "extension('http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ExtensionHealthcareServiceTelecomAppointment')"
