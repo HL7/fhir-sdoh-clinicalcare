@@ -6,3 +6,4 @@ Description: "Codes for the capacity status for a service."
 * ^experimental = false
 *  SDOHCCCodeSystemTemporaryCodes#no-capacity "No Capacity"
 *  SDOHCCCodeSystemTemporaryCodes#capacity "Capacity"
+*  SDOHCCCodeSystemTemporaryCodes#no-capacity-has-waitlist "No Capacity - Has Waitlist"
