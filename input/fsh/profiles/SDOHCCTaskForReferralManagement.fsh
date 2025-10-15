@@ -47,6 +47,15 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * requester only Reference(SDOHCCPractitionerRole or USCoreOrganizationProfile|7.0.0)
 * owner MS
 * owner ^requirements = "This element is Must Support. However, it is not mandatory in order to allow a task to be created without an owner so that one of a potential group of performers can elect to \"own\" the task (e.g., an 'open' request for fulfillment is set and anyone capable of filling the order can claim it.)"
+
+* input ^slicing.discriminator.type = #value
+* input ^slicing.discriminator.path = "type"
+* input ^slicing.rules = #open
+* input contains
+    SocialCareProgram 0..1 MS
+* input[SocialCareProgram].type = $SDOHCC-CodeSystemTemporaryCodes#social-care-program
+* input[SocialCareProgram].value[x] only Reference(SDOHCC-HealthcareService)
+
 * output ^slicing.discriminator[0].type = #value
 * output ^slicing.discriminator[=].path = "type"
 * output ^slicing.discriminator[+].type = #type
@@ -54,15 +63,22 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * output ^slicing.rules = #open
 * output contains
     PerformedActivityReference 0..* MS and
-    PerformedActivityCode 0..* MS
+    PerformedActivityCode 0..* MS and
+    // EnrollmentStatus-Option1 0..* MS and
+    EnrollmentStatus 0..* MS
 * output[PerformedActivityReference].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
-* output[PerformedActivityReference].valueReference only Reference(SDOHCCProcedure)
+* output[PerformedActivityReference].valueReference only Reference(SDOHCCProcedure or SDOHCCObservationAssessment or SDOHCCObservationScreeningResponse or SDOHCCGoal or SDOHCCCondition or QuestionnaireResponse or CarePlan)
 * output[PerformedActivityReference].valueReference 1..1 MS
 // For STU3 consideration
 // * output[PerformedActivityReference].valueReference ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 // * output[PerformedActivityReference].valueReference ^type[=].targetProfile[=].extension.valueBoolean = true
 * output[PerformedActivityCode].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
 * output[PerformedActivityCode].valueCodeableConcept from USCoreProcedureCodes|7.0.0 (required)
-* output[PerformedActivityCode].valueCodeableConcept 1..1 MS
+// * output[PerformedActivityCode].valueCodeableConcept 1..1 MS
+// * output[EnrollmentStatus-Option1].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
+// * output[EnrollmentStatus-Option1].valueCodeableConcept from SDOHCCValueSetEnrollmentStatus (required)
+// * output[EnrollmentStatus-Option1].valueCodeableConcept 1..1 MS
+* output[EnrollmentStatus].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
+* output[EnrollmentStatus].valueReference only Reference(SDOHCCObservationEnrollmentStatus)
 
 * status from SDOHCCValueSetReferralTaskStatus (required)

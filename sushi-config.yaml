@@ -1,9 +1,9 @@
 status: active
 title: SDOH Clinical Care
-version: 2.3.0
+version: 3.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: STU 2.3
+releaseLabel: STU 3
 canonical: http://hl7.org/fhir/us/sdoh-clinicalcare
 FSHOnly: false
 applyExtensionMetadataToRoot: false
@@ -102,6 +102,14 @@ pages:
         title: Checking Task Status
     connecting_applications_with_api_data_sources.md:
         title: Connecting Applications with API Data Sources
+    capacity.md:
+        title: Capacity Status
+    rffa.md:
+        title: Referral for Further Assessment
+    self_referral.md:
+        title: Self-Referral
+    enrollment.md:
+        title: Enrollment Status
     gravity_terminology.md:
         title: Gravity Project Value Sets
     mustsupport_and_missing_data.md:
@@ -149,6 +157,7 @@ groups:
           - SDOHCCHealthcareService
           - SDOHCCLocation
           - SDOHCCObservationAssessment
+          - SDOHCCObservationEnrollmentStatus
           - SDOHCCObservationScreeningResponse
           - SDOHCCPractitionerRole
           - SDOHCCProcedure
@@ -184,6 +193,7 @@ groups:
         resources:
           - SDOHCCExtensionHealthcareServiceTelecomAppointment
           - SDOHCCExtensionConditionAsserter
+          - SDOHCCExtensionHealthcareServiceCapacityStatus
     SearchParameters:
         name: Search Parameters
         resources:
@@ -315,6 +325,13 @@ menu:
         Checking Task Status: checking_task_status.html
         Connecting Applications With API Data Sources: connecting_applications_with_api_data_sources.html
         Gravity Project Value Sets: gravity_terminology.html
+        Capacity Status: capacity.html
+        Referral for Further Assessment: rffa.html
+        Self-Referral: self_referral.html
+        Enrollment Status: enrollment.html
+
+
+
     FHIR Artifacts and Examples:
         Capability Statements: artifacts.html#capability-statements
         Profiles: artifacts.html#profiles

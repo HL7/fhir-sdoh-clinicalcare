@@ -123,5 +123,7 @@ INFORMATION: CodeSystem/SDOHCC-CodeSystemTemporaryCodes: CodeSystem: Most code s
 %Canonical URL 'http://loinc.org/vs/LL3323-4' does not resolve
 %Canonical URL 'http://loinc.org/vs/LL6134-2' does not resolve
 
+
+
 #WARNING: New version of Hl7.terminology released after FHIR WG approvals. Will update for next version.
 %The ImplementationGuide uses package hl7.terminology.r4#6.2.0 released on 2025-01-22, but the most recent appropriate version is 6.3.0. This reference is getting old and the more recent version should be considered

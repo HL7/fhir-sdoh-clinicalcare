@@ -1,11 +1,11 @@
 {
     "package-id": "hl7.fhir.us.sdoh-clinicalcare",
-    "version": "2.3.0",
+    "version": "3.0.0-draft",
     "milestone": true,
     "path": "http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.3",
     "status": "trial-use",
     "mode": "milestone",
-    "sequence": "STU 2.3",
-    "desc": "STU 2.3 official release",
-    "descmd": "STU 2.3 official release.  See list of changes [here](http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.3/stu2_3_update_changes.html)"
+    "sequence": "STU 3",
+    "desc": "STU 3 official release",
+    "descmd": "STU 3 official release.  See list of changes [here](http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.3/stu2_3_update_changes.html)"
 }
