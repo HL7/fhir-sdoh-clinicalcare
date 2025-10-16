@@ -33,6 +33,7 @@ Description: "A local code system defined within the context of the SDOH-CC IG."
 * #utility-insecurity "Utility Insecurity" "Category for Social Determinant of Health artifacts that pertain to Utility Insecurity (which includes Energy Insecurity and Water Insecurity and is defined as: Inability to adequately (safely, stably, affordably, and sustainably) meet basic household energy needs (e.g., heating, cooling, lighting, cooking, refrigeration, medical and electronic devices, etc.) and/or water needs (e.g., drinking, cooking or preparing food, bathing, laundry, etc.) due to energy and/or water service difficulties). This SDOH category covers records relevant to circumstances that range from Utility Insecurity to Utility Security."
 * #language-access "Language Status" "Category for Social Determinant of Health artifacts that pertain to Language Access. This SDOH category covers records related to English language proficiency, preferred language for healthcare setting, and needing interpretation or translation to address language barriers and improve language access."
 * #incarceration-status "Incarceration Status" "Category for Social Determinant of Health artifacts that pertain to Incarceration Status. This SDOH category covers records related to community supervision, current incarceration, problems related to prior incarceration, and time-boxed reentry periods."
+* #protective-factor "Protective Factor" "Category for Social Determinant of Health artifacts that pertain to Protective Factors."
 
 
 * #resulting-activity "Resulting Activity" "Code used for Task.output.type to represent the activity/action that is the result of a fulfilled task."
@@ -63,7 +64,6 @@ Description: "A local code system defined within the context of the SDOH-CC IG."
 
 // STU3 Temporary Codes
 * #social-care-program "Social Care Program" "Identifies the health care service and the social care program being referenced in a task."
-
 * #enrollment-status "Enrollment Status" "Determination of an individual's enrollment in a social care program."
 * #is-enrolled "Is Enrolled" "Identifies that an individual is enrolled in a social care program."
 * #not-enrolled "Is Not Enrolled" "Identifies that an individual is not enrolled in a social care program."
