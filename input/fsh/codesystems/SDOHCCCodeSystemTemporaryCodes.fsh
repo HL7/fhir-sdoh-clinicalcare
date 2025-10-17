@@ -64,6 +64,7 @@ Description: "A local code system defined within the context of the SDOH-CC IG."
 
 // STU3 Temporary Codes
 * #social-care-program "Social Care Program" "Identifies the health care service and the social care program being referenced in a task."
+* #additional-content "Additional Content" "Identifies additional content relevant to the task."
 * #enrollment-status "Enrollment Status" "Determination of an individual's enrollment in a social care program."
 * #is-enrolled "Is Enrolled" "Identifies that an individual is enrolled in a social care program."
 * #not-enrolled "Is Not Enrolled" "Identifies that an individual is not enrolled in a social care program."

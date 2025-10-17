@@ -51,13 +51,14 @@ This workflow occurs before the initiation of a formal referral to a CBO. It is 
 - [Add an “additional information” element for waitlist information]
 4. Coordinating Platform Completes the Referral: If the queried CBO has capacity, the Coordinating Platform forwards the referral to that CBO. If the CBO is at capacity, the Coordinating Platform repeats Steps 2 and 3 with other CBOs until a suitable partner is found. This completes the capacity-check portion of the workflow, and the process continues as described in the Closed-Loop Referral Workflow.
 
-
 #### Post-Referral Capacity Status Notification Workflow
+
 This workflow occurs when a CBO rejects an existing referral due to being at capacity. It is an extension of the Closed-Loop Referral Workflow. When a CBO determines it cannot fulfill a received referral request due to lack of capacity, its system updates the corresponding Task resource. The Task.status is changed to rejected, and Task.statusReason is populated with a CodeableConcept to indicate that the rejection is due to the organization being at capacity.
 
 IMG
 
 ### FHIR Resources and Profiles
+
 This use case primarily leverages the HealthcareService resource, with Task being used in the post-referral scenario.
 HealthcareService: This use case leverages and extends the existing SDOHCC HealthcareService profile to advertise a CBO's services and their associated capacity.
 Purpose: To describe a specific service offered by a CBO at a location, including details about programs it supports.
