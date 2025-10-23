@@ -57,7 +57,7 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * input[SocialCareProgram].type = $SDOHCC-CodeSystemTemporaryCodes#social-care-program
 * input[SocialCareProgram].value[x] only Reference(SDOHCC-HealthcareService)
 * input[AdditionalContent].type = $SDOHCC-CodeSystemTemporaryCodes#additional-content
-* input[AdditionalContent].value[x] only Reference()
+* input[AdditionalContent].value[x] only Reference
 
 * output ^slicing.discriminator[0].type = #value
 * output ^slicing.discriminator[=].path = "type"

@@ -60,13 +60,14 @@ IMG
 ### FHIR Resources and Profiles
 
 This use case primarily leverages the HealthcareService resource, with Task being used in the post-referral scenario.
-HealthcareService: This use case leverages and extends the existing SDOHCC HealthcareService profile to advertise a CBO's services and their associated capacity.
-Purpose: To describe a specific service offered by a CBO at a location, including details about programs it supports.
-Key Profiled Elements: The SDOHCC HealthcareService profile is modified in the following ways to support this use case:
-An extension is added to convey the capacity-status.
-The program element is used to associate the service with specific social care programs using a standard terminology value set.
-The category element is constrained with an SDOHCC slice to indicate the specific SDOH domain of the service (e.g., food-insecurity, housing-insecurity).
-The type element is profiled to differentiate between a service for "Capacity to Assess" and one for "Program or Service-Specific Capacity".
-The characteristic element is used to provide more granular details about the service by pointing to specific terminology concepts.
-Organization: This resource is referenced by HealthcareService.providedBy to identify the CBO or other entity that provides the service.
-Task: In the post-referral workflow, this resource is used to communicate that a referral was rejected specifically due to the CBO being at capacity.
+
+- HealthcareService: This use case leverages and extends the existing SDOHCC HealthcareService profile to advertise a CBO's services and their associated capacity.
+    - Purpose: To describe a specific service offered by a CBO at a location, including details about programs it supports.
+    - Key Profiled Elements: The SDOHCC HealthcareService profile is modified in the following ways to support this use case:
+        - An extension is added to convey the capacity-status.
+        - The program element is used to associate the service with specific social care programs using a standard terminology value set.
+        - The category element is constrained with an SDOHCC slice to indicate the specific SDOH domain of the service (e.g., food-insecurity, housing-insecurity).
+        - The type element is profiled to differentiate between a service for "Capacity to Assess" and one for "Program or Service-Specific Capacity".
+        - The characteristic element is used to provide more granular details about the service by pointing to specific terminology concepts.
+- Organization: This resource is referenced by HealthcareService.providedBy to identify the CBO or other entity that provides the service.
+- Task: In the post-referral workflow, this resource is used to communicate that a referral was rejected specifically due to the CBO being at capacity.
