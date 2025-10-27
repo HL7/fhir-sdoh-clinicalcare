@@ -1,3 +1,7 @@
+<div markdown="1" class="note-to-balloters">
+The Gravity Project team updated the SDOHCC Condition profile to include Protective Factors as a possible SDOHCC domain. We would encourage balloters to review this guidance and provide feedback.
+</div>
+
 ### Purpose
 
 SDOHCC Condition is generally intended to represent a health concern, problem, or diagnosis related to a social risk or need. SDOHCC Condition may be the result of a screening response Observation (e.g., [SDOHCC Observation Screening Response](StructureDefinition-SDOHCC-ObservationScreeningResponse.html) or other Observations) made as part of an encounter assessment (e.g., [SDOHCC Observation Assessment](StructureDefinition-SDOHCC-ObservationAssessment.html)). SDOHCC Condition may be addressed by a Goal ([SDOHCC Goal](StructureDefinition-SDOHCC-Goal.html)) or be the reason for a ServiceRequest ([SDOHCC Service Request](StructureDefinition-SDOHCC-ServiceRequest.html)) or Procedure ([SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html)). See the [Data Modeling Framework](sdoh_clinical_care_scope.html#data-modeling-framework) for more detail on the relationships between SDOHCC Condition and the other profiles in this IG.
@@ -15,6 +19,10 @@ For more information on the correlation between `Condition.category` and the dom
 ### US Core Conformance
 
 US Core 6.1.0 and beyond profiles two Condition profiles: Encounter Diagnosis Condition Profile and Problems and Health Concerns Condition profile. The primary difference between these two profiles is in the `Condition.category` data element, where each profile requires different values to determine the category of the Condition resource. Instances derived from the SDOHCC Condition profile will be conformant to one of the US Core Condition profiles. `Condition.category` **SHALL** be one of encounter-diagnosis, problem-list-item, or health-concern.
+
+### Protective Factors
+
+In addition to representing social risks or needs, the SDOHCC Condition profile is also used to represent protective factors. Protective factors are defined as characteristics or strengths of individuals, families, or communities that act to mitigate risks and promote positive well-being. To represent a protective factor using this profile, `Condition.category` **SHALL** include the value `protective-factor`, in addition to adhering to all other constraints on the `Condition.category` element. Consistent with the binding logic for other SDOH domains, when `Condition.category` includes `protective-factor`, the `Condition.code` **SHALL** be selected from the corresponding domain-specific value set (e.g., Protective Factor Diagnoses) found in Additional Bindings. Examples of protective factors that can be represented include findings like "Spiritual strength" , "Stably housed" , or "Psychological resilience".
 
 <!--Rather than offer a separate Condition profile for each SDOH category (also called domain – e.g., food insecurity, transportation insecurity), this profile can support any SDOH category. For `Condition.code`, the minimum value set bindings are specified in the profile. Additionally, based on the code selected for the optional `Condition.category` slice, the Table below provides the Gravity-vetted, preferred value sets for `Condition.code`. Where a preferred value set contains a code to describe a needed concept, servers **SHOULD** use that code.
 

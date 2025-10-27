@@ -38,7 +38,7 @@ Currently, this IG is intended to support Patient Applications, Provider's Elect
 | [Subscriptions R5 Backport](http://hl7.org/fhir/uv/subscriptions-backport) |1.1.0   | Subscriptions are recommended for monitoring completion of referrals.  |
 |[Value Set Authority Center](https://vsac.nlm.nih.gov/) (VSAC)| 0.9.0   |    Gravity Project social risk data elements are published in [Value Set Authority Center](https://vsac.nlm.nih.gov/) (VSAC) value sets. The value sets can be identified by searching for "The Gravity Project" steward. You will need to create a free National Library of Medicine (NLM) account to access the value sets. Value sets will be updated bi-annually on June 30th and December 31st.   |
 {:.grid} -->
-{% include dependency-table-nontech.xhtml %}
+{% lang-fragment dependency-table-nontech.xhtml %}
 
 The Gravity SDOH Clinical Care IG is dependent on the [US Core 3.1.1 (FHIR R4)](http://hl7.org/fhir/us/core/STU3.1.1), [US Core 6.1.0 (FHIR R4)](http://hl7.org/fhir/us/core/STU6.1) and [US Core 7.0.0 (FHIR R4)](http://hl7.org/fhir/us/core/STU7) implementation guides. US Core 3.1.1 is supported for those systems limited to  [United States Core Data for Interoperability (USCDI) v1](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi) capabilities. US Core 6.1.0 is for upcoming regulatory requirements mandating support fo [USCDI v3](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi#uscdi-v3). US Core 7.0.0 is to enable support for proposed regulations mandating support for  [USCDI v4](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi#uscdi-v4). The SDOHCC profiles can be used to create instances that are valid with all three US Core releases.
 

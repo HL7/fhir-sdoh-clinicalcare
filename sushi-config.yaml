@@ -1,9 +1,9 @@
 status: active
 title: SDOH Clinical Care
-version: 3.0.0
+version: 3.0.0-draft
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: STU 3
+releaseLabel: STU 3-draft
 canonical: http://hl7.org/fhir/us/sdoh-clinicalcare
 FSHOnly: false
 applyExtensionMetadataToRoot: false
@@ -138,172 +138,172 @@ pages:
         #   title: FHIR API Examples
 
         
-groups:
-    CapabilityStatements:
-        name: Capability Statements
-        resources:
-          - SDOHCC-CoordinationPlatform
-          - SDOHCC-ReferralRecipientLight
-          - SDOHCC-ReferralRecipient
-          - SDOHCC-ReferralSource
-          - SDOHCC-PatientApp
-    Profiles:
-        name: Profiles
-        resources:
-          - SDOHCCCondition
-          - SDOHCCConsent
-          - SDOHCCGoal
-          - SDOHCCGroup
-          - SDOHCCHealthcareService
-          - SDOHCCLocation
-          - SDOHCCObservationAssessment
-          - SDOHCCObservationEnrollmentStatus
-          - SDOHCCObservationScreeningResponse
-          - SDOHCCPractitionerRole
-          - SDOHCCProcedure
-          - SDOHCCServiceRequest
-          - SDOHCCTaskForPatient
-          - SDOHCCTaskForReferralManagement
-        #  ProfilesUsCore610:
-        #    name: Profiles - US Core 6.1.0
-        #   resources:
-        #      - SDOHCCConditionEncounterDiagnosis
-        #      - SDOHCCConditionProblemsHealthConcerns
-        #  ProfilesUsCore311:
-        #    name: Profiles - US Core 3.1.1
-        #    resources:
-        #      - SDOHCCCondition
-    ValueSets:
-        name: Value Sets
-        resources:
-              - SDOHCCValueSetLOINCSNOMEDCT
-              - SDOHCCValueSetObservationStatus
-              - SDOHCCValueSetSDOHCategory
-              - SDOHCCValueSetSDOHQuestionnaireCategory
-              - SDOHCCValueSetReferralTaskStatus
-              - SDOHCCValueSetTaskCode
-              - SDOHCCValueSetTaskPriority
-              - SDOHCCValueSetTaskStatus
-    CodeSystems:
-        name: Code Systems
-        resources:
-          - SDOHCCCodeSystemTemporaryCodes
-    Extensions:
-        name: Extensions
-        resources:
-          - SDOHCCExtensionHealthcareServiceTelecomAppointment
-          - SDOHCCExtensionConditionAsserter
-          - SDOHCCExtensionHealthcareServiceCapacityStatus
-    SearchParameters:
-        name: Search Parameters
-        resources:
-          - ServiceRequest-supporting-info
-          - Task-output-reference
-    Examples:
-        name: Examples
-        resources:
-          - pat-53234
-          - SDOHCC-ConditionUnemployedExample
-          - SDOHCC-ConsentInformationDisclosureExample
-          - SDOHCC-GoalFoodSecurityExample
-          - SDOHCC-GroupSDOHPatientsForPayerExample
-          - SDOHCC-HealthcareServiceTelecomAppointmentExample
-          - SDOHCC-LocationExample
-          - #- SDOHCC-ObservationAssessmentSocialIsolationExample
-            SDOHCC-ObservationAssessmentInadequateFoodIntakeExample
-          - SDOHCC-ObservationAssessmentTransportTooExpensiveExample
-          - SDOHCC-OrganizationClinicExample
-          - SDOHCC-OrganizationCoordinationPlatformExample
-          - SDOHCC-OrganizationPayerExample
-          - SDOHCC-PractitionerDrJanWaterExample
-          - SDOHCC-PractitionerRoleDrJanWaterExample
-          - SDOHCC-ProcedureFoodPantryApplicationAssistanceExample
-          - SDOHCC-ProcedureProvisionOfFoodExample
-          - SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample
-          - SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample
-          - SDOHCC-ServiceRequestSubreferralGardenProgramExample
-          - SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample
-          - SDOHCC-TaskPatientReviewInformationCompletedExample
-          - SDOHCC-TaskPatientInformationRequestCompletedExample
-          - SDOHCC-TaskReferralManagementOrderFulfillmentAcceptedExample
-          - SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample
-          - SDOHCC-TaskReferralManagementOrderSubtaskAcceptedExample
-          - SDOHCC-TaskReferralManagementOrderSubtaskCompletedExample
-          - SDOHCC-TaskPatientMakeAppointmentCompletedExample
-          - SDOHCC-TaskPatientRiskQuestionnaireCompletedExample
-          - DocumentReferenceExample
-    PRAPARE:
-        name: PRAPARE Examples
-        description: For the PRAPARE assessment instrument, these are examples of
-            a Questionnaire, a QuestionnaireResponse, and a StructureMap, as well
-            as of Observations and a Condition derived from the QuestionnaireResponse
-            using the StructureMap.
-        resources:
-          - SDOHCC-QuestionnairePRAPARE
-          - SDOHCC-QuestionnaireResponsePRAPAREExample
-          - StructureMap/SDOHCC-StructureMapPRAPARE
-          - SDOHCC-ObservationResponsePRAPAREChildCareNeedExample
-          - SDOHCC-ObservationResponsePRAPAREClothingNeedExample
-          - SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample
-          - SDOHCC-ObservationResponsePRAPAREHousingStatusExample
-          - SDOHCC-ConditionHomelessExample
-    HVS:
-        name: Hunger Vital Sign Examples
-        description: For the Hunger Vital Sign assessment instrument, these are examples
-            of a Questionnaire, a QuestionnaireResponse, and a StructureMap, as well
-            as of an Observation and Condition derived from the QuestionnaireResponse
-            using the StructureMap.
-        resources:
-          - SDOHCC-QuestionnaireHungerVitalSign
-          - SDOHCC-QuestionnaireResponseHungerVitalSignExample
-          - StructureMap/SDOHCC-StructureMapHungerVitalSign
-          - SDOHCC-ObservationResponseHungerVitalSignQuestion3Example
-          - SDOHCC-ConditionFoodInsecurityExample
-          - SDOHCC-DeviceSoftwareExample
-          - SDOHCC-ConditionAsserterDeviceExample
-    NHANES:
-        name: Social Connection and Isolation Panel (NHANES) Examples
-        description: For the NHANES assessment instrument, these are examples of Observations
-            that were not created from a QuestionnaireResponse and, therefore, do
-            not reference QuestionnaireResponse (via derivedFrom). Instead, the Observation
-            grouping (via hasMember) links the NHANES assessment instrument to the
-            Observations that resulted from it.
-        resources:
-          - SDOHCC-ObservationResponseNHANESGroupingExample
-          - SDOHCC-ObservationResponseNHANESQuestion1Example
-          - SDOHCC-ObservationResponseNHANESQuestion2Example
-          - SDOHCC-ObservationResponseNHANESQuestion3Example
-          - SDOHCC-ObservationResponseNHANESQuestion4Example
-          - SDOHCC-ObservationResponseNHANESQuestion5Example
-          - SDOHCC-ObservationResponseNHANESQuestion6Example
-    DraftArtifacts:
-        name: Draft Artifacts for Personal Characteristic Observations
-        resources:
-          - SDOHCCObservationEthnicityOMB
-          - SDOHCCObservationGenderIdentity
-          - SDOHCCObservationPersonalCharacteristic
-          - SDOHCCObservationPersonalPronouns
-          - SDOHCCObservationRaceOMB
-          - SDOHCCObservationRecordedSexGender
-          - SDOHCCObservationSexualOrientation
-          - SDOHCCValueSetObservationDataAbsentReason
-          - SDOHCCValueSetObservationDerivedFromIdType
-          - SDOHCCValueSetObservationMethod
-          - SDOHCCValueSetOMBEthnicityCategories
-          - SDOHCCValueSetOMBRaceCategories
-          - SDOHCCValueSetPronounsValue
-    DraftArtifactsExamples:
-        name: Examples of Draft Artifacts for Personal Characteristic Observations
-        resources:
-          - SDOHCC-ObservationEthnicityOMBExample
-          - SDOHCC-ObservationGenderIdentityExample
-          - SDOHCC-ObservationPersonalPronounsExample
-          - SDOHCC-ObservationRaceOMBExample
-          - SDOHCC-ObservationRaceOMBMotherExample
-          - SDOHCC-ObservationRaceOMBPractitionerExample
-          - SDOHCC-ObservationRecordedSexGenderExample
-          - SDOHCC-ObservationSexualOrientationExample
-          - SDOHCC-RelatedPersonMotherExample
+# groups:
+#     CapabilityStatements:
+#         name: Capability Statements
+#         resources:
+#           - SDOHCC-CoordinationPlatform
+#           - SDOHCC-ReferralRecipientLight
+#           - SDOHCC-ReferralRecipient
+#           - SDOHCC-ReferralSource
+#           - SDOHCC-PatientApp
+#     Profiles:
+#         name: Profiles
+#         resources:
+#           - SDOHCCCondition
+#           - SDOHCCConsent
+#           - SDOHCCGoal
+#           - SDOHCCGroup
+#           - SDOHCCHealthcareService
+#           - SDOHCCLocation
+#           - SDOHCCObservationAssessment
+#           - SDOHCCObservationEnrollmentStatus
+#           - SDOHCCObservationScreeningResponse
+#           - SDOHCCPractitionerRole
+#           - SDOHCCProcedure
+#           - SDOHCCServiceRequest
+#           - SDOHCCTaskForPatient
+#           - SDOHCCTaskForReferralManagement
+#         #  ProfilesUsCore610:
+#         #    name: Profiles - US Core 6.1.0
+#         #   resources:
+#         #      - SDOHCCConditionEncounterDiagnosis
+#         #      - SDOHCCConditionProblemsHealthConcerns
+#         #  ProfilesUsCore311:
+#         #    name: Profiles - US Core 3.1.1
+#         #    resources:
+#         #      - SDOHCCCondition
+#     ValueSets:
+#         name: Value Sets
+#         resources:
+#               - SDOHCCValueSetLOINCSNOMEDCT
+#               - SDOHCCValueSetObservationStatus
+#               - SDOHCCValueSetSDOHCategory
+#               - SDOHCCValueSetSDOHQuestionnaireCategory
+#               - SDOHCCValueSetReferralTaskStatus
+#               - SDOHCCValueSetTaskCode
+#               - SDOHCCValueSetTaskPriority
+#               - SDOHCCValueSetTaskStatus
+#     CodeSystems:
+#         name: Code Systems
+#         resources:
+#           - SDOHCCCodeSystemTemporaryCodes
+#     Extensions:
+#         name: Extensions
+#         resources:
+#           - SDOHCCExtensionHealthcareServiceTelecomAppointment
+#           - SDOHCCExtensionConditionAsserter
+#           - SDOHCCExtensionHealthcareServiceCapacityStatus
+#     SearchParameters:
+#         name: Search Parameters
+#         resources:
+#           - ServiceRequest-supporting-info
+#           - Task-output-reference
+#     Examples:
+#         name: Examples
+#         resources:
+#           - pat-53234
+#           - SDOHCC-ConditionUnemployedExample
+#           - SDOHCC-ConsentInformationDisclosureExample
+#           - SDOHCC-GoalFoodSecurityExample
+#           - SDOHCC-GroupSDOHPatientsForPayerExample
+#           - SDOHCC-HealthcareServiceTelecomAppointmentExample
+#           - SDOHCC-LocationExample
+#           - #- SDOHCC-ObservationAssessmentSocialIsolationExample
+#             SDOHCC-ObservationAssessmentInadequateFoodIntakeExample
+#           - SDOHCC-ObservationAssessmentTransportTooExpensiveExample
+#           - SDOHCC-OrganizationClinicExample
+#           - SDOHCC-OrganizationCoordinationPlatformExample
+#           - SDOHCC-OrganizationPayerExample
+#           - SDOHCC-PractitionerDrJanWaterExample
+#           - SDOHCC-PractitionerRoleDrJanWaterExample
+#           - SDOHCC-ProcedureFoodPantryApplicationAssistanceExample
+#           - SDOHCC-ProcedureProvisionOfFoodExample
+#           - SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample
+#           - SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample
+#           - SDOHCC-ServiceRequestSubreferralGardenProgramExample
+#           - SDOHCC-ServiceRequestSubreferralSummerFoodProgramExample
+#           - SDOHCC-TaskPatientReviewInformationCompletedExample
+#           - SDOHCC-TaskPatientInformationRequestCompletedExample
+#           - SDOHCC-TaskReferralManagementOrderFulfillmentAcceptedExample
+#           - SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample
+#           - SDOHCC-TaskReferralManagementOrderSubtaskAcceptedExample
+#           - SDOHCC-TaskReferralManagementOrderSubtaskCompletedExample
+#           - SDOHCC-TaskPatientMakeAppointmentCompletedExample
+#           - SDOHCC-TaskPatientRiskQuestionnaireCompletedExample
+#           - DocumentReferenceExample
+#     PRAPARE:
+#         name: PRAPARE Examples
+#         description: For the PRAPARE assessment instrument, these are examples of
+#             a Questionnaire, a QuestionnaireResponse, and a StructureMap, as well
+#             as of Observations and a Condition derived from the QuestionnaireResponse
+#             using the StructureMap.
+#         resources:
+#           - SDOHCC-QuestionnairePRAPARE
+#           - SDOHCC-QuestionnaireResponsePRAPAREExample
+#           - StructureMap/SDOHCC-StructureMapPRAPARE
+#           - SDOHCC-ObservationResponsePRAPAREChildCareNeedExample
+#           - SDOHCC-ObservationResponsePRAPAREClothingNeedExample
+#           - SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample
+#           - SDOHCC-ObservationResponsePRAPAREHousingStatusExample
+#           - SDOHCC-ConditionHomelessExample
+#     HVS:
+#         name: Hunger Vital Sign Examples
+#         description: For the Hunger Vital Sign assessment instrument, these are examples
+#             of a Questionnaire, a QuestionnaireResponse, and a StructureMap, as well
+#             as of an Observation and Condition derived from the QuestionnaireResponse
+#             using the StructureMap.
+#         resources:
+#           - SDOHCC-QuestionnaireHungerVitalSign
+#           - SDOHCC-QuestionnaireResponseHungerVitalSignExample
+#           - StructureMap/SDOHCC-StructureMapHungerVitalSign
+#           - SDOHCC-ObservationResponseHungerVitalSignQuestion3Example
+#           - SDOHCC-ConditionFoodInsecurityExample
+#           - SDOHCC-DeviceSoftwareExample
+#           - SDOHCC-ConditionAsserterDeviceExample
+#     NHANES:
+#         name: Social Connection and Isolation Panel (NHANES) Examples
+#         description: For the NHANES assessment instrument, these are examples of Observations
+#             that were not created from a QuestionnaireResponse and, therefore, do
+#             not reference QuestionnaireResponse (via derivedFrom). Instead, the Observation
+#             grouping (via hasMember) links the NHANES assessment instrument to the
+#             Observations that resulted from it.
+#         resources:
+#           - SDOHCC-ObservationResponseNHANESGroupingExample
+#           - SDOHCC-ObservationResponseNHANESQuestion1Example
+#           - SDOHCC-ObservationResponseNHANESQuestion2Example
+#           - SDOHCC-ObservationResponseNHANESQuestion3Example
+#           - SDOHCC-ObservationResponseNHANESQuestion4Example
+#           - SDOHCC-ObservationResponseNHANESQuestion5Example
+#           - SDOHCC-ObservationResponseNHANESQuestion6Example
+#     DraftArtifacts:
+#         name: Draft Artifacts for Personal Characteristic Observations
+#         resources:
+#           - SDOHCCObservationEthnicityOMB
+#           - SDOHCCObservationGenderIdentity
+#           - SDOHCCObservationPersonalCharacteristic
+#           - SDOHCCObservationPersonalPronouns
+#           - SDOHCCObservationRaceOMB
+#           - SDOHCCObservationRecordedSexGender
+#           - SDOHCCObservationSexualOrientation
+#           - SDOHCCValueSetObservationDataAbsentReason
+#           - SDOHCCValueSetObservationDerivedFromIdType
+#           - SDOHCCValueSetObservationMethod
+#           - SDOHCCValueSetOMBEthnicityCategories
+#           - SDOHCCValueSetOMBRaceCategories
+#           - SDOHCCValueSetPronounsValue
+#     DraftArtifactsExamples:
+#         name: Examples of Draft Artifacts for Personal Characteristic Observations
+#         resources:
+#           - SDOHCC-ObservationEthnicityOMBExample
+#           - SDOHCC-ObservationGenderIdentityExample
+#           - SDOHCC-ObservationPersonalPronounsExample
+#           - SDOHCC-ObservationRaceOMBExample
+#           - SDOHCC-ObservationRaceOMBMotherExample
+#           - SDOHCC-ObservationRaceOMBPractitionerExample
+#           - SDOHCC-ObservationRecordedSexGenderExample
+#           - SDOHCC-ObservationSexualOrientationExample
+#           - SDOHCC-RelatedPersonMotherExample
  #   Parameters:
  #       name: Terminology Parameters
  #      resources:
@@ -329,16 +329,13 @@ menu:
         Referral for Further Assessment: rffa.html
         Self-Referral: self_referral.html
         Enrollment Status: enrollment.html
-
-
-
-    FHIR Artifacts and Examples:
-        Capability Statements: artifacts.html#capability-statements
-        Profiles: artifacts.html#profiles
-        Value Sets: artifacts.html#value-sets
-        Code Systems: artifacts.html#code-systems
-        Examples: artifacts.html#examples
-        Complete Listing: artifacts.html
+    FHIR Artifacts and Examples: artifacts.html
+    #     Capability Statements: artifacts.html#capability-statements
+    #     Profiles: artifacts.html#profiles
+    #     Value Sets: artifacts.html#value-sets
+    #     Code Systems: artifacts.html#code-systems
+    #     Examples: artifacts.html#examples
+    #     Complete Listing: artifacts.html
         # FHIR API Examples: FHIR_API_Examples.html
     Specifications:
         Privacy and Security: privacy_and_security.html

@@ -1,3 +1,7 @@
+<div markdown="1" class="note-to-balloters">
+The Gravity Project team has added text to the "Referral Use Care Overview" to provide guidance on how to include additional relevant information in a referral request, such as completed questionnaires, assessments, procedures, etc. We would encourage balloters to review this guidance and provide feedback.
+</div>
+
 This section describes the interactions between the actors in an SDOH referral starting both at a high-level and at the level of FHIR API calls.   First, a high-level overview of the interactions is provided.  This description abstracts technical details and should be accessible to the non-technical reader.
 For the sake of simplicity, only relationships critical to the Referral Workflow are provided. (For additional details on task status updates see [Checking Task Status], and  on relationships between profiles see [Data Modeling Framework].)
 
