@@ -1,3 +1,7 @@
+<div markdown="1" class="note-to-balloters">
+The Gravity Project team has created a new narrative page providing guidance on the Referral for Further Assessment use case. We would encourage balloters to review this guidance and provide feedback.
+</div>
+
 This page describes the use case, actors, systems, and information flows for referring an individual for a more comprehensive assessment of their health-related social needs (HRSN).
 
 ### Goal

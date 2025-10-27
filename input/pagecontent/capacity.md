@@ -1,3 +1,7 @@
+<div markdown="1" class="note-to-balloters">
+The Gravity Project team has created a new narrative page providing guidance on the Capacity Status use case. We would encourage balloters to review this guidance and provide feedback.
+</div>
+
 This use case addresses the need for a referring entity to determine if a Community-Based Organization (CBO) has the capacity to accept a referral before the referral is formally sent. This "pre-flight" check aims to reduce the administrative burden on clinical staff and CBOs by preventing referrals to organizations that cannot currently provide services. It also improves care coordination by making all involved parties aware of a CBO's capacity status.
 
 Once capacity is confirmed and a referral is initiated, implementers should follow the guidance outlined in the existing Closed-Loop Referral Workflow page.

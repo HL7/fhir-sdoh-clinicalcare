@@ -1,3 +1,7 @@
+<div markdown="1" class="note-to-balloters">
+The Gravity Project team has created a new narrative page providing guidance on the Self-Referral use case. We would encourage balloters to review this guidance and provide feedback.
+</div>
+
 This use case describes the scenario where an individual independently identifies a health-related social need and uses a public-facing community resource directory or platform to find and request services from a Community-Based Organization (CBO).
 
 The primary distinction from the provider-centric workflows described in this guide is that the <b>Individual/Patient</b> is the initiating actor. The system they use to make the request, a <b>Community Resource Platform</b>, acts as the technical <b>Referral Source</b> system. Consequently, the "closed loop" involves communicating referral disposition and outcomes back to this platform for the individual’s benefit, rather than to a clinical healthcare provider.

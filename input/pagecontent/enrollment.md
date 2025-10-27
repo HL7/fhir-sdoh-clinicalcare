@@ -1,3 +1,7 @@
+<div markdown="1" class="note-to-balloters">
+The Gravity Project team has created a new narrative page providing guidance on the Enrollment Status use case. We would encourage balloters to review this guidance and provide feedback.
+</div>
+
 This page describes the use case, actors, systems, and information flows for sharing a patient's enrollment status in social care programs (e.g. SNAP). The exchange of this information is critical for effective care coordination, resource planning, and reducing administrative burden.
 
 ### Goal
