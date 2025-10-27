@@ -1,3 +1,8 @@
+<div markdown="1" class="note-to-balloters">
+This IG often refers to Community Based Organizations (CBOs) as synonymous with a referral target and clinicians as synonymous with the referring provider.
+There is nothing that prevents use of the IG for other referral sources and targets.
+</div>
+
 ### Overview
 
 Social determinants of health (SDOH) are the conditions in the environments where people are born, live, learn, work, play, worship, and age that affect a wide range of health, functioning, and quality-of-life outcomes and risks[^1]. They are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange coded content using the HL7 FHIR Standard for the following SDOH-focused care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions.  This IG addresses the need to gather SDOH information in multiple settings, share that information between stakeholders, and exchange referrals between organizations to address specific social risks and needs, all with appropriate patient consent.  In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research.
