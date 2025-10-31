@@ -52,6 +52,7 @@
   "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.193|20240604" : null,
   "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.200|20240604" : null,
   "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.190|20240604" : null,
+  "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.311" : null,
   "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.175|20240604" : null,
   "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.239|20240604" : null,
   "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.184|20240604" : null,

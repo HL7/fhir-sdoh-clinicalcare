@@ -5,7 +5,7 @@
     "path": "http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.3",
     "status": "trial-use",
     "mode": "milestone",
-    "sequence": "STU 3",
+    "sequence": "STU 3-draft",
     "desc": "STU 3 official release",
     "descmd": "STU 3 official release.  See list of changes [here](http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.3/stu2_3_update_changes.html)"
 }
