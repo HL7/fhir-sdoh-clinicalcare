@@ -11,7 +11,9 @@ RuleSet: OwningCommitteeExtension
 
 RuleSet: AdditionalBinding(profile, elementPath, usagePath, usageCategory, valueSet, binding)
 * {elementPath} ^binding.extension[+].url = $add-binding
-* {elementPath} ^binding.extension[=].extension[0].url = "purpose"
+* {elementPath} ^binding.extension[=].extension[0].url = "key"
+* {elementPath} ^binding.extension[=].extension[=].valueId = {usageCategory}
+* {elementPath} ^binding.extension[=].extension[+].url = "purpose"
 * {elementPath} ^binding.extension[=].extension[=].valueCode = #{binding}
 * {elementPath} ^binding.extension[=].extension[+].url = "valueSet"
 * {elementPath} ^binding.extension[=].extension[=].valueCanonical = {valueSet}
@@ -24,7 +26,9 @@ RuleSet: AdditionalBinding(profile, elementPath, usagePath, usageCategory, value
 RuleSet: AdditionalBindingPractitionerRole(elementPath, binding, valueSet)
 //* obeys hrex-pr-1
 * {elementPath} ^binding.extension[+].url = $additional-binding
-* {elementPath} ^binding.extension[=].extension[0].url = "purpose"
+* {elementPath} ^binding.extension[=].extension[0].url = "key"
+* {elementPath} ^binding.extension[=].extension[=].valueId = {usageCategory}
+* {elementPath} ^binding.extension[=].extension[+].url = "purpose"
 * {elementPath} ^binding.extension[=].extension[=].valueCode = #{binding}
 * {elementPath} ^binding.extension[=].extension[+].url = "valueSet"
 * {elementPath} ^binding.extension[=].extension[=].valueCanonical = {valueSet}
