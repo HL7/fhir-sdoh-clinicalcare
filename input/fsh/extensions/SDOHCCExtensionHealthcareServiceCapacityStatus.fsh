@@ -4,7 +4,7 @@ Title: "SDOHCC Extension HealthcareService Capacity Status"
 Description: "Extension for determining the capacity status of a health care service."
 * ^status = #active
 * ^context.type = #element
-* ^context.expression = "HealthcareService.telecom"
+* ^context.expression = "HealthcareService"
 * . ^short = "determining the capacity status of a service"
 * . ^definition = "for determining the capacity status of a health care service to provide care for an individual."
 

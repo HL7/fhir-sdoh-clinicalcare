@@ -14,5 +14,6 @@ Usage: #example
 * requester.display = "Dr Jan Water Family Medicine Physician"
 * owner.reference = "Organization/SDOHCC-OrganizationCoordinationPlatformExample"
 * owner.display = "ABC Coordination Platform"
-* output.type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity "Resulting Activity"
-* output.valueReference.reference = "Procedure/SDOHCC-ProcedureFoodPantryApplicationAssistanceExample"
+* output[PerformedActivityReference]
+    * type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity "Resulting Activity"
+    * valueReference.reference = "Procedure/SDOHCC-ProcedureFoodPantryApplicationAssistanceExample"

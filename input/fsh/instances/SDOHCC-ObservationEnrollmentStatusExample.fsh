@@ -8,7 +8,7 @@ Usage: #example
 * category[us-core] = USCoreCategory#sdoh "SDOH"
 * category[SDOHCC] = $SDOHCC-CodeSystemTemporaryCodes#enrollment-status "Enrollment Status"
 * status = #final
-* code = #SNAP "Supplemental Nutrition Assistance Program (SNAP)"
+* code = $SDOHCC-CodeSystemTemporaryCodes#SNAP "Supplemental Nutrition Assistance Program (SNAP)"
 * subject.reference = "Patient/pat-53234"
 //* subject.display = "COLIN ABBAS"
 * valueCodeableConcept = $SDOHCC-CodeSystemTemporaryCodes#is-enrolled "Is Enrolled"

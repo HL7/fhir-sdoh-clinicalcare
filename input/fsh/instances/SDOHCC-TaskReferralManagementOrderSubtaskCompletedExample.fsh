@@ -15,5 +15,6 @@ Usage: #example
 * requester.display = "ABC Coordination Platform"
 * owner.reference = "Organization/SDOHCC-OrganizationClinicExample"
 * owner.display = "Better Health Clinic"
-* output.type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity "Resulting Activity"
-* output.valueReference.reference = "Procedure/SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample"
+* output[PerformedActivityReference]
+    * type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity "Resulting Activity"
+    * valueReference.reference = "Procedure/SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample"
