@@ -2,7 +2,7 @@ Profile: SDOHCCObservationSexualOrientation
 Parent: USCoreObservationSexualOrientationProfile|7.0.0
 Id: SDOHCC-ObservationSexualOrientation
 Title: "SDOHCC Observation Sexual Orientation"
-Description: "Profile for observations about the sexual orientation of an individual. This profile is intended for draft use only. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+Description: "Profile for observations about the sexual orientation of an individual. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
 
 * ^status = #active
 * ^abstract = false
@@ -12,6 +12,7 @@ Description: "Profile for observations about the sexual orientation of an indivi
 * obeys SDOH-Obs-1 and SDOH-Obs-2 and SDOH-Obs-3
 * . ^definition = "Defines constraints that  represent the minimum requirement for personal characteristic observations which are observations that are usually self-attested but may be attested to on behalf of the subject (e.g., for a minor or incapable subject) and are generally only verifiable by the source of attestation (e.g., race, ethnicity, sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex)."
 * . ^mustSupport = false
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"

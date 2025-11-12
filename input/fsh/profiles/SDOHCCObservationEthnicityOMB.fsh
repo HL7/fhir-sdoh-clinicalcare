@@ -2,13 +2,15 @@ Profile: SDOHCCObservationEthnicityOMB
 Parent: SDOHCCObservationPersonalCharacteristic
 Id: SDOHCC-ObservationEthnicityOMB
 Title: "SDOHCC Observation Ethnicity OMB"
-Description: "Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+Description: "Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
 * ^status = #active
 * ^abstract = false
 * obeys SDOH-Ethnicity-1
 * . ^short = "Ethnicity observation"
 * . ^definition = "For ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes."
 * . ^comment = "Used for observations about the ethnicity of an individual."
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1
+
 * code = $loinc#69490-1
 * value[x] ..0
 * dataAbsentReason from SDOHCCValueSetObservationDataAbsentReason (required)

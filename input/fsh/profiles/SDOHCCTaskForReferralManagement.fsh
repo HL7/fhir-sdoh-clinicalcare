@@ -57,7 +57,7 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * input[SocialCareProgram].type = $SDOHCC-CodeSystemTemporaryCodes#social-care-program
 * input[SocialCareProgram].value[x] only Reference(SDOHCC-HealthcareService)
 * input[AdditionalContent].type = $SDOHCC-CodeSystemTemporaryCodes#additional-content
-* input[AdditionalContent].value[x] only Reference
+* input[AdditionalContent].value[x] only Reference(http://hl7.org/fhir/StructureDefinition/Resource)
 
 * output ^slicing.discriminator[0].type = #value
 * output ^slicing.discriminator[=].path = "type"
@@ -68,9 +68,9 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
     PerformedActivityReference 0..* MS and
     PerformedActivityCode 0..* MS and
     // EnrollmentStatus-Option1 0..* MS and
-    EnrollmentStatus 0..* MS
+    AdditionalContext 0..* MS
 * output[PerformedActivityReference].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
-* output[PerformedActivityReference].valueReference only Reference(SDOHCCProcedure or SDOHCCObservationAssessment or SDOHCCObservationScreeningResponse or SDOHCCGoal or SDOHCCCondition or QuestionnaireResponse or CarePlan)
+* output[PerformedActivityReference].valueReference only Reference(SDOHCCProcedure)
 * output[PerformedActivityReference].valueReference 1..1 MS
 // For STU3 consideration
 // * output[PerformedActivityReference].valueReference ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
@@ -81,7 +81,7 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 // * output[EnrollmentStatus-Option1].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
 // * output[EnrollmentStatus-Option1].valueCodeableConcept from SDOHCCValueSetEnrollmentStatus (required)
 // * output[EnrollmentStatus-Option1].valueCodeableConcept 1..1 MS
-* output[EnrollmentStatus].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
-* output[EnrollmentStatus].valueReference only Reference(SDOHCCObservationEnrollmentStatus)
+* output[AdditionalContext].type = $SDOHCC-CodeSystemTemporaryCodes#additional-context
+* output[AdditionalContext].valueReference only Reference(SDOHCCObservationProgramEnrollmentStatus or SDOHCCObservationAssessment or SDOHCCObservationScreeningResponse or SDOHCCGoal or SDOHCCCondition or QuestionnaireResponse or CarePlan)
 
 * status from SDOHCCValueSetReferralTaskStatus (required)

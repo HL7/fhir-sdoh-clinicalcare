@@ -46,6 +46,7 @@ Description: "Profile that describes the means by which a healthcare service can
 * telecom[AppointmentContact].value 1.. MS
 
 * program MS
+* program from $sdoh-programs (extensible)
 
 * characteristic MS
 * characteristic from USCoreProcedureCodes|7.0.0 (required) // code from $us-core-procedure-code (preferred)

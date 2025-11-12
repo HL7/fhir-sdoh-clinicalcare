@@ -1,27 +1,30 @@
-Profile: SDOHCCObservationEnrollmentStatus
+Profile: SDOHCCObservationProgramEnrollmentStatus
 Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|7.0.0
-Id: SDOHCC-ObservationEnrollmentStatus
-Title: "SDOHCC Observation Enrollment Status"
-Description: "For observations about an individual's enrollment status in a social care program. This profile is intended for draft use only."
+Id: SDOHCC-ObservationProgramEnrollmentStatus
+Title: "SDOHCC Observation Program Enrollment Status"
+Description: "For observations about an individual's enrollment status in a social care program."
 * ^status = #active
 * ^abstract = false
 * . ^definition = "For observations about an individual's enrollment status in a social care program."
 * . ^comment = "For observations about an individual's enrollment status in a social care program."
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1
 
 * category contains
+    enrollment 0..1 and
     SDOHCC 0..* MS
 * category[us-core] 1..*
 * category[us-core] ^short = "Requires at least a category code 'sdoh'"
 * category[us-core] ^condition = "SDOH-Obs-4"
-* category[SDOHCC] = $SDOHCC-CodeSystemTemporaryCodes#enrollment-status
-// * category[SDOHCC] from SDOHCCValueSetSDOHCategory (required)
+* category[enrollment] = $SDOHCC-CodeSystemTemporaryCodes#program-enrollment-category
+* category[enrollment] from SDOHCCValueSetProgramEnrollmentCategory (required)
+* category[SDOHCC] from SDOHCCValueSetSDOHCategory (required)
 * category[SDOHCC] ^short = "e.g., food-insecurity | transportation-insecurity"
 * category[SDOHCC] ^definition = "An SDOH category assigned to the observation."
 * category[SDOHCC] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to an observation. It is recommended that SDOH category codes be used to facilitate searching for SDOH observations."
 * category[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
 
 
-* code from http://hl7.org/fhir/ValueSet/program (preferred)
+* code from http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312 (preferred)
 * value[x] 1..
 * value[x] from SDOHCC-ValueSetEnrollmentStatus (preferred)
 * value[x] ^requirements = "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations."

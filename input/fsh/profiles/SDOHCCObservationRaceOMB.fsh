@@ -2,7 +2,7 @@ Profile: SDOHCCObservationRaceOMB
 Parent: SDOHCCObservationPersonalCharacteristic
 Id: SDOHCC-ObservationRaceOMB
 Title: "SDOHCC Observation Race OMB"
-Description: "Profile for race observations that use Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only.  For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+Description: "Profile for race observations that use Office of Management and Budget (OMB) race category codes and CDC race codes. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
 
 * ^status = #active
 * ^abstract = false
@@ -10,6 +10,8 @@ Description: "Profile for race observations that use Office of Management and Bu
 * . ^short = "Race observation"
 * . ^definition = "For race observations that use Office of Management and Budget (OMB) race category codes and CDC race codes."
 * . ^comment = "For observations about the race of an individual."
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1
+
 * code = $loinc#72826-1
 * value[x] ..0
 * dataAbsentReason MS

@@ -2,12 +2,14 @@ Profile: SDOHCCObservationGenderIdentity
 Parent: SDOHCCObservationPersonalCharacteristic
 Id: SDOHCC-ObservationGenderIdentity
 Title: "SDOHCC Observation Gender Identity"
-Description: "Profile for gender identity observations which are based on a person’s inner sense of being a girl/woman/female/feminine, boy/man/male/masculine, nonbinary, something else, or having no gender. This profile is intended for draft use only. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+Description: "Profile for gender identity observations which are based on a person’s inner sense of being a girl/woman/female/feminine, boy/man/male/masculine, nonbinary, something else, or having no gender. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
 * ^status = #active
 * ^abstract = false
 * . ^short = "Profile for observations about gender identity."
 * . ^definition = "For gender identity observations which are based on a person’s inner sense of being a girl/woman/female/feminine, boy/man/male/masculine, nonbinary, something else, or having no gender."
 * . ^comment = "For observations about the gender identity of an individual."
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1
+
 * code = $loinc#76691-5
 * value[x] 1..
 * value[x] from $2.16.840.1.113762.1.4.1021.32 (preferred)

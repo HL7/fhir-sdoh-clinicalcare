@@ -15,5 +15,5 @@ Usage: #example
 * owner.reference = "Organization/SDOHCC-OrganizationCoordinationPlatformExample"
 * owner.display = "ABC Coordination Platform"
 * output[PerformedActivityReference]
-    * type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity "Resulting Activity"
-    * valueReference.reference = "Procedure/SDOHCC-ProcedureFoodPantryApplicationAssistanceExample"
+  * type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity "Resulting Activity"
+  * valueReference.reference = "Procedure/SDOHCC-ProcedureFoodPantryApplicationAssistanceExample"

@@ -2,11 +2,13 @@ Profile: SDOHCCObservationPersonalPronouns
 Parent: SDOHCCObservationPersonalCharacteristic
 Id: SDOHCC-ObservationPersonalPronouns
 Title: "SDOHCC Observation Personal Pronouns"
-Description: "Profile for observations about the pronouns and possessive adjectives a person wishes to be addressed by. This profile is intended for draft use only.  For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+Description: "Profile for observations about the pronouns and possessive adjectives a person wishes to be addressed by. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
 * ^status = #active
 * ^abstract = false
 * . ^definition = "For observations about the pronouns and possessive adjectives a person wishes to be addressed by."
 * . ^comment = "For observations about the personal pronouns of an individual."
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1
+
 * code = $loinc#90778-2
 * value[x] 1..
 * value[x] from SDOHCCValueSetPronounsValue (preferred)
