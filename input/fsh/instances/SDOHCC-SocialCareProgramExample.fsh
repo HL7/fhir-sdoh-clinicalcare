@@ -1,5 +1,5 @@
 Instance: SDOHCC-SocialCareProgramExample
-InstanceOf: SDOHCCHealthcareService
+InstanceOf: SDOHCCHealthcareServiceForReferralManagement
 Title: "SDOHCC HealthcareService Social Care Program Example"
 Description: "An example of a HealthcareService with information about a social care program."
 Usage: #example
