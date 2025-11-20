@@ -65,7 +65,7 @@ dependencies:
             This guide links out to concept maps published in Da Vinci HRex for Provider Role codes.
     us.nlm.vsac:
         uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
-        version: 0.21.0
+        version: 0.23.0
         id: vsac
         reason: |
             Gravity Project social risk data elements are published in Value Set Authority Center (VSAC) value sets. The value sets can be identified by searching for "The Gravity Project" steward. You will need to create a free National Library of Medicine (NLM) account to access the value sets. Value sets will be updated bi-annually on June 30th and December 31st.  
@@ -119,7 +119,7 @@ pages:
     artifacts.html:
         title: Artifacts Index
     draft_specifications_for_personal_characteristics.md:
-        title: Draft Specifications for Personal Characteristics
+        title: Specifications for Personal Characteristics
     downloads.md:
         title: Downloads
     stu2_ballot_changes.md:
@@ -324,23 +324,23 @@ menu:
         Referral Workflow: referral_workflow.html
         Checking Task Status: checking_task_status.html
         Connecting Applications With API Data Sources: connecting_applications_with_api_data_sources.html
+        Specifications for Personal Characteristics: draft_specifications_for_personal_characteristics.html
         Gravity Project Value Sets: gravity_terminology.html
         Capacity Status: capacity.html
         Referral for Further Assessment: rffa.html
         Self-Referral: self_referral.html
         Enrollment Status: enrollment.html
-    FHIR Artifacts and Examples: artifacts.html
-    #     Capability Statements: artifacts.html#capability-statements
-    #     Profiles: artifacts.html#profiles
-    #     Value Sets: artifacts.html#value-sets
-    #     Code Systems: artifacts.html#code-systems
-    #     Examples: artifacts.html#examples
-    #     Complete Listing: artifacts.html
+    FHIR Artifacts and Examples:
+        Capability Statements: artifacts.html#behavior-capability-statements
+        Profiles: artifacts.html#structures-resource-profiles
+        Value Sets: artifacts.html#terminology-value-sets
+        Code Systems: artifacts.html#terminology-code-systems
+        Examples: artifacts.html#example-example-instances
+        Complete Listing: artifacts.html
         # FHIR API Examples: FHIR_API_Examples.html
     Specifications:
         Privacy and Security: privacy_and_security.html
         Must Support and Missing Data: mustsupport_and_missing_data.html
-        Draft Specifications for Personal Characteristics: draft_specifications_for_personal_characteristics.html
     Support:
         Project Home: https://confluence.hl7.org/display/GRAV
         Help & Discussions: https://chat.fhir.org/#narrow/stream/233957-Gravity-sdoh-cc

@@ -28,7 +28,6 @@ Description: "For observations about an individual's enrollment status in a soci
 * value[x] from SDOHCC-ValueSetEnrollmentStatus (preferred)
 * value[x] ^requirements = "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations."
 * value[x] ^binding.description = "Codes for enrollment status"
-* focus 1..
 * focus only Reference(SDOHCCHealthcareService) 
 // * dataAbsentReason ..0
 // * method 1.. MS

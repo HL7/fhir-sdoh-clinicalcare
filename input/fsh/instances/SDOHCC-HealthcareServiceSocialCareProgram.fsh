@@ -1,4 +1,4 @@
-Instance: SDOHCC-SocialCareProgramExample
+Instance: SDOHCC-HealthcareServiceSocialCareProgram
 InstanceOf: SDOHCCHealthcareServiceForReferralManagement
 Title: "SDOHCC HealthcareService Social Care Program Example"
 Description: "An example of a HealthcareService with information about a social care program."

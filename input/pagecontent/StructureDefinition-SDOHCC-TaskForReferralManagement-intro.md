@@ -10,7 +10,6 @@ The Task can be updated by either the service requester or the recipient.
 #### Checking Task Status
 See [Checking Task Status](checking_task_status.html).
 
-
 #### Status Management
 The status values allow for a complete flow of the Task in both the requesting and performing systems.
 
@@ -31,6 +30,12 @@ The allowed state transitions are defined graphically in the state diagram below
 | `completed` | Completed | The task has been completed. |  Referral Target|
 | `entered-in-error` | Entered in Error | The task should never have existed and is retained only because of the possibility it may have been used | Requester |
 {:.grid}
+
+#### Content-Rich Referral
+
+If a referral requester wants to include additional information relevant that could be relevant for an individual's provision of care or assessment by the referral recipient, the requester can attach these resources to the initial Task resource through `Task.input`. This profile slices the `Task.input` element to allow the referral requester to reference any resource to allow for flexibility in the information that is sent to the referral recipient.
+
+For example, a referral requester want to send a request to a CBO to assist with the enrollment of an individual into a program to support with food insecurity. The requester may want to include in the request the completed assessment(s) that led to the action of submitting a referral. The requester will reference those assessments (`QuestionnaireResponse`, `SDOHCC Observation Screening Response`, etc.) in `Task.input`.
 
 
 {% include markdown-link-references.md %}

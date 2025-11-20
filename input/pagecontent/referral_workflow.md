@@ -5,7 +5,7 @@ The Gravity Project team has added text to the "Referral Use Care Overview" to p
 This section describes the interactions between the actors in an SDOH referral starting both at a high-level and at the level of FHIR API calls.   First, a high-level overview of the interactions is provided.  This description abstracts technical details and should be accessible to the non-technical reader.
 For the sake of simplicity, only relationships critical to the Referral Workflow are provided. (For additional details on task status updates see [Checking Task Status], and  on relationships between profiles see [Data Modeling Framework].)
 
-The use cases here relate to the Gravity [Use Cases].  Implementers will benefit from looking at the detailed technical description of the exchange work flow for each use case, as well as the [Capability Statements] associated with each workflow and the [conformance artifacts](artifacts.html) generally.
+The use cases here relate to the Gravity [Use Cases].  Implementers will benefit from looking at the detailed technical description of the exchange work flow for each use case, as well as the [Capability Statements](artifacts.html#behavior-capability-statements) associated with each workflow and the [conformance artifacts](artifacts.html) generally.
 
 ### General Workflow
 
@@ -121,7 +121,7 @@ The [Patient Coordination](referral_workflow.html#patient-coordination-workflow)
 <tr>
 <td>6</td>
 <td><img src="Provider.png" alt="Provider" width="35" height="35">, <img src="CBO.png" alt="CBO" width="35" height="35"> or <img src="CoordinationPlatform.png" alt="CP" width="35" height="35"></td>
-<td>Provider<sup><a href="#footnote1">1</a></sup> initiates a referral to the CBO or CP</td>
+<td>Provider<sup><a href="#footnote1">1</a></sup> initiates a referral to the CBO or CP. The provider may attach additional content relevant for the care of the individual through the SDOHCC Task resource.</td>
 <td><ul><li><a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a></li><li><a href="StructureDefinition-SDOHCC-TaskForReferralManagement.html">SDOHCC Task for Referral Management</a> </li></ul></td>
 <td>none</td>
 </tr>

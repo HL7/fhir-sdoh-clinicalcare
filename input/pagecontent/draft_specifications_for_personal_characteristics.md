@@ -1,6 +1,3 @@
-<div class="stu-note">
-<b><i>The specifications described here are drafts.</i></b>
-</div>
 ### Background
 
 Collection of personal characteristics data (e.g., Race and Ethnicity (R/E), gender identity, sexual orientation, recorded sex and gender, and personal pronouns) is important to achieving the goal of health equity. For example, the recent [Cross-Industry Coalition Health Equity Pledge to Address Disparities](https://www.businesswire.com/news/home/20211026005241/en/Cross-Industry-Coalition-of-Health-Care-Organizations-Sign-Health-Equity-Pledge-to-Address-Disparities), and the proposed NCQA race/ethnicity stratification approach "Episode 9, from June 22, 2021,  [Future of HEDIS presentation](https://www.ncqa.org/wp-content/uploads/2021/11/Overview-Memo-Health-Equity-Accreditation-Plus.pdf?utm_medium=email&utm_campaign=publiccomment&utm_source=sf&utm_term=20211109) (see slides 15-25) both include a focus on the collection of Race & Ethnicity (R/E) data.
@@ -9,11 +6,11 @@ However, there are standards-based challenges for collection and exchange of per
 
 In general, personal characteristics data is sensitive personal information with significant privacy and security considerations. Laws vary on the extent to which this data can be disclosed.  Before exchanging personal characteristics data, regulatory and policy considerations related to consent and exchange of this data should be understood. Guidance as to the necessary privacy, security, and consent requirements related to the exchange of this data is beyond the scope of this implementation guide. Implementers should understand and abide by their local requirements.
 
-### Draft Specifications
+### Specifications
 
-This Implementation Guide (IG) has defined draft specifications for the exchange of personal characteristics data.
+This Implementation Guide (IG) has defined specifications for the exchange of personal characteristics data.
 
-For example, the draft R/E specifications are defined to meet the reporting requirements of a number of states. As an example, specific organizations require that the source and collection method of R/E data must be reported. Depending on the source and collection method, it is possible for an individual to have more than one observation about a specific personal characteristic (e.g., more than one race and/or more than one ethnicity expressed for an individual).
+For example, the R/E specifications are defined to meet the reporting requirements of a number of states. As an example, specific organizations require that the source and collection method of R/E data must be reported. Depending on the source and collection method, it is possible for an individual to have more than one observation about a specific personal characteristic (e.g., more than one race and/or more than one ethnicity expressed for an individual).
 
 The current [race extension]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-race.html) and [ethnicity extension]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-ethnicity.html) for the [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) profile allow specification of multiple coded values, but do not allow multiple occurrences of either extension or the capture of source and collection method.
 
@@ -31,7 +28,7 @@ There are seven personal characteristic Observation profiles included in this IG
 
 #### Value Sets for Personal Characteristics
 
-Value sets for the draft personal characteristics profiles are based on existing value sets (e.g., US Core, Gender Harmony Project, VSAC, USCDI, etc.) and may change as feedback is solicited and other value sets are developed (e.g., the Gender Harmony Project value sets). 
+Value sets for the personal characteristics profiles are based on existing value sets (e.g., US Core, Gender Harmony Project, VSAC, USCDI, etc.) and may change as feedback is solicited and other value sets are developed (e.g., the Gender Harmony Project value sets). 
 
 The personal characteristic profiles adhere to the following consistent structure with respect to handling [null flavors](https://www.hl7.org/fhir/v3/NullFlavor/cs.html):
 
@@ -78,20 +75,18 @@ There is a possibility that either or both the US Core Patient profile and Perso
 Additional guidance is provided in the [US Core 3.1.1 Basic Provenance Guidance]({{site.data.fhir.ver.uscore}}/basic-provenance.html).
 
 
-### Testing Draft Specifications
+### Testing Specifications
 
-Please test the draft personal characteristic profiles and provide feedback on any changes that are necessary to support the exchange of this data. Please pay specific attention to the value sets for the characteristics (via `Observation.value` and `Observation.component.value`), the value set for collection method (via `Observation.method`), and the approach for specifying the data’s source (via `Observation.performer` [Reference](https://www.hl7.org/fhir/references.html#Reference)).
-
-*Note: The draft specifications for personal characteristics should not be cited in regulations without further testing and balloting as part of a specific IG or as an update to US Core.*
+Please test the personal characteristic profiles and provide feedback on any changes that are necessary to support the exchange of this data. Please pay specific attention to the value sets for the characteristics (via `Observation.value` and `Observation.component.value`), the value set for collection method (via `Observation.method`), and the approach for specifying the data’s source (via `Observation.performer` [Reference](https://www.hl7.org/fhir/references.html#Reference)).
 
 ### US Core Intent
 
-If draft specification testing establishes that they are appropriate for exchanging personal characteristics data, the intent is that the profiles will be presented to [Cross Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm) with the request that they be included in the next version of the [US Core Specification]({{site.data.fhir.ver.uscore}}/).
+If specification testing establishes that they are appropriate for exchanging personal characteristics data, the intent is that the profiles will be presented to [Cross Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm) with the request that they be included in the next version of the [US Core Specification]({{site.data.fhir.ver.uscore}}/).
 
 Three potential outcomes from the review of the approaches to handling personal characteristics include, but are not limited to:
 
 1. Some or all of the personal characteristics continue to be represented as extensions to Patient, Practitioner, and RelatedPerson. The extensions may or may not be expanded to include source and method and allow multiple instances (e.g., cardinality of the extension expanded from 0..1 to 0..*)
-2. Some or all of the personal characteristics may be represented as observations as tested in this IGs Draft profiles for personal characteristics
+2. Some or all of the personal characteristics may be represented as observations as tested in this IGs profiles for personal characteristics
 3. A combination of both extensions and observations may be supported based on the specific use case.
 
 {% include markdown-link-references.md %}

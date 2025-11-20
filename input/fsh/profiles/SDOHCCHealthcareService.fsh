@@ -28,3 +28,4 @@ Description: "Profile that describes the means by which a healthcare service can
 * appointmentRequired MS
 * availableTime MS
 * notAvailable MS
+* availabilityExceptions MS
