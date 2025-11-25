@@ -149,7 +149,7 @@ These value sets bind to SDOHCC profile elements via an Additional Bindings tabl
 
 * Profile – e.g., Condition (Diagnoses), Procedure
 
-These value sets are not used in the SDOHCC profiles. However, they are referenced in the Screening and Assessments section of the US Core Implementation Guide which provides the following guidance with respect to these Gravity SDOH grouping value sets: “<it>These grouped value sets are narrower subsets of the value sets allowed in the respective US Core Profiles. However, when recording SDOH data US Core Profiles, servers **SHOULD** use them.</it>”
+These value sets are not used in the SDOHCC profiles. However, they are referenced in the Screening and Assessments section of the US Core Implementation Guide which provides the following guidance with respect to these Gravity SDOH grouping value sets: “*These grouped value sets are narrower subsets of the value sets allowed in the respective US Core Profiles. However, when recording SDOH data US Core Profiles, servers **SHOULD** use them.*”
 
 **Example 3**:
 

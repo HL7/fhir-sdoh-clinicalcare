@@ -33,39 +33,39 @@ Description: "Profile that describes the means by which a healthcare service can
 * program MS
 * program from $sdoh-programs (extensible)
 
-* characteristic MS
-* characteristic from USCoreProcedureCodes|7.0.0 (required) // code from $us-core-procedure-code (preferred)
-* characteristic ^binding.extension.extension[0].url = "purpose"
-* characteristic ^binding.extension.extension[=].valueCode = #current
-* characteristic ^binding.extension.extension[+].url = "valueSet"
-* characteristic ^binding.extension.extension[=].valueCanonical = "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|7.0.0"
-* characteristic ^binding.extension.extension[+].url = "documentation"
-* characteristic ^binding.extension.extension[=].valueMarkdown = "US Core uses the current additional binding from FHIR R5 for this coded element for more flexibility when exchanging legacy and text-only data."
-* characteristic ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-* characteristic ^binding.description = "Codes describing the type of  Procedure"
+// * characteristic MS
+// * characteristic from USCoreProcedureCodes|7.0.0 (required) // code from $us-core-procedure-code (preferred)
+// * characteristic ^binding.extension.extension[0].url = "purpose"
+// * characteristic ^binding.extension.extension[=].valueCode = #current
+// * characteristic ^binding.extension.extension[+].url = "valueSet"
+// * characteristic ^binding.extension.extension[=].valueCanonical = "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|7.0.0"
+// * characteristic ^binding.extension.extension[+].url = "documentation"
+// * characteristic ^binding.extension.extension[=].valueMarkdown = "US Core uses the current additional binding from FHIR R5 for this coded element for more flexibility when exchanging legacy and text-only data."
+// * characteristic ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+// * characteristic ^binding.description = "Codes describing the type of  Procedure"
 
-* characteristic ^definition = "The specific procedure that is performed. Use text if the exact nature of the procedure cannot be coded."
+// * characteristic ^definition = "The specific procedure that is performed. Use text if the exact nature of the procedure cannot be coded."
 
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, digital-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.235, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, digital-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.226, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, educational-attainment, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.56, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, elder-abuse, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.67, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, employment-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.59, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, financial-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.32, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, food-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.7, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, health-insurance-coverage-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.125, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, homelessness, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.20, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, housing-instability, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.44, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, inadequate-housing, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.52, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, incarceration-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.260, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, intimate-partner-violence, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.97, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, language-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.268, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, material-hardship, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.39, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, medical-cost-burden, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.122, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, personal-health-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.118, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, social-connection, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.94, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, stress, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.87, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.27, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, utility-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.247, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.90, extensible)
-* insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|7.0.0, required)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, digital-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.235, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, digital-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.226, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, educational-attainment, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.56, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, elder-abuse, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.67, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, employment-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.59, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, financial-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.32, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, food-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.7, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, health-insurance-coverage-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.125, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, homelessness, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.20, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, housing-instability, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.44, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, inadequate-housing, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.52, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, incarceration-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.260, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, intimate-partner-violence, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.97, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, language-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.268, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, material-hardship, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.39, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, medical-cost-burden, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.122, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, personal-health-literacy, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.118, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, social-connection, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.94, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, stress, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.87, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, transportation-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.27, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, utility-insecurity, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.247, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, veteran-status, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.90, extensible)
+// * insert AdditionalBinding(SDOHCCHealthcareServiceForReferralManagement, characteristic, HealthcareService.category, sdoh-category-unspecified, http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|7.0.0, required)

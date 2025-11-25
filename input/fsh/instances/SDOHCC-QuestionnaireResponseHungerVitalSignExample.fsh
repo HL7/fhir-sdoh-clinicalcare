@@ -11,7 +11,7 @@ Usage: #example
 * authored = "2020-09-10T21:56:54.671Z"
 * source = Reference(pat-53234) "COLIN ABBAS"
 * item[0].linkId = "/88122-7"
-* item[=].text = "Within the past 12 months we worried whether our food would run out before we got money to buy more."
+* item[=].text = "Within the past 12 months we worried whether our food would run out before we got money to buy more"
 * item[=].answer.valueCoding = $loinc#LA28397-0 "Often true"
 * item[+].linkId = "/88123-5"
 * item[=].text = "Within the past 12 months the food we bought just didn't last and we didn't have money to get more"

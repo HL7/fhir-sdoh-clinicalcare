@@ -114,7 +114,8 @@ The [Patient Coordination](referral_workflow.html#patient-coordination-workflow)
 <tr>
 <td>5 (optional)</td>
 <td><img src="Provider.png" alt="Provider" width="35" height="35"></td>
-<td>Provider makes information regarding the referral, goals and plan available to the patient’s application</td>
+<td><li>Provider makes information regarding the referral, goals and plan available to the patient’s application</li>
+    <li>This may include any information the provider thinks is necessary to support the patient’s social care needs including the clinical information needed to determine program eligibility. For example, a provider may share a gestational diabetes diagnosis, supporting glucose challenge test results and oral glucose tolerance test results to aid in establishing eligibility for a WIC (Women, Infants, and Children) food program.</li></td>
 <td><ul><li><a href="StructureDefinition-SDOHCC-ServiceRequest.html">SDOHCC ServiceRequest</a></li><li><a href="StructureDefinition-SDOHCC-Location.html">SDOHCC Location</a> </li></ul></td>
 <td>none</td>
 </tr>

@@ -8,8 +8,8 @@
 
 {{ site.data.ig.description }}
 
-- [XML](ImplementationGuide-{{site.data.ig.id}}.xml)
-- [JSON](ImplementationGuide-{{site.data.ig.id}}.json)
+- [XML](ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.xml)
+- [JSON](ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.json)
 
 ### Cross Version Analysis
 

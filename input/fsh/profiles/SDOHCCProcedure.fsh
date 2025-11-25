@@ -67,19 +67,20 @@ Description: "Profile for interventions that address Social Determinants of Heal
 // US Core 7.0.0
 * code 1.. MS
 * code from USCoreProcedureCodes|7.0.0 (required) // code from $us-core-procedure-code (preferred)
-* code ^binding.extension.extension[0].url = "purpose"
-* code ^binding.extension.extension[=].valueCode = #current
-* code ^binding.extension.extension[+].url = "valueSet"
-* code ^binding.extension.extension[=].valueCanonical = "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|7.0.0"
-* code ^binding.extension.extension[+].url = "documentation"
-* code ^binding.extension.extension[=].valueMarkdown = "US Core uses the current additional binding from FHIR R5 for this coded element for more flexibility when exchanging legacy and text-only data."
-* code ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-* code ^binding.description = "Codes describing the type of  Procedure"
+// * code ^binding.extension.extension[0].url = "purpose"
+// * code ^binding.extension.extension[=].valueCode = #current
+// * code ^binding.extension.extension[+].url = "valueSet"
+// * code ^binding.extension.extension[=].valueCanonical = "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|7.0.0"
+// * code ^binding.extension.extension[+].url = "documentation"
+// * code ^binding.extension.extension[=].valueMarkdown = "US Core uses the current additional binding from FHIR R5 for this coded element for more flexibility when exchanging legacy and text-only data."
+// * code ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+// * code ^binding.description = "Codes describing the type of  Procedure"
 
 /*
 // SDOH CC
 * code from USCoreProcedureCodes (required)
 */
+* code ^requirements = "Code is required and must be selected from the bound value set."
 * code ^definition = "The specific procedure that is performed. Use text if the exact nature of the procedure cannot be coded."
 
 * insert AdditionalBinding(SDOHCCProcedure, code, Procedure.category, digital-access, http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.235, extensible)

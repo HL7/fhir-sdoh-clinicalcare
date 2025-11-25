@@ -2,10 +2,10 @@
     "package-id": "hl7.fhir.us.sdoh-clinicalcare",
     "version": "3.0.0-draft",
     "milestone": true,
-    "path": "http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.3",
+    "path": "http://hl7.org/fhir/us/sdoh-clinicalcare/STU3-ballot",
     "status": "trial-use",
     "mode": "milestone",
     "sequence": "STU 3-draft",
     "desc": "STU 3 official release",
-    "descmd": "STU 3 official release.  See list of changes [here](http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.3/stu2_3_update_changes.html)"
+    "descmd": "STU 3 official release.  See list of changes [here](http://hl7.org/fhir/us/sdoh-clinicalcare/STU3-ballot/stu3_ballot_changes.html)"
 }

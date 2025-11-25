@@ -28,7 +28,7 @@ There are seven personal characteristic Observation profiles included in this IG
 
 #### Value Sets for Personal Characteristics
 
-Value sets for the personal characteristics profiles are based on existing value sets (e.g., US Core, Gender Harmony Project, VSAC, USCDI, etc.) and may change as feedback is solicited and other value sets are developed (e.g., the Gender Harmony Project value sets). 
+Value sets for the personal characteristics profiles are based on existing value sets (e.g., US Core, Gender Harmony Project, VSAC, USCDI, etc.). 
 
 The personal characteristic profiles adhere to the following consistent structure with respect to handling [null flavors](https://www.hl7.org/fhir/v3/NullFlavor/cs.html):
 
@@ -66,7 +66,7 @@ In situations where an individual (e.g., a parent, guardian, caregiver, etc.) ha
 
 #### Guidance for use of Provenance with Race and Ethnicity Personal Characteristics
 
-There is a possibility that either or both the US Core Patient profile and Personal Characteristics observation profiles for race and ethnicity may have have provenance associated with them.  Since the Provenance resource only points to the resource instance that it is supporting (target), there is no way to determine which elements (if any) have been changed.  We suggest that provenance should be used in conjunction with this IG to determine one of the following:
+There is a possibility that either or both the US Core Patient profile and Personal Characteristics observation profiles for race and ethnicity may have provenance associated with them.  Since the Provenance resource only points to the resource instance that it is supporting (target), there is no way to determine which elements (if any) have been changed.  We suggest that provenance should be used in conjunction with this IG to determine one of the following:
 
 ​	the author organization responsible for the information, and
 
@@ -74,7 +74,7 @@ There is a possibility that either or both the US Core Patient profile and Perso
 
 Additional guidance is provided in the [US Core 3.1.1 Basic Provenance Guidance]({{site.data.fhir.ver.uscore}}/basic-provenance.html).
 
-
+<!-- 
 ### Testing Specifications
 
 Please test the personal characteristic profiles and provide feedback on any changes that are necessary to support the exchange of this data. Please pay specific attention to the value sets for the characteristics (via `Observation.value` and `Observation.component.value`), the value set for collection method (via `Observation.method`), and the approach for specifying the data’s source (via `Observation.performer` [Reference](https://www.hl7.org/fhir/references.html#Reference)).
@@ -87,6 +87,6 @@ Three potential outcomes from the review of the approaches to handling personal 
 
 1. Some or all of the personal characteristics continue to be represented as extensions to Patient, Practitioner, and RelatedPerson. The extensions may or may not be expanded to include source and method and allow multiple instances (e.g., cardinality of the extension expanded from 0..1 to 0..*)
 2. Some or all of the personal characteristics may be represented as observations as tested in this IGs profiles for personal characteristics
-3. A combination of both extensions and observations may be supported based on the specific use case.
+3. A combination of both extensions and observations may be supported based on the specific use case. -->
 
 {% include markdown-link-references.md %}

@@ -100,16 +100,16 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 // US Core 7.0.0
 * code 1.. MS
 * code from USCoreConditionCodes|7.0.0 (required)
-* code ^binding.extension.extension[0].url = "purpose"
-* code ^binding.extension.extension[=].valueCode = #current
-* code ^binding.extension.extension[+].url = "valueSet"
-* code ^binding.extension.extension[=].valueCanonical = "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code|7.0.0"
+// * code ^binding.extension.extension[0].url = "purpose"
+// * code ^binding.extension.extension[=].valueCode = #current
+// * code ^binding.extension.extension[+].url = "valueSet"
+// * code ^binding.extension.extension[=].valueCanonical = "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code|7.0.0"
 // * code ^binding.extension.extension[+].url = "usage"
 // * code ^binding.extension.extension[=].valueUsageContext = "* this is an artifact from US Core 7.0.0"
-* code ^binding.extension.extension[+].url = "documentation"
-* code ^binding.extension.extension[=].valueMarkdown = "US Core uses the current additional binding from FHIR R5 for this coded element for more flexibility when exchanging legacy and text-only data."
-* code ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-* code ^binding.description = "Valueset to describe the actual problem experienced by the patient"
+// * code ^binding.extension.extension[+].url = "documentation"
+// * code ^binding.extension.extension[=].valueMarkdown = "US Core uses the current additional binding from FHIR R5 for this coded element for more flexibility when exchanging legacy and text-only data."
+// * code ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+// * code ^binding.description = "Valueset to describe the actual problem experienced by the patient"
 
 
 
