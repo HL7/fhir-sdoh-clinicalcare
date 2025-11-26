@@ -7,7 +7,7 @@ Usage: #example
 * active = true
 * category.coding[ServiceCategory] = USCoreCategory#sdoh "SDOH"
 * category.coding[SDOHCC] = SDOHCCCodeSystemTemporaryCodes#housing-instability "Housing instability"
-* type = SDOHCCCodeSystemTemporaryCodes#program-support "Program Support"
+* type = http://terminology.hl7.org/CodeSystem/service-type#252 "Assessment"
 * location.reference = "Location/SDOHCC-LocationExample"
 * name = "HACC"
 * telecom[AppointmentContact]
@@ -16,7 +16,7 @@ Usage: #example
   * use = #work
   * extension[ForAppointment].valueBoolean = true 
 * program = http://terminology.hl7.org/CodeSystem/program#21 "Home And Community Care (HACC)"
-* characteristic = http://hl7.org/fhir/us/core/CodeSystem/us-core-category#1338051003 "Provision of microwave oven (procedure)"
+// * characteristic = http://hl7.org/fhir/us/core/CodeSystem/us-core-category#1338051003 "Provision of microwave oven (procedure)"
 
 
 

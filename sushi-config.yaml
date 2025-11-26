@@ -1,9 +1,9 @@
 status: active
 title: SDOH Clinical Care
-version: 3.0.0-draft
+version: 3.0.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: STU 3-draft
+releaseLabel: STU 3 Draft
 canonical: http://hl7.org/fhir/us/sdoh-clinicalcare
 FSHOnly: false
 applyExtensionMetadataToRoot: false
@@ -56,7 +56,8 @@ dependencies:
         reason: |
             Subscriptions are recommended for monitoring completion of referrals.
     hl7.terminology.r4:
-        version: 6.2.0
+        uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
+        version: 7.0.0
     hl7.fhir.us.davinci-hrex:
         uri: http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/hl7.fhir.us.davinci-hrex
         version: 1.1.0
@@ -70,7 +71,8 @@ dependencies:
         reason: |
             Gravity Project social risk data elements are published in Value Set Authority Center (VSAC) value sets. The value sets can be identified by searching for "The Gravity Project" steward. You will need to create a free National Library of Medicine (NLM) account to access the value sets. Value sets will be updated bi-annually on June 30th and December 31st.  
     hl7.fhir.extensions.r5:
-        version: 5.1.0
+        uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
+        version: 5.2.0
 
 license: CC0-1.0
 publisher:

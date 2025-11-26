@@ -33,3 +33,4 @@ Description: "Codes that represent Social Determinants of Health (SDOH) domains.
 * SDOHCCCodeSystemTemporaryCodes#utility-insecurity "Utility Insecurity"
 * SDOHCCCodeSystemTemporaryCodes#incarceration-status "Incarceration Status"
 * SDOHCCCodeSystemTemporaryCodes#language-access "Language Access"
+* SDOHCCCodeSystemTemporaryCodes#protective-factor "Protective Factor"

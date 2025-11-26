@@ -54,19 +54,18 @@ This workflow occurs before the initiation of a formal referral to a CBO. It is 
 2. **Coordinating Platform Searches for CBO Services and Capacity**: Upon receiving the referral, the **Coordinating Platform** searches for an appropriate **CBO** with the capacity to fulfill the request. Typically, the Coordinating Platform uses its own internal resource directory for this search. In the future, this step could be integrated with standards-based directories, such as the FaST National Directory for Healthcare Providers and Services. The platform queries one or more CBOs by performing a FHIR search on the [SDOHCC Healthcare Service for Referral Management](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html) resource.
 3. **CBO System Responds with Capacity Status**: The CBO system returns a Bundle containing [SDOHCC Healthcare Service for Referral Management](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html) resources that match the query criteria.
 - Each [SDOHCC Healthcare Service for Referral Management](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html) resource in the response **SHALL** indicate its current capacity status.
-- The capacity status can be one of the following: Has capacity, No capacity, or No capacity - waitlist available.
-- If a waitlist is available, the IG supports optional, coarse-grained time frames (e.g., < 1 month, 1-3 months, >3 months, undetermined) to provide additional context.
+- The capacity status can be one of the following: 'Has capacity', 'No capacity', or 'No capacity - waitlist available'.
+- If a waitlist is available, the IG supports the ability to optionally include unstructured text to provide additional information about the waitlist (e.g. number of people on the waitlist, estimated wait time, etc.).
+**NOTE**: Responses to capacity status queries may be synchronous or asynchronous to the request. For example, some implementations may choose to set the capacity status values for the services they offer on a daily or weekly basis and then respond to all inbound capacity requests based on the daily or weekly status values. Other implementations may choose to notify a person each time a capacity status query happens so they can respond synchronously. 
 4. **Coordinating Platform Completes the Referral**: If the queried CBO has capacity, the **Coordinating Platform** forwards the referral to that **CBO**. If the CBO is at capacity, the Coordinating Platform repeats Steps 2 and 3 with other CBOs until a suitable partner is found. This completes the capacity-check portion of the workflow, and the process continues as described in the [Closed-Loop Referral Workflow](referral_workflow.html#referral-use-case-overview).
 
 The diagram below shows a simplified view of the capacity status query workflow.
 
 {% include img.html img="CapacityStatusSimplified.png" caption="Figure 1: Simple Capacity Status Query Workflow" %} 
 
-
 The diagram below shows the capacity status query in the context of the indirect referral workflow. The orange highlighted section shows the capacity status query steps.
 
 {% include img.html img="CapacityStatusIndirect.png" caption="Figure 2: Capacity Status in an Indirect Referral" %} 
-
 
 #### Post-Referral Capacity Status Notification Workflow
 
@@ -76,13 +75,11 @@ The diagram below shows the post-referral capacity status notification workflow.
 
 {% include img.html img="PostReferralCapacityStatusNotificationWorkflow.png" caption="Figure 3: Post-Referral Capacity Status Notification Workflow" %} 
 
-
 #### Capacity Status Query Light
 
 A “light” version of the Capacity Status Query where the referral source has a FHIR server API and the referral target does not have a FHIR server API but has an application that can access the referral source’s FHIR server API. The diagram below shows the capacity status query light workflow.
 
 {% include img.html img="CapacityStatusQueryLight.png" caption="Figure 4: Capacity Status Query Light" %} 
-
 
 ### FHIR Resources and Profiles
 

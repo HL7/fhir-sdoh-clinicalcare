@@ -26,12 +26,10 @@ Description: "Profile that describes the means by which a healthcare service can
 * category.coding[SDOHCC] ^requirements = "Allows for alternative encodings within a code system, and translations to other code systems.  \r\nCodes from this value set can be used to assign an SDOH category (e.g., food-insecurity, transportation-insecurity, etc.) to a procedure. It is recommended that SDOH category codes be used to facilitate searching for SDOH procedures that address SDOH conditions, observations, service requests, or goals."
 * category.coding[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
 
-* type from SDOHCCValueSetHealthcareServiceType (extensible)
 * type 1..1 MS
 * name 1.. MS
 
 * program MS
-* program from $sdoh-programs (extensible)
 
 // * characteristic MS
 // * characteristic from USCoreProcedureCodes|7.0.0 (required) // code from $us-core-procedure-code (preferred)

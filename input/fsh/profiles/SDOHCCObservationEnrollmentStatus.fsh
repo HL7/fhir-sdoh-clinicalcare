@@ -15,7 +15,7 @@ Description: "For observations about an individual's enrollment status in a soci
 * category[us-core] 1..*
 * category[us-core] ^short = "Requires at least a category code 'sdoh'"
 * category[us-core] ^condition = "SDOH-Obs-4"
-* category[enrollment] = $SDOHCC-CodeSystemTemporaryCodes#program-enrollment-category
+* category[enrollment] = $SDOHCC-CodeSystemTemporaryCodes#program-enrollment
 * category[SDOHCC] from SDOHCCValueSetSDOHCategory (required)
 * category[SDOHCC] ^short = "e.g., food-insecurity | transportation-insecurity"
 * category[SDOHCC] ^definition = "An SDOH category assigned to the observation."

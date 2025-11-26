@@ -4,4 +4,4 @@ Title: "SDOHCC ValueSet Program Enrollment Category"
 Description: "Codes for the program enrollment category of an observation."
 * ^status = #active
 * ^experimental = false
-* SDOHCCCodeSystemTemporaryCodes#program-enrollment-category "Program Enrollment Category"
+* SDOHCCCodeSystemTemporaryCodes#program-enrollment "Program Enrollment Status"

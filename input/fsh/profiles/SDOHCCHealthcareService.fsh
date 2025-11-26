@@ -14,7 +14,9 @@ Description: "Profile that describes the means by which a healthcare service can
 * location only Reference(SDOHCCLocation)
 * location MS
 * location ^requirements = "The location must support Location.address so that the patient knows potential addresses when booking an appointment."
-* name 1.. MS
+
+* type from SDOHCCValueSetHealthcareServiceType (extensible)
+
 * telecom ^slicing.discriminator.type = #exists
 * telecom ^slicing.discriminator.path = "extension('http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ExtensionHealthcareServiceTelecomAppointment')"
 * telecom ^slicing.rules = #open
@@ -24,6 +26,9 @@ Description: "Profile that describes the means by which a healthcare service can
 * telecom[AppointmentContact].extension contains SDOHCCExtensionHealthcareServiceTelecomAppointment named ForAppointment 1..1 MS
 * telecom[AppointmentContact].system 1.. MS
 * telecom[AppointmentContact].value 1.. MS
+
+* program from $sdoh-programs (extensible)
+
 * communication MS
 * appointmentRequired MS
 * availableTime MS

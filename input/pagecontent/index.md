@@ -1,6 +1,36 @@
 <div markdown="1" class="note-to-balloters">
-This IG often refers to Community Based Organizations (CBOs) as synonymous with a referral target and clinicians as synonymous with the referring provider.
-There is nothing that prevents use of the IG for other referral sources and targets.
+The Gravity Project team has drafted a new STU3 version of the IG for balloters to review and submit feedback. Below are the requirements that we have worked through for this ballot and the associated updates to the IG:
+
+Capacity Status
+
+- **NEW**: [Capacity Status](capacity.html) Narrative Guidance
+- **NEW**: [SDOHCC HealthcareService Capacity Status Extension](StructureDefinition-SDOHCC-ExtensionHealthcareServiceCapacityStatus.html)
+- **NEW**: [SDOHCC Healthcare Service for Referral Management](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html)
+- **Updated**: [SDOHCC HealthcareService](StructureDefinition-SDOHCC-HealthcareService.html) (VA Updates to HealthcareService.category, HealthcareService.type, and HealthcareService.program)
+
+Enrollment Status
+
+- **NEW**: [Enrollment Status](enrollment.html) Narrative Guidance
+- **NEW**: [SDOHCC Program Enrollment Status Observation](StructureDefinition-SDOHCC-ObservationProgramEnrollmentStatus.html)
+- **Updated**: [SDOHCC Task for Referral Management] (includes Enrollment Status Observation as a possible reference in Task.output)
+
+Self-Referral
+
+- **NEW**: [Self-Referral](self_referral.html) Narrative Guidance
+
+Referral for Further Assessment
+
+- **NEW**: [Referral for Further Assessment](rffa.html) Narrative Guidance
+- **Updated**: [SDOHCC Task for Referral Management] (added slice to Task.output to include resources associated with outcomes from the completion of the task(s))
+
+Content-Rich Referral
+
+- **Updated**: [Referral Workflow](referral_workflow.html#referral-use-case-overview) additional guidance on pushing additional content in a closed-loop referral
+- **Updated**: [SDOHCC Task for Referral Management] (added slice to Task.input to include resources relevant in the provision of services to a referral recipient)
+
+Protective Factors
+
+- **Updated** [SDOHCC Condition] to include Protective Factors as a possible category code. Additional guidance is present in the profile as well on how to use Protective Factors
 </div>
 
 ### Overview

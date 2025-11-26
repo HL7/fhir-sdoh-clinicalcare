@@ -54,8 +54,8 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * input contains
     AdditionalContent 0..* MS and
     SocialCareProgram 0..1 MS
-* input[SocialCareProgram].type = $SDOHCC-CodeSystemTemporaryCodes#social-care-program
-* input[SocialCareProgram].value[x] only Reference(SDOHCC-HealthcareService)
+// * input[SocialCareProgram].type = $SDOHCC-CodeSystemTemporaryCodes#social-care-program
+// * input[SocialCareProgram].value[x] only Reference(SDOHCC-HealthcareService)
 * input[AdditionalContent].type = $SDOHCC-CodeSystemTemporaryCodes#additional-content
 * input[AdditionalContent].value[x] only Reference(http://hl7.org/fhir/StructureDefinition/Resource)
 
@@ -81,7 +81,7 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 // * output[EnrollmentStatus-Option1].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
 // * output[EnrollmentStatus-Option1].valueCodeableConcept from SDOHCCValueSetEnrollmentStatus (required)
 // * output[EnrollmentStatus-Option1].valueCodeableConcept 1..1 MS
-* output[AdditionalContext].type = $SDOHCC-CodeSystemTemporaryCodes#additional-context
+* output[AdditionalContext].type = $SDOHCC-CodeSystemTemporaryCodes#additional-content
 * output[AdditionalContext].valueReference only Reference(SDOHCCObservationProgramEnrollmentStatus or SDOHCCObservationAssessment or SDOHCCObservationScreeningResponse or SDOHCCGoal or SDOHCCCondition or QuestionnaireResponse or CarePlan)
 
 * status from SDOHCCValueSetReferralTaskStatus (required)
