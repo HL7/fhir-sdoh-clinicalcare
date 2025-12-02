@@ -99,7 +99,7 @@ INFORMATION: Resource: The resource Questionnaire/SDOHCC-QuestionnaireHungerVita
 INFORMATION: Resource: The resource Questionnaire/SDOHCC-QuestionnairePRAPARE could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 
 
-# INFORMATION: Currently migrating SDOHCC Category Value Set codes to US Core Category Value Set in THO. Other codes found in this Code System are guidance only. 
+# INFORMATION: Currently migrating SDOHCC Category Value Set codes to US Core Category Value Set in THO. Other codes found in this Code System are guidance only. Please Note that this IG is currently FMM2.
 INFORMATION: CodeSystem/SDOHCC-CodeSystemTemporaryCodes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 

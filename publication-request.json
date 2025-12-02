@@ -3,9 +3,9 @@
     "version": "3.0.0-ballot",
     "milestone": true,
     "path": "http://hl7.org/fhir/us/sdoh-clinicalcare/2026Jan",
-    "status": "trial-use",
-    "mode": "milestone",
-    "sequence": "STU 3 ballot",
+    "status": "ballot",
+    "mode": "working",
+    "sequence": "STU 3",
     "desc": "STU 3 ballot",
     "descmd": "STU 3 ballot.  See list of changes [here](http://hl7.org/fhir/us/sdoh-clinicalcare/STU3-ballot/stu3_ballot_changes.html)"
 }
