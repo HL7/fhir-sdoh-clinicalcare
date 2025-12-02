@@ -52,8 +52,8 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 * input ^slicing.discriminator.path = "type"
 * input ^slicing.rules = #open
 * input contains
-    AdditionalContent 0..* MS and
-    SocialCareProgram 0..1 MS
+    AdditionalContent 0..* MS
+    // SocialCareProgram 0..1 MS
 // * input[SocialCareProgram].type = $SDOHCC-CodeSystemTemporaryCodes#social-care-program
 // * input[SocialCareProgram].value[x] only Reference(SDOHCC-HealthcareService)
 * input[AdditionalContent].type = $SDOHCC-CodeSystemTemporaryCodes#additional-content
@@ -68,7 +68,7 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
     PerformedActivityReference 0..* MS and
     PerformedActivityCode 0..* MS and
     // EnrollmentStatus-Option1 0..* MS and
-    AdditionalContext 0..* MS
+    AdditionalContent 0..* MS
 * output[PerformedActivityReference].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
 * output[PerformedActivityReference].valueReference only Reference(SDOHCCProcedure)
 * output[PerformedActivityReference].valueReference 1..1 MS
@@ -81,7 +81,7 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 // * output[EnrollmentStatus-Option1].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
 // * output[EnrollmentStatus-Option1].valueCodeableConcept from SDOHCCValueSetEnrollmentStatus (required)
 // * output[EnrollmentStatus-Option1].valueCodeableConcept 1..1 MS
-* output[AdditionalContext].type = $SDOHCC-CodeSystemTemporaryCodes#additional-content
-* output[AdditionalContext].valueReference only Reference(SDOHCCObservationProgramEnrollmentStatus or SDOHCCObservationAssessment or SDOHCCObservationScreeningResponse or SDOHCCGoal or SDOHCCCondition or QuestionnaireResponse or CarePlan)
+* output[AdditionalContent].type = $SDOHCC-CodeSystemTemporaryCodes#additional-content
+* output[AdditionalContent].valueReference only Reference(SDOHCCObservationProgramEnrollmentStatus or SDOHCCObservationAssessment or SDOHCCObservationScreeningResponse or SDOHCCGoal or SDOHCCCondition or QuestionnaireResponse or CarePlan)
 
 * status from SDOHCCValueSetReferralTaskStatus (required)
