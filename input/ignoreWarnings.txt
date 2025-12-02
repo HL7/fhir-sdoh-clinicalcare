@@ -82,7 +82,7 @@ INFORMATION: Procedure/SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExa
 
 
 
-
+ 
 
 
 
@@ -99,7 +99,7 @@ INFORMATION: Resource: The resource Questionnaire/SDOHCC-QuestionnaireHungerVita
 INFORMATION: Resource: The resource Questionnaire/SDOHCC-QuestionnairePRAPARE could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 
 
-# INFORMATION: Current release is guidance only. Will look at creating a THO URL, or move to THO or VSAC in a future major release
+# INFORMATION: Currently migrating SDOHCC Category Value Set codes to US Core Category Value Set in THO. Other codes found in this Code System are guidance only. 
 INFORMATION: CodeSystem/SDOHCC-CodeSystemTemporaryCodes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 
@@ -113,3 +113,13 @@ INFORMATION: CodeSystem/SDOHCC-CodeSystemTemporaryCodes: CodeSystem: Most code s
 # INFORMATION: Conformance Language comments will be ignored in this version of the IG
 The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause
 The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause
+
+# WARNING: The Gravity SDOH Clinical Care IG is based on US Core 7.0.0. Considerations to move to US Core 8.0.0 were not made for this version of the guide, but will be for future versions
+The ImplementationGuide uses package hl7.fhir.us.core#7.0.0 released on 2024-05-08, but the most recent appropriate version is 8.0.0. This reference is getting old and the more recent version should be considered
+
+# ERROR: This error will be present until the publication team can address it. See this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458
+No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
+
+# ERROR: The Subscriptions backport IG was mistakenly release as FHIR 4.0.0 instead of 4.0.1. See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Subscriptions.20backport.20issue
+This IG is version 4.0.1, while the IG 'hl7.fhir.uv.subscriptions-backport.r4' is from version 4.0.0
+The ImplementationGuide is based on FHIR version 4.0.1 but package hl7.fhir.uv.subscriptions-backport.r4#1.1.0 is based on FHIR version 4.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try

@@ -3,7 +3,7 @@ title: SDOH Clinical Care
 version: 3.0.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: STU 3 Draft
+releaseLabel: STU 3 Ballot
 canonical: http://hl7.org/fhir/us/sdoh-clinicalcare
 FSHOnly: false
 applyExtensionMetadataToRoot: false
@@ -49,7 +49,7 @@ dependencies:
         id: sdc
         reason: |
             SDC is the basis for mapping QuestionnaireResponses to Observations and Conditions. SDC also provides guidance around how questionnaires can be created with support for score calculation, conditional behavior, specific rendering expectations, etc.
-    hl7.fhir.uv.subscriptions-backport:
+    hl7.fhir.uv.subscriptions-backport.r4:
         version: 1.1.0
         uri: http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport
         id: sdohsub
@@ -66,7 +66,7 @@ dependencies:
             This guide links out to concept maps published in Da Vinci HRex for Provider Role codes.
     us.nlm.vsac:
         uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
-        version: 0.23.0
+        version: 0.24.0
         id: vsac
         reason: |
             Gravity Project social risk data elements are published in Value Set Authority Center (VSAC) value sets. The value sets can be identified by searching for "The Gravity Project" steward. You will need to create a free National Library of Medicine (NLM) account to access the value sets. Value sets will be updated bi-annually on June 30th and December 31st.  
@@ -134,6 +134,8 @@ pages:
         title: STU2.2 Publication Changes
     stu2_3_update_changes.md:
         title: STU2.3 Publication Changes
+    stu3_ballot_changes.md:
+        title: STU3 Ballot Changes
     ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.md:
         title: SDOH Clinical Care ImplementationGuide Resource
         # FHIR_API_Examples.md:
@@ -355,6 +357,8 @@ menu:
         STU2.1 Update Changes: stu2_1_update_changes.html
         STU2.2 Update Changes: stu2_2_update_changes.html
         STU2.3 Update Changes: stu2_3_update_changes.html
+        STU3 Ballot Changes: stu3_ballot_changes.html
+
 
         
         

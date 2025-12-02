@@ -31,7 +31,6 @@ This IG Contains the following dependencies on other IGs.
 
 {{ ip-statement | remove: '<p>' | remove: '</p>'}}
 
-
 ### Parameter Settings
 
 The following [IG Parameters](https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters) are set for this Implementation Guide:
@@ -39,3 +38,9 @@ The following [IG Parameters](https://confluence.hl7.org/display/FHIR/Implementa
 {% for p in site.data.ig.definition.parameter %}
 - code: {{p.code}}<br/>value: {{p.value }}
 {%- endfor -%}
+
+### Expansion Parameters
+
+In HL7 FHIR, expansion parameters are special query parameters that you can pass to a ValueSet $expand operation to control and customize how the ValueSet is expanded (i.e., how the full list of codes/concepts is generated from the ValueSet definition). Gravity SDOH Clinical Care uses the following parameters.
+
+{% include expansion-params-en.xhtml %}
