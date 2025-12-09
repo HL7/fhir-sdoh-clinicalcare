@@ -1,7 +1,7 @@
-Instance: SDOHCC-TaskContextRichReferralWICExample
+Instance: SDOHCC-TaskContentRichReferralWICExample
 InstanceOf: SDOHCCTaskForReferralManagement
-Title: "SDOHCC Task Context Rich Referral WIC Example"
-Description: "An example of an SDOHCC Task For Referral Management that has uses Task.input to provide rich context about a WIC referral."
+Title: "SDOHCC Task Content Rich Referral WIC Example"
+Description: "An example of an SDOHCC Task For Referral Management that has uses Task.input to provide rich content about a WIC referral."
 Usage: #example
 * intent = #order
 * code = $task-code#fulfill "Fulfill the focal request"
@@ -9,11 +9,11 @@ Usage: #example
 * focus.reference = "ServiceRequest/SDOHCC-ServiceRequestActiveWICReferralExample"
 * for.reference = "Patient/SDOHCC-PatientBabyAbbas"
 * for.display = "BABY ABBAS"
-* authoredOn = "2020-09-11T21:56:54.671Z"
+* authoredOn = "2025-09-11T21:56:54.671Z"
 * requester.reference = "PractitionerRole/SDOHCC-PractitionerRoleDrJanWaterExample"
 * requester.display = "Dr Jan Water Family Medicine Physician"
 * owner.reference = "Organization/SDOHCC-OrganizationWICCommunityOrganizationExample"
-* owner.display = "WIC Community Organization"
+* owner.display = "Special Supplemental Nutrition Program for Women, Infants and Children (WIC) Office"
 * input[AdditionalContent][0].type = $SDOHCC-CodeSystemTemporaryCodes#additional-content
 * input[AdditionalContent][=].valueReference.reference = "Observation/SDOHCC-LabObservationLeadLevelExample"
 * input[AdditionalContent][=].valueReference.display = "Lead Level Lab Result"
@@ -79,8 +79,8 @@ Usage: #example
 * subject.reference = "Patient/SDOHCC-PatientBabyAbbas"
 * performer.reference = "Organization/SDOHCC-OrganizationWICCommunityOrganizationExample"
 * effectiveDateTime = "2025-05-21T21:56:54.671Z"
-* valueQuantity.value = 3.5
-* valueQuantity.unit = "mg/dL"
+* valueQuantity.value = .5
+* valueQuantity.unit = "µg/dL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * interpretation = $v3-ObsInterpretation#N "Normal"
 
@@ -142,7 +142,7 @@ Description: "An example organization representing a WIC community organization.
 Usage: #example
 
 * active = true
-* name = "WIC Community Organization"
+* name = "Special Supplemental Nutrition Program for Women, Infants and Children (WIC) Office"
 * telecom.system = #phone
 * telecom.value = "555-555-3000"
 * telecom.use = #work
