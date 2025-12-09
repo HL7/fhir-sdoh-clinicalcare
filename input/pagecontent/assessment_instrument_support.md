@@ -138,7 +138,7 @@ Table 2 below provides guidance for Questionnaire.code and Questionnaire.item fo
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
 <thead>
    <tr>
-      <th>Assesment Instrument Composition (what it compromises)</th>
+      <th>Assessment Instrument Composition (what it compromises)</th>
       <th>Example</th>
       <th>Guidance for Questionnaire</th>
    </tr>

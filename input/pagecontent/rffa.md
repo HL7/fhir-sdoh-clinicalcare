@@ -61,7 +61,7 @@ While the referring provider may use these assessment results to adjust the clin
 
 The following diagram illustrates the indirect referral pattern as one example of this flow, highlighting where the assessment-specific details fit into the established pattern.  While there are slight variations to adapt each of these flows, the general pattern is consistent. It is recognized that many CBOs may not have FHIR-enabled servers as depicted in this example. For exchanging a referral with a CBO that does not have a FHIR-enabled server, see the direct light and indirect light referral scenarios on the Referral Workflow page.
 
-{% include img.html img="ReferralforFurtherAssessmentWorkflow.jpg" caption="Figure 1: Referral for Further Assessment Workflow" %} 
+{% include img.html img="DetailedIndirectReferralForFurtherAssessment.png" caption="Figure 1: Referral for Further Assessment Workflow" %} 
 
 ### Technical Approach and FHIR Resources
 

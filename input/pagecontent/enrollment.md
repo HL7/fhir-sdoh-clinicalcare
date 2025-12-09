@@ -57,7 +57,7 @@ The following diagram illustrates the indirect referral pattern as one example o
 2. Enrollment Action (where appropriate): The CBO receives the referral and works to enroll the individual in the relevant program.
 3. Status Communication: If the CBO determines the person needs to be enrolled in a program, the CBO creates a new Enrollment Status Observation to represent the final enrollment status or updates an existing Enrollment Status Observation. To close the loop on the referral, the CBO updates the Task, pointing to the Enrollment Status Observation in Task.output.
 
-{% include img.html img="EnrollmentWorkflow.jpg" caption="Figure 1: Social Care Enrollment Workflow" %} 
+{% include img.html img="DetailedIndirectReferralWithEnrollment.png" caption="Figure 1: Social Care Enrollment Workflow" %} 
 
 
 #### Care Coordination

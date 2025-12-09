@@ -80,7 +80,7 @@ The loop is closed by the CBO updating the original Task on its own server and t
 
 The figure below shows a self-referral workflow. This workflow is nearly identical to the Direct Referral workflow described in this implementation guide. The primary difference is the Individual/Patient or an authorized representative of the individual is initiating the referral. It is also possible to implement the self-referral use case as a variation of the direct referral light workflow described in this guide. In the direct referral light scenario, the referral target (CBO) does not have a FHIR server and instead interacts with the FHIR server of the referral source via a FHIR-enable client application. See the [Referral Workflow](referral_workflow.html#actors-systems-and-icons) section of this guide for more information on the direct referral and direct referral light workflows.
 
-{% include img.html img="SelfReferralWorkflow.png" caption="Figure 1: Self-Referral Workflow" %} 
+{% include img.html img="DetailedSelfReferralReferral.png" caption="Figure 1: Self-Referral Workflow" %} 
 
 
 

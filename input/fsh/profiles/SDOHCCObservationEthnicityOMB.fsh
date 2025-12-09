@@ -2,7 +2,7 @@ Profile: SDOHCCObservationEthnicityOMB
 Parent: SDOHCCObservationPersonalCharacteristic
 Id: SDOHCC-ObservationEthnicityOMB
 Title: "SDOHCC Observation Ethnicity OMB"
-Description: "Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. For further details on this profile see [Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+Description: "Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. For further details on this profile see [Specifications for Personal Characteristics](specifications_for_personal_characteristics.html)."
 * ^status = #active
 * ^abstract = false
 * obeys SDOH-Ethnicity-1

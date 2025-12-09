@@ -2,7 +2,7 @@ Profile: SDOHCCObservationPersonalPronouns
 Parent: SDOHCCObservationPersonalCharacteristic
 Id: SDOHCC-ObservationPersonalPronouns
 Title: "SDOHCC Observation Personal Pronouns"
-Description: "Profile for observations about the pronouns and possessive adjectives a person wishes to be addressed by. For further details on this profile see [Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+Description: "Profile for observations about the pronouns and possessive adjectives a person wishes to be addressed by. For further details on this profile see [Specifications for Personal Characteristics](specifications_for_personal_characteristics.html)."
 * ^status = #active
 * ^abstract = false
 * . ^definition = "For observations about the pronouns and possessive adjectives a person wishes to be addressed by."

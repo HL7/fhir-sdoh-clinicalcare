@@ -79,7 +79,7 @@ Usage: #example
 * subject.reference = "Patient/SDOHCC-PatientBabyAbbas"
 * performer.reference = "Organization/SDOHCC-OrganizationWICCommunityOrganizationExample"
 * effectiveDateTime = "2025-05-21T21:56:54.671Z"
-* valueQuantity.value = .5
+* valueQuantity.value = 0.5
 * valueQuantity.unit = "µg/dL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * interpretation = $v3-ObsInterpretation#N "Normal"

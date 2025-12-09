@@ -2,7 +2,7 @@ Profile: SDOHCCObservationRecordedSexGender
 Parent: SDOHCCObservationPersonalCharacteristic
 Id: SDOHCC-ObservationRecordedSexGender
 Title: "SDOHCC Observation Recorded Sex Gender"
-Description: "Profile for observations about \"recorded sex and gender\" which, in the past, were often used interchangeably. In this context, sex is a biological construct and pertains to a person’s genetics, hormones, and anatomy. For further details on this profile see [Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+Description: "Profile for observations about \"recorded sex and gender\" which, in the past, were often used interchangeably. In this context, sex is a biological construct and pertains to a person’s genetics, hormones, and anatomy. For further details on this profile see [Specifications for Personal Characteristics](specifications_for_personal_characteristics.html)."
 
 * ^status = #active
 * ^abstract = false

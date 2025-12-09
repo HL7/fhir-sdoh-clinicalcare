@@ -169,7 +169,7 @@ Added CapabilityStatement
 * Exchange Workflow – added new workflow for Patient/Client and CBO applications (FHIR-34255) (FHIR-34256)
 * Synchronizing Applications with API Data Sources -- new (FHIR-34255)
 * FHIR Artifacts Overview – updated to refer to new or changed artifacts
-* [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)-- new (FHIR-34339)
+* [Draft Specifications for Personal Characteristics](specifications_for_personal_characteristics.html)-- new (FHIR-34339)
 
 
 

@@ -115,7 +115,7 @@ This IG contains a wealth of material targeting different audiences. Some sectio
 | Specifications | [FHIR Artifacts](artifacts.html) | An index of the FHIR artifacts defined as part of this implementation guide     |  Detailed Technical |
 | Specifications| [Must Support and Missing Data] | Conformance requirements for must support and missing data     |  Detailed Technical |
 | Specifications | [Privacy and Security] | Conformance requirements for privacy and security considerations     |  Detailed Technical |
-| Specifications | [Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html) | Observation profiles supporting Personal Characteristics     |  Detailed Technical |
+| Specifications | [Specifications for Personal Characteristics](specifications_for_personal_characteristics.html) | Observation profiles supporting Personal Characteristics     |  Detailed Technical |
 | Specifications | [Downloads](downloads.html) | Downloads     |  Detailed Technical |
 {:.grid}
 
@@ -126,7 +126,7 @@ This IG contains a wealth of material targeting different audiences. Some sectio
 * [Examples](artifacts.html#example-example-instances):  This IG provides contextually relevant examples of all profiles.
 * [Referral Workflow](referral_workflow.html):  The management of referrals by providers to community-based organizations with different levels of FHIR capability and the assignment of tasks to Patients is described in detail.
 
-* [Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html):   These profiles are included to test and promote their use and possible future incorporation into [US Core]({{site.data.fhir.ver.uscore}}/index.html).
+* [Specifications for Personal Characteristics](specifications_for_personal_characteristics.html):   These profiles are included to test and promote their use and possible future incorporation into [US Core]({{site.data.fhir.ver.uscore}}/index.html).
 
 -----------------------------------------------------------------------------------------------------
 [^1]: [Healthy People 2030](https://health.gov/healthypeople/priority-areas/social-determinants-health)

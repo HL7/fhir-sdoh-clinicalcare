@@ -1,6 +1,6 @@
 ### Background
 
-Collection of personal characteristics data (e.g., Race and Ethnicity (R/E), gender identity, sexual orientation, recorded sex and gender, and personal pronouns) is important to achieving the goal of health equity. For example, the recent [Cross-Industry Coalition Health Equity Pledge to Address Disparities](https://www.businesswire.com/news/home/20211026005241/en/Cross-Industry-Coalition-of-Health-Care-Organizations-Sign-Health-Equity-Pledge-to-Address-Disparities), and the proposed NCQA race/ethnicity stratification approach "Episode 9, from June 22, 2021,  [Future of HEDIS presentation](https://www.ncqa.org/wp-content/uploads/2021/11/Overview-Memo-Health-Equity-Accreditation-Plus.pdf?utm_medium=email&utm_campaign=publiccomment&utm_source=sf&utm_term=20211109) (see slides 15-25) both include a focus on the collection of Race & Ethnicity (R/E) data.
+Collection of personal characteristics data (e.g., Race and Ethnicity (R/E), gender identity, sexual orientation, recorded sex and gender, and personal pronouns) is important to achieving the goal of health equity. For example, the [Cross-Industry Coalition Health Equity Pledge to Address Disparities](https://www.businesswire.com/news/home/20211026005241/en/Cross-Industry-Coalition-of-Health-Care-Organizations-Sign-Health-Equity-Pledge-to-Address-Disparities), and the proposed NCQA race/ethnicity stratification approach "Episode 9", from June 22, 2021,  [Future of HEDIS presentation](https://www.ncqa.org/wp-content/uploads/2021/11/Overview-Memo-Health-Equity-Accreditation-Plus.pdf?utm_medium=email&utm_campaign=publiccomment&utm_source=sf&utm_term=20211109) (see slides 15-25) both include a focus on the collection of Race & Ethnicity (R/E) data.
 
 However, there are standards-based challenges for collection and exchange of personal characteristics data.  For example, some state insurance policies may require payers and/or providers to include R/E data in reporting and some states may require capturing the source (i.e., performer) and collection method for R/E data (e.g., the [Oregon Health Authority, Office of Equity and Inclusion Division 70, Race, Ethnicity, Language and Disability Demographic Data Collection Standards]( https://www.oregon.gov/oha/OEI/Policies/Race-Ethnicity-Language-Disability-Data-Collection-Standards.pdf) has rules and policy related to collection of R/E data.)
 
@@ -32,9 +32,9 @@ Value sets for the personal characteristics profiles are based on existing value
 
 The personal characteristic profiles adhere to the following consistent structure with respect to handling [null flavors](https://www.hl7.org/fhir/v3/NullFlavor/cs.html):
 
-* Race and Ethnicity – These profiles allow more than one `Observation.component.value` in order to allow race or ethnicity to be expressed with high-level codes, and/or more detailed level codes, and/or as a string. Null values (e.g., unknown, asked-declined, etc.) apply to all assertions about race or ethnicity regardless of granularity. For this reason, null values cannot be captured as part of individual components and are instead captured as a single element using `Observation.dataAbsentReason`. As a consequence, the value sets for `Observation.component.value`. have been modified to exclude null value concepts. Thus, for R/E, the value sets for `Observation.component.value` are the same as those defined in the [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) extensions with the exception that null flavors are represented using `Observation.dataAbsentReason`.
+* Race and Ethnicity – These profiles allow more than one `Observation.component.value` in order to allow race or ethnicity to be expressed with high-level codes, and/or more detailed level codes, and/or as a string. Null values (e.g., unknown, asked-declined, etc.) apply to all assertions about race or ethnicity regardless of granularity. For this reason, null values cannot be captured as part of individual components and are instead captured as a single element using `Observation.dataAbsentReason`. As a consequence, the value sets for `Observation.component.value` have been modified to exclude null value concepts. Thus, for R/E, the value sets for `Observation.component.value` are the same as those defined in the [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) extensions with the exception that null flavors are represented using `Observation.dataAbsentReason`.
 
-* Sexual Orientation, Gender Identity, Recorded Sex and Gender, Personal Pronouns - These profiles allow only one`Observation.value`. Therefore, null value concepts are allowed in the value set for `Observation.value`.
+* Sexual Orientation, Gender Identity, Recorded Sex and Gender, Personal Pronouns - These profiles allow only one `Observation.value`. Therefore, null value concepts are allowed in the value set for `Observation.value`.
 
 The value set for `Observation.method` may also change as feedback is solicited and/or according to policy (e.g., at the organizational, state, or federal level). For further detail on method, see Recommendations for Collection and Reporting of Personal Characteristics.
 
@@ -68,9 +68,8 @@ In situations where an individual (e.g., a parent, guardian, caregiver, etc.) ha
 
 There is a possibility that either or both the US Core Patient profile and Personal Characteristics observation profiles for race and ethnicity may have provenance associated with them.  Since the Provenance resource only points to the resource instance that it is supporting (target), there is no way to determine which elements (if any) have been changed.  We suggest that provenance should be used in conjunction with this IG to determine one of the following:
 
-​	the author organization responsible for the information, and
-
-​	the transmitter (e.g. provider, payer, etc.) that provided the information.
+- the author organization responsible for the information, and
+- the transmitter (e.g. provider, payer, etc.) that provided the information.
 
 Additional guidance is provided in the [US Core 3.1.1 Basic Provenance Guidance]({{site.data.fhir.ver.uscore}}/basic-provenance.html).
 

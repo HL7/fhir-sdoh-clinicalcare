@@ -120,7 +120,7 @@ pages:
         title: Privacy and Security
     artifacts.html:
         title: Artifacts Index
-    draft_specifications_for_personal_characteristics.md:
+    specifications_for_personal_characteristics.md:
         title: Specifications for Personal Characteristics
     downloads.md:
         title: Downloads
@@ -328,7 +328,7 @@ menu:
         Referral Workflow: referral_workflow.html
         Checking Task Status: checking_task_status.html
         Connecting Applications With API Data Sources: connecting_applications_with_api_data_sources.html
-        Specifications for Personal Characteristics: draft_specifications_for_personal_characteristics.html
+        Specifications for Personal Characteristics: specifications_for_personal_characteristics.html
         Gravity Project Value Sets: gravity_terminology.html
         Capacity Status: capacity.html
         Referral for Further Assessment: rffa.html

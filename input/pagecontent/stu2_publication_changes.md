@@ -50,7 +50,7 @@
 - [FHIR-35715](https://jira.hl7.org/browse/FHIR-35715)	Unclear what adhoc and adhocresponse are - please clarify
 - [FHIR-35370](https://jira.hl7.org/browse/FHIR-35370)	For `Observation.method` value set, add guidance related to use of "observed".
 - [FHIR-35375](https://jira.hl7.org/browse/FHIR-35375)	Add a challenge related to the sensitivity of SDOH data
-  - Updated the [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html) page and referenced artifacts
+  - Updated the [Draft Specifications for Personal Characteristics](specifications_for_personal_characteristics.html) page and referenced artifacts
 
 #### Value set changes
 

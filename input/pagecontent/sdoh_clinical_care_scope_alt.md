@@ -50,7 +50,7 @@ In the drawing above, each of the actors supports a set of roles that are descri
 <td>Patient
 <img src="Patient.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="Patient}">
 </td>
-<td><ul><li>Responds to screening questions and is assessed based on the responses and interaction with a provider</li><li>Discusses with provider and agrees to establihsing concerns/problems (Conditions) Goals</li><li>Consents to the sharing of their information</li><li>Completes additional feedback questionnaire(s) for providers</li></ul></td>
+<td><ul><li>Responds to screening questions and is assessed based on the responses and interaction with a provider</li><li>Discusses with provider and agrees to establishing concerns/problems (Conditions) Goals</li><li>Consents to the sharing of their information</li><li>Completes additional feedback questionnaire(s) for providers</li></ul></td>
 <td><ul><li><a href="https://www.hl7.org/fhir/questionnaire.html">Questionnaire</a></li><li><a href="https://www.hl7.org/fhir/questionnaireresponse.html">QuestionnaireResponse</a></li><li>
 <a href="StructureDefinition-SDOHCC-Condition.html">SDOHCC Condition</a></li><li> <a href="StructureDefinition-SDOHCC-ObservationAssessment.html">SDOHCC Observation Assessment</a></li><li><a href="StructureDefinition-SDOHCC-ObservationScreeningResponse.html">SDOHCC Observation Screening Response</a></li><li><a href="StructureDefinition-SDOHCC-TaskForPatient.html">SDOHCC Task for Patient</a></li></ul></td>
 </tr>

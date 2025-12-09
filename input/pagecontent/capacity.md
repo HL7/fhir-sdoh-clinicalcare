@@ -65,7 +65,7 @@ The diagram below shows a simplified view of the capacity status query workflow.
 
 The diagram below shows the capacity status query in the context of the indirect referral workflow. The orange highlighted section shows the capacity status query steps.
 
-{% include img.html img="CapacityStatusIndirect.png" caption="Figure 2: Capacity Status in an Indirect Referral" %} 
+{% include img.html img="DetailedIndirectPostReferralCapacityStatus.png" caption="Figure 2: Capacity Status in an Indirect Referral" %} 
 
 #### Post-Referral Capacity Status Notification Workflow
 
@@ -73,7 +73,7 @@ This workflow occurs when a CBO rejects an existing referral due to being at cap
 
 The diagram below shows the post-referral capacity status notification workflow.
 
-{% include img.html img="PostReferralCapacityStatusNotificationWorkflow.png" caption="Figure 3: Post-Referral Capacity Status Notification Workflow" %} 
+{% include img.html img="DetailedSelfReferralReferral.png" caption="Figure 3: Post-Referral Capacity Status Notification Workflow" %} 
 
 #### Capacity Status Query Light
 
