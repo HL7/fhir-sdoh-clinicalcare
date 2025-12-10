@@ -115,7 +115,7 @@ The html source contains the word 'SHOULD' but it is not in a text phrase marked
 The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause
 
 # WARNING: The Gravity SDOH Clinical Care IG is based on US Core 7.0.0. Considerations to move to US Core 8.0.0 were not made for this version of the guide, but will be for future versions
-The ImplementationGuide uses package hl7.fhir.us.core#7.0.0 released on 2024-05-08, but the most recent appropriate version is 8.0.0. This reference is getting old and the more recent version should be considered
+The ImplementationGuide uses package hl7.fhir.us.core#7.0.0 released on 2024-05-08, but the most recent appropriate version is 8.0.1. This reference is getting old and the more recent version should be considered
 
 # ERROR: This error will be present until the publication team can address it. See this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458
 No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'

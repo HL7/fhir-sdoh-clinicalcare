@@ -31,6 +31,11 @@ The Gravity Project team has drafted a new STU3 version of the IG for balloters 
 - Protective Factors
 
   - **Updated** [SDOHCC Condition] to include Protective Factors as a possible category code. Additional guidance is present in the profile as well on how to use Protective Factors
+
+- Personal Characteristics
+
+  - **Updated** [Specifications for Personal Characterstics](specifications_for_personal_characteristics.html) narrative updated out of Draft status
+  - **Updated** [SDOHCC Observation Personal Characteristic](StructureDefinition-SDOHCC-ObservationPersonalCharacteristic.html) Profile promoted out of Draft status. Other Personal Characteristic Profiles ([SDOHCC Observation Ethnicity OMB](StructureDefinition-SDOHCC-ObservationEthnicityOMB.html), [SDOHCC Observation Recorded Sex Gender](StructureDefinition-SDOHCC-ObservationRecordedSexGender.html), [SDOHCC Observation Gender Identity](StructureDefinition-SDOHCC-ObservationGenderIdentity.html), [SDOHCC Observation Personal Pronouns](StructureDefinition-SDOHCC-ObservationPersonalPronouns.html), [SDOHCC Observation Sexual Orientation](StructureDefinition-SDOHCC-ObservationSexualOrientation.html), [SDOHCC Observation Race OMB](StructureDefinition-SDOHCC-ObservationRaceOMB.html)) are also promoted out of Draft status
 </div>
 
 ### Overview

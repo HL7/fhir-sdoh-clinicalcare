@@ -12,10 +12,10 @@ The scope of this use case is to define the exchange of information regarding a 
 
 #### In Scope
 
-- **Direct Capacity Status Check**: This is a one-to-one query where a **Referral Source** or, more commonly, a **Coordinating Platform** queries a specific CBO about its capacity. This query may be repeated with multiple CBOs until one with available capacity is found, at which point the referral process is completed. This is the primary workflow supported in STU 3.0.
+- **Direct Capacity Status Inquiry**: This is a one-to-one query where a **Referral Source** or, more commonly, a **Coordinating Platform** queries a specific CBO about its capacity. This query may be repeated with multiple CBOs until one with available capacity is found, at which point the referral process is completed. The direct capacity status query use case does not share any identifying information about the individual.  If more information about the individual  is needed for the CBO to respond to a capacity inquiry, then a referral workflow should be used.
     - This workflow supports two primary types of capacity checks:
         - **Capacity to Assess**: Checking an organization's general availability to assess an individual for any health-related social need.
-        - **Program or Service-Specific Capacity**: Checking an organization's capacity to provide a specific service, such as assistance with a program application (e.g., SNAP, HUD), eligibility evaluation, or direct service provision. A “has capacity” response to a program or service-specific capacity status query does not guarantee eligibility or enrollment. Instead, “has capacity” means the referral target has capacity within a specific program or service pending confirmation that the individual meets eligibility criteria after the referral is made.
+        - **Program Specific Capacity**: Checking an organization's capacity to provide a specific service type (e.g. Food pantry, Gas assistance, Rapid rehousing) or specific program support (e.g. SNAP, WIC, etc.), A “has capacity” response to a program or service-specific capacity status query does not guarantee eligibility or enrollment. Instead, “has capacity” means the referral target has capacity within a specific program or service pending confirmation that the individual meets eligibility criteria after the referral is made.
 - **Post-Referral Capacity Status Notification**: A scenario where a CBO, after receiving a referral, communicates that it is unable to accept the patient because it is at capacity. This provides transparency and can support broader analysis of social care resource shortages in a community.
 
 #### Out of Scope
@@ -24,7 +24,7 @@ The following scenarios are out-of-scope at this time. This guide focuses on pro
 
 - **Bulk Capacity Status Check**: A "broadcast" or "Uber model" workflow where a Referral Source sends a single capacity request to multiple CBOs simultaneously and selects the first available respondent. This is out of scope for STU 3.0.
 - **Directory-Mediated Capacity Status Check**: A workflow where a Referral Source or Coordinating Platform checks for capacity within one or more centralized service provider directories. This is out of scope for STU 3.0.
-- **Contractual Capacity Reporting**: This use case does not cover high-level, aggregate capacity reporting that may occur as part of a contractual obligation between organizations (e.g., a quarterly report on service level agreements).
+- **Organizational Capacity Reporting**: This use case does not cover high-level, aggregate capacity reporting that may occur as part of a contractual obligation between organizations (e.g., a quarterly report on service level agreements).
 
 ### Actors and System Environments
 
@@ -51,7 +51,7 @@ The interactions between actors can occur in different system environments. This
 This workflow occurs before the initiation of a formal referral to a CBO. It is designed as a general query for service availability and assumes that no identifying information about the individual is exchanged. Consent workflows, as described elsewhere in this guide, are expected to take place *after* a successful capacity check when the formal referral is being prepared.
 
 1. **Referral Source Initiates an Indirect Referral**: The workflow begins when a **Referral Source** sends a referral to a **Coordinating Platform**, following the process described in the [Closed-Loop Referral Workflow](referral_workflow.html#referral-use-case-overview).
-2. **Coordinating Platform Searches for CBO Services and Capacity**: Upon receiving the referral, the **Coordinating Platform** searches for an appropriate **CBO** with the capacity to fulfill the request. Typically, the Coordinating Platform uses its own internal resource directory for this search. In the future, this step could be integrated with standards-based directories, such as the FaST National Directory for Healthcare Providers and Services. The platform queries one or more CBOs by performing a FHIR search on the [SDOHCC Healthcare Service for Referral Management](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html) resource.
+2. **Coordinating Platform Searches for CBO Services and Capacity**: Upon receiving the referral, the **Coordinating Platform** searches for an appropriate **CBO** with the capacity to fulfill the request. Typically, the Coordinating Platform uses its own internal resource directory for this search. In the future, this step could be integrated with standards-based directories, such as the FaST National Directory for Healthcare Providers and Services. The platform queries one or more CBOs by performing a FHIR search on the [SDOHCC Healthcare Service for Referral Management](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html) resource. For example, if the Coordinating Platform is looking for a CBO to assess an individual’s social care needs, they would query the selected CBO’s FHIR server(s) for HealthCareService’s that are categorized as “SDOH” and that have a type of “Assessment”.
 3. **CBO System Responds with Capacity Status**: The CBO system returns a Bundle containing [SDOHCC Healthcare Service for Referral Management](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html) resources that match the query criteria.
 - Each [SDOHCC Healthcare Service for Referral Management](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html) resource in the response **SHALL** indicate its current capacity status.
 - The capacity status can be one of the following: 'Has capacity', 'No capacity', or 'No capacity - waitlist available'.
@@ -65,7 +65,7 @@ The diagram below shows a simplified view of the capacity status query workflow.
 
 The diagram below shows the capacity status query in the context of the indirect referral workflow. The orange highlighted section shows the capacity status query steps.
 
-{% include img.html img="DetailedIndirectPostReferralCapacityStatus.png" caption="Figure 2: Capacity Status in an Indirect Referral" %} 
+{% include img.html img="DetailedIndirectPreReferralWithCapacityStatus.png" caption="Figure 2: Capacity Status in an Indirect Referral" %} 
 
 #### Post-Referral Capacity Status Notification Workflow
 
@@ -73,7 +73,7 @@ This workflow occurs when a CBO rejects an existing referral due to being at cap
 
 The diagram below shows the post-referral capacity status notification workflow.
 
-{% include img.html img="DetailedSelfReferralReferral.png" caption="Figure 3: Post-Referral Capacity Status Notification Workflow" %} 
+{% include img.html img="DetailedIndirectPostReferralCapacityStatus.png" caption="Figure 3: Post-Referral Capacity Status Notification Workflow" %} 
 
 #### Capacity Status Query Light
 
@@ -83,7 +83,7 @@ A “light” version of the Capacity Status Query where the referral source has
 
 ### FHIR Resources and Profiles
 
-This use case primarily leverages the [HealthcareService] resource, with [Task] being used in the post-referral scenario.
+This use case primarily leverages the [HealthcareService](https://hl7.org/fhir/R4/healthcareservice.html) resource, with [Task](https://hl7.org/fhir/R4/task.html) being used in the post-referral scenario.
 
 - **HealthcareService**: This use case leverages and extends the existing [SDOHCC HealthcareService](StructureDefinition-SDOHCC-HealthcareService.html) profile to advertise a CBO's services and their associated capacity.
     - **Purpose**: To describe a specific service offered by a CBO at a location, including details about programs it supports.
@@ -92,6 +92,6 @@ This use case primarily leverages the [HealthcareService] resource, with [Task] 
         - The `HealthcareService.program` element is used to associate the service with specific social care programs using a standard terminology value set.
         - The `HealthcareService.category` element is constrained with an SDOHCC slice to indicate the specific SDOH domain of the service (e.g., food-insecurity, housing-insecurity).
         - The `HealthcareService.type` element is profiled to differentiate between a service for "Capacity to Assess" and one for "Program or Service-Specific Capacity".
-        - The `HealthcareService.characteristic` element is used to provide more granular details about the service by pointing to specific terminology concepts.
+        <!-- - The `HealthcareService.characteristic` element is used to provide more granular details about the service by pointing to specific terminology concepts. -->
 - **Organization**: This resource is referenced by `HealthcareService.providedBy` to identify the CBO or other entity that provides the service.
 - **Task**: In the post-referral workflow, the `Task.status` element is used to communicate that a referral was rejected specifically due to the CBO being at capacity.

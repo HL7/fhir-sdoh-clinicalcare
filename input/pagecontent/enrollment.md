@@ -30,7 +30,7 @@ The systems involved in the exchange mirror those in the established referral wo
 
 - EHR System (Referral Source): The system used by the provider to manage patient care and initiate referrals.
 - CBO System (Referral Target): The system used by the CBO to manage referrals and service delivery.
-- Intermediary/Community Platform (CP): A system that facilitates communication and data exchange between the provider and CBO, particularly in indirect referral scenarios. For example, a Social Care Network (SCN), may play the role of the CP.
+- Intermediary/Community Platform (CP): A system that facilitates communication and data exchange between the provider and CBO, particularly in indirect referral scenarios. For example, a Social Care Network (SCN) may play the role of the CP.
 
 ### Scope
 
@@ -45,11 +45,11 @@ The internal business process of determining if an individual is eligible for a 
 
 ### Workflows
 
-There are two primary workflows that trigger the need to share enrollment status information. These workflows leverage the same exchange patterns (e.g., direct, indirect) described on the Referral Workflow page.
+There are two primary workflows that trigger the need to share enrollment status information. These workflows leverage the same exchange patterns (e.g., direct, indirect) described on the [Referral Workflow](referral_workflow.html) page.
 
 #### Referral-Triggered Workflow
 
-This workflow is initiated when a provider refers a patient to a CBO. The exchange of enrollment status information follows the exchange patterns (e.g., direct, indirect) described on the Referral Workflow page.
+This workflow is initiated when a provider refers a patient to a CBO. The exchange of enrollment status information follows the exchange patterns (e.g., direct, indirect) described on the [Referral Workflow](referral_workflow.html) page.
 
 The following diagram illustrates the indirect referral pattern as one example of this flow. It is also possible to exchange enrollment status observations in the context of the other referral patterns in this guide, including direct, direct light, and indirect light referral. Many CBOs may not have FHIR server capabilities; in this case, the indirect light or direct light referral exchange workflows could be used to exchange the Enrollment Status Observation.
 
@@ -78,7 +78,7 @@ The exchange of program enrollment status is primarily supported by the Observat
 
 #### Observation
 
-The SDOH CC Enrollment Status Observation profile is the primary resource used to convey an individual's enrollment status.
+The [SDOHCC Observation Program Enrollment Status](StructureDefinition-SDOHCC-ObservationProgramEnrollmentStatus.html) profile is the primary resource used to convey an individual's enrollment status.
 
 - Observation.code: This will point to a CodeableConcept representing the specific program (e.g. SNAP, WIC, etc.).
 - Observation.subject: This will reference the Patient resource for the individual.
@@ -87,7 +87,7 @@ The SDOH CC Enrollment Status Observation profile is the primary resource used t
     - Enrolled
     - Not enrolled
     - Not enrolled, on waitlist
-- Observation.note:  Used to capture additional information about the enrollment status such information about the waitlist (e.g. “The waitlist is currently 2 months long.  We will notify the individual when they are ready to be enrolled.”).
+- Observation.note:  Used to capture additional information about the enrollment status such as information about the waitlist (e.g. “The waitlist is currently 2 months long.  We will notify the individual when they are ready to be enrolled.”).
 
 #### Task and ServiceRequest
 

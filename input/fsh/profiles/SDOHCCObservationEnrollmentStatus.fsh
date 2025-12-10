@@ -22,13 +22,13 @@ Description: "For observations about an individual's enrollment status in a soci
 * category[SDOHCC] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to an observation. It is recommended that SDOH category codes be used to facilitate searching for SDOH observations."
 * category[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
 
-
 * code from http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312 (preferred)
 * value[x] 1..
 * value[x] from SDOHCC-ValueSetEnrollmentStatus (preferred)
 * value[x] ^requirements = "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations."
 * value[x] ^binding.description = "Codes for enrollment status"
 * focus only Reference(SDOHCCHealthcareService) 
+* effective[x] ^definition = "For program enrollment status, a single effective date indicates the date of program  enrollment and a period indicates the duration of the program enrollment."
 // * dataAbsentReason ..0
 // * method 1.. MS
 // * method from SDOHCCValueSetObservationMethod (extensible)

@@ -16,6 +16,7 @@ Description: "Defines constraints that represent the minimum requirement for per
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains $extension-Observation.subject named OtherSubject 0..1 MS
+* extension[OtherSubject] ^short = "Allows the observation to reference a Practitioner as the subject when the observation is about a practitioner rather than a patient."
 * extension[OtherSubject] ^requirements = "This extension is adding only US Core Practitioner as an option for Observation.subject. When the subject is Practitioner, personal characteristics should be based on the attestation and consent of the practitioner."
 * extension[OtherSubject] ^condition[0] = "SDOH-Obs-1"
 * extension[OtherSubject].value[x] 1..

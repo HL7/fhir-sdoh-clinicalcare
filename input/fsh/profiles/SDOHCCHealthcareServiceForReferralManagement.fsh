@@ -2,13 +2,15 @@ Profile: SDOHCCHealthcareServiceForReferralManagement
 Parent: SDOHCCHealthcareService
 Id: SDOHCC-HealthcareServiceForReferralManagement
 Title: "SDOHCC Healthcare Service for Referral Management"
-Description: "Profile that describes the means by which a healthcare service can be contacted."
+Description: "Profile that extends SDOHCC HealthcareService to support capacity status queries, allowing referral sources to determine if a CBO has capacity before initiating a referral. Includes the capacity-status extension and elements for describing services, programs, and contact information."
 * ^status = #active
+
 // TODO need short and definition?
 //* . ^short = "Group of SDOH patients for a payer"
 //* . ^definition = "For aggregation of individuals with a common set of characteristics (i.e., the same payer and and any condition in the specified SDOH categories) to enable organizations with the appropriate permissions to easily retrieve information related to the cohort of individuals for which they have a common responsibility."
+
 * extension contains
-    SDOHCC-ExtensionHealthcareServiceCapacityStatus named capacity-status 0..1
+    SDOHCC-ExtensionHealthcareServiceCapacityStatus named capacity-status 1..1
 * extension[capacity-status] ^short = "Is the service currently at capacity?"
 
 * category 1.. MS
@@ -22,8 +24,8 @@ Description: "Profile that describes the means by which a healthcare service can
 * category.coding[ServiceCategory] from SDOHCCValueSetServiceCategory (required)
 * category.coding[SDOHCC] from SDOHCCValueSetSDOHCategory (required)
 * category.coding[SDOHCC] ^short = "e.g., food-insecurity | transportation-insecurity"
-* category.coding[SDOHCC] ^definition = "An SDOH category assigned to the procedure."
-* category.coding[SDOHCC] ^requirements = "Allows for alternative encodings within a code system, and translations to other code systems.  \r\nCodes from this value set can be used to assign an SDOH category (e.g., food-insecurity, transportation-insecurity, etc.) to a procedure. It is recommended that SDOH category codes be used to facilitate searching for SDOH procedures that address SDOH conditions, observations, service requests, or goals."
+* category.coding[SDOHCC] ^definition = "An SDOH category assigned to the service."
+* category.coding[SDOHCC] ^requirements = "Allows for alternative encodings within a code system, and translations to other code systems.  \r\nCodes from this value set can be used to assign an SDOH category (e.g., food-insecurity, transportation-insecurity, etc.) to a service. It is recommended that SDOH category codes be used to facilitate searching for SDOH healthcare services."
 * category.coding[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
 
 * type 1..1 MS
