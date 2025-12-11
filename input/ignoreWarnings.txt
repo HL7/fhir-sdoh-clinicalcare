@@ -1,8 +1,7 @@
 == Suppressed Messages ==
 
 # WARNING: Reference Versioning
-There are multiple different potential matches for the url 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '7.0.0', found versions: 3.1.1, 6.1.0, 7.0.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' to 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0'
-
+There are multiple different potential matches for the url 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '7.0.0', found versions: 3.1.1 (from hl7.fhir.us.core#3.1.1), 6.1.0 (from hl7.fhir.us.core#6.1.0), 7.0.0 (from hl7.fhir.us.core#7.0.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' to 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0'
 
 # WARNING: Asserted Value Set canonicals are correct, not but not part of latest VSAC release
 ValueSet 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312' not found
@@ -123,3 +122,4 @@ No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureD
 # ERROR: The Subscriptions backport IG was mistakenly release as FHIR 4.0.0 instead of 4.0.1. See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Subscriptions.20backport.20issue
 This IG is version 4.0.1, while the IG 'hl7.fhir.uv.subscriptions-backport.r4' is from version 4.0.0
 The ImplementationGuide is based on FHIR version 4.0.1 but package hl7.fhir.uv.subscriptions-backport.r4#1.1.0 is based on FHIR version 4.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
+The canonical URL http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport doesn't point to an actual ImplementationGuide resource
