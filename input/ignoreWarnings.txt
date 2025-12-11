@@ -3,10 +3,6 @@
 # WARNING: Reference Versioning
 There are multiple different potential matches for the url 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '7.0.0', found versions: 3.1.1 (from hl7.fhir.us.core#3.1.1), 6.1.0 (from hl7.fhir.us.core#6.1.0), 7.0.0 (from hl7.fhir.us.core#7.0.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' to 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0'
 
-# WARNING: Asserted Value Set canonicals are correct, not but not part of latest VSAC release
-ValueSet 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312' not found
-A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312'
-A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.311'
 
 # WARNING: US Core Variance - https://jira.hl7.org/browse/FHIR-48706 - Variance renewal for SDOH Clinical Care Condition (Is based on US Core, but on a profile that does not exist in the latest US Core version)
 %US FHIR Usage rules require that all profiles on Condition derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process%
