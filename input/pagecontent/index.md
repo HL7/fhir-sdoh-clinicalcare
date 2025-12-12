@@ -1,4 +1,6 @@
 <div markdown="1" class="note-to-balloters">
+**NOTE: WE ARE ACTIVELY SEEKING FEEDBACK ON THE FHIR STRUCTURES AND NARRATIVE GUIDANCE SURROUNDING ALL OF OUR NEW ARTIFACTS, PARTICULARLY AROUND THE CAPACITY STATUS ([FHIR-53450](https://jira.hl7.org/browse/FHIR-53450)) AND ENROLLMENT STATUS ([FHIR-53446](https://jira.hl7.org/browse/FHIR-53446)) USE CASES. WE ENCOURAGE READERS TO REVIEW THE PROPOSED CHANGES AND SUBMIT BALLOT COMMENTS AGAINST THEM.**
+
 The Gravity Project team has drafted a new STU3 version of the IG for balloters to review and submit feedback. Below are the requirements that we have worked through for this ballot and the associated updates to the IG:
 
 - Capacity Status

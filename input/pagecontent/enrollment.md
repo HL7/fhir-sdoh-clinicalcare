@@ -1,5 +1,5 @@
 <div markdown="1" class="note-to-balloters">
-The Gravity Project team has created a new narrative page providing guidance on the Enrollment Status use case. We would encourage balloters to review this guidance and provide feedback.
+**NOTE: WE ARE ACTIVELY SEEKING FEEDBACK ON THE FHIR STRUCTURES AND NARRATIVE GUIDANCE SURROUNDING THE ENROLLMENT STATUS ([FHIR-53446](https://jira.hl7.org/browse/FHIR-53446)) USE CASE. WE ENCOURAGE READERS TO REVIEW THE PROPOSED CHANGES AND SUBMIT BALLOT COMMENTS AGAINST THEM.**
 </div>
 
 This page describes the use case, actors, systems, and information flows for sharing a patient's enrollment status in social care programs (e.g. SNAP). The exchange of this information is critical for effective care coordination, resource planning, and reducing administrative burden.

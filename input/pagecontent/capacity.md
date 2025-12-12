@@ -1,5 +1,5 @@
 <div markdown="1" class="note-to-balloters">
-The Gravity Project team has created a new narrative page providing guidance on the Capacity Status use case. We would encourage balloters to review this guidance and provide feedback.
+**WE ARE ACTIVELY SEEKING FEEDBACK ON THE FHIR STRUCTURES AND NARRATIVE GUIDANCE SURROUNDING THE CAPACITY STATUS ([FHIR-53450](https://jira.hl7.org/browse/FHIR-53450)) USE CASE. WE ENCOURAGE READERS TO REVIEW THE PROPOSED CHANGES AND SUBMIT BALLOT COMMENTS AGAINST THEM.**
 </div>
 
 This use case addresses the need for a referring entity to determine if a Community-Based Organization (CBO) has the capacity to accept a referral before the referral is formally sent. This "pre-flight" check aims to reduce the administrative burden on clinical staff and CBOs by preventing referrals to organizations that cannot currently provide services. It also improves care coordination by making all involved parties aware of a CBO's capacity status.
