@@ -54,7 +54,7 @@ The direct and indirect referral use cases described below are all preceded by a
 
 Figure 1 and the Table below show the high-level context of the referral use cases that are described in the sections that follow. For the Table, the “Exchanged” column shows data that could be exchanged at that step, and the “Aligns With” column shows data that is not exchanged in FHIR form but whose content typically corresponds with the listed FHIR profile(s). This only specifies the data that is exchanged, so systems are free to use any internal representation.
 
-The [Patient Coordination](referral_workflow.html#patient-coordination-workflow) Workflow shows some, but not all of the possible interactions with the patient. It provides a way for the provider, CP, or CBO to ask a patient to do something, and track whether they have done it and possibly the outcomes. In Figure 1 below, patient coordination is indicated by a red box on steps 9 and 12.
+The [Patient Coordination](patient_coordination_workflow.html#patient-coordination-workflow) Workflow shows some, but not all of the possible interactions with the patient. It provides a way for the provider, CP, or CBO to ask a patient to do something, and track whether they have done it and possibly the outcomes. In Figure 1 below, patient coordination is indicated by a red box on steps 9 and 12.
 
 {% include img.html img="HighLevelReferralContext.svg" caption="Figure 1: Referral Use Cases Context" %}
 
@@ -298,76 +298,6 @@ The intermediary **SHALL** support the following:
 3. The above system flows do not define the handling of all possible scenarios. Exchange scenarios may include refusing the referral, canceling the referral by either party, and error conditions that may occur when using RESTful exchanges.  It is up to each party to follow the current best practice in managing the state of the referral.
 4. The referral source **SHOULD** set the `Task.status` to “requested”. 
 5. The referral target **SHOULD** update `Task.status` as it moves through the workflow.
-
-### Patient Coordination Workflow
-This implementation guide supports additional interactions with a patient/client application (on a smartphone or portal) including:
-
-| Functional Use Case       |  `Task.code`            |  Description                         | Actors           |
-| ------------------------- | ----------------------- | ------------------------------------ | ---------------- |
-| [Complete Questionnaire Request](referral_workflow.html#complete-questionnaire-request)|  `complete-questionnaire` | Requesting party (e.g., provider, CBO, or CP) asks a patient to complete a questionnaire. This functionality can be used to assess social risks, inform service qualification or application, indicate reasons for cancellation, or determine the patient’s view of their interaction with the CBO and whether the service provided met their needs. | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |
-| [General Information Request](referral_workflow.html#general-information-request)|  `general-information-request` | Requesting party sends a patient a free text question and receives a free text response.  | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |
-| [Make Contact Request](referral_workflow.html#make-contact-request)|   `make-contact-directions` | Requesting party provides contact information for the CBO (in cases where the patient does not want the CBO to initiate contact). | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |
-| [Review Material Request](referral_workflow.html#review-material-request)|   `review-material` | Requesting party requests that the patient review a document (usually a PDF), video, etc. | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |
-{:.grid}
-
-In the examples below, it is assumed that the patient has been equipped with the patient application, and authenticated communication between the patient application and the requester has already been established.
-See [Connecting Applications with API Data Sources](connecting_applications_with_api_data_sources.html#patientclient-applications) for more details.  The referenced data instances are all in their completed state. In practice, they would move through the state transitions indicated, with the requester initializing their input fields, and the patient completing the output fields, and updating the status.
-
-#### Complete Questionnaire Request
-Here we provide a detailed view of an example interaction between a patient application and a requester (provider, CBO, or CP) for the completion of a questionnaire. The example shows one of the four ways the questionnaire can be transmitted and the response received from the patient.
-
-<object data="PatientQuestionnaire.svg" type="image/svg+xml"></object>
-<br>
-
-| #    | From |  Description | Instances involved |
-| ---  | ---- | ------------ | ------------------ |
-| 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientRiskQuestionnaireCompletedExample.html) |
-| 2 |  Patient  | Get Questionnaire, Questionnaire PDF, or Questionnaire URL | [Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)|
-| 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientRiskQuestionnaireCompletedExample.html) with status changed |
-| 4 |  Patient | Post Questionnaire Response or Document Reference with Filled Out PDF | [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) |
-| 5 |  Patient | Update Task (completed and .Output references QuestionnaireResponse) | [Patient Task](Task-SDOHCC-TaskPatientRiskQuestionnaireCompletedExample.html) with status changed |
-{:.grid}
-
-#### General Information Request
-Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO, or CP) for a general information request.  The example shows the patient returning an optional response.
-
-<object data="PatientInformation.svg" type="image/svg+xml"></object>
-<br>
-
-| #    | From |  Description | Instances involved |
-| ---  | ---- | ------------ | ------------------ |
-| 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientInformationRequestCompletedExample.html) |
-| 2 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientInformationRequestCompletedExample.html) with status changed |
-| 3 |  Patient | Update Task (completed and .Output.value includes text of response) | [Patient Task](Task-SDOHCC-TaskPatientInformationRequestCompletedExample.html) with status changed |
-{:.grid}
-
-#### Make Contact Request
-Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO, or CP) for providing one or more options from which to select to make contact with a service, provider or organization. The example shows the patient returning an optional response.
-
-<object data="PatientContact.svg" type="image/svg+xml"></object>
-<br>
-
-| #    | From |  Description | Instances involved |
-| ---  | ---- | ------------ | ------------------ |
-| 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) |
-| 2 |  Patient  | Get Contact | [HealthCareService](HealthcareService-SDOHCC-HealthcareServiceTelecomAppointmentExample.html) |
-| 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html)  with status changed |
-| 4 |  Patient | Update Task (completed and .Output includes chosen contact) | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) with status changed |
-{:.grid}
-
-#### Review Material Request
-Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO, or CP) for providing review material. 
-
-<object data="PatientReview.svg" type="image/svg+xml"></object>
-<br>
-
-| #    | From |  Description | Instances involved |
-| ---  | ---- | ------------ | ------------------ |
-| 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientReviewInformationCompletedExample.html) |
-| 2 |  Patient  | Get DocumentReference | [DocumentReference] |
-| 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientReviewInformationCompletedExample.html) with status changed |
-| 4 |  Patient | Update Task (completed) | [Patient Task](Task-SDOHCC-TaskPatientReviewInformationCompletedExample.html) with status changed |
-{:.grid}
 
 
 
