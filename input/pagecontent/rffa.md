@@ -2,9 +2,10 @@
 The Gravity Project team has created a new narrative page providing guidance on the Referral for Further Assessment use case. We would encourage balloters to review this guidance and provide feedback.
 </div>
 
-This page describes the use case, actors, systems, and information flows for referring an individual for a more comprehensive assessment of their health-related social needs (HRSN).
 
-### Goal
+### Overview
+
+This page describes the use case, actors, systems, and information flows for referring an individual for a more comprehensive assessment of their health-related social needs (HRSN).
 
 In many clinical situations, an initial screening may indicate the presence of one or more health-related social needs, but the clinical care team may not have the time, resources, or specialized skills to perform a deeper, more comprehensive assessment. The primary goal of this use case is to enable a healthcare provider or other entity (e.g. behavioral health or other non-healthcare entity) to refer an individual to a community-based organization (CBO) or another partner organization that is equipped to conduct a more thorough assessment.
 
@@ -16,6 +17,24 @@ This exchange is intended to:
 - Complement, not replace, existing workflows for referring a patient for specific services. A referral for further assessment can be initiated independently of, or in conjunction with, a referral for a specific service (e.g., provision of a meal).
 
 For example, a patient might screen positive for food insecurity. During the follow-up conversation, the healthcare provider suspects other needs may be present but lacks the capacity to investigate further. The provider can then send a "Referral for Further Assessment" to a trusted CBO to gain a more complete understanding of the individual's situation and identify appropriate services.
+
+
+### Scope
+
+#### In Scope
+
+- The process of sending a referral request for a further assessment of an individual's health-related social needs.
+- Support for both general and domain-specific assessment requests. For example:
+    - A general request, such as "Assessment of health and social care needs."
+    - A more specific request, such as "Assessment for food insecurity."
+- The communication of the assessment results back to the referring provider.
+
+#### Out of Scope
+
+- The specific clinical or business processes for how the CBO conducts the assessment.
+- Guidance on the authorization, contracting, or reimbursement workflows associated with conducting assessments.
+- The act of enrolling an individual into a program or providing the specific services identified during the assessment.
+
 
 ### Actors and Systems
 
@@ -35,23 +54,8 @@ The technology systems involved in the exchange mirror those in the established 
 - <b>CBO System (Referral Target)</b>: The system used by the CBO to receive and manage the assessment referral and document its results.
 - <b>Intermediary/Community Platform (CP)</b>: A system that facilitates communication and data exchange between the provider and CBO systems.
 
-### Scope
 
-#### In Scope
-
-- The process of sending a referral request for a further assessment of an individual's health-related social needs.
-- Support for both general and domain-specific assessment requests. For example:
-    - A general request, such as "Assessment of health and social care needs."
-    - A more specific request, such as "Assessment for food insecurity."
-- The communication of the assessment results back to the referring provider.
-
-#### Out of Scope
-
-- The specific clinical or business processes for how the CBO conducts the assessment.
-- Guidance on the authorization, contracting, or reimbursement workflows associated with conducting assessments.
-- The act of enrolling an individual into a program or providing the specific services identified during the assessment.
-
-### Workflows
+### Exchange Workflow
 
 The exchange flow for a referral for further assessment follows the exact same <b>closed-loop</b> direct, direct referral light, indirect, and indirect referral light patterns described on the Referral Workflow page. The core mechanics of creating a ServiceRequest and Task, sending the referral, and closing the loop by updating the Task remain unchanged.
 
@@ -63,11 +67,12 @@ The following diagram illustrates the indirect referral pattern as one example o
 
 {% include img.html img="DetailedIndirectReferralForFurtherAssessment.png" caption="Figure 1: Referral for Further Assessment Workflow" %} 
 
-### Technical Approach and FHIR Resources
+
+### FHIR Artifacts and Technical Guidance
 
 This use case employs the same core FHIR resources (ServiceRequest, Task) as other referral workflows. The key to implementing this use case is using specific elements within these resources to differentiate an assessment request and its corresponding results.
 
-Differentiating the Assessment Referral
+#### Differentiating the Assessment Referral
 
 Three key fields distinguish this referral:
 
