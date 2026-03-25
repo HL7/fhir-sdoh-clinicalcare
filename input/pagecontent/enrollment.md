@@ -2,15 +2,29 @@
 **NOTE: WE ARE ACTIVELY SEEKING FEEDBACK ON THE FHIR STRUCTURES AND NARRATIVE GUIDANCE SURROUNDING THE ENROLLMENT STATUS ([FHIR-53446](https://jira.hl7.org/browse/FHIR-53446)) USE CASE. WE ENCOURAGE READERS TO REVIEW THE PROPOSED CHANGES AND SUBMIT BALLOT COMMENTS AGAINST THEM.**
 </div>
 
-This page describes the use case, actors, systems, and information flows for sharing a patient's enrollment status in social care programs (e.g. SNAP). The exchange of this information is critical for effective care coordination, resource planning, and reducing administrative burden.
 
-### Goal
+### Overview
+
+This page describes the use case, actors, systems, and information flows for sharing a patient's enrollment status in social care programs (e.g. SNAP). The exchange of this information is critical for effective care coordination, resource planning, and reducing administrative burden.
 
 The primary goal of this use case is to enable healthcare providers and community-based organizations (CBOs) to share information about a person's or household’s enrollment status in social care programs. This exchange is intended to:
 
 - Improve care provision and coordination by making all involved parties aware of the programs a person is already receiving.
 - Reduce the administrative burden on providers who repeatedly need to investigate a patient's program enrollment status.
 - Help prevent the duplication of services that can occur when an individual is enrolled in multiple, similar programs.
+
+
+### Scope
+
+#### In Scope
+
+Sharing information about an individual's existing enrollment status in a social care program (e.g., enrolled, not enrolled, waitlisted).
+
+#### Out of Scope
+
+The determination of an individual's eligibility status for a program.
+The internal business process of determining if an individual is eligible for a program.
+
 
 ### Actors and Systems
 
@@ -24,6 +38,7 @@ The actors and systems involved in sharing program enrollment status are the sam
 
 **NOTE:**  An individual who is enrolled in a program may be the point person for a service intended for an entire household.
 
+
 #### Systems
 
 The systems involved in the exchange mirror those in the established referral workflows and may include:
@@ -32,18 +47,8 @@ The systems involved in the exchange mirror those in the established referral wo
 - CBO System (Referral Target): The system used by the CBO to manage referrals and service delivery.
 - Intermediary/Community Platform (CP): A system that facilitates communication and data exchange between the provider and CBO, particularly in indirect referral scenarios. For example, a Social Care Network (SCN) may play the role of the CP.
 
-### Scope
 
-#### In Scope
-
-Sharing information about an individual's existing enrollment status in a social care program (e.g., enrolled, not enrolled, waitlisted).
-
-#### Out of Scope
-
-The determination of an individual's eligibility status for a program.
-The internal business process of determining if an individual is eligible for a program.
-
-### Workflows
+### Exchange Workflows
 
 There are two primary workflows that trigger the need to share enrollment status information. These workflows leverage the same exchange patterns (e.g., direct, indirect) described on the [Referral Workflow](referral_workflow.html) page.
 
@@ -72,7 +77,8 @@ This can occur in at least three scenarios:
 
 The specific workflows for how, when, and with whom these observations are exchanged are beyond the scope of this guide. Exchanges may occur between social care organizations or between social and healthcare organizations, as appropriate. All sharing of information is assumed to be in compliance with established data security and privacy policies and regulations, and it is further assumed that the appropriate consents and authorizations are in place for the data to be shared. The Enrollment Status Observation is made available to the individual's care team to support coordinated care, for example, through a community information exchange (CIE) or direct secure messaging.
 
-### Technical Approach and FHIR Resources
+
+### FHIR Artifacts and Technical Guidance
 
 The exchange of program enrollment status is primarily supported by the Observation resource.
 
