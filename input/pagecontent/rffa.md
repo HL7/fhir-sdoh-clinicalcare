@@ -5,7 +5,7 @@ The Gravity Project team has created a new narrative page providing guidance on 
 
 ### Overview
 
-This page describes the use case, actors, systems, and information flows for referring an individual for a more comprehensive assessment of their health-related social needs (HRSN).
+This page describes the use case, actors, systems, and information flows for referring an individual for a more comprehensive assessment of their health-related social needs (HRSN). This initial referral aligns with the [Gravity Co-Design Care and Data Model](https://confluence.hl7.org/download/attachments/175606815/FINAL-Co-Design-Report-Gravity-Project-and-Civitas-Networks-for-Health.pdf?version=1&modificationDate=1707760787615&api=v2) and can create a data link establishing a treatment relationship with care partners in cross sector care environments and is intended to be an extensible pathway for combining service requests for care coordination and contracted services in future iterations.
 
 In many clinical situations, an initial screening may indicate the presence of one or more health-related social needs, but the clinical care team may not have the time, resources, or specialized skills to perform a deeper, more comprehensive assessment. The primary goal of this use case is to enable a healthcare provider or other entity (e.g. behavioral health or other non-healthcare entity) to refer an individual to a community-based organization (CBO) or another partner organization that is equipped to conduct a more thorough assessment.
 
