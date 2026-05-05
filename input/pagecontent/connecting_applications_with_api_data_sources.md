@@ -25,7 +25,7 @@ This section describes the initial connection of the Patient/Client application 
 Note: steps 3-5 are repeated for each referral source
 
 #### CBO Applications
-FHIR-enabled CBO Applications follow the [Direct Referral Light] or [Indirect Referral Light] use cases. This section describes the initial connection of the FHIR-enabled CBO application to the referral source (Provider or Coordinating Platform system).
+FHIR-enabled CBO Applications follow the [Direct Referral Light] or [Indirect Referral Light] use cases. This section describes the initial connection of the FHIR-enabled CBO application to the referral source (Provider or Coordination Platform system).
 
 1. Participating CBO applications are registered with the appropriate referral platforms (e.g., Epic, Unite US)
 2. Referral Source provides CBO (e.g., via a QR code) with a URL to the API that redirects to an authorization server

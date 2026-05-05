@@ -6,13 +6,15 @@ This use case addresses the need for a referring entity to determine if a Commun
 
 Once capacity is confirmed and a referral is initiated, implementers should follow the guidance outlined in the existing Closed-Loop Referral Workflow page.
 
+{% include capacity.svg %}
+
 ### Scope
 
 The scope of this use case is to define the exchange of information regarding a CBO's capacity to provide social care services. This implementation guide focuses specifically on the most direct and simple workflow to allow the community an opportunity to implement and provide feedback before addressing more complex scenarios.
 
 #### In Scope
 
-- **Direct Capacity Status Inquiry**: This is a one-to-one query where a **Referral Source** or, more commonly, a **Coordinating Platform** queries a specific CBO about its capacity. This query may be repeated with multiple CBOs until one with available capacity is found, at which point the referral process is completed. The direct capacity status query use case does not share any identifying information about the individual.  If more information about the individual  is needed for the CBO to respond to a capacity inquiry, then a referral workflow should be used.
+- **Direct Capacity Status Inquiry**: This is a one-to-one query where a **Referral Source** or, more commonly, a **Coordination Platform** queries a specific CBO about its capacity. This query may be repeated with multiple CBOs until one with available capacity is found, at which point the referral process is completed. The direct capacity status query use case does not share any identifying information about the individual.  If more information about the individual  is needed for the CBO to respond to a capacity inquiry, then a referral workflow should be used.
     - This workflow supports two primary types of capacity checks:
         - **Capacity to Assess**: Checking an organization's general availability to assess an individual for any health-related social need.
         - **Program Specific Capacity**: Checking an organization's capacity to provide a specific service type (e.g. Food pantry, Gas assistance, Rapid rehousing) or specific program support (e.g. SNAP, WIC, etc.), A “has capacity” response to a program or service-specific capacity status query does not guarantee eligibility or enrollment. Instead, “has capacity” means the referral target has capacity within a specific program or service pending confirmation that the individual meets eligibility criteria after the referral is made.
@@ -23,16 +25,16 @@ The scope of this use case is to define the exchange of information regarding a 
 The following scenarios are out-of-scope at this time. This guide focuses on providing guidance related to higher priority, in-scope scenarios. Out-of-scope scenarios may still be appropriate and useful in certain contexts and Gravity standards may still be used in some cases. The following scenarios are out-of-scope:
 
 - **Bulk Capacity Status Check**: A "broadcast" or "Uber model" workflow where a Referral Source sends a single capacity request to multiple CBOs simultaneously and selects the first available respondent. This is out of scope for STU 3.0.
-- **Directory-Mediated Capacity Status Check**: A workflow where a Referral Source or Coordinating Platform checks for capacity within one or more centralized service provider directories. This is out of scope for STU 3.0.
+- **Directory-Mediated Capacity Status Check**: A workflow where a Referral Source or Coordination Platform checks for capacity within one or more centralized service provider directories. This is out of scope for STU 3.0.
 - **Organizational Capacity Reporting**: This use case does not cover high-level, aggregate capacity reporting that may occur as part of a contractual obligation between organizations (e.g., a quarterly report on service level agreements).
 
 ### Actors and System Environments
 
 #### Actors
 
-This use case uses the existing actors defined in this Implementation Guide: **Referral Source**, **Coordinating Platform**, and **Community-Based Organization (CBO)**.
+This use case uses the existing actors defined in this Implementation Guide: **Referral Source**, **Coordination Platform**, and **Community-Based Organization (CBO)**.
 
-The most common scenario anticipated involves an indirect referral, where the **Referral Source** sends a referral to a **Coordinating Platform**. The **Coordinating Platform** then takes on the responsibility of checking for capacity with one or more **CBOs** before forwarding the referral.
+The most common scenario anticipated involves an indirect referral, where the **Referral Source** sends a referral to a **Coordination Platform**. The **Coordination Platform** then takes on the responsibility of checking for capacity with one or more **CBOs** before forwarding the referral.
 
 While less common, this guidance also supports the scenario where a **Referral Source** directly queries a **CBO** for its capacity status.
 
@@ -40,8 +42,8 @@ While less common, this guidance also supports the scenario where a **Referral S
 
 The interactions between actors can occur in different system environments. This IG is designed to support data exchange in **Open** and **Hybrid** systems.
 
-- **Closed System**: The Referral Source, Coordinating Platform, and CBO all use the same system or platform. In this environment, capacity status is generally known across all actors without the need for a standards-based exchange. Closed systems are **out of scope** for this guide.
-- **Open System**: The Referral Source, Coordinating Platform, and CBO each use disparate systems that cannot natively interoperate. To share information like capacity, a standards-based exchange using FHIR is required. Open systems are **in scope**.
+- **Closed System**: The Referral Source, Coordination Platform, and CBO all use the same system or platform. In this environment, capacity status is generally known across all actors without the need for a standards-based exchange. Closed systems are **out of scope** for this guide.
+- **Open System**: The Referral Source, Coordination Platform, and CBO each use disparate systems that cannot natively interoperate. To share information like capacity, a standards-based exchange using FHIR is required. Open systems are **in scope**.
 - **Hybrid System**: Some trading partners use the same system, while others use different systems. A standards-based exchange is still necessary to communicate capacity status across the disparate system boundaries. Hybrid systems are **in scope**.
 
 ### Exchange Flows
@@ -50,14 +52,14 @@ The interactions between actors can occur in different system environments. This
 
 This workflow occurs before the initiation of a formal referral to a CBO. It is designed as a general query for service availability and assumes that no identifying information about the individual is exchanged. Consent workflows, as described elsewhere in this guide, are expected to take place *after* a successful capacity check when the formal referral is being prepared.
 
-1. **Referral Source Initiates an Indirect Referral**: The workflow begins when a **Referral Source** sends a referral to a **Coordinating Platform**, following the process described in the [Closed-Loop Referral Workflow](referral_workflow.html#referral-use-case-overview).
-2. **Coordinating Platform Searches for CBO Services and Capacity**: Upon receiving the referral, the **Coordinating Platform** searches for an appropriate **CBO** with the capacity to fulfill the request. Typically, the Coordinating Platform uses its own internal resource directory for this search. In the future, this step could be integrated with standards-based directories, such as the FaST National Directory for Healthcare Providers and Services. The platform queries one or more CBOs by performing a FHIR search on the [SDOHCC Healthcare Service for Referral Management](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html) resource. For example, if the Coordinating Platform is looking for a CBO to assess an individual’s social care needs, they would query the selected CBO’s FHIR server(s) for HealthCareService’s that are categorized as “SDOH” and that have a type of “Assessment”.
+1. **Referral Source Initiates an Indirect Referral**: The workflow begins when a **Referral Source** sends a referral to a **Coordination Platform**, following the process described in the [Closed-Loop Referral Workflow](referral_workflow.html#referral-use-case-overview).
+2. **Coordination Platform Searches for CBO Services and Capacity**: Upon receiving the referral, the **Coordination Platform** searches for an appropriate **CBO** with the capacity to fulfill the request. Typically, the Coordination Platform uses its own internal resource directory for this search. In the future, this step could be integrated with standards-based directories, such as the FaST National Directory for Healthcare Providers and Services. The platform queries one or more CBOs by performing a FHIR search on the [SDOHCC Healthcare Service for Referral Management](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html) resource. For example, if the Coordination Platform is looking for a CBO to assess an individual’s social care needs, they would query the selected CBO’s FHIR server(s) for HealthCareService’s that are categorized as “SDOH” and that have a type of “Assessment”.
 3. **CBO System Responds with Capacity Status**: The CBO system returns a Bundle containing [SDOHCC Healthcare Service for Referral Management](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html) resources that match the query criteria.
 - Each [SDOHCC Healthcare Service for Referral Management](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html) resource in the response **SHALL** indicate its current capacity status.
 - The capacity status can be one of the following: 'Has capacity', 'No capacity', or 'No capacity - waitlist available'.
 - If a waitlist is available, the IG supports the ability to optionally include unstructured text to provide additional information about the waitlist (e.g. number of people on the waitlist, estimated wait time, etc.).
 **NOTE**: Responses to capacity status queries may be synchronous or asynchronous to the request. For example, some implementations may choose to set the capacity status values for the services they offer on a daily or weekly basis and then respond to all inbound capacity requests based on the daily or weekly status values. Other implementations may choose to notify a person each time a capacity status query happens so they can respond synchronously. 
-4. **Coordinating Platform Completes the Referral**: If the queried CBO has capacity, the **Coordinating Platform** forwards the referral to that **CBO**. If the CBO is at capacity, the Coordinating Platform repeats Steps 2 and 3 with other CBOs until a suitable partner is found. This completes the capacity-check portion of the workflow, and the process continues as described in the [Closed-Loop Referral Workflow](referral_workflow.html#referral-use-case-overview).
+4. **Coordination Platform Completes the Referral**: If the queried CBO has capacity, the **Coordination Platform** forwards the referral to that **CBO**. If the CBO is at capacity, the Coordination Platform repeats Steps 2 and 3 with other CBOs until a suitable partner is found. This completes the capacity-check portion of the workflow, and the process continues as described in the [Closed-Loop Referral Workflow](referral_workflow.html#referral-use-case-overview).
 
 The diagram below shows a simplified view of the capacity status query workflow.
 

@@ -72,7 +72,7 @@ In the drawing above, each of the actors supports a set of roles that are descri
 <td></td>
 </tr>
 <tr>
-<td>Community Based Organization(CBO) -  possibly via Coordinating Platform (CP)
+<td>Community Based Organization(CBO) -  possibly via Coordination Platform (CP)
 <img src="CBO.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="Patient}">
 <img src="CoordinationPlatform.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="Patient}"></td>
 <td><ul><li>Receives solicitation to complete referrals from provider</li><li>Retrieves referral and accepts or rejects solicitation</li><li>Delivers and records service requested by referral</li><li>Reports completion to referral source</li><li>Provides review material to patient</li><li>Solicits feedback from patient</li></ul></td>
