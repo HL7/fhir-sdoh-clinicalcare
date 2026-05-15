@@ -46,37 +46,37 @@
       "group": "Default",
       "title": "SDOHCC Observation Ethnicity OMB",
       "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicityOMB",
-      "description": "Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+      "description": "Profile for ethnicity observations that use Office of Management and Budget (OMB) ethnicity category codes and CDC ethnicity codes. This profile is intended for draft use only. For further details on this profile see [Draft Specifications for Personal Characteristics](specifications_for_personal_characteristics.html)."
     },
     {
       "group": "Default",
       "title": "SDOHCC Observation Gender Identity",
       "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationGenderIdentity",
-      "description": "Profile for gender identity observations which are based on a person’s inner sense of being a girl/woman/female/feminine, boy/man/male/masculine, nonbinary, something else, or having no gender. This profile is intended for draft use only. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+      "description": "Profile for gender identity observations which are based on a person’s inner sense of being a girl/woman/female/feminine, boy/man/male/masculine, nonbinary, something else, or having no gender. This profile is intended for draft use only. For further details on this profile see [Draft Specifications for Personal Characteristics](specifications_for_personal_characteristics.html)."
     },
     {
       "group": "Default",
       "title": "SDOHCC Observation Personal Characteristic",
       "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationPersonalCharacteristic",
-      "description": "Defines constraints that represent the minimum requirement for personal characteristic observations which are observations that are usually self-attested but may be attested to on behalf of the subject and are generally only verifiable by the source of attestation (e.g., race, ethnicity, sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex). This profile is intended for draft use only.  For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+      "description": "Defines constraints that represent the minimum requirement for personal characteristic observations which are observations that are usually self-attested but may be attested to on behalf of the subject and are generally only verifiable by the source of attestation (e.g., race, ethnicity, sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex). This profile is intended for draft use only.  For further details on this profile see [Draft Specifications for Personal Characteristics](specifications_for_personal_characteristics.html)."
     },
     {
       "group": "Default",
       "title": "SDOHCC Observation Personal Pronouns",
       "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationPersonalPronouns",
-      "description": "Profile for observations about the pronouns and possessive adjectives a person wishes to be addressed by. This profile is intended for draft use only.  For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+      "description": "Profile for observations about the pronouns and possessive adjectives a person wishes to be addressed by. This profile is intended for draft use only.  For further details on this profile see [Draft Specifications for Personal Characteristics](specifications_for_personal_characteristics.html)."
     },
     {
       "group": "Default",
       "title": "SDOHCC Observation Race OMB",
       "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRaceOMB",
-      "description": "Profile for race observations that use Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only.  For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+      "description": "Profile for race observations that use Office of Management and Budget (OMB) race category codes and CDC race codes. This profile is intended for draft use only.  For further details on this profile see [Draft Specifications for Personal Characteristics](specifications_for_personal_characteristics.html)."
     },
     {
       "group": "Default",
       "title": "SDOHCC Observation Recorded Sex Gender",
       "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationRecordedSexGender",
-      "description": "Profile for observations about \"recorded sex and gender\" which, in the past, were often used interchangeably. In this context, sex is a biological construct and pertains to a person’s genetics, hormones, and anatomy. This profile is intended for draft use only.  For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+      "description": "Profile for observations about \"recorded sex and gender\" which, in the past, were often used interchangeably. In this context, sex is a biological construct and pertains to a person’s genetics, hormones, and anatomy. This profile is intended for draft use only.  For further details on this profile see [Draft Specifications for Personal Characteristics](specifications_for_personal_characteristics.html)."
     },
     {
       "group": "Default",
@@ -88,7 +88,7 @@
       "group": "Default",
       "title": "SDOHCC Observation Sexual Orientation",
       "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationSexualOrientation",
-      "description": "Profile for observations about the sexual orientation of an individual. This profile is intended for draft use only. For further details on this profile see [Draft Specifications for Personal Characteristics](draft_specifications_for_personal_characteristics.html)."
+      "description": "Profile for observations about the sexual orientation of an individual. This profile is intended for draft use only. For further details on this profile see [Draft Specifications for Personal Characteristics](specifications_for_personal_characteristics.html)."
     },
     {
       "group": "Default",

@@ -12,7 +12,7 @@
   <workgroup key="as" webcode="as" name="Arden Syntax" listserv="ardensyntax@lists.HL7.org"/>
   <workgroup key="att" webcode="att" name="Attachments" deprecated="true"/>
   <workgroup key="brr" webcode="rcrim" name="Biomedical Research &amp;amp; Regulation" listserv="biomedrr@lists.HL7.org"/>
-  <workgroup key="cbcc" webcode="homehealth" name="Community-Based Care and Privacy" listserv="cbhs@lists.HL7.org/"/>
+  <workgroup key="cbcc" webcode="homehealth" name="Community-Based Care and Privacy" listserv="cbhs@lists.HL7.org/" deprecated="true"/>
   <workgroup key="cdamg" webcode="cdamanagement" name="CDA Management Group" listserv="cdamg@lists.HL7.org/"/>
   <workgroup key="cgit" webcode="ictc" name="Conformance" listserv="cgit@lists.HL7.org/"/>
   <workgroup key="cimi" webcode="cimi" name="CIMI" listserv="cimi@lists.HL7.org/"/>
@@ -22,7 +22,7 @@
   <workgroup key="cgp" webcode="cgp" name="Cross-Group Projects" listserv="cgp@lists.HL7.org/"/>
   <workgroup key="cqi" webcode="cqi" name="Clinical Quality Information" listserv="cqi@lists.HL7.org/"/>
   <workgroup key="dev" webcode="healthcaredevices" name="Devices" listserv="healthcaredevices@lists.HL7.org/"/>
-  <workgroup key="ec" webcode="ec" name="Emergency Care" listserv="emergencycare@lists.HL7.org/"/>
+  <workgroup key="ec" webcode="ec" name="Emergency Care" listserv="emergencycare@lists.HL7.org/" deprecated="true"/>
   <workgroup key="ehr" webcode="ehr" name="Electronic Health Record" listserv="ehr@lists.HL7.org/"/>
   <workgroup key="ex" webcode="ec" name="Executive Committee" listserv="emergencycare@lists.HL7.org/"/>
   <workgroup key="director" name="FHIR Director" listserv="fhir-director@hl7.org"/>
@@ -63,6 +63,10 @@
   <workgroup key="vocab" webcode="Vocab" name="Terminology Infrastructure" listserv="ti@lists.HL7.org/"/>
   <workgroup key="v2mg" webcode="v2management" name="V2 Mgmt Group" listserv="v2mgmtgrp@lists.HL7.org/"/>
   <workgroup key="eu" webcode="eu" name="HL7 Europe" listserv="europe@lists.hl7.org/"/>  
-  <workgroup key="au-v2" webcode="au-v2" name="HL7 Australia V2" listserv="hl7v2wgballot@hl7.com.au"/>
-  <workgroup key="au-fhir" webcode="au-fhir" name="HL7 Australia FHIR" listserv="fhirwgballot@hl7.com.au"/>
+  <workgroup key="au-v2" webcode="au-v2" name="HL7 Australia V2" listserv="hl7v2wg@hl7.com.au"/>
+  <workgroup key="au-fhir" webcode="au-fhir" name="HL7 Australia FHIR" listserv="fhirwg@hl7.com.au"/>
+  <workgroup key="au-tsc" webcode="au-tsc" name="HL7 Australia Technical Steering Committee" listserv="tsc@hl7.com.au"/>
+  <workgroup key="au-core" webcode="au-core" name="HL7 Australia AU Core" listserv="aucorewg@hl7.com.au"/>
+  <workgroup key="au-ereq" webcode="au-ereq" name="HL7 Australia AU eRequesting" listserv="auerequestwg@hl7.com.au"/>
+  <workgroup key="au-terminology" webcode="au-teminology" name="HL7 Australia Terminology" listserv="terminologywg@hl7.com.au"/>
 </workgroups>

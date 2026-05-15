@@ -1,6 +1,6 @@
 ### Conceptual Framework
 
-Coded SDOH content is captured across core health care activities: screening/assessment, establishing health concerns, goal setting, care planning, interventions, outcomes and reporting. The conceptual framework, illustrated below, shows how these activities form a cycle of care. Over time, a patient’s progress toward care goals can be tracked and measured.
+Coded Social determinants of health (SDOH) content is captured across core health care activities: screening/assessment, establishing health concerns, goal setting, care planning, interventions, outcomes and reporting. The conceptual framework, illustrated below, shows how these activities form a cycle of care. Over time, a patient’s progress toward care goals can be tracked and measured.
 {% include img.html img="ConceptualFramework-orig.jpeg" caption="Figure 1: Conceptual Framework" %}
 
 ### Scope of this IG

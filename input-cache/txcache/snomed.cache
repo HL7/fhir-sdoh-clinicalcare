@@ -1,2118 +1,95 @@
 -------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "733423003",
-  "display" : "Food insecurity"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "108252007",
+        "display" : "Laboratory procedure"
+      },
+      {
+        "code" : "363679005",
+        "display" : "Imaging"
+      },
+      {
+        "code" : "409063005",
+        "display" : "Counselling"
+      },
+      {
+        "code" : "409073007",
+        "display" : "Education"
+      },
+      {
+        "code" : "387713003",
+        "display" : "Surgical procedure"
+      }]
+    }]
+  }
 }}####
-v: {
-  "display" : "Food insecurity",
-  "code" : "733423003",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "733423003"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Food insecurity",
-  "code" : "733423003",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "severity" : "error",
-  "error" : "The provided code 'http://snomed.info/sct#733423003' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|3.1.1'",
-  "class" : "UNKNOWN",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome",
-  "issue" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
-      "valueUrl" : "http://tx.fhir.org/r4"
-    }],
-    "severity" : "error",
-    "code" : "code-invalid",
-    "details" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-        "code" : "not-in-vs"
-      }],
-      "text" : "The provided code 'http://snomed.info/sct#733423003' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|3.1.1'"
+e: {
+  "source" : tx.fhir.org,
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:4a99fb08-4a4e-4f54-b421-1e14e8e800ff",
+    "timestamp" : "2026-05-15T13:40:26.754Z",
+    "total" : 5,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "excludeNested",
+      "valueBoolean" : true
     },
-    "location" : ["Coding.code"],
-    "expression" : ["Coding.code"]
-  }]
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "733423003"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--1", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Food insecurity",
-  "code" : "733423003",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "32911000",
-  "display" : "Homeless"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Homeless",
-  "code" : "32911000",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "32911000"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Homeless",
-  "code" : "32911000",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "severity" : "error",
-  "error" : "The provided code 'http://snomed.info/sct#32911000' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|3.1.1'",
-  "class" : "UNKNOWN",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome",
-  "issue" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
-      "valueUrl" : "http://tx.fhir.org/r4"
-    }],
-    "severity" : "error",
-    "code" : "code-invalid",
-    "details" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-        "code" : "not-in-vs"
-      }],
-      "text" : "The provided code 'http://snomed.info/sct#32911000' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|3.1.1'"
+    {
+      "name" : "includeDefinition",
+      "valueBoolean" : false
     },
-    "location" : ["Coding.code"],
-    "expression" : ["Coding.code"]
-  }]
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "32911000"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--1", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Homeless",
-  "code" : "32911000",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "73438004",
-  "display" : "Unemployed"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Without employment",
-  "code" : "73438004",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "73438004"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Without employment",
-  "code" : "73438004",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "severity" : "error",
-  "error" : "The provided code 'http://snomed.info/sct#73438004' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|3.1.1'",
-  "class" : "UNKNOWN",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome",
-  "issue" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
-      "valueUrl" : "http://tx.fhir.org/r4"
-    }],
-    "severity" : "error",
-    "code" : "code-invalid",
-    "details" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-        "code" : "not-in-vs"
-      }],
-      "text" : "The provided code 'http://snomed.info/sct#73438004' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|3.1.1'"
+    {
+      "name" : "offset",
+      "valueInteger" : 0
     },
-    "location" : ["Coding.code"],
-    "expression" : ["Coding.code"]
-  }]
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "73438004"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--1", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Without employment",
-  "code" : "73438004",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "706689003",
-  "display" : "Application program software"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Application programme software",
-  "code" : "706689003",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "1078229009",
-  "display" : "Food security"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Food security (finding)",
-  "code" : "1078229009",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "1078229009"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "2.2.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Food security (finding)",
-  "code" : "1078229009",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "699653008",
-  "display" : "Inadequate oral food intake for physiological needs"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Inadequate oral food intake for physiological needs (finding)",
-  "code" : "699653008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "699653008"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "2.2.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Inadequate oral food intake for physiological needs (finding)",
-  "code" : "699653008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "160695008",
-  "display" : "Transport too expensive"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Transport financial problems",
-  "code" : "160695008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "160695008"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "2.2.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Transport financial problems",
-  "code" : "160695008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "446151000124109",
-  "display" : "Identifies as male gender"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Identifies as male gender (finding)",
-  "code" : "446151000124109",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "410606002",
-  "display" : "Social service procedure"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Social service procedure (procedure)",
-  "code" : "410606002",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "467771000124109",
-  "display" : "Assistance with application for food pantry program"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Assistance with application for food pantry program",
-  "code" : "467771000124109",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "467771000124109"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code--1", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Assistance with application for food pantry program",
-  "code" : "467771000124109",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "710925007",
-  "display" : "Provision of food"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Provision of food (procedure)",
-  "code" : "710925007",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "710925007"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code--1", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Provision of food (procedure)",
-  "code" : "710925007",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "467681000124101",
-  "display" : "Assistance with application for Summer Food Service Program"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Assistance with application for Summer Food Service Program",
-  "code" : "467681000124101",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "467681000124101"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code--1", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Assistance with application for Summer Food Service Program",
-  "code" : "467681000124101",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "467751000124104",
-  "display" : "Assistance with application for garden program"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Assistance with application for garden program (procedure)",
-  "code" : "467751000124104",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "467751000124104"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code--1", "version": "3.1.1", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Assistance with application for garden program (procedure)",
-  "code" : "467751000124104",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "733423003"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0", "version": "6.1.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Food insecurity",
-  "code" : "733423003",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "severity" : "error",
-  "error" : "The provided code 'http://snomed.info/sct#733423003' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|6.1.0'",
-  "class" : "UNKNOWN",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome",
-  "issue" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
-      "valueUrl" : "http://tx.fhir.org/r4"
-    }],
-    "severity" : "error",
-    "code" : "code-invalid",
-    "details" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-        "code" : "not-in-vs"
-      }],
-      "text" : "The provided code 'http://snomed.info/sct#733423003' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|6.1.0'"
+    {
+      "name" : "count",
+      "valueInteger" : 1000
     },
-    "location" : ["Coding.code"],
-    "expression" : ["Coding.code"]
-  }]
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "733423003"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--1", "version": "6.1.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Food insecurity",
-  "code" : "733423003",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "32911000"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0", "version": "6.1.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Homeless",
-  "code" : "32911000",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "severity" : "error",
-  "error" : "The provided code 'http://snomed.info/sct#32911000' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|6.1.0'",
-  "class" : "UNKNOWN",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome",
-  "issue" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
-      "valueUrl" : "http://tx.fhir.org/r4"
-    }],
-    "severity" : "error",
-    "code" : "code-invalid",
-    "details" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-        "code" : "not-in-vs"
-      }],
-      "text" : "The provided code 'http://snomed.info/sct#32911000' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|6.1.0'"
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901"
     },
-    "location" : ["Coding.code"],
-    "expression" : ["Coding.code"]
-  }]
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "32911000"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--1", "version": "6.1.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Homeless",
-  "code" : "32911000",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "73438004"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0", "version": "6.1.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Without employment",
-  "code" : "73438004",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "severity" : "error",
-  "error" : "The provided code 'http://snomed.info/sct#73438004' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|6.1.0'",
-  "class" : "UNKNOWN",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome",
-  "issue" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
-      "valueUrl" : "http://tx.fhir.org/r4"
+    {
+      "name" : "system-version",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
     }],
-    "severity" : "error",
-    "code" : "code-invalid",
-    "details" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-        "code" : "not-in-vs"
-      }],
-      "text" : "The provided code 'http://snomed.info/sct#73438004' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|6.1.0'"
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "108252007",
+      "display" : "Laboratory procedure"
     },
-    "location" : ["Coding.code"],
-    "expression" : ["Coding.code"]
-  }]
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "73438004"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--1", "version": "6.1.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Without employment",
-  "code" : "73438004",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "410606002"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category--1", "version": "6.1.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Social service procedure (procedure)",
-  "code" : "410606002",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "467771000124109"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code--1", "version": "6.1.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Assistance with application for food pantry program",
-  "code" : "467771000124109",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "710925007"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code--1", "version": "6.1.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Provision of food (procedure)",
-  "code" : "710925007",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "467681000124101"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code--1", "version": "6.1.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Assistance with application for Summer Food Service Program",
-  "code" : "467681000124101",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "467751000124104"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code--1", "version": "6.1.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Assistance with application for garden program (procedure)",
-  "code" : "467751000124104",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "733423003",
-  "display" : "Food insecurity"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Food insecurity",
-  "code" : "733423003",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "733423003"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0", "version": "6.1.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Food insecurity",
-  "code" : "733423003",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "severity" : "error",
-  "error" : "The provided code 'http://snomed.info/sct#733423003' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|6.1.0'",
-  "class" : "UNKNOWN",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome",
-  "issue" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
-      "valueUrl" : "http://tx.fhir.org/r4"
-    }],
-    "severity" : "error",
-    "code" : "code-invalid",
-    "details" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-        "code" : "not-in-vs"
-      }],
-      "text" : "The provided code 'http://snomed.info/sct#733423003' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|6.1.0'"
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "363679005",
+      "display" : "Imaging"
     },
-    "location" : ["Coding.code"],
-    "expression" : ["Coding.code"]
-  }]
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "733423003"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--1", "version": "6.1.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Food insecurity",
-  "code" : "733423003",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "32911000",
-  "display" : "Homeless"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Homeless",
-  "code" : "32911000",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "32911000"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0", "version": "6.1.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Homeless",
-  "code" : "32911000",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "severity" : "error",
-  "error" : "The provided code 'http://snomed.info/sct#32911000' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|6.1.0'",
-  "class" : "UNKNOWN",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome",
-  "issue" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
-      "valueUrl" : "http://tx.fhir.org/r4"
-    }],
-    "severity" : "error",
-    "code" : "code-invalid",
-    "details" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-        "code" : "not-in-vs"
-      }],
-      "text" : "The provided code 'http://snomed.info/sct#32911000' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|6.1.0'"
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "409063005",
+      "display" : "Counselling"
     },
-    "location" : ["Coding.code"],
-    "expression" : ["Coding.code"]
-  }]
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "32911000"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--1", "version": "6.1.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Homeless",
-  "code" : "32911000",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "73438004",
-  "display" : "Unemployed"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Without employment",
-  "code" : "73438004",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "73438004"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0", "version": "6.1.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Without employment",
-  "code" : "73438004",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "severity" : "error",
-  "error" : "The provided code 'http://snomed.info/sct#73438004' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|6.1.0'",
-  "class" : "UNKNOWN",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome",
-  "issue" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
-      "valueUrl" : "http://tx.fhir.org/r4"
-    }],
-    "severity" : "error",
-    "code" : "code-invalid",
-    "details" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-        "code" : "not-in-vs"
-      }],
-      "text" : "The provided code 'http://snomed.info/sct#73438004' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--0|6.1.0'"
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "409073007",
+      "display" : "Education"
     },
-    "location" : ["Coding.code"],
-    "expression" : ["Coding.code"]
-  }]
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "73438004"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code--1", "version": "6.1.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Without employment",
-  "code" : "73438004",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "706689003",
-  "display" : "Application program software"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Application programme software",
-  "code" : "706689003",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "1078229009",
-  "display" : "Food security"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Food security (finding)",
-  "code" : "1078229009",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "1078229009"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "2.2.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Food security (finding)",
-  "code" : "1078229009",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "699653008",
-  "display" : "Inadequate oral food intake for physiological needs"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Inadequate oral food intake for physiological needs (finding)",
-  "code" : "699653008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "699653008"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "2.2.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Inadequate oral food intake for physiological needs (finding)",
-  "code" : "699653008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "160695008",
-  "display" : "Transport too expensive"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Transport financial problems",
-  "code" : "160695008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "160695008"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "2.2.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Transport financial problems",
-  "code" : "160695008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "446151000124109",
-  "display" : "Identifies as male gender"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Identifies as male gender (finding)",
-  "code" : "446151000124109",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "410606002",
-  "display" : "Social service procedure"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Social service procedure (procedure)",
-  "code" : "410606002",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "410606002"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category--1", "version": "6.1.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Social service procedure (procedure)",
-  "code" : "410606002",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "467771000124109",
-  "display" : "Assistance with application for food pantry program"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Assistance with application for food pantry program",
-  "code" : "467771000124109",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "467771000124109"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code--1", "version": "6.1.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Assistance with application for food pantry program",
-  "code" : "467771000124109",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "710925007",
-  "display" : "Provision of food"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Provision of food (procedure)",
-  "code" : "710925007",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "710925007"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code--1", "version": "6.1.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Provision of food (procedure)",
-  "code" : "710925007",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "467681000124101",
-  "display" : "Assistance with application for Summer Food Service Program"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Assistance with application for Summer Food Service Program",
-  "code" : "467681000124101",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "467681000124101"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code--1", "version": "6.1.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Assistance with application for Summer Food Service Program",
-  "code" : "467681000124101",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "467751000124104",
-  "display" : "Assistance with application for garden program"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Assistance with application for garden program (procedure)",
-  "code" : "467751000124104",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "467751000124104"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code--1", "version": "6.1.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Assistance with application for garden program (procedure)",
-  "code" : "467751000124104",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "1078229009"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "3.0.0-draft", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Food security (finding)",
-  "code" : "1078229009",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "699653008"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "3.0.0-draft", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Inadequate oral food intake for physiological needs (finding)",
-  "code" : "699653008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "160695008"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "3.0.0-draft", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Transport financial problems",
-  "code" : "160695008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "1078229009"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description--0", "version": "6.1.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Food security (finding)",
-  "code" : "1078229009",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "1078229009"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description--0", "version": "7.0.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Food security (finding)",
-  "code" : "1078229009",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "699653008"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "2.3.0-draft", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Inadequate oral food intake for physiological needs (finding)",
-  "code" : "699653008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240901",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "160695008"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "2.3.0-draft", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  }]
-}}####
-v: {
-  "display" : "Transport financial problems",
-  "code" : "160695008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240901",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "706689003",
-  "display" : "Application program software"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "displayLanguage",
-    "valueCode" : "en-US"
-  }]
-}}####
-v: {
-  "display" : "Application programme software",
-  "code" : "706689003",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240901",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "1078229009",
-  "display" : "Food security"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "displayLanguage",
-    "valueCode" : "en-US"
-  }]
-}}####
-v: {
-  "display" : "Food security (finding)",
-  "code" : "1078229009",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240901",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "1078229009"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description--0", "version": "7.0.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "displayLanguage",
-    "valueCode" : "en-US"
-  }]
-}}####
-v: {
-  "display" : "Food security (finding)",
-  "code" : "1078229009",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240901",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "699653008",
-  "display" : "Inadequate oral food intake for physiological needs"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "displayLanguage",
-    "valueCode" : "en-US"
-  }]
-}}####
-v: {
-  "display" : "Inadequate oral food intake for physiological needs (finding)",
-  "code" : "699653008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240901",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "699653008"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "2.3.0-draft", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "displayLanguage",
-    "valueCode" : "en-US"
-  }]
-}}####
-v: {
-  "display" : "Inadequate oral food intake for physiological needs (finding)",
-  "code" : "699653008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240901",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "160695008",
-  "display" : "Transport too expensive"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "displayLanguage",
-    "valueCode" : "en-US"
-  }]
-}}####
-v: {
-  "display" : "Transport financial problems",
-  "code" : "160695008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240901",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "160695008"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "2.3.0-draft", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "displayLanguage",
-    "valueCode" : "en-US"
-  }]
-}}####
-v: {
-  "display" : "Transport financial problems",
-  "code" : "160695008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240901",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "62247001",
-  "display" : "Family medicine specialist (occupation)"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "displayLanguage",
-    "valueCode" : "en-US"
-  }]
-}}####
-v: {
-  "display" : "Family medicine specialist",
-  "code" : "62247001",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240901",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "410606002",
-  "display" : "Social service procedure"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "displayLanguage",
-    "valueCode" : "en-US"
-  }]
-}}####
-v: {
-  "display" : "Social service procedure (procedure)",
-  "code" : "410606002",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240901",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "410606002",
-  "display" : "Social service procedure"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "displayLanguage",
-    "valueCode" : "en-US"
-  }]
-}}####
-v: {
-  "display" : "Social service procedure (procedure)",
-  "code" : "410606002",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20240901",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "387713003",
+      "display" : "Surgical procedure"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : false, "valueSet" :{
@@ -2133,17 +110,17 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:bda40155-5a15-4a88-8b29-f416dbbcdd7d",
-    "timestamp" : "2025-02-24T03:47:19.504Z",
+    "identifier" : "urn:uuid:ecf9a787-458d-4f84-a03e-6f56ddffee03",
+    "timestamp" : "2026-05-15T13:40:26.961Z",
     "total" : 1,
     "offset" : 0,
     "parameter" : [{
-      "name" : "displayLanguage",
-      "valueCode" : "en-US"
-    },
-    {
       "name" : "excludeNested",
       "valueBoolean" : true
+    },
+    {
+      "name" : "includeDefinition",
+      "valueBoolean" : false
     },
     {
       "name" : "offset",
@@ -2155,11 +132,11 @@ e: {
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20240901"
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901"
     },
     {
-      "name" : "version",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20240901"
+      "name" : "system-version",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
@@ -2195,16 +172,16 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:96993ad3-6e37-4135-9d13-b97a5b75cc10",
-    "timestamp" : "2025-02-24T03:47:19.696Z",
+    "identifier" : "urn:uuid:274fbf67-63e2-4270-bee5-d02212ef2945",
+    "timestamp" : "2026-05-15T13:40:27.166Z",
     "offset" : 0,
     "parameter" : [{
-      "name" : "displayLanguage",
-      "valueCode" : "en-US"
-    },
-    {
       "name" : "excludeNested",
       "valueBoolean" : true
+    },
+    {
+      "name" : "includeDefinition",
+      "valueBoolean" : false
     },
     {
       "name" : "offset",
@@ -2216,16 +193,16 @@ e: {
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20240901"
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901"
     },
     {
-      "name" : "version",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20240901"
+      "name" : "system-version",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
       "code" : "404684003",
-      "display" : "Clinical finding (finding)"
+      "display" : "Clinical finding"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2340,7 +317,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "198007",
-      "display" : "Disease caused by Filoviridae (disorder)"
+      "display" : "Disease caused by Filoviridae"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2655,7 +632,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "496002",
-      "display" : "Closed traumatic dislocation of third cervical vertebra (disorder)"
+      "display" : "Closed traumatic dislocation of third cervical vertebra"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2710,7 +687,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "555002",
-      "display" : "Poisoning caused by Dicentra (disorder)"
+      "display" : "Dicentra poisoning"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2725,7 +702,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "586008",
-      "display" : "Contact dermatitis caused by Primula obconica (disorder)"
+      "display" : "Contact dermatitis caused by poison primrose"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2795,7 +772,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "646009",
-      "display" : "Idiopathic cyst of anterior chamber of eye (disorder)"
+      "display" : "Idiopathic cyst of anterior chamber of eye"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2845,7 +822,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "714002",
-      "display" : "Abrasion and/or friction burn of toe with infection (disorder)"
+      "display" : "Abrasion and/or friction burn of toe with infection"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2870,7 +847,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "750009",
-      "display" : "Schistosoma mansoni infection (disorder)"
+      "display" : "Schistosoma mansoni infection"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2886,11 +863,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "758002",
       "display" : "Cyst of uterus"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "775008",
-      "display" : "Open wound of head with complication"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3015,7 +987,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "862001",
-      "display" : "Anemia caused by chlorate (disorder)"
+      "display" : "Anaemia caused by chlorate"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3059,6 +1031,11 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "912005",
+      "display" : "Congenital stenosis of esophagus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "928000",
       "display" : "Disorder of musculoskeletal system"
     },
@@ -3091,11 +1068,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "962000",
       "display" : "Disability evaluation, disability 6%"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "964004",
-      "display" : "Open wound of pharynx without complication"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3145,7 +1117,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "1020003",
-      "display" : "Disease caused by Nairovirus (disorder)"
+      "display" : "Disease caused by Nairovirus"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3156,11 +1128,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "1027000",
       "display" : "Alkaline reflux disease"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "1031006",
-      "display" : "Open wound of trachea without complication"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3240,7 +1207,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "1107004",
-      "display" : "Early latent syphilis, positive serology, negative cerebrospinal fluid, with relapse after treatment (disorder)"
+      "display" : "Early latent syphilis, positive serology, negative cerebrospinal fluid, with relapse after treatment"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3559,13 +1526,8 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "1395008",
-      "display" : "Complication of ultrasound therapy"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "1402001",
-      "display" : "Fear (finding)"
+      "display" : "Frightened"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3615,7 +1577,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "1479009",
-      "display" : "20q partial trisomy (disorder)"
+      "display" : "20q partial trisomy"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3720,7 +1682,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "1551001",
-      "display" : "Osteomyelitis of femur (disorder)"
+      "display" : "Osteomyelitis of femur"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3816,11 +1778,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "1674008",
       "display" : "Juvenile epithelial corneal dystrophy"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "1679003",
-      "display" : "Arthritis associated with another disorder"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4060,7 +2017,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "1897008",
-      "display" : "Amsinckia poisoning (disorder)"
+      "display" : "Amsinckia poisoning"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4105,7 +2062,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "1959009",
-      "display" : "Poisoning caused by Encephalartos (disorder)"
+      "display" : "Encephalartos poisoning"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4294,11 +2251,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "2136001",
-      "display" : "Open wound of jaw with complication"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "2138000",
       "display" : "LSP - Left sacroposterior position"
     },
@@ -4346,11 +2298,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "2186007",
       "display" : "Compensated metabolic alkalosis"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "2198002",
-      "display" : "Visceral epilepsy"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4440,7 +2387,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "2268003",
-      "display" : "Victim of homosexual aggression (finding)"
+      "display" : "Victim of homosexual aggression"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4586,11 +2533,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "2418009",
       "display" : "Toxic effect of polyester fumes"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "2419001",
-      "display" : "Open wound of forehead with complication"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4845,7 +2787,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "2651006",
-      "display" : "Closed traumatic dislocation of elbow joint (disorder)"
+      "display" : "Closed traumatic dislocation of elbow joint"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5196,11 +3138,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "3009006",
       "display" : "Solanum malacoxylon poisoning"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "3013004",
-      "display" : "Open wound of ear drum without complication"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5590,7 +3527,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "3421000",
-      "display" : "Open fracture of orbital floor (blow-out)"
+      "display" : "Open blow-out fracture of orbital floor"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5880,7 +3817,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "3657001",
-      "display" : "Osteospermum poisoning (disorder)"
+      "display" : "Osteospermum poisoning"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6305,7 +4242,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "4136000",
-      "display" : "Macrodactyly of toe (disorder)"
+      "display" : "Macrodactyly of toe"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6549,11 +4486,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "4367009",
-      "display" : "Hoover's sign"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "4373005",
       "display" : "Hippocratic nails"
     },
@@ -6750,7 +4682,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "4522001",
-      "display" : "Dental plaque on tooth (disorder)"
+      "display" : "Dental plaque on tooth"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6816,11 +4748,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "4575002",
       "display" : "Acute hyponatremia"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "4586000",
-      "display" : "Complication of internal fixation device"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6910,7 +4837,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "4690009",
-      "display" : "Metabolic acidosis caused by paraldehyde (disorder)"
+      "display" : "Metabolic acidosis caused by paraldehyde"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7221,6 +5148,56 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "4996001",
       "display" : "Hypophosphatemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4997005",
+      "display" : "Thyrotoxicosis factitia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4998000",
+      "display" : "Acute obstructive appendicitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5002000",
+      "display" : "Inhalant dependence"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5006002",
+      "display" : "Organ or tissue vascular perfusion decreased"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5018006",
+      "display" : "Infection by Probstmayria"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5028002",
+      "display" : "Acute pansinusitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5029005",
+      "display" : "Acquired short Achilles tendon"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5033003",
+      "display" : "Absent excretory function"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5036006",
+      "display" : "Hypogonadal obesity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5049001",
+      "display" : "Abnormal angle of erection"
     }]
   }
 },
@@ -7251,16 +5228,16 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:dd033e88-0d29-4d8c-81cf-fe2491482858",
-    "timestamp" : "2025-02-24T03:47:20.654Z",
+    "identifier" : "urn:uuid:465e9735-e7cc-4710-a888-85b020bf895d",
+    "timestamp" : "2026-05-15T13:40:27.534Z",
     "offset" : 0,
     "parameter" : [{
-      "name" : "displayLanguage",
-      "valueCode" : "en-US"
-    },
-    {
       "name" : "excludeNested",
       "valueBoolean" : true
+    },
+    {
+      "name" : "includeDefinition",
+      "valueBoolean" : false
     },
     {
       "name" : "offset",
@@ -7272,11 +5249,11 @@ e: {
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20240901"
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901"
     },
     {
-      "name" : "version",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20240901"
+      "name" : "system-version",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
@@ -7481,7 +5458,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "117084002",
-      "display" : "Rabies immune globulin, human, issued"
+      "display" : "Human rabies immune globulin issued"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7726,7 +5703,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "135879003",
-      "display" : "H/O: dislocated shoulder"
+      "display" : "History of dislocated shoulder"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7796,12 +5773,12 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "160250007",
-      "display" : "No family history of malignancy (situation)"
+      "display" : "No family history of malignancy"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "160252004",
-      "display" : "No family history of cardiovascular accident or stroke (situation)"
+      "display" : "No family history of cardiovascular accident or stroke"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7811,32 +5788,32 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "160254003",
-      "display" : "No history of cardiovascular system disease (situation)"
+      "display" : "No history of cardiovascular system disease"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "160255002",
-      "display" : "No history of gastrointestinal tract disease (situation)"
+      "display" : "No history of gastrointestinal tract disease"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "160256001",
-      "display" : "No history of genitourinary tract disease (situation)"
+      "display" : "No history of genitourinary tract disease"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "160257005",
-      "display" : "No history of central nervous system disease (situation)"
+      "display" : "No history of central nervous system disease"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "160258000",
-      "display" : "No history of respiratory system disease (situation)"
+      "display" : "No history of respiratory system disease"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "160259008",
-      "display" : "No history of psychiatric disorder (situation)"
+      "display" : "No history of psychiatric disorder"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -7911,7 +5888,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "160290005",
-      "display" : "Family history of neoplasm of male genital organ (situation)"
+      "display" : "Family history of neoplasm of male genital organ"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8156,7 +6133,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "160378006",
-      "display" : "Family history: Occupational lung disease (situation)"
+      "display" : "Family history: Occupational lung disease"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8306,7 +6283,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "160425006",
-      "display" : "Family history of chromosomal anomaly (situation)"
+      "display" : "Family history of chromosomal anomaly"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8621,7 +6598,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161416007",
-      "display" : "History of malaria (situation)"
+      "display" : "History of malaria"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8631,7 +6608,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161419000",
-      "display" : "H/O: measles"
+      "display" : "History of measles"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8666,7 +6643,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161436008",
-      "display" : "History of leukemia (situation)"
+      "display" : "History of leukemia"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8711,7 +6688,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161457000",
-      "display" : "History of anemia vitamin B12 deficient (situation)"
+      "display" : "History of anemia vitamin B12 deficient"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8881,7 +6858,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161508001",
-      "display" : "History of deep vein thrombosis (situation)"
+      "display" : "History of deep vein thrombosis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8891,7 +6868,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161511000",
-      "display" : "History of transient ischemic attack (situation)"
+      "display" : "History of transient ischemic attack"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8911,7 +6888,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161515009",
-      "display" : "History of subarachnoid hemorrhage (situation)"
+      "display" : "History of subarachnoid hemorrhage"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8926,7 +6903,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161525004",
-      "display" : "History of pneumonia (situation)"
+      "display" : "History of pneumonia"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9091,7 +7068,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161577005",
-      "display" : "History of congenital dislocation of hip (situation)"
+      "display" : "History of congenital dislocation of hip"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9106,12 +7083,12 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161581005",
-      "display" : "History of birth asphyxia (situation)"
+      "display" : "History of birth asphyxia"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "161582003",
-      "display" : "History of hemolytic disease (situation)"
+      "display" : "History of hemolytic disease"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9121,17 +7098,17 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161584002",
-      "display" : "History of perinatal cerebral irritability (situation)"
+      "display" : "History of perinatal cerebral irritability"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "161586000",
-      "display" : "History of injury (situation)"
+      "display" : "History of injury"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "161587009",
-      "display" : "History of head injury (situation)"
+      "display" : "History of head injury"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9151,7 +7128,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161615003",
-      "display" : "History of surgery (situation)"
+      "display" : "History of surgery"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9291,7 +7268,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161664006",
-      "display" : "History of blood transfusion (situation)"
+      "display" : "History of blood transfusion"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9456,7 +7433,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161769009",
-      "display" : "History of being infant bottle fed (situation)"
+      "display" : "History of being infant bottle fed"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9466,7 +7443,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161773007",
-      "display" : "History of intrauterine contraceptive device usage (situation)"
+      "display" : "History of intrauterine contraceptive device usage"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9521,7 +7498,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161792009",
-      "display" : "History of recurrent vaginal discharge (situation)"
+      "display" : "History of recurrent vaginal discharge"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9886,7 +7863,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "162572001",
-      "display" : "Suspected malignancy"
+      "display" : "Suspected cancer"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -9895,23 +7872,8 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "162591001",
-      "display" : "Suspected drug abuse"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "162592008",
-      "display" : "Suspected abuse soft drugs"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "162593003",
-      "display" : "Suspected abuse hard drugs"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "162594009",
-      "display" : "Suspected deafness"
+      "display" : "Deafness suspected"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -10495,16 +8457,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "168286009",
-      "display" : "Eye swab sent for C/S"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "168287000",
-      "display" : "Eye swab for virology"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "168302007",
       "display" : "Sputum sent for C/S"
     },
@@ -10571,37 +8523,37 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "168430006",
-      "display" : "Cervical smear: repeat 1 month (situation)"
+      "display" : "Cervical smear: repeat 1 month"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "168431005",
-      "display" : "Cervical smear: repeat 3 months (situation)"
+      "display" : "Cervical smear: repeat 3 months"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "168432003",
-      "display" : "Cervical smear: repeat 4 months (situation)"
+      "display" : "Cervical smear: repeat 4 months"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "168433008",
-      "display" : "Cervical smear: repeat 6 months (situation)"
+      "display" : "Cervical smear: repeat 6 months"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "168434002",
-      "display" : "Cervical smear: repeat 9 months (situation)"
+      "display" : "Cervical smear: repeat 9 months"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "168435001",
-      "display" : "Cervical smear: repeat 12 months (situation)"
+      "display" : "Cervical smear: repeat 12 months"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "168436000",
-      "display" : "Cervical smear: colposcopy needed (situation)"
+      "display" : "Cervical smear: colposcopy needed"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -10671,17 +8623,12 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "168755004",
-      "display" : "Erect plain X-ray of abdomen requested (situation)"
+      "display" : "Erect plain X-ray of abdomen requested"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "168795002",
       "display" : "Myelography requested"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "168806001",
-      "display" : "Bronchography requested"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -10712,16 +8659,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "168855005",
       "display" : "Cystography requested"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "168878004",
-      "display" : "Placentography requested"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "168885000",
-      "display" : "Hysterosalpingogram requested"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -10771,12 +8708,12 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "169063004",
-      "display" : "Computed tomography requested (situation)"
+      "display" : "Computed tomography requested"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "169081001",
-      "display" : "Magnetic resonance imaging requested (situation)"
+      "display" : "Magnetic resonance imaging requested"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -10811,7 +8748,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "169516008",
-      "display" : "\"Morning after\" intrauterine contraceptive device fitted"
+      "display" : "Post-coital IUD fitted"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -10826,12 +8763,12 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "169578003",
-      "display" : "Antenatal care: obstetric risk (situation)"
+      "display" : "Antenatal care: obstetric risk"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "169579006",
-      "display" : "Antenatal care: uncertain dates (situation)"
+      "display" : "Antenatal care: uncertain dates"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -10841,47 +8778,47 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "169582001",
-      "display" : "Antenatal care: history of stillbirth (situation)"
+      "display" : "Antenatal care: history of stillbirth"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "169583006",
-      "display" : "Antenatal care: history of perinatal death (situation)"
+      "display" : "Antenatal care: history of perinatal death"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "169584000",
-      "display" : "Antenatal care: poor obstetric history (situation)"
+      "display" : "Antenatal care: poor obstetric history"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "169585004",
-      "display" : "Antenatal care: history of trophoblastic disease (situation)"
+      "display" : "Antenatal care: history of trophoblastic disease"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "169587007",
-      "display" : "Antenatal care: precious pregnancy (situation)"
+      "display" : "Antenatal care: precious pregnancy"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "169588002",
-      "display" : "Antenatal care: elderly primiparous (situation)"
+      "display" : "Antenatal care: elderly primiparous"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "169589005",
-      "display" : "Antenatal care: history of infertility (situation)"
+      "display" : "Antenatal care: history of infertility"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "169591002",
-      "display" : "Antenatal care: social risk (situation)"
+      "display" : "Antenatal care: social risk"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "169592009",
-      "display" : "Antenatal care: poor home conditions (situation)"
+      "display" : "Antenatal care: poor home conditions"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -10896,27 +8833,27 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "169595006",
-      "display" : "Antenatal care: history of child abuse (situation)"
+      "display" : "Antenatal care: history of child abuse"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "169597003",
-      "display" : "Antenatal care: medical risk (situation)"
+      "display" : "Antenatal care: medical risk"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "169598008",
-      "display" : "Antenatal care: gynecological risk (situation)"
+      "display" : "Antenatal care: gynaecological risk"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "169604006",
-      "display" : "Antenatal care: primiparous, older than 30 years (situation)"
+      "display" : "Antenatal care: primiparous, older than 30 years"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "169605007",
-      "display" : "Antenatal care: multiparous, older than 35 years (situation)"
+      "display" : "Antenatal care: multiparous, older than 35 years"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -10951,12 +8888,12 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "169649009",
-      "display" : "Antenatal amniocentesis - not wanted (situation)"
+      "display" : "Antenatal amniocentesis - not wanted"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "169660000",
-      "display" : "Antenatal ultrasound scan not wanted (situation)"
+      "display" : "Antenatal ultrasound scan not wanted"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -11051,7 +8988,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "170170009",
-      "display" : "10 year examination not wanted (situation)"
+      "display" : "10 year examination not wanted"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -11111,12 +9048,12 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "170429001",
-      "display" : "Second Haemophilus influenzae type b and diphtheria, tetanus and pertussis vaccine given (situation)"
+      "display" : "2nd Hib and DTP vaccine given"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "170430006",
-      "display" : "Third Haemophilus influenzae type b and diphtheria, tetanus and pertussis vaccine given (situation)"
+      "display" : "Third Haemophilus influenzae type b and diphtheria, tetanus and pertussis vaccine given"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -11131,17 +9068,17 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "170586008",
-      "display" : "Treatment for hypertension started (situation)"
+      "display" : "Treatment for hypertension started"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "170587004",
-      "display" : "Hypertensive treatment changed (situation)"
+      "display" : "Hypertensive treatment changed"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "170588009",
-      "display" : "Treatment for hypertension stopped (situation)"
+      "display" : "Treatment for hypertension stopped"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -11151,17 +9088,17 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "170618007",
-      "display" : "Respiratory treatment changed (situation)"
+      "display" : "Respiratory treatment changed"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "170619004",
-      "display" : "Respiratory disease treatment started (situation)"
+      "display" : "Respiratory disease treatment started"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "170620005",
-      "display" : "Respiratory disease treatment stopped (situation)"
+      "display" : "Respiratory disease treatment stopped"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -11566,7 +9503,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "170997003",
-      "display" : "Counseled by counselor (situation)"
+      "display" : "Counseled by counselor"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -11596,7 +9533,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "171152003",
-      "display" : "Screening for malignant neoplasm of cervix not wanted (situation)"
+      "display" : "Cancer of cervix screening not wanted"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -11897,11 +9834,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "183076006",
       "display" : "Patient advised not to drive"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "183077002",
-      "display" : "Patient advised to inform DVLA"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -12277,6 +10209,51 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "228393009",
       "display" : "Has never injected drugs"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "228396001",
+      "display" : "Does not share drug injection equipment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "228409000",
+      "display" : "Does not use needle and syringe exchange scheme"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "228416004",
+      "display" : "No undue priority given to drug-related activities"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "228426006",
+      "display" : "Has no routine of drug-related activities"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "228431008",
+      "display" : "Does not follow drug-related rituals"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "228439005",
+      "display" : "No craving for drugs"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "232667009",
+      "display" : "Airway obtained by head extension"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237149005",
+      "display" : "Fetus with suspected rubella damage via mother"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237152002",
+      "display" : "Foetal spina bifida suspected"
     }]
   }
 },
@@ -12307,16 +10284,16 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:47fbef10-5e01-402d-b731-709611c4c2c3",
-    "timestamp" : "2025-02-24T03:47:21.434Z",
+    "identifier" : "urn:uuid:4620ff3a-b501-422c-9917-65f9f508a8db",
+    "timestamp" : "2026-05-15T13:40:27.928Z",
     "offset" : 0,
     "parameter" : [{
-      "name" : "displayLanguage",
-      "valueCode" : "en-US"
-    },
-    {
       "name" : "excludeNested",
       "valueBoolean" : true
+    },
+    {
+      "name" : "includeDefinition",
+      "valueBoolean" : false
     },
     {
       "name" : "offset",
@@ -12328,11 +10305,11 @@ e: {
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20240901"
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901"
     },
     {
-      "name" : "version",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20240901"
+      "name" : "system-version",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
@@ -12816,11 +10793,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "45224000",
-      "display" : "Struck by missile"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "45477008",
       "display" : "Exposed to vibration"
     },
@@ -12962,7 +10934,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "55566008",
-      "display" : "Accident"
+      "display" : "Accidental physical contact"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -13427,7 +11399,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "102412001",
-      "display" : "Noise pollution (event)"
+      "display" : "Noise pollution"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -13472,7 +11444,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "102422007",
-      "display" : "Exposure to environmental pollution, occupational"
+      "display" : "Occupational exposure to environmental pollution"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -13487,7 +11459,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "102425009",
-      "display" : "Exposure to polluted air, occupational"
+      "display" : "Occupational exposure to polluted air"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -13502,7 +11474,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "102428006",
-      "display" : "Exposure to polluted water, occupational"
+      "display" : "Occupational exposure to polluted water"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -13527,7 +11499,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "102433005",
-      "display" : "Exposure to polluted soil, occupational"
+      "display" : "Occupational exposure to polluted soil"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -13542,7 +11514,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "102436002",
-      "display" : "Exposure to chemical pollution, occupational"
+      "display" : "Occupational exposure to chemical pollution"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -13552,27 +11524,27 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "102439009",
-      "display" : "Exposure to toxic waste, occupational"
+      "display" : "Occupational exposure to toxic waste"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "102440006",
-      "display" : "Exposure to toxic waste, non-occupational"
+      "display" : "Non-occupational exposure to toxic waste"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "102441005",
-      "display" : "Exposure to toxic agricultural agents"
+      "display" : "Exposure to toxic agricultural agent"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "102442003",
-      "display" : "Exposure to toxic agricultural agents, occupational"
+      "display" : "Occupational exposure to toxic agricultural agent"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "102443008",
-      "display" : "Exposure to toxic agricultural agents, non-occupational"
+      "display" : "Non-occupational exposure to toxic agricultural agent"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -13582,12 +11554,12 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "102445001",
-      "display" : "Exposure to toxic dust, occupational"
+      "display" : "Occupational exposure to toxic dust"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "102446000",
-      "display" : "Exposure to toxic dust, non-occupational"
+      "display" : "Non-occupational exposure to toxic dust"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -13651,13 +11623,8 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "199608004",
-      "display" : "Intrauterine death with antenatal problem"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "200156003",
-      "display" : "Death from sequela of direct obstetric cause (event)"
+      "display" : "Death from sequela of direct obstetric cause"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -17007,7 +14974,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "216128005",
-      "display" : "Accident in alighting from aircraft, parachutist injured (event)"
+      "display" : "Accident in alighting from aircraft, parachutist injured"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -17333,301 +15300,50 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "216305000",
       "display" : "Accident caused by object thrown from cable car, not running on rails"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "216308003",
+      "display" : "Accident involving ice yacht"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "216309006",
+      "display" : "Accident involving land yacht"
     }]
   }
 },
   "error" : ""
 }
 -------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "446151000124109",
-  "display" : "Identifies as male gender"
-}, "valueSet" :null, "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "displayLanguage",
-    "valueCode" : "en-US"
-  }]
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct"
+    }]
+  }
 }}####
-v: {
-  "display" : "Identifies as male gender (finding)",
-  "code" : "446151000124109",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20250301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
+e: {
+  "from-server" : true,
+  "class" : "TOO_COSTLY",
+  "error" : "Error from https://tx.fhir.org/r4: Error: The code System \"http://snomed.info/sct\" has a grammar, and cannot be enumerated directly"
 }
 -------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "699653008"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "2.3.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "displayLanguage",
-    "valueCode" : "en-US"
-  }]
-}}####
-v: {
-  "display" : "Inadequate oral food intake for physiological needs (finding)",
-  "code" : "699653008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20250301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "160695008"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "2.3.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "displayLanguage",
-    "valueCode" : "en-US"
-  }]
-}}####
-v: {
-  "display" : "Transport financial problems",
-  "code" : "160695008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20250301",
-  "server" : "http://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "699653008"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "3.0.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "displayLanguage",
-    "valueCode" : "en-US"
-  }]
-}}####
-v: {
-  "display" : "Inadequate oral food intake for physiological needs (finding)",
-  "code" : "699653008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20250301",
-  "server" : "https://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "160695008"
-}, "url": "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT--1", "version": "3.0.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "id" : "exp-params",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "displayLanguage",
-    "valueCode" : "en-US"
-  }]
-}}####
-v: {
-  "display" : "Transport financial problems",
-  "code" : "160695008",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20250301",
-  "server" : "https://tx.fhir.org/r4",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "coding" : [{
-    "system" : "http://snomed.info/sct",
-    "code" : "706689003",
-    "display" : "Application program software"
-  }]
-}, "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "defaultDisplayLanguage",
-    "valueCode" : "en"
-  }]
-}}####
-v: {
-  "display" : "Application programme software",
-  "code" : "706689003",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20250301",
-  "server" : "https://tx.fhir.org/r4",
-  "unknown-systems" : "",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "coding" : [{
-    "system" : "http://snomed.info/sct",
-    "code" : "1078229009",
-    "display" : "Food security"
-  }]
-}, "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.16", "version": "20240604", "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "defaultDisplayLanguage",
-    "valueCode" : "en"
-  }]
-}}####
-v: {
-  "display" : "Food security (finding)",
-  "code" : "1078229009",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20250301",
-  "server" : "https://tx.fhir.org/r4",
-  "unknown-systems" : "",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "410606002",
-  "display" : "Social service procedure"
-}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "defaultDisplayLanguage",
-    "valueCode" : "en"
-  }]
-}}####
-v: {
-  "display" : "Social service procedure (procedure)",
-  "code" : "410606002",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20250301",
-  "server" : "https://tx.fhir.org/r4",
-  "unknown-systems" : "",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "410606002"
-}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category--1", "version": "7.0.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "defaultDisplayLanguage",
-    "valueCode" : "en"
-  }]
-}}####
-v: {
-  "display" : "Social service procedure (procedure)",
-  "code" : "410606002",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20250301",
-  "server" : "https://tx.fhir.org/r4",
-  "unknown-systems" : "",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "coding" : [{
-    "system" : "http://snomed.info/sct",
-    "code" : "410606002",
-    "display" : "Social service procedure"
-  }]
-}, "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
-  "resourceType" : "Parameters",
-  "parameter" : [{
-    "name" : "system-version",
-    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
-  },
-  {
-    "name" : "defaultDisplayLanguage",
-    "valueCode" : "en"
-  }]
-}}####
-v: {
-  "display" : "Social service procedure (procedure)",
-  "code" : "410606002",
-  "system" : "http://snomed.info/sct",
-  "version" : "http://snomed.info/sct/731000124108/version/20250301",
-  "server" : "https://tx.fhir.org/r4",
-  "unknown-systems" : "",
-  "issues" : {
-  "resourceType" : "OperationOutcome"
-}
-
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
+{"hierarchical" : false, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
     "inactive" : true,
     "include" : [{
       "system" : "http://snomed.info/sct",
       "concept" : [{
-        "code" : "160245001"
+        "code" : "386053000",
+        "display" : "Evaluation procedure (procedure)"
+      },
+      {
+        "code" : "410606002",
+        "display" : "Social service procedure (procedure)"
       }]
     }]
   }
@@ -17638,12 +15354,16 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:6decbfd6-b4eb-4ba1-8a7c-b5a266b0a9fa",
-    "timestamp" : "2025-10-16T14:37:10.720Z",
-    "total" : 1,
+    "identifier" : "urn:uuid:76529f31-2052-442e-a554-1288ba0461fa",
+    "timestamp" : "2026-05-15T13:40:29.854Z",
+    "total" : 2,
     "offset" : 0,
     "parameter" : [{
       "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "includeDefinition",
       "valueBoolean" : false
     },
     {
@@ -17656,16 +15376,21 @@ e: {
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250301"
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901"
     },
     {
-      "name" : "version",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250301"
+      "name" : "system-version",
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "160245001",
-      "display" : "No current problems or disability"
+      "code" : "386053000",
+      "display" : "Investigations"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "410606002",
+      "display" : "Social service procedure"
     }]
   }
 },

@@ -1,6 +1,6 @@
 ### Full Implementation Guide
 
-The entire implementation guide (including the HTML files, definitions, validation information, etc.) may be downloaded [here](full-ig.zip).
+The entire implementation guide (including the HTML files, definitions, validation information, etc.) may be downloaded [here](https://hl7.org/fhir/us/sdoh-clinicalcare/2026Jan/full-ig.zip).
 
 ### Package File
 

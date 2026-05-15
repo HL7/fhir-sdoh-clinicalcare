@@ -25,3 +25,4 @@ IF EXIST "%input_cache_path%\%publisher_jar%" (
 )
 
 PAUSE
+

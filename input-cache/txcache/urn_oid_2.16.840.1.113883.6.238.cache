@@ -751,7 +751,6 @@ v: {
   "error" : "No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|7.0.0'; The provided code 'urn:oid:2.16.840.1.113883.6.238#1002-5 ('American Indian or Alaska Native')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|7.0.0'",
   "class" : "UNKNOWN",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -822,7 +821,6 @@ v: {
   "error" : "No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|7.0.0'; The provided code 'urn:oid:2.16.840.1.113883.6.238#2106-3 ('White')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|7.0.0'",
   "class" : "UNKNOWN",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -893,7 +891,6 @@ v: {
   "error" : "No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|7.0.0'; The provided code 'urn:oid:2.16.840.1.113883.6.238#1102-3 ('Cheyenne')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|7.0.0'",
   "class" : "UNKNOWN",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -964,7 +961,6 @@ v: {
   "error" : "No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|7.0.0'; The provided code 'urn:oid:2.16.840.1.113883.6.238#1088-4 ('Cherokee')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|7.0.0'",
   "class" : "UNKNOWN",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -1007,6 +1003,180 @@ v: {
       "text" : "No valid coding was found for the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|7.0.0'"
     }
   }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "code" : "1002-5",
+  "display" : "American Indian or Alaska Native"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "American Indian or Alaska Native",
+  "code" : "1002-5",
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "version" : "3.1.1",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Validate \"[urn:oid:2.16.840.1.113883.6.238#1002-5 (\"American Indian or Alaska Native\")]\"\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Check \"urn:oid:2.16.840.1.113883.6.238#1002-5\"\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: CodeSystem found: urn:oid:2.16.840.1.113883.6.238|3.1.1 for urn:oid:2.16.840.1.113883.6.238|3.1.1\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: check code in (urn:oid:2.16.840.1.113883.6.238) at Coding\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Code \"1002-5\" found in urn:oid:2.16.840.1.113883.6.238|3.1.1",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "code" : "2106-3",
+  "display" : "White"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "White",
+  "code" : "2106-3",
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "version" : "3.1.1",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Validate \"[urn:oid:2.16.840.1.113883.6.238#2106-3 (\"White\")]\"\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Check \"urn:oid:2.16.840.1.113883.6.238#2106-3\"\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: CodeSystem found: urn:oid:2.16.840.1.113883.6.238|3.1.1 for urn:oid:2.16.840.1.113883.6.238|3.1.1\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: check code in (urn:oid:2.16.840.1.113883.6.238) at Coding\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Code \"2106-3\" found in urn:oid:2.16.840.1.113883.6.238|3.1.1",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "code" : "1102-3",
+  "display" : "Cheyenne"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "Cheyenne",
+  "code" : "1102-3",
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "version" : "3.1.1",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Validate \"[urn:oid:2.16.840.1.113883.6.238#1102-3 (\"Cheyenne\")]\"\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Check \"urn:oid:2.16.840.1.113883.6.238#1102-3\"\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: CodeSystem found: urn:oid:2.16.840.1.113883.6.238|3.1.1 for urn:oid:2.16.840.1.113883.6.238|3.1.1\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: check code in (urn:oid:2.16.840.1.113883.6.238) at Coding\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Code \"1102-3\" found in urn:oid:2.16.840.1.113883.6.238|3.1.1",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "code" : "1088-4",
+  "display" : "Cherokee"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "Cherokee",
+  "code" : "1088-4",
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "version" : "3.1.1",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Validate \"[urn:oid:2.16.840.1.113883.6.238#1088-4 (\"Cherokee\")]\"\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Check \"urn:oid:2.16.840.1.113883.6.238#1088-4\"\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: CodeSystem found: urn:oid:2.16.840.1.113883.6.238|3.1.1 for urn:oid:2.16.840.1.113883.6.238|3.1.1\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: check code in (urn:oid:2.16.840.1.113883.6.238) at Coding\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Code \"1088-4\" found in urn:oid:2.16.840.1.113883.6.238|3.1.1",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "code" : "1102-3",
+  "display" : "Cheyenne"
+}, "valueSet" :null, "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "Cheyenne",
+  "code" : "1102-3",
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "version" : "3.1.1",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Validate \"[urn:oid:2.16.840.1.113883.6.238#1102-3 (\"Cheyenne\")]\"\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Check \"urn:oid:2.16.840.1.113883.6.238#1102-3\"\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: CodeSystem found: urn:oid:2.16.840.1.113883.6.238|3.1.1 for urn:oid:2.16.840.1.113883.6.238|3.1.1\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: check code in (urn:oid:2.16.840.1.113883.6.238) at Coding\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Code \"1102-3\" found in urn:oid:2.16.840.1.113883.6.238|3.1.1",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "code" : "1088-4",
+  "display" : "Cherokee"
+}, "valueSet" :null, "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "Cherokee",
+  "code" : "1088-4",
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "version" : "3.1.1",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Validate \"[urn:oid:2.16.840.1.113883.6.238#1088-4 (\"Cherokee\")]\"\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Check \"urn:oid:2.16.840.1.113883.6.238#1088-4\"\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: CodeSystem found: urn:oid:2.16.840.1.113883.6.238|3.1.1 for urn:oid:2.16.840.1.113883.6.238|3.1.1\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: check code in (urn:oid:2.16.840.1.113883.6.238) at Coding\n2ms urn:oid:2.16.840.1.113883.6.238/vs|3.1.1: Code \"1088-4\" found in urn:oid:2.16.840.1.113883.6.238|3.1.1",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
 }
 
 }
