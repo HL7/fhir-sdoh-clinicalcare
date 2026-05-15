@@ -70,9 +70,9 @@ dependencies:
         id: vsac
         reason: |
             Gravity Project social risk data elements are published in Value Set Authority Center (VSAC) value sets. The value sets can be identified by searching for "The Gravity Project" steward. You will need to create a free National Library of Medicine (NLM) account to access the value sets. Value sets will be updated bi-annually on June 30th and December 31st.  
-    hl7.fhir.extensions.r5:
-        uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
-        version: 5.2.0
+    # hl7.fhir.extensions.r5:
+    #     uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
+    #     version: 5.2.0
     hl7.fhir.uv.xver-r5.r4:
         uri: http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4
         version: 0.1.0

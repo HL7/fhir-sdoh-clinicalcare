@@ -9,8 +9,6 @@ This use case addresses the need for a referring entity to determine if a Commun
 
 Once capacity is confirmed and a referral is initiated, implementers should follow the guidance outlined in the existing Closed-Loop Referral Workflow page.
 
-{% include capacity.svg %}
-
 ### Scope
 
 The scope of this use case is to define the exchange of information regarding a CBO's capacity to provide social care services. This implementation guide focuses specifically on the most direct and simple workflow to allow the community an opportunity to implement and provide feedback before addressing more complex scenarios.

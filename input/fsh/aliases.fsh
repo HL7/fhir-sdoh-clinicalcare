@@ -44,3 +44,5 @@ Alias: $ScreeningAssessmentConditionCategory = http://hl7.org/fhir/us/core/Value
 Alias: $USCoreSurveyCodes = http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes|7.0.0
 Alias: $restful-security-service = http://terminology.hl7.org/CodeSystem/restful-security-service
 Alias: $sdoh-programs = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312
+Alias: $alternate-reference = http://hl7.org/fhir/StructureDefinition/alternate-reference
+
