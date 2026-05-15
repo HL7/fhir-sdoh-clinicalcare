@@ -2,6 +2,9 @@
 **WE ARE ACTIVELY SEEKING FEEDBACK ON THE FHIR STRUCTURES AND NARRATIVE GUIDANCE SURROUNDING THE CAPACITY STATUS ([FHIR-53450](https://jira.hl7.org/browse/FHIR-53450)) USE CASE. WE ENCOURAGE READERS TO REVIEW THE PROPOSED CHANGES AND SUBMIT BALLOT COMMENTS AGAINST THEM.**
 </div>
 
+
+### Overview
+
 This use case addresses the need for a referring entity to determine if a Community-Based Organization (CBO) has the capacity to accept a referral before the referral is formally sent. This "pre-flight" check aims to reduce the administrative burden on clinical staff and CBOs by preventing referrals to organizations that cannot currently provide services. It also improves care coordination by making all involved parties aware of a CBO's capacity status.
 
 Once capacity is confirmed and a referral is initiated, implementers should follow the guidance outlined in the existing Closed-Loop Referral Workflow page.
@@ -28,7 +31,8 @@ The following scenarios are out-of-scope at this time. This guide focuses on pro
 - **Directory-Mediated Capacity Status Check**: A workflow where a Referral Source or Coordination Platform checks for capacity within one or more centralized service provider directories. This is out of scope for STU 3.0.
 - **Organizational Capacity Reporting**: This use case does not cover high-level, aggregate capacity reporting that may occur as part of a contractual obligation between organizations (e.g., a quarterly report on service level agreements).
 
-### Actors and System Environments
+
+### Actors and System
 
 #### Actors
 
@@ -46,7 +50,8 @@ The interactions between actors can occur in different system environments. This
 - **Open System**: The Referral Source, Coordination Platform, and CBO each use disparate systems that cannot natively interoperate. To share information like capacity, a standards-based exchange using FHIR is required. Open systems are **in scope**.
 - **Hybrid System**: Some trading partners use the same system, while others use different systems. A standards-based exchange is still necessary to communicate capacity status across the disparate system boundaries. Hybrid systems are **in scope**.
 
-### Exchange Flows
+
+### Exchange Workflows
 
 #### Pre-Referral Capacity Inquiry Workflow
 
@@ -83,7 +88,8 @@ A “light” version of the Capacity Status Query where the referral source has
 
 {% include img.html img="CapacityStatusQueryLight.png" caption="Figure 4: Capacity Status Query Light" %} 
 
-### FHIR Resources and Profiles
+
+### FHIR Artifacts and Technical Guidance
 
 This use case primarily leverages the [HealthcareService](https://hl7.org/fhir/R4/healthcareservice.html) resource, with [Task](https://hl7.org/fhir/R4/task.html) being used in the post-referral scenario.
 

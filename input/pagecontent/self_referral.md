@@ -2,17 +2,15 @@
 The Gravity Project team has created a new narrative page providing guidance on the Self-Referral use case. We would encourage balloters to review this guidance and provide feedback.
 </div>
 
+
+### Overview
+
 This use case describes the scenario where an individual independently identifies a health-related social need and uses a public-facing community resource directory or platform to find and request services from a Community-Based Organization (CBO).
 
 The primary distinction from the provider-centric workflows described in this guide is that the **Individual/Patient** is the initiating actor. The system they use to make the request, a **Community Resource Platform**, acts as the technical **Referral Source** system. Consequently, the "closed loop" involves communicating referral disposition and outcomes back to this platform for the individual’s benefit, rather than to a clinical healthcare provider.
 
-### Actors and Systems
 
-- **Individual/Patient**: A person or an authorized representative of a person with one or more health-related social needs who initiates a search and request for services. The person is the subject of the referral.
-- **Community Resource Platform**: A web-based application or service directory that enables individuals to search for social care services, complete screening assessments, and initiate referrals on their own behalf. In the context of the FHIR exchange, this platform functions as the **Referral Source system.
-- **Community-Based Organization (CBO)**: The organization that receives and acts upon the referral to provide a service. In the FHIR exchange, the CBO functions as the **Referral Recipient** system.
-
-### Use Case Scope
+### Scope
 
 #### In Scope
 
@@ -25,7 +23,15 @@ The primary distinction from the provider-centric workflows described in this gu
 - The specific algorithms used by the platform to match an individual with potential CBOs.
 - The management of patient consent, which is assumed to be handled by the Community Resource Platform prior to initiating the referral workflow.
 
-### Workflow and Assumptions
+
+### Actors and Systems
+
+- **Individual/Patient**: A person or an authorized representative of a person with one or more health-related social needs who initiates a search and request for services. The person is the subject of the referral.
+- **Community Resource Platform**: A web-based application or service directory that enables individuals to search for social care services, complete screening assessments, and initiate referrals on their own behalf. In the context of the FHIR exchange, this platform functions as the **Referral Source system.
+- **Community-Based Organization (CBO)**: The organization that receives and acts upon the referral to provide a service. In the FHIR exchange, the CBO functions as the **Referral Recipient** system.
+
+
+### Exchange Workflow
 
 This use case **exactly follows the exchange patterns defined in the Direct Referral workflow**. The key difference is the nature of the actors.
 
@@ -47,7 +53,7 @@ This use case **exactly follows the exchange patterns defined in the Direct Refe
 
 This workflow may operate within various ecosystem models. Implementers should consult the guidance on **Closed, Open, and Hybrid Intermediation Networks** to determine how referrals are routed and how participants discover each other’s endpoints and capabilities.
 
-### Exchange Flows and FHIR Resources
+### FHIR Artifacts and Technical Guidance
 
 The self-referral use case reuses the profiles and exchange patterns defined in the Direct Referral workflow without modification. The key distinction lies in the population of specific elements to reflect the patient-initiated nature of the request.
 
