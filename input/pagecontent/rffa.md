@@ -52,7 +52,7 @@ The technology systems involved in the exchange mirror those in the established 
 
 - <b>EHR System (Referral Source)</b>: The system used by the provider to manage patient care and initiate the referral for assessment.
 - <b>CBO System (Referral Target)</b>: The system used by the CBO to receive and manage the assessment referral and document its results.
-- <b>Intermediary/Community Platform (CP)</b>: A system that facilitates communication and data exchange between the provider and CBO systems.
+- <b>Intermediary/Coordination Platform (CP)</b>: A system that facilitates communication and data exchange between the provider and CBO systems.
 
 
 ### Exchange Workflow

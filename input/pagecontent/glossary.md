@@ -9,6 +9,20 @@
 |  Patient                              | A consumer, or client, who is the subject of the assessment, goals, referrals and services delivered. Use of the term in this IG does not necessarily imply a clinical context.   |
 |  Provider                             | Includes licensed providers and qualified professionals that interact with the patient to assess social risks, set goals, and determine/recommend referrals  |
 |  SDOH Domain                          | An area of activity describing one of the conditions in which people are born, grow, work, live, and age, and the wider set of forces and systems shaping the conditions of daily life.   |
+|  Closed System                          | The Referral Source, Coordination Platform, and CBO all use the same system or platform. In this environment, capacity status is generally known across all actors without the need for a standards-based exchange. Closed systems are out of scope for this guide.   |
+|  Open System                          | The Referral Source, Coordination Platform, and CBO each use disparate systems that cannot natively interoperate. To share information like capacity, a standards-based exchange using FHIR is required. Open systems are in scope.   |
+|  Hybrid System                          | Some trading partners use the same system, while others use different systems. A standards-based exchange is still necessary to communicate capacity status across the disparate system boundaries. Hybrid systems are in scope.   |
+|  Direct Referral                          |  A referral between a referral source (e.g., provider) and a referral target (e.g., CBO) where both entities have FHIR server APIs and an intermediary (e.g., CP) is not involved in the referral.   |
+|  Indirect Referral                          | A referral between a referral source (e.g., provider) and a referral target (e.g., a CBO) that involves an intermediary (e.g., a CP) and all entities have FHIR servers APIs.  |
+|  Community Resource Platform                          | A web-based application or service directory that enables individuals to search for social care services, complete screening assessments, and initiate referrals on their own behalf. In the context of the FHIR exchange, this platform functions as the **Referral Source system.   |
+|  EHR System (Referral Source)                          | The system used by the provider to manage patient care and initiate referrals.  |
+|  Intermediary                           |   |
+|  Patient Coordination                          |   |
+|  Capacity                           |   |
+|  Capacity Status                         |   |
+|  Referral Source                         |   |
+|  Referral Target                          |   |
+|  Social Care Network (SCN)                         |   |
 {:.grid .center}
 
 
