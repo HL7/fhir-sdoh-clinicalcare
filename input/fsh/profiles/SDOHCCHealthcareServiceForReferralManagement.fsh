@@ -2,7 +2,7 @@ Profile: SDOHCCHealthcareServiceForReferralManagement
 Parent: SDOHCCHealthcareService
 Id: SDOHCC-HealthcareServiceForReferralManagement
 Title: "SDOHCC Healthcare Service for Referral Management"
-Description: "Profile that extends SDOHCC HealthcareService to support capacity status queries, allowing referral sources to determine if a CBO has capacity before initiating a referral. Includes the capacity-status extension and elements for describing services, programs, and contact information."
+Description: "Profile that extends SDOHCC HealthcareService to support capacity status queries, allowing referral sources to determine if a CBO has capacity before initiating a referral. Includes the capacity-status extension and elements for describing services, programs, and contact information. This use case primarily leverages the [HealthcareService](https://hl7.org/fhir/R4/healthcareservice.html) resource, with [Task](https://hl7.org/fhir/R4/task.html) being used in the post-referral [Capacity Status](capacity.html) scenario."
 * ^status = #active
 
 // TODO need short and definition?
