@@ -23,11 +23,8 @@ The following items are out of scope for this version of the IG.
 
 ### Scope of Interactions
 
-The focus of this IG is interactions between a patient, provider, and CBO, with possible intermediation by a Coordination Platform (CP).  Provider EHRs and CPs will act as both clients and servers, accepting data from other systems and allowing it to be queried, while also storing data on and retrieving data from other systems.  Patient systems will act only as clients - accessing and sometimes manipulating data on other systems, but not exposing interfaces for other systems to interact with. The IG supports interactions with CBOs that support either a FHIR-enabled application (e.g. phone, tablet, web application) that queries other systems but does not expose its own data for query, or as a FHIR-Server Enabled application that exposes its own data for query and manipulation as well as querying and sometimes updating other systems.  In the drawing below, bidirectional solid arrows reflect communication between two endpoints with FHIR servers, whereas unidirectional solid arrows reflect FHIR API calls by a FHIR-enabled application against a FHIR server.
+The focus of this IG is interactions between a patient, provider, and community-based organization (CBO). There may be scenarios where there will be intermediation by a Coordination Platform (CP). Provider EHRs, CBO systems of record and CPs (when present) will act as both clients and servers, accepting data from other systems and allowing it to be queried, while also storing data on and retrieving data from other systems. Patient systems will act only as clients - accessing and sometimes manipulating data on other systems but not exposing interfaces for other systems to interact with. The IG supports interactions with CBOs that support either a FHIR-enabled application (e.g. phone, tablet, web application) that queries other systems but does not expose its own data for query, or as a FHIR-Server Enabled application that exposes its own data for query and manipulation as well as querying and sometimes updating other systems.
 
-{% include img.html img="SystemDiagram.svg" caption="Figure 2: System Interactions" %}
-<br>
-<br>
 ### Data Modeling Framework
 
 The diagram below reflects the primary data structures and relationships associated with each of the major business processes covered by this implementation guide:

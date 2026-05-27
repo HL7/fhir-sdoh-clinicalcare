@@ -14,14 +14,14 @@ Description: "Profile for observations about the sexual orientation of an indivi
 * . ^mustSupport = false
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1
 
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
-* extension contains $extension-Observation.subject named OtherSubject 0..1 MS
-* extension[OtherSubject] ^requirements = "This extension is adding only US Core Practitioner as an option for Observation.subject. When the subject is Practitioner, personal characteristics should be based on the attestation and consent of the practitioner."
-* extension[OtherSubject] ^condition[0] = "SDOH-Obs-1"
-* extension[OtherSubject].value[x] 1..
-* extension[OtherSubject].value[x] only Reference(USCorePractitionerProfile|7.0.0)
+// * extension ^slicing.discriminator.type = #value
+// * extension ^slicing.discriminator.path = "url"
+// * extension ^slicing.rules = #open
+// * extension contains $extension-Observation.subject named OtherSubject 0..1 MS
+// * extension[OtherSubject] ^requirements = "This extension is adding only US Core Practitioner as an option for Observation.subject. When the subject is Practitioner, personal characteristics should be based on the attestation and consent of the practitioner."
+// * extension[OtherSubject] ^condition[0] = "SDOH-Obs-1"
+// * extension[OtherSubject].value[x] 1..
+// * extension[OtherSubject].value[x] only Reference(USCorePractitionerProfile|7.0.0)
 * status MS
 * status from SDOHCCValueSetObservationStatus (required)
 * status ^short = "final | corrected | entered-in-error | unknown"
@@ -42,10 +42,17 @@ Description: "Profile for observations about the sexual orientation of an indivi
 * code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * code ^binding.extension.valueString = "ObservationCode"
 * code ^binding.description = "Codes identifying names of simple observations."
+
 * subject only Reference(USCorePatientProfile|7.0.0)
 * subject MS
+* subject.extension contains $alternate-reference named subjectPractitioner 0..1 MS
+* subject.extension[subjectPractitioner] ^short = "Alternate subject reference to a Practitioner"
+* subject.extension[subjectPractitioner] ^definition = "Used when the personal characteristic observation is about a Practitioner rather than a Patient."
+* subject.extension[subjectPractitioner].value[x] 1..1
+* subject.extension[subjectPractitioner].value[x] only Reference(USCorePractitionerProfile|7.0.0)
 * subject ^condition[0] = "SDOH-Obs-1"
 * subject ^condition[+] = "SDOH-Obs-2"
+
 * focus ..1
 * focus only Reference(RelatedPerson)
 * focus ^condition[0] = "SDOH-Obs-2"
