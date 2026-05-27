@@ -203,7 +203,8 @@ The details of the FHIR-based exchanges  are provided in the [following section]
 Figure 2 shows the FHIR exchanges between the referral source and referral target.
 For each numbered exchange, the details of the data elements exchanged, and the FHIR request and response are provided.
 
-{% include img.html img="DetailedDirectReferral.svg" caption="Figure 2: Detailed Direct Referral" %}
+<div>{% include DetailedDirectReferral.svg %}</div>
+<br clear="all"/>
 
 | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |
@@ -232,7 +233,9 @@ This referral occurs between the provider (referral source) and the CBO (referra
 Figure 3 shows the FHIR exchanges between the referral source and referral target.
 For each numbered exchange, the details of the data elements exchanged, and the FHIR request and response are provided.
 
-{% include img.html img="DetailedDirectReferralLight.svg" caption="Figure 3: Detailed Direct Referral Light" %}
+
+<div>{% include DetailedDirectReferralLight.svg %}</div>
+<br clear="all"/>
 
 | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |
@@ -267,7 +270,8 @@ The intermediary **SHALL** support the following:
 3. Create Task(s) to be posted to the referral target(s) that reference the referral source Task(s) via `Task.partOf`
 4. If local copies of the referenced resources are maintained by the intermediary, the intermediary must subscribe or periodically query the referral source for updates to the referenced resources
 
-{% include img.html img="DetailedIndirectReferral.svg" caption="Figure 4: Detailed Indirect Referral" %}
+<div>{% include DetailedIndirectReferral.svg %}</div>
+<br clear="all"/>
 
 ####  Indirect Referral Light
 
@@ -289,7 +293,8 @@ The intermediary **SHALL** support the following:
 3. Create Task(s) to be queried by the referral target(s) that reference the referral source Task(s) via `Task.partOf`
 4. If local copies of the referenced resources are maintained by the intermediary, the intermediary must subscribe or periodically query the referral source for updates to the referenced resources
 
-{% include img.html img="DetailedIndirectReferralLight.svg" caption="Figure 5: Detailed Indirect Referral Light" %}
+<div>{% include DetailedIndirectReferralLight.svg %}</div>
+<br clear="all"/>
 
 #### Additional Guidance on Referrals
 
