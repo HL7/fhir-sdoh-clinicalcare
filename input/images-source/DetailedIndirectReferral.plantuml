@@ -1,0 +1,46 @@
+@startuml
+/'!theme bluegray'/
+title Detailed Indirect Workflow
+
+participant "Referral Source" as A
+participant "Intermediary (CP)" as B
+participant "Referral Target (CBO)" as C
+
+A --> A : Create ServiceRequest + Task
+A -> B : Post Referral Task
+
+B -> A : Get ServiceRequest + referenced resources
+B --> B : Evaluate Referral\nUpdate Task Status
+B --> A : Subscription Notification (optional)
+
+B -> C : Create ServiceRequest\n(based on Referral)\nCreate CP Task\nfor CBO and link to\nReferral Source Task
+A --> A : Evaluate Task Status (accepted)
+B -> C : POST CP Task to CBO
+
+C -> B : Get ServiceRequest + referenced resources
+C -> C : Evaluate Referral\nUpdate Task Status
+
+C -> B : Subscription Notification (optional)
+B -> C : Get Task
+
+B -> B : Evaluate Task Status\nUpdate Task Status to In Progress
+B -> A : Subscription Notification (optional)
+A -> A : Evaluate Status (in-progress)
+
+C --> C : Complete Service\nCreate Procedure(s)\nUpdate Task Status to Completed
+B -> A : Subscription Notification (optional)
+A -> A : Evaluate Status (completed)
+
+C -> C : Complete Service\nCreate Procedure(s)\nUpdate Task Status to Completed
+B -> C : Get Procedure(s)
+
+B -> B : Link Procedure(s)\nUpdate Task Status to Completed
+B -> A : Subscription Notification (optional)
+A -> B : Get Task
+
+A -> A : Evaluate Status (completed)
+A -> B : Get Procedure(s)
+
+A -> A : Update ServiceRequest to Completed\nUpdate Goal as appropriate
+
+@enduml

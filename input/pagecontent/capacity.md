@@ -9,7 +9,8 @@ This use case addresses the need for a referring entity to determine if a Commun
 
 Once capacity is confirmed and a referral is initiated, implementers should follow the guidance outlined in the existing Closed-Loop Referral Workflow page.
 
-{% include capacity.svg %}
+<div>{% include capacity.svg %}</div>
+<br clear="all"/>
 
 ### Scope
 

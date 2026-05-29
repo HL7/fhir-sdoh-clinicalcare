@@ -1,0 +1,24 @@
+@startuml
+/'!theme bluegray'/
+title Detailed Direct Workflow
+
+participant "Referral Source" as A
+participant "Referral Target (CBO) (Not FHIR-enabled)" as B
+
+A --> A : Create ServiceRequest + Task
+A -> B : Send email
+
+A -> B : Get Task
+A -> B : Get ServiceRequest + referenced resources
+
+B --> B : Evaluate Referral\nUpdate Task Status (accepted)
+B -> A : Update Task Status (accepted)
+B --> B : Begin Work and update\nTask Status to In Progress
+B -> A : Update Task Status (in-progress)
+B --> B : Complete Service\nCreate Procedure(s) to\ndocument service(s) delivered
+
+B -> A : Post Procedure(s)
+B -> A : Update Task Status (completed)
+A -> A : Update ServiceRequest to Completed\nUpdate Goal as appropriate
+
+@enduml
