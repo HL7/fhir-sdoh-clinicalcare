@@ -19,6 +19,8 @@ Usage: #definition
 * rest[=].security.service = $restful-security-service#SMART-on-FHIR
 * rest[=].security.description = "Implementations must meet the general privacy & security requirements documented in [this implementation guide](privacy_and_security.html)."
 * rest[=].resource[0].type = #CareTeam
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam|7.0.0"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -45,6 +47,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #Condition
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Condition"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -101,6 +105,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #token
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering to exclude refuted or entered-in-error conditions"
 * rest[=].resource[+].type = #Consent
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -136,6 +142,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #reference
 * rest[=].resource[=].searchParam[=].documentation = "Allows including the document that contains the PDF or similar representation of a paper consent"
 * rest[=].resource[+].type = #Device
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/StructureDefinition/Device"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -162,6 +170,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #DocumentReference
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|7.0.0"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -188,6 +198,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #Goal
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -244,6 +256,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering based on when a particular goal is desired to be achieved"
 * rest[=].resource[+].type = #HealthcareService
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -276,6 +290,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #reference
 * rest[=].resource[=].searchParam[=].documentation = "Allows retrieval of the phyical site(s) associated with a HealthService"
 * rest[=].resource[+].type = #Location
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Location"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -302,6 +318,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #Observation
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile[0] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"
 * rest[=].resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"
 * rest[=].resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationEthnicityOMB"
@@ -394,6 +412,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #token
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for observations that are completed or revised (i.e. not in-progress or entered-in-error)"
 * rest[=].resource[+].type = #Organization
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|7.0.0"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -420,6 +440,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #Patient
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|7.0.0"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -446,6 +468,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #Practitioner
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -472,6 +496,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #PractitionerRole
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-practitionerrole"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -516,6 +542,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #reference
 * rest[=].resource[=].searchParam[=].documentation = "Allows doing an _include on Practitioner when retrieving the PractitionerRole"
 * rest[=].resource[+].type = #Procedure
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -585,6 +613,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #token
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for procedures that are complete or in progress"
 * rest[=].resource[+].type = #Questionnaire
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -654,6 +684,8 @@ Usage: #definition
 * rest[=].resource[=].operation.definition = "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-populate"
 * rest[=].resource[=].operation.documentation = "Allows SMART on FHIR or other systems to pre-populate a questionnaire response with existing information either available locally or queried from elsewhere"
 * rest[=].resource[+].type = #QuestionnaireResponse
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -710,6 +742,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #token
 * rest[=].resource[=].searchParam[=].documentation = "Allows retrieving QuestionnaireResponses that are complete (or incomplete)"
 * rest[=].resource[+].type = #RelatedPerson
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -736,6 +770,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #ServiceRequest
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -840,6 +876,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #reference
 * rest[=].resource[=].searchParam[=].documentation = "Allows _include to retrieve supporting information for a ServiceRequest - particularly Consent"
 * rest[=].resource[+].type = #Subscription
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHOULD
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -858,6 +896,8 @@ Usage: #definition
 * rest[=].resource[=].operation.definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"
 * rest[=].resource[=].operation.documentation = "Necessary for systems supporting subscriptions to ensure that the subscription is functioning properly and to check for errors"
 * rest[=].resource[+].type = #Task
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile[0] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"
 * rest[=].resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"
 * rest[=].resource[=].supportedProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -977,6 +1017,8 @@ Usage: #definition
 * rest[=].security.service = $restful-security-service#SMART-on-FHIR
 * rest[=].security.description = "Implementations must meet the general privacy & security requirements documented in [this implementation guide](privacy_and_security.html)."
 * rest[=].resource[0].type = #CareTeam
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam|7.0.0"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1068,6 +1110,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #token
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering to exclude refuted or entered-in-error conditions"
 * rest[=].resource[+].type = #Consent
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1112,6 +1156,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #reference
 * rest[=].resource[=].searchParam[=].documentation = "Allows including the document that contains the PDF or similar representation of a paper consent"
 * rest[=].resource[+].type = #Device
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/StructureDefinition/Device"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1138,6 +1184,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #DocumentReference
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|7.0.0"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1172,6 +1220,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #Goal
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1237,6 +1287,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering based on when a particular goal is desired to be achieved"
 * rest[=].resource[+].type = #Group
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Group"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1288,6 +1340,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #reference
 * rest[=].resource[=].searchParam[=].documentation = "Allows performing an _include to retrieve the members of the group"
 * rest[=].resource[+].type = #HealthcareService
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-HealthcareService"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1320,6 +1374,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #reference
 * rest[=].resource[=].searchParam[=].documentation = "Allows retrieval of the phyical site(s) associated with a HealthService"
 * rest[=].resource[+].type = #Location
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Location"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1346,6 +1402,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #Observation
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile[0] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment"
 * rest[=].resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse"
 * rest[=].resource[=].supportedProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -1426,6 +1484,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #token
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for observations that are completed or revised (i.e. not in-progress or entered-in-error)"
 * rest[=].resource[+].type = #Organization
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|7.0.0"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1452,6 +1512,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #Patient
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|7.0.0"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1478,6 +1540,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #Practitioner
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1504,6 +1568,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #PractitionerRole
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-practitionerrole"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1548,6 +1614,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #reference
 * rest[=].resource[=].searchParam[=].documentation = "Allows doing an _include on Practitioner when retrieving the PractitionerRole"
 * rest[=].resource[+].type = #Procedure
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1625,6 +1693,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #token
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for procedures that are complete or in progress"
 * rest[=].resource[+].type = #Questionnaire
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1694,6 +1764,8 @@ Usage: #definition
 * rest[=].resource[=].operation.definition = "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-populate"
 * rest[=].resource[=].operation.documentation = "Allows SMART on FHIR or other systems to pre-populate a questionnaire response with existing information either available locally or queried from elsewhere"
 * rest[=].resource[+].type = #QuestionnaireResponse
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1759,6 +1831,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #token
 * rest[=].resource[=].searchParam[=].documentation = "Allows retrieving QuestionnaireResponses that are complete (or incomplete)"
 * rest[=].resource[+].type = #RelatedPerson
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1785,6 +1859,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
 * rest[=].resource[+].type = #ServiceRequest
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1898,6 +1974,8 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #reference
 * rest[=].resource[=].searchParam[=].documentation = "Allows _include to retrieve supporting information for a ServiceRequest - particularly Consent"
 * rest[=].resource[+].type = #Subscription
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHOULD
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
@@ -1916,6 +1994,8 @@ Usage: #definition
 * rest[=].resource[=].operation.definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"
 * rest[=].resource[=].operation.documentation = "Allows upstream systems to verify their subscription is functioning properly and to check for errors"
 * rest[=].resource[+].type = #Task
+* rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile[0] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForPatient"
 * rest[=].resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-TaskForReferralManagement"
 * rest[=].resource[=].supportedProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
