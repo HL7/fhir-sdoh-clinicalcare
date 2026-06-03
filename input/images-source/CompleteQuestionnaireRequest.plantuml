@@ -1,0 +1,19 @@
+@startuml
+/'!theme bluegray'/
+title Complete Questionnaire Request Flow
+
+participant "Requester" as A
+participant "Patient" as B
+
+autonumber
+A --> A : Create Task and reference Questionnaire as .input
+A --> B : Notify to complete Questionnaire
+A <- B : Get Task
+A <- B : Get Questionnaire
+A <- B : Update Task (in-progress)
+B --> B : Complete Questionnaire\nProduce output QuestionnaireResponse
+A <- B : Post QuestionnaireResponse
+A <- B : Update Task (completed)\nTask.output references QuestionnaireResponse
+hide footbox
+
+@enduml

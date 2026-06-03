@@ -24,8 +24,8 @@ See [Connecting Applications with API Data Sources](connecting_applications_with
 #### Complete Questionnaire Request
 Here we provide a detailed view of an example interaction between a patient application and a requester (provider, CBO, or CP) for the completion of a questionnaire. The example shows one of the four ways the questionnaire can be transmitted and the response received from the patient.
 
-<object data="PatientQuestionnaire.svg" type="image/svg+xml"></object>
-<br>
+<div>{% include CompleteQuestionnaireRequest.svg %}</div>
+<br clear="all"/>
 
 | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |
@@ -39,8 +39,8 @@ Here we provide a detailed view of an example interaction between a patient appl
 #### General Information Request
 Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO, or CP) for a general information request.  The example shows the patient returning an optional response.
 
-<object data="PatientInformation.svg" type="image/svg+xml"></object>
-<br>
+<div>{% include GeneralInformationRequest.svg %}</div>
+<br clear="all"/>
 
 | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |
@@ -52,8 +52,8 @@ Here we provide a detailed view of an interaction between a patient application 
 #### Make Contact Request
 Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO, or CP) for providing one or more options from which to select to make contact with a service, provider or organization. The example shows the patient returning an optional response.
 
-<object data="PatientContact.svg" type="image/svg+xml"></object>
-<br>
+<div>{% include MakeContactRequest.svg %}</div>
+<br clear="all"/>
 
 | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |
@@ -66,8 +66,8 @@ Here we provide a detailed view of an interaction between a patient application 
 #### Review Material Request
 Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO, or CP) for providing review material. 
 
-<object data="PatientReview.svg" type="image/svg+xml"></object>
-<br>
+<div>{% include ReviewMaterialRequest.svg %}</div>
+<br clear="all"/>
 
 | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |

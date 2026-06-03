@@ -56,7 +56,8 @@ Figure 1 and the Table below show the high-level context of the referral use cas
 
 The [Patient Coordination](patient_coordination_workflow.html#patient-coordination-workflow) Workflow shows some, but not all of the possible interactions with the patient. It provides a way for the provider, CP, or CBO to ask a patient to do something, and track whether they have done it and possibly the outcomes. In Figure 1 below, patient coordination is indicated by a red box on steps 9 and 12.
 
-{% include img.html img="HighLevelReferralContext.svg" caption="Figure 1: Referral Use Cases Context" %}
+<div>{% include HighLevelReferralContext.svg %}</div>
+<br clear="all"/>
 
 
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">

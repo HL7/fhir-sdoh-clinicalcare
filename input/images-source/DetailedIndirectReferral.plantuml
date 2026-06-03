@@ -6,6 +6,7 @@ participant "Referral Source" as A
 participant "Intermediary (CP)" as B
 participant "Referral Target (CBO)" as C
 
+autonumber
 A --> A : Create ServiceRequest + Task
 A -> B : Post Referral Task
 
@@ -42,5 +43,5 @@ A -> A : Evaluate Status (completed)
 A -> B : Get Procedure(s)
 
 A -> A : Update ServiceRequest to Completed\nUpdate Goal as appropriate
-
+hide footbox
 @enduml

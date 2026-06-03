@@ -6,6 +6,7 @@ participant "Referral Source" as A
 participant "Intermediary (CP)" as B
 participant "Referral Target (CBO) (Not FHIR-enabled)" as C
 
+autonumber
 A --> A : Create ServiceRequest + Task
 A -> B : Post Referral Task
 C -> B : Get Task based on lastUpdated (polling or subscription notification)
@@ -43,5 +44,5 @@ A -> A : Evaluate Status (completed)
 A -> B : Get Procedure(s)
 
 A -> A : Update ServiceRequest to Completed\nUpdate Goal as appropriate
-
+hide footbox
 @enduml

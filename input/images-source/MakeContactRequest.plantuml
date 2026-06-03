@@ -1,0 +1,18 @@
+@startuml
+/'!theme bluegray'/
+title Review Material Request Flow
+
+participant "Requester" as A
+participant "Patient" as B
+
+autonumber
+A --> A : Create Task and reference contacts as .input
+A --> B : Notify Patient
+A <- B : Get Task
+A <- B : Get Contacts
+A <- B : Update Task (in-progress)
+B --> B : Select Contact(s) to share
+A <- B : Update Task (completed)\nTask.output includes chosen contact
+hide footbox
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+
+title "Assessment Framework"
+
+agent "Questionnaire" as Q
+agent  "QuestionnaireResponse" as QR
+agent  "Observation Assessment" as OA
+agent  "Observation Screening Response" as OSR
+agent  "Condition" as C
+
+Q -[hidden]r-> OA : hidden link to ensure OA is rendered after Q
+QR -u-> Q : Canonical\nQuestionnaire
+OSR -l-> QR : derivedFrom
+OSR -u-> OSR : derivedFrom\nhasMember
+C -d-> OSR : Evidence
+C -l-> QR : Evidence
+OSR -[hidden]u-> OA : hidden link to ensure OA is rendered after OSR
+C -> OA : Evidence
+
+@enduml

@@ -9,8 +9,6 @@ This use case addresses the need for a referring entity to determine if a Commun
 
 Once capacity is confirmed and a referral is initiated, implementers should follow the guidance outlined in the existing Closed-Loop Referral Workflow page.
 
-<div>{% include capacity.svg %}</div>
-<br clear="all"/>
 
 ### Scope
 
@@ -69,11 +67,13 @@ This workflow occurs before the initiation of a formal referral to a CBO. It is 
 
 The diagram below shows a simplified view of the capacity status query workflow.
 
-{% include img.html img="CapacityStatusSimplified.png" caption="Figure 1: Simple Capacity Status Query Workflow" %} 
+<div>{% include CapacityStatusSimplified.svg %}</div>
+<br clear="all"/>
 
 The diagram below shows the capacity status query in the context of the indirect referral workflow. The orange highlighted section shows the capacity status query steps.
 
-{% include img.html img="DetailedIndirectPreReferralWithCapacityStatus.png" caption="Figure 2: Capacity Status in an Indirect Referral" %} 
+<div>{% include DetailedIndirectPreReferralCapacityStatus.svg %}</div>
+<br clear="all"/>
 
 #### Post-Referral Capacity Status Notification Workflow
 
@@ -81,14 +81,15 @@ This workflow occurs when a CBO rejects an existing referral due to being at cap
 
 The diagram below shows the post-referral capacity status notification workflow.
 
-{% include img.html img="DetailedIndirectPostReferralCapacityStatus.png" caption="Figure 3: Post-Referral Capacity Status Notification Workflow" %} 
+<div>{% include DetailedIndirectPostReferralCapacityStatus.svg %}</div>
+<br clear="all"/>
 
 #### Capacity Status Query Light
 
 A “light” version of the Capacity Status Query where the referral source has a FHIR server API and the referral target does not have a FHIR server API but has an application that can access the referral source’s FHIR server API. The diagram below shows the capacity status query light workflow.
 
-{% include img.html img="CapacityStatusQueryLight.png" caption="Figure 4: Capacity Status Query Light" %} 
-
+<div>{% include CapacityStatusQueryLight.svg %}</div>
+<br clear="all"/>
 
 ### FHIR Artifacts and Technical Guidance
 

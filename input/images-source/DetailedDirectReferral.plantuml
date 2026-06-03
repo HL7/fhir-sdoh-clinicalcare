@@ -5,6 +5,7 @@ title Detailed Direct Workflow
 participant "Referral Source" as A
 participant "Referral Target (CBO)" as B
 
+autonumber
 A --> A : Create ServiceRequest + Task
 A -> B : Post Referral Task
 
@@ -22,5 +23,5 @@ A -> B : Get Task
 A -> A : Evaluate Task Status (completed)
 A -> B : Get Procedure(s)
 A -> A : Update ServiceRequest to Completed\nUpdate Goal as appropriate
-
+hide footbox
 @enduml

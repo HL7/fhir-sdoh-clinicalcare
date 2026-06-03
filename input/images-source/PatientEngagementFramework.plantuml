@@ -1,0 +1,19 @@
+@startuml
+
+title "Patient Engagement Framework"
+
+agent "Task for Patient" as T
+agent  "Questionnaire" as Q
+agent  "HealthcareService" as H
+agent  "DocumentReference" as D
+agent  "QuestionnaireResponse" as QR
+
+
+T -u-> Q : input
+T -u-> H : input
+T -l-> D : input
+T -l-> D : output
+T -u-> QR : output
+T -> T : partOf
+
+@enduml

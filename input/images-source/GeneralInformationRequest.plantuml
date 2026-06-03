@@ -1,0 +1,18 @@
+@startuml
+/'!theme bluegray'/
+title General Information Request Flow
+
+participant "Requester" as A
+participant "Patient" as B
+
+autonumber
+A --> A : Create Task with question as .description
+A --> B : Notify Patient
+A <- B : Get Task
+A <- B : Update Task (in-progress)
+B --> B : Respond to Request for Information
+A <- B : Update Task (completed)\nTask.output includes text of response
+hide footbox
+
+
+@enduml

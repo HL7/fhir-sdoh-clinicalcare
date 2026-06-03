@@ -1,0 +1,17 @@
+@startuml
+/'!theme bluegray'/
+title Review Material Request Flow
+participant "Requester" as A
+participant "Patient" as B
+
+autonumber
+A --> A : Create Task with DocumentReference as .focus
+A --> B : Notify Patient
+A <- B : Get Task
+A <- B : Get DocumentReference
+A <- B : Update Task (in-progress)
+B --> B : Review Document
+A <- B : Update Task (completed)
+hide footbox
+
+@enduml

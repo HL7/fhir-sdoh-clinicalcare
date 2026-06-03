@@ -1,0 +1,13 @@
+@startuml
+/'!theme bluegray'/
+title Capacity Status Query Light Flow
+
+participant "Referral Source" as A
+participant "Referral Target" as B
+
+autonumber
+A -> B : Get HealthcareService(s)
+A --> A : Evaluate HealthcareService(s)\nCapacity Status - if no capacity\nrepeat Step 1 with\na different Referral Target or HealthcareService,\nelse proceed to Step 3
+A --> A : Initiate (direct) / resume (indirect)\nreferral workflow
+hide footbox
+@enduml

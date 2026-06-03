@@ -1,0 +1,25 @@
+@startuml
+
+title "Referral Management Framework"
+
+agent "Goal" as G
+agent  "Task for Referral Management" as T
+agent  "Observation Screening or Assessment" as OSR
+agent  "Service Request" as SR
+agent  "Procedure" as P
+agent  "Condition" as Cond
+agent  "Consent" as Cons
+
+SR -l-> G : pertainsToGoal
+SR -r-> Cons : supportingInfo
+SR -d-> OSR : Reason
+SR -d-> Cond : Reason
+P -u-> SR : basedOn
+P -u-> Cond : Reason
+P -u-> OSR : Reason
+T -> SR : Focus
+T -> P : Output
+T -> T : partOf
+T -[hidden]r-> Cons : hidden link to ensure G is rendered after T
+
+@enduml

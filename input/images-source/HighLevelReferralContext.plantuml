@@ -1,0 +1,27 @@
+@startuml
+/'!theme bluegray'/
+title High Level Referral Context
+
+participant "Provider" as A
+participant "Referral Target (CP, CBO, etc.)" as C
+participant "Patient" as B
+
+autonumber
+
+hide footbox
+
+A <-- B : Patient takes Assessment
+A --> A : Evaluate Assessment
+A <--> B : Provider and Patient prioritize Goals, establish need for referral and Patient provides consent
+A --> A : Record Goal(s)\nRecord Condition(s)\nCapture Consent
+A -> B : Patient app retrieves Goals and/or Referral and Referral Assignment
+A -> C : Initial Referral
+C -> A : Referral Accepted
+C -> A : Referral Progress Updated
+C <--> B : Optional exchange with Patient
+C -> A : Referral Completed
+C -> B : Referral progress updated
+A <-> B : Optional close loop exchange with Patient
+A --> A : Update Goal(s) and/or Condition(s) as appropriate
+
+@enduml
