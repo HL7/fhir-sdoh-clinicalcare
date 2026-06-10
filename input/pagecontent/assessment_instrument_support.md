@@ -722,9 +722,9 @@ This IG includes a complete example of the [Hunger Vital Sign (HVS)](https://loi
 
 * a [SDC HVS Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)
 * a [SDC HVS QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html)
-* a [StructureMap] that takes the [QuestionnaireResponse] and creates the appropriate [SDOHCC Observation Screening Response] and [SDOHCC Condition] instances
-* a [SDOHCC Observation Screening Response] instance used to record Question 3 on the assessment instrument (computed based on the answers to Questions 1 and 2)
-* a [SDOHCC Condition] instance that could be used to record the health concern based on the assessment instrument results
+* a [StructureMap](StructureMap-SDOHCC-StructureMapHungerVitalSign.html) that takes the [QuestionnaireResponse] and creates the appropriate [SDOHCC Observation Screening Response] and [SDOHCC Condition] instances
+* a [SDOHCC Observation Screening Response](Observation-SDOHCC-ObservationResponseHungerVitalSignQuestion3Example.html) instance used to record Question 3 on the assessment instrument (computed based on the answers to Questions 1 and 2)
+* a [SDOHCC Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) instance that could be used to record the health concern based on the assessment instrument results
 
 #### Example: Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE)
 
