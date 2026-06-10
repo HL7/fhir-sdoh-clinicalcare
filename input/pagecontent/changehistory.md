@@ -441,7 +441,7 @@ Added CapabilityStatement
 #### Documentation
 
 * [Home Page](index.html) – added reference to new content
-* [STU2 Ballot Changes](stu2_ballot_changes.html) – this page
+* [STU2 Ballot Changes](#stu-2-ballot)
 * Functional Use Cases – added Patient/Client use case [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255)
 * Support for Multiple Domains – added support for VSAC group value sets [FHIR-34236](https://jira.hl7.org/browse/FHIR-34236)
 * Exchange Workflow – added new workflow for Patient/Client and CBO applications [FHIR-34255](https://jira.hl7.org/browse/FHIR-34255), [FHIR-34256](https://jira.hl7.org/browse/FHIR-34256)
