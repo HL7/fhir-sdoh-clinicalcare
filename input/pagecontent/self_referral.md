@@ -9,6 +9,8 @@ This use case describes the scenario where an individual independently identifie
 
 The primary distinction from the provider-centric workflows described in this guide is that the **Individual/Patient** is the initiating actor. The system they use to make the request, a **Community Resource Platform**, acts as the technical **Referral Source** system. Consequently, the "closed loop" involves communicating referral disposition and outcomes back to this platform for the individual’s benefit, rather than to a clinical healthcare provider.
 
+This Self-Referral use case reflects a real-world scenario that happens today but is not yet handled in a standardized way. It was contributed by community members, and support for it is not required for conformance with this implementation guide. More generally, the use cases described throughout this guide are illustrative of common scenarios and are not an exhaustive catalog of all possible interactions within the SDOH ecosystem; implementers may apply the profiles and exchange patterns defined here to additional use cases that are not explicitly documented.
+
 
 ### Scope
 
