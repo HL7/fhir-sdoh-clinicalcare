@@ -45,7 +45,7 @@ The systems involved in the exchange mirror those in the established referral wo
 
 - EHR System (Referral Source): The system used by the provider to manage patient care and initiate referrals.
 - CBO System (Referral Target): The system used by the CBO to manage referrals and service delivery.
-- Intermediary/Community Platform (CP): A system that facilitates communication and data exchange between the provider and CBO, particularly in indirect referral scenarios. For example, a Social Care Network (SCN) may play the role of the CP.
+- Coordination Platform (CP): The system that facilitates communication and data exchange between the provider and CBO, particularly in indirect referral scenarios. For example, an intermediary may operate the coordination platform that connects a Social Care Network (SCN).
 
 
 ### Exchange Workflows

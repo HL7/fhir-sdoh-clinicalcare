@@ -1,7 +1,7 @@
 Instance: SDOHCC-TaskReferralManagementOrderSubtaskAcceptedExample
 InstanceOf: SDOHCCTaskForReferralManagement
 Title: "SDOHCC Task Referral Management Order Subtask Accepted Example"
-Description: "An example of an accepted Task For Referral Management that delegates responsibility to fulfill a referral from an intermediary organization to another organization (e.g., when a Coordination Platform receives a Task from a referral source and passes it on to a Community Based Organization)."
+Description: "An example of an accepted Task For Referral Management that delegates responsibility to fulfill a referral from an intermediary to another organization (e.g., when an intermediary's coordination platform (CP) receives a Task from a referral source and passes it on to a Community Based Organization)."
 Usage: #example
 * intent = #order
 * code = $task-code#fulfill "Fulfill the focal request"

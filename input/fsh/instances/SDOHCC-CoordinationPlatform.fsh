@@ -9,7 +9,7 @@ Usage: #definition
 * name = "SDOHCC_CoordinationPlatform"
 * status = #active
 * date = "2021-06"
-* purpose = "CPs are intermediaries who take on responsibility for managing SDOH referrals and ensuring they are executed by appropriate service delivery organizations.  These systems must respond to referral fulfillment Tasks received from [Clinical Care Referral Sources](CapabilityStatement-SDOHCC-ReferralSource.html) and also the initiation and management of referral fulfillment Tasks subsequently directed out to [Referral Recipients](CapabilityStatement-SDOHCC-ReferralRecipient.html).  They may also take on some of the diagnostic work, including having patients or care-givers complete questionnaires, extract relevant observations and preliminary findings and work with patients to define goals."
+* purpose = "A coordination platform (CP) is the system operated by an intermediary, the organization that takes on responsibility for managing SDOH referrals and ensuring they are executed by appropriate service delivery organizations.  These systems must respond to referral fulfillment Tasks received from [Clinical Care Referral Sources](CapabilityStatement-SDOHCC-ReferralSource.html) and also the initiation and management of referral fulfillment Tasks subsequently directed out to [Referral Recipients](CapabilityStatement-SDOHCC-ReferralRecipient.html).  They may also take on some of the diagnostic work, including having patients or care-givers complete questionnaires, extract relevant observations and preliminary findings and work with patients to define goals."
 * kind = #requirements
 * fhirVersion = #4.0.1
 * format[0] = #xml
@@ -912,7 +912,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile[=].extension.valueCode = #SHALL
-* rest[=].resource[=].documentation = "Used to create Tasks on downstream systems seeking fufillment of ServiceRequests or performance of a patient activity on a coordinating system serving as an intermediary and to retrieve Task updates from a fulfilling system."
+* rest[=].resource[=].documentation = "Used to create Tasks on downstream systems seeking fufillment of ServiceRequests or performance of a patient activity on a coordination platform and to retrieve Task updates from a fulfilling system."
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #create
@@ -1021,7 +1021,7 @@ Usage: #definition
 * rest[=].interaction.code = #batch
 * rest[=].interaction.documentation = "Allows polling for changes to multiple resource types simultaneously"
 * rest[+].mode = #server
-* rest[=].documentation = "Coordinating systems and service providers will frequently need to access information from the SDOH clinical care manager."
+* rest[=].documentation = "Coordination platforms (CPs) and service providers will frequently need to access information from the SDOH clinical care manager."
 * rest[=].security.service = $restful-security-service#SMART-on-FHIR
 * rest[=].security.description = "Implementations must meet the general privacy & security requirements documented in [this implementation guide](privacy_and_security.html)."
 * rest[=].resource[0].type = #CareTeam

@@ -27,7 +27,7 @@ The actors in the workflows are described in the table below.   The graphical ic
 | ----------  | ------------------ |
 | ![providericon] Provider  | Includes licensed providers and others that interact with the patient to assess social risk, set goals, and determine/recommend referrals.   |
 | ![cboicon] Community Based Organization (CBO)  | An organization that provides specific services to the community or to a targeted population within the community.   |
-| ![cpicon]  Coordination Platform (CP) | An intermediary between a provider and a CBO that plays a role in facilitating the referral process and finding resources for at-risk individuals.   |
+| ![cpicon]  Coordination Platform (CP) | The technology platform an intermediary operates to relay data between a provider's and a CBO's systems, supporting the referral process and finding resources for at-risk individuals.   |
 | ![patienticon] Patient   | A consumer, or client, who is the subject of the assessment, goals, referrals and services delivered. Use of the term in this IG does not necessarily imply a clinical context.   |
 | ![fhirserver] FHIR Server | A server that supports a FHIR API and can make FHIR API calls to other servers |
 | ![fhirapplication] FHIR-enabled Application | An application that can make FHIR API calls to a FHIR server, but does not itself support a FHIR API |
@@ -35,18 +35,18 @@ The actors in the workflows are described in the table below.   The graphical ic
 {:.grid}
 
 ### Referral Use Cases
-The functional use cases in the table below describe the referral process, initiated by a referral source (e.g., provider or other healthcare actor) to a referral target (e.g., a CBO), either directly or indirectly via an intermediary (e.g., a CP). For each use case, the capabilities or limitations of the actors are described.  The table links to the functional use case and the associated detailed technical exchange workflow.
+The functional use cases in the table below describe the referral process, initiated by a referral source (e.g., provider or other healthcare actor) to a referral target (e.g., a CBO), either directly or indirectly via an intermediary using a coordination platform (CP). For each use case, the capabilities or limitations of the actors are described.  The table links to the functional use case and the associated detailed technical exchange workflow.
 
 | Functional Use Case |  Description           | Actors |
 | ------------------------- | ------------------------------------ | ---------------- |
-| [Direct Referral](referral_workflow.html#directreferral) | A referral between a referral source (e.g., provider) and a referral target (e.g., CBO) where both entities have FHIR server APIs and an intermediary (e.g., CP) is not involved in the referral.| ![providericon], ![cboicon] |
-| [Direct Referral Light](referral_workflow.html#direct-referral-light) | A “light” version of the Direct Referral. A referral between a referral source (e.g., provider) and a referral target (e.g., CBO) where the referral source has a FHIR server API, the referral target does not have a FHIR server API but has an application that can access the referral source’s FHIR server API, and an intermediary (e.g., CP) is not involved in the referral.  | ![providericon], ![cboicon]  |
-| [Indirect Referral](referral_workflow.html#indirectreferral) | A referral between a referral source (e.g., provider) and a referral target (e.g., a CBO) that involves an intermediary (e.g., a CP) and all entities have FHIR servers APIs.  | ![providericon], ![cboicon]. ![cpicon] |
-| [Indirect Referral Light](referral_workflow.html#indirect-referral-light) | A “light” version of the Indirect Referral. A referral between a referral source (e.g., provider) and a referral target (e.g., CBO) that involves an intermediary (e.g., a CP) where the referral source and intermediary have FHIR server APIs and the referral target does not have a FHIR server API but has an application that can access the intermediaries FHIR server API. | ![providericon], ![cboicon]. ![cpicon] |
+| [Direct Referral](referral_workflow.html#directreferral) | A referral between a referral source (e.g., provider) and a referral target (e.g., CBO) where both entities have FHIR server APIs and an intermediary using a coordination platform (CP) is not involved in the referral.| ![providericon], ![cboicon] |
+| [Direct Referral Light](referral_workflow.html#direct-referral-light) | A “light” version of the Direct Referral. A referral between a referral source (e.g., provider) and a referral target (e.g., CBO) where the referral source has a FHIR server API, the referral target does not have a FHIR server API but has an application that can access the referral source’s FHIR server API, and an intermediary using a coordination platform (CP) is not involved in the referral.  | ![providericon], ![cboicon]  |
+| [Indirect Referral](referral_workflow.html#indirectreferral) | A referral between a referral source (e.g., provider) and a referral target (e.g., a CBO) that involves an intermediary using a coordination platform (CP) and all entities have FHIR server APIs.  | ![providericon], ![cboicon]. ![cpicon] |
+| [Indirect Referral Light](referral_workflow.html#indirect-referral-light) | A “light” version of the Indirect Referral. A referral between a referral source (e.g., provider) and a referral target (e.g., CBO) that involves an intermediary using a coordination platform (CP) where the referral source and the coordination platform have FHIR server APIs and the referral target does not have a FHIR server API but has an application that can access the coordination platform’s FHIR server API. | ![providericon], ![cboicon]. ![cpicon] |
 {:.grid}
 
 <div markdown="1" class="stu-note">
-Indirect Referral requires making data instances (e.g., ServiceRequest, Condition, DocumentReference) from the referral source on the intermediary server available for query by the referral target and making some data instances (e.g., Procedures) from the referral target available on the intermediary server for query by the referral source. The intermediary can make this happen by cloning the data from the original record creator, or by proxying access to the creating system. This IG does not specify how precisely this should be done and resolution of this issue should be a topic of implementer discussion.
+Indirect Referral requires making data instances (e.g., ServiceRequest, Condition, DocumentReference) from the referral source on the coordination platform’s server available for query by the referral target and making some data instances (e.g., Procedures) from the referral target available on the coordination platform’s server for query by the referral source. The coordination platform can make this happen by cloning the data from the original record creator, or by proxying access to the creating system. This IG does not specify how precisely this should be done and resolution of this issue should be a topic of implementer discussion.
 </div>
 
 #### Referral Use Case Overview
@@ -264,12 +264,12 @@ The referral occurs in two separate interactions. The first is between the refer
 
 In the Indirect Referral, this IG assumes that the referral source does not have the ability to communicate directly with the referral target. There may be multiple referral targets for responsibilities that will be determined and managed by the intermediary. 
 
-The intermediary **SHALL** support the following:
+The coordination platform **SHALL** support the following:
 
 1. Create a local copy of, or proxy, all relevant referenced resources from the referral source
 2. Create ServiceRequest(s) with `ServiceRequest.intent` value “filler-order” and `ServiceRequest.basedOn` references the original referral source ServiceRequest(s) 
 3. Create Task(s) to be posted to the referral target(s) that reference the referral source Task(s) via `Task.partOf`
-4. If local copies of the referenced resources are maintained by the intermediary, the intermediary must subscribe or periodically query the referral source for updates to the referenced resources
+4. If local copies of the referenced resources are maintained by the coordination platform, the coordination platform must subscribe or periodically query the referral source for updates to the referenced resources
 
 <div>{% include DetailedIndirectReferral.svg %}</div>
 <br clear="all"/>
@@ -287,12 +287,12 @@ The provider may request to have the service delivered by a specific CBO.   The 
 
 The referral occurs in two separate interactions. The first is between the referral source and the intermediary and the second is between the intermediary and the referral target. 
 
-The intermediary **SHALL** support the following:
+The coordination platform **SHALL** support the following:
 
 1. Create a local copy of, or proxy, all relevant referenced resources from the referral source
 2. Create ServiceRequest(s) with `ServiceRequest.intent` value “filler-order” and `ServiceRequest.basedOn` references the original referral source ServiceRequest(s) 
 3. Create Task(s) to be queried by the referral target(s) that reference the referral source Task(s) via `Task.partOf`
-4. If local copies of the referenced resources are maintained by the intermediary, the intermediary must subscribe or periodically query the referral source for updates to the referenced resources
+4. If local copies of the referenced resources are maintained by the coordination platform, the coordination platform must subscribe or periodically query the referral source for updates to the referenced resources
 
 <div>{% include DetailedIndirectReferralLight.svg %}</div>
 <br clear="all"/>
