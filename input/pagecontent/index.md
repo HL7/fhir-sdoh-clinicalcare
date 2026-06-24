@@ -42,17 +42,18 @@ The Gravity Project team has drafted a new STU3 version of the IG for balloters 
 
 ### Overview
 
-Social determinants of health (SDOH) are the conditions in the environments where people are born, live, learn, work, play, worship, and age that affect a wide range of health, functioning, and quality-of-life outcomes and risks[^1]. They are increasingly being recognized as essential factors that influence healthcare outcomes. This HL7 Implementation Guide (IG) defines how to exchange coded content using the HL7 FHIR Standard for the following SDOH-focused care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions.  This IG addresses the need to gather SDOH information in multiple settings, share that information between stakeholders, and exchange referrals between organizations to address specific social risks and needs, all with appropriate patient consent.  In addition, the IG demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research.
+Social determinants of health (SDOH) are the conditions in the environments where people are born, live, learn, work, play, worship, and age that affect a wide range of health, functioning, and quality-of-life outcomes and risks[^1]. They have long been recognized as essential factors influencing [80-90% of health outcomes](https://nam.edu/perspectives/social-determinants-of-health-101-for-health-care-five-plus-five/). Given the breadth of their impact, assessing and addressing SDOH requires collaboration across health-related sectors — health care, social services, and public health. Models for this cross-sector collaboration are increasingly woven into health care reform, including accountable communities for health, the CMS Accountable Health Communities Model, community information exchanges (CIEs), and emerging community care hub pilots. This HL7 Implementation Guide (IG) defines how to exchange coded content across these sectors using the HL7 FHIR Standard for the following SDOH-focused care activities: use of standardized assessment instruments, assessment of social conditions, goal setting, planning and performing interventions, and reporting on outcomes.  This IG addresses the need to gather reliable, evidence-based SDOH information in multiple settings, share it among stakeholders and sectors, and exchange referrals and outcomes between organizations to address specific social risks and protective factors, all with appropriate patient consent.  In addition, the IG demonstrates how to share data to support secondary purposes such as population health, quality, policy, and research.
 
 
 This IG was developed by the [Gravity Project], which aims to build and promulgate consensus-driven social determinants of health (SDOH) data standards for health and social care interoperability and use among multiple stakeholders. The project and this implementation guide are focused on the U.S. environment.  This IG leverages content from the [US Core Implementation Guide]({{site.data.fhir.ver.uscore}}/index.html) and binds to US-specific terminology.  However, the basic constructs and interaction patterns may well be applicable outside the U.S.
 
-The IG supports the following use cases:
-* 	Documenting SDOH data in conjunction with patient encounters with providers, payers, and community services
-*   Referring patients to address SDOH needs via an electronic workflow.  The referral framework includes support for intermediary organizations to manage service delivery, closed loop feedback to the ordering provider and direct engagement with the patient and their caregivers.
-* 	Identifying cohorts of individuals that have a common relationship to another entity (e.g., covered by the same payer)
+The IG supports the following base use cases:
+* 	Documenting social risk and protective factor data in conjunction with patient encounters.
+*   Tracking social care interventions to completion. This includes referring patients to address SDOH needs via an electronic workflow — spanning a [capacity check](capacity.html) before a referral, [self-referral](self_referral.html), [referral for further assessment](rffa.html), [content-rich referrals](referral_workflow.html#referral-use-case-overview), and tracking [program enrollment status](enrollment.html) as services are delivered. The referral framework includes support for intermediary organizations to manage service delivery, closed-loop feedback to the ordering provider, and direct engagement with the patient and their caregivers.
+* 	Documenting and communicating the outcomes of social care interventions.
+* 	Aggregating and analyzing information for population health, policy, and research.
 
-{% include img-med.html img="ConceptualFramework-orig.jpeg" caption="Figure 1: Conceptual Framework for SDOH Clinical Care" %}
+{% include img-med.html img="GravityProjectModel.png" caption="Gravity Project Model" %}
 
 <div markdown="1" class="stu-note">
 Throughout this IG, the referral source is typically illustrated as a health care provider and the referral target as a Community Based Organization (CBO).
@@ -61,17 +62,14 @@ This version of the guide defines social service organization and recognizes a C
 Future versions may adopt social service organization more broadly, as this concept is inclusive of all organizations within the social service sector.
 </div>
 
-The activities supported by this IG include (see [Conceptual Framework](sdoh_clinical_care_scope.html) for more details)
-  - Screening: This refers to activities where social risk data from individuals are initially captured, whether through a self-administered, provider-administered, or health plan-administered questionnaire. These activities may also be repeated at certain intervals to monitor changes in social risks.
-  - Assessment/Diagnosis: These include activities where providers (clinical and community-based) and health plans analyze the data obtained through screening and interaction with the individual to determine their social risks and needs.
-  - Interventions: These refer to actions undertaken by providers (clinical and community-based) and health plans to help address identified social risks and needs. These include referrals, case management, care planning, counseling and education, and provision of services and orders.
+Examples of the existing and potential core activities supported by this IG include (see the [Project Model](sdoh_clinical_care_scope.html#project-model) for more details)
+  - Use of standardized assessment instruments: This refers to activities where data from individuals are initially captured, whether through a self-administered, provider-administered, or health plan-administered instrument. These activities may also be repeated at certain intervals to monitor changes in social risks and protective factors. Responses are mapped to observations, conditions, and goals using SDOH-specific value sets and established standards (see [Assessment Instrument Support](assessment_instrument_support.html#using-structuremap-to-generate-observations-or-conditions-from-questionnaireresponse)).
+  - Assessment/Diagnosis: These include activities in which providers (health care and social services) and/or health insurers systematically analyze the data, along with patient preferences, to determine social risks and needs as well as protective factors, and to identify patient-centered goals of care.
+  - Interventions: These refer to actions undertaken by providers (health care and social services) and/or health insurers to help address identified social risks, needs, and protective factors. These include referrals, case management, care planning, counseling and education, and provision of services and orders.
+  - Communicating the outcomes of interventions.
 
 
-Currently, this IG is intended to support Patient Applications, Provider's Electronic Health Record (EHR) systems, Coordination Platforms that intermediate between Providers, and Community Based Organizations that provide SDOH services. In the future payer systems and governmental systems will be supported. The IG establishes a framework for SDOH-related interventions including:
-* capture of  data from validated assessment instruments
-* mapping the responses from assessments to observations, conditions, and goals using SDOH-specific value sets using established standards (see [Assessment Instrument Support](assessment_instrument_support.html#using-structuremap-to-generate-observations-or-conditions-from-questionnaireresponse))
-* generating and monitoring referrals from providers and care coordinators for SDOH-related services provided by CBOs
-* capturing the results of the referrals as procedures
+Currently, this IG is intended to support Patient Applications, Provider's Electronic Health Record (EHR) systems, Coordination Platforms that intermediate between Providers, and Community Based Organizations that provide SDOH services. In the future payer systems and governmental systems will be supported.
 
 ### Dependencies
 
