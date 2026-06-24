@@ -9,7 +9,7 @@ Usage: #definition
 * name = "SDOHCC_ReferralSource"
 * status = #active
 * date = "2021-06"
-* purpose = "Because systems that originate requests for service may sometimes also be recipients of requests for service, the requirements include 'SHOULD' expectations to also accept and process requests from other systems.  The referral source may either interact directly with a [Referral Recipient](CapabilityStatement-SDOHCC-ReferralRecipient.html) or will interact through an intermediary [Coordination Platform](CapabilityStatement-SDOHCC-CoordinationPlatform.html).  Responsibilities of Referral Sources include capturing information from a patient in the form of QuestionnaireResponses, Observations, Conditions and Goals as well as creating the ServiceRequest instances that refer patients for needed services and the Tasks that initiate fulfillment of those referrals."
+* purpose = "Because systems that originate requests for service may sometimes also be recipients of requests for service, the requirements include 'SHOULD' expectations to also accept and process requests from other systems.  The referral source may either interact directly with a [Referral Recipient](CapabilityStatement-SDOHCC-ReferralRecipient.html) or will interact through a [Coordination Platform](CapabilityStatement-SDOHCC-CoordinationPlatform.html) operated by an intermediary.  Responsibilities of Referral Sources include capturing information from a patient in the form of QuestionnaireResponses, Observations, Conditions and Goals as well as creating the ServiceRequest instances that refer patients for needed services and the Tasks that initiate fulfillment of those referrals."
 * kind = #requirements
 * fhirVersion = #4.0.1
 * format[0] = #xml
@@ -904,7 +904,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile[=].extension.valueCode = #SHALL
-* rest[=].resource[=].documentation = "Used to create Tasks on downstream systems seeking fufillment of ServiceRequests on a coordinating system serving as an intermediary and to retrieve Task updates from a fulfilling system.  Also used to create tasks soliciting information from patients."
+* rest[=].resource[=].documentation = "Used to create Tasks on downstream systems seeking fufillment of ServiceRequests on a coordination platform operated by an intermediary and to retrieve Task updates from a fulfilling system.  Also used to create tasks soliciting information from patients."
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #create

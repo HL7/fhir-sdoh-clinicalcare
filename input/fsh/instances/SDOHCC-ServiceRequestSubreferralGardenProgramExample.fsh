@@ -1,7 +1,7 @@
 Instance: SDOHCC-ServiceRequestSubreferralGardenProgramExample
 InstanceOf: SDOHCCServiceRequest
 Title: "SDOHCC ServiceRequest Subreferral Garden Program Example"
-Description: "An example of a completed, original-order ServiceRequest (i.e., SDOHCC Service Request Active Food Pantry Application Assist Example) that is based on a Service Request to an intermediary organization (e.g., a Coordination Platform) that then created this Service Request (i.e., Assistance with application for garden program) to be fulfilled by a Community Based Organization."
+Description: "An example of a completed, original-order ServiceRequest (i.e., SDOHCC Service Request Active Food Pantry Application Assist Example) that is based on a Service Request to an intermediary, whose coordination platform (CP) then created this Service Request (i.e., Assistance with application for garden program) to be fulfilled by a Community Based Organization."
 Usage: #example
 * basedOn.reference = "ServiceRequest/SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample"
 * status = #completed
