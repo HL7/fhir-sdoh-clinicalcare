@@ -27,7 +27,7 @@ There are two mechanisms for detecting the above changes - polling and subscript
 
 #### Polling
 
-In this mode, the system needing information (the 'client') occasionally queries the system maintaining the relevant Tasks and/or ServiceRequests to see if there is anything 'new'.  Clients may need to perform queries against multiple clients if relevant Tasks and ServiceRequests will not be maintained on the same server. To poll, the client will perform a [search]({{site.data.fhir.path}}search.html) for Tasks that are filtered to those either owned or requested by the searching organization. The search would also filter to only include those Tasks that had been created or changed since the server last looked.
+In this mode, the system needing information (the 'client') occasionally queries the system maintaining the relevant Tasks and/or ServiceRequests. When possible, the system may perform a consent validation check to verify the patient has consented to share their 'new' data back to the 'client' requesting the update. Clients may need to perform queries against multiple clients if relevant Tasks and ServiceRequests will not be maintained on the same server. To poll, the client will perform a [search]({{site.data.fhir.path}}search.html) for Tasks that are filtered to those either owned or requested by the searching organization. The search would also filter to only include those Tasks that had been created or changed since the server last looked. In cases where the consent is not bidirectional, the search would filter to only include those Tasks for which the patient has consented to share back with the referral source.
 E.g.
 
 ```[base]/Task?owner=https://example.com/fhir/Organization/123&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
@@ -41,10 +41,11 @@ If unassigned Tasks are possible - i.e., where the organization to perform the s
 ```[base]/Task?owner:missing=true&status=requested&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
 
 The frequency of polling needs to be often enough to allow for timely response to changes, while not imposing too high a requirement on system performance. For Gravity, systems that use polling **SHALL** check for new/updated information at least once per business day and **SHOULD** check for information at least once per hour during normal hours of operation.  Systems SHOULD NOT query more often than every 15 minutes unless there is an urgent change they are monitoring for.
+
 #### Subscription
+
 In the subscription mechanism, instead of the client system regularly querying the server to see if there are new Tasks or changes to existing Tasks, the client creates a
-[Subscription]({{site.data.fhir.ver.sdohsub}}/StructureDefinition-backport-subscription.html) instance on the server that indicates that it wants to be notified about changes to Tasks and, in the Subscription, provides filters that describe what
-subset of Tasks it is interested in.  The server will then push notifications when there are new Tasks and the client can then query for the specific Tasks that have changed.
+[Subscription]({{site.data.fhir.ver.sdohsub}}/StructureDefinition-backport-subscription.html) instance on the server that indicates that it wants to be notified about changes to Tasks and, in the Subscription, provides filters that describe what subset of Tasks it is interested in. In cases where the server validates patient consent to share data with the subscribing entity, the server may then push notifications when there are new Tasks and the client can then query for the specific Tasks that have changed.
  
 This Gravity functionality is based on the [R5 Subscription backport](http://hl7.org/fhir/uv/subscriptions-backport) implementation guide.  This implementation guide
 allows pre-adoption of the FHIR R5 topic-based subscription approach in R4 implementations and is the subscription approach that most U.S. EHR vendors have agreed to
