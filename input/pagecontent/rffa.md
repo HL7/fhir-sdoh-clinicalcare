@@ -7,16 +7,17 @@ The Gravity Project team has created a new narrative page providing guidance on 
 
 This page describes the use case, actors, systems, and information flows for referring an individual for a more comprehensive assessment of their health-related social needs (HRSN). This initial referral aligns with the [Gravity Co-Design Care and Data Model](https://confluence.hl7.org/download/attachments/175606815/FINAL-Co-Design-Report-Gravity-Project-and-Civitas-Networks-for-Health.pdf?version=1&modificationDate=1707760787615&api=v2) and can create a data link establishing a treatment relationship with care partners in cross sector care environments and is intended to be an extensible pathway for combining service requests for care coordination and contracted services in future iterations.
 
-In many clinical situations, an initial screening may indicate the presence of one or more health-related social needs, but the clinical care team may not have the time, resources, or specialized skills to perform a deeper, more comprehensive assessment. The primary goal of this use case is to enable a healthcare provider or other entity (e.g. behavioral health or other non-healthcare entity) to refer an individual to a community-based organization (CBO) or another partner organization that is equipped to conduct a more thorough assessment.
+In many clinical situations, an initial screening may indicate the presence of one or more health-related social needs, but the clinical care team may not have the time, resources, or specialized skills to perform a deeper, more comprehensive assessment. The primary goal of this use case is to enable a healthcare provider or other entity (e.g. behavioral health or other non-healthcare entity) to refer an individual to a community-based organization (CBO) or another partner organization that is equipped to conduct a more thorough assessment. This action is one way to establish the community care team as a member of the treatment team and, in some cases, may enable payment for additional service pathways (for example, care coordination, home-based services, or other specific contracted services).
 
 This exchange is intended to:
 
 - Enable a deeper understanding of an individual's HRSN to create a more holistic picture of their needs and goals.
-- Connect individuals with organizations and people skilled in performing comprehensive social needs assessments.
+- Connect individuals with organizations and people skilled in performing comprehensive social needs assessments which may initiate social care coordination and intervention pathways in community.
 - Ensure the results of the assessment are shared back with the referring provider to inform the individual's overall care plan.
 - Complement, not replace, existing workflows for referring a patient for specific services. A referral for further assessment can be initiated independently of, or in conjunction with, a referral for a specific service (e.g., provision of a meal).
+- Establish the treatment relationship of the community care team.
 
-For example, a patient might screen positive for food insecurity. During the follow-up conversation, the healthcare provider suspects other needs may be present but lacks the capacity to investigate further. The provider can then send a "Referral for Further Assessment" to a trusted CBO to gain a more complete understanding of the individual's situation and identify appropriate services.
+For example, a patient might screen positive for food insecurity. During the follow-up conversation, the healthcare provider suspects other needs may be present but may lack the capacity or specialized skills to investigate further. The provider can then send a "Referral for Further Assessment" to a trusted CBO to gain a more complete understanding of the individual's situation and identify appropriate services.
 
 
 ### Scope
