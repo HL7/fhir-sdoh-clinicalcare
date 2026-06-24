@@ -55,8 +55,10 @@ The IG supports the following use cases:
 {% include img-med.html img="ConceptualFramework-orig.jpeg" caption="Figure 1: Conceptual Framework for SDOH Clinical Care" %}
 
 <div markdown="1" class="stu-note">
-This IG often refers to Community Based Organizations (CBOs) as synonymous with a referral target and clinicians as synonymous with the referring provider.
-There is nothing that prevents use of the IG for other referral sources and targets.
+Throughout this IG, the referral source is typically illustrated as a health care provider and the referral target as a Community Based Organization (CBO).
+However, the guide is agnostic to referral source and referral target; nothing prevents use of the IG for other referral sources and targets.
+This version of the guide defines social service organization and recognizes a CBO as one type of social service organization.
+Future versions may adopt social service organization more broadly, as this concept is inclusive of all organizations within the social service sector.
 </div>
 
 The activities supported by this IG include (see [Conceptual Framework](sdoh_clinical_care_scope.html) for more details)

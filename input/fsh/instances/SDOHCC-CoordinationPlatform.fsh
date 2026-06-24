@@ -164,7 +164,7 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #token
 * rest[=].resource[=].searchParam[=].documentation = "Allows retrieving known Device records - and more specifically, retrieving more than one in a single call to poll for updates"
 * rest[=].resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].searchParam[=].extension.valueCode = #SHALL
+* rest[=].resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest[=].resource[=].searchParam[=].name = "_lastUpdated"
 * rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
 * rest[=].resource[=].searchParam[=].type = #date
@@ -1518,7 +1518,7 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for observations that are completed or revised (i.e. not in-progress or entered-in-error)"
 * rest[=].resource[+].type = #Organization
 * rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].extension.valueCode = #SHALL
 * rest[=].resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|7.0.0"
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
