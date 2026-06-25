@@ -1,7 +1,11 @@
-### Conceptual Framework
+### Project Model
 
-Coded Social determinants of health (SDOH) content is captured across core health care activities: screening/assessment, establishing health concerns, goal setting, care planning, interventions, outcomes and reporting. The conceptual framework, illustrated below, shows how these activities form a cycle of care. Over time, a patient’s progress toward care goals can be tracked and measured.
-{% include img.html img="ConceptualFramework-orig.jpeg" caption="Figure 1: Conceptual Framework" %}
+The Gravity Project develops evidence-based terminology, value sets, and FHIR-based exchange standards to support collaboration among health care, social, and public health organizations in addressing the social determinants of health (SDOH). Given this mission, the Gravity Project Model, illustrated below, describes the existing and possible activities that the community has determined data standards can support. The Gravity Project does not claim responsibility for building standards for every activity in the model; other entities may be better positioned to lead some efforts, and the model simply names them. For the full set of activities and their definitions, see the [Gravity Project Model materials](https://confluence.hl7.org/spaces/GRAV/pages/453903104/Gravity+Project+Conceptual+Model+-+Proposed+2026+Update) maintained by the Gravity Project on Confluence.
+{% include img.html img="GravityProjectModel.png" caption="Figure 1: Gravity Project Model" %}
+
+<div markdown="1" class="stu-note">
+Previous versions of this guide included a conceptual model that drew concerns from the community: an overly clinical focus, implied workflows that did not represent the variability of social service provision, and the absence of concepts central to social service evidence and practice. Because the revised illustration intentionally does not imply workflow, sequence, or fixed relationships, it is no longer a conceptual model — it is the Gravity Project Model: the set of existing and possible activities the community has determined data standards can support. The consensus revision materials are maintained by the Gravity Project on Confluence.
+</div>
 
 ### Scope of this IG
 
@@ -10,7 +14,7 @@ The focus for this version of the IG is to standardize the exchange of SDOH info
 * assessment of social risk,
 * establishing coded health concerns/problems,
 * creating patient driven goals, and
-* defining a RESTful closed loop referral process to manage interventions.
+* defining a closed-loop referral process to request, coordinate, and document SDOH-related interventions (see the [Project Model](sdoh_clinical_care_scope.html#project-model) for the broader set of activities these support).
 
 ####  Out of Scope
 
