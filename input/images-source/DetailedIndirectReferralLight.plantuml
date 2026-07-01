@@ -7,38 +7,36 @@ participant "Intermediary (CP)" as B
 participant "Referral Target (CBO) (Not FHIR-enabled)" as C
 
 autonumber
-A --> A : Create ServiceRequest + Task
+A --> A : Create ServiceRequest + Referral Task
 A -> B : Post Referral Task
-C -> B : Get Task based on lastUpdated (polling or subscription notification)
+C -> B : Get Referral Task based on lastUpdated (polling or subscription notification)
 
 B -> A : Get ServiceRequest + referenced resources
-B --> B : Evaluate Referral\nUpdate Task Status
+B --> B : Evaluate Referral\nUpdate Referral Task Status
 B --> A : Subscription Notification (optional)
 
-A -> B : Get Task
+A -> B : Get Referral Task
 B -> C : Create ServiceRequest\n(based on Referral)\nCreate CP Task\nfor CBO and link to\nReferral Source Task
-A --> A : Evaluate Task Status (accepted)
+A --> A : Evaluate Referral Task Status (accepted)
 
-C -> B : Get Task based on lastUpdated (polling or subscription notification)
+C -> B : Get CP Task based on lastUpdated (polling or subscription notification)
 C -> B : Get ServiceRequest + referenced resources
-C -> C : Evaluate Referral\nUpdate Task Status
-C -> B : Put Task (update)
+C -> C : Evaluate Referral\nUpdate CP Task Status
+C -> B : Put CP Task (update)
 
 
-B -> B : Evaluate Task Status\nUpdate Task Status to In Progress
+B -> B : Evaluate CP Task Status\nUpdate Referral Task Status to In Progress
 B -> A : Subscription Notification (optional)
-A -> B : Get Task
+A -> B : Get Referral Task
 A -> A : Evaluate Status (in-progress)
 
-C --> C : Complete Service\nCreate Procedure(s)\nUpdate Task Status to Completed
-C -> B : Put Task (update)
+C --> C : Complete Service\nCreate Procedure(s)\nUpdate CP Task Status to Completed
+C -> B : Put CP Task (update)
 C -> B : Post Procedure(s)
 
-B --> B : Link Procedure(s)\nUpdate Task Status to Completed
-
-B -> B : Link Procedure(s)\nUpdate Task Status to Completed
+B -> B : Link Procedure(s)\nUpdate Referral Task Status to Completed
 B -> A : Subscription Notification (optional)
-A -> B : Get Task
+A -> B : Get Referral Task
 
 A -> A : Evaluate Status (completed)
 A -> B : Get Procedure(s)

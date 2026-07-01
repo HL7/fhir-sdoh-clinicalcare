@@ -8,23 +8,23 @@ participant "Referral Target (CBO)" as C
 
 autonumber
 == Create Service Request ==
-A --> A : Create ServiceRequest + Task
+A --> A : Create ServiceRequest + Referral Task
 A -> B : Post Referral Task
 
 == Initial Processing ==
 B -> A : Get ServiceRequest + referenced resources
-B --> B : Evaluate Referral\n(Update Task Status)\nIdentify candidate Referral Target(s)
+B --> B : Evaluate Referral\n(Update Referral Task Status)\nIdentify candidate Referral Target(s)
 B --> A : Subscription Notification (optional)
 
 == Capacity Check (post-referral) ==
 B -> C : Create ServiceRequest\n(based on Referral)
 B -> C : POST CP Task to CBO
-C --> C : Evaluate Referral\nand Update Task Status\n(rejected - at capacity)
+C --> C : Evaluate Referral\nand Update CP Task Status\n(rejected - at capacity)
 C --> B : Subscription Notification (optional)
-B -> C : Get Task
-B --> B : Evaluate CP Task Status\nUpdate Task Status to in-progress
+B -> C : Get CP Task
+B --> B : Evaluate CP Task Status\nUpdate Referral Task Status to in-progress
 B -> A : Subscription Notification (optional)
-A -> B : Get Task
+A -> B : Get Referral Task
 A --> A : Evaluate Status (in-progress)
 B --> B : Create ServiceRequest\n(based on Referral)\nCreate CP Task\nfor CBO and link to\nReferral Source Task
 B -> C : POST CP Task to CBO\n (different from original referral)
@@ -32,20 +32,20 @@ B -> C : POST CP Task to CBO\n (different from original referral)
 == Referral Creation ==
 
 C -> B : Get ServiceRequest + resources
-B --> C : ServiceRequest + Task
-C -> C : Evaluate Referral\nUpdate Task Status
+B --> C : ServiceRequest + CP Task
+C -> C : Evaluate Referral\nUpdate CP Task Status
 
 == In Progress ==
 C -> B : Subscription Notification (optional)
-B -> B : Evaluate Task Status\nUpdate to In Progress
+B -> B : Evaluate CP Task Status\nUpdate Referral Task Status to In Progress
 B -> A : Subscription Notification (optional)
 A -> A : Evaluate Status (in-progress)
 
 == Completion ==
-C -> C : Complete Service\nCreate Procedure(s)\nUpdate Task Status to Completed
+C -> C : Complete Service\nCreate Procedure(s)\nUpdate CP Task Status to Completed
 C -> B : Get Procedure(s)
 
-B -> B : Link Procedure(s)\nUpdate Task Status to Completed
+B -> B : Link Procedure(s)\nUpdate Referral Task Status to Completed
 B -> A : Subscription Notification (optional)
 
 A -> A : Evaluate Status (completed)
