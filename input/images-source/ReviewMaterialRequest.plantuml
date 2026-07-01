@@ -5,13 +5,13 @@ participant "Requester" as A
 participant "Patient" as B
 
 autonumber
-A --> A : Create Task with DocumentReference as .focus
-A --> B : Notify Patient
-A <- B : Get Task
-A <- B : Get DocumentReference
-A <- B : Update Task (in-progress)
-B --> B : Review Document
-A <- B : Update Task (completed)
+A -> A : Create [[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]] with [[https://hl7.org/fhir/R4/documentreference.html DocumentReference]] as .focus
+A -> B : Notify Patient
+A <- B : Get [[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]]
+A <- B : Get [[https://hl7.org/fhir/R4/documentreference.html DocumentReference]]
+A <- B : Update [[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]] (in-progress)
+B -> B : Review Document
+A <- B : Update [[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]] (completed)
 hide footbox
 
 @enduml

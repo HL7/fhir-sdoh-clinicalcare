@@ -2,24 +2,24 @@
 /'!theme bluegray'/
 title Detailed Direct Workflow
 
-participant "Referral Source" as A
-participant "Referral Target (CBO) (Not FHIR-enabled)" as B
+participant "Role: Referral Source\nActor: Provider" as A
+participant "Role: Referral Target\nActor: Community-Based Organization (not FHIR-enabled)" as B
 
 autonumber
-A --> A : Create ServiceRequest + Referral Task
+A -> A : Create [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]] + [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]]
 A -> B : Send email
 
-A -> B : Get Referral Task
-A -> B : Get ServiceRequest + referenced resources
+A -> B : Get [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]]
+A -> B : Get [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]] + referenced resources
 
-B --> B : Evaluate Referral\nUpdate Referral Task Status (accepted)
-B -> A : Update Referral Task Status (accepted)
-B --> B : Begin Work and update\nReferral Task Status to In Progress
-B -> A : Update Referral Task Status (in-progress)
-B --> B : Complete Service\nCreate Procedure(s) to\ndocument service(s) delivered
+B -> B : Evaluate Referral\nUpdate [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status (accepted)
+B -> A : Update [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status (accepted)
+B -> B : Begin Work and update\n[[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status to In Progress
+B -> A : Update [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status (in-progress)
+B -> B : Complete Service\nCreate [[StructureDefinition-SDOHCC-Procedure.html SDOHCC Procedure(s)]](s) to\ndocument service(s) delivered
 
-B -> A : Post Procedure(s)
-B -> A : Update Referral Task Status (completed)
-A -> A : Update ServiceRequest to Completed\nUpdate Goal as appropriate
+B -> A : Post [[StructureDefinition-SDOHCC-Procedure.html SDOHCC Procedure(s)]](s)
+B -> A : Update [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status (completed)
+A -> A : Update [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]] to Completed\nUpdate [[StructureDefinition-SDOHCC-Goal.html SDOHCC Goal]] as appropriate
 hide footbox
 @enduml

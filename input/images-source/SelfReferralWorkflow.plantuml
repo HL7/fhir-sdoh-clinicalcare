@@ -2,26 +2,26 @@
 /'!theme bluegray'/
 title Detailed Self-Referral Workflow
 
-participant "Individual or Authorized Individual" as A
-participant "Referral Target (CBO)" as B
+participant "Role: Referral Source\nActor: Individual or Authorized Individual" as A
+participant "Role: Referral Target\nActor: Community-Based Organization" as B
 
 autonumber
-A --> A : Create ServiceRequest + Referral Task
-A -> B : Post Referral Task
+A -> A : Create [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]] + [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]]
+A -> B : Post [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]]
 
-B -> A : Get ServiceRequest + referenced resources
-B --> B : Evaluate Referral\nUpdate Referral Task Status (accepted)
-B -> A : Subscription Notification (optional)
-A -> A : Get Referral Task
-A -> A : Evaluate Referral Task Status (accepted)
-B --> B : Begin Work and update\nReferral Task Status to In Progress
+B -> A : Get [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]] + referenced resources
+B -> B : Evaluate Referral\nUpdate [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status (accepted)
 B --> A : Subscription Notification (optional)
-A -> A : Evaluate Referral Task Status (in-progress)
-B --> B : Complete Service\nCreate Procedure(s) to\ndocument service(s) delivered\nUpdate Referral Task Status to Completed
+A -> A : Get [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]]
+A -> A : Evaluate [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status (accepted)
+B -> B : Begin Work and update\n[[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status to In Progress
 B --> A : Subscription Notification (optional)
-A -> B : Get Referral Task
-A -> A : Evaluate Referral Task Status (completed)
-A -> B : Get Procedure(s)
-A -> A : Update ServiceRequest to Completed\nUpdate Goal as appropriate
+A -> A : Evaluate [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status (in-progress)
+B -> B : Complete Service\nCreate [[StructureDefinition-SDOHCC-Procedure.html SDOHCC Procedure(s)]](s) to\ndocument service(s) delivered\nUpdate [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status to Completed
+B --> A : Subscription Notification (optional)
+A -> B : Get [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]]
+A -> A : Evaluate [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status (completed)
+A -> B : Get [[StructureDefinition-SDOHCC-Procedure.html SDOHCC Procedure(s)]]
+A -> A : Update [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]] to Completed\nUpdate [[StructureDefinition-SDOHCC-Goal.html SDOHCC Goal]]as appropriate
 hide footbox
 @enduml

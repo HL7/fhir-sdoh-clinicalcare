@@ -2,54 +2,54 @@
 /'!theme bluegray'/
 title Capacity Status Indirect Flow
 
-participant "Referral Source" as A
-participant "Intermediary (CP)" as B
-participant "Referral Target (CBO)" as C
+participant "Role: Referral Source\nActor: Provider" as A
+participant "Role: Intermediary\nActor: Coordinating Platform" as B
+participant "Role: Referral Target\nActor: Community-Based Organization" as C
 
 autonumber
 == Create Service Request ==
-A --> A : Create ServiceRequest + Referral Task
-A -> B : Post Referral Task
+A -> A : Create [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]] + [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]]
+A -> B : Post [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]]
 
 == Initial Processing ==
-B -> A : Get ServiceRequest + referenced resources
-B --> B : Evaluate Referral\n(Update Referral Task Status)\nIdentify candidate Referral Target(s)
+B -> A : Get [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]] + referenced resources
+B -> B : Evaluate Referral\n(Update [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status)\nIdentify candidate Referral Target(s)
 B --> A : Subscription Notification (optional)
 
 
 == Capacity Check (pre-referral) ==
 group Optional
-A -> B : Get Referral Task
+A -> B : Get [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]]
 B -> C : Get HealthcareService(s)
-A --> A : Evaluate Referral Task Status (accepted)
-B -> B : Evaluate HealthcareService\nCapacity Status\nUpdate Referral Task Status
+A -> A : Evaluate [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status (accepted)
+B -> B : Evaluate HealthcareService\nCapacity Status\nUpdate [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status
 end
 
 == Referral Creation ==
-B -> C : Create ServiceRequest\n(based on Referral)
+B -> C : Create [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]]\n(based on Referral)
 B -> C : POST CP Task to CBO
 
-C -> B : Get ServiceRequest + resources
-B --> C : ServiceRequest + CP Task
+C -> B : Get [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]] + resources
+B -> C : [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]] + CP Task
 C -> C : Evaluate Referral\nUpdate CP Task Status
 
 == In Progress ==
-C -> B : Subscription Notification (optional)
-B -> B : Evaluate CP Task Status\nUpdate Referral Task Status to In Progress
-    B -> A : Subscription Notification (optional)
-    A -> A : Evaluate Status (in-progress)
+C --> B : Subscription Notification (optional)
+B -> B : Evaluate CP Task Status\nUpdate [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status to In Progress
+B --> A : Subscription Notification (optional)
+A -> A : Evaluate Status (in-progress)
 
 == Completion ==
-C -> C : Complete Service\nCreate Procedure(s)\nUpdate CP Task Status to Completed
-C -> B : Get Procedure(s)
+C -> C : Complete Service\nCreate [[StructureDefinition-SDOHCC-Procedure.html SDOHCC Procedure(s)]](s)\nUpdate CP Task Status to Completed
+C -> B : Get [[StructureDefinition-SDOHCC-Procedure.html SDOHCC Procedure(s)]](s)
 
-B -> B : Link Procedure(s)\nUpdate Referral Task Status to Completed
-B -> A : Subscription Notification (optional)
+B -> B : Link [[StructureDefinition-SDOHCC-Procedure.html SDOHCC Procedure(s)]](s)\nUpdate [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status to Completed
+B --> A : Subscription Notification (optional)
 
 A -> A : Evaluate Status (completed)
-A -> A : Get Procedure(s)
+A -> A : Get [[StructureDefinition-SDOHCC-Procedure.html SDOHCC Procedure(s)]](s)
 
 == Final Update ==
-A -> A : Update ServiceRequest to Completed\nUpdate Goal as appropriate
+A -> A : Update [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]] to Completed\nUpdate [[StructureDefinition-SDOHCC-Goal.html SDOHCC Goal]] as appropriate
 hide footbox
 @enduml

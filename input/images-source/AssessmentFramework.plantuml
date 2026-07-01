@@ -2,11 +2,11 @@
 
 title "Assessment Framework"
 
-agent "Questionnaire" as Q
-agent  "QuestionnaireResponse" as QR
-agent  "Observation Assessment" as OA
-agent  "Observation Screening Response" as OSR
-agent  "Condition" as C
+agent "[[https://hl7.org/fhir/R4/questionnaire.html Questionnaire]]" as Q
+agent  "[[https://hl7.org/fhir/R4/questionnaireresponse.html Questionnaire Response]]" as QR
+agent  "[[StructureDefinition-SDOHCC-ObservationAssessment.html SDOHCC Observation Assessment]]" as OA
+agent  "[[StructureDefinition-SDOHCC-ObservationScreeningResponse.html SDOHCC Observation Screening Response]]" as OSR
+agent  "[[StructureDefinition-SDOHCC-Condition.html SDOHCC Condition]]" as C
 
 Q -[hidden]r-> OA : hidden link to ensure OA is rendered after Q
 QR -u-> Q : Canonical\nQuestionnaire

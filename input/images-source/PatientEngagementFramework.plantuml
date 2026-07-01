@@ -2,11 +2,11 @@
 
 title "Patient Engagement Framework"
 
-agent "Task for Patient" as T
-agent  "Questionnaire" as Q
-agent  "HealthcareService" as H
-agent  "DocumentReference" as D
-agent  "QuestionnaireResponse" as QR
+agent "[[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]]" as T
+agent  "[[https://hl7.org/fhir/R4/questionnaire.html Questionnaire]]" as Q
+agent  "[[StructureDefinition-SDOHCC-HealthcareService.html SDOHCC Healthcare Service]]" as H
+agent  "[[https://hl7.org/fhir/R4/documentreference.html Document Reference]]" as D
+agent  "[[https://hl7.org/fhir/R4/questionnaireresponse.html Questionnaire Response]]" as QR
 
 
 T -u-> Q : input

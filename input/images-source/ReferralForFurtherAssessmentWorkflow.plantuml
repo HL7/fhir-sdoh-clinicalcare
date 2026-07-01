@@ -2,46 +2,46 @@
 /'!theme bluegray'/
 title Referral for Further Assessment Workflow
 
-participant "Referral Source" as A
-participant "Intermediary (CP)" as B
-participant "Referral Target (CBO)" as C
+participant "Role: Referral Source\nActor: Provider" as A
+participant "Role: Intermediary\nActor: Care Coordinator" as B
+participant "Role: Referral Target\nActor: Community-Based Organization" as C
 
 autonumber
-A -> A : Create ServiceRequest + Referral Task
-A -> B : Post Referral Task
+A -> A : Create [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]] + [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]]
+A -> B : Post [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]]
 
-B -> A : Get ServiceRequest + referenced resources
-B -> B : Evaluate Referral\nUpdate Referral Task Status
+B -> A : Get [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]] + referenced resources
+B -> B : Evaluate Referral\nUpdate [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status
 B --> A : Subscription Notification (optional)
 
-B -> C : Create ServiceRequest\n(based on Referral)\nCreate CP Referral Task\nfor CBO and link to\nReferral Source Referral Task
-A -> A : Evaluate Referral Task Status (accepted)
+B -> C : Create [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]]\n(based on Referral)\nCreate CP [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]]\nfor CBO and link to\nReferral Source [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]]
+A -> A : Evaluate [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status (accepted)
 B -> C : POST CP Task to CBO
 
-C -> B : Get ServiceRequest + referenced resources
+C -> B : Get [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]] + referenced resources
 C -> C : Evaluate Referral\nUpdate CP Task Status
 
 C --> B : Subscription Notification (optional)
 B -> C : Get CP Task
 
-B -> B : Evaluate Referral Task Status\nUpdate Referral Task Status to In Progress
+B -> B : Evaluate [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status\nUpdate [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status to In Progress
 B --> A : Subscription Notification (optional)
 A -> A : Evaluate Status (in-progress)
 
-C -> C : Complete Service\nCreate Procedure(s)\nCreate QuestionnaireResponse\nCreate Observation(s)\nCreate Condition(s)\nCreate CarePlan(s)\nUpdate CP Task Status to Completed
+C -> C : Complete Service\nCreate [[StructureDefinition-SDOHCC-Procedure.html SDOHCC Procedure(s)]](s)\nCreate QuestionnaireResponse\nCreate Observation(s)\nCreate Condition(s)\nCreate CarePlan(s)\nUpdate CP Task Status to Completed
 B --> A : Subscription Notification (optional)
 A -> A : Evaluate Status (completed)
 
-B -> B : Evaluate CP Task Status (completed)\nGet Procedure(s)\nGet QuestionnaireResponse\nGet Observation(s)\nGet Condition(s)\nGet CarePlan(s)
-B -> C : Get Procedure(s)\nGet QuestionnaireResponse\nGet Observation(s)\nGet Condition(s)\nGet CarePlan(s)
+B -> B : Evaluate CP Task Status (completed)\nGet [[StructureDefinition-SDOHCC-Procedure.html SDOHCC Procedure(s)]](s)\nGet QuestionnaireResponse\nGet Observation(s)\nGet Condition(s)\nGet CarePlan(s)
+B -> C : Get [[StructureDefinition-SDOHCC-Procedure.html SDOHCC Procedure(s)]](s)\nGet QuestionnaireResponse\nGet Observation(s)\nGet Condition(s)\nGet CarePlan(s)
 
-B -> B : Link Procedure(s)\nQuestionnaireResponse\nObservation(s)\nCondition(s)\nCarePlan(s)\nto Referral Referral Task\nUpdate Referral Task Status to Completed
+B -> B : Link [[StructureDefinition-SDOHCC-Procedure.html SDOHCC Procedure(s)]](s)\nQuestionnaireResponse\nObservation(s)\nCondition(s)\nCarePlan(s)\nto Referral [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]]\nUpdate [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status to Completed
 B --> A : Subscription Notification (optional)
-A -> B : Get Referral Task
+A -> B : Get [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]]
 
 A -> A : Evaluate Status (completed)
-A -> B : Get Procedure(s)\nGet QuestionnaireResponse\nGet Observation(s)\nGet Condition(s)\nGet CarePlan(s)
+A -> B : Get [[StructureDefinition-SDOHCC-Procedure.html SDOHCC Procedure(s)]](s)\nGet QuestionnaireResponse\nGet Observation(s)\nGet Condition(s)\nGet CarePlan(s)
 
-A -> A : Update ServiceRequest to Completed\nUpdate Goal as appropriate
+A -> A : Update [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]] to Completed\nUpdate [[StructureDefinition-SDOHCC-Goal.html SDOHCC Goal]]as appropriate
 hide footbox
 @enduml

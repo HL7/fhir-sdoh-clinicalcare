@@ -6,14 +6,14 @@ participant "Requester" as A
 participant "Patient" as B
 
 autonumber
-A --> A : Create Task and reference Questionnaire as .input
-A --> B : Notify to complete Questionnaire
-A <- B : Get Task
-A <- B : Get Questionnaire
-A <- B : Update Task (in-progress)
-B --> B : Complete Questionnaire\nProduce output QuestionnaireResponse
-A <- B : Post QuestionnaireResponse
-A <- B : Update Task (completed)\nTask.output references QuestionnaireResponse
+A -> A : Create [[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]] and reference [[https://hl7.org/fhir/R4/questionnaire.html Questionnaire]] as .input
+A -> B : Notify to complete [[https://hl7.org/fhir/R4/questionnaire.html Questionnaire]]
+A <- B : Get [[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]]
+A <- B : Get [[https://hl7.org/fhir/R4/questionnaire.html Questionnaire]]
+A <- B : Update [[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]] (in-progress)
+B -> B : Complete [[https://hl7.org/fhir/R4/questionnaire.html Questionnaire]]\nProduce output [[https://hl7.org/fhir/R4/questionnaireresponse.html QuestionnaireResponse]]
+A <- B : Post [[https://hl7.org/fhir/R4/questionnaireresponse.html QuestionnaireResponse]]
+A <- B : Update [[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]] (completed)\nTask.output references [[https://hl7.org/fhir/R4/questionnaireresponse.html QuestionnaireResponse]]
 hide footbox
 
 @enduml

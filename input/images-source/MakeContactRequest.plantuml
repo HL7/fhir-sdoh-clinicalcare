@@ -6,13 +6,13 @@ participant "Requester" as A
 participant "Patient" as B
 
 autonumber
-A --> A : Create Task and reference contacts as .input
-A --> B : Notify Patient
-A <- B : Get Task
-A <- B : Get Contacts
-A <- B : Update Task (in-progress)
-B --> B : Select Contact(s) to share
-A <- B : Update Task (completed)\nTask.output includes chosen contact
+A -> A : Create [[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]] and reference contacts as .input
+A -> B : Notify Patient
+A <- B : Get [[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]]
+A <- B : Get Contact(s) via [[StructureDefinition-SDOHCC-HealthcareService.html SDOHCC Healthcare Service]]
+A <- B : Update [[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]] (in-progress)
+B -> B : Select Contact(s) to share
+A <- B : Update [[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]] (completed)\nTask.output includes chosen contact
 hide footbox
 
 @enduml

@@ -6,12 +6,12 @@ participant "Requester" as A
 participant "Patient" as B
 
 autonumber
-A --> A : Create Task with question as .description
-A --> B : Notify Patient
-A <- B : Get Task
-A <- B : Update Task (in-progress)
-B --> B : Respond to Request for Information
-A <- B : Update Task (completed)\nTask.output includes text of response
+A -> A : Create [[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]] with question as .description
+A -> B : Notify Patient
+A <- B : Get [[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]]
+A <- B : Update [[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]] (in-progress)
+B -> B : Respond to Request for Information
+A <- B : Update [[StructureDefinition-SDOHCC-TaskForPatient.html SDOHCC Task for Patient]] (completed)\nTask.output includes text of response
 hide footbox
 
 

@@ -27,14 +27,14 @@ Here we provide a detailed view of an example interaction between a patient appl
 <div>{% include CompleteQuestionnaireRequest.svg %}</div>
 <br clear="all"/>
 
-| #    | From |  Description | Instances involved |
+<!-- | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |
 | 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientRiskQuestionnaireCompletedExample.html) |
 | 2 |  Patient  | Get Questionnaire, Questionnaire PDF, or Questionnaire URL | [Questionnaire](Questionnaire-SDOHCC-QuestionnaireHungerVitalSign.html)|
 | 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientRiskQuestionnaireCompletedExample.html) with status changed |
 | 4 |  Patient | Post Questionnaire Response or Document Reference with Filled Out PDF | [QuestionnaireResponse](QuestionnaireResponse-SDOHCC-QuestionnaireResponseHungerVitalSignExample.html) |
 | 5 |  Patient | Update Task (completed and .Output references QuestionnaireResponse) | [Patient Task](Task-SDOHCC-TaskPatientRiskQuestionnaireCompletedExample.html) with status changed |
-{:.grid}
+{:.grid} -->
 
 #### General Information Request
 Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO, or CP) for a general information request.  The example shows the patient returning an optional response.
@@ -42,12 +42,12 @@ Here we provide a detailed view of an interaction between a patient application 
 <div>{% include GeneralInformationRequest.svg %}</div>
 <br clear="all"/>
 
-| #    | From |  Description | Instances involved |
+<!-- | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |
 | 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientInformationRequestCompletedExample.html) |
 | 2 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientInformationRequestCompletedExample.html) with status changed |
 | 3 |  Patient | Update Task (completed and .Output.value includes text of response) | [Patient Task](Task-SDOHCC-TaskPatientInformationRequestCompletedExample.html) with status changed |
-{:.grid}
+{:.grid} -->
 
 #### Make Contact Request
 Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO, or CP) for providing one or more options from which to select to make contact with a service, provider or organization. The example shows the patient returning an optional response.
@@ -55,13 +55,13 @@ Here we provide a detailed view of an interaction between a patient application 
 <div>{% include MakeContactRequest.svg %}</div>
 <br clear="all"/>
 
-| #    | From |  Description | Instances involved |
+<!-- | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |
 | 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) |
 | 2 |  Patient  | Get Contact | [HealthCareService](HealthcareService-SDOHCC-HealthcareServiceTelecomAppointmentExample.html) |
 | 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html)  with status changed |
 | 4 |  Patient | Update Task (completed and .Output includes chosen contact) | [Patient Task](Task-SDOHCC-TaskPatientMakeAppointmentCompletedExample.html) with status changed |
-{:.grid}
+{:.grid} -->
 
 #### Review Material Request
 Here we provide a detailed view of an interaction between a patient application and a requester (provider, CBO, or CP) for providing review material. 
@@ -69,13 +69,13 @@ Here we provide a detailed view of an interaction between a patient application 
 <div>{% include ReviewMaterialRequest.svg %}</div>
 <br clear="all"/>
 
-| #    | From |  Description | Instances involved |
+<!-- | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |
 | 1 |  Patient | Get Task | [Patient Task](Task-SDOHCC-TaskPatientReviewInformationCompletedExample.html) |
 | 2 |  Patient  | Get DocumentReference | [DocumentReference] |
 | 3 |  Patient | Update Task (in-progress) | [Patient Task](Task-SDOHCC-TaskPatientReviewInformationCompletedExample.html) with status changed |
 | 4 |  Patient | Update Task (completed) | [Patient Task](Task-SDOHCC-TaskPatientReviewInformationCompletedExample.html) with status changed |
-{:.grid}
+{:.grid} -->
 
 
 

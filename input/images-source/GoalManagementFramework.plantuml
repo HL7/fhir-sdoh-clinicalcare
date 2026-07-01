@@ -2,9 +2,9 @@
 
 title "Goal Management Framework"
 
-agent "Goal" as G
-agent  "Observation Screening or Assessment" as OSR
-agent  "Condition" as C
+agent "[[StructureDefinition-SDOHCC-Goal.html SDOHCC Goal]]" as G
+agent  "[[StructureDefinition-SDOHCC-ObservationAssessment.html SDOHCC Observation Assessment]]\nor [[StructureDefinition-SDOHCC-ObservationScreeningResponse.html SDOHCC Observation Screening Response]]" as OSR
+agent  "[[StructureDefinition-SDOHCC-Condition.html SDOHCC Condition]]" as C
 
 C -[hidden]u-> OSR : hidden link to ensure OSR is rendered after C
 G -r-> OSR : Addresses /\nOutcomeReference

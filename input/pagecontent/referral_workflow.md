@@ -207,7 +207,7 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 <div>{% include DetailedDirectReferral.svg %}</div>
 <br clear="all"/>
 
-| #    | From |  Description | Instances involved |
+<!-- | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |
 | 1 |  Source | Post Referral Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) |
 | 2 |  Target  | Get Service Request and Referenced Resources | [ServiceRequest](ServiceRequest-SDOHCC-ServiceRequestActiveFoodPantryApplicationAssistExample.html), [Consent](Consent-SDOHCC-ConsentInformationDisclosureExample.html), [Condition](Condition-SDOHCC-ConditionFoodInsecurityExample.html) |
@@ -218,7 +218,7 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 | 7 |  Target | Send Notification | [Subscription Notification Bundle] |
 | 8 |  Source | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed |
 | 9 |  Source | Get Procedures | [Food Provided](Procedure-SDOHCC-ProcedureProvisionOfFoodExample.html), [Application Assistance](Procedure-SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample.html) |
-{:.grid}
+{:.grid} -->
 
 
 #### Direct Referral Light
@@ -238,7 +238,7 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 <div>{% include DetailedDirectReferralLight.svg %}</div>
 <br clear="all"/>
 
-| #    | From |  Description | Instances involved |
+<!-- | #    | From |  Description | Instances involved |
 | ---  | ---- | ------------ | ------------------ |
 | 1 |  Source | Send e-mail with link to application and authentication instructions |
 | 2 |  Target | Get Task | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) |
@@ -247,7 +247,7 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 | 5 |  Target | Update Task (in-progress) | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed |
 | 6 |  Target | Post Procedures | [Food Provided](Procedure-SDOHCC-ProcedureProvisionOfFoodExample.html), [Application Assistance](Procedure-SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample.html) |
 | 7 |  Source | Update Task (completed) | [Referral Task](Task-SDOHCC-TaskReferralManagementOrderFulfillmentCompletedExample.html) with status changed |
-{:.grid}
+{:.grid} -->
 
 #### Indirect Referral
 <a name="indirectreferral"></a>

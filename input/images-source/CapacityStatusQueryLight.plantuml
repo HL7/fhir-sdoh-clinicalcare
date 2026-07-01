@@ -2,14 +2,14 @@
 /'!theme bluegray'/
 title Capacity Status Query Light Flow
 
-participant "Referral Source" as A
-participant "Referral Target" as B
+participant "Role: Referral Source\nActor: Provider" as A
+participant "Role: Referral Target\nActor: Community-Based Organization" as B
 
 autonumber
 A -> B : Send email
 A <- B : Post HealthcareService(s)
-A --> A : Evaluate HealthcareService(s)\nCapacity Status - if no capacity\nrepeat Step 1 with\na different Referral Target or HealthcareService,\nelse proceed to Step 4
-A --> A : Initiate Referral Light workflow
+A -> A : Evaluate HealthcareService(s)\nCapacity Status - if no capacity\nrepeat Step 1 with\na different Referral Target or HealthcareService,\nelse proceed to Step 4
+A -> A : Initiate Referral Light workflow
 hide footbox
 
 @enduml
