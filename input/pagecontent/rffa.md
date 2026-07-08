@@ -37,25 +37,16 @@ For example, a patient might screen positive for food insecurity. During the fol
 - The act of enrolling an individual into a program or providing the specific services identified during the assessment.
 
 
-### Actors and Systems
+### Roles and Actors
 
-The actors and systems involved in this workflow are the same as those in other referral workflows described in this guide.
+The roles and actors involved in this workflow are the same as those in other referral workflows described in this guide.
 
-#### Actors
-
-- <b>Provider (or other Referral Source)</b>: The healthcare entity, clinician, or care team member that identifies the need for a more detailed assessment of social needs.
-- <b>Community-Based Organization (CBO) (or other Referral Target)</b>: The organization that receives the referral and has the skills and resources to perform the comprehensive assessment.
-- <b>Patient</b>: The individual who is the subject of the referral and assessment.
-
-#### Systems
-
-The technology systems involved in the exchange mirror those in the established referral workflows and may include:
-
-- <b>EHR System (Referral Source)</b>: The system used by the provider to manage patient care and initiate the referral for assessment.
-- <b>CBO System (Referral Target)</b>: The system used by the CBO to receive and manage the assessment referral and document its results.
-- <b>Coordination Platform (CP)</b>: The system, operated by an intermediary, that facilitates communication and data exchange between the provider and CBO systems.
-
-An intermediary is not required; when present, the intermediary role may be served by different types of organizations.
+| Roles | Actors |
+| --- | --- |
+|**Referral Source**|Healthcare Provider, CBO|
+|**Referral Target**|CBO|
+|**Patient**|Patient|
+|**Intermediary** (optional)|CP, HIE|
 
 
 ### Exchange Workflow
