@@ -21,7 +21,7 @@ B -> B : Complete Service\nCreate [[StructureDefinition-SDOHCC-Procedure.html SD
 B --> A : Subscription Notification (optional)
 A -> B : Get [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]]
 A -> A : Evaluate [[StructureDefinition-SDOHCC-TaskForReferralManagement.html SDOHCC Task for Referral Management]] Status (completed)
-A -> B : Get [[StructureDefinition-SDOHCC-Procedure.html SDOHCC Procedure(s)]](s)
+A -> B : Get [[StructureDefinition-SDOHCC-Procedure.html SDOHCC Procedure]](s)
 A -> A : Update [[StructureDefinition-SDOHCC-ServiceRequest.html SDOHCC ServiceRequest]] to Completed\nUpdate [[StructureDefinition-SDOHCC-Goal.html SDOHCC Goal]] as appropriate
 hide footbox
 @enduml

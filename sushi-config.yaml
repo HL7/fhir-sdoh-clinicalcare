@@ -15,6 +15,7 @@ parameters:
     jira-code: sdoh-cc
     path-expansion-params: '../../exp-params.json' #path is relative to [base]/fsh-generated/resources
     pin-canonicals: pin-multiples
+    auto-oid-root: 2.16.840.1.113762.1.4.1247
     
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg #<<< must include a http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension that identifies the workgroup responsible for the IG. This is the authoritative element.
