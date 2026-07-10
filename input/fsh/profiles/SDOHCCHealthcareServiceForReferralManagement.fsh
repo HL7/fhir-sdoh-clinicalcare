@@ -5,6 +5,13 @@ Title: "SDOHCC Healthcare Service for Referral Management"
 Description: "Profile that extends SDOHCC HealthcareService to support capacity status queries, allowing referral sources to determine if a CBO has capacity before initiating a referral. Includes the capacity-status extension and elements for describing services, programs, and contact information. This use case primarily leverages the [HealthcareService](https://hl7.org/fhir/R4/healthcareservice.html) resource, with [Task](https://hl7.org/fhir/R4/task.html) being used in the post-referral [Capacity Status](capacity.html) scenario."
 * ^status = #active
 
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
+* ^extension[0].valueCode = #draft
+
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
+
+
 // TODO need short and definition?
 //* . ^short = "Group of SDOH patients for a payer"
 //* . ^definition = "For aggregation of individuals with a common set of characteristics (i.e., the same payer and and any condition in the specified SDOH categories) to enable organizations with the appropriate permissions to easily retrieve information related to the cohort of individuals for which they have a common responsibility."

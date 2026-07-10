@@ -8,6 +8,12 @@ Description: "Extension for determining the capacity status of a health care ser
 * . ^short = "determining the capacity status of a service"
 * . ^definition = "for determining the capacity status of a health care service to provide care for an individual."
 
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
+* ^extension[0].valueCode = #draft
+
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
+
 * extension contains
    capacityStatus 1..1 and
    capacityNotes 0..1
