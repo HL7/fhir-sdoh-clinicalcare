@@ -57,6 +57,8 @@ groups:
     SearchParameters:
         name: Search Parameters
         resources:
+          - Group-characteristic-reference
+          - ServiceRequest-pertains-to-goal
           - ServiceRequest-supporting-info
           - Task-output-reference
     Examples:

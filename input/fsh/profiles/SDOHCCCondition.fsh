@@ -31,7 +31,7 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 * meta MS
 * meta.lastUpdated MS
 * meta.lastUpdated ^short = "When the resource last changed"
-* extension contains ConditionAssertedDate|5.2.0 named assertedDate 0..1 MS
+* extension contains ConditionAssertedDate|5.3.0 named assertedDate 0..1 MS
 * extension[assertedDate] ^short = "Date the condition was first asserted"
 * clinicalStatus MS
 * clinicalStatus from ConditionClinicalStatusCodes (required)

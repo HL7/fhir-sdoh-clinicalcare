@@ -15,7 +15,7 @@ There are multiple different potential matches for the url 'http://hl7.org/fhir/
 %The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 
 # INFORMATION: Deprecated extension for Condition.language from an inherited R4 profile
-%The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+%The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated 
 
 
 
@@ -58,7 +58,8 @@ Reference to draft CodeSystem http://hl7.org/fhir/uv/sdc/CodeSystem/temp|3.0.0
 Reference to draft CodeSystem http://hl7.org/fhir/CodeSystem/task-code|4.0.1
 Reference to draft CodeSystem http://hl7.org/fhir/task-status|4.0.1
 Reference to draft CodeSystem http://hl7.org/fhir/request-priority|4.0.1
-
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
+Reference to draft CodeSystem http://hl7.org/fhir/questionnaire-item-control|4.0.1
 
 # INFORMATION: Examples include additional illustrative categories, categories are not meant to resolve
 INFORMATION: Practitioner/SDOHCC-PractitionerDrJanWaterExample: Practitioner.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -75,23 +76,11 @@ INFORMATION: Procedure/SDOHCC-ProcedureProvisionOfFoodExample: Procedure.categor
 INFORMATION: Procedure/SDOHCC-ProcedureSummerFoodProgramApplicationAssistanceExample: Procedure.category.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Procedure|3.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 
 
-
-
- 
-
-
-
-
-
 # INFORMATION: Examples include additional illustrative URLs, URLs are not meant to resolve
 No definition could be found for URL value 'http://software.org/devices/id'
 No definition could be found for URL value 'http://hospital.smarthealthit.org'
 No definition could be found for URL value 'http://www.deerland.org/practitioners'
 
-
-# INFORMATION: Example resources that do not need to have OIDs assigns
-INFORMATION: Resource: The resource Questionnaire/SDOHCC-QuestionnaireHungerVitalSign could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-INFORMATION: Resource: The resource Questionnaire/SDOHCC-QuestionnairePRAPARE could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 
 
 # INFORMATION: Currently migrating SDOHCC Category Value Set codes to US Core Category Value Set in THO. Other codes found in this Code System are guidance only. Please Note that this IG is currently FMM2.
@@ -103,17 +92,16 @@ INFORMATION: CodeSystem/SDOHCC-CodeSystemTemporaryCodes: CodeSystem: Most code s
 %Pinned the version of http://hl7.org/fhir/us/core/ValueSet/%
 %Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/%
 %Pinned the version of http://terminology.hl7.org/ValueSet/%
+Pinned the version of http://hl7.org/fhir/uv/sdc/StructureDefinition%
+Pinned the version of http://hl7.org/fhir/StructureDefinition/alternate-reference to 5.3.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.1.0-cibuild (hl7.fhir.uv.extensions.r4#5.1.0-snapshot1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+Pinned the version of http://hl7.org/fhir/observation-status to 4.0.1 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.0.0 (hl7.fhir.uv.xver-r5.r4#0.1.0)
+Pinned the version of http://hl7.org/fhir/task-status to 4.0.1 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.0.0 (hl7.fhir.uv.xver-r5.r4#0.1.0)
+Pinned the version of http://hl7.org/fhir/request-priority to 4.0.1 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.0.0 (hl7.fhir.uv.xver-r5.r4#0.1.0)
 
-
-# INFORMATION: Conformance Language comments will be ignored in this version of the IG
-The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause
-The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause
 
 # WARNING: The Gravity SDOH Clinical Care IG is based on US Core 7.0.0. Considerations to move to US Core 8.0.0 were not made for this version of the guide, but will be for future versions
-The ImplementationGuide uses package hl7.fhir.us.core#7.0.0 released on 2024-05-08, but the most recent appropriate version is 8.0.1. This reference is getting old and the more recent version should be considered
+The ImplementationGuide uses package hl7.fhir.us.core#7.0.0 released on 2024-05-08, but the most recent appropriate version is 9.0.0. This reference is getting old and the more recent version should be considered
 
-# ERROR: This error will be present until the publication team can address it. See this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458
-No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
 
 # ERROR: The Subscriptions backport IG was mistakenly release as FHIR 4.0.0 instead of 4.0.1. See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Subscriptions.20backport.20issue
 This IG is version 4.0.1, while the IG 'hl7.fhir.uv.subscriptions-backport.r4' is from version 4.0.0

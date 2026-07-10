@@ -271,6 +271,9 @@ Usage: #definition
 * rest[=].resource[=].interaction[=].code = #search-type
 * rest[=].resource[=].interaction[=].documentation = "Allows the monitoring of previously-retrieved HealthcareServices that are the intended performer of ServiceRequests."
 // * rest[=].resource[=].referencePolicy = #literal
+* rest[=].resource[=].searchInclude[0] = "HealthCareService:location"
+* rest[=].resource[=].searchInclude[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].searchInclude[=].extension.valueCode = #SHALL
 * rest[=].resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchParam[=].extension.valueCode = #SHALL
 * rest[=].resource[=].searchParam[=].name = "_id"
@@ -785,21 +788,12 @@ Usage: #definition
 * rest[=].resource[=].interaction[=].code = #search-type
 * rest[=].resource[=].interaction[=].documentation = "Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling."
 // * rest[=].resource[=].referencePolicy = #literal
-* rest[=].resource[=].searchInclude[0] = "HealthCareService:location"
-* rest[=].resource[=].searchInclude[+] = "ServiceRequest:supporting-info"
+* rest[=].resource[=].searchInclude[0] = "ServiceRequest:supporting-info"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:pertains-to-goal"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:patient"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:requester"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:performer"
-* rest[=].resource[=].searchInclude[+] = "PractitionerRole:practitioner"
-* rest[=].resource[=].searchInclude[+] = "PractitionerRole:organization"
 * rest[=].resource[=].searchInclude[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].searchInclude[=].extension.valueCode = #SHALL
-* rest[=].resource[=].searchInclude[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
-* rest[=].resource[=].searchInclude[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
-* rest[=].resource[=].searchInclude[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
 * rest[=].resource[=].searchInclude[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
@@ -1357,6 +1351,9 @@ Usage: #definition
 * rest[=].resource[=].interaction[=].code = #search-type
 * rest[=].resource[=].interaction[=].documentation = "Allows downstream coordination platforms or referral recipients to monitor previously-retrieved HealthcareServices that are the intended performer of ServiceRequests."
 * rest[=].resource[=].referencePolicy = #literal
+* rest[=].resource[=].searchInclude[0] = "HealthCareService:location"
+* rest[=].resource[=].searchInclude[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].searchInclude[=].extension.valueCode = #SHALL
 * rest[=].resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchParam[=].extension.valueCode = #SHALL
 * rest[=].resource[=].searchParam[=].name = "_id"
@@ -1885,21 +1882,12 @@ Usage: #definition
 * rest[=].resource[=].interaction[=].documentation = "Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling."
 * rest[=].resource[=].versioning = #versioned-update
 * rest[=].resource[=].referencePolicy = #literal
-* rest[=].resource[=].searchInclude[0] = "HealthCareService:location"
-* rest[=].resource[=].searchInclude[+] = "ServiceRequest:supporting-info"
+* rest[=].resource[=].searchInclude[0] = "ServiceRequest:supporting-info"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:pertains-to-goal"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:patient"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:requester"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:performer"
-* rest[=].resource[=].searchInclude[+] = "PractitionerRole:practitioner"
-* rest[=].resource[=].searchInclude[+] = "PractitionerRole:organization"
 * rest[=].resource[=].searchInclude[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].searchInclude[=].extension.valueCode = #SHALL
-* rest[=].resource[=].searchInclude[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
-* rest[=].resource[=].searchInclude[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
-* rest[=].resource[=].searchInclude[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
 * rest[=].resource[=].searchInclude[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD

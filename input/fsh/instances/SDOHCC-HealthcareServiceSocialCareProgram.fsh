@@ -14,7 +14,6 @@ Usage: #example
   * system = #phone
   * value = "(555) appoint"
   * use = #work
-  * extension[ForAppointment].valueBoolean = true 
 * program = http://terminology.hl7.org/CodeSystem/program#21 "Home And Community Care (HACC)"
 // * characteristic = http://hl7.org/fhir/us/core/CodeSystem/us-core-category#1338051003 "Provision of microwave oven (procedure)"
 

@@ -58,10 +58,10 @@ dependencies:
             Subscriptions are recommended for monitoring completion of referrals.
     hl7.terminology.r4:
         uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
-        version: 7.0.0
+        version: 7.2.0
     hl7.fhir.us.davinci-hrex:
         uri: http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/hl7.fhir.us.davinci-hrex
-        version: 1.1.0
+        version: 1.2.0
         id: hrex
         reason: |
             This guide links out to concept maps published in Da Vinci HRex for Provider Role codes.

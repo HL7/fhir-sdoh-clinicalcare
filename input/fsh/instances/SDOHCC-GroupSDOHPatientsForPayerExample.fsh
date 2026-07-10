@@ -1,16 +1,25 @@
 Instance: SDOHCC-GroupSDOHPatientsForPayerExample
 InstanceOf: SDOHCCGroup
-Title: "SDOHCC Group SDOH Patients For Payer Example"
-Description: "An example of Group for patients that have any SDOH condition and are members of a specific payer organization."
+Title: "SDOHCC Group Food Insecurity Patients For Payer Example"
+Description: "An example Group of patients who have an active food insecurity condition and are members of a specific payer organization."
 Usage: #example
+
 * active = true
 * type = #person
 * actual = true
-//* characteristic[category].code = $SDOHCC-CodeSystemTemporaryCodes#sdoh-condition-category "Current Condition Category From SDOH Category"
-//* characteristic[HasSDOHCondition].valueReference.reference = "http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory"
-* characteristic[HasSDOHCondition].valueReference.reference = Canonical(SDOHCCValueSetSDOHCategory)
+* name = "CDE payer's food insecurity patients"
+
+// Required SDOHCCGroup characteristic identifying the SDOH condition category.
+// This CodeableConcept is searchable through the R4 characteristic-value composite.
+* characteristic[HasSDOHCondition].code = $SDOHCC-CodeSystemTemporaryCodes#sdoh-condition-category "Current Condition Category From SDOH Category"
+* characteristic[HasSDOHCondition].valueCodeableConcept = $SDOHCC-CodeSystemTemporaryCodes#food-insecurity "Food Insecurity"
 * characteristic[HasSDOHCondition].exclude = false
-//* characteristic[+].code = $SDOHCC-CodeSystemTemporaryCodes#payer-coverage "Coverage By Payer Organization"
-* characteristic[HasPayer].exclude = false
+
+// Required SDOHCCGroup characteristic identifying the payer Organization.
+// This Reference is searchable through the IG-defined characteristic-reference parameter.
+* characteristic[HasPayer].code = $SDOHCC-CodeSystemTemporaryCodes#payer-coverage "Coverage By Payer Organization"
 * characteristic[HasPayer].valueReference.reference = "Organization/SDOHCC-OrganizationPayerExample"
-* name = "CDE payer's SDOH condition patients"
+* characteristic[HasPayer].exclude = false
+
+// This patient has the active food-insecurity Condition used by the example set.
+* member[0].entity.reference = "Patient/pat-53234"
