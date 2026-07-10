@@ -10,7 +10,7 @@ Usage: #example
 * type = http://terminology.hl7.org/CodeSystem/service-type#252 "Assessment"
 * location.reference = "Location/SDOHCC-LocationExample"
 * name = "HACC"
-* telecom[AppointmentContact]
+* telecom
   * system = #phone
   * value = "(555) appoint"
   * use = #work

@@ -24,8 +24,8 @@ Description: "Profile for identifying groups of patients who have a Social Deter
 * characteristic[HasSDOHCondition] ^requirements = "To identify members who have an active instance of a condition with any Condition.category in the value set referenced by Group.characteristic.value[x] (i.e., SDOH conditions)."
 * characteristic[HasSDOHCondition].code = $SDOHCC-CodeSystemTemporaryCodes#sdoh-condition-category
 * characteristic[HasSDOHCondition].code MS
-* characteristic[HasSDOHCondition].value[x] only Reference(ValueSet)
-* characteristic[HasSDOHCondition].value[x] = Reference(http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory)
+* characteristic[HasSDOHCondition].value[x] only CodeableConcept
+* characteristic[HasSDOHCondition].value[x] from http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory (extensible)
 * characteristic[HasSDOHCondition].value[x] MS
 * characteristic[HasSDOHCondition].exclude = false (exactly)
 * characteristic[HasSDOHCondition].exclude MS
