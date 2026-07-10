@@ -130,6 +130,8 @@ pages:
         title: Specifications for Personal Characteristics
     downloads.md:
         title: Downloads
+    ImplementationGuide-hl7.fhir.us.sdoh-clinicalcare.md:
+        title: SDOH Clinical Care ImplementationGuide Resource
     changehistory.md:
         title: Change History
         # FHIR_API_Examples.md:
