@@ -55,7 +55,7 @@ dependencies:
         uri: http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport
         id: sdohsub
         reason: |
-            Subscriptions are recommended for monitoring completion of referrals.
+            Subscriptions are the preferred mechanism for monitoring completion of referrals and are strongly recommended over polling.
     hl7.terminology.r4:
         uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
         version: 7.0.0

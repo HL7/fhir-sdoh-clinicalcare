@@ -23,24 +23,7 @@ The types of task occurrences that may be of interest include:
 * Outputs have been added to a Task
 * A Task has been marked as complete
 
-There are two mechanisms for detecting the above changes - polling and subscriptions.
-
-#### Polling
-
-In this mode, the system needing information (the 'client') occasionally queries the system maintaining the relevant Tasks and/or ServiceRequests. When possible, the system may perform a consent validation check to verify the patient has consented to share their 'new' data back to the 'client' requesting the update. Clients may need to perform queries against multiple clients if relevant Tasks and ServiceRequests will not be maintained on the same server. To poll, the client will perform a [search]({{site.data.fhir.path}}search.html) for Tasks that are filtered to those either owned or requested by the searching organization. The search would also filter to only include those Tasks that had been created or changed since the server last looked. In cases where the consent is not bidirectional, the search would filter to only include those Tasks for which the patient has consented to share back with the referral source.
-E.g.
-
-```[base]/Task?owner=https://example.com/fhir/Organization/123&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
-or
-```[base]/Task?requester=https://example.com/fhir/Organization/456&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
-
-The time-stamp specified would be the search result returned from the last search.
-
-If unassigned Tasks are possible - i.e., where the organization to perform the service isn't pre-identified and the Task is open to whoever wishes to claim and perform it - organizations interested in examining Tasks available to claim would poll as follows:
-
-```[base]/Task?owner:missing=true&status=requested&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
-
-The frequency of polling needs to be often enough to allow for timely response to changes, while not imposing too high a requirement on system performance. For Gravity, systems that use polling **SHALL** check for new/updated information at least once per business day and **SHOULD** check for information at least once per hour during normal hours of operation.  Systems SHOULD NOT query more often than every 15 minutes unless there is an urgent change they are monitoring for.
+There are two mechanisms for detecting the above changes - subscriptions and polling. Subscriptions are the preferred mechanism: a server notifies interested systems when relevant Tasks or ServiceRequests change, which avoids the added computational load, network traffic, and notification delay that come with repeatedly polling for updates. Polling is described here as a fallback for situations where one or both parties are unable to support subscriptions.
 
 #### Subscription
 
@@ -177,5 +160,22 @@ This topic allows for monitoring for changes to a ServiceRequest when an organiz
     </tr>
   </tbody>
 </table>
+
+#### Polling
+
+In this mode, the system needing information (the 'client') occasionally queries the system maintaining the relevant Tasks and/or ServiceRequests. When possible, the system may perform a consent validation check to verify the patient has consented to share their 'new' data back to the 'client' requesting the update. Clients may need to perform queries against multiple clients if relevant Tasks and ServiceRequests will not be maintained on the same server. To poll, the client will perform a [search]({{site.data.fhir.path}}search.html) for Tasks that are filtered to those either owned or requested by the searching organization. The search would also filter to only include those Tasks that had been created or changed since the server last looked. In cases where the consent is not bidirectional, the search would filter to only include those Tasks for which the patient has consented to share back with the referral source.
+E.g.
+
+```[base]/Task?owner=https://example.com/fhir/Organization/123&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
+or
+```[base]/Task?requester=https://example.com/fhir/Organization/456&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
+
+The time-stamp specified would be the search result returned from the last search.
+
+If unassigned Tasks are possible - i.e., where the organization to perform the service isn't pre-identified and the Task is open to whoever wishes to claim and perform it - organizations interested in examining Tasks available to claim would poll as follows:
+
+```[base]/Task?owner:missing=true&status=requested&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
+
+The frequency of polling needs to be often enough to allow for timely response to changes, while not imposing too high a requirement on system performance. For Gravity, systems that use polling **SHALL** check for new/updated information at least once per business day and **SHOULD** check for information at least once per hour during normal hours of operation.  Systems SHOULD NOT query more often than every 15 minutes unless there is an urgent change they are monitoring for.
 
 {% include markdown-link-references.md %}
