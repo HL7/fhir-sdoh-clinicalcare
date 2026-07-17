@@ -19,6 +19,8 @@ This exchange is intended to:
 
 For example, a patient might screen positive for food insecurity. During the follow-up conversation, the healthcare provider suspects other needs may be present but may lack the capacity or specialized skills to investigate further. The provider can then send a "Referral for Further Assessment" to a trusted CBO to gain a more complete understanding of the individual's situation and identify appropriate services.
 
+The party that initiates a referral for further assessment need not be a healthcare provider. A social service provider — such as a social worker or community health worker — may likewise recognize the need for a deeper assessment and be the requester of the ServiceRequest and its associated Task. See the [example referral requested by a social worker](Task-SDOHCC-TaskReferralForFurtherAssessmentMSW.html), which uses the [Pat Williams, MSW PractitionerRole](PractitionerRole-SDOHCC-PractitionerRolePatWilliamsMSWExample.html).
+
 
 ### Scope
 
