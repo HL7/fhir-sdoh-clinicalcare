@@ -1507,10 +1507,14 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[=].resource[=].searchParam[=].type = #token
 * rest[=].resource[=].searchParam[=].documentation = "Allows retrieving known Organization records - and more specifically, retrieving more than one in a single call to poll for updates"
+* rest[=].resource[=].searchParam[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest[=].resource[=].searchParam[+].name = "_lastUpdated"
 * rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
+* rest[=].resource[=].searchParam[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest[=].resource[+].type = #Patient
 * rest[=].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].extension.valueCode = #SHALL
