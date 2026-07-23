@@ -1305,10 +1305,10 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering based on the insurer or plan associated with the group"
 * rest[=].resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest[=].resource[=].searchParam[=].name = "code"
-* rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Group-code"
+* rest[=].resource[=].searchParam[=].name = "characteristic"
+* rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Group-characteristic"
 * rest[=].resource[=].searchParam[=].type = #token
-* rest[=].resource[=].searchParam[=].documentation = "Allows filtering based on the type of group"
+* rest[=].resource[=].searchParam[=].documentation = "Allows filtering based on the characteristic code"
 * rest[=].resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest[=].resource[=].searchParam[=].name = "managing-entity"
@@ -1508,7 +1508,7 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #token
 * rest[=].resource[=].searchParam[=].documentation = "Allows retrieving known Organization records - and more specifically, retrieving more than one in a single call to poll for updates"
 * rest[=].resource[=].searchParam[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].searchParam[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].searchParam[=].extension.valueCode = #SHALL
 * rest[=].resource[=].searchParam[+].name = "_lastUpdated"
 * rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
 * rest[=].resource[=].searchParam[=].type = #date
