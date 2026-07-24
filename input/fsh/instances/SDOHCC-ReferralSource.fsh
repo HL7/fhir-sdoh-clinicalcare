@@ -26,7 +26,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "For referral sources that receive referrals from upstream systems, used to access information about the intended performer of a ServiceRequest when the performer is a specific team of people.  Note: Conformance expectations for this resource are lower because CareTeam performers are expected to be uncommon in most SDOH uses"
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #MAY
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows the system to retrieve a CareTeam that is the intended performer of a ServiceRequest."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -53,7 +53,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "For referral sources that receive referrals from upstream systems, used to access information about a patient's SDOH-related conditions, particularly those that are the reason for a referral"
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows the system to retrieve a Condition that is the reason for a ServiceRequest."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -110,7 +110,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "Used to access the consent that authorizes disclosure of ServiceRequest information to non-HIPAA-covered entities"
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows the system to retrieve a Consent referenced as a 'supportingInformation' item of a ServiceRequest."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -146,7 +146,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "Used to retrieve the requester or intended performer of an SDOH ServiceRequest.  Note: Conformance expectations for this resource are lower because Device requesters and performers are expected to be uncommon in most SDOH uses"
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows the system to retrieve a Device that is the requester or intended performer of a ServiceRequest."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -173,7 +173,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "Used to retrieve a scanned or other form of document representing the text of a consent.  Also used for PDF forms."
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows the system to retrieve a PDF or similar content referenced by a Consent or Task."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -200,7 +200,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "Used to access goals related to an SDOH referral"
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows the system to retrieve a goal referenced by a ServiceRequest."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -257,7 +257,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "For referral sources that receive referrals from upstream systems, used to access information about the intended performer of a ServiceRequest when the performer is a specific service within a larger facility.  Also used to indicate who a patient or caregiver should contact about a particular service."
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows the system to retrieve a HealthcareService that is the intended performer of a ServiceRequest."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -293,7 +293,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "Used to access information about the potential sites at which a requested service might be performed.  Allows a patient to evaluate the suitability of a proposed activity or service."
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows the system to retrieve a Location that is an available location for a service."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -344,7 +344,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile[=].extension.valueCode = #MAY
 * rest[=].resource[=].documentation = "For referral sources that receive referrals from upstream systems, used to access information about SDOH-related observations for a patient - particularly those that are reasons for a referral.  Also used to share certain SDOH-relevant demographic information."
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows the system to retrieve an Observation referenced by a ServiceRequest."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -413,7 +413,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "For referral sources that receive referrals from upstream systems, used to access information about an Organization that is the requester or intended performer of a ServiceRequest"
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows the system to retrieve an Organization that is the requester or intended performer of a ServiceRequest."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -440,7 +440,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "For referral sources that receive referrals from upstream systems, used to access information about the Patient that is the subject a ServiceRequest"
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows the system to retrieve the Patient that is the subject of a ServiceRequest."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -467,7 +467,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "For referral sources that receive referrals from upstream systems, used to access information about an Practitioner that is the requester or intended performer of a ServiceRequest"
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows the system to retrieve a Practitioner that is the requester or intended performer of a ServiceRequest."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -494,7 +494,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "For referral sources that receive referrals from upstream systems, used to access information about an PractitionerRole that is the requester or intended performer of a ServiceRequest"
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows the system to retrieve a PractitionerRole that is the requester or intended performer of a ServiceRequest."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -608,10 +608,14 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "Used to retrieve SDOH-related Questionnaires to be filled out by a patient or representative.  Also allows retrieving Questionnaires associated with existing QuestionnaireResponses for editing by SMART-on-FHIR apps."
-* rest[=].resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction.extension.valueCode = #SHOULD
-* rest[=].resource[=].interaction.code = #search-type
-* rest[=].resource[=].interaction.documentation = "Allows the referral source to search for questionnaires relevant to a patient context."
+* rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
+* rest[=].resource[=].interaction[=].code = #read
+* rest[=].resource[=].interaction[=].documentation = "Allows the referral source to retrieve questionnaires."
+* rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].code = #search-type
+* rest[=].resource[=].interaction[=].documentation = "Allows the referral source to search for questionnaires relevant to a patient context."
 * rest[=].resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest[=].resource[=].searchParam[=].name = "code"
@@ -679,7 +683,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "Used to allow QuestionnaireResponses referenced by a ServiceRequest or Task"
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows the retrieval of QuestionnaireResponses pointed to as supporting information by a ServiceRequest or as output of a Task."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -736,7 +740,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "For referral sources that receive referrals from upstream systems, used to access information about the requester or intended performer of a ServiceRequest when they are someone with a personal relationship to the Patient.  Note: Conformance expectations for this resource are lower because CareTeam performers are expected to be uncommon in most SDOH uses"
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #MAY
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows the system to retrieve a RelatedPerson that is the requester or intended performer of a ServiceRequest."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -763,7 +767,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "For referral sources that receive referrals from upstream systems, used to retrieve an order for SDOH-related services"
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows client systems to retrieve the ServiceRequest pointed to by a Task."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -975,7 +979,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "Used to allow downstream systems to access to information about the intended performer of a ServiceRequest when the performer is a specific team of people"
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #MAY
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows downstream coordination platforms or referral recipients to retrieve a CareTeam that is the intended performer of a ServiceRequest."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -1116,7 +1120,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "Used to allow retrieval of the requester or intended performer of an SDOH ServiceRequest"
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows downstream coordination platforms or referral recipients to retrieve a Device that is the requester or intended performer of a ServiceRequest."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -1273,13 +1277,13 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].name = "characteristic-value"
 * rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Group-characteristic-value"
 * rest[=].resource[=].searchParam[=].type = #composite
-* rest[=].resource[=].searchParam[=].documentation = "Allows filtering based on the insurer or plan associated with the group"
+* rest[=].resource[=].searchParam[=].documentation = "Allows filtering of groups with members having conditions in the same SDOH category (domain)"
 * rest[=].resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest[=].resource[=].searchParam[=].name = "code"
-* rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Group-code"
-* rest[=].resource[=].searchParam[=].type = #token
-* rest[=].resource[=].searchParam[=].documentation = "Allows filtering based on the type of group"
+* rest[=].resource[=].searchParam[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].searchParam[=].name = "characteristic-value"
+* rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Group-characteristic-value"
+* rest[=].resource[=].searchParam[=].type = #composite
+* rest[=].resource[=].searchParam[=].documentation = "Allows filtering of groups with members having conditions in the same SDOH category (domain)"
 * rest[=].resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest[=].resource[=].searchParam[=].name = "managing-entity"
@@ -1300,7 +1304,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "Used to allow downstream systems to access to information about the intended performer of a ServiceRequest when the performer is a specific service within a larger facility.  Also used to indicate who a patient or caregiver should contact about a particular service."
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows downstream coordination platforms or referral recipients to retrieve a HealthcareService that is the intended performer of a ServiceRequest."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -1337,7 +1341,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "Used to expose information about the potential sites at which a requested service might be performed.  Allows a patient to evaluate the suitability of a proposed activity or service."
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows other systems to retrieve a Location that is an available location for a service."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -1655,10 +1659,14 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "Used to allow retrieval of SDOH-related Questionnaires to be filled out by a patient or representative.  Also allows retrieving Questionnaires associated with existing QuestionnaireResponses for editing by SMART-on-FHIR apps."
-* rest[=].resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction.extension.valueCode = #MAY
-* rest[=].resource[=].interaction.code = #search-type
-* rest[=].resource[=].interaction.documentation = "Allows SMART apps or downstream systems to search for questionnaires relevant to a patient context."
+* rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
+* rest[=].resource[=].interaction[=].code = #read
+* rest[=].resource[=].interaction[=].documentation = "llows SMART apps or downstream systems to retrieve questionnaires."
+* rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].interaction[=].extension.valueCode = #MAY
+* rest[=].resource[=].interaction[=].code = #search-type
+* rest[=].resource[=].interaction[=].documentation = "Allows SMART apps or downstream systems to search for questionnaires relevant to a patient context."
 * rest[=].resource[=].referencePolicy = #literal
 * rest[=].resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchParam[=].extension.valueCode = #SHOULD
@@ -1735,7 +1743,7 @@ Usage: #definition
 * rest[=].resource[=].interaction[=].code = #update
 * rest[=].resource[=].interaction[=].documentation = "Allows questionnaire responses to be edited by a SMART app if the manager system does not have the capability itself - or finds it better to use a third-party interface."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows the retrieval of QuestionnaireResponses to use as a starting point for new responses or to continue editing."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -1794,7 +1802,7 @@ Usage: #definition
 * rest[=].resource[=].supportedProfile.extension.valueCode = #SHALL
 * rest[=].resource[=].documentation = "Used to allow downstream systems to access to information about the requester or intended performer of a ServiceRequest when they are someone with a personal relationship to the Patient"
 * rest[=].resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].interaction[=].extension.valueCode = #MAY
+* rest[=].resource[=].interaction[=].extension.valueCode = #SHALL
 * rest[=].resource[=].interaction[=].code = #read
 * rest[=].resource[=].interaction[=].documentation = "Allows downstream coordination platforms or referral recipients to retrieve a RelatedPerson that is the requester or intended performer of a ServiceRequest."
 * rest[=].resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
