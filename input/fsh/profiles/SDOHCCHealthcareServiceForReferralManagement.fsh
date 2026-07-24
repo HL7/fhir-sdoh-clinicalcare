@@ -10,7 +10,7 @@ Description: "Profile that extends SDOHCC HealthcareService to support capacity 
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 0
-
+* insert OwningCommitteeExtension
 
 // TODO need short and definition?
 //* . ^short = "Group of SDOH patients for a payer"
@@ -19,6 +19,10 @@ Description: "Profile that extends SDOHCC HealthcareService to support capacity 
 * extension contains
     SDOHCC-ExtensionHealthcareServiceCapacityStatus named capacity-status 1..1
 * extension[capacity-status] ^short = "Is the service currently at capacity?"
+
+
+* active 1.. MS
+* active = true (exactly)
 
 * category 1.. MS
 * category.coding 0..* MS
@@ -36,9 +40,11 @@ Description: "Profile that extends SDOHCC HealthcareService to support capacity 
 * category.coding[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
 
 * type 1..1 MS
+* type from SDOHCCValueSetHealthcareServiceType (extensible)
 * name 1.. MS
 
 * program MS
+* program from $sdoh-programs (extensible)
 
 // * characteristic MS
 // * characteristic from USCoreProcedureCodes|7.0.0 (required) // code from $us-core-procedure-code (preferred)
