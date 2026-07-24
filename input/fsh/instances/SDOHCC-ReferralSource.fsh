@@ -1298,11 +1298,11 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].type = #composite
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering of groups with members having conditions in the same SDOH category (domain)"
 * rest[=].resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest[=].resource[=].searchParam[=].name = "code"
-* rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Group-code"
-* rest[=].resource[=].searchParam[=].type = #token
-* rest[=].resource[=].searchParam[=].documentation = "Allows filtering based on the type of group"
+* rest[=].resource[=].searchParam[=].extension.valueCode = #SHOULD
+* rest[=].resource[=].searchParam[=].name = "characteristic-value"
+* rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Group-characteristic-value"
+* rest[=].resource[=].searchParam[=].type = #composite
+* rest[=].resource[=].searchParam[=].documentation = "Allows filtering of groups with members having conditions in the same SDOH category (domain)"
 * rest[=].resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest[=].resource[=].searchParam[=].name = "managing-entity"
