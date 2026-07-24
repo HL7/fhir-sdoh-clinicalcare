@@ -783,13 +783,10 @@ Usage: #definition
 * rest[=].resource[=].interaction[=].code = #search-type
 * rest[=].resource[=].interaction[=].documentation = "Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling."
 * rest[=].resource[=].searchInclude[0] = "ServiceRequest:supporting-info"
-* rest[=].resource[=].searchInclude[+] = "ServiceRequest:pertains-to-goal"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:patient"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:requester"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:performer"
 * rest[=].resource[=].searchInclude[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
-* rest[=].resource[=].searchInclude[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
 * rest[=].resource[=].searchInclude[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
@@ -1877,13 +1874,10 @@ Usage: #definition
 * rest[=].resource[=].versioning = #versioned-update
 * rest[=].resource[=].referencePolicy = #literal
 * rest[=].resource[=].searchInclude[0] = "ServiceRequest:supporting-info"
-* rest[=].resource[=].searchInclude[+] = "ServiceRequest:pertains-to-goal"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:patient"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:requester"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:performer"
 * rest[=].resource[=].searchInclude[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
-* rest[=].resource[=].searchInclude[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
 * rest[=].resource[=].searchInclude[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD

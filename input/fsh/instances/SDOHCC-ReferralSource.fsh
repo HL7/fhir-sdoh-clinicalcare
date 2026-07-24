@@ -775,13 +775,10 @@ Usage: #definition
 * rest[=].resource[=].interaction[=].code = #search-type
 * rest[=].resource[=].interaction[=].documentation = "Allows client systems to monitor multiple ServiceRequests for change simultaneously via polling."
 * rest[=].resource[=].searchInclude[0] = "ServiceRequest:supporting-info"
-* rest[=].resource[=].searchInclude[+] = "ServiceRequest:pertains-to-goal"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:patient"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:requester"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:performer"
 * rest[=].resource[=].searchInclude[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
-* rest[=].resource[=].searchInclude[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
 * rest[=].resource[=].searchInclude[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
@@ -1272,18 +1269,20 @@ Usage: #definition
 * rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
 * rest[=].resource[=].searchParam[=].type = #date
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering for only records that have changed since last query"
+
 * rest[=].resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest[=].resource[=].searchParam[=].name = "characteristic-value"
 * rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Group-characteristic-value"
 * rest[=].resource[=].searchParam[=].type = #composite
 * rest[=].resource[=].searchParam[=].documentation = "Allows filtering of groups with members having conditions in the same SDOH category (domain)"
+
 * rest[=].resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].searchParam[=].extension.valueCode = #SHOULD
-* rest[=].resource[=].searchParam[=].name = "characteristic-value"
-* rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Group-characteristic-value"
-* rest[=].resource[=].searchParam[=].type = #composite
-* rest[=].resource[=].searchParam[=].documentation = "Allows filtering of groups with members having conditions in the same SDOH category (domain)"
+* rest[=].resource[=].searchParam[=].extension.valueCode = #SHALL
+* rest[=].resource[=].searchParam[=].name = "characteristic"
+* rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Group-characteristic"
+* rest[=].resource[=].searchParam[=].type = #token
+* rest[=].resource[=].searchParam[=].documentation = "Allows filtering based on the characteristic code"
 * rest[=].resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest[=].resource[=].searchParam[=].name = "managing-entity"
@@ -1848,13 +1847,10 @@ Usage: #definition
 * rest[=].resource[=].versioning = #versioned-update
 * rest[=].resource[=].referencePolicy = #literal
 * rest[=].resource[=].searchInclude[0] = "ServiceRequest:supporting-info"
-* rest[=].resource[=].searchInclude[+] = "ServiceRequest:pertains-to-goal"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:patient"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:requester"
 * rest[=].resource[=].searchInclude[+] = "ServiceRequest:performer"
 * rest[=].resource[=].searchInclude[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
-* rest[=].resource[=].searchInclude[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
 * rest[=].resource[=].searchInclude[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].searchInclude[=].extension.valueCode = #SHOULD
