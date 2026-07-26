@@ -20,7 +20,8 @@ The figure below shows this high-level workflow, the actors involved in each ste
 <object data="GeneralWorkflow3.svg" type="image/svg+xml"></object>
 <br/>
 
-### Actors, Systems and Icons
+<a name="actors-systems-and-icons"></a>
+### Roles, Actors, Systems and Icons
 The actors in the workflows are described in the table below.   The graphical icons are used throughout the IG.   For each use case, the assumptions regarding each type of actor are described.
 
 | Actor    |  Description |
@@ -34,15 +35,25 @@ The actors in the workflows are described in the table below.   The graphical ic
 | ![patientapp] FHIR-enabled Patient Application | A patient application that can connect to FHIR servers |
 {:.grid}
 
+The workflows in this section are described in terms of three roles — **Referral Source**, **Intermediary** (optional), and **Referral Target** — that different actors can fill depending on how a community is organized.
+
+| Roles | Actors |
+| --- | --- |
+|**Referral Source**|Healthcare Provider, CBO|
+|**Referral Target**|CBO|
+|**Patient**|Patient|
+|**Intermediary** (optional)|Coordination Platform (CP), Health Information Exchange (HIE)|
+{:.grid}
+
 ### Referral Use Cases
-The functional use cases in the table below describe the referral process, initiated by a referral source (e.g., provider or other healthcare actor) to a referral target (e.g., a CBO), either directly or indirectly via an intermediary using a coordination platform (CP). For each use case, the capabilities or limitations of the actors are described.  The table links to the functional use case and the associated detailed technical exchange workflow.
+The functional use cases in the table below describe the referral process, initiated by a referral source (e.g., provider or other healthcare actor) to a referral target (e.g., a CBO), either directly or indirectly via an intermediary (e.g., a coordination platform (CP) or a health information exchange (HIE)). For each use case, the capabilities or limitations of the actors are described.  The table links to the functional use case and the associated detailed technical exchange workflow.
 
 | Functional Use Case |  Description           | Actors |
 | ------------------------- | ------------------------------------ | ---------------- |
 | [Direct Referral](referral_workflow.html#directreferral) | A referral between a referral source (e.g., provider) and a referral target (e.g., CBO) where both entities have FHIR server APIs and an intermediary using a coordination platform (CP) is not involved in the referral.| ![providericon], ![cboicon] |
 | [Direct Referral Light](referral_workflow.html#direct-referral-light) | A “light” version of the Direct Referral. A referral between a referral source (e.g., provider) and a referral target (e.g., CBO) where the referral source has a FHIR server API, the referral target does not have a FHIR server API but has an application that can access the referral source’s FHIR server API, and an intermediary using a coordination platform (CP) is not involved in the referral.  | ![providericon], ![cboicon]  |
-| [Indirect Referral](referral_workflow.html#indirectreferral) | A referral between a referral source (e.g., provider) and a referral target (e.g., a CBO) that involves an intermediary using a coordination platform (CP) and all entities have FHIR server APIs.  | ![providericon], ![cboicon]. ![cpicon] |
-| [Indirect Referral Light](referral_workflow.html#indirect-referral-light) | A “light” version of the Indirect Referral. A referral between a referral source (e.g., provider) and a referral target (e.g., CBO) that involves an intermediary using a coordination platform (CP) where the referral source and the coordination platform have FHIR server APIs and the referral target does not have a FHIR server API but has an application that can access the coordination platform’s FHIR server API. | ![providericon], ![cboicon]. ![cpicon] |
+| [Indirect Referral](referral_workflow.html#indirectreferral) | A referral between a referral source (e.g., provider) and a referral target (e.g., a CBO) that involves an intermediary using a coordination platform (CP) and all entities have FHIR server APIs.  | ![providericon], ![cboicon], ![cpicon] |
+| [Indirect Referral Light](referral_workflow.html#indirect-referral-light) | A “light” version of the Indirect Referral. A referral between a referral source (e.g., provider) and a referral target (e.g., CBO) that involves an intermediary using a coordination platform (CP) where the referral source and the coordination platform have FHIR server APIs and the referral target does not have a FHIR server API but has an application that can access the coordination platform’s FHIR server API. | ![providericon], ![cboicon], ![cpicon] |
 {:.grid}
 
 <div markdown="1" class="stu-note">
@@ -53,6 +64,8 @@ Indirect Referral requires making data instances (e.g., ServiceRequest, Conditio
 The direct and indirect referral use cases described below are all preceded by a provider interacting with a patient to assess their needs, establish goals, agree to a referral, and acquire consent. The referral is then initiated, its progress is tracked, and goals are updated as appropriate. The “direct” and “indirect” use cases are distinguished by the absence or presence of an intermediary and, in the “light” versions, the FHIR capabilities of the referral target.
 
 Figure 1 and the Table below show the high-level context of the referral use cases that are described in the sections that follow. For the Table, the “Exchanged” column shows data that could be exchanged at that step, and the “Aligns With” column shows data that is not exchanged in FHIR form but whose content typically corresponds with the listed FHIR profile(s). This only specifies the data that is exchanged, so systems are free to use any internal representation.
+
+In Figure 1, the lanes are labeled by role — Referral Source, Referral Target, and Patient — while the step details in the table name example actors that fill those roles (the provider as referral source; a CBO as referral target; or a CP when an intermediary relays an indirect referral).
 
 The [Patient Coordination](patient_coordination_workflow.html#patient-coordination-workflow) Workflow shows some, but not all of the possible interactions with the patient. It provides a way for the provider, CP, or CBO to ask a patient to do something, and track whether they have done it and possibly the outcomes. In Figure 1 below, patient coordination is indicated by a red box on steps 9 and 12.
 
@@ -252,11 +265,11 @@ For each numbered exchange, the details of the data elements exchanged, and the 
 #### Indirect Referral
 <a name="indirectreferral"></a>
 
-In this use case, a provider works with a patient using a standardized assessment instrument to identify and prioritize social risks and needs, and then refers the patient indirectly via a CP to a CBO for help addressing those needs.  The CP relays the referral to the CBO.  The CBO provides the requested support to the patient and the updated information is relayed back through the CP where it is shared with the referring provider.
+In this use case, a provider works with a patient using a standardized assessment instrument to identify and prioritize social risks and needs, and then refers the patient indirectly via an intermediary — in this use case a coordination platform (CP) — to a CBO for help addressing those needs.  The CP relays the referral to the CBO.  The CBO provides the requested support to the patient and the updated information is relayed back through the CP where it is shared with the referring provider.
 
-Functionally, this Indirect Referral is essentially two direct referrals (provider to CP, and CP to CBO) chained together.  The provider, CP, and CBO all have FHIR server APIs.
+Functionally, this Indirect Referral is essentially two direct referrals (provider to CP, and CP to CBO) chained together.  The provider, CP, and CBO all have FHIR server APIs.  Another actor (e.g., a health information exchange (HIE)) filling the intermediary role would use the same exchanges.
 
-The provider has a relationship with the CP, but not with the CBO.  The use case assumes that the CP and the CPO have an established relationship.
+The provider has a relationship with the CP, but not with the CBO.  The use case assumes that the CP and the CBO have an established relationship.
 The provider may request to have the service delivered by a specific CBO.   The CP may not accept the referral, be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.
 
 ##### Indirect Referral - Detailed View
@@ -276,7 +289,7 @@ The coordination platform **SHALL** support the following:
 
 ####  Indirect Referral Light
 
-The patient is assessed by a provider and referred to a CP. The CP refers to a CBO to deliver the service. The provider and CP have FHIR server APIs. The CBO does not have a FHIR server API but has an application that can access a FHIR server API.
+The patient is assessed by a provider and referred to an intermediary — in this use case a coordination platform (CP). The CP refers to a CBO to deliver the service. The provider and CP have FHIR server APIs. The CBO does not have a FHIR server API but has an application that can access a FHIR server API.
 
 This section differs from the [Indirect Referral](referral_workflow.html#indirect-referral) in that the interactions between the CP and CBO follow the Direct Light paradigm. The CBO will maintain data on the CP’s FHIR server API. CBOs without their own FHIR server API will modify tasks directly on the CP’s FHIR server API.
 
