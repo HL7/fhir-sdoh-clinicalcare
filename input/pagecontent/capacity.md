@@ -31,17 +31,22 @@ The following scenarios are out-of-scope at this time. This guide focuses on pro
 - **Organizational Capacity Reporting**: This use case does not cover high-level, aggregate capacity reporting that may occur as part of a contractual obligation between organizations (e.g., a quarterly report on service level agreements).
 
 
-### Actors and System
+### Roles and Actors
 
-#### Actors
+This use case uses the roles and actors defined in this Implementation Guide:
 
-This use case uses the existing actors defined in this Implementation Guide: **Referral Source**, **Coordination Platform**, and **Community-Based Organization (CBO)**.
+| Roles | Actors |
+| --- | --- |
+|**Referral Source**|Healthcare Provider|
+|**Referral Target**|CBO|
+|**Intermediary** (optional)|Coordination Platform (CP)|
+{:.grid}
 
 The most common scenario anticipated involves an indirect referral, where the **Referral Source** sends a referral to a **Coordination Platform**. The **Coordination Platform** then takes on the responsibility of checking for capacity with one or more **CBOs** before forwarding the referral.
 
 While less common, this guidance also supports the scenario where a **Referral Source** directly queries a **CBO** for its capacity status.
 
-#### System Environments
+### System Environments
 
 The interactions between actors can occur in different system environments. This IG is designed to support data exchange in **Open** and **Hybrid** systems.
 

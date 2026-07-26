@@ -5,7 +5,7 @@
 
 ### Overview
 
-This page describes the use case, actors, systems, and information flows for sharing a patient's enrollment status in social care programs (e.g. SNAP). The exchange of this information is critical for effective care coordination, resource planning, and reducing administrative burden.
+This page describes the use case, roles, actors, and information flows for sharing a patient's enrollment status in social care programs (e.g. SNAP). The exchange of this information is critical for effective care coordination, resource planning, and reducing administrative burden.
 
 The primary goal of this use case is to enable healthcare providers and community-based organizations (CBOs) to share information about a person's or household’s enrollment status in social care programs. This exchange is intended to:
 
@@ -26,26 +26,24 @@ The determination of an individual's eligibility status for a program.
 The internal business process of determining if an individual is eligible for a program.
 
 
-### Actors and Systems
+### Roles and Actors
 
-The actors and systems involved in sharing program enrollment status are the same as those involved in the broader referral workflows.
+The roles and actors involved in sharing program enrollment status are the same as those involved in the broader referral workflows, and the systems they use mirror those workflows as well.
 
-#### Actors
+| Roles | Actors |
+| --- | --- |
+|**Referral Source**|Healthcare Provider|
+|**Referral Target**|CBO|
+|**Patient**|Patient|
+|**Intermediary** (optional)|Coordination Platform (CP)|
+{:.grid}
 
-- Provider: The healthcare entity or clinician that identifies a health-related social need (HRSN).
-- Community-Based Organization (CBO): The organization that receives referrals and provides social care services.
+- Provider: The healthcare entity or clinician that identifies a health-related social need (HRSN) and initiates referrals using a referral system — in many cases, but not necessarily, an EHR.
+- Community-Based Organization (CBO): The organization that receives referrals and provides social care services, using a system to manage referrals and service delivery.
 - Patient: The individual who is receiving care and whose enrollment status is being shared.
+- Coordination Platform (CP): The system that facilitates communication and data exchange between the provider and CBO, particularly in indirect referral scenarios. For example, an intermediary may operate the coordination platform that connects a Social Care Network (SCN).
 
 **NOTE:**  An individual who is enrolled in a program may be the point person for a service intended for an entire household.
-
-
-#### Systems
-
-The systems involved in the exchange mirror those in the established referral workflows and may include:
-
-- EHR System (Referral Source): The system used by the provider to manage patient care and initiate referrals.
-- CBO System (Referral Target): The system used by the CBO to manage referrals and service delivery.
-- Coordination Platform (CP): The system that facilitates communication and data exchange between the provider and CBO, particularly in indirect referral scenarios. For example, an intermediary may operate the coordination platform that connects a Social Care Network (SCN).
 
 
 ### Exchange Workflows

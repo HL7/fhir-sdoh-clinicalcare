@@ -26,11 +26,17 @@ This Self-Referral use case reflects a real-world scenario that happens today bu
 - The management of patient consent, which is assumed to be handled by the Community Resource Platform prior to initiating the referral workflow.
 
 
-### Actors and Systems
+### Roles and Actors
+
+| Roles | Actors |
+| --- | --- |
+|**Referral Source**|Individual/Patient, via a Community Resource Platform|
+|**Referral Target**|CBO|
+{:.grid}
 
 - **Individual/Patient**: A person or an authorized representative of a person with one or more health-related social needs who initiates a search and request for services. The person is the subject of the referral.
-- **Community Resource Platform**: A web-based application or service directory that enables individuals to search for social care services, complete screening assessments, and initiate referrals on their own behalf. In the context of the FHIR exchange, this platform functions as the **Referral Source system.
-- **Community-Based Organization (CBO)**: The organization that receives and acts upon the referral to provide a service. In the FHIR exchange, the CBO functions as the **Referral Recipient** system.
+- **Community Resource Platform**: A web-based application or service directory that enables individuals to search for social care services, complete screening assessments, and initiate referrals on their own behalf. In the context of the FHIR exchange, this platform functions as the **Referral Source** system.
+- **Community-Based Organization (CBO)**: The organization that receives and acts upon the referral to provide a service. In the FHIR exchange, the CBO functions as the **Referral Target** system.
 
 
 ### Exchange Workflow
@@ -47,7 +53,7 @@ This use case **exactly follows the exchange patterns defined in the Direct Refe
 1. The individual completes an SDOH screening questionnaire on the Community Resource Platform.
 2. Based on the screening results, the platform displays a list of suitable CBOs.
 3. The individual selects a CBO to which they wish to be referred.
-4. The **Community Resource Platform** (acting as the Referral Source) creates the [SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) and related resources and then POSTs a Task resource to the **CBO's** (Referral Recipient's) FHIR server endpoint.
+4. The **Community Resource Platform** (acting as the Referral Source) creates the [SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) and related resources and then POSTs a Task resource to the **CBO's** (Referral Target's) FHIR server endpoint.
 5. The CBO's system processes the received Task and retrieves the referenced [SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) and Patient resources from the Community Resource Platform's server to get the full referral details. It then updates the status of the [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html) on its own server (e.g., from 'requested' to 'accepted').
 6. The **Community Resource Platform** periodically queries (`GET`) the Task on the CBO's server to check for status changes.
 7. As the CBO works the referral, it continues to update the Task on its server (e.g., to 'in-progress' and finally 'completed' or 'cancelled'). Upon completion, it adds references in Task.output to resources detailing the outcome (e.g., an [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html)).
