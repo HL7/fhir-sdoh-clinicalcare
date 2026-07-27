@@ -3,7 +3,7 @@
 title Capacity Status Indirect Flow
 
 participant "Role: Referral Source\nActor: Provider" as A
-participant "Role: Intermediary\nActor: Coordinating Platform" as B
+participant "Role: Intermediary\nActor: Coordination Platform" as B
 participant "Role: Referral Target\nActor: Community-Based Organization" as C
 
 autonumber
