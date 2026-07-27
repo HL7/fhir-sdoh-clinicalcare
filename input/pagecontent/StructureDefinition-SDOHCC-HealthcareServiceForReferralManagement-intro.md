@@ -1,4 +1,4 @@
-- **HealthcareService**: This profile leverages and extends the existing [SDOHCC HealthcareService](StructureDefinition-SDOHCC-HealthcareService.html) profile to advertise a CBO's services and their associated capacity.
+- **HealthcareService**: This profile does hot directly inherit from the [SDOHCC HealthcareService](StructureDefinition-SDOHCC-HealthcareService.html) profile directly, but incorporates many of the same constraints to advertise a CBO's services and their associated capacity.
     - **Purpose**: To describe a specific service offered by a CBO at a location, including details about programs it supports.
     - **Key Profiled Elements**: The profile is modified in the following ways to support the capacity status use case:
         - The [SDOHCC HealthcareService Capacity Status Extension](StructureDefinition-SDOHCC-ExtensionHealthcareServiceCapacityStatus.html) is added to convey the capacity-status. The referral target populates and maintains this extension and returns it when responding to a capacity status query.
