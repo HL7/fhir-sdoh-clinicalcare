@@ -14,24 +14,8 @@ The **Social Determinants of Health (SDOH) Change History** page provides a list
 <!-- ############################################################################################################################################################ -->
 ---------------------
 
-| Jira Ticket Number | Description   | Resolution   |
-|-----------------------|---------------|---------------|
-|[FHIR-54584](https://jira.hl7.org/browse/FHIR-54584) | Updated the outline format on the Enrollment Status, Capacity Status, rffa, and Self-Referral pages| Persuasive with Modification |
-|[FHIR-54917](https://jira.hl7.org/browse/FHIR-54917) | Moved the Patient Coordination Workflow information from the Referral Workflow page to it's own page and updated the corresponding links the IG. | Persuasive |
-|[FHIR-54912](https://jira.hl7.org/browse/FHIR-54912) | Copied the technical requirements and description for the SDOHCC Observation Program Enrollment Status text from the Enrollment page and added it to the StructureDefinition-SDOHCC-ObservationProgramEnrollmentStatus-intro page. | Persuasive |
-|[FHIR-53798](https://jira.hl7.org/browse/FHIR-53798) and [FHIR-53799](https://jira.hl7.org/browse/FHIR-53799) | Added text and 4th bullet point text to the sdoh_challenges_gravity page. | Persuasive |
-|[FHIR-53804](https://jira.hl7.org/browse/FHIR-53804) | Updated and added link to the overview on the RFFA page. | Persuasive |
-|[FHIR-51138](https://jira.hl7.org/browse/FHIR-51138) | Updated the Device Resource Conformance in the Capability Statement from SHALL to SHOULD and fixed the "unspecified" issue for the other resources. | Persuasive |
+STU3 of the SDOH Clinical Care IG adds functionality for capacity status and enrollment status use cases as well as numerous guidance and requirements improvement.
 
-
-&nbsp;
-### STU 3 Ballot
-
-<!-- ============================== -->
-<!-- ############################################################################################################################################################ -->
----------------------
-
-The Gravity Project team has drafted a new STU3 version of the IG for balloters to review and submit feedback. Below are the requirements that we have worked through for this ballot and the associated updates to the IG:
 
 - Capacity Status
 
@@ -44,7 +28,7 @@ The Gravity Project team has drafted a new STU3 version of the IG for balloters 
 
   - **NEW**: [Enrollment Status](enrollment.html) Narrative Guidance
   - **NEW**: [SDOHCC Program Enrollment Status Observation](StructureDefinition-SDOHCC-ObservationProgramEnrollmentStatus.html)
-  - **Updated**: [SDOHCC Task for Referral Management] (includes Enrollment Status Observation as a possible reference in Task.output)
+  - **Updated**: [SDOHCC Task for Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html) (includes Enrollment Status Observation as a possible reference in Task.output)
 
 - Self-Referral
 
@@ -53,31 +37,56 @@ The Gravity Project team has drafted a new STU3 version of the IG for balloters 
 - Referral for Further Assessment
 
   - **NEW**: [Referral for Further Assessment](rffa.html) Narrative Guidance
-  - **Updated**: [SDOHCC Task for Referral Management] (added slice to Task.output to include resources associated with outcomes from the completion of the task(s))
+  - **Updated**: [SDOHCC Task for Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html) (added slice to Task.output to include resources associated with outcomes from the completion of the task(s))
 
 - Content-Rich Referral
 
   - **Updated**: [Referral Workflow](referral_workflow.html#referral-use-case-overview) additional guidance on pushing additional content in a closed-loop referral
-  - **Updated**: [SDOHCC Task for Referral Management] (added slice to Task.input to include resources relevant in the provision of services to a referral recipient)
+  - **Updated**: [SDOHCC Task for Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html) (added slice to Task.input to include resources relevant in the provision of services to a referral recipient)
 
 - Protective Factors
 
-  - **Updated** [SDOHCC Condition] to include Protective Factors as a possible category code. Additional guidance is present in the profile as well on how to use Protective Factors
+  - **Updated** [SDOHCC Condition](StructureDefinition-SDOHCC-Condition.html) to include Protective Factors as a possible category code. Additional guidance is present in the profile as well on how to use Protective Factors
 
 
-| Jira Ticket Number | Description   | Resolution   |
-|-----------------------|---------------|---------------|
-|[FHIR-53456](https://jira.hl7.org/browse/FHIR-53455) | New narrative pages to address new use cases | Persuasive |
-|[FHIR-53455](https://jira.hl7.org/browse/FHIR-53455) | Promote Personal Characteristics Narrative out of draft status   | Persuasive |
-|[FHIR-53454](https://jira.hl7.org/browse/FHIR-53454) | Update to Referral Workflow Narrative to address communication of additional info for a referral | Persuasive |
-|[FHIR-53453](https://jira.hl7.org/browse/FHIR-53453) | Updates to SDOHCC Task for Referral Management .input and .output | Persuasive with Modification |
-|[FHIR-53451](https://jira.hl7.org/browse/FHIR-53451) | Adding Protective Factors as an SDOHCC Category code  | Persuasive |
-|[FHIR-53450](https://jira.hl7.org/browse/FHIR-53450) | New Extension - SDOHCC Extension HealthcareService Capacity Status | Persuasive |
-|[FHIR-53449](https://jira.hl7.org/browse/FHIR-53449) | Update VS in SDOHCC Observation Recorded Sex Gender | Persuasive |
-|[FHIR-53448](https://jira.hl7.org/browse/FHIR-53448) | Update dependency of SDOHCC Observation Sexual Orientation to US Core 7 profile | Persuasive |
-|[FHIR-53447](https://jira.hl7.org/browse/FHIR-53447) |  Promote Personal Characteristics profiles out of draft status | Persuasive with Modification |
-|[FHIR-53446](https://jira.hl7.org/browse/FHIR-53446) | New Profile - SDOHCC Observation Enrollment Status | Persuasive with Modification |
-|[FHIR-53445](https://jira.hl7.org/browse/FHIR-53445) | New Profile - SDOHCC HealthcareService For Referral Management  | Persuasive with Modification |
+| Jira Ticket Number | Description | Resolution | Impact |
+|-----------------------|---------------|---------------|---------------|
+| [FHIR-53456](https://jira.hl7.org/browse/FHIR-53456) | New narrative pages to address new use cases | Persuasive | Compatible, substantive - Enhancement |
+| [FHIR-53455](https://jira.hl7.org/browse/FHIR-53455) | Promote Personal Characteristics Narrative out of draft status   | Persuasive | Non-substantive - Enhancement |
+| [FHIR-53454](https://jira.hl7.org/browse/FHIR-53454) | Update to Referral Workflow Narrative to address communication of additional info for a referral | Persuasive | Non-substantive - Clarification |
+| [FHIR-53453](https://jira.hl7.org/browse/FHIR-53453) | Updates to SDOHCC Task for Referral Management .input and .output | Persuasive with Modification | Non-compatible - Enhancement |
+| [FHIR-53451](https://jira.hl7.org/browse/FHIR-53451) | Adding Protective Factors as an SDOHCC Category code  | Persuasive | Non-substantive - Enhancement |
+| [FHIR-53450](https://jira.hl7.org/browse/FHIR-53450) | New Extension - SDOHCC Extension HealthcareService Capacity Status | Persuasive | Non-compatible - Enhancement |
+| [FHIR-53449](https://jira.hl7.org/browse/FHIR-53449) | Update VS in SDOHCC Observation Recorded Sex Gender | Persuasive | Non-compatible - Enhancement |
+| [FHIR-53448](https://jira.hl7.org/browse/FHIR-53448) | Update dependency of SDOHCC Observation Sexual Orientation to US Core 7 profile | Persuasive | Non-compatible - Enhancement |
+| [FHIR-53447](https://jira.hl7.org/browse/FHIR-53447) |  Promote Personal Characteristics profiles out of draft status | Persuasive with Modification | Non-compatible - Enhancement |
+| [FHIR-53446](https://jira.hl7.org/browse/FHIR-53446) | New Profile - SDOHCC Observation Enrollment Status | Persuasive with Modification | Non-substantive - Enhancement |
+| [FHIR-53445](https://jira.hl7.org/browse/FHIR-53445) | New Profile - SDOHCC HealthcareService For Referral Management  | Persuasive with Modification | Non-substantive - Enhancement |
+| [FHIR-50072](https://jira.hl7.org/browse/FHIR-50072) | In the [CapabilityStatement](artifacts.html#capability-statements) instances, all resources with the conformance expectation of ** SHALL** now has a read interaction conformance expectation of ** **SHALL****. | Persuasive  | Non-compatible - Enhancement |
+|[FHIR-51138](https://jira.hl7.org/browse/FHIR-51138) | Updated the Device Resource Conformance in the Capability Statement from SHALL to SHOULD and fixed the "unspecified" issue for the other resources. | Persuasive | Compatible, substantive - Correction |
+| [FHIR-52375](https://jira.hl7.org/browse/FHIR-52375) | Change the [SDOHCC Group profile](StructureDefinition-SDOHCC-Group.html) Group.characteristic[hasSDOHCondition].value[x] to be a CodeableConcept that is bound to the SDOHCC Category Value Set. | Persuasive | Non-compatible - Correction |
+| [FHIR-51526](https://jira.hl7.org/browse/FHIR-51526) | In the [CapabilityStatement](artifacts.html#capability-statements) instances, remove the `literal` reference policy from all client mode resource entries. | Persuasive | Compatible, substantive - Enhancement |
+| [FHIR-54060](https://jira.hl7.org/browse/FHIR-54060)<br>[FHIR-51139](https://jira.hl7.org/browse/FHIR-) | Added `additional-assessment-required` to the [SDOHCC Capacity Status Value Set](ValueSet-SDOHCC-ValueSetCapacityStatus.html) and changed the [SDOHCC Extension HealthcareService Capacity Status](StructureDefinition-SDOHCC-ExtensionHealthcareServiceCapacityStatus.html) and the [SDOHCC Healthcare Service for Referral Management](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html) to a draft status. | Persuasive with Modification | Compatible, substantive - Enhancement |
+| [FHIR-50069](https://jira.hl7.org/browse/FHIR-50069) | In the [CapabilityStatement](artifacts.html#capability-statements) instances, corrected the _inclde searchIncludes to be under the correct resources. | Persuasive | Compatible, substantive - Correction |
+| [FHIR-50071](https://jira.hl7.org/browse/FHIR-50071) | Changed the _lastUpdated conformance expectation in [SDOHCC Coordination Platform Capability Statement](CapabilityStatement-SDOHCC-CoordinationPlatform.html) and [SDOHCC Referral Source Capability Statement](CapabilityStatement-SDOHCC-ReferralSource.html) from  **SHALL** to  **SHOULD** for Device and Organization resources. | Persuasive | Compatible, substantive - Correction |
+| [FHIR-51138](https://jira.hl7.org/browse/FHIR-51138) | Update Resource Conformance in the Client Interaction of the Device Resource in the [SDOHCC Coordination Platform Capability Statement](CapabilityStatement-SDOHCC-CoordinationPlatform.html) from * **SHALL*** to * **SHOULD***. | Persuasive | Compatible, substantive - Correction |
+| [FHIR-51140](https://jira.hl7.org/browse/FHIR-51140) | Update the Organization Resource Conformance requirement in the Server Interaction of [SDOHCC Coordination Platform Capability Statement](CapabilityStatement-SDOHCC-CoordinationPlatform.html) from * **SHOULD*** to * **SHALL*** | Persuasive | Compatible, substantive - Correction |
+| [FHIR-52368](https://jira.hl7.org/browse/FHIR-52368) | Changed SearchParameter on the Group resource from Group-code to Group-characteristic in [SDOHCC Coordination Platform Capability Statement](CapabilityStatement-SDOHCC-CoordinationPlatform.html) and [SDOHCC Referral Source Capability Statement](CapabilityStatement-SDOHCC-ReferralSource.html). | Persuasive | Compatible, substantive - Correction |
+| [FHIR-54906](https://jira.hl7.org/browse/FHIR-54906) | Updated the [Statutes, Regulations, and Guiding Principles](privacy_and_security.html#statutes-regulations-and-guiding-principles) section from * **SHOULD*** support the consent and data sharing policies to * **SHALL***. | Persuasive with Modification | Compatible, substantive - Correction |
+| [FHIR-50070](https://jira.hl7.org/browse/FHIR-50070) | Removed the ServiceRequest pertains-to-goal SearchParameter from [CapabilityStatement](artifacts.html#capability-statements) instances. | Persuasive with Modification | Non-substantive - Correction |
+| [FHIR-54905](https://jira.hl7.org/browse/FHIR-54905)<br>[FHIR-54610](https://jira.hl7.org/browse/FHIR-)<br>[FHIR-54609](https://jira.hl7.org/browse/FHIR-) | Improved guidance in the Task [Subscriptions](checking_task_status.html#subscription) and [Polling](checking_task_status.html#polling) sections. | Persuasive | Non-substantive - Correction |
+| [FHIR-57455](https://jira.hl7.org/browse/FHIR-57455) | Removed the telecom requirements from the [SDOHCC Healthcare Service for Referral Management Profile](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html) by removing inheritance from [SDOHCC Healthcare Service](StructureDefinition-SDOHCC-HealthcareService.html) and reapplying some of the other constraints directly in the profile. | Persuasive | Non-substantive - Correction |
+| [FHIR-53802](https://jira.hl7.org/browse/FHIR-53802) | Diagraming to provide alternatives to use of a care coordination platform | Persuasive with Modification | Non-substantive - Clarification |
+| [FHIR-53803](https://jira.hl7.org/browse/FHIR-53803) | Updated the descriptions of roles and actors in the [Indirect Referral Light Workflow](referral_workflow.html#indirect-referral-light) | Persuasive | Non-substantive - Clarification |
+|[FHIR-54584](https://jira.hl7.org/browse/FHIR-54584) | Updated the outline format on the Enrollment Status, Capacity Status, rffa, and Self-Referral pages| Persuasive with Modification | Non-substantive - Clarification |
+|[FHIR-53804](https://jira.hl7.org/browse/FHIR-53804) | Updated and added link to the overview on the RFFA page. | Persuasive | Non-substantive - Clarification |
+|[FHIR-54917](https://jira.hl7.org/browse/FHIR-54917) | Moved the Patient Coordination Workflow information from the Referral Workflow page to it's own page and updated the corresponding links the IG. | Persuasive | Non-substantive - Clarification |
+|[FHIR-54912](https://jira.hl7.org/browse/FHIR-54912) | Copied the technical requirements and description for the SDOHCC Observation Program Enrollment Status text from the Enrollment page and added it to the StructureDefinition-SDOHCC-ObservationProgramEnrollmentStatus-intro page. | Persuasive | Non-substantive - Clarification |
+|[FHIR-53798](https://jira.hl7.org/browse/FHIR-53798)<br>[FHIR-53799](https://jira.hl7.org/browse/FHIR-53799) | Added text and 4th bullet point text to the [SDOH Challenges](sdoh_challenges_gravity.html#challenges-of-sdoh-data-interoperability). | Persuasive | Non-substantive - Clarification |
+| [FHIR-53842](https://jira.hl7.org/browse/FHIR-53842) | Added guidance to the [Condition Protective Factors Section](StructureDefinition-SDOHCC-Condition.html#protective-factors) that outlines why Condition best aligns with our goals for this use case. | Persuasive | Non-substantive - Clarification |
+| [FHIR-54902](https://jira.hl7.org/browse/FHIR-54902) | Changed the 'no-capacity-has-waitlist' code value to 'waitlist' in [SDOHCC CodeSystem Temporary Codes](SDOHCC-CodeSystemTemporaryCodes) and updated the guidance in [SDOHCC Extension HealthcareService Capacity Status](StructureDefinition-SDOHCC-ExtensionHealthcareServiceCapacityStatus.html). | Persuasive | Non-substantive - Clarification |
+| [FHIR-54917](https://jira.hl7.org/browse/FHIR-54917) | Moved the Patient Coordination Workflow to [its own dedicated page](patient_coordination_workflow.html). | Persuasive | Non-substantive - Clarification |
+| [FHIR-54608](https://jira.hl7.org/browse/FHIR-54608)<br>[FHIR-54910](https://jira.hl7.org/browse/FHIR-54910)<br>[FHIR-53383](https://jira.hl7.org/browse/FHIR-53383) | Several updates made to the [Glossary](glossary.html). | Persuasive | Non-substantive - Clarification |
 
 
 &nbsp;
