@@ -66,12 +66,14 @@ This workflow occurs before the initiation of a formal referral to a CBO. It is 
 CBOs vary in their service offerings and their ability to communicate general capacity information. Some organizations can only determine their capacity to serve an individual after conducting a comprehensive assessment, taking into account various eligibility criteria and potential funding sources. As a result, certain CBOs might only utilize the "additional assessment required" value, whereas others may never find it necessary.
 4. **Coordination Platform Completes the Referral**: If the queried CBO has capacity, the **Coordination Platform** forwards the referral to that **CBO**. If the CBO is at capacity, the Coordination Platform repeats Steps 2 and 3 with other CBOs until a suitable partner is found. This completes the capacity-check portion of the workflow, and the process continues as described in the [Closed-Loop Referral Workflow](referral_workflow.html#referral-use-case-overview).
 
-The diagram below shows a simplified view of the capacity status query workflow.
+Step 4 describes the 'Has Capacity' and 'No Capacity' outcomes. If the returned capacity status is 'No Capacity - Has Waitlist', the **Coordination Platform** may forward the referral so the individual can be placed on the waitlist, or repeat Steps 2 and 3 with other CBOs, depending on the needs of the individual. If the returned capacity status is 'Additional Assessment Required', the Coordination Platform may forward the referral so the CBO can determine whether it can serve the individual (see the note on comprehensive assessments above), or repeat Steps 2 and 3 with other CBOs.
+
+The diagram below shows a simplified view of the capacity status query workflow. It depicts the one-to-one query — here a **Referral Source** querying a **CBO** (the Referral Target) directly, as in the Direct Capacity Status Inquiry; a **Coordination Platform** performs the same query in Steps 2 and 3 of the indirect workflow above. The "Get HealthcareService(s)" step is the capacity status query itself: a FHIR search for [SDOHCC Healthcare Service for Referral Management](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html) resources, each of which indicates its current capacity status.
 
 <div>{% include CapacityStatusSimplified.svg %}</div>
 <br clear="all"/>
 
-The diagram below shows the capacity status query in the context of the indirect referral workflow. The orange highlighted section shows the capacity status query steps.
+The diagram below shows the capacity status query in the context of the indirect referral workflow described in Steps 1-4 above. In this flow the [SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) and [SDOHCC Task for Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html) convey the referral itself; the capacity status is carried by the **CBO**’s HealthcareService resources. The capacity status query steps appear under the section labeled "Capacity Check (pre-referral)" and are grouped in a frame marked "Optional" because a **Coordination Platform** may forward a referral without first checking capacity. Within that frame, the Coordination Platform issues the same "Get HealthcareService(s)" query to the CBO, evaluates the capacity status of each returned HealthcareService, and records the outcome by updating the Task status. The **Referral Source** learns the outcome of the capacity check by retrieving the Task or through the dashed "Subscription Notification (optional)" arrows shown elsewhere in the flow.
 
 <div>{% include DetailedIndirectPreReferralCapacityStatus.svg %}</div>
 <br clear="all"/>
@@ -80,14 +82,14 @@ The diagram below shows the capacity status query in the context of the indirect
 
 This workflow occurs when a CBO rejects an existing referral due to being at capacity. It is an extension of the [Closed-Loop Referral Workflow](referral_workflow.html#referral-use-case-overview). When a CBO determines it cannot fulfill a received referral request due to lack of capacity, its system updates the corresponding Task resource. The `Task.status` is changed to rejected, and `Task.statusReason` is populated with a CodeableConcept to indicate that the rejection is due to the organization being at capacity.
 
-The diagram below shows the post-referral capacity status notification workflow.
+The diagram below shows the post-referral capacity status notification workflow. The capacity-specific steps appear under the section labeled "Capacity Check (post-referral)": the CBO performs "Evaluate Referral and Update CP Task Status (rejected - at capacity)", updating the Task it received from the Coordination Platform (CP); this is the `Task.status` and `Task.statusReason` update described above. The Coordination Platform learns of the rejection through the dashed "Subscription Notification (optional)" arrow or by retrieving the CP Task ("Get CP Task"), and then re-refers the individual to a different CBO. No HealthcareService query occurs in this workflow; the capacity status is conveyed entirely through the Task.
 
 <div>{% include DetailedIndirectPostReferralCapacityStatus.svg %}</div>
 <br clear="all"/>
 
 #### Capacity Status Query Light
 
-A “light” version of the Capacity Status Query where the referral source has a FHIR server API and the referral target does not have a FHIR server API but has an application that can access the referral source’s FHIR server API. The diagram below shows the capacity status query light workflow.
+A “light” version of the Capacity Status Query where the referral source has a FHIR server API and the referral target does not have a FHIR server API but has an application that can access the referral source’s FHIR server API. Because the referral target has no FHIR server for the referral source to query, the capacity request is made out-of-band in the "Send email" step. The referral target’s application then uses the referral source’s FHIR server API to perform the "Post HealthcareService(s)" step, posting HealthcareService resource(s) that indicate the current capacity status, which the referral source evaluates just as in the direct query. The diagram below shows the capacity status query light workflow.
 
 <div>{% include CapacityStatusQueryLight.svg %}</div>
 <br clear="all"/>
