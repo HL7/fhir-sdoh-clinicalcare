@@ -1,7 +1,3 @@
-<div markdown="1" class="note-to-balloters">
-The Gravity Project team has added text to the "Referral Use Care Overview" to provide guidance on how to include additional relevant information in a referral request, such as completed questionnaires, assessments, procedures, etc. We would encourage balloters to review this guidance and provide feedback.
-</div>
-
 This section describes the interactions between the actors in an SDOH referral starting both at a high-level and at the level of FHIR API calls.   First, a high-level overview of the interactions is provided.  This description abstracts technical details and should be accessible to the non-technical reader.
 For the sake of simplicity, only relationships critical to the Referral Workflow are provided. (For additional details on task status updates see [Checking Task Status], and  on relationships between profiles see [Data Modeling Framework].)
 
@@ -277,12 +273,14 @@ The referral occurs in two separate interactions. The first is between the refer
 
 In the Indirect Referral, this IG assumes that the referral source does not have the ability to communicate directly with the referral target. There may be multiple referral targets for responsibilities that will be determined and managed by the intermediary. 
 
+§§refer-1:Coordination Platform **SHALL** requirements handling indirect referral tasks^
 The coordination platform **SHALL** support the following:
 
 1. Create a local copy of, or proxy, all relevant referenced resources from the referral source
 2. Create ServiceRequest(s) with `ServiceRequest.intent` value “filler-order” and `ServiceRequest.basedOn` references the original referral source ServiceRequest(s) 
 3. Create Task(s) to be posted to the referral target(s) that reference the referral source Task(s) via `Task.partOf`
 4. If local copies of the referenced resources are maintained by the coordination platform, the coordination platform must subscribe or periodically query the referral source for updates to the referenced resources
+§§
 
 <div>{% include DetailedIndirectReferral.svg %}</div>
 <br clear="all"/>
@@ -300,23 +298,25 @@ The provider may request to have the service delivered by a specific CBO.   The 
 
 The referral occurs in two separate interactions. The first is between the referral source and the intermediary and the second is between the intermediary and the referral target. 
 
+§§refer-2:Coordination Platform **SHALL** requirements handling indirect referral light tasks^
 The coordination platform **SHALL** support the following:
 
 1. Create a local copy of, or proxy, all relevant referenced resources from the referral source
 2. Create ServiceRequest(s) with `ServiceRequest.intent` value “filler-order” and `ServiceRequest.basedOn` references the original referral source ServiceRequest(s) 
 3. Create Task(s) to be queried by the referral target(s) that reference the referral source Task(s) via `Task.partOf`
 4. If local copies of the referenced resources are maintained by the coordination platform, the coordination platform must subscribe or periodically query the referral source for updates to the referenced resources
+§§
 
 <div>{% include DetailedIndirectReferralLight.svg %}</div>
 <br clear="all"/>
 
 #### Additional Guidance on Referrals
 
-1. Parties **SHOULD** use polling if one or both of the parties is unable to support the subscription model (see notes on the [Checking Task Status](checking_task_status.html) page).
-2. The receiving party for the referral **SHOULD** use the batch query process to request periodic updates of referenced resources.
+1. §refer-3:Parties **SHOULD** use polling if one or both of the parties is unable to support the subscription model (see notes on the [Checking Task Status](checking_task_status.html) page).§
+2. §refer-4:The receiving party for the referral **SHOULD** use the batch query process to request periodic updates of referenced resources.§
 3. The above system flows do not define the handling of all possible scenarios. Exchange scenarios may include refusing the referral, canceling the referral by either party, and error conditions that may occur when using RESTful exchanges.  It is up to each party to follow the current best practice in managing the state of the referral.
-4. The referral source **SHOULD** set the `Task.status` to “requested”. 
-5. The referral target **SHOULD** update `Task.status` as it moves through the workflow.
+4. §refer-5:The referral source **SHOULD** set the `Task.status` to “requested”.§
+5. §refer-6:The referral target **SHOULD** update `Task.status` as it moves through the workflow.§
 
 
 

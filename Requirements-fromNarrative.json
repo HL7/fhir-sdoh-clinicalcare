@@ -6,5 +6,300 @@
   "title" : "Narrative Conformance Statements",
   "status" : "active",
   "experimental" : false,
-  "description" : "Conformance statements found throughout the narrative of the IG consolidated into this computable resource for traceability purposes"
+  "description" : "Conformance statements found throughout the narrative of the IG consolidated into this computable resource for traceability purposes",
+  "statement" : [{
+    "key" : "assess-1",
+    "conformance" : ["SHALL"],
+    "requirement" : "`Observation.category` **SHALL** have two category codes (survey and sdoh) to indicate that a Q-A pair captured as an Observation represents an assessment (survey) related to a social determinant of health."
+  },
+  {
+    "key" : "assess-2",
+    "conformance" : ["SHALL"],
+    "requirement" : "[SDOHCC Observation Screening Response](StructureDefinition-SDOHCC-ObservationScreeningResponse.html) - to represent a question-answer pair(s) from the assessment instrument. Any Observations that are produced **SHALL** include a derivation link (derivedFrom) to the QuestionnaireResponse."
+  },
+  {
+    "key" : "cap-1",
+    "conformance" : ["SHALL"],
+    "requirement" : "Each [SDOHCC Healthcare Service for Referral Management](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html) resource in the response **SHALL** indicate its current capacity status."
+  },
+  {
+    "key" : "char-1",
+    "conformance" : ["SHALL"],
+    "requirement" : "If there are one or more race observations, each with one or more races expressed, and the referenced [US Core Patient](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html) uses the [race extension ](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-race.html) to express one or more races, then the [US Core Patient](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html) race value(s) **SHALL** match the race value(s) of at least one of the race observations."
+  },
+  {
+    "key" : "char-2",
+    "conformance" : ["SHALL"],
+    "requirement" : "If there are one or more ethnicity observations, and the referenced [US Core Patient](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html) uses the [ethnicity extension](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-ethnicity.html), then the [US Core Patient](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html) ethnicity **SHALL** match the ethnicity of at least one of the ethnicity observations."
+  },
+  {
+    "key" : "cond-1",
+    "conformance" : ["SHALL"],
+    "requirement" : "When `Condition.category` is a value from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) (e.g., food-insecurity), `Condition.code` **SHALL** be selected from the corresponding domain-specific value set found in Additional Bindings (i.e. [Food Insecurity Diagnoses](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.17/expansion))."
+  },
+  {
+    "key" : "cond-2",
+    "conformance" : ["SHALL"],
+    "requirement" : "If more than one value is selected from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) (e.g., food-insecurity **and** financial-insecurity) for `Condition.category`, then `Condition.code` **SHALL** be selected from at least one of the corresponding domain-specific value sets found in Additional Bindings (e.g. [Food Insecurity Diagnoses](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.17/expansion))."
+  },
+  {
+    "key" : "cond-3",
+    "conformance" : ["SHALL"],
+    "requirement" : "Instances derived from the SDOHCC Condition profile will be conformant to one of the US Core Condition profiles. `Condition.category` **SHALL** be one of encounter-diagnosis, problem-list-item, or health-concern."
+  },
+  {
+    "key" : "cond-4",
+    "conformance" : ["SHALL"],
+    "requirement" : "To represent a protective factor using this profile, `Condition.category` **SHALL** include the value `protective-factor`, in addition to adhering to all other constraints on the `Condition.category` element."
+  },
+  {
+    "key" : "cond-5",
+    "conformance" : ["SHALL"],
+    "requirement" : "Consistent with the binding logic for other SDOH domains, when `Condition.category` includes `protective-factor`, the `Condition.code` **SHALL** be selected from the corresponding domain-specific value set (e.g., Protective Factor Diagnoses) found in Additional Bindings."
+  },
+  {
+    "key" : "conf-1",
+    "conformance" : ["SHALL"],
+    "requirement" : "Systems claiming to conform to a profile **SHALL** support the elements in a profile as defined below: This guide adopts the following definitions of MustSupport for all direct transactions between the Sending and Receiving Systems"
+  },
+  {
+    "key" : "conf-2",
+    "conformance" : ["SHALL"],
+    "requirement" : "The Sending System **SHALL** provide the capability for the user to enter, select, or otherwise cause to be populated all elements marked as MustSupport."
+  },
+  {
+    "key" : "conf-3",
+    "conformance" : ["SHALL"],
+    "requirement" : "The Sending System **SHALL** populate all elements with a MustSupport flag if the information exists and patient consent and receiver permissions allow. A system **SHALL** be able to demonstrate transmission of all MustSupport elements."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    }],
+    "key" : "conf-4",
+    "requirement" : "The Sending System **SHALL NOT** include a data element in the resource instance if the cardinality is 0..n and the information for that particular data element is not present."
+  },
+  {
+    "key" : "conf-5",
+    "conformance" : ["SHALL"],
+    "requirement" : "Where elements have a lower cardinality of one or more, instances complying with those profiles **SHALL** include the element. Where the profile includes explicit support for an extension, such as [dataAbsentReason], then the extension may be sent without providing a value or child elements. If no extension is explicitly defined in the profile then, unless the profile is derived from US Core (which has laxer rules), the expectation in this IG is that the element **SHALL** have a value or standard child elements and sending an extension instead is not compliant."
+  },
+  {
+    "key" : "conf-6",
+    "conformance" : ["SHALL"],
+    "requirement" : "The Receiving System **SHALL** be capable of processing resource instances containing required and allowed data elements without generating an error or causing the application to fail."
+  },
+  {
+    "key" : "conf-7",
+    "conformance" : ["SHALL",
+    "SHOULD"],
+    "requirement" : "The Receiving System **SHALL** be capable of processing (display, store, etc) all required elements (cardinality 1 or greater) and **SHOULD** be capable of processing (display, store, etc) all MustSupport elements."
+  },
+  {
+    "key" : "conf-8",
+    "conformance" : ["SHALL"],
+    "requirement" : "The Receiving System **SHALL** interpret missing data elements within resource instances as data not present in the Senders systems or where transmission of the data is prohibited by access control rules."
+  },
+  {
+    "key" : "conf-9",
+    "conformance" : ["SHALL"],
+    "requirement" : "The Receiving System **SHALL** be able to process resource instances containing data elements asserting missing information without generating an error or causing the application to fail."
+  },
+  {
+    "key" : "conn-1",
+    "conformance" : ["SHOULD"],
+    "requirement" : "To accomplish this, we recommend that the following processes **SHOULD** be supported by all referral platforms and applications to enable consistent processes to access data. The [capability statements](artifacts.html#behavior-capability-statements) provide further specifications for servers."
+  },
+  {
+    "key" : "goal-1",
+    "conformance" : ["SHALL"],
+    "requirement" : "When `Goal.category` is a value from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) (e.g., food-insecurity), `Goal.description` **SHALL** be selected from the corresponding domain-specific value set found in Additional Bindings (i.e. [Food Insecurity Goals](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.16/expansion/Latest))."
+  },
+  {
+    "key" : "goal-2",
+    "conformance" : ["SHALL"],
+    "requirement" : "If more than one value is selected from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) (e.g., food-insecurity **and** financial-insecurity) for `Goal.category`, then `Goal.description` **SHALL** be selected from at least one of the corresponding domain-specific value sets found in Additional Bindings (e.g. [Food Insecurity Goals](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.16/expansion/Latest))."
+  },
+  {
+    "key" : "obsscreen-1",
+    "conformance" : ["SHALL"],
+    "requirement" : "If `Observation.category` references only one value from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) (e.g., food-insecurity), `Observation.code` and `Observation.value` **SHALL** be selected from the corresponding domain-specific value set found in Additional Bindings."
+  },
+  {
+    "key" : "obsscreen-2",
+    "conformance" : ["SHALL"],
+    "requirement" : "If more than one value is selected from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) (e.g., food-insecurity and financial-insecurity) for `Observation.category`, then `Observation.code` and `Observation.value` **SHALL** be selected from one of the corresponding domain-specific value sets found in Additional Bindings (e.g. [Food Insecurity Screening Assessments And Questions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.194/expansion/Latest) for `Observation.code` and [Food Insecurity Screening Assessments Answers](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.174/expansion/Latest) for `Observation.value`)."
+  },
+  {
+    "key" : "obsscreen-3",
+    "conformance" : ["SHALL"],
+    "requirement" : "For an Observation Grouping, `Observation.code` **SHALL** be a LOINC panel code and `Observation.member` **SHALL** reference the OSR instances generated from that LOINC panel (assessment instrument)."
+  },
+  {
+    "key" : "priv-1",
+    "conformance" : ["SHALL"],
+    "requirement" : "**SHALL** meet all current relevant Federal and State statutes and regulations regarding security and privacy."
+  },
+  {
+    "key" : "priv-2",
+    "conformance" : ["SHALL"],
+    "requirement" : "**SHALL** use applicable technical standards required by current regulations published by CMS and ONC (allowing for voluntary use through the [Standards Version Advancement Process (SVAP)](https://www.healthit.gov/isa/standards-version-advancement-process#:~:text=ONC%20has%20established%20the%20voluntary,of%20Certification%20requirement%20(%C2%A7%20170.405))) unless an exception has been granted."
+  },
+  {
+    "key" : "priv-3",
+    "conformance" : ["SHALL"],
+    "requirement" : "**SHALL** follow the [Gravity Project Data Principles](https://confluence.hl7.org/display/GRAV/Gravity+Data+Principles)."
+  },
+  {
+    "key" : "priv-4",
+    "conformance" : ["SHALL"],
+    "requirement" : "**SHALL** support patient/member consent and/or treatment of sensitive information consistent with Federal and State statutes and regulations."
+  },
+  {
+    "key" : "priv-5",
+    "conformance" : ["SHALL"],
+    "requirement" : "**SHALL** support the consent and data sharing policies of trading partners involved in the exchange that are more protective so long as policies are consistent with or more restrictive than Federal and State statutes and regulations."
+  },
+  {
+    "key" : "priv-6",
+    "conformance" : ["SHOULD"],
+    "requirement" : "All implementations of the SDOH ClinicalCare FHIR Implementation Guide (IG) **SHOULD** follow the FHIR Security guidance and FHIR Implementer’s Safety guidance as defined in the relevant FHIR specification (e.g., Release 4.1.0) where applicable and not superseded by this Section or specific IG requirements."
+  },
+  {
+    "key" : "priv-7",
+    "conformance" : ["MAY"],
+    "requirement" : "However, to meet the statutes, regulations, and guiding principles above, consent directives and security labels **MAY** be considered and used."
+  },
+  {
+    "key" : "priv-8",
+    "conformance" : ["SHALL",
+    "SHOULD"],
+    "requirement" : "When exchanging PHI between entities, the exchange **SHOULD** use the current version and **SHALL** use either current or the immediately prior release of [Transport Level Security (TLS)](https://datatracker.ietf.org/doc/html/rfc8446) as specified by the current release of NIST guidelines ([SP 800-52](https://csrc.nist.gov/publications/detail/sp/800-52/rev-2/final))."
+  },
+  {
+    "key" : "priv-10",
+    "conformance" : ["SHALL"],
+    "requirement" : "Where permitted by law and in accordance with legal requirements and, where appropriate, consent of the individual, release of additionally protected information **SHALL** always be supported."
+  },
+  {
+    "key" : "proc-1",
+    "conformance" : ["SHALL"],
+    "requirement" : "When `Procedure.category` is a value from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) (e.g., food-insecurity), `Procedure.code` **SHALL** be selected from the corresponding domain-specific value set found in Additional Bindings (i.e. [Food Insecurity Procedures](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.7/expansion/Latest))."
+  },
+  {
+    "key" : "proc-2",
+    "conformance" : ["SHALL"],
+    "requirement" : "If more than one value is selected from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) (e.g., food-insecurity and financial-insecurity) for `Procedure.category`, then `Procedure.code` **SHALL** be selected from at least one of the corresponding domain-specific value sets found in Additional Bindings (e.g. [Food Insecurity Procedures](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.7/expansion/Latest))."
+  },
+  {
+    "key" : "refer-1",
+    "label" : "Coordination Platform requirements handling indirect referral tasks",
+    "conformance" : ["SHALL"],
+    "requirement" : "The coordination platform SHALL support the following:\r\n\r\n1. Create a local copy of, or proxy, all relevant referenced resources from the referral source\r\n1. Create ServiceRequest(s) with`ServiceRequest.intent`value “filler-order” and`ServiceRequest.basedOn`references the original referral source ServiceRequest(s)\r\n1. Create Task(s) to be posted to the referral target(s) that reference the referral source Task(s) via`Task.partOf`\r\n1. If local copies of the referenced resources are maintained by the coordination platform, the coordination platform must subscribe or periodically query the referral source for updates to the referenced resources\r\n\r\n#### Indirect Referral Light\r\n\r\nThe patient is assessed by a provider and referred to an intermediary — in this use case a coordination platform (CP). The CP refers to a CBO to deliver the service. The provider and CP have FHIR server APIs. The CBO does not have a FHIR server API but has an application that can access a FHIR server API.\r\n\r\nThis section differs from the [Indirect Referral](referral_workflow.html#indirect-referral) in that the interactions between the CP and CBO follow the Direct Light paradigm. The CBO will maintain data on the CP’s FHIR server API. CBOs without their own FHIR server API will modify tasks directly on the CP’s FHIR server API.\r\n\r\nThe provider has a relationship with the CP, but not with the CBO. The use case assumes that the CP and the CBO have an established relationship. The provider may request to have the service delivered by a specific CBO. The CP may not accept the referral, be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.\r\n\r\n##### Indirect Referral Light - Detailed View\r\n\r\nThe referral occurs in two separate interactions. The first is between the referral source and the intermediary and the second is between the intermediary and the referral target."
+  },
+  {
+    "key" : "refer-3",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Parties **SHOULD** use polling if one or both of the parties is unable to support the subscription model (see notes on the [Checking Task Status](checking_task_status.html) page)."
+  },
+  {
+    "key" : "refer-4",
+    "conformance" : ["SHOULD"],
+    "requirement" : "The receiving party for the referral **SHOULD** use the batch query process to request periodic updates of referenced resources."
+  },
+  {
+    "key" : "refer-5",
+    "conformance" : ["SHOULD"],
+    "requirement" : "The referral source **SHOULD** set the `Task.status` to “requested”."
+  },
+  {
+    "key" : "refer-6",
+    "conformance" : ["SHOULD"],
+    "requirement" : "aThe referral target **SHOULD** update `Task.status` as it moves through the workflow."
+  },
+  {
+    "key" : "refer-9",
+    "conformance" : ["SHALL"],
+    "requirement" : "When `Task.status` is moved to 'completed', the CBO **SHALL** add one or more output elements referencing resources that describe the outcome of the referral, such as an [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html) for services rendered."
+  },
+  {
+    "key" : "serv-1",
+    "conformance" : ["SHALL"],
+    "requirement" : "When `ServiceRequest.category` is a value from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) (e.g., food-insecurity), `ServiceRequest.code` **SHALL** be selected from the corresponding domain-specific value set found in Additional Bindings (i.e. [Food Insecurity ServiceRequests](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.11/expansion/Latest))."
+  },
+  {
+    "key" : "serv-2",
+    "conformance" : ["SHALL"],
+    "requirement" : "If more than one value is selected from [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) (e.g., food-insecurity and financial-insecurity) for `ServiceRequest.category`, then `ServiceRequest.code` **SHALL** be selected from at least one of the corresponding domain-specific value sets found in Additional Bindings (e.g. [Food Insecurity ServiceRequests](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.11/expansion/Latest))."
+  },
+  {
+    "key" : "serv-3",
+    "conformance" : ["SHOULD"],
+    "requirement" : "To support the content rich referral use case, a clinical provider may include relevant clinical information about the patient with the referral to support the patient’s social care needs. For example, a provider may share a gestational diabetes diagnosis ([SDOHCC Condition](StructureDefinition-SDOHCC-Condition.html) resource), supporting glucose challenge test results ([Lab Observation](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-lab.html) resource) and oral glucose tolerance test results ([Lab Observation](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-lab.html) resource) to aid in establishing eligibility for a WIC (Women, Infants, and Children) food program. This additional information **SHOULD** be referenced using the `ServiceRequest.supportingInfo` element."
+  },
+  {
+    "key" : "task-1",
+    "conformance" : ["MAY"],
+    "requirement" : "As well, Provider and CBO systems **MAY** choose to allow CBOs and Patient systems receiving notifications by email or SMS to configure their subscriptions out-of-band (i.e., without needing to POST a Subscription resource to create a subscription or PUT a Subscription to update the email or SMS location to send notifications to)."
+  },
+  {
+    "key" : "task-2",
+    "conformance" : ["SHALL"],
+    "requirement" : "Servers supporting subscription **SHALL** support the rest-hook and e-mail channel mechanism."
+  },
+  {
+    "key" : "task-3",
+    "conformance" : ["MAY"],
+    "requirement" : "They **MAY** support the SMS channel mechanism (see below)."
+  },
+  {
+    "key" : "task-4",
+    "conformance" : ["SHALL"],
+    "requirement" : "When acting as subscription clients, EHRs, CPs and FHIR Server-enabled CBOs **SHALL** support rest-hook."
+  },
+  {
+    "key" : "task-5",
+    "conformance" : ["SHALL"],
+    "requirement" : "Servers **SHALL** support both JSON and XML and clients **SHALL** support at least one of these."
+  },
+  {
+    "key" : "task-6",
+    "conformance" : ["SHALL"],
+    "requirement" : "Client and server **SHALL** support id-only, though they may also support other content approaches."
+  },
+  {
+    "key" : "task-7",
+    "conformance" : ["MAY"],
+    "requirement" : "If search is used, the client **MAY** use `_include=Task:focus` to retrieve the referenced ServiceRequest as well. E.g. `[base]/Task?_id=1234,5678&_include=Task:focus`"
+  },
+  {
+    "key" : "task-8",
+    "conformance" : ["SHALL"],
+    "requirement" : "Based on implementer feedback, this IG leverages an additional customChannelType code that is defined in the FHIR R4 core specification, but is not included in the R5 Subscription Backport value set. This 'sms' code can be used to deliver notifications via SMS device rather than email or rest-hook. Such notifications **SHALL** only include a short human-readable message indicating the subscription id and a short message indicating that updated content is available."
+  },
+  {
+    "key" : "task-9",
+    "conformance" : ["SHALL"],
+    "requirement" : "Subscription.contentType **SHALL** be \"omit\" for both security as well as bandwidth reasons."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    }],
+    "key" : "task-10",
+    "requirement" : "The SMS message **SHALL NOT** actually include a subscription notification Bundle."
+  },
+  {
+    "key" : "task-11",
+    "conformance" : ["SHALL",
+    "SHOULD"],
+    "requirement" : "For Gravity, systems that use polling **SHALL** check for new/updated information at least once per business day and **SHOULD** check for information at least once per hour during normal hours of operation."
+  },
+  {
+    "key" : "task-12",
+    "conformance" : ["SHOULD-NOT"],
+    "requirement" : "Systems **SHOULD NOT** query more often than every 15 minutes unless there is an urgent change they are monitoring for."
+  }]
 }

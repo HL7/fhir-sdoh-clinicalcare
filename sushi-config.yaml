@@ -1,9 +1,9 @@
 status: active
 title: SDOH Clinical Care
-version: 3.0.0-ballot
+version: 3.0.0
 fhirVersion: 4.0.1
-copyrightYear: 2021+
-releaseLabel: STU 3 Ballot
+copyrightYear: 2026+
+releaseLabel: STU 3
 canonical: http://hl7.org/fhir/us/sdoh-clinicalcare
 FSHOnly: false
 applyExtensionMetadataToRoot: false
@@ -58,10 +58,10 @@ dependencies:
             Subscriptions are the preferred mechanism for monitoring completion of referrals and are strongly recommended over polling.
     hl7.terminology.r4:
         uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
-        version: 7.0.0
+        version: 7.2.0
     hl7.fhir.us.davinci-hrex:
         uri: http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/hl7.fhir.us.davinci-hrex
-        version: 1.1.0
+        version: 1.2.0
         id: hrex
         reason: |
             This guide links out to concept maps published in Da Vinci HRex for Provider Role codes.

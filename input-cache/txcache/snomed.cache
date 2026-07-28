@@ -29,6 +29,7 @@
   }
 }}####
 e: {
+  "class" : "UNKNOWN",
   "source" : tx.fhir.org,
   "valueSet" : {
   "resourceType" : "ValueSet",
@@ -105,6 +106,7 @@ e: {
   }
 }}####
 e: {
+  "class" : "UNKNOWN",
   "source" : tx.fhir.org,
   "valueSet" : {
   "resourceType" : "ValueSet",
@@ -163,6 +165,7 @@ e: {
   }
 }}####
 e: {
+  "class" : "UNKNOWN",
   "source" : tx.fhir.org,
   "valueSet" : {
   "resourceType" : "ValueSet",
@@ -5219,6 +5222,7 @@ e: {
   }
 }}####
 e: {
+  "class" : "UNKNOWN",
   "source" : tx.fhir.org,
   "valueSet" : {
   "resourceType" : "ValueSet",
@@ -10275,6 +10279,7 @@ e: {
   }
 }}####
 e: {
+  "class" : "UNKNOWN",
   "source" : tx.fhir.org,
   "valueSet" : {
   "resourceType" : "ValueSet",
@@ -15349,6 +15354,7 @@ e: {
   }
 }}####
 e: {
+  "class" : "UNKNOWN",
   "source" : tx.fhir.org,
   "valueSet" : {
   "resourceType" : "ValueSet",
@@ -15395,5 +15401,210 @@ e: {
   }
 },
   "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://snomed.info/sct",
+    "code" : "706689003",
+    "display" : "Application program software"
+  }]
+}, "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "Application programme software",
+  "code" : "706689003",
+  "system" : "http://snomed.info/sct",
+  "version" : "http://snomed.info/sct/731000124108/version/20250901",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: Validate \"[http://snomed.info/sct#706689003 (\"Application program software\")]\"\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: Check \"http://snomed.info/sct#706689003\"\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901 for http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: Code \"706689003\" found in http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://snomed.info/sct",
+    "code" : "1078229009",
+    "display" : "Food security"
+  }]
+}, "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.16", "version": "20240604", "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "Food security (finding)",
+  "code" : "1078229009",
+  "system" : "http://snomed.info/sct",
+  "version" : "http://snomed.info/sct/731000124108/version/20250901",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n0ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.16|20240604: Analysing http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.16|20240604 for validation purposes\n0ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.16|20240604: Parameters: disp-lang=en, generate-narrative, default-to-latest\n0ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.16|20240604: Version Rules: default:http://snomed.info/sct#http://snomed.info/sct/731000124108\n0ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.16|20240604: Prepare include[0]: \"(^http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.4)\"\n0ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.4|20230725: Analysing http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.4|20230725 for validation purposes\n0ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.4|20230725: Prepare include[0]: \"(http://snomed.info/sct)(1078229009,671311000124101,671321000124109,671331000124107)\"\n1ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.4|20230725: CodeSystem found: \"http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901\"\n1ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.16|20240604: Validate \"[http://snomed.info/sct#1078229009 (\"Food security\")]\"\n1ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.16|20240604: Check \"http://snomed.info/sct#1078229009\"\n1ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.16|20240604: Check included value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.4\n1ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.4|20230725: Check \"http://snomed.info/sct#1078229009\"\n1ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.4|20230725: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901 for http://snomed.info/sct|http://snomed.info/sct/731000124108\n1ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.4|20230725: check code in (http://snomed.info/sct)(1078229009,671311000124101,671321000124109,671331000124107) at CodeableConcept.coding[0]\n1ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.4|20230725: Code \"1078229009\" found in http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://snomed.info/sct",
+    "code" : "368208006",
+    "display" : "Left upper arm structure"
+  }]
+}, "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "Left upper arm structure",
+  "code" : "368208006",
+  "system" : "http://snomed.info/sct",
+  "version" : "http://snomed.info/sct/731000124108/version/20250901",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: Validate \"[http://snomed.info/sct#368208006 (\"Left upper arm structure\")]\"\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: Check \"http://snomed.info/sct#368208006\"\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901 for http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: Code \"368208006\" found in http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://snomed.info/sct",
+    "code" : "481021000124104",
+    "display" : "Adult protective service (qualifier value)"
+  }]
+}, "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312", "version": "20251018", "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "Adult protective service (qualifier value)",
+  "code" : "481021000124104",
+  "system" : "http://snomed.info/sct",
+  "version" : "http://snomed.info/sct/731000124108/version/20250901",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n0ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312|20251018: Analysing http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312|20251018 for validation purposes\n0ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312|20251018: Parameters: disp-lang=en, generate-narrative, default-to-latest\n0ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312|20251018: Version Rules: default:http://snomed.info/sct#http://snomed.info/sct/731000124108\n0ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312|20251018: Prepare include[0]: \"(http://snomed.info/sct)(481021000124104)\"\n1ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312|20251018: CodeSystem found: \"http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901\"\n1ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312|20251018: Validate \"[http://snomed.info/sct#481021000124104 (\"Adult protective service (qualifier value)\")]\"\n1ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312|20251018: Check \"http://snomed.info/sct#481021000124104\"\n1ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312|20251018: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901 for http://snomed.info/sct|http://snomed.info/sct/731000124108\n1ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312|20251018: check code in (http://snomed.info/sct)(481021000124104) at CodeableConcept.coding[0]\n1ms http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.312|20251018: Code \"481021000124104\" found in http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "410606002",
+  "display" : "Social service procedure"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "Social service procedure (procedure)",
+  "code" : "410606002",
+  "system" : "http://snomed.info/sct",
+  "version" : "http://snomed.info/sct/731000124108/version/20250901",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: Validate \"[http://snomed.info/sct#410606002 (\"Social service procedure\")]\"\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: Check \"http://snomed.info/sct#410606002\"\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901 for http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: check code in (http://snomed.info/sct) at Coding\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: Code \"410606002\" found in http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "410606002"
+}, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category--1", "version": "7.0.0", "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "Social service procedure (procedure)",
+  "code" : "410606002",
+  "system" : "http://snomed.info/sct",
+  "version" : "http://snomed.info/sct/731000124108/version/20250901",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n0ms http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category--1|7.0.0: Analysing http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category--1|7.0.0 for validation purposes\n0ms http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category--1|7.0.0: Parameters: disp-lang=en, generate-narrative, default-to-latest\n0ms http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category--1|7.0.0: Version Rules: default:http://snomed.info/sct#http://snomed.info/sct/731000124108\n0ms http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category--1|7.0.0: Prepare include[0]: \"(http://snomed.info/sct)(386053000,410606002)\"\n1ms http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category--1|7.0.0: CodeSystem found: \"http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901\"\n1ms http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category--1|7.0.0: Validate \"[http://snomed.info/sct#410606002 (\"undefined\")]\"\n1ms http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category--1|7.0.0: Check \"http://snomed.info/sct#410606002\"\n1ms http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category--1|7.0.0: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901 for http://snomed.info/sct|http://snomed.info/sct/731000124108\n1ms http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category--1|7.0.0: check code in (http://snomed.info/sct)(386053000,410606002) at Coding\n1ms http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category--1|7.0.0: Code \"410606002\" found in http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://snomed.info/sct",
+    "code" : "410606002",
+    "display" : "Social service procedure"
+  }]
+}, "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "Social service procedure (procedure)",
+  "code" : "410606002",
+  "system" : "http://snomed.info/sct",
+  "version" : "http://snomed.info/sct/731000124108/version/20250901",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n0ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: Validate \"[http://snomed.info/sct#410606002 (\"Social service procedure\")]\"\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: Check \"http://snomed.info/sct#410606002\"\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901 for http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]\n1ms http://snomed.info/sct/vs|http://snomed.info/sct/731000124108/version/20250901: Code \"410606002\" found in http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
 }
 -------------------------------------------------------------------------------------

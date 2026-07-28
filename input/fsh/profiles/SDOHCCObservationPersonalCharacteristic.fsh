@@ -6,7 +6,7 @@ Description: "Defines constraints that represent the minimum requirement for per
 * ^status = #active
 * ^baseDefinition = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|7.0.0"
 * ^abstract = true
-* obeys SDOH-Obs-1 and SDOH-Obs-2 and SDOH-Obs-3
+* obeys SDOH-Obs-2 and SDOH-Obs-3
 * . ^short = "Personal characteristic observation"
 * . ^definition = "Defines constraints that represent the minimum requirement for personal characteristic observations which are observations that are usually self-attested but may be attested to on behalf of the subject (e.g., for a minor or incapable subject) and are generally only verifiable by the source of attestation (e.g., race, ethnicity, sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex)."
 * . ^mustSupport = false
@@ -46,7 +46,8 @@ Description: "Defines constraints that represent the minimum requirement for per
 * subject.extension[subjectPractitioner] ^definition = "Used when the personal characteristic observation is about a Practitioner rather than a Patient."
 * subject.extension[subjectPractitioner].value[x] 1..1
 * subject.extension[subjectPractitioner].value[x] only Reference(USCorePractitionerProfile|7.0.0)
-* subject ^condition[0] = "SDOH-Obs-1"
+* subject obeys SDOH-Obs-1
+//* subject ^condition[0] = "SDOH-Obs-1"
 * subject ^condition[+] = "SDOH-Obs-2"
 
 * focus ..1

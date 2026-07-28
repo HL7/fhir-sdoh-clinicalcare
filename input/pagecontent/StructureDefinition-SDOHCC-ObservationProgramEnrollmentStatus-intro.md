@@ -1,7 +1,3 @@
-<div markdown="1" class="note-to-balloters">
-**NOTE: WE ARE ACTIVELY SEEKING FEEDBACK ON THE FHIR STRUCTURES AND NARRATIVE GUIDANCE SURROUNDING THE ENROLLMENT STATUS ([FHIR-53446](https://jira.hl7.org/browse/FHIR-53446)) USE CASE. WE ENCOURAGE READERS TO REVIEW THE PROPOSED CHANGES AND SUBMIT BALLOT COMMENTS AGAINST THEM.**
-</div>
-
 The SDOHCC Observation Program Enrollment Status profile is the primary resource used to convey an individual's enrollment status.
 
 - Observation.code: This will point to a CodeableConcept representing the specific program (e.g. SNAP, WIC, etc.).

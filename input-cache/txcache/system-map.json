@@ -181,6 +181,16 @@
     "candidates" : []
   },
   {
+    "system" : "https://www.usps.com/",
+    "url" : "https://www.usps.com/",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.hl7chile.cl/r4",
+    "https://tx-nordics.fhir.org/fhir/r4",
+    "https://tx.hl7.cz/r4"]
+  },
+  {
     "system" : "urn:ietf:bcp:13",
     "url" : "urn:ietf:bcp:13",
     "authoritative" : [],

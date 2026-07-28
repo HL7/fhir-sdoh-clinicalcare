@@ -1,10 +1,10 @@
 This Implementation Guide (IG) provides recommended specifications for the synchronization of patient and Community Based Organization (CBO) applications with API data sources for SDOH information as defined in this IG.
 
-The information below is for establishing connections to enable the exchange of information (seen in the [Referral Workflow] section.
+The information below is for establishing connections to enable the exchange of information (seen in the [Referral Workflow] section).
 
 ### Requirements
 
-The intent of this section is to further standardize the interactions between FHIR APIs and consumer or CBO applications.  To accomplish this, we recommend that the following processes **SHOULD** be supported by all referral platforms and applications to enable consistent processes to access data. The [capability statements](artifacts.html#behavior-capability-statements) provide further specifications for servers.
+The intent of this section is to further standardize the interactions between FHIR APIs and consumer or CBO applications.  §conn-1:To accomplish this, we recommend that the following processes **SHOULD** be supported by all referral platforms and applications to enable consistent processes to access data. The [capability statements](artifacts.html#behavior-capability-statements) provide further specifications for servers.§
 
 #### Patient/Client Applications
 Interactions between FHIR-enabled Patient/Client Applications and Providers or CBOs are described in the [Patient Coordination Workflow](patient_coordination_workflow.html).

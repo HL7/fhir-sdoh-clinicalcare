@@ -170,7 +170,7 @@ This section provides guidance on `Observation.category` and `Observation.interp
 ##### Categorizing Observations by SDOH domain(s) using `Observation.category`  
 
 
-`Observation.category` **SHALL** have two category codes (survey and sdoh) to indicate that a Q-A pair captured as an Observation represents an assessment (survey) related to a social determinant of health.
+§assess-1:`Observation.category` **SHALL** have two category codes (survey and sdoh) to indicate that a Q-A pair captured as an Observation represents an assessment (survey) related to a social determinant of health.§
 
 Optionally, `Observation.category` also has a binding to [SDOHCC ValueSet SDOH Category](ValueSet-SDOHCC-ValueSetSDOHCategory.html) which has values to categorize an Observation by SDOH domain(s) (e.g., Food Insecurity. Housing Instability, etc.).
 
@@ -704,7 +704,7 @@ In summary, the process followed by this IG for implementing assessment instrume
 * **Convert the LOINC-encoded assessment instrument to an [SDC Questionnaire]**: The open-source NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms) supports this step by rendering input forms based on FHIR [Questionnaire] for web-based applications and can be used to build and edit FHIR Questionnaires. For some assessment instruments, this step may include establishing calculation logic to define the result of some questions as a function of answers to other questions (e.g., where one or more question determines an answer to another “question” (not directly answered by the patient) as in Hunger Vital Sign Question 3).
 * **Instantiate the [SDC Questionnaire]**: Using an appropriate application (e.g., the open-source NLM [FHIR SDC SMART App](https://lhcforms.nlm.nih.gov/sdc) create an [SDC QuestionnaireResponse]
 * **Develop translation logic to use [StructureMap]** (this logic should generally be provided by the assessment instrument steward) and a validation tool to generate the following resource instances from the [SDC QuestionnaireResponse]:
-    * [SDOHCC Observation Screening Response] - to represent a question-answer pair(s) from the assessment instrument. Any Observations that are produced SHALL include a derivation link (derivedFrom) to the QuestionnaireResponse. Some systems may opt to represent all question-answer pairs as Observations while others may not find this useful and may feel it creates ‘noise’ in the EHR. Key questions for deciding which question-answer pairs should be represented as Observations include but are not limited to:
+    * §assess-2:[SDOHCC Observation Screening Response] - to represent a question-answer pair(s) from the assessment instrument. Any Observations that are produced **SHALL** include a derivation link (derivedFrom) to the QuestionnaireResponse.§ Some systems may opt to represent all question-answer pairs as Observations while others may not find this useful and may feel it creates ‘noise’ in the EHR. Key questions for deciding which question-answer pairs should be represented as Observations include but are not limited to:
         * Is it a score or other key measure which may determine whether a problem is recorded in the patient’s record?
         * Is it something a provider would likely search for or for which a provider might want to follow trends?
         * Is it needed as part of the calculation of a measure?

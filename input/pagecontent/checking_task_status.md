@@ -39,21 +39,21 @@ For the purposes of this IG, there will be no need for 'topic discovery' as ther
 ServiceRequest](#servicerequest-topic).  While neither of these topics are unique to the Gravity IG, because no standard topics have yet been defined for US Core, this IG will define the needed
 topics here.  In the future, these topics may be subsumed into general-purpose topics defined by US Core and/or the FHIR core specification.
 
-As well, Provider and CBO systems **MAY** choose to allow CBOs and Patient systems receiving notifications by email or SMS to configure their subscriptions out-of-band (i.e.,
-without needing to POST a Subscription resource to create a subscription or PUT a Subscription to update the email or SMS location to send notifications to).
+§task-1:As well, Provider and CBO systems **MAY** choose to allow CBOs and Patient systems receiving notifications by email or SMS to configure their subscriptions out-of-band (i.e.,
+without needing to POST a Subscription resource to create a subscription or PUT a Subscription to update the email or SMS location to send notifications to).§
 
-Servers supporting subscription **SHALL** support the rest-hook and e-mail channel mechanism.  They **MAY** support the SMS channel mechanism (see below).  When acting as subscription clients, EHRs, CPs and FHIR Server-enabled CBOs **SHALL** support rest-hook.  Patient and FHIR-Application Enabled CBOs will typically receive notifications via e-mail or SMS.  In this case, the notification goes to a user rather than to the system and the user triggers their system to retrieve the records by opening their application.  Servers **SHALL** support both JSON and XML and clients **SHALL** support at least one of these.  Client and server **SHALL** support id-only, though they may  also support other content approaches.  The id-only approach means that the id of the Task or ServiceRequest that was updated or created will be provided.  The client will then perform a read or a query to
+§task-2:Servers supporting subscription **SHALL** support the rest-hook and e-mail channel mechanism.§  §task-3:They **MAY** support the SMS channel mechanism (see below).§  §task-4:When acting as subscription clients, EHRs, CPs and FHIR Server-enabled CBOs **SHALL** support rest-hook.§  Patient and FHIR-Application Enabled CBOs will typically receive notifications via e-mail or SMS.  In this case, the notification goes to a user rather than to the system and the user triggers their system to retrieve the records by opening their application.  §task-5:Servers **SHALL** support both JSON and XML and clients **SHALL** support at least one of these.§  §task-6:Client and server **SHALL** support id-only, though they may  also support other content approaches.§  The id-only approach means that the id of the Task or ServiceRequest that was updated or created will be provided.  The client will then perform a read or a query to
 retrieve the specified record(s) specified in the subscription notification. E.g.
 
 <code>[base]/Task?_id=1234,5678</code>
 
-If search is used, the client **MAY** use `_include=Task:focus` to retrieve the referenced ServiceRequest as well.  E.g.
-<code>[base]/Task?_id=1234,5678&_include=Task:focus</code>
+§task-7:If search is used, the client **MAY** use `_include=Task:focus` to retrieve the referenced ServiceRequest as well.  E.g.
+<code>[base]/Task?_id=1234,5678&_include=Task:focus</code>§
 
 
 ##### SMS Subscription Channel
 
-Based on implementer feedback, this IG leverages an additional customChannelType code that is defined in the FHIR R4 core specification, but is not included in the R5 Subscription Backport value set.  This 'sms' code can be used to deliver notifications via SMS device rather than email or rest-hook. Such notifications **SHALL** only include a short human-readable message indicating the subscription id and a short message indicating that updated content is available. Subscription.contentType **SHALL** be "omit" for both security as well as bandwidth reasons. The SMS message **SHALL NOT** actually include a subscription notification Bundle. The use of this approach is experimental, and feedback is welcome. The endpoint will be populated with the phone number to send the SMS message to, expressed in compliance with rfc3966 - i.e. "tel:" followed by the phone number digits.
+§task-8:Based on implementer feedback, this IG leverages an additional customChannelType code that is defined in the FHIR R4 core specification, but is not included in the R5 Subscription Backport value set.  This 'sms' code can be used to deliver notifications via SMS device rather than email or rest-hook. Such notifications **SHALL** only include a short human-readable message indicating the subscription id and a short message indicating that updated content is available.§ §task-9:Subscription.contentType **SHALL** be "omit" for both security as well as bandwidth reasons.§ §task-10:The SMS message **SHALL NOT** actually include a subscription notification Bundle.§ The use of this approach is experimental, and feedback is welcome. The endpoint will be populated with the phone number to send the SMS message to, expressed in compliance with rfc3966 - i.e. "tel:" followed by the phone number digits.
 
 
 ##### Task topic
@@ -176,6 +176,6 @@ If unassigned Tasks are possible - i.e., where the organization to perform the s
 
 ```[base]/Task?owner:missing=true&status=requested&_lastupdated=gt2021-05-03T17:23:18.1732-04:00```
 
-The frequency of polling needs to be often enough to allow for timely response to changes, while not imposing too high a requirement on system performance. For Gravity, systems that use polling **SHALL** check for new/updated information at least once per business day and **SHOULD** check for information at least once per hour during normal hours of operation.  Systems SHOULD NOT query more often than every 15 minutes unless there is an urgent change they are monitoring for.
+The frequency of polling needs to be often enough to allow for timely response to changes, while not imposing too high a requirement on system performance. §task-11:For Gravity, systems that use polling **SHALL** check for new/updated information at least once per business day and **SHOULD** check for information at least once per hour during normal hours of operation.§  §task-12:Systems **SHOULD NOT** query more often than every 15 minutes unless there is an urgent change they are monitoring for.§
 
 {% include markdown-link-references.md %}

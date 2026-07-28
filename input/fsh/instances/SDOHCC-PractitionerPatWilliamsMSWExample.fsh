@@ -3,7 +3,7 @@ InstanceOf: http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 Usage: #example
 Description: "An example of a Practitioner. This example is used as the referenced practitioner in other IG examples."
 Title: "SDOHCC Practitioner Pat Williams Example"
-* meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+* meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0"
 * identifier[0].system = "http://hl7.org/fhir/sid/us-npi"
 * identifier[=].value = "1234567893"
 * identifier[+].system = "http://www.deerland.org/practitioners"

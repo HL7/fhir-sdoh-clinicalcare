@@ -1,8 +1,3 @@
-<div markdown="1" class="note-to-balloters">
-The Gravity Project team has created a new narrative page providing guidance on the Referral for Further Assessment use case. We would encourage balloters to review this guidance and provide feedback.
-</div>
-
-
 ### Overview
 
 This page describes the use case, actors, systems, and information flows for referring an individual for a more comprehensive assessment of their health-related social needs (HRSN). This initial referral aligns with the [Gravity Co-Design Care and Data Model](https://confluence.hl7.org/download/attachments/175606815/FINAL-Co-Design-Report-Gravity-Project-and-Civitas-Networks-for-Health.pdf?version=1&modificationDate=1707760787615&api=v2) and can create a data link establishing a treatment relationship with care partners in cross sector care environments and is intended to be an extensible pathway for combining service requests for care coordination and contracted services in future iterations.

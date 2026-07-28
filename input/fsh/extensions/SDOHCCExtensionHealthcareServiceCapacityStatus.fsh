@@ -2,7 +2,7 @@ Extension: SDOHCCExtensionHealthcareServiceCapacityStatus
 Id: SDOHCC-ExtensionHealthcareServiceCapacityStatus
 Title: "SDOHCC Extension HealthcareService Capacity Status"
 Description: "Extension used to convey capacity status — a social service organization's (e.g., a CBO's) ability to accept and serve a new individual for a social care service it offers. The referral target populates and maintains this extension so that referral sources querying capacity status can determine whether the organization can currently take on a new referral for that service."
-* ^status = #active
+* ^status = #draft
 * ^context.type = #element
 * ^context.expression = "HealthcareService"
 * . ^short = "capacity status of a social care service (populated by the referral target)"

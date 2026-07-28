@@ -3,6 +3,6 @@ temp
 template
 output
 /fsh-generated
-
+*.jar
 **/.index.db
 **/.index.json
