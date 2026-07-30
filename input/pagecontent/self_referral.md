@@ -65,22 +65,24 @@ The self-referral use case reuses the profiles and exchange patterns defined in 
 The Community Resource Platform initiates the referral by POSTing a Task resource to the CBO's FHIR server.
 
 
-§§refer-7:Self-referral Community Resource Platform Task instance **SHALL** requirements need to be met^
+§§refer-7:Self-referral Community Resource Platform Task instance requirements **SHALL** to be met^
+
 - **Task**: The [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html) For Referral Management profile is used.
     - `Task.status`: **SHALL** be requested.
     - `Task.requester`: This **SHALL** reference the Organization resource representing the **Community Resource Platform**.
     - `Task.owner`: This **SHALL** reference the Organization resource representing the receiving **CBO**.
     - `Task.for`: This **SHALL** reference the Patient resource for the individual.
     - `Task.input`: This **SHALL** contain references to the ServiceRequest and the SDOHCC QuestionnaireResponse from the screening.
-§§    
-§§refer-8:Self-referral Community Resource Platform ServiceRequest instance **SHALL**  and **SHOULD** requirements need to be met^
+§§
+
 - **ServiceRequest**: The [SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) profile is used 
-    - `ServiceRequest.requester`: This **SHOULD** reference the Organization resource for the organization providing the Community Resource Platform, a Related Person resource, or the Patient resource.
-    - `ServiceRequest.subject`: This **SHALL** reference the Patient resource for the individual.
+    - §refer-8:`ServiceRequest.requester`: This **SHOULD** reference the Organization resource for the organization providing the Community Resource Platform, a Related Person resource, or the Patient resource.§
+    - §refer-9:`ServiceRequest.subject`: This **SHALL** reference the Patient resource for the individual.§
     - `ServiceRequest.category`: Sliced to include a code from the SDOHCC Category value set (e.g., food-insecurity).
     - `ServiceRequest.code`: Specifies the service being requested from a value set such as SDOHCC ProcedureCode.    
     **NOTE**: `Task.requester` represents the system managing the referral workflow whereas ServiceRequest.requester represents the individual or entity asking for the service.
-§§    
+§§
+
 - **QuestionnaireResponse**: The completed screening is represented using the SDOHCC QuestionnaireResponse profile.
 
 #### Closing the Loop

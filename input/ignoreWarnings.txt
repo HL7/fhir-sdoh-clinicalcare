@@ -9,6 +9,8 @@ US FHIR Usage rules require that all profiles on Procedure derive from the core 
 # WARNING: Expected reference to an older version of SNOMED as an example, The code is valid. SNOMED version included through reference by US Core 7.0.0
 A definition for CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/731000124108/version/20250301' could not be found, so the code cannot be validated. Valid versions: http://snomed.info/sct/11000146104/version/20240930, http://snomed.info/sct/2011000195101/version/20230607, http://snomed.info/sct/554471000005108/version/20260331, http://snomed.info/sct/731000124108/version/20230301, http://snomed.info/sct/731000124108/version/20240301, http://snomed.info/sct/731000124108/version/20250901, http://snomed.info/sct/827022005/version/20241216, http://snomed.info/sct/83821000000107/version/20230412, http://snomed.info/sct/900000000000207008/version/20240201, http://snomed.info/sct/900000000000207008/version/20250201 and http://snomed.info/xsct/900000000000207008/version/20250814
 
+# WARNING: Cannot enumerate ValueSet because it include post-coordination codes (which has a grammar)
+WARNING: ValueSet.where(id = 'SDOHCC-ValueSetLOINCSNOMEDCT'): Error from https://tx.fhir.org/r4: Error: The code System "http://snomed.info/sct" has a grammar, and cannot be enumerated directly
 
 # WARNING: The Gravity SDOH Clinical Care IG is based on US Core 7.0.0. Considerations to move to US Core 8.0.0 were not made for this version of the guide, but will be considered for future versions
 WARNING: ImplementationGuide/hl7.fhir.us.sdoh-clinicalcare: ImplementationGuide.dependsOn[1]: The ImplementationGuide uses package hl7.fhir.us.core#7.0.0 released on 2024-05-08, but the most recent appropriate version is 9.0.0. This reference is getting old and the more recent version should be considered
@@ -128,7 +130,7 @@ INFORMATION: en/mustsupport_and_missing_data.html: The html source contains the 
 INFORMATION: en/changehistory.html: The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'In the CapabilityStatement instances, all resources with the conformance expectation of ** SHALL** now has a read interaction conformance expectation of ** SHALL**.'
 
 # INFORMATION: Conformance language is a quote from a different specification (US Core). Not a conformance statement directly from this IG.
-'These value sets are not used in the SDOHCC profiles. However, they are referenced in the Screening and Assessments section of the US Core Implementation Guide which provides the following guidance with respect to these Gravity SDOH grouping value sets: “These grouped value sets are narrower subsets of the value sets allowed in the respective US Core Profiles. However, when recording SDOH data US Core Profiles, servers SHOULD use them.”
+INFORMATION: en/gravity_terminology.html: The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause: 'These value sets are not used in the SDOHCC profiles. However, they are referenced in the Screening and Assessments section of the US Core Implementation Guide which provides the following guidance with respect to these Gravity SDOH grouping value sets: “These grouped value sets are narrower subsets of the value sets allowed in the respective US Core Profiles. However, when recording SDOH data US Core Profiles, servers SHOULD use them.”'
 
 
 # INFROMATION: Message about base FHIR preferred category codes that do not fit the model of the associated profiles in this IG

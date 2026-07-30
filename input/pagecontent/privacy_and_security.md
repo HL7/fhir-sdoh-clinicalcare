@@ -37,7 +37,7 @@ Organizations which plan to take advantage of these additional capabilities are 
 ### Exchange Security
 §priv-8:When exchanging PHI between entities, the exchange **SHOULD** use the current version and **SHALL** use either current or the immediately prior release of [Transport Level Security (TLS)](https://datatracker.ietf.org/doc/html/rfc8446) as specified by the current release of NIST guidelines ([SP 800-52](https://csrc.nist.gov/publications/detail/sp/800-52/rev-2/final)).§
 
-§§priv-9:Privacy **SHOULD** recommendations for when the identity of the requesting or receiving party is important^
+§§priv-9:When the identity of the requesting or receiving party is important, implementations **SHOULD** use one or more of the noted requirements^
 When the identity of the requesting or receiving party is important, implementations **SHOULD** use one or more of the following:
 * the [SMART on FHIR Framework](http://docs.smarthealthit.org/),
 * mutually authenticated TLS,
@@ -51,6 +51,6 @@ Additionally protected information may include items defined by Federal (e.g., 4
 
 §priv-10:Where permitted by law and in accordance with legal requirements and, where appropriate, consent of the individual, release of additionally protected information **SHALL** always be supported.§
 
-Release of the information without explicit request of the patient/member **SHALL** be based on organization policy consistent with Federal and State regulations. Examples are legal requests for information (HIPAA includes specific guidelines around who and which entities are duly authorized to make such requests and processes that must be followed at 45 CFR 164.512(e)-(f)) and “break glass” to treat a patient that is unable to provide consent (HIPAA speaks to the conditions that allow covered entities to use or disclose PHI when an individual is incapacitated at 45 CFR 164.510(a)(3)).
+§priv-11:Release of the information without explicit request of the patient/member **SHALL** be based on organization policy consistent with Federal and State regulations.§ Examples are legal requests for information (HIPAA includes specific guidelines around who and which entities are duly authorized to make such requests and processes that must be followed at 45 CFR 164.512(e)-(f)) and “break glass” to treat a patient that is unable to provide consent (HIPAA speaks to the conditions that allow covered entities to use or disclose PHI when an individual is incapacitated at 45 CFR 164.510(a)(3)).
 
 {% include markdown-link-references.md %}
