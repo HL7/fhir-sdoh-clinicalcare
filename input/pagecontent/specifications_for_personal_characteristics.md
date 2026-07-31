@@ -44,10 +44,13 @@ The personal characteristic observations can be used to document not only person
 
 #### Guidance for Personal Characteristics (e.g., R/E) that are also included as extensions on [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html)
 
-§char-1:If there are one or more race observations, each with one or more races expressed, and the referenced [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) uses the [race extension ]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-race.html) to express one or more races, then the [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) race value(s) **SHALL** match the race value(s) of at least one of the race observations.§
 
-§char-2:If there are one or more ethnicity observations, and the referenced [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) uses the [ethnicity extension]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-ethnicity.html), then the [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) ethnicity **SHALL** match the ethnicity of at least one of the ethnicity observations.§
+<div class="fhir-conformance" id="character-1" summary="If there are one or more race observations, then the race value(s) **SHALL** match the race value(s) of at least one of the race observations.">
+If there are one or more race observations, each with one or more races expressed, and the referenced [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) uses the [race extension]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-race.html) to express one or more races, then the [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) race value(s) **SHALL** match the race value(s) of at least one of the race observations.
+</div>
 
+<div class="fhir-conformance" id="character-2" summary="If there are one or more ethnicity observations, then the ethnicity value(s) **SHALL** match the ethnicity value(s) of at least one of the ethnicity observations.">If there are one or more ethnicity observations, and the referenced [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) uses the [ethnicity extension]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-ethnicity.html), then the [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html) ethnicity **SHALL** match the ethnicity of at least one of the ethnicity observations.
+</div>
 Similar guidance may be required as additional personal characteristic extensions are added to [US Core Patient]({{site.data.fhir.ver.uscore}}/StructureDefinition-us-core-patient.html).
 
 ### Recommendations for Collection and Reporting of Personal Characteristics

@@ -273,14 +273,14 @@ The referral occurs in two separate interactions. The first is between the refer
 
 In the Indirect Referral, this IG assumes that the referral source does not have the ability to communicate directly with the referral target. There may be multiple referral targets for responsibilities that will be determined and managed by the intermediary. 
 
-§§refer-1:Coordination Platform **SHALL** requirements handling indirect referral tasks^
+<div class="fhir-conformance" id="refer-1" summary="Coordination Platform **SHALL** requirements handling indirect referral tasks">
 The coordination platform **SHALL** support the following:
 
 1. Create a local copy of, or proxy, all relevant referenced resources from the referral source
 2. Create ServiceRequest(s) with `ServiceRequest.intent` value “filler-order” and `ServiceRequest.basedOn` references the original referral source ServiceRequest(s) 
 3. Create Task(s) to be posted to the referral target(s) that reference the referral source Task(s) via `Task.partOf`
 4. If local copies of the referenced resources are maintained by the coordination platform, the coordination platform must subscribe or periodically query the referral source for updates to the referenced resources
-§§
+</div>
 
 <div>{% include DetailedIndirectReferral.svg %}</div>
 <br clear="all"/>
@@ -298,14 +298,14 @@ The provider may request to have the service delivered by a specific CBO.   The 
 
 The referral occurs in two separate interactions. The first is between the referral source and the intermediary and the second is between the intermediary and the referral target. 
 
-§§refer-2:Coordination Platform **SHALL** requirements handling indirect referral light tasks^
+<div class="fhir-conformance" id="refer-2" summary="Coordination Platform **SHALL** requirements handling indirect referral light tasks">
 The coordination platform **SHALL** support the following:
 
 1. Create a local copy of, or proxy, all relevant referenced resources from the referral source
 2. Create ServiceRequest(s) with `ServiceRequest.intent` value “filler-order” and `ServiceRequest.basedOn` references the original referral source ServiceRequest(s) 
 3. Create Task(s) to be queried by the referral target(s) that reference the referral source Task(s) via `Task.partOf`
 4. If local copies of the referenced resources are maintained by the coordination platform, the coordination platform must subscribe or periodically query the referral source for updates to the referenced resources
-§§
+</div>
 
 <div>{% include DetailedIndirectReferralLight.svg %}</div>
 <br clear="all"/>

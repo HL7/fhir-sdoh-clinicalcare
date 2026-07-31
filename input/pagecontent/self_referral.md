@@ -64,16 +64,14 @@ The self-referral use case reuses the profiles and exchange patterns defined in 
 
 The Community Resource Platform initiates the referral by POSTing a Task resource to the CBO's FHIR server.
 
-
-§§refer-7:Self-referral Community Resource Platform Task instance requirements **SHALL** to be met^
-
-- **Task**: The [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html) For Referral Management profile is used.
-    - `Task.status`: **SHALL** be requested.
-    - `Task.requester`: This **SHALL** reference the Organization resource representing the **Community Resource Platform**.
-    - `Task.owner`: This **SHALL** reference the Organization resource representing the receiving **CBO**.
-    - `Task.for`: This **SHALL** reference the Patient resource for the individual.
-    - `Task.input`: This **SHALL** contain references to the ServiceRequest and the SDOHCC QuestionnaireResponse from the screening.
-§§
+<div class="fhir-conformance" id="refer-7" summary="Self-referral Community Resource Platform Task instance requirements **SHALL** to be met">
+* **Task**: The [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html) For Referral Management profile is used.
+    * `Task.status`: **SHALL** be requested.
+    * `Task.requester`: This **SHALL** reference the Organization resource representing the **Community Resource Platform**.
+    * `Task.owner`: This **SHALL** reference the Organization resource representing the receiving **CBO**.
+    * `Task.for`: This **SHALL** reference the Patient resource for the individual.
+    * `Task.input`: This **SHALL** contain references to the ServiceRequest and the SDOHCC QuestionnaireResponse from the screening.
+</div>
 
 - **ServiceRequest**: The [SDOHCC ServiceRequest](StructureDefinition-SDOHCC-ServiceRequest.html) profile is used 
     - §refer-8:`ServiceRequest.requester`: This **SHOULD** reference the Organization resource for the organization providing the Community Resource Platform, a Related Person resource, or the Patient resource.§
@@ -81,7 +79,7 @@ The Community Resource Platform initiates the referral by POSTing a Task resourc
     - `ServiceRequest.category`: Sliced to include a code from the SDOHCC Category value set (e.g., food-insecurity).
     - `ServiceRequest.code`: Specifies the service being requested from a value set such as SDOHCC ProcedureCode.    
     **NOTE**: `Task.requester` represents the system managing the referral workflow whereas ServiceRequest.requester represents the individual or entity asking for the service.
-§§
+
 
 - **QuestionnaireResponse**: The completed screening is represented using the SDOHCC QuestionnaireResponse profile.
 
@@ -91,7 +89,7 @@ The loop is closed by the CBO updating the original Task on its own server and t
 
 - **Task Updates (by CBO)**: As the referral is processed, the CBO's system updates the status and content of the Task resource residing on its own FHIR server.
     - `Task.status`: The CBO updates the status from requested to 'accepted', 'rejected', 'in-progress', and finally to a terminal state like 'completed' or 'cancelled'.
-    - `Task.output`: §refer-9:When `Task.status` is moved to 'completed', the CBO **SHALL** add one or more output elements referencing resources that describe the outcome of the referral, such as an [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html) for services rendered.§
+    - `Task.output`: §refer-10:When `Task.status` is moved to 'completed', the CBO **SHALL** add one or more output elements referencing resources that describe the outcome of the referral, such as an [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html) for services rendered.§
 - **Task Polling (by Community Resource Platform)**: The Community Resource Platform periodically performs a `GET` on the Task resource at the CBO's server to retrieve the current status and, upon completion, the final outcome information referenced in `Task.output`.
 
 The figure below shows a self-referral workflow. This workflow is nearly identical to the Direct Referral workflow described in this implementation guide. The primary difference is the Individual/Patient or an authorized representative of the individual is initiating the referral. It is also possible to implement the self-referral use case as a variation of the direct referral light workflow described in this guide. In the direct referral light scenario, the referral target (CBO) does not have a FHIR server and instead interacts with the FHIR server of the referral source via a FHIR-enable client application. See the [Referral Workflow](referral_workflow.html#actors-systems-and-icons) section of this guide for more information on the direct referral and direct referral light workflows.

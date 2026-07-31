@@ -37,13 +37,17 @@ Organizations which plan to take advantage of these additional capabilities are 
 ### Exchange Security
 §priv-8:When exchanging PHI between entities, the exchange **SHOULD** use the current version and **SHALL** use either current or the immediately prior release of [Transport Level Security (TLS)](https://datatracker.ietf.org/doc/html/rfc8446) as specified by the current release of NIST guidelines ([SP 800-52](https://csrc.nist.gov/publications/detail/sp/800-52/rev-2/final)).§
 
-§§priv-9:When the identity of the requesting or receiving party is important, implementations **SHOULD** use one or more of the noted requirements^
+
+§§priv-9^:When the identity of the requesting or receiving party is important, implementations **SHOULD** use one or more security approached (including SMART on FHIR Framework, Mutual TLS, FAST Security, OAuth as defined in the Bulk Data Exchange IG).^
+
 When the identity of the requesting or receiving party is important, implementations **SHOULD** use one or more of the following:
 * the [SMART on FHIR Framework](http://docs.smarthealthit.org/),
 * mutually authenticated TLS,
 * the ONC FHIR At Scale Taskforce (FAST) security tiger team recommended solutions, or
 * the OAuth Server to Server Authentication as defined in the [Bulk Data exchange IG].
+
 §§
+
 Note: There is ongoing work to enhance the capabilities of the above specifications to ensure a more secure exchange that recognizes issues related to fine grain scopes.
 
 ### Additionally Protected Information
