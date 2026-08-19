@@ -1,12 +1,12 @@
 == Suppressed Messages ==
 
-# WARNING: US Core Variance - https://jira.hl7.org/browse/FHIR-48706 - Variance renewal for SDOH Clinical Care Condition (Is based on US Core, but on a profile that does not exist in the latest US Core version)
+# WARNING: US Core Variance Request - [FHIR-48706: Re-approved of 2026-08-13](https://jira.hl7.org/browse/FHIR-48706?focusedCommentId=261595) - Variance renewal for SDOH Clinical Care Condition (Is based on US Core, but on a profile that does not exist in the latest US Core version)
 US FHIR Usage rules require that all profiles on Condition derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
 
-# WARNING: US Core Variance - https://jira.hl7.org/browse/FHIR-48709 - Variance renewal for SDOH Clinical Care Procedure (Is based on US Core, but on a profile that does not exist in the latest US Core version)
+# WARNING: US Core Variance - [FHIR-48709: Re-approved of 2026-08-13](https://jira.hl7.org/browse/FHIR-48709?focusedCommentId=261596) - Variance renewal for SDOH Clinical Care Procedure (Is based on US Core, but on a profile that does not exist in the latest US Core version)
 US FHIR Usage rules require that all profiles on Procedure derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
 
-# WARNING: Cannot enumerate ValueSet because it include post-coordination codes (which has a grammar)
+# WARNING: Cannot enumerate ValueSet because it includes post-coordination codes (which has a grammar)
 WARNING: ValueSet.where(id = 'SDOHCC-ValueSetLOINCSNOMEDCT'): Error from https://tx.fhir.org/r4: Error: The code System "http://snomed.info/sct" has a grammar, and cannot be enumerated directly
 
 # WARNING: The Gravity SDOH Clinical Care IG is based on US Core 7.0.0. Considerations to move to US Core 8.0.0 were not made for this version of the guide, but will be considered for future versions
