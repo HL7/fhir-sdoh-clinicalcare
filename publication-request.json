@@ -2,7 +2,7 @@
     "package-id": "hl7.fhir.us.sdoh-clinicalcare",
     "version": "3.0.0",
     "milestone": true,
-    "path": "http://hl7.org/fhir/us/sdoh-clinicalcare/STU3",
+    "path": "http://hl7.org/fhir/us/sdoh-clinicalcare/3.0.0",
     "status": "trial-use",
     "mode": "milestone",
     "sequence": "STU 3",
