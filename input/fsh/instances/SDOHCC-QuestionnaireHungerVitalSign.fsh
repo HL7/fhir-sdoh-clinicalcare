@@ -65,11 +65,11 @@ Usage: #example
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/variable"
 * item[=].extension[=].valueExpression.name = "atRiskCoding"
 * item[=].extension[=].valueExpression.language = #text/fhirpath
-* item[=].extension[=].valueExpression.expression = "%thisItem.answerOption.valueCoding.where(code='LA19952-3')"
+* item[=].extension[=].valueExpression.expression = "%thisItem.answerOption.value.where(code='LA19952-3')"
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/variable"
 * item[=].extension[=].valueExpression.name = "noRiskCoding"
 * item[=].extension[=].valueExpression.language = #text/fhirpath
-* item[=].extension[=].valueExpression.expression = "%thisItem.answerOption.valueCoding.where(code='LA19983-8')"
+* item[=].extension[=].valueExpression.expression = "%thisItem.answerOption.value.where(code='LA19983-8')"
 * item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"
 * item[=].extension[=].valueExpression.description = "risk determination"
 * item[=].extension[=].valueExpression.language = #text/fhirpath
