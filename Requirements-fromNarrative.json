@@ -23,12 +23,14 @@
     "requirement" : "Each [SDOHCC Healthcare Service for Referral Management](StructureDefinition-SDOHCC-HealthcareServiceForReferralManagement.html) resource in the response **SHALL** indicate its current capacity status."
   },
   {
-    "key" : "char-1",
+    "key" : "character-1",
+    "label" : "If there are one or more race observations, then the race value(s) **SHALL** match the race value(s) of at least one of the race observations.",
     "conformance" : ["SHALL"],
-    "requirement" : "If there are one or more race observations, each with one or more races expressed, and the referenced [US Core Patient](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html) uses the [race extension ](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-race.html) to express one or more races, then the [US Core Patient](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html) race value(s) **SHALL** match the race value(s) of at least one of the race observations."
+    "requirement" : "If there are one or more race observations, each with one or more races expressed, and the referenced [US Core Patient](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html) uses the [race extension](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-race.html) to express one or more races, then the [US Core Patient](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html) race value(s) **SHALL** match the race value(s) of at least one of the race observations."
   },
   {
-    "key" : "char-2",
+    "key" : "character-2",
+    "label" : "If there are one or more ethnicity observations, then the ethnicity value(s) **SHALL** match the ethnicity value(s) of at least one of the ethnicity observations.",
     "conformance" : ["SHALL"],
     "requirement" : "If there are one or more ethnicity observations, and the referenced [US Core Patient](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html) uses the [ethnicity extension](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-ethnicity.html), then the [US Core Patient](http://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-patient.html) ethnicity **SHALL** match the ethnicity of at least one of the ethnicity observations."
   },
@@ -178,9 +180,20 @@
     "requirement" : "When exchanging PHI between entities, the exchange **SHOULD** use the current version and **SHALL** use either current or the immediately prior release of [Transport Level Security (TLS)](https://datatracker.ietf.org/doc/html/rfc8446) as specified by the current release of NIST guidelines ([SP 800-52](https://csrc.nist.gov/publications/detail/sp/800-52/rev-2/final))."
   },
   {
+    "key" : "priv-9",
+    "label" : "When the identity of the requesting or receiving party is important, implementations SHOULD use one or more security approached (including SMART on FHIR Framework, Mutual TLS, FAST Security, OAuth as defined in the Bulk Data Exchange IG).",
+    "conformance" : ["SHOULD"],
+    "requirement" : "When the identity of the requesting or receiving party is important, implementations **SHOULD** use one or more of the following:\r\n\r\n* the [SMART on FHIR Framework](http://docs.smarthealthit.org/),\r\n* mutually authenticated TLS,\r\n* the ONC FHIR At Scale Taskforce (FAST) security tiger team recommended solutions, or\r\n* the OAuth Server to Server Authentication as defined in the [Bulk Data exchange IG](https://hl7.org/fhir/uv/bulkdata/)."
+  },
+  {
     "key" : "priv-10",
     "conformance" : ["SHALL"],
     "requirement" : "Where permitted by law and in accordance with legal requirements and, where appropriate, consent of the individual, release of additionally protected information **SHALL** always be supported."
+  },
+  {
+    "key" : "priv-11",
+    "conformance" : ["SHALL"],
+    "requirement" : "Release of the information without explicit request of the patient/member **SHALL** be based on organization policy consistent with Federal and State regulations."
   },
   {
     "key" : "proc-1",
@@ -194,9 +207,15 @@
   },
   {
     "key" : "refer-1",
-    "label" : "Coordination Platform requirements handling indirect referral tasks",
+    "label" : "Coordination Platform **SHALL** requirements handling indirect referral tasks",
     "conformance" : ["SHALL"],
-    "requirement" : "The coordination platform SHALL support the following:\r\n\r\n1. Create a local copy of, or proxy, all relevant referenced resources from the referral source\r\n1. Create ServiceRequest(s) with`ServiceRequest.intent`value “filler-order” and`ServiceRequest.basedOn`references the original referral source ServiceRequest(s)\r\n1. Create Task(s) to be posted to the referral target(s) that reference the referral source Task(s) via`Task.partOf`\r\n1. If local copies of the referenced resources are maintained by the coordination platform, the coordination platform must subscribe or periodically query the referral source for updates to the referenced resources\r\n\r\n#### Indirect Referral Light\r\n\r\nThe patient is assessed by a provider and referred to an intermediary — in this use case a coordination platform (CP). The CP refers to a CBO to deliver the service. The provider and CP have FHIR server APIs. The CBO does not have a FHIR server API but has an application that can access a FHIR server API.\r\n\r\nThis section differs from the [Indirect Referral](referral_workflow.html#indirect-referral) in that the interactions between the CP and CBO follow the Direct Light paradigm. The CBO will maintain data on the CP’s FHIR server API. CBOs without their own FHIR server API will modify tasks directly on the CP’s FHIR server API.\r\n\r\nThe provider has a relationship with the CP, but not with the CBO. The use case assumes that the CP and the CBO have an established relationship. The provider may request to have the service delivered by a specific CBO. The CP may not accept the referral, be unable to perform the requested service, or may need to split the request into multiple tasks to be performed by one or more CBOs.\r\n\r\n##### Indirect Referral Light - Detailed View\r\n\r\nThe referral occurs in two separate interactions. The first is between the referral source and the intermediary and the second is between the intermediary and the referral target."
+    "requirement" : "The coordination platform **SHALL** support the following: 1. Create a local copy of, or proxy, all relevant referenced resources from the referral source 2. Create ServiceRequest(s) with `ServiceRequest.intent` value “filler-order” and `ServiceRequest.basedOn` references the original referral source ServiceRequest(s) 3. Create Task(s) to be posted to the referral target(s) that reference the referral source Task(s) via `Task.partOf` 4. If local copies of the referenced resources are maintained by the coordination platform, the coordination platform must subscribe or periodically query the referral source for updates to the referenced resources"
+  },
+  {
+    "key" : "refer-2",
+    "label" : "Coordination Platform **SHALL** requirements handling indirect referral light tasks",
+    "conformance" : ["SHALL"],
+    "requirement" : "The coordination platform **SHALL** support the following: 1. Create a local copy of, or proxy, all relevant referenced resources from the referral source 2. Create ServiceRequest(s) with `ServiceRequest.intent` value “filler-order” and `ServiceRequest.basedOn` references the original referral source ServiceRequest(s) 3. Create Task(s) to be queried by the referral target(s) that reference the referral source Task(s) via `Task.partOf` 4. If local copies of the referenced resources are maintained by the coordination platform, the coordination platform must subscribe or periodically query the referral source for updates to the referenced resources"
   },
   {
     "key" : "refer-3",
@@ -216,10 +235,26 @@
   {
     "key" : "refer-6",
     "conformance" : ["SHOULD"],
-    "requirement" : "aThe referral target **SHOULD** update `Task.status` as it moves through the workflow."
+    "requirement" : "The referral target **SHOULD** update `Task.status` as it moves through the workflow."
+  },
+  {
+    "key" : "refer-7",
+    "label" : "Self-referral Community Resource Platform Task instance requirements **SHALL** to be met",
+    "conformance" : ["SHALL"],
+    "requirement" : "* **Task**: The [SDOHCC Task For Referral Management](StructureDefinition-SDOHCC-TaskForReferralManagement.html) For Referral Management profile is used. * `Task.status`: **SHALL** be requested. * `Task.requester`: This **SHALL** reference the Organization resource representing the **Community Resource Platform**. * `Task.owner`: This **SHALL** reference the Organization resource representing the receiving **CBO**. * `Task.for`: This **SHALL** reference the Patient resource for the individual. * `Task.input`: This **SHALL** contain references to the ServiceRequest and the SDOHCC QuestionnaireResponse from the screening."
+  },
+  {
+    "key" : "refer-8",
+    "conformance" : ["SHOULD"],
+    "requirement" : "`ServiceRequest.requester`: This **SHOULD** reference the Organization resource for the organization providing the Community Resource Platform, a Related Person resource, or the Patient resource."
   },
   {
     "key" : "refer-9",
+    "conformance" : ["SHALL"],
+    "requirement" : "`ServiceRequest.subject`: This **SHALL** reference the Patient resource for the individual."
+  },
+  {
+    "key" : "refer-10",
     "conformance" : ["SHALL"],
     "requirement" : "When `Task.status` is moved to 'completed', the CBO **SHALL** add one or more output elements referencing resources that describe the outcome of the referral, such as an [SDOHCC Procedure](StructureDefinition-SDOHCC-Procedure.html) for services rendered."
   },
