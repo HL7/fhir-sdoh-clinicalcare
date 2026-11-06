@@ -1,5 +1,5 @@
 Instance: SDOHCC-OrganizationCoordinationPlatformExample
-InstanceOf: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|7.0.0
+InstanceOf: USCoreOrganizationProfile|8.0.1
 Title: "SDOHCC Organization Coordination Platform Example"
 Description: "An example of a coordination platform Organization. This example is used as the referenced organization in other IG examples."
 Usage: #example

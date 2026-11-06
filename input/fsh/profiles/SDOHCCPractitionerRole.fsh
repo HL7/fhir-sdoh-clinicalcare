@@ -1,5 +1,5 @@
 Profile: SDOHCCPractitionerRole
-Parent: USCorePractitionerRoleProfile|7.0.0
+Parent: USCorePractitionerRoleProfile|8.0.1
 Id: SDOHCC-practitionerrole
 Title: "SDOHCC PractitionerRole"
 Description: "Profile for practitioner roles that address Social Determinants of Health (SDOH)."

@@ -32,8 +32,8 @@ dependencies:
         id: uscore
         reason: |
             All profiles in this IG are aligned with US Core 8.0.1. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.
-    hl7.fhir.us.core: 7.0.0
-    #    version: 7.0.0
+    hl7.fhir.us.core.v700: 
+        version: 7.0.0
         uri: http://hl7.org/fhir/us/core/v700/ImplementationGuide/hl7.fhir.us.core.v700
         id: uscore7
         reason: |

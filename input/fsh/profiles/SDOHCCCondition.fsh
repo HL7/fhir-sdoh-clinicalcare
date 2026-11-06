@@ -71,14 +71,14 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 // TODO Make sure the full sub element pattern shows up like in   https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-condition-encounter-diagnosis.html
 
 //* category[problem-or-health-concern] ^condition = "SDOH-Con-2"
-* category[problem-or-health-concern] from USCoreProblemOrHealthConcern|7.0.0 (required)
+* category[problem-or-health-concern] from USCoreProblemOrHealthConcern|8.0.1 (required)
 * category[problem-or-health-concern] ^short = "problem-list-item | health-concern"
 //* category[problem-or-health-concern] ^binding.description = "Note that other codes are permitted"
 
 
 
 //* category[screening-assessment] = USCoreCategory#sdoh
-* category[screening-assessment] from USCoreScreeningAssessmentConditionCategory|7.0.0 (required)
+* category[screening-assessment] from USCoreScreeningAssessmentObservationCategory|8.0.1 (required)
 * category[screening-assessment] ^short = "USCDI Health Status/Assessments Data Class. Requires at least a category code 'sdoh'"
 * category[screening-assessment] ^definition = "Categories that a provider may use in their workflow to classify that this Condition is related to a USCDI Health Status/Assessments Data Class."
 * category[screening-assessment] ^requirements = "Used for filtering condition"
@@ -97,13 +97,13 @@ Description: "Profile for Social Determinants of Health (SDOH) conditions."
 
 
 
-// US Core 7.0.0
+// US Core 8.0.1
 * code 1.. MS
-* code from USCoreConditionCodes|7.0.0 (required)
+* code from USCoreConditionCodes|8.0.1 (required)
 // * code ^binding.extension.extension[0].url = "purpose"
 // * code ^binding.extension.extension[=].valueCode = #current
 // * code ^binding.extension.extension[+].url = "valueSet"
-// * code ^binding.extension.extension[=].valueCanonical = "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code|7.0.0"
+// * code ^binding.extension.extension[=].valueCanonical = "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code|8.0.1"
 // * code ^binding.extension.extension[+].url = "usage"
 // * code ^binding.extension.extension[=].valueUsageContext = "* this is an artifact from US Core 7.0.0"
 // * code ^binding.extension.extension[+].url = "documentation"

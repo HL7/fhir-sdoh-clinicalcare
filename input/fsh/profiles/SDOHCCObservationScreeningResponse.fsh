@@ -1,5 +1,5 @@
 Profile: SDOHCCObservationScreeningResponse
-Parent: USCoreObservationScreeningAssessmentProfile|7.0.0
+Parent: USCoreObservationScreeningAssessmentProfile|8.0.1
 Id: SDOHCC-ObservationScreeningResponse
 Title: "SDOHCC Observation Screening Response"
 Description: "Profile for observations that represent question and answer pairs from Social Determinants of Health (SDOH) screening instruments."
@@ -38,7 +38,7 @@ Description: "Profile for observations that represent question and answer pairs 
 * category[SDOHCC] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to an observation. It is recommended that SDOH category codes be used to facilitate searching for SDOH observations."
 * category[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
 * code MS
-* code from USCoreSurveyCodes|7.0.0 (required)
+* code from ScreeningAndAssessmentSurveyCodes (required)
 * code ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation."
 * code ^requirements = "Knowing what kind of observation is being made is essential to understanding the observation.\r\n\r\nThe Gravity implemenation guide restricts questionnaire/survey observations to LOINC to move the industry to the use of LOINC panels/surveys (structures that are not available in other terminology systems) to standardize the coding of SDOH related risk assessment instruments. In addition, USCDI and US Core have standardized on the use of LOINC to represent Observations in general."
 * code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"

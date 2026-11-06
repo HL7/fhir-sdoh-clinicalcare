@@ -43,7 +43,7 @@ Usage: #example
 * reasonReference.reference = "Condition/SDOHCC-ConditionFoodInsecurityExample"
 
 Instance: SDOHCC-PatientBabyAbbas
-InstanceOf: USCorePatientProfile|7.0.0
+InstanceOf: USCorePatientProfile|8.0.1
 Title: "SDOHCC Patient Baby Abbas"
 Description: "An example patient representing Baby Abbas, a 2 year old infant."
 Usage: #example
@@ -69,7 +69,7 @@ Usage: #example
 * address[=].period.start = "2023-06-15"
 
 Instance: SDOHCC-LabObservationLeadLevelExample
-InstanceOf: USCoreLaboratoryResultObservationProfile|7.0.0
+InstanceOf: USCoreLaboratoryResultObservationProfile|8.0.1
 Title: "SDOHCC Lab Observation Lead Level Example"
 Description: "An example of a laboratory result observation for lead level."
 Usage: #example
@@ -86,7 +86,7 @@ Usage: #example
 
 
 Instance: SDOHCC-ImmunizationChildhoodImmunizationsExample
-InstanceOf: USCoreImmunizationProfile|7.0.0
+InstanceOf: USCoreImmunizationProfile|8.0.1
 Title: "SDOHCC Immunization Childhood Immunizations Example"
 Description: "An example of an immunization record for childhood immunizations."
 Usage: #example
@@ -104,7 +104,7 @@ Usage: #example
 
 
 Instance: SDOHCC-VitalSignsHeightExample
-InstanceOf: USCoreBodyHeightProfile|7.0.0
+InstanceOf: USCoreBodyHeightProfile|8.0.1
 Title: "SDOHCC Vital Signs WIC Eligibility Example - Height"
 Description: "An example of a height observation used to determine WIC eligibility."
 Usage: #example
@@ -120,7 +120,7 @@ Usage: #example
 * valueQuantity.code = $unitsofmeasure#cm "cm"
 
 Instance: SDOHCC-VitalSignsWeightExample
-InstanceOf: USCoreBodyWeightProfile|7.0.0
+InstanceOf: USCoreBodyWeightProfile|8.0.1
 Title: "SDOHCC Vital Signs WIC Eligibility Example - Weight"
 Description: "An example of a weight observation used to determine WIC eligibility."
 Usage: #example
@@ -136,7 +136,7 @@ Usage: #example
 * valueQuantity.code = $unitsofmeasure#kg "kg"
 
 Instance: SDOHCC-OrganizationWICCommunityOrganizationExample
-InstanceOf: USCoreOrganizationProfile|7.0.0
+InstanceOf: USCoreOrganizationProfile|8.0.1
 Title: "SDOHCC Organization WIC Community Organization Example"
 Description: "An example organization representing a WIC community organization."
 Usage: #example
