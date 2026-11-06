@@ -1,5 +1,5 @@
 Profile: SDOHCCObservationPersonalCharacteristic
-Parent: USCoreSimpleObservationProfile|7.0.0
+Parent: USCoreSimpleObservationProfile|8.0.1
 Id: SDOHCC-ObservationPersonalCharacteristic
 Title: "SDOHCC Observation Personal Characteristic"
 Description: "Defines constraints that represent the minimum requirement for personal characteristic observations which are observations that are usually self-attested but may be attested to on behalf of the subject and are generally only verifiable by the source of attestation (e.g., race, ethnicity, sexual orientation, gender identity and personal pronouns), but may sometimes be verifiable by someone other than the source of attestation (e.g., recorded sex). For further details on this profile see [Specifications for Personal Characteristics](specifications_for_personal_characteristics.html)."

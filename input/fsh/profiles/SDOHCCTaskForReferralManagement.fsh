@@ -76,7 +76,7 @@ Description: "Profile for tasks requesting fulfillment of an SDOHCC ServiceReque
 // * output[PerformedActivityReference].valueReference ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 // * output[PerformedActivityReference].valueReference ^type[=].targetProfile[=].extension.valueBoolean = true
 * output[PerformedActivityCode].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
-* output[PerformedActivityCode].valueCodeableConcept from USCoreProcedureCodes|7.0.0 (required)
+* output[PerformedActivityCode].valueCodeableConcept from USCoreProcedureCodes|8.0.1 (required)
 // * output[PerformedActivityCode].valueCodeableConcept 1..1 MS
 // * output[EnrollmentStatus-Option1].type = $SDOHCC-CodeSystemTemporaryCodes#resulting-activity
 // * output[EnrollmentStatus-Option1].valueCodeableConcept from SDOHCCValueSetEnrollmentStatus (required)

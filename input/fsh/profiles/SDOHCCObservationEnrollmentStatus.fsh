@@ -1,5 +1,5 @@
 Profile: SDOHCCObservationProgramEnrollmentStatus
-Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|7.0.0
+Parent: USCoreSimpleObservationProfile|8.0.1
 Id: SDOHCC-ObservationProgramEnrollmentStatus
 Title: "SDOHCC Observation Program Enrollment Status"
 Description: "For observations about an individual's enrollment status in a social care program. See [Enrollment Status](enrollment.html) for more additional guidance."

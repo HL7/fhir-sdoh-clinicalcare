@@ -1,5 +1,5 @@
 Profile: SDOHCCObservationAssessment
-Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|7.0.0
+Parent: USCoreSimpleObservationProfile|8.0.1
 Id: SDOHCC-ObservationAssessment
 Title: "SDOHCC Observation Assessment"
 Description: "Profile for Social Determinants of Health (SDOH) observations that involve assessment (e.g., by a provider, payer, etc.) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation)."

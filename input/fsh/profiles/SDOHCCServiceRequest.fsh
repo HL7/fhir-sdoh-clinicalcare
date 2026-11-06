@@ -1,5 +1,5 @@
 Profile: SDOHCCServiceRequest
-Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest|7.0.0
+Parent: USCoreServiceRequestProfile|8.0.1
 Id: SDOHCC-ServiceRequest
 Title: "SDOHCC ServiceRequest"
 Description: "Profile for service requests that address Social Determinants of Health."
@@ -49,7 +49,7 @@ Description: "Profile for service requests that address Social Determinants of H
 * category[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
 * priority MS
 //* code 1.. MS
-* code from USCoreProcedureCodes|7.0.0 (required)
+* code from USCoreProcedureCodes|8.0.1 (required)
 //* code ^short = "What is being requested/ordered."
 //* code ^definition = "A code that identifies a particular service (e.g., procedure) that has been requested."
 //* code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service."

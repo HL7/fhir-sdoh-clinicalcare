@@ -58,7 +58,7 @@ Description: "Profile for race observations that use Office of Management and Bu
 * component[DetailedRace].code MS
 * component[DetailedRace].value[x] 1.. MS
 * component[DetailedRace].value[x] only CodeableConcept
-* component[DetailedRace].value[x] from DetailedRace|7.0.0 (required)
+* component[DetailedRace].value[x] from $2.16.840.1.113762.1.4.1267.25 (required)
 * component[DetailedRace].value[x] ^short = "Detailed race codes"
 * component[DetailedRace].value[x] ^binding.description = "CDC race codes that further specify the 5 OMB race category codes"
 * component[DetailedRace].dataAbsentReason ..0

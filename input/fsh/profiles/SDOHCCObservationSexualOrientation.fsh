@@ -1,5 +1,5 @@
 Profile: SDOHCCObservationSexualOrientation
-Parent: USCoreObservationSexualOrientationProfile|7.0.0
+Parent: USCoreObservationSexualOrientationProfile|8.0.1
 Id: SDOHCC-ObservationSexualOrientation
 Title: "SDOHCC Observation Sexual Orientation"
 Description: "Profile for observations about the sexual orientation of an individual. For further details on this profile see [Specifications for Personal Characteristics](specifications_for_personal_characteristics.html)."

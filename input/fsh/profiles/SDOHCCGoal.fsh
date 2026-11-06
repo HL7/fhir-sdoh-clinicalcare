@@ -1,10 +1,10 @@
 Profile: SDOHCCGoal
-Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal|7.0.0
+Parent: USCoreGoalProfile|8.0.1
 Id: SDOHCC-Goal
 Title: "SDOHCC Goal"
 Description: "Profile for goals that address Social Determinants of Health (SDOH)."
 * ^status = #active
-* ^baseDefinition = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal|7.0.0"
+* ^baseDefinition = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal|8.0.1"
 * ^extension[$compliesWithProfile].valueCanonical = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal|3.1.1"
 * . ^short = "Describes the intended SDOH-related objective(s) for a patient."
 * . ^definition = "For representation of SDOH goals."
@@ -20,7 +20,7 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 * category[SDOHCC] ^definition = "An SDOH category assigned to the goal."
 * category[SDOHCC] ^requirements = "Codes from this value set can be used to assign one or more SDOH categories (e.g., food-insecurity, transportation-insecurity, etc.) to a goal. It is recommended that SDOH category codes be used to facilitate searching for SDOH-related goals."
 * category[SDOHCC] ^binding.description = "Codes for high-level SDOH categories."
-* description from USCoreGoalCodes|7.0.0 (extensible)
+* description from USCoreGoalCodes|8.0.1 (extensible)
 * description ^comment = "If no code is available, use CodeableConcept.text.\r\n\r"
 * description ^binding.description = "Codes providing the details of a particular goal.  In many systems, only the text element will be used."
 
@@ -72,7 +72,7 @@ Description: "Profile for goals that address Social Determinants of Health (SDOH
 // * addresses[SupportedAddresses] ^type[=].targetProfile[=].extension.valueBoolean = true
 // * addresses[SupportedAddresses] ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 // * addresses[SupportedAddresses] ^type[=].targetProfile[=].extension.valueBoolean = true
-* outcomeCode from USCoreGoalCodes|7.0.0 (preferred)
+* outcomeCode from USCoreGoalCodes|8.0.1 (preferred)
 * outcomeCode ^comment = "Note that this should not duplicate the goal status.\r\n\r\nInformation represented by Goal.outcomeCode may overlap significantly with information represented by Goal.outcomeReference. Multiple approaches to representing the same information may negatively impact interoperability. Therefore, where there is significant overlap in information provided by Goal.outcomeCode and Goal.outcomeReference, it is recommended that Goal.outcomeReference should be used to provide details of goal outcomes.\r\n\r"
 * outcomeCode ^binding.description = "The result of the goal; e.g., \"Food security\", \"Has access to a car \"."
 * outcomeReference ^slicing.discriminator.type = #profile

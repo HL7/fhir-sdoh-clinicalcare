@@ -31,7 +31,7 @@ Description: "Profile for interventions that address Social Determinants of Heal
 * basedOn ^slicing.discriminator.path = "resolve()"
 * basedOn ^slicing.rules = #open
 * basedOn contains SupportedBasedOn 0..* MS
-* basedOn[SupportedBasedOn] only Reference(SDOHCCServiceRequest or USCoreCarePlanProfile|7.0.0)
+* basedOn[SupportedBasedOn] only Reference(SDOHCCServiceRequest or USCoreCarePlanProfile|8.0.1)
 * basedOn[SupportedBasedOn] ^short = "An SDOH service request or US Core Care Plan for this procedure"
 * basedOn[SupportedBasedOn] ^definition = "A reference to an SDOHCC service request or US Core Care Plan that contains details of the request for this procedure."
 * basedOn[SupportedBasedOn] ^requirements = "When a procedure is based on an SDOH ServiceRequest, Procedure.basedOn should reference instances that comply with the SDOHCC ServiceRequest profile and when a procedure is based on a SDOH Care Plan, Procedure.basedOn should reference instances that comply with the US Core Care Plan profile. However, references to other instance types are also possible."
@@ -66,7 +66,7 @@ Description: "Profile for interventions that address Social Determinants of Heal
 
 // US Core 7.0.0
 * code 1.. MS
-* code from USCoreProcedureCodes|7.0.0 (required) // code from $us-core-procedure-code (preferred)
+* code from $USCoreProcedureCode (required) // code from $us-core-procedure-code (preferred)
 // * code ^binding.extension.extension[0].url = "purpose"
 // * code ^binding.extension.extension[=].valueCode = #current
 // * code ^binding.extension.extension[+].url = "valueSet"
@@ -131,7 +131,7 @@ Description: "Profile for interventions that address Social Determinants of Heal
 //* performed[x] ^requirements = "NOTE: dateTime should be Must Support, but currenlty tooling does not support this."
 * reasonCode ^comment = "Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used. Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure.\r\n\r\nInformation represented by Procedure.reasonCode may overlap significantly with information represented by Procedure.reasonReference. Multiple approaches to representing the same information may negatively impact interoperability. Therefore, where similar information could be provided by either Procedure.reasonCode or Procedure.reasonReference, it is recommended that Procedure.reasonReference be used to provide a reason for why a procedure was performed."
 
-* reasonCode from USCoreConditionCodes|7.0.0 (extensible)
+* reasonCode from USCoreConditionCodes|8.0.1 (extensible)
 //* reasonCode ^extension[0].url = "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement"
 //* reasonCode ^extension[=].valueBoolean = true
 //* reasonCode ^short = "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Coded reason procedure performed"

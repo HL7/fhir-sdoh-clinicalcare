@@ -4,4 +4,4 @@ Title: "SDOHCC ValueSet Service Category"
 Description: "Codes for the capacity status for a service."
 * ^status = #active
 * ^experimental = false
-* USCoreCategory|7.0.0#sdoh "SDOH"
+* USCoreCategory|8.0.1#sdoh "SDOH"
