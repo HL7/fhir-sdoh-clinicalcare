@@ -1,9 +1,9 @@
 status: active
 title: SDOH Clinical Care
-version: 3.0.0
+version: 3.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2026+
-releaseLabel: STU 3
+releaseLabel: STU 3.1 Draft
 canonical: http://hl7.org/fhir/us/sdoh-clinicalcare
 FSHOnly: false
 applyExtensionMetadataToRoot: false
@@ -26,24 +26,18 @@ extension:
     valueInteger: 2
 
 dependencies:
-    hl7.fhir.us.core:
-        version: 7.0.0
-        uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
-        id: uscore
-        reason: |
-            All profiles in this IG are aligned with US Core 7.0.0. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.
     hl7.fhir.us.core.v610:
         version: 6.1.0
         uri: http://hl7.org/fhir/us/core/v610/ImplementationGuide/hl7.fhir.us.core.v610
         id: uscore6
         reason: |
             All profiles in this IG are aligned with US Core 6.1.0 as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.
-    hl7.fhir.us.core.v311:
-        version: 3.1.1
-        uri: http://hl7.org/fhir/us/core/v311/ImplementationGuide/hl7.fhir.us.core.v311
-        id: uscore3
+    hl7.fhir.us.core:
+        version: 7.0.0
+        uri: http://hl7.org/fhir/us/core/v7/ImplementationGuide/hl7.fhir.us.core
+        id: uscore
         reason: |
-            All profiles in this IG are aligned with US Core 3.1.1 as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.    
+            All profiles in this IG are aligned with US Core 7.0.0 as much as possible. U.S. Core also sets expectations for a variety of referenced resources and establishes baseline conformance expectations.
     hl7.fhir.uv.sdc:
         version: 3.0.0
         uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc
